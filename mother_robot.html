@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>IDA Digital Design, 2021</title>
+
+</head>
+
+<body>
+    <input type="text" id="class-input">
+    <button id="class-trigger">Add Class</button>
+    <!-- Robot begin -->
+    <div class="robot" id="main-robot">
+        <div class="leg leg--left">
+            <div class="foot"></div>
+        </div>
+        <div class="leg leg--right">
+            <div class="foot"></div>
+        </div>
+        <div class="body"></div>
+        <div class="head">
+            <div class="eye eye--left"></div>
+            <div class="eye eye--right"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="arm arm--left">
+            <div class="hand"></div>
+        </div>
+        <div class="arm arm--right">
+            <div class="hand"></div>
+        </div>
+    </div>
+
+
+    <script>
+        const ROBOT = document.querySelector('.robot')
+        const LINK = document.getElementsByTagName('link')[0]
+        const CLASS_INPUT = document.querySelector('#class-input')
+        const TRIGGER = document.querySelector('#class-trigger')
+
+        TRIGGER.addEventListener('click', function() {
+            const PATH = CLASS_INPUT.value + '/css/style.css'
+            LINK.setAttribute('href', PATH)
+        })
+    </script>
+</body>
+
+</html>
