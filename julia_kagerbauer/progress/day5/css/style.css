@@ -1,0 +1,19 @@
+a {
+    color: blue;
+    text-decoration: none;
+    font-size: 100px;
+}
+
+.form1 {
+    width: 500px;
+    height: 100px;
+    background-color: deeppink;
+    border-radius: 50px;
+    margin-left: 600px;
+}
+
+body {
+    background-color:rgb(26, 22, 27);
+    background-image:url(https://images.unsplash.com/20/dusty-sky.JPG?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1506&q=80) ;
+    
+}
