@@ -1,0 +1,21 @@
+.shape{
+    border: solid black 8px;
+    margin: 50px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: top;
+} 
+.square{
+    width: 300px;
+    background-color: red;
+}
+.rectangle{
+    width: 600px;
+    height: 400px;
+    background-color:blue;  
+}
+.circle{
+    border-radius: 160px;
+    width: 300px;
+    background-color: green;
+}
