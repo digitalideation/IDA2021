@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+         @font-face {
+            font-family: "EuclidLight";
+            src: url(/Day2/EuclidCircularBEDU-Light.otf);
+        }
+        @font-face {
+            font-family: "EuclidMedium";
+            src: url("EuclidCircularBEDU-Medium.otf");
+        }
+        @font-face {
+            font-family: "SuisseSerif";
+            src: url(/Day2/SuisseEDUNeue-Medium.otf);
+        }
+
+        p{
+            align-items:center;
+        }
+        *{
+            box-sizing: border-box;
+            border: 1px solid black;   
+        }
+
+        
+        body{
+            color: black;
+            padding:1vw;
+            margin: 1rem;
+       
+        }
+
+        main{
+            width: 100%;
+        }
+
+        h1,h3,p {
+            width: 50%;
+        }
+        p{
+            font-family: "EuclidLight";
+            float: left;
+            padding: 3vw;
+            width: 30vw;
+            height: 25vw;
+            line-height: 1.2;
+        
+
+        }
+       
+        img{
+            display: block;
+        }
+        .p1,.p2{
+            display: inline-flexbox;
+        }
+       
+
+        h1,h3{
+            font-family: "SuisseSerif";
+            display: inline;
+        }
+        h1{
+            font-size: 15vw;
+        }
+        h3{
+            font-size: 5vw;
+            float: right;
+        }
+
+
+      
+        section{
+            position: relative;
+        }
+        li{
+            display: inline-flex;
+            align-items: center;
+        }
+         .footer{
+            font-size: 0.8rem;
+            display: block;
+            font-family: 'EuclidLight';
+            display: inline;
+            width: 100vw;
+            height: 2vw;
+        }
+        .header{
+    
+            font-size: 0.8rem;
+            font-family: 'EuclidLight';
+            width: 100%;
+            display: inline;
+            align-items: center;
+        }
+   
+
+        a{
+            font-family: "EuclidLight";
+            color: black;
+            font-size: 0.8rem;
+            padding: 0.5rem;
+        }
+       
+    
+
+        .linkYoutube{
+            text-align: right;
+        }
+
+    a:visited{
+            color: black;
+        }
+
+
+        a:hover {
+            background-color: teal;
+            color: white;
+            font-family: "EuclidMedium";
+            
+        }
+
+    
+    
+        a:focus{
+            border: green;
+        }
+
+        a:active{
+            color: indianred;
+        }
+
+        .youtube{
+            align-items: flex-end;
+            padding-left: 2rem;
+        }
+       
+        h3{
+            font-size: 7.4vw;
+            writing-mode: vertical-rl;
+            width: 10vw;
+            position: absolute;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        
+            <li><a href="/Day1/index.html">Day 1</a></li>
+            <li><a href="/Day2/index.html">Day 2</a></li>
+            <li class="youtube"><a href="https://www.youtube.com/watch?v=by3yRdlQvzs" >Youtube - Khalid - Location</a></li>
+       
+        
+    </header>
+
+
+    <main>
+        
+            <h1> Khalid </h1>
+            <h3 class="location"> LOCATION </h3>
+            
+            <div class="songtext">
+                <p class="p1"> Send me your location<br>
+                Let's focus on communicating<br>
+                'Cause I just need the time and place to come through<br>
+                (Place to come through)<br>
+                Send me your location<br>
+                Let's ride the vibrations<br>
+                I don't need nothing else but you<br>
+                (I don't need nothing else but you)</p>
+            
+                <p class="p2">At times I wonder why I fool with you
+                But this is new to me, this is new to you
+                Initially, I didn't wanna fall for you
+                Gather my attention it was all for you, so don't
+                Take advantage, don't leave my heart damaged
+                To understand that things go a little bit better when you plan it, oh</p>
+            </div>
+            
+            <div class="linkYoutube">
+               
+            </div>
+        
+    
+    </main>
+
+
+    <footer>
+        <p class="footer">&copy; 2021 Surya Schmid</p>
+    </footer>
+ 
+    
+   
+</body>
+</html>

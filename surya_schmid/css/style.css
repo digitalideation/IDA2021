@@ -1,0 +1,42 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+a {
+    color: lime;
+    background-color: red;
+}
+
+.robot {
+    border: 10px solid turquoise;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    width: 300px;
+    padding: 2rem;
+
+    box-sizing: border-box;
+
+    /* border-left-color: red;
+    border-right-color: greenyellow;
+    width: 0px;
+    height: 0px; */
+
+
+}
+
+.robot .body {
+    border: 20px solid red;
+}
+
+body {
+    background-color: sandybrown;
+    background-image: url(https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+
+

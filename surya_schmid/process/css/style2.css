@@ -1,0 +1,61 @@
+
+body{
+
+    background-image: linear-gradient(blue, yellow);
+
+    background-image: linear-gradient(to bottom right, pink, rgb(251, 251, 152));
+    height: 100vh;
+
+}
+
+div {
+    height: 200px;
+    margin: 3rem;
+    float: left;
+    
+}
+
+.shape-square {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+.shape-rectangle {
+    background-color: rgb(135, 203, 32);
+    width: 200px;
+    height: 400px;
+    
+}
+
+.shape-circle{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+
+h1{
+    color: lightgoldenrodyellow;
+
+}
+
+h1 span:before{
+    content: 'before';
+}
+
+.arrow{
+    width: 300px;
+    height: 100px;
+    background-color: lightgreen;
+    box-sizing: border-box;
+}
+
+.arrow::after{
+    content: '';
+    border: 50px solid transparent;
+    border-left-color:  rgb(159, 142, 255);
+    display: block;
+    margin-left: 18.6rem;
+}
