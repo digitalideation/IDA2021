@@ -4,7 +4,7 @@
 
 a {
     color: lime;
-    background-color: red;
+
 }
 
 .robot {
@@ -16,11 +16,9 @@ a {
 
     box-sizing: border-box;
 
-    /* border-left-color: red;
+    border-left-color: red;
     border-right-color: greenyellow;
-    width: 0px;
-    height: 0px; */
-
+   
 
 }
 
