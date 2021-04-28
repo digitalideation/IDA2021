@@ -1,9 +1,7 @@
 body {
     text-align: center;
     width: 100%;
-}
-
-{background-image: linear-gradient(violet yellow );
+    background-image: linear-gradient(violet, yellow );
 }
 
 .shape {
