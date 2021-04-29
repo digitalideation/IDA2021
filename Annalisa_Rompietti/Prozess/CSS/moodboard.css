@@ -1,0 +1,42 @@
+figure {
+    position: relative;
+    height: 100%;
+    z-index: -1;
+}
+#wasser {
+height: 300px;
+top: 50px;
+left: 0px;
+
+}
+
+figcaption { 
+    color: aquamarine;
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    background: rgba(0,0,0,5);
+
+}
+figcaption span {
+    padding-left: 0.5rem;
+}
+img {
+    display: block;
+}
+
+#panda {
+
+    position: fixed;
+    
+    height: 600px;
+    z-index:2;
+    height: 200px;
+}
+
+#wolken {
+    height: 100%;
+    top: 50px;
+    left: 0px;
+    z-index: -1;
+}
