@@ -1,0 +1,28 @@
+/*
+        Todo (Step by Step) -- lösche die Befehle von den Steps vorher nicht:
+        1. Mache alle p Tags grün
+        2. Mache bloss das p mit der Klasse site-slogan blau
+        3. Mache bloss das h2 im article rot
+        4. Mache alle p in der ID #inhaltsbereich grau 
+        5. Challenge Mache alle ersten p's rot (Selektor p:first-of-type)
+        */ 
+
+p { 
+    color: olive;
+}
+
+p.site-slogan { 
+    color: lightskyblue;
+}
+
+h2.article { 
+    color: red; 
+}
+
+#inhaltsbereich p { 
+    color: gray;
+}
+
+p:first-of-type {
+    color: darkred !important;
+}

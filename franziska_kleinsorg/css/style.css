@@ -1,39 +1,223 @@
-@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;490;700&display=swap');
 
+@keyframes bounce {
+    0%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    20% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  
+    40% {
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px);
+    }
+    60% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+      }
+    
+      80% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+      }
+  }
+  
 
 h1 {
-    color: darkolivegreen;
+    color: #95606b;
     font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+h2 {
+    color: #d59d8d;
+    font-size: 49px;
+}
+
+h3 {
+    color:#d59d8d; 
+    font-size: 30px;
+    letter-spacing: 10px;
 }
 
 p {
-    font-size: 30px;
+    font-size: 20px;
+    color: white;
 }
 
 li { 
-    color: white;
+    color: #d59d8d;
 }
-li:hover {
-    font-weight: 800;
-    font-style: italic;
-}
-li:visited {
-    color: white;
-}
+
 a {
-    color: white;
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:visited {
+    color: #ccc7c2;
     text-decoration: none;
     font-size: 20px;
 }
 
 a:hover { 
-    font-weight: 800;
+    font-weight: 600;
     font-style: italic;
 }
 
+a.navi {
+    color:#ccc7c2;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a.navi:visited {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a.navi:hover { 
+    font-style: italic;
+    font-size: 30px;
+}
+
+a.active {
+    color: #c4a5a6;
+    font-size: 30px;
+}
+
+figure {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    color: white;
+    padding: 10px;
+    line-height: 150%;
+    background-color: rgba(0,0,0,0.6); 
+}
+img {
+    display: block;
+}
+
+.picture1 {
+    position: fixed;
+    margin-top: -27%;
+    margin-left: 19%;
+   }
+   
+
+
+   .picture2 {
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 55%;
+   }
+  
+  
+   .picture3 {
+    position: absolute;
+    margin-top: 57%;
+    margin-left: 10%;
+   }
+
+   .picture4 {
+    position: absolute;
+    margin-top: 71%;
+    margin-left: 62.5%;
+   }
+
+     .picture5 {
+    position: absolute;
+    margin-top: 100%;
+    margin-left: 33%;
+   }
+
+   .picture6{
+    position: absolute;
+    margin-top: 124.5%;
+    margin-left: 5%;
+   }
+
+   .picture7{
+    position: absolute;
+    margin-top: 150%;
+    margin-left: 70%;
+   }
+
+   .picture8{
+    position: absolute;
+    margin-top: 180%;
+    margin-left: 10%;
+   }
+
+   .picture9{
+    position: absolute;
+    margin-top: 190%;
+    margin-left: 75%;
+   }
+
+   .picture10{
+    position: absolute;
+    margin-top: 230%;
+    margin-left: 20%;
+   }
+
+   .picture11{
+    position: absolute;
+    margin-top: 260%;
+    margin-left: 30%;
+   }
+
+   .picture12{
+    position: absolute;
+    margin-top: 290%;
+    margin-left: 70%;
+   }
 
 body {
-    background-color: lightgrey;
-    background-image: url(https://image.winudf.com/v2/image/Y29tLnBhc3RlbHdhbGxwYXBlci5oZC5wYXN0ZWxwaWN0dXJlcy5waG90b3MuYmFja2dyb3VuZC5jdXRlLmNvb2wuYXJ0LnBhc3RlbGltYWdlcy5oZC5mcmVlX3NjcmVlbl84XzE1MzM5NDQwOTlfMDEy/screen-8.jpg?fakeurl=1&type=.jpg);
+    background-color: #334661;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
+
+/******
+GRID / COLUMNS
+************/
+
+@media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 24.5%;
+      flex: 24.5%;
+      max-width: 24.5%;
+    }
+  }
+  
+  .row {
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  .column {
+    -ms-flex: 24.5%;
+    flex: 24.5%;
+    max-width: 24.5%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
