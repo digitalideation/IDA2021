@@ -1,0 +1,165 @@
+
+/* Nav Bar*/
+nav {
+    text-align: center;
+}
+
+    nav div {
+        border: 10px solid cadetblue;
+        width: 500px;
+        /* setzt die width auf den border, nicht auf den inhalt */
+        box-sizing: border-box;
+    }
+
+    nav a {
+        color: green;
+        text-transform: uppercase;
+    }
+
+        nav a:link {
+            color: #000000;
+        }
+
+        nav a:visited {
+            color: #9D9D9D;
+        }
+
+        nav a:hover {
+            background-color: rgb(240, 225, 188);
+        }
+
+        nav a:active {
+            background-color: rgb(240, 44, 162);
+        }
+
+    nav li {
+        display: inline;
+    }
+
+/* All */
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* attribute */
+
+
+
+main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    main article {
+        min-height: 700px;
+    }
+
+.robot {
+    max-width: 1200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .robot * {
+        margin: 10px;
+        height: 20px;
+        width: 100%;
+        border: 2px solid red;
+        display: inline-block;
+    }
+
+    .robot .head {
+        position: fixed;
+        top: 100px;
+        left: 450px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid rgb(208, 208, 80);
+    }
+        .robot .head * {
+            margin: 0px;
+        }
+
+        .robot .eye {
+            width: 30%;
+            margin-left: 8px;
+            margin-right: 8px;
+            box-sizing:  border-box;
+            display: inline-flex;
+        }
+
+        .robot .eye--left{
+
+        }
+
+    .robot .nose {
+        display: block;
+        width: 30px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .robot .mouth {
+        margin: 20px;
+        margin-left: 0px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .robot .body {
+        position: fixed;
+        top: 230px;
+        left: 400px;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 300px;
+    }
+
+    .robot .leg {
+        position: fixed;
+        left: 430px;
+        top: 550px;
+        width: 60px;
+        height: 210px;
+    }
+    .robot .leg--right {
+        position: fixed;
+        top: 550px;
+        left: 500px;
+    }
+     
+    .robot .foot {
+        position: relative;
+        top: 210px;
+        width: 50px;
+        height: 30px;
+    }
+
+
+    .robot .arm {
+        position: fixed;
+        top: 230px;
+        left: 310px;
+        width: 60px;
+        height: 210px;
+    }
+    .robot .arm--right {
+        position: fixed;
+        top: 230px;
+        left: 600px;
+    }
+
+    .robot .hand {
+        position: relative;
+        top: 160px;
+        width: 50px;
+        height: 30px;
+    }

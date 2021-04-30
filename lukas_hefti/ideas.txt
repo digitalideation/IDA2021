@@ -1,0 +1,2 @@
+- p5.js as background on website ?
+- picture webpage - on click expand
