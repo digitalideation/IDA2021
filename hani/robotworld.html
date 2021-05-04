@@ -6,13 +6,109 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - Hani Aslani</title>
-  <link rel="stylesheet" href="css/style.css">
  <style>
+   body {
+     background: rgb(215, 235, 241);
+   }
+   .body1 {
+     width: 300px;
+  height: 325px;
+  background-color: rgb(194, 198, 199);
+  border: 1px solid black;
+  margin-left: 35%;
+  margin-top: 10%;
+  position: absolute;
+  
+}
+.eye-left {
+  width: 95px;
+  height: 115px;
+  background-color: aqua;
+  border: 1px solid black;
+  margin-left: 0%;
+  position: absolute;
+}
+.eye-right {
+width: 95px;
+  height: 115px;
+  background-color: aqua;
+  border: 1px solid black;
+  margin-left: 68%;
+  position: absolute;
+}
+.arm-left
+{ 
+  position: absolute;
+  top: 0;
+  left: 50px;
+  right: 230px;
+  bottom: 25px;
+  margin: auto;
+  height: 30px;
+  width: 100px;
+  background: lightgray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 10px;
+
+}
+.arm--right {
+  position: relative;
+  top: 10px;
+  left: 50px;
+  right: 230px;
+  bottom: 25px;
+  margin: auto;
+  height: 30px;
+  width: 100px;
+  background: lightgray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 10px;
+
+}
+
+.leg{
+  width:10px;
+  height:100px;
+  background-color:blue;
+
+}
+.leg--right{
+  margin-left:100px;
+}
        
     </style>
 </head>
 
-<body>
+<body class="roby">
+  
+  <div class="robot">
+    <div class="leg leg--left">
+      <div class="foot"></div>
+    </div>
+    <div class="leg leg--right">
+      <div class="foot"></div>
+    </div>
+    <section class="body1">
+    <div class="head">
+      <div class="eye-left"></div>
+      <div class="eye-right"><div class="inside-eye-right"></div></div>
+      
+      <div class="inside-eye-left"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    </section>
+    <div class="arm-left">
+      <div class="hand"></div>
+    </div>
+    <div class="arm arm--right">
+      <div class="hand"></div>
+    </div>
+  </div>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -21,27 +117,6 @@
       <li><a href="process/index.html">Process</a></li>
     </ul>
   </nav>
-  <div class="robot">
-    <div class="leg leg--left">
-      <div class="foot"></div>
-    </div>
-    <div class="leg leg--right">
-      <div class="foot"></div>
-    </div>
-    <div class="body"></div>
-    <div class="head">
-      <div class="eye eye--left"></div>
-      <div class="eye eye--right"></div>
-      <div class="nose"></div>
-      <div class="mouth"></div>
-    </div>
-    <div class="arm arm--left">
-      <div class="hand"></div>
-    </div>
-    <div class="arm arm--right">
-      <div class="hand"></div>
-    </div>
-  </div>
 </body>
 
 </html>
