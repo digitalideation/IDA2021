@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>IDA Modul - Surya Schmid</title>
+  <style>
+        
+
+        /* *, *:before, *:after {
+  box-sizing: border-box;
+  border: 1px solid black;
+} */
+
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    position: relative;
+    outline-color: #195272 3px solid;
+}
+nav{
+    border: 1px solid red;
+}
+
+
+div{
+   
+    height: 10vh;
+    border: darkblue 1px solid;
+
+    
+
+}
+
+.robot{
+
+    border: black solid 1px ;
+    position: relative;
+    height: 100vh;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.head{
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    top: 14rem;
+    display: flex;
+    justify-content: center;
+}
+
+.eye {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    top: -2vw;
+    background-color: white;
+   
+}
+
+.eye--left{
+    left: 2rem;
+}
+
+.eye--right{
+    right:2rem;
+}
+
+
+
+
+.body {
+   
+    position: absolute;
+    width: 180px;
+    height: 150px;
+    top: 15vw;
+    background: url(/process/day8/Bilder/head_Zeichenfläche\ 1.png);
+    background-size:400%;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.arm{
+    position: absolute;
+    border: solid 2px rgb(0, 0, 0);
+    width: 20px;
+    height: 100px;
+    top: 20vw;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+
+}
+
+.arm--left{
+    left: 38.7vw;
+    border-top-left-radius: 50%;   
+}
+
+.arm--right{
+    right: 38.7vw;
+    border-top-right-radius: 50%;
+}
+
+.leg{
+    position: absolute;
+    border: solid 2px rgb(0, 0, 0);
+    width: 20px;
+    height: 100px;
+    top: 25vw;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+
+}
+
+.leg--left{
+    left: 43vw;
+}
+
+.leg--right {
+    right: 43vw;
+}
+
+.foot{
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  top: 90px;
+}
+
+    </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>My Robot</li>
+      <li><a href="song.html">My Song</a></li>
+      <li><a href="process/index.html">Process</a></li>
+    </ul>
+  </nav>
+  <div class="robot">
+    <div class="leg leg--left">
+      <div class="foot"></div>
+    </div>
+    <div class="leg leg--right">
+      <div class="foot"></div>
+    </div>
+    <div class="body"></div>
+    <div class="head">
+      <div class="eye eye--left"></div>
+      <div class="eye eye--right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="arm arm--left">
+      <div class="hand"></div>
+    </div>
+    <div class="arm arm--right">
+      <div class="hand"></div>
+    </div>
+  </div>
+
+
+  <div class="robot1">
+    <div class="leg1 leg--left1">
+      <div class="foot"></div>
+    </div>
+    <div class="leg1 leg--right1">
+      <div class="foot1"></div>
+    </div>
+    <div class="body1"></div>
+    <div class="head1">
+      <div class="eye1 eye--left1"></div>
+      <div class="eye1 eye--right1"></div>
+      <div class="nose1"></div>
+      <div class="mouth1"></div>
+    </div>
+    <div class="arm1 arm--left1">
+      <div class="hand1"></div>
+    </div>
+    <div class="arm1 arm--right1">
+      <div class="hand1"></div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,40 +1,138 @@
-*, *:before, *:after {
+/* *, *:before, *:after {
   box-sizing: border-box;
-}
+  border: 1px solid black;
+} */
 
-a {
-    color: lime;
-
-}
-
-.robot {
-    border: 10px solid turquoise;
-    border-radius: 50px;
-    border-top-left-radius: 0;
-    width: 300px;
-    padding: 2rem;
-
+*{
     box-sizing: border-box;
+}
 
-    border-left-color: red;
-    border-right-color: greenyellow;
+
+
+body{
+    position: relative;
+    background: #ffffff;
+    outline-color: #195272 3px solid;
+}
+nav{
+    border: 1px solid red;
+}
+
+
+div{
    
+    height: 10vh;
+    /* border: darkblue 1px solid; */
+    
 
 }
 
-.robot .body {
-    border: 20px solid red;
-}
-
-body {
-    background-color: sandybrown;
-    background-image: url(https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
+.robot{
+    border: black solid 1px ;
+    position: relative;
+    height: 100vh;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 
+.head{
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    border: 1px solid steelblue;
+    border-radius: 50%;
+    top: 3.4rem;
+    display: flex;
+    justify-content: center;
+}
 
+.eye {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 1px solid steelblue;
+    border-radius: 50%;
+    top: 4rem;
+    background-color: white;
+   
+}
+
+.eye--left{
+    left: 3rem;
+}
+
+.eye--right{
+    right: 3rem;
+}
+
+.nose{
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    border: 1px solid steelblue;
+    border-radius: 30%;
+    top: 6rem;
+    background-color: white;
+}
+
+.mouth{
+    position: absolute;
+    width:60px;
+    height: 1px;
+    top: 8.7rem;
+    border: 1px solid steelblue;
+    background-color: white;
+}
+
+.body {
+    border: steelblue solid 1px;
+    position: absolute;
+    width: 15vw;
+    height: 18vw;
+    top:15rem;
+    border-radius: 50%;
+}
+
+.arm{
+    position: absolute;
+    border: solid 1px steelblue;
+    width: 15vw;
+    height: 3vw;
+    top: 20rem;
+    border-radius: 50%;
+}
+
+.arm--left{
+    left: 29.6vw;
+    transform: rotate(-45deg);
+    
+   
+}
+
+.arm--right{
+    right: 29.6vw;
+    transform: rotate(45deg);
+
+}
+
+.leg{
+    position: absolute;
+    border: solid 1px steelblue;
+    width: 3vw;
+    top: 63.5vh;
+    height: 20vh;
+    border-radius: 50%;
+
+}
+
+.leg--left{
+    left: 43vw;
+}
+
+.leg--right {
+    right: 43vw;
+}

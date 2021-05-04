@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDA Modul - Surya Schmid</title>
+  <style>
+
+    *{
+      box-sizing: border-box;
+    }
+
+    div{
+      background-color: white;
+    }
+
+  main{
+      display: flex;
+    }
+      
+        .robot {
+            border: 1px solid #de9c9c;
+            padding: 1rem;
+   
+            position: relative;
+            width: 300px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px;
+            
+        }
+
+         .head{
+          border: 0px solid #000000;
+          position: absolute;
+          width: 150px;
+          height: 100px;
+          top: 70px;
+          justify-content: center;
+          display: flex;
+
+          transition-timing-function: ease-in-out;
+          transition-duration: 1s;
+        }
+
+        .head2{
+          border: 0px solid #000000;
+          position: absolute;
+          width: 200px;
+          height: 120px;
+          top: 50px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          background-image: url(/process/day8/Bilder/hearts_Zeichenfläche\ 1.svg);
+          background-size:80%;
+          background-position-x: center;
+          background-position-y: center;
+         
+          transition-timing-function: ease-in-out;
+          transition-duration: 1s;
+        }
+
+        .tv{
+          border: 0px solid #000000;
+          position: absolute;
+          width: 80px;
+          height: 60px;
+          background-color: rgba(255, 255, 255, 0);
+      
+        }
+
+        img{
+          padding: 0px;
+          width: cover;
+        }
+       
+        .leg{
+          border: 3px solid #000000;
+          position: absolute;
+          width: 30px;
+          height: 120px;
+          bottom: 0;
+        }
+
+        .leg--left{
+          left: 105px;
+        }
+        .leg--right{
+          right: 105px;
+        }
+
+         .body{
+           border: 3px solid #000000;
+          position: absolute;
+           width: 120px;
+          height: 111px;
+          top: 170px;
+        }
+
+       
+
+         .arm{
+           border: 3px solid #000000;
+          position: absolute;
+          width: 30px;
+          height: 130px;
+         
+        }
+
+        .arm--left{
+          left: 62px;
+          top: 170px;
+
+          transition-timing-function: ease-in-out;
+          transition-duration: 1s;
+          transform-origin: top right;
+        }
+
+        .arm--right{
+          right: 62px;
+          top: 170px;
+
+          transition-timing-function: ease-in-out;
+          transition-duration: 1s;
+          transform-origin: top right;
+        }
+
+        .hand{
+          border: 3px solid #000000;
+          position:absolute;
+          width: 40px;
+          height: 20px;
+          bottom: 0;    
+          margin-bottom: -3px;    
+        }
+
+        .arm--left .hand{
+          right: 0;
+          margin-right: -3px;  
+        }
+         
+        .arm--right .hand{
+          left: 0;
+           margin-left: -3px;  
+        }
+
+
+        .foot{
+          border: 3px solid #000000;
+          position:absolute;
+          width: 50px;
+          height: 20px;
+          bottom: 0;  
+          margin-bottom: -3px;        
+        }
+
+        .leg--left .foot{
+          right: 0;
+          bottom: 0;
+           margin-right: -3px;  
+        }
+         
+        .leg--right .foot{
+          left: 0;
+          margin-left: -3px;  
+        }
+
+
+      
+
+        .head:hover{
+          top: 30px;
+          
+        }
+
+        .head2:hover{
+          top: 30px;
+        }
+
+        .robot:hover .arm--left{
+          transform: rotate(90deg);
+          transform-origin: top right;
+          top: 200px;
+        
+        }
+
+        .robot:hover .arm--right{
+          transform: rotate(-90deg);
+          transform-origin: top left;
+          top: 200px;
+        
+        }
+
+
+    </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>My Robot</li>
+      <li><a href="song.html">My Song</a></li>
+      <li><a href="process/index.html">Process</a></li>
+    </ul>
+  </nav>
+
+  <main>
+      <div class="robot">
+        <div class="leg leg--left">
+          <div class="foot"></div>
+        </div>
+        <div class="leg leg--right">
+          <div class="foot"></div>
+        </div>
+        <div class="body"></div>
+        <div class="head">
+          <img src="/process/day8/tv_head_Zeichenfläche 1.svg" alt="">
+          <div class="eye eye--left"></div>
+          <div class="eye eye--right"></div>
+          <div class="nose"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="arm arm--left">
+          <div class="hand"></div>
+        </div>
+        <div class="arm arm--right">
+          <div class="hand"></div>
+        </div>
+      </div>
+
+      <div class="robot">
+        <div class="leg leg--left">
+          <div class="foot"></div>
+        </div>
+        <div class="leg leg--right">
+          <div class="foot"></div>
+        </div>
+        <div class="body"></div>
+        <div class="head">
+          <img src="/process/day8/TV_HEART_Zeichenfläche 1.svg" alt="">
+          <div class="eye eye--left"></div>
+          <div class="eye eye--right"></div>
+          <div class="nose"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="arm arm--left">
+          <div class="hand"></div>
+        </div>
+        <div class="arm arm--right">
+          <div class="hand"></div>
+        </div>
+      </div>
+
+      <div class="robot">
+        <div class="leg leg--left">
+          <div class="foot"></div>
+        </div>
+        <div class="leg leg--right">
+          <div class="foot"></div>
+        </div>
+        <div class="body"></div>
+        <div class="head2">
+          <div class="tv"></div>
+        </div>
+        <div class="arm arm--left">
+          <div class="hand"></div>
+        </div>
+        <div class="arm arm--right">
+          <div class="hand"></div>
+        </div>
+      </div>
+  </main>
+</body>
+
+</html>
