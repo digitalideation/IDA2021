@@ -1,34 +1,221 @@
-a {
-   background-color: tomato;
-   color: white;
+/* Style home.html */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+        font-family: "Walsheim-Regular";
+        src: url(fonts/GT-Walsheim-Regular.woff);
+    }
+
+body {
+    font-family: Walsheim-Regular;
+    height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+p {
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 1500px;
+    font-size: 70px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.green {
+    color: black;
+}
+
+.green:hover {
+    color: #387C67;
+}
+
+.songtext {
+    background-color: lightgrey;
+    height: 370px;
+}
+
+.p-left {
+    text-align: right;
+    font-size: 100px;
+}
+
+.p-right {
+    font-size: 600px;
+    letter-spacing: -80px;
+}
+
+.p-right:hover {
+    transform: rotate(90deg) translate(-400px, 500px) scale(0.5);
+    transition: 1s;
+    letter-spacing: -40px;
+    color: tomato;
+}
+
+div.songtext-left {
+    width: 40%;
+    /* border: black solid 1px; */
+    height: 0px;
+}
+
+div.songtext-right {
+    width: 50%;
+    left: 35%;
+    /* border: springgreen solid 1px; */
+    position: relative;
+    top: -35px;
+}
+
+h1 {
+    color: black;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+img {
+    width: 94%;
+    margin: 3%;
 }
 
 .robot {
-    /* border: 10px solid purple; */
-    /* background-color: lightcoral; */
-    border-width: 10px;
-    border-color: tomato;
-    border-style: solid;
-    padding: 2rem;
-    margin: 1rem;
-    border-left-color: teal;
-    width: 200px;
+    border: 1px solid black;
+    /* column-count: 2; */
+}
+
+p.robotworld {
+    color: white;
+    text-align: center;
+    height: 300px;
+}
+
+body.robotworld {
+    background-color: black;
+}
+
+.foot {
     height: 100px;
+    width: 100px;
+    background-color: yellow;
     border-radius: 50px;
-    border-top-left-radius: 0px;
-    box-sizing: border-box;
- }
+}
 
-body {
+.leg {
+    height: 200px;
+    width: 200px;
+    background-color: tomato;
+}
+
+.leg--left {
+    position:relative;
+    width: 300px;
+    height: 300px;
+    background-color: yellowgreen;
+    float: left;
+    border-radius: 250px;
+    margin-top: 25%;
+}
+
+.leg--left:hover {
+    /* transform:scale3d(0.5) */
+    transform: rotate(360deg) scale(0.5);
+    transition: 1s;
+}
+
+.leg--left .foot {
+    background-color: thistle;
+    float: left;
+}
+
+.leg--right {
+    position:relative;
+    width: 300px;
+    height: 300px;
+    background-color: goldenrod;
+    float: right;
+    border-radius: 250px;
+    margin-top: 25%;
+}
+
+.leg--right:hover {
+    transform: rotate(-180deg);
+    transition-duration: 1s;
     background-color: lightblue;
-    background-image: url(https://www.tierwelt.ch/sites/default/files/styles/header_news_2x/public/images/shutterstock_1114115513.jpg?itok=cO1Nj67e);
-    height: 100%;
-    width: 100%;
 }
 
-/* anything that has the class body inside of the robot */
-.robot .body {
+/* .leg--right:focus {
+    transform: rotate(30deg);
+    transition: 1s;
+} */
 
+.leg--right .foot {
+    float: right;
+    background-color: hotpink;
 }
 
-/* comment: cmd shift 7 */
+.leg--right .foot:hover {
+    float: right;
+    background-color: white
+}
+
+.body {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    background-color: indianred;
+    left: 40%;
+    bottom: 70%;
+    transition: ease-in-out;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: white 10px solid;
+}
+
+.body:hover {
+    transform: translate(100px) scale(0.8) skew(30deg) rotate(360deg);
+    transition-duration: 1s;
+    /* transform-origin: top left; */
+}
+
+nav {
+    z-index: 4;
+}
+
+.foot p {
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 100px;
+}
