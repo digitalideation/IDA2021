@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arranging Images</title>
+    <link rel="stylesheet" href="../../globalstyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: block !important;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            padding: 15px;
+            justify-content: center;
+            background-image: url(img-compression/Gorillaz_Credit_Warner_Music-32c.gif);
+            background-position: center;
+            height: 250px;
+            vertical-align: center;
+            filter:invert(100%);
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3em;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .wrapper figure {
+            margin: 15px;
+            width: 20vw;
+        }
+
+
+        main {
+            width: 74vw;
+            margin: auto;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .one {
+            grid-column: 1 / 2;
+            grid-row: 1;
+        }
+
+        .two {
+            grid-column: 2 / 3;
+            grid-row: 2;
+        }
+
+        
+        .three {
+            grid-column: 3 / 4;
+            grid-row: 3;
+        }
+
+        .container {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .center {
+            text-align: center;
+            color: blue;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .container figure {
+            /* display: inline; */
+            
+        }
+
+        .container figure img {
+            width: 20%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header><h1>2D – Tha Leader</h1></header>
+    <main>
+        <div class="wrapper">
+            <figure class="one">
+                <img src="2D/2D.png" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <figure class="two">
+                <img src="2D/75b2682478aaea42c1e43bf45195a774.png" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <figure class="three">
+                <img src="2D/JOhhtHI.png" alt="">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+
+        <div class="container">
+            <figure class="left">
+                <img src="2D/2D.png" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <figure class="center">
+                <img src="2D/75b2682478aaea42c1e43bf45195a774.png" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <figure class="right">
+                <img src="2D/JOhhtHI.png" alt="">
+                <figcaption></figcaption>
+            </figure>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

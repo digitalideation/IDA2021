@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>«Schwarzes Schäfli»</title>
+    <style>
+
+        * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        
+        font-family: helvetica-light;
+        }
+
+        .col-1 {
+            width: 38.2%;
+        }
+        .col-2 {
+            width: 61.8%;
+        }
+        .col-3 {
+            width: 100%;
+        }
+
+        [class*="col-"] {
+        display: inline;
+        float: left;
+        padding: 20px;
+        border: 0px solid red;
+        } 
+        
+        .main-img {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .main-img img {
+            max-height: 100vh;
+            
+        }
+
+        .center {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, -0%);
+        }
+
+        .schaf {
+            width: 20vw;
+            position: relative;
+            float: center;
+        }
+
+        .info {
+            padding-top: 16vh;
+            padding-right: 6vw;
+        }
+
+        .mySlides {
+            width: 61.8vw;
+        }
+
+        div {
+            
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="main-img col-2">
+            <!-- Main Image -->
+                <img class="center" src="assets/190826_pw_F_cyril_t_schwarze-schaefli_03.jpg" alt="Main Img">
+        </section>
+        <section class="info col-1">
+            <!-- Info -->
+                <img class="schaf center" src="assets/IMG-00.png" alt="Fühlsch Mi?">
+            
+            <h2>«Schwarzes Schäfli»</h2>
+
+            <p class="text">
+                Die fotografische Arbeit «Schwarzes Schäfli» thematisiert Gefühle, Erfahrungen und Wünsche in Verbindung mit dem Leben
+                als Afroschweizer.
+                
+                Begleitet von einem selbstgedichteten Slam hatte ich die Chance die Arbeit «Schwarzes Schäfli» am Photoslam Zürich 2019
+                zu präsentieren. Vor einem Publikum von etwa 500 Personen habe ich für Aufatmen, strahlende Augen und verzerrte
+                Gesichter gesorgt.
+            </p>
+
+        </section>
+        <section class="gallery col-3">
+            <!-- Gallery -->
+            <div class="slideshow">
+                <figure>
+                    <img class="mySlides center" src="assets/IMG-01.jpg">
+                </figure>
+                <figure></figure>
+                <figure></figure>
+                <figure></figure>
+                
+                <img class="mySlides center" src="assets/IMG-02.jpg">
+                <img class="mySlides center" src="assets/IMG-03.jpg">
+                <img class="mySlides center" src="assets/IMG-04.jpg">
+            
+                <div class="slidecontrol">
+                    <button class="btn btn-right" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="btn btn-left" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+                
+            </div>
+            
+        </section>
+    </main>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    
+</body>
+</html>
