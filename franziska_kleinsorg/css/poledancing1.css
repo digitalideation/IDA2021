@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: black;
 }
 
 h1 {
@@ -49,13 +50,16 @@ a:hover {
     font-style: italic;
 }
 
-  .pole {
+span {
     position: absolute;
     display: block;
     top: 0;
-    height: 2000px;
+    height: 100%;
     width: 7px;
     background-color:rgb(80, 80, 80);
+  }
+
+.pole {
     left: 50%;
     } 
 
@@ -112,7 +116,7 @@ a:hover {
 }
 
 .background2 {
-    background-color: #5c3120;
+    background-color: #a71a1a;
     position: static;
     width:auto;
     height: 2000px;
