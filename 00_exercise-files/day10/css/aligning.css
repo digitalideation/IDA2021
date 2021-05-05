@@ -1,0 +1,49 @@
+body {
+    text-align: left;
+}
+
+.wrapper {
+    padding: 2rem;
+    border: 1px solid palegoldenrod;
+}
+
+.wrapper.wrapper--centered {
+    text-align: center;
+}
+
+.wrapper.wrapper--centered .container{
+    margin: 0 auto;
+}
+
+.wrapper.wrapper--left {
+    text-align: left;
+}
+
+.wrapper.wrapper--right {
+    text-align: right;
+}
+
+.wrapper.wrapper--right .container{
+    /* float: right; */
+    margin-left: auto;
+}
+
+.container {
+    width: 300px;
+    text-align: center;
+    /* margin: 0 auto; */
+    border: 2px solid green;
+}
+
+.container img {
+    width: 100%;
+}
+
+.container span {
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.container:hover span {
+    opacity: 1;
+}

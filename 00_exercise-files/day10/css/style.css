@@ -15,8 +15,8 @@ img {
     height: 100vh;
     border: 10px solid #333;
     box-shadow: inset 0 0 0 10px #eee, inset 0 0 20px rgba(0,0,0,.5) ;
-    background-size: cover;
-    /* background-attachment: fixed; */
+    background-size: 200px 100px;
+    background-attachment:fixed;
 }
 
 .attachment section:first-child {
@@ -33,7 +33,7 @@ img {
 
 .pattern {
     background: url(../img/bunting-flag.png);
-    /* background-size: 100px; */
+    background-size: 200px;
 }
 
 .gradient section {
@@ -43,11 +43,21 @@ img {
 }
 
 .gradient, .nth {
-    /* background-image: radial-gradient(circle at center, yellow, lime, green, darkgreen); */
-    background-image: repeating-radial-gradient(circle at center, salmon, orange 10%);
+    /* background-image: radial-gradient(circle at center, yellow, lime, salmon); */
+    /* background-image: repeating-radial-gradient(circle, salmon, orange, salmon 20%); */
     /* try with multiple, opacity */
-    /* background-image: repeating-radial-gradient(circle at center, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 10%),
-    repeating-radial-gradient(circle at top left, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 10%); */
+    background-color: lime;
+    background-image: repeating-radial-gradient(circle, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%),
+                      repeating-radial-gradient(circle at top left, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%),
+                      repeating-radial-gradient(circle at bottom left, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%),
+                      repeating-radial-gradient(circle at bottom right, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%),
+                      repeating-radial-gradient(circle at top right, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%);
+                      
+    /* background-image: repeating-radial-gradient(circle at center, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 10%); */
+}
+
+.gradient img {
+    mix-blend-mode: soft-light;
 }
 
 .nth section {
@@ -55,6 +65,10 @@ img {
     text-align: center;
 }
 
+.nth section img:nth-child(3n+2) {
+    mix-blend-mode: color-burn;
+}
+
 .nth section img:nth-child(4n+1) {
-    /* mix-blend-mode: color-burn; */
+    mix-blend-mode: soft-light;
 }
