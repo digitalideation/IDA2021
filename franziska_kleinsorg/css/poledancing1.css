@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;490;700&display=swap');
+
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1 {
+    color: #e92ea2;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+h2 {
+    color: #e92ea2;
+    font-size: 49px;
+}
+
+h3 {
+    color:#e92ea2; 
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: #458d79;
+}
+
+li { 
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover { 
+    font-weight: 600;
+    font-style: italic;
+}
+
+  .pole {
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 2000px;
+    width: 7px;
+    background-color:rgb(80, 80, 80);
+    left: 50%;
+    } 
+
+.robothead {
+    height: 35px;
+    width: 35px;
+    background-color:  #9c9a97;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.robotbody { 
+    width: 35px;
+    height: 80px;
+    background-color: #9c9a97;
+     border-radius: 10%;
+}
+
+.arm {
+    width: 45px;
+    height: 12px;
+    background-color:  #b4b2af;
+    border-radius: 10%;  
+}
+
+.upperthigh {
+    width: 45px;
+    height: 20px;
+    background-color:  #b4b2af;
+    border-radius: 10%;  
+}
+
+.lowerthigh {
+    width: 14px;
+    height: 55px;
+    background-color:  #b4b2af;
+    border-radius: 10%;  
+    transform: rotate(-35deg);
+}
+
+.foot {
+    width: 30px;
+    height: 12px;
+    background-color:  #b4b2af;
+    border-radius: 10%; 
+    transform: rotate(-35deg); 
+}
+
+.background1 {
+    background-color: #DBC8F3;
+    position: static;
+    width:auto;
+    height: 2000px;
+}
+
+.background2 {
+    background-color: #5c3120;
+    position: static;
+    width:auto;
+    height: 2000px;
+}

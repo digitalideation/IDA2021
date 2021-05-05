@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>IDA Modul - Franziska Kleinsorg</title> 
+</head>
+
+<style>
+
+.container { 
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+img {
+    opacity: 0.5;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 49% 76%, 0% 75%);
+}
+
+figcaption { 
+    display: none;
+    background-color: #334661
+}
+
+.container:hover img {
+    opacity: 1;
+}
+
+.container:hover figcaption {
+    display: block;
+}
+
+</style>
+
+<body>
+
+    <nav>
+        <ul>
+          <li><a href="index.html">Back</a></li>
+        </ul>
+    </nav>
+
+<p>The image is clipped with this tool: <a href="https://bennettfeely.com/clippy/">Clippy</a> <br>
+    The image is defined as a figure, and it is with its figurecaption inside a container, which you can hover over!</p>
+
+<div class="container">
+    <figure>
+        <img src="https://i.pinimg.com/736x/12/fe/80/12fe80bd83a702300b6a6715e7a42bb0.jpg" alt="Capybara with Friends">
+        <figcaption>Capybaras are friendly.</figcaption>
+    </figure>
+</div>
+
+</body>
+</html>
