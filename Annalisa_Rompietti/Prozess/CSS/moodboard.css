@@ -1,42 +1,52 @@
-figure {
+body {
+    background-image: url("../moodboard_wolken.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  
+    margin: 0;
+}
+
+.test {
+
+
+}
+
+.wasser{
     position: relative;
-    height: 100%;
-    z-index: -1;
-}
-#wasser {
-height: 300px;
-top: 50px;
-left: 0px;
+    height: 400px;
+
 
 }
 
-figcaption { 
-    color: aquamarine;
-    position: absolute;
-    bottom: 0;
-    padding: 0.5rem;
-    background: rgba(0,0,0,5);
-
+#eins {
+    left: 1000px;
+    top: 200px;
 }
-figcaption span {
-    padding-left: 0.5rem;
-}
-img {
-    display: block;
+#zwei{ 
+left: 100px;
+top: 200px;
 }
 
-#panda {
-
-    position: fixed;
-    
-    height: 600px;
-    z-index:2;
-    height: 200px;
+#drei{ 
+    left: 1000px;
+    top: 1000px;
 }
 
-#wolken {
-    height: 100%;
-    top: 50px;
-    left: 0px;
-    z-index: -1;
+#vier{ 
+    left: 100px;
+    top: 2000px;
 }
+
+/* what is vh? 
+100vh = 100% of the viewport height.  */
+
+/* what is padding: 
+Padding is used to create space 
+around an element's content, 
+inside of any defined borders.
+
+*/
+/*  what is em?
+an em unit is equal to the computed font-size 
+for the element to which the em is applied.*/

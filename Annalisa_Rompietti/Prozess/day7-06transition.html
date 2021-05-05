@@ -12,34 +12,37 @@
             padding: 0px;
             font-family: 'Work Sans';
         }
-        
+
         .box {
             border: 1px solid red;
             background-color: rgba(182, 159, 224, 0.5);
         }
-        
+
         .box div {
             width: 500px;
             height: 500px;
             background-color: rgba(109, 201, 230, 0.5);
             border: 1px solid black;
             font-size: 64px;
-            /*transition-duration: 1s;
             transition-property: all;
-            transition-timing-function: ease-in;
-            transition: all 0.5s ease-out;*/
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            /* auf cubic-bezier website kurven können angepasst werden und reinkopiert werden */
+            /* die animationen in den default zustand und nicht in den hover zustand. 
+sonst bleibt die animation am ende und geht nachdem hovern nicht mehr zurück */
+
+
+
+            transition: all 0.5s ease-out;
+            /* das ist alles das gleich hintereinander geschrieben */
         }
-        
+
         .box:hover div {
             background-color: rgba(0, 0, 0, 1);
             color: white;
             transform: translate(100px, 100px);
-        }
 
-        .box:first-of-type div{
-            transform:scale(0.8)rotate(10deg)
         }
-
     </style>
 </head>
 
