@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    .container {
+        align-items: center;
+        width: 500px;
+        height: fit-content;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    img {
+        max-width: 300px;
+        height: auto;
+        clip-path: circle(50% at 50% 50%);
+        opacity: 0.7;
+        filter: grayscale();
+    }
+
+    figcaption {
+        display: none;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    img:hover {
+        opacity: 1;
+        filter: none;
+    }
+
+    img:hover+figcaption {
+        display: inline-block;
+        color: black;
+    }
+</style>
+
+<body>
+    <div class=container>
+            <img src=../img/Blume1.jpg alt="Bild1">
+            <figcaption>Bildunterschrift</figcaption>
+    </div>
+
+</body>
+
+</html>

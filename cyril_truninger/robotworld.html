@@ -6,24 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - Firstname Lastname</title>
-  <!-- <style>
+  <link rel="stylesheet" href="css/globalstyles.css">
+  <link rel="stylesheet" href="css/robotstyles.css">
+  <style>
         .robot * {
             border: 1px solid #1e90ff;
             padding: 1rem;
             margin: .25rem;
         }
-    </style> -->
+    </style>
 </head>
 
 <body>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li>My Robot</li>
-      <li><a href="song.html">My Song</a></li>
-      <li><a href="process/index.html">Process</a></li>
+      <li><a href="robotworld.html">Robot</a></li>
+      <li><a href="song.html">Song</a></li>
+      <li><a href="process.html">Process</a></li>
     </ul>
   </nav>
+
+  
   <div class="robot">
     <div class="leg leg--left">
       <div class="foot"></div>
@@ -33,6 +37,13 @@
     </div>
     <div class="body"></div>
     <div class="head">
+
+        <div id="container">
+          <video autoplay="true" id="videoElement">
+      
+          </video>
+        </div>
+
       <div class="eye eye--left"></div>
       <div class="eye eye--right"></div>
       <div class="nose"></div>
@@ -45,6 +56,19 @@
       <div class="hand"></div>
     </div>
   </div>
+  <script>
+    var video = document.querySelector("#videoElement");
+
+      if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function (stream) {
+            video.srcObject = stream;
+          })
+          .catch(function (err0r) {
+            console.log("Something went wrong!");
+          });
+      }
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure Tag</title>
+    <link rel="stylesheet" href="../../globalstyles.css">
+    <style>
+        img {
+            clip-path: circle(46% at 50% 50%);
+            margin:auto;
+            opacity: 0.6;
+            transition: 0.6s;
+        }
+
+        figcaption {
+            text-align: center;
+            margin:auto;
+            opacity: 0;
+            transition: 0.6s;
+        }
+
+        .container {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .container:hover img{
+            opacity: 1;
+        }
+
+        .container:hover figcaption {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <figure>
+            <img src="2D/2D.png" />
+            <figcaption>2D – Tha Band Leader</figcaption>
+        </figure>
+    </div>
+    
+</body>
+</html>

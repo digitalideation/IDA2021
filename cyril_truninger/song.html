@@ -5,20 +5,239 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDA Modul - Firstname Lastname</title>
-</head>
+  <title>IDA Digital Design – Song</title>
+  <link rel="stylesheet" href="css/songstyles.css">
+  <link rel="stylesheet" href="css/globalstyles.css">
+  
+  
 
 <body>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="process/index.html">Process</a></li>
-      <li><a href="robotworld.html">My Robot</a></li>
-      <li>My Song</li>
+      <li><a href="robotworld.html">Robot</a></li>
+      <li><a href="song.html">Song</a></li>
+      <li><a href="process.html">Process</a></li>
     </ul>
   </nav>
-  <h1>Firstname Lastname</h1>
-  <p>My Song</p>
+
+  <main>
+    <section>
+      <div class="jt-box">
+        <h1 class="jt --debug">
+          <span class="jt__row">
+            <span class="jt__text">Feel Good Inc.</span>
+          </span>
+          <span class="jt__row jt__row--sibling" aria-hidden="true">
+            <span class="jt__text">Feel Good Inc.</span>
+          </span>
+          <span class="jt__row jt__row--sibling" aria-hidden="true">
+            <span class="jt__text">Feel Good Inc.</span>
+          </span>
+          <span class="jt__row jt__row--sibling" aria-hidden="true">
+            <span class="jt__text">Feel Good Inc.</span>
+          </span>
+        </h1>
+      </div>
+      
+      <h2>Gorillaz</h2>
+    </section>
+
+    <section>
+    <div id="boombox">
+    
+      <div class="boombox-body">
+    
+        <div class="bb-front">
+    
+          <section class="master-controls">
+            <input type="range" id="volume" class="control-volume" min="0" max="2" value="1" list="gain-vals" step="0.01"
+              data-action="volume" />
+            <datalist id="gain-vals">
+              <option value="0" label="min"></option>
+              <option value="2" label="max"></option>
+            </datalist>
+            <label for="volume">VOL</label>
+    
+            <input type="range" id="panner" class="control-panner" list="pan-vals" min="-1" max="1" value="0" step="0.01"
+              data-action="panner" />
+            <datalist id="pan-vals">
+              <option value="-1" label="left"></option>
+              <option value="1" label="right"></option>
+            </datalist>
+            <label for="panner">PAN</label>
+    
+            <button class="control-power" role="switch" aria-checked="false" data-power="on">
+              <span>On/Off</span>
+            </button>
+          </section>
+    
+          <section class="tape">
+    
+            <audio src="sound/Feel-Good-Inc.mp3" crossorigin="anonymous"></audio>
+    
+            <button data-playing="false" class="tape-controls-play" role="switch" aria-checked="false">
+              <span>Play/Pause</span>
+            </button>
+          </section>
+
+
+
+        </div>
+        <!--bb-front-->
+    
+        <div class="bb-top"></div>
+        <div class="bb-right"></div>
+        <div class="bb-bottom"></div>
+        <div class="bb-left"></div>
+        <div class="bb-back"></div>
+      </section>
+
+      <section>
+        <h3>Lyrics</h3>
+        <div class="worddrop-wrapper">
+          <div class="worddrop">
+          <span>Sha, </span>
+          <span>sha, </span>
+          <span>Sha- </span>
+          <span>ba- </span>
+          <span>da, </span>
+          </div>
+        </div>
+
+        <div class="worddrop">
+          <span>Feel </span>
+          <span>good</span>
+        </div>
+
+        <p>
+          City's breaking down on a camel's back
+          They just have to go, 'cause they don't know wack
+          So while you fill the streets, it's appealing to see
+          You won't get out the county, 'cause you're bad and free
+          You got a new horizon, it's ephemeral style
+          A melancholy town where we never smile
+          And all I wanna hear is the message beep
+          My dreams, they got a kissing
+          'Cause I don't get sleep, no
+        </p>
+
+        <p>
+          Windmill, windmill for the land
+          Turn forever hand in hand
+          Take it all in on your stride
+          It is ticking, falling down
+          Love forever, love is freely
+          Turned forever, you and me
+          Windmill, windmill for the land
+          Is everybody in?
+        </p>
+
+        <p>
+          Laughin'gas these hazmats, fast cats
+          Linin' 'em up like ass cracks
+          Play these ponies at the track
+          It's my chocolate attack
+          Shit, I'm steppin' in the heart of this here (Yeah)
+          Care Bear rappin' in harder this year (Yeah)
+          Watch me as I gravitate, ha-ha-ha-ha-ha
+          Yo, we gon' ghost town this Motown
+          With yo' sound, you in the blink
+          Gon' bite the dust, can't fight with us
+          With yo' sound, you kill the Inc.
+          So don't stop, get it, get it (Get it)
+          Until you're cheddar headed
+          And watch the way I navigate
+          Ha-ha-ha-ha-ha
+        </p>
+
+        <p>
+          Sha, sha-ba-da, sha-ba-da-ca, feel good
+          Sha, sha-ba-da, sha-ba-da-ca, feel good
+          Sha, sha-ba-da, sha-ba-da-ca, feel good
+          Sha, sha-ba-da, sha-ba-da-ca, feel good
+        </p>
+
+        <p>
+          Windmill, windmill for the land
+          Turn forever hand in hand
+          Take it all in on your stride
+          It is ticking, falling down
+          Love forever, love is freely
+          Turned forever, you and me
+          Windmill, windmill for the land
+          Is everybody in?
+        </p>
+
+        <p>
+          Don't stop, get it, get it
+          Peep how your captain's in it
+          Steady, watch me navigate
+          Ha-ha-ha-ha-ha
+          Don't stop, get it, get it
+          Peep how your captain's in it
+          Steady, watch me navigate
+          Ha-ha-ha-ha-ha
+        </p>
+
+        <p>
+          Sha, sha-ba-da, sha-ba-da-ca, feel good
+          Sha, sha-ba-da, sha-ba-da-ca, feel good
+          Sha, sha-ba-da, sha-ba-da-ca, feel good
+          Sha, sha-ba-da, sha-ba-da-ca, feel good
+        </p>
+      </section>
+      
+      <!-- boombox-body -->
+    
+    </div>
+    
+    <div id="move-controls" aria-labelledby="move-boombox">
+      <h3 id="move-boombox">Move Boombox</h3>
+    
+      <section class="move-controls_xy">
+        <button data-control="left" aria-labelledby="move-boombox left-label">
+          <span id="left-label">Left</span>
+        </button>
+        <button data-control="up" aria-labelledby="move-boombox up-label">
+          <span id="up-label">Up</span>
+        </button>
+        <button data-control="right" aria-labelledby="move-boombox right-label">
+          <span id="right-label">Right</span>
+        </button>
+        <button data-control="down" aria-labelledby="move-boombox down-label">
+          <span id="down-label">Down</span>
+        </button>
+      </section>
+    
+      <section class="move-controls_z">
+        <button data-control="back" aria-labelledby="move-boombox back-label">
+          <span id="back-label">Back</span>
+        </button>
+        <button data-control="forward" aria-labelledby="move-boombox for-label">
+          <span id="for-label">Forward</span>
+        </button>
+      </section>
+    
+      <section class="move-controls_rotate">
+        <button data-control="rotate-left" aria-labelledby="move-boombox rleft-label">
+          <span id="rleft-label">Rotate left</span>
+        </button>
+        <button data-control="rotate-down" aria-labelledby="move-boombox rdown-label">
+          <span id="rdown-label">Rotate downwards</span>
+        </button>
+        <button data-control="rotate-right" aria-labelledby="move-boombox rright-label">
+          <span id="-label">Rotate right</span>
+        </button>
+        <button data-control="rotate-up" aria-labelledby="move-boombox rup-label">
+          <span id="rup-label">Rotate upwards</span>
+        </button>
+      </section>
+    </div>
+  </main>
+  
 </body>
+
+<script src="js/songScript.js"></script>
 
 </html>

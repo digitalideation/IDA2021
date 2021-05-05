@@ -1,0 +1,36 @@
+body {
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+}
+
+.shape {
+    margin-top: 350px;
+}
+.square {
+    border-color: #FF4359;
+    border-style: solid;
+    border-width: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.rectangle {
+    border-color: SteelBlue;
+    border-style: solid;
+    border-width: 10px;
+    width: 25%;
+    height: 120px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.circle {
+    border-color: LightGreen;
+    border-style: solid;
+    border-width: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+}
+

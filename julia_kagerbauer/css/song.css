@@ -1,0 +1,140 @@
+body {
+    font-family: 'Krona One', sans-serif;
+    margin: 2%;
+    background-color: rgb(216, 137, 199);
+    color: cornsilk;
+    justify-content: center;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: cornsilk;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    color: transparent;
+}
+
+
+nav {
+    text-align:left;
+    text-decoration: none;
+}
+
+.text-ganz {
+    display: inline-block;
+    position:static;
+    text-align:center;
+    font-size: 20px;
+    line-height:  50px;
+}
+
+.text-1 {
+    display: inline-block;
+    position: inherit;
+}
+
+.text-gross {
+    position: center;
+    text-align: center;
+    font-size: 40px;
+    line-height:  40px;
+    margin-top: 40px;
+    margin-left: 10px;
+    transition-property: all;
+    transition-duration: 2s;
+    
+}
+
+.text-gross:hover {
+    /*display: flex;*/
+    position: center;
+    text-align: center;
+    font-size: 40px;
+    line-height:  40px;
+    margin-top: 20px;
+    margin-left: 10px;
+    transform: rotate(-10deg);
+    color:rgb(255, 99, 8);
+}
+
+.box{ 
+    position: center;
+    text-align: center;
+    font-size: 40px;
+    line-height:  40px;
+    margin-top: 40px;
+    margin-left: 10px;
+    transition-property: all;
+    transition-duration: 2s;
+    
+}
+.text-gross-2 {
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.text-gross-3 {
+    transition-property: all;
+    transition-duration: 2s;
+}
+
+.box:hover .text-gross-2{
+    /*display: flex;*/
+    transform: rotate(-10deg) translate(200px,50px);
+    color:rgb(21, 239, 255);
+}
+
+
+.box:hover .text-gross-3 {
+    /*display: flex;*/
+    transform: rotate(10deg) translate(-200px,-50px);
+    color:rgb(21, 239, 255);
+}
+
+span {
+    display: inline-block;
+}
+.reckless {
+    transition-property: all;
+    transition-duration: 0,5s;
+    color:rgb(253, 213, 163);
+    display: inline-block;
+}
+
+.reckless:hover {
+    color: chartreuse;
+    transform: scale(2,2) translate(100px);
+}
+
+.aufblasen div {
+    transition-property: all;
+    transition-duration: 2s;
+    position: relative;
+}
+
+.aufblasen:hover div {
+    transform: scale(3,5);
+    position: relative;
+    color: rgb(255, 17, 65);
+}
+
+.drehen div {
+    transition-property: all;
+    transition-duration: 1s;
+    position: relative;
+    margin: 40px;
+    color:rgb(253, 213, 163);
+    
+}
+
+.drehen:hover div {
+    transform: rotate(360deg) scale(2);
+    color: deeppink;
+}

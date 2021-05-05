@@ -19,7 +19,34 @@ body {
     width: 120px;
     background-color:  #9c9a97;
     border-radius: 50%;
-    margin: 10px;
+}
+
+.emoji:before { 
+    content: '😎';
+    font-size: 130px;
+}
+.emoji:hover:before {
+    content: '🤡';
+}
+
+
+.hat1 { 
+    background-color: violet;
+    width: 130px;
+    height: 10px;
+}
+
+.hat2 {
+    background-color: violet;
+    width: 100px;
+    height: 40px;
+}
+
+.rectangle {
+    width: 150px;
+    height: 250px;
+    background-color: #9c9a97;
+    border-radius: 25px;
 }
 
 .rectangle:hover { 
@@ -30,11 +57,10 @@ body {
     width: 30px;
     height: 180px;
     background-color:  #9c9a97;
-    margin: 10px;
     transform:skew(20deg, 10deg);
-    border-radius: 25px;
-    
+    border-radius: 25px;  
 }
+
 .limbright:hover { 
     transform: rotate(90deg) translate(-80px,-30px);
 }
@@ -43,7 +69,6 @@ body {
     width: 30px;
     height: 180px;
     background-color:  #9c9a97;
-    margin: 10px;
     transform:skew(-20deg, -10deg);
     border-radius: 25px;
 }
@@ -51,13 +76,7 @@ body {
     transform: rotate(90deg) translate(-80px,30px);
 }
 
-.rectangle {
-    width: 150px;
-    height: 250px;
-    background-color: #9c9a97;
-    margin: 10px;
-    border-radius: 25px;
-}
+
 
 </style>
 
@@ -69,13 +88,14 @@ body {
         </ul>
       </nav>
 
-      <div class="top" style="position: absolute; top: 50px; left: 520px;"></div>
+      <div class="emoji" style="position: absolute; top: 30px; left: 515px;"></div>
+      <div class="hat1" style="position: absolute; top: 55px; left: 515px;"></div>
+      <div class="hat2" style="position: absolute; top: 15px; left: 530px;"></div>
       <div class="rectangle" style="position: absolute; top: 180px; left: 500px;"> <p style="text-align: center;">babyrobot</p></div>
       <div class="limbleft" style="position: absolute; top: 190px; left: 470px;"></div>
       <div class="limbright" style="position: absolute; top: 190px; left: 650px;"></div>
       <div class="limbleft" style="position: absolute; top: 420px; left: 480px;"></div>
       <div class="limbright" style="position: absolute; top: 420px; left: 640px;"></div>
-
 
 </body>
 </html>
