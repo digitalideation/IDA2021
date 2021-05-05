@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        margin-top: 50px;
+        margin-left: 50%;
+    }
+
+    img {
+        max-width: 300px;
+        height: auto;
+        clip-path: circle(50% at 50% 50%);
+        opacity: 0.7;
+        filter: grayscale();
+    }
+
+    figcaption {
+        display: none;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    img:hover {
+        opacity: 1;
+        filter: none;
+    }
+
+    img:hover+figcaption {
+        display: inline-block;
+        color: black;
+    }
+</style>
+
+<body>
+    <div class=container>
+        <figure>
+            <img src="https://i.pinimg.com/564x/5c/54/a3/5c54a3678985565db11d4c7ef8c5d5ab.jpg" alt="Bild1">
+            <figcaption>Bildunterschrift</figcaption>
+        </figure>
+    </div>
+
+</body>
+
+</html>
