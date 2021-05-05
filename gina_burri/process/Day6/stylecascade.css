@@ -1,0 +1,24 @@
+p {
+    color: green;
+}
+
+p.site-slogan {
+    color: blue;
+
+}
+
+h2 {
+    color: red;
+}
+
+#inhaltsbereich p {
+    color: grey;
+}
+
+#inhaltsbereich p:first-of-type {
+    color: lightsalmon;
+}
+
+/* p:first-of-type {
+    color: lightsalmon !important; 
+} */
