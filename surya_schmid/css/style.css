@@ -2,7 +2,7 @@
     
     @font-face {
       font-family: Skyline;
-      src: url(/process/img/NewParisEDUSkyline-Regular.otf);
+      src: url(../process/img/NewParisEDUSkyline-Regular.otf);
     }
 
     body{
@@ -70,4 +70,7 @@
         font-family: "Skyline";
         font-size: 40px;
         text-align: center;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        padding-bottom: 3rem;
+        margin-bottom: 6rem;
     }
