@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            size: 1vh;
+            height: 4000px;
+        }
+
+
+        .container {
+            width: 100;
+            height: 2500px;
+        }
+
+
+
+        * img {
+            width: 800px;
+            position: relative;
+        }
+.opacityimage{
+    display: block;
+    opacity:0.4;
+}
+.opacityfiat{
+    left: 800px;
+    position: relative;
+    opacity: 0.1;
+    clip-path: circle(31.4% at 50% 50%);
+}
+
+figcaption{
+   
+    font-size: 50px;
+    left: 1040px;
+    position: relative;
+    
+  
+
+}
+.opacityimage:hover{
+    opacity:1;
+    display: block;
+
+}
+.opacityimage:hover figcaption{
+    display: block;
+}
+/* .opacityfiat:hover{
+    opacity:1;
+    
+}
+
+ figcaption:hover{
+    opacity:1;
+    
+} */
+
+
+
+
+        .oben {
+            float: left;
+
+        }
+
+        .mitte {
+            float: middle;
+            top: 300px;
+        }
+
+        .unten {
+            float: right;
+        }
+    </style>
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+    <div class=container>
+        <div>
+            <img class=oben src="/images/cmp_fiatimnebel_druckmodul.jpg" alt="Fiat im Nebel">
+        </div>
+        <div>
+            <img class=mitte src="/images/cmp_flugzeug_druckmodul.jpg" alt="Flugzeug im Nebel">
+        </div>
+        <div>
+            <img class=unten src="/images/cmp_strassenlaterne_druckmodul.jpg" alt="Licht im Nebel">
+        </div>
+    </div>
+    <div >
+        <figure class="opacityimage">
+            <img class=opacityfiat src="/images/cmp_fiatimnebel_druckmodul.jpg" alt="fiat im Nebel">
+            <figcaption> Fiat on a mission </figcaption>
+        </figure>
+        
+    </div>
+
+
+
+</body>
+
+</html>
