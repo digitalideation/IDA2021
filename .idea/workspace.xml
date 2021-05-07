@@ -2,9 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="416672a2-1a1e-4d0b-a214-54065c267d8c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/Day9/collage.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/Day9/martin.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/Day9/schlafen.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/chair.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/collage.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/house.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/james.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/maria.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/martin.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/maxresdefault.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/schlaf.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/theater.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/walter.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/process/Day9/exercise1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/process/Day9/exersice2.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/css/stylegeometrie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/Day9/collage.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/Day9/martin.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/Day9/schlafen.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/RGB.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/chair.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/collage.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/house.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/james.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/maria.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/martin.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/maxresdefault.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/schlaf.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/theater.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/walter.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day5/day5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day5/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day5/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/01-repetition-cascade.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/03-repetition-display.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/04-ownposition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/05-position.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/06-combine-position-a.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/06-combine-position-b.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/07-combine-relative-absolute-begin.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/stylecascade.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/01-translate-relative.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/01-translate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/02-rotate.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/03-scale.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/04-skew.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/05-transition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/owngeometrie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day8/man.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day8/man.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day8/robot.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day9/exercise1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day9/exersice2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/day1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/day2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/day3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/robotworld.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/song.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/images/James-Turell-Ganzfeld-Apani-Stylepark.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/images/kleines_sciencefiction-selbstportraet0_1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nicole_Vögeli/CSS/CSSübung.html" afterPath="$PROJECT_DIR$/Nicole_Vögeli/CSS/CSSübung.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Nicole_Vögeli/CSS/style.css" afterPath="$PROJECT_DIR$/Nicole_Vögeli/CSS/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day3-backgroundimage.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day3-backgroundimage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day3-excercisethreeshapes.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day3-excercisethreeshapes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day4-moodboard.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day4-moodboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day8-grow-and-shrink-skew.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day8-grow-and-shrink-skew.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/index.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/robotworld.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/robotworld.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/song.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/song.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day6/01-repetition-cascade.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day6/01-repetition-cascade.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day6/04-ownposition.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day6/04-ownposition.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day8/man.css" afterPath="$PROJECT_DIR$/gina_burri/process/Day8/man.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day8/man.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day8/man.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day8/robot.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day8/robot.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/index.html" afterPath="$PROJECT_DIR$/gina_burri/process/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,16 +94,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Textübung.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="60" lean-forward="false" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mother_robot.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mother_robot.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/sira_trinkler/robotworld.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -64,16 +129,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="912">
               <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bilder.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/basics/Bilder.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -103,7 +158,7 @@
         <entry file="file://$PROJECT_DIR$/surya_schmid/process/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="38">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -112,8 +167,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/surya_schmid/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="418">
+              <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -140,8 +195,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2116" />
-    <option name="y" value="377" />
+    <option name="x" value="113" />
+    <option name="y" value="67" />
     <option name="width" value="1792" />
     <option name="height" value="1021" />
   </component>
@@ -160,8 +215,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,94 +227,10 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="surya_schmid" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="surya_schmid" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="process" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="surya_schmid" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="process" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="surya_schmid" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nicole_Vögeli" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,6 +241,10 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sina_staehli" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/00_exercise-files/day6/posters" />
     </key>
@@ -348,6 +321,7 @@
       <workItem from="1619612109493" duration="2904000" />
       <workItem from="1619627149297" duration="1472000" />
       <workItem from="1619677137187" duration="6000" />
+      <workItem from="1620375939472" duration="825000" />
     </task>
     <task id="LOCAL-00001" summary="add files for day6">
       <created>1619537030989</created>
@@ -377,21 +351,28 @@
       <option name="project" value="LOCAL" />
       <updated>1619627257745</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="aufraeumen directory sina_staehli">
+      <created>1620376060656</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620376060656</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9497000" />
+    <option name="totallyTimeSpent" value="10322000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2116" y="377" width="1792" height="1021" extended-state="0" />
+    <frame x="113" y="67" width="1792" height="1021" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2582857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26114285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.5114286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.5137143" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.48857144" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.48628572" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.49771428" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -417,21 +398,15 @@
     <MESSAGE value="changes hani" />
     <MESSAGE value="layout nicole" />
     <MESSAGE value="before pull" />
-    <option name="LAST_COMMIT_MESSAGE" value="before pull" />
+    <MESSAGE value="aufraeumen directory sina_staehli" />
+    <option name="LAST_COMMIT_MESSAGE" value="aufraeumen directory sina_staehli" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="60" lean-forward="false" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html" />
     <entry file="file://$PROJECT_DIR$/mother_robot.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -464,14 +439,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/basics/Bilder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/basics/Bilder.html" />
     <entry file="file://$PROJECT_DIR$/surya_schmid/process/day5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -525,21 +493,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Songtext.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="60" lean-forward="false" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Songtext.html" />
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html" />
     <entry file="file://$PROJECT_DIR$/mother_robot.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -572,14 +527,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/basics/Bilder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/basics/Bilder.html" />
     <entry file="file://$PROJECT_DIR$/elias_baumann/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -615,21 +563,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Songtext.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="60" lean-forward="true" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Songtext.html" />
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html" />
     <entry file="file://$PROJECT_DIR$/mother_robot.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -654,34 +589,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annalisa_rompietti/Day3-backgroundimage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annalisa_rompietti/Day3-excercisethreeshapes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annalisa_rompietti/CSS/style.css">
+    <entry file="file://$PROJECT_DIR$/annalisa_rompietti/Day3-backgroundimage.html" />
+    <entry file="file://$PROJECT_DIR$/annalisa_rompietti/Day3-excercisethreeshapes.html" />
+    <entry file="file://$PROJECT_DIR$/Annalisa_Rompietti/CSS/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1027">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cyril_truninger/day02/color-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-609">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cyril_truninger/day02/color-1.html" />
     <entry file="file://$PROJECT_DIR$/elias_baumann/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -724,21 +641,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Songtext.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="60" lean-forward="false" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Songtext.html" />
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/Textübung.html" />
     <entry file="file://$PROJECT_DIR$/mother_robot.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -758,7 +662,7 @@
     <entry file="file://$PROJECT_DIR$/sira_trinkler/robotworld.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -771,14 +675,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/basics/Bilder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Nicole_Vögeli/basics/Bilder.html" />
     <entry file="file://$PROJECT_DIR$/surya_schmid/process/day5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -798,15 +695,15 @@
     <entry file="file://$PROJECT_DIR$/surya_schmid/process/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/surya_schmid/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="418">
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
           <folding />
         </state>
       </provider>

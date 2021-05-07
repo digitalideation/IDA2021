@@ -1,6 +1,7 @@
 html, body {
     overflow: hidden;
-    background: #deeeef;
+    /* background: #deeeef; */
+    background-image: url(../../images/walter.jpg);
   }
   
   .cartoon {
@@ -36,17 +37,17 @@ html, body {
   
   /****/
   .cartoon {
-    --skin: #fca;
+    --skin: rgb(255, 0, 0);
     --skindark: #fb9;
     --skindarker: #ea8;
     --shirt: #fff;
     --shirtdark: #eee;
     --jacket: #222;
     --jacketdark: #111;
-    --tie: #369;
-    --tiedark: #258;
+    --tie: rgb(0, 247, 255);
+    --tiedark: rgb(0, 247, 255);
     --glass: #000;
-    --hair: #631;
+    --hair: rgb(0, 0, 0);
   }
   
   .face {
