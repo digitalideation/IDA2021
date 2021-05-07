@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - Firstname Lastname</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  
+
   <!-- <style>
         .robot * {
             border: 1px solid #1e90ff;
@@ -13,17 +17,160 @@
             margin: .25rem;
         }
     </style> -->
+
+    <style>
+      body {
+      background-image: url("https://i.pinimg.com/originals/33/e9/e4/33e9e4c7891d48347f3bb7b5e46c6740.gif"); 
+      }
+
+      .cheek--left{ 
+        background-color:red;
+        border-radius: 50%;
+        width: 150px;
+        height: 100px;
+        left: 9%;
+        top: 55%;
+        position: absolute;
+      }
+
+      .cheek--right{ 
+        background-color:red;
+        border-radius: 50%;
+        width: 150px;
+        height: 100px;
+        right: 9%;
+        top: 55%;
+        position: absolute;
+
+      }
+
+      .head{
+        background-color:pink;
+        border-radius: 50%;
+        width: 680px;
+        height: 680px;
+        left: 3%;
+        top: 25%;
+        position: absolute;
+        transform: scale(0.75, 1);
+        }
+
+        .ear--left{
+          background-color:pink;
+          border-radius: 50%;
+          width: 300px;
+          height: 300px;
+          left: 0px;
+          top: 0px;
+          position: absolute;
+          transform: scale(0.5, 1);
+        }
+
+        .ear--right{
+          background-color:pink;
+          border-radius: 50%;
+          width: 300px;
+          height: 300px;
+          right: 0px;
+          top: 0px;
+          position: absolute;
+          transform: scale(0.5, 1);
+        }
+      
+      .eye--left {
+        width: 100px; 
+        height: 55px;
+        background: white;
+        position: absolute;
+        top: 42%;
+        left: 17%;
+        border-radius:1px 50% 1px;
+        -webkit-transform: skew(40deg); 
+        -moz-transform: skew(40deg); 
+        -o-transform: skew(40deg);
+        transform: skew(40deg);
+      }
+
+      .eye--left:hover {
+            background-color: black;
+        }
+
+      .eye--right {
+        width: 100px; 
+        height: 55px;
+        background: white;
+        position: absolute;
+        top: 42%;
+        right: 20%;
+        border-radius:1px 90% 1px;
+        -webkit-transform: skew(50deg); 
+        -moz-transform: skew(50deg); 
+        -o-transform: skew(50deg);
+        transform: skew(50deg);
+        -moz-transform: scaleX(-1);
+	      -o-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+
+      .eye--right:hover {
+            background-color: black;
+        }
+
+      .nose{
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 300px solid #275949;
+        left: 40%;
+        top: 30%;
+      }
+
+      .index{
+        font-family: 'Krona One', sans-serif;
+        color: white;
+        font-size: 30px;
+      }
+
+      .myrobot{
+        font-family: 'Krona One', sans-serif;
+        color: white;
+        font-size: 30px;
+      }
+
+      .mysong{
+        font-family: 'Krona One', sans-serif;
+        color: white;
+        font-size: 30px;
+      }
+
+      .process{
+        font-family: 'Krona One', sans-serif;
+        color: white;
+        font-size: 30px;
+      }
+
+      
+      
+
+
+    </style>
 </head>
 
+
 <body>
+
+
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li>My Robot</li>
-      <li><a href="song.html">My Song</a></li>
-      <li><a href="process/index.html">Process</a></li>
+      <li class="index"><a href="index.html">Home</a></li>
+      <li class="myrobot">My Robot</li>
+      <li class="mysong"><a href="song.html">My Song</a></li>
+      <li class="process"><a href="process/index.html">Process</a></li>
     </ul>
   </nav>
+
   <div class="robot">
     <div class="leg leg--left">
       <div class="foot"></div>
@@ -32,12 +179,18 @@
       <div class="foot"></div>
     </div>
     <div class="body"></div>
+    
     <div class="head">
+      <div class="cheek--left"></div>
+      <div class="cheek--right"></div>
+      <div class="ear--left"></div>
+      <div class="ear--right"></div>
       <div class="eye eye--left"></div>
       <div class="eye eye--right"></div>
       <div class="nose"></div>
       <div class="mouth"></div>
     </div>
+    
     <div class="arm arm--left">
       <div class="hand"></div>
     </div>
