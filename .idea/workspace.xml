@@ -2,84 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="416672a2-1a1e-4d0b-a214-54065c267d8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/Day9/collage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/Day9/martin.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/Day9/schlafen.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/chair.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/collage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/house.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/james.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/maria.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/martin.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/maxresdefault.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/schlaf.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/theater.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/images/walter.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/process/Day9/exercise1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gina_burri/process/Day9/exersice2.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/css/stylegeometrie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/Day9/collage.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/Day9/martin.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/Day9/schlafen.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/RGB.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/chair.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/collage.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/house.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/james.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/maria.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/martin.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/maxresdefault.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/schlaf.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/theater.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/images/walter.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day5/day5.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day5/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day5/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/01-repetition-cascade.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/03-repetition-display.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/04-ownposition.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/05-position.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/06-combine-position-a.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/06-combine-position-b.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/07-combine-relative-absolute-begin.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day6/stylecascade.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/01-translate-relative.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/01-translate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/02-rotate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/03-scale.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/04-skew.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/05-transition.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day7/owngeometrie.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day8/man.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day8/man.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day8/robot.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day9/exercise1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/Day9/exersice2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/day1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/day2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/day3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/process/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/robotworld.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/gina_burri/song.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/images/James-Turell-Ganzfeld-Apani-Stylepark.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gina_burri/images/kleines_sciencefiction-selbstportraet0_1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day3-backgroundimage.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day3-backgroundimage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day3-excercisethreeshapes.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day3-excercisethreeshapes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day4-moodboard.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day4-moodboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day8-grow-and-shrink-skew.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/Prozess/Day8-grow-and-shrink-skew.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/index.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/robotworld.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/robotworld.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Annalisa_Rompietti/song.html" afterPath="$PROJECT_DIR$/Annalisa_Rompietti/song.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day6/01-repetition-cascade.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day6/01-repetition-cascade.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day6/04-ownposition.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day6/04-ownposition.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day8/man.css" afterPath="$PROJECT_DIR$/gina_burri/process/Day8/man.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day8/man.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day8/man.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day8/robot.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day8/robot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/index.html" afterPath="$PROJECT_DIR$/gina_burri/process/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -184,6 +107,7 @@
       <list>
         <option value="$PROJECT_DIR$/hani/process/day4t.html" />
         <option value="$PROJECT_DIR$/Nicole_Vögeli/basics/Bilder.html" />
+        <option value="$PROJECT_DIR$/surya_schmid/css/style.css" />
       </list>
     </option>
   </component>
@@ -195,7 +119,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="113" />
     <option name="y" value="67" />
     <option name="width" value="1792" />
     <option name="height" value="1021" />
@@ -215,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -229,7 +153,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -239,6 +162,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -322,6 +246,8 @@
       <workItem from="1619627149297" duration="1472000" />
       <workItem from="1619677137187" duration="6000" />
       <workItem from="1620375939472" duration="825000" />
+      <workItem from="1620381055702" duration="24000" />
+      <workItem from="1620381172038" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="add files for day6">
       <created>1619537030989</created>
@@ -362,17 +288,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10322000" />
+    <option name="totallyTimeSpent" value="10351000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="113" y="67" width="1792" height="1021" extended-state="0" />
+    <frame x="0" y="67" width="1792" height="1021" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26114285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26685715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.5137143" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.5182857" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.48628572" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938644" sideWeight="0.48171428" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.49771428" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -591,7 +517,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/annalisa_rompietti/Day3-backgroundimage.html" />
     <entry file="file://$PROJECT_DIR$/annalisa_rompietti/Day3-excercisethreeshapes.html" />
-    <entry file="file://$PROJECT_DIR$/Annalisa_Rompietti/CSS/style.css">
+    <entry file="file://$PROJECT_DIR$/annalisa_rompietti/CSS/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1027">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
