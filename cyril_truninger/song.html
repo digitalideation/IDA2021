@@ -6,17 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Digital Design – Song</title>
-  <link rel="stylesheet" href="css/songstyles.css">
+  <!-- CSS -->
   <link rel="stylesheet" href="css/globalstyles.css">
-  
+  <link rel="stylesheet" href="css/homestyles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <!-- Libraries -->
+  <script src="https://kit.fontawesome.com/abf77cb1ab.js" crossorigin="anonymous"></script>
+
   
 
 <body>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
+      <span class="navdiv"></span>
       <li><a href="robotworld.html">Robot</a></li>
+      <span class="navdiv"></span>
       <li><a href="song.html">Song</a></li>
+      <span class="navdiv"></span>
       <li><a href="process.html">Process</a></li>
     </ul>
   </nav>
@@ -40,10 +52,11 @@
         </h1>
       </div>
       
-      <h2>Gorillaz</h2>
+      <h2 class=".glitch">Gorillaz</h2>
     </section>
 
     <section>
+    <div>
     <div id="boombox">
     
       <div class="boombox-body">
@@ -93,22 +106,26 @@
         <div class="bb-back"></div>
       </section>
 
-      <section>
-        <h3>Lyrics</h3>
-        <div class="worddrop-wrapper">
+      <section class="lyrics">
+        <article class="lyric part1">
+        <div class="worddrop-wrapper shabada">
           <div class="worddrop">
           <span>Sha, </span>
           <span>sha, </span>
-          <span>Sha- </span>
+          <span>sha- </span>
           <span>ba- </span>
           <span>da, </span>
           </div>
         </div>
 
-        <div class="worddrop">
-          <span>Feel </span>
-          <span>good</span>
+        <div class="worddrop-wrapper feelgood">
+          <div class="worddrop">
+            <span>Feel </span>
+            <span> Good</span>
+          </div>
         </div>
+        </article>
+        
 
         <p>
           City's breaking down on a camel's back
@@ -233,6 +250,7 @@
           <span id="rup-label">Rotate upwards</span>
         </button>
       </section>
+    </div>
     </div>
   </main>
   
