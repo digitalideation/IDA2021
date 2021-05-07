@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        text-align: center;
+        font-family: 'Great Vibes', cursive;
+    }
+
+    .container {
+        align-items: center;
+        width: 300px;
+        height: fit-content;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .Rahmen {
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 300px;
+        height: auto;
+        clip-path: circle(50% at 50% 50%);
+        opacity: 0.7;
+        filter: grayscale();
+        box-sizing: content-box;
+    }
+
+    figcaption {
+        color: white;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    img:hover {
+        opacity: 1;
+        filter: none;
+    }
+
+    img:hover+figcaption {
+        display: inline-block;
+        color: black;
+    }
+</style>
+
+<body>
+    <div class=container>
+        <div class="Rahmen"> <img src=../img/Blume1.jpg alt="Bild1">
+            <figcaption>Blume</figcaption>
+        </div>
+        <div class="Rahmen">
+            <img src=../img/Blume2.jpg alt="Bild2" id="Bild2">
+            <figcaption>Blume 2</figcaption>
+        </div>
+        <div class="Rahmen">
+            <img src=../img/Blume3.jpg alt="Bild3" id="Bild3">
+            <figcaption>Blume 3</figcaption>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
