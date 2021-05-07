@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
+
+<style>
+
+.typo {
+        font-family: 'Zen Dots', cursive;
+        width: 100%;
+        font-size: 3.6vw;
+        z-index: 0;
+        color: rgb(234, 0, 255);
+        /* opacity: 50%; */
+        /* background-color: blueviolet; */
+    }
+
+.einzeln {
+    opacity: 0%;
+
+}
+
+.einzeln:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(0, 0, 255);
+    opacity: 500%;
+    
+    /* transition: .1s ease .25s; */
+}
+
+.einzeln:hover:after { 
+    /* transition-duration: 100s; */
+    color: #4b2f89; }
+
+.typo:nth-of-type(4n) .einzeln {
+    color: rgb(234, 0, 255);
+    text-shadow: 1px 1px 2px rgb(234, 0, 255), 0 0 25px rgb(234, 0, 255), 0 0 5px rgb(234, 0, 255);
+}
+
+.typo:nth-of-type(5n) .einzeln {
+    color: rgb(4, 0, 255);
+    text-shadow: 1px 1px 2px rgb(4, 0, 255), 0 0 25px rgb(4, 0, 255), 0 0 5px rgb(4, 0, 255);
+}
+
+.typo:nth-of-type(7n) .einzeln {
+    color: rgb(251, 255, 0);
+    text-shadow: 1px 1px 2px rgb(251, 255, 0), 0 0 25px rgb(251, 255, 0), 0 0 5px rgb(251, 255, 0);
+}
+
+.typo:nth-of-type(8n) .einzeln {
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 25px rgb(255, 0, 0), 0 0 5px rgb(255, 0, 0);
+}
+
+.typo:nth-of-type(10n) .einzeln {
+    color: rgb(0, 225, 255);
+    text-shadow: 1px 1px 2px rgb(0, 225, 255), 0 0 25px rgb(0, 225, 255), 0 0 5px rgb(255, 0, 0);
+}
+
+
+    .verlauf {
+        background-image: radial-gradient(circle, rgb(234, 0, 255), rgb(4, 0, 255), rgb(107, 0, 128));
+        opacity: 60%;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: -1;
+}
+
+    .backgroundimage {
+        position: relative;
+        display: block;
+        max-width: 100vw;
+        top: 0px;
+        left: 0px;
+        z-index: -2;
+    }
+
+    .fixed {
+        position: fixed;
+    }
+
+    .with {
+        width: 100vw;
+        /* background-color: darkblue; */
+    }
+
+</style>
+
+
+</head>
+<body>
+    <div class="fixed">
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+        <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+    </div>  
+
+<div class="with">
+    <div>
+        <img class="backgroundimage" src="../../images/maria.jpg">
+    </div>
+</div>
+   
+
+    <div class="verlauf"></div>
+    
+</body>
+</html>
