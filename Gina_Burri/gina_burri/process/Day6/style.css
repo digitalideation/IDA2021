@@ -1,0 +1,90 @@
+body {
+    background-color: cornflowerblue;
+}
+
+img {
+    width: 100vh;
+}
+
+.james {
+    max-width: 100vh;
+    position: fixed;
+    top: 0px;
+   /* left: 20vh;*/
+    z-index: 2;
+    opacity: 30%;
+    display: block;
+}
+
+.arrow {
+    width: 500px;
+    height: 100px;
+    background-color: salmon;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 3;
+    
+}
+
+.arrow:after {
+content: '';
+border: 50px solid transparent;
+border-left-color: rgb(55, 0, 255);
+display: inline-block;
+position: absolute;
+right: -100px;
+}
+
+/*figure {
+
+    max-width: 600px;
+    position: relative;
+    /*bezugspunkt für kindelemnet
+} */
+
+.maria{ 
+    top: 0px;
+    z-index: 1;
+    max-width: 100vh;
+    position: relative;
+    display: block;
+}
+
+figcaption {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100px;
+    background-color: rgba(255, 0, 212, 0.6);
+    color: white;
+    width: 100%;
+    line-height: 150%;
+    opacity: 0;
+}
+
+figcaption.turell {
+    background-color: blue;
+
+}
+
+.maria:hover figcaption{
+    opacity: 1;
+}
+
+.james:hover figcaption{
+    opacity: 3;
+}
+
+.arrow:hover figcaption{
+    opacity: 1;
+}
+
+figcaption span{
+    padding-left: 0.5rem;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+}

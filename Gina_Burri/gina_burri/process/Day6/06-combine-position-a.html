@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        figure {
+
+            max-width: 600px;
+            position: relative;
+            /*bezugspunkt für kindelemnet*/
+        }
+        
+        figcaption {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100px;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            width: 100%;
+            line-height: 150%;
+            opacity: 0;
+        }
+        figure:hover figcaption{
+            opacity: 1;
+
+        }
+        figcaption span{
+            padding-left: 0.5rem;
+
+        }
+        
+        img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Blossfeldt_96a.jpg" alt="Eisenhut" />
+        <figcaption><span>Legende Karl Blossfeld Eisenhut</span></figcaption>
+    </figure>
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Blossfeldt_94a.jpg" alt="Knoblauch" />
+        <figcaption><span>Legende Karl Blossfeld Knoblauch</span></figcaption>
+    </figure>
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Blossfeldt_148a.jpg" alt="Eisenhut" />
+        <figcaption><span>Legende Karl Blossfeld Eisenhut</span></figcaption>
+    </figure>
+
+
+
+</body>
+
+</html>
