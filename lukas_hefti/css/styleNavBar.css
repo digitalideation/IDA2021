@@ -1,0 +1,67 @@
+
+/* Nav Bar*/
+
+/* All */
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    background-color: #252525;
+}
+
+    nav ul {
+        margin: 0px auto;
+        height: 50px;
+        width: 800px;
+        padding: 0px;
+        display: flex;
+    }
+
+    nav li {
+        padding: 0px;
+        width: 100%;
+        display: inline;
+        text-align: center;
+    }
+
+    nav a {
+        width: auto;
+        box-sizing: border-box;
+        max-height: 50px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        display: block;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: rgb(243, 248, 255);
+    }
+
+        nav a:hover {
+            border-bottom: 2px rgb(243, 248, 255) solid;
+            background-color: rgb(14, 14, 14);
+        }
+
+        nav a:link {
+        }
+
+        nav a:visited {
+        }
+
+        nav a:active {
+        }
+
+
+#dropNavWeek {
+    display: none;
+}
+
+#dropNavDay {
+    display: none;
+}
+

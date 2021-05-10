@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - Firstname Lastname</title>
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
-  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
   
 
   <!-- <style>
@@ -20,7 +20,8 @@
 
     <style>
       body {
-      background-image: url("https://i.pinimg.com/originals/33/e9/e4/33e9e4c7891d48347f3bb7b5e46c6740.gif"); 
+      background-image: url("https://i.pinimg.com/originals/33/e9/e4/33e9e4c7891d48347f3bb7b5e46c6740.gif");
+      background-size: cover;
       }
 
       .cheek--left{ 
@@ -128,32 +129,45 @@
       }
 
       .index{
-        font-family: 'Krona One', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         color: white;
-        font-size: 30px;
       }
 
       .myrobot{
-        font-family: 'Krona One', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         color: white;
-        font-size: 30px;
       }
 
       .mysong{
-        font-family: 'Krona One', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         color: white;
-        font-size: 30px;
       }
 
       .process{
-        font-family: 'Krona One', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         color: white;
-        font-size: 30px;
       }
 
-      
-      
+      li{
+    list-style: none;
+      }
 
+      body {
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Montserrat', sans-serif;
+  }
+  
+  .box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: 'Montserrat', sans-serif;
+      border: 1px solid white;
+      padding: 6px;
+      width: 99.2%;
+      line-height: 120%;
+  }
 
     </style>
 </head>
@@ -162,14 +176,14 @@
 <body>
 
 
-  <nav>
-    <ul>
+
+    <div class="box mainrow">
       <li class="index"><a href="index.html">Home</a></li>
       <li class="myrobot">My Robot</li>
       <li class="mysong"><a href="song.html">My Song</a></li>
       <li class="process"><a href="process/index.html">Process</a></li>
-    </ul>
-  </nav>
+    </div>
+ 
 
   <div class="robot">
     <div class="leg leg--left">
