@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+
+    
+    <filter id="squiggly-0">
+     <feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="2" seed="2" stitchTiles="stitch" x="0%" y="0%"  result="turbulence2"/>
+	<feDisplacementMap in="SourceGraphic" in2="turbulence2" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%"  result="displacementMap"/>
+    </filter>
+    <filter id="squiggly-1">
+    	<feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="3" seed="3" stitchTiles="noStitch" x="0%" y="0%"  result="turbulence2"/>
+	<feDisplacementMap in="SourceGraphic" in2="turbulence2" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%"  result="displacementMap"/>
+    </filter>
+    
+    <filter id="squiggly-2">
+	<feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="5" seed="10" stitchTiles="noStitch" x="0%" y="0%"  result="turbulence2"/>
+	<feDisplacementMap in="SourceGraphic" in2="turbulence2" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%"  result="displacementMap"/>
+    </filter>
+    <filter id="squiggly-3">
+	<feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="5" seed="13" stitchTiles="noStitch" x="0%" y="0%"  result="turbulence2"/>
+	<feDisplacementMap in="SourceGraphic" in2="turbulence2" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%"  result="displacementMap"/>
+    </filter>
+    
+    <filter id="squiggly-4">
+	<feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="5" seed="21" stitchTiles="noStitch" x="0%" y="0%"  result="turbulence2"/>
+	<feDisplacementMap in="SourceGraphic" in2="turbulence2" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%"  result="displacementMap"/>
+    </filter>
+  </defs> 
+</svg>

@@ -1,0 +1,31 @@
+body {
+  background: rgb(45,7,70);
+background: linear-gradient(270deg, rgba(45,7,70,1) 0%, rgba(108,19,19,1) 50%, rgba(156,91,0,1) 100%);
+}
+
+.robot .head {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  border: 2px solid white;
+  animation: squiggle .3s ease 0s infinite forwards;
+  filter:url(../img/distortion.svg#squiggly-0);
+}
+
+@keyframes squiggle {
+  0% {
+    filter:url(../img/distortion.svg#squiggly-0);
+  }
+  20% {
+    filter:url(../img/distortion.svg#squiggly-1);
+  }
+  40% {
+    filter:url(../img/distortion.svg#squiggly-2);
+  }
+  60% {
+    filter:url(../img/distortion.svg#squiggly-3);
+  }
+  80% {
+    filter:url(../img/distortion.svg#squiggly-4);
+  }
+}
