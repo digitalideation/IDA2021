@@ -1,0 +1,138 @@
+.window-content-song {
+    /* background-color: red; */
+    height: 100%;
+    overflow: scroll;
+    margin-top: 20px;
+}
+
+.facts {
+    position: relative;
+    text-align: left;
+    /* background-color: blue; */
+    padding: 0 20px 20px 20px;
+    max-width: 900%;
+}
+
+.song-content {
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.lyrics {
+    /* background-color: yellow; */
+    width: 40%;
+    position:relative;
+}
+
+.lyrics-text {
+    height: auto;
+    text-align: left;
+    margin: 20px;
+    /* background-color: #fff; */
+    line-height: 1.6;
+    margin-bottom: 60px;
+}
+
+.artist {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    /* background-color: red; */
+}
+
+.mark1 {
+    background-color:rgba(229, 122, 117, 0.7);
+}
+
+.mark2 {
+    background-color: rgba(157, 154, 204, 0.7);
+}
+
+.about-song {
+    /* background-color: lime; */
+    width: 60%;
+    height: auto;
+    padding-right: 20px;
+}
+
+.lyrics-5-part {
+    padding-bottom: 20px;
+}
+
+.about-1-part {
+    padding-top: 25px;
+}
+.about-text {
+    height: auto;
+    text-align: left;
+    margin: 20px;
+    /* background-color: #fff; */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+figcaption {
+    margin-left: 20px;
+}
+
+about-item {
+    width: 100%;
+}
+
+.about-2-part-img {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.about-3-part {
+    padding-top: 2%;
+}
+
+
+
+.about-4-part {
+    padding-left: 20px;
+}
+
+.about-4-part-img {
+    width: 50%;
+    height: auto;
+}
+
+.about-4-part-img2 {
+    width: 50%;
+}
+
+.about-4-part2 {
+    margin-left: 10%;
+}
+
+.fig {
+    margin: 0;
+    text-align: left;
+}
+
+.part-5-1-image {
+    width: 80%;
+    height: 70%;
+    margin-top: 40px;
+}
+
+.part-5-2-image {
+    width: 90%;
+    height: 80%;
+    margin-top: 40px;
+}
+
+.about-6-part {
+    margin-top: 40px;
+}
+
+.part5 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-height: 550px;
+}
+
