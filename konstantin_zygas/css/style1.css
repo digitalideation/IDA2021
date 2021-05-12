@@ -1,0 +1,30 @@
+body {
+    /* background-color: hsl(58, 99%, 95%); */
+    background: linear-gradient(to bottom right, rgb(235, 200, 110), white);
+    color: #000000;
+    height: 800px
+}
+h1 {
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    font-size: 40px;
+    margin-top: 30px;    
+}
+
+p {
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+} 
+h2 {
+    text-align: center;
+    font-family: 'Krona One', sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+h2:hover {
+    background-color: #111;
+}

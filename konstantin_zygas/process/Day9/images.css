@@ -1,0 +1,52 @@
+body {
+    background: linear-gradient(to bottom right, rgb(110, 166, 235), white);
+    height: 100vh;
+}
+
+h1{
+    background-color: rgb(196, 249, 255);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    color: black;
+    border-color: black;
+    border: 4px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+
+.pic1 {
+    text-align: left;
+}
+
+.pic2 {
+    text-align: center;
+}
+
+.pic3 {
+    text-align: right;
+}
+
+img.pone {
+    opacity: 50%;
+    clip-path: circle(30% at 50% 50%);
+    max-height: 200px;
+}
+  
+img.pone:hover{
+    opacity: 100%;
+}
+
+img.ptwo{
+    border: 1px solid#999;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 200px;
+    height: auto;
+}
+
+img.pthree{
+    max-width: 200px;
+    height: auto;
+}

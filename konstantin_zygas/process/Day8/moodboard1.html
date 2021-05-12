@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,600;0,900;1,200;1,600;1,900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+
+    body {
+     margin: 0;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 0;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .square {
+     width: 200px;
+     height: 862px;
+     background-color: dodgerblue;
+    }
+
+    @media screen and (max-width:600px) {
+        .column {
+            width: 100%;
+        }
+    }
+
+    a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 100px;
+        
+    }
+
+</style>
+
+<body>
+
+    <div class="row">
+
+        <div class="column">
+            <img src="../../Bilder Mood/rhythm_og.png" style="width: 400px;">
+            <img src="../../Bilder Mood/rhythm_abstract_400x400.jpeg" style="width: 400px;">
+            <img src="../../Bilder Mood/rhythm_og.png" style="width: 400px;">
+        </div>
+
+        <div class="column">
+            <div class="square"></div>
+        </div>
+
+        <div class="column">
+            <img src="../../Bilder Mood/Mind2.jpeg" style="width: 500px;">
+        </div>
+    </div>
+
+    <a>Free your mind</a>
+
+</body>
+</html>
