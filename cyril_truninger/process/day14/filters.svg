@@ -1,0 +1,32 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- define the filter #blur -->
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+
+    <!-- Nicks Filter -->
+    <defs>
+    <filter id="noise-0">
+	    <feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="05" seed="10" stitchTiles="noStitch" x="0%" y="0%" result="turbulence"/>
+	    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" result="displacementMap"/>
+    </filter>
+    <filter id="noise-1">
+	    <feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="05" seed="12" stitchTiles="noStitch" x="0%" y="0%" result="turbulence"/>
+	    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" result="displacementMap"/>
+    </filter>
+    <filter id="noise-2">
+	    <feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="05" seed="14" stitchTiles="noStitch" x="0%" y="0%" result="turbulence"/>
+	    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" result="displacementMap"/>
+    </filter>
+    <filter id="noise-4">
+	    <feTurbulence type="turbulence" baseFrequency="0.015 0.1" numOctaves="05" seed="16" stitchTiles="noStitch" x="0%" y="0%" result="turbulence"/>
+	    <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="21" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" result="displacementMap"/>
+    </filter>
+   
+  </defs>
+  </svg>
+
