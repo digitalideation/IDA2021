@@ -1,0 +1,220 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../space.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+nav{
+    width: 55vw;
+    height: 5vh;
+    margin-left: 43vw;
+    padding: 20px;
+    
+}
+nav ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 1vw;
+    
+    padding: 20px; 
+    border: solid white 3px;
+    border-radius: 3vh;
+}
+nav ul li:hover{
+    background-color: orange;
+    border: orange;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.settings{
+    width: 50vw;
+    margin-left: 48vw;
+    padding: 2vw;
+}
+.settings .setting-row{
+    margin-top: 0.1vh;
+}
+
+.robot * {
+    padding: 1rem;
+    margin: .25rem;
+}
+
+.robot{
+    position: relative;
+    top: 5vh;
+    left: 10vw;
+}
+.leg{
+    display: inline-block;
+    width: 20vw;
+    position: relative;
+    top: 21vh;
+    left: 0;
+}
+.leg .leg--part {
+    border: solid 2px white;
+    width: 5px;
+    height: 40px;
+    
+}
+.leg--right{
+    position: relative;
+    top: 18vh;
+    left: -9vw;
+}
+.leg--right .leg--part1{
+    transform:  rotate(-20deg) translate(-75px,-6px) skew(30deg);
+}
+.leg--right .leg--part2{
+    transform: rotate(-20deg) translate(-25px,-0px);
+}
+
+.arm{
+    border: solid 2px white;
+    width: 120px;
+    height: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: relative;
+    top: -69vh;
+    left: 5vw;
+}
+.arm--right{
+    display: none;
+}
+.arm--left{
+    transform: rotate(30deg);
+    transform-origin: top left;
+}
+
+.head{
+    border: solid 2px white;
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: -73vh;
+    left: 4vw;
+    border-top-right-radius: 30px;
+    border-top-left-radius:20px ;
+}
+.foot{
+    width: 50px;
+    height: 10px;
+    border: solid 2px white;
+    display: inline-block;
+    border-top-right-radius: 30px;
+}
+
+.leg--right .foot{
+    transform: translate(-3px,-7px) rotate(-20deg);
+}
+
+.body{
+    width: 80px;
+    height: 200px;
+    border: solid 2px white;
+    display: block;
+    position: relative ;
+    top: -35vh;
+    left: 2vw;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    vertical-align: center;
+    
+}
+section .songtext{
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    padding-top: 45vh;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+section .songtext:hover{
+    font-size: 4rem;
+}
+
+#section_1{
+    background-color: teal ;
+    background-image: url("../hero-art-microsoft_azure_1920x1000_nologo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section_2{
+    background-color: orange ;
+    background-image: url("../space.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section_3{
+    
+    background-color: green ;
+    background-image: url("../images.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section_3 h1:hover{
+    transform: rotate(360deg);
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+#section_4{
+    background-color: teal;
+    background-image: url("../satellitenmissionen-zur-sonnenbeobachtung-und-als-fruehwarnsystem.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section_4 h1{
+    transform: translate(-200px,0);
+}
+#section_4 h1:hover{
+    transform: translate(200px,0);
+}
+#section_5{
+    background-color: orange;
+    background-image: url("../5b8iBojwh2ztdWzMt3Tsrm.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section_5 h1{
+    transform: translate(-300px, 300px);
+}
+#section_6{
+    background-color: green;
+    background-image: url("../space.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section_7{
+    background-color: teal;
+    background-image: url("../studyofatmos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.transition_2{
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease; 
+}
