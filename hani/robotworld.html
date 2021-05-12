@@ -8,37 +8,92 @@
   <title>IDA Modul - Hani Aslani</title>
  <style>
    body {
-     background: rgb(215, 235, 241);
+     /* background: rgb(215, 235, 241); */
+    
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: changa-one, sans-serif;
+  font-size: 80px;
+  margin-top: 0px;
+  background-color: #03031A;
+  background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=');
+  
    }
-   .body1 {
+   .head {
      width: 300px;
   height: 325px;
   background-color: rgb(194, 198, 199);
   border: 1px solid black;
   margin-left: 35%;
-  margin-top: 10%;
+  margin-top: 10%; 
+  border-radius: 5%;
   position: absolute;
-  
+  transform: translate3d(20%,-50%,0)
 }
-.eye-left {
+
+
+.eye.eye--left {
   width: 95px;
   height: 115px;
   background-color: aqua;
   border: 1px solid black;
   margin-left: 0%;
   position: absolute;
+  border-radius: 5%;
 }
-.eye-right {
+.eye.eye--right {
 width: 95px;
   height: 115px;
   background-color: aqua;
   border: 1px solid black;
   margin-left: 68%;
   position: absolute;
+  border-radius: 5%;
+
 }
-.arm-left
-{ 
+.inside-eye-left {
   position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 55%;
+  height: 45%;
+  border-radius: 50%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  right: 25%;
+  top: 30%;
+  margin: auto;
+}
+.inside-eye-right {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 55%;
+  height: 45%;
+  border-radius: 50%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  right: 25%;
+  top: 30%;
+  margin: auto;
+}
+.mouth {
+  width: 30%;
+  height: 10%;
+  left: 35%;
+  position: absolute;
+  border: 3px solid black;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+border-radius: 50%;
+  top: 40%;
+}
+.arm.arm-left
+{ 
+  /* transform-origin: center left; */
+  position: relative;
   top: 0;
   left: 50px;
   right: 230px;
@@ -53,31 +108,49 @@ width: 95px;
   border-bottom-right-radius: 10px;
 
 }
-.arm--right {
-  position: relative;
-  top: 10px;
-  left: 50px;
+.arm.arm--right {
+  position: absolute;
+top: -10%;
+  left: -12%;
   right: 230px;
-  bottom: 25px;
+  bottom: 30%;
   margin: auto;
   height: 30px;
-  width: 100px;
+  width: 170px;
   background: lightgray;
+  transform: rotate(45deg);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 0px;
+/* border-right: 20px solid rgb(255, 255, 255) ; */
 
+}
+.arm.arm--left {
+position: absolute;
+width: 130px;
+height: 15px;
+border-radius: 40%;
+background-color: brown;
 }
 
 .leg{
   width:10px;
   height:100px;
   background-color:blue;
+  
 
 }
-.leg--right{
+.leg.leg--right{
   margin-left:100px;
+  height:20px;
+  width:12px;
+  background:#FF0;
+  bottom:20%;
+  background:#7AA6C1;
+  border:1px solid #000;
+  border-radius:5px;
+  z-index:3;
 }
        
     </style>
@@ -92,31 +165,29 @@ width: 95px;
     <div class="leg leg--right">
       <div class="foot"></div>
     </div>
-    <section class="body1">
+    <section class="body">
     <div class="head">
-      <div class="eye-left"></div>
-      <div class="eye-right"><div class="inside-eye-right"></div></div>
+      <div class="hat"></div>
+      <div class="eye eye--left"> <div class="inside-eye-left"></div></div>
+      <div class="eye eye--right"><div class="inside-eye-right"></div></div>
       
-      <div class="inside-eye-left"></div>
+     
       <div class="nose"></div>
       <div class="mouth"></div>
     </div>
     </section>
-    <div class="arm-left">
+    <div class="arm arm--left">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0099ff" fill-opacity="1"
+          d="M0,160L60,133.3C120,107,240,53,360,53.3C480,53,600,107,720,117.3C840,128,960,96,1080,101.3C1200,107,1320,149,1380,170.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+      </svg>
       <div class="hand"></div>
     </div>
     <div class="arm arm--right">
       <div class="hand"></div>
     </div>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li>My Robot</li>
-      <li><a href="song.html">My Song</a></li>
-      <li><a href="process/index.html">Process</a></li>
-    </ul>
-  </nav>
+    
 </body>
 
 </html>
