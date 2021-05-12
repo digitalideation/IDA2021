@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex-basis</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .box {
+            display: flex;
+            /* flex-direction: row; */
+            /* 
+            grundsetting von flex ist row
+            flex diirection row default direction von flex
+            grundstting von display block ist column, column überschreibt das grundsetting
+            row heisst zeile */
+        }
+        
+        .box.col 
+        /* nur für elemente welche beide klassen haben, 
+        hier nur das parent, die childrens werden  nicht mit gestylt
+        (überschreibt die dekleration box oben) */
+        {
+            flex-direction: column;
+            border: 1px dotted royalblue;
+            /* column ist spalte */
+        }
+        
+        .box div 
+        /* 
+        childern
+        mit Abstand werden alle Elemente gestylt, welche als 
+        div deklariert wurden UND einen ancestor (also parent 
+        oder parent-parent etc.) mit der klasse box haben*/
+        {
+            font-weight: 700;
+            border: 1px dotted red;
+            padding: 6px;
+            width: 50px;
+            line-height: 120%;
+            /* The default line-height is about 110% to 120% for the majority of the browsers. The line-height property sets the leading of lines of a text. If the line-height value is greater than the font-size value of an element, the difference will be the leading of text.*/
+        }
+
+        .box div:first-of-type {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="exp">
+        flex-direction:row; //default
+        <div class="box mainrow">
+            <div>1
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        flex-direction:column;
+        <div class="box mainrow col">
+            <!-- hat hier durch den Abstand die Eigenschaften dreier Klassen -->
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

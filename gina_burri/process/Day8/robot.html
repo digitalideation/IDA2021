@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
 
 <style>
@@ -15,22 +16,17 @@
         font-size: 3.6vw;
         z-index: 0;
         color: rgb(234, 0, 255);
+        text-shadow: 1px 1px 2px rgb(234, 0, 255), 0 0 25px rgb(234, 0, 255), 0 0 5px rgb(234, 0, 255);
+}
         /* opacity: 50%; */
         /* background-color: blueviolet; */
-    }
+    
 
 .einzeln {
     opacity: 0%;
 
 }
 
-.einzeln:hover {
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(0, 0, 255);
-    opacity: 500%;
-    
-    /* transition: .1s ease .25s; */
-}
 
 .einzeln:hover:after { 
     /* transition-duration: 100s; */
@@ -124,3 +120,19 @@
     
 </body>
 </html>
+
+<script>
+    $(".einzeln").hover(function() {
+        $(this)[0].style.opacity = "100%"; //$ wählt alle Elemente diser Klasse aus eventlister
+    },
+    function() {
+        var synchronizer = $(this)[0];
+        setTimeout(setOpacityZero, 4000, synchronizer); // hier 2000 auf eine beliebige zeit in ms stellen:)
+                                                        //this ausgähltes elment 
+    }
+    );
+
+    function setOpacityZero(synchronizer) {             //parameter
+        synchronizer.style.opacity = "0%";
+        }
+</script>
