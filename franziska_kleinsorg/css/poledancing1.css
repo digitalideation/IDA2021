@@ -61,6 +61,7 @@ span {
 
 .pole {
     left: 50%;
+    position: fixed;
     } 
 
 .robothead {
@@ -109,15 +110,47 @@ span {
 }
 
 .background1 {
-    background-color: #DBC8F3;
+    background-color: #f09693;
     position: static;
     width:auto;
-    height: 2000px;
+    height: 1000px;
 }
 
 .background2 {
-    background-color: #a71a1a;
+    background-color: #d77873;
     position: static;
     width:auto;
-    height: 2000px;
+    height: 1000px;
+}
+.background3 {
+    background-color: #bd5e57;
+    position: static;
+    width:auto;
+    height: 1000px;
+}
+
+.background4 {
+    background-color: #a4463f;
+    position: static;
+    width:auto;
+    height: 1000px;
+}
+.background5 {
+    background-color: #8a322b;
+    position: static;
+    width:auto;
+    height: 1000px;
+}
+.background6 {
+    background-color: #71231a;
+    position: static;
+    width:auto;
+    height: 1000px;
+}
+
+.background7 {
+    background-color: #57160d;
+    position: static;
+    width:auto;
+    height: 1000px;
 }

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;490;700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 2rem;
+    height: 100%;
+    min-height: 100vh;
+    color: #333;
+    font-family: Karla;
+    background-image: url(../img/circle-scatter-haikei.svg);
+    background-size: cover;
+    /* line-height: 1.4; */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  header {
+    padding: 0 3rem;
+  }
+  
+  header h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  
+  header p {
+    margin: 0;
+    width: 100%;
+    max-width: 720px;
+  }
+  
+  header a.homelink {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  ul li {
+    margin-bottom: .5rem;
+  }
+  
+  hr {
+    outline: none;
+    border-color: red;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,.1);
+    margin: 1rem 0;
+  }
+  
+  .column {
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 2%;
+  }
+  
+  .session {
+    width: 100%;
+    display: flex;
+    margin-bottom: .5rem;
+  }
+  
+  .session .time {
+    padding-right: 1rem;
+    text-align: right;
+    width: 120px;
+  }
+  
+  .session .student {
+    font-weight: 700;
+  }
+  
+  @media screen and (min-width: 720px) {
+    .column {
+    width: 46%;
+    padding-right: 2rem;
+    float: left;
+  }
+  
+  }
