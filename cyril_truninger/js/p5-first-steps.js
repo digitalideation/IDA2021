@@ -3,15 +3,11 @@ let box = window.document.getElementById('container');
 let width = box.offsetWidth;
 let height = box.offsetHeight;
 
-console.log(width, height);
-let sketch = function (container) {
-    container.setup = function () {
-        container.createCanvas(width, height);
-        container.background(0);
-        }
-    }
-
-new p5(sketch, window.document.getElementById('container'));
+function setup() {
+    let cvs = createCanvas(width,height);
+    cvs.parent("container");
+   
+}
 
 function draw() {
     if (mouseIsPressed) {
@@ -22,18 +18,26 @@ function draw() {
     ellipse(mouseX, mouseY, 80, 80);
 }
 
-draw().parent('container')
 
-
-
-
-// let drawsome = function draw() {
-//     if (mouseIsPressed) {
-//         fill(0);
-//     } else {
-//         fill(255);
+// console.log(width, height);
+// let sketch = function (container) {
+//     container.setup = function () {
+//         container.createCanvas(width, height);
+//         container.background(0);
+//         }
 //     }
-//     ellipse(mouseX, mouseY, 80, 80);
+
+// new p5(sketch, window.document.getElementById('container'));
+
+
+
+// let sketch.drawsome = function() {
+//     if (mouseIsPressed) {
+//         sketch.fill(0);
+//     } else {
+//         sketch.fill(255);
+//     }
+//     sketch.ellipse(mouseX, mouseY, 80, 80);
 // }
 
 // new p5(sketch, window.document.getElementById('container'));
