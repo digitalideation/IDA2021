@@ -2,8 +2,8 @@ body{
     background-color: red;
 }
 .robo-box{
-    width: 40vw;
-    height: 40vh;
+    /* width: 40vw;
+    height: 40vh; */
     color: white;
     background-color: brown;
     background: url(../process/day14/img/robot-svgrepo-com-2.svg) no-repeat top left;
