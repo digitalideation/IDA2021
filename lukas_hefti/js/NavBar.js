@@ -18,6 +18,7 @@ $(document).ready(function () {
     "Week 1": "week1/day1/day1.html",
     "Week 2": "week2/day1/day1.html",
     "Week 3": "week3/day1/day1.html",
+    "Week 4": "week4/day1/day1.html",
 
   }
 
@@ -62,7 +63,10 @@ $(document).ready(function () {
   }
   // add the Process Btn
   $("#mainNavUl").append(linkToProcess);
-
+  if (GlobalIsInProcessPath) {
+    $("#mainNavUl li:last-child").css("background-color", "white");
+    $("#mainNavUl li:last-child a").css("color", "#000000");
+  }
 
 
   // -------- WeekNav -------------------
@@ -83,7 +87,7 @@ $(document).ready(function () {
     $(newLink).attr("href", preFolderWeek + navWeekDict["Week " + i]);
     // if link is the same as Page:
     if (weekName === navWeekDict["Week " + i].split('/').slice(-3, -1)[0]) {
-      $(newLink).css("background-color", "#CBCBCB");
+      $(newLink).css("background-color", "white");
       $(newLink).css("color", "#000000");
     }
     // add Text to link
@@ -93,9 +97,8 @@ $(document).ready(function () {
     $("#dropNavWeekUL li:last-child").append(newLink);
   }
 
-  // -------- DayNav -------------------
-  
 
+  // -------- DayNav -------------------
   showDropdownDay = true;
   if (GlobalWeek != 0) {
     // show the bar:
@@ -108,7 +111,7 @@ $(document).ready(function () {
       $(newLink).attr("href", navDayDict["Day " + i]);
       // if link is the same as Page:
       if (pageName === navDayDict["Day " + i].split("/").pop()) {
-        $(newLink).css("background-color", "#CBCBCB");
+        $(newLink).css("background-color", "white");
         $(newLink).css("color", "#000000");
       }
       // add Text to link
