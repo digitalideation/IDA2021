@@ -1,0 +1,33 @@
+a {
+   background-color: tomato;
+   color: white;
+}
+
+
+.robot *{
+    border: black solid 1px;
+    margin: 0.25rem;
+    padding: 1rem;
+}
+
+.leg {
+    background-color: blue;
+}
+
+.arm {
+    background-color: coral;
+}
+
+.head {
+    background-color: darkcyan;
+}
+
+.eye {
+    background-color: yellow;
+}
+
+.nose {
+    background-color: thistle;
+    transform: scale(0.02, 0.5);
+    border-radius: 50%;
+}

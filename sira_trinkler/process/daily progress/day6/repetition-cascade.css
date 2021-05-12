@@ -1,0 +1,21 @@
+
+
+p {
+    color: green;
+}
+
+p.site-slogan {
+    color: blue;
+}
+
+h2 {
+    color: red;
+}
+
+#inhaltsbereich p {
+    color: gray;
+}
+
+p:first-of-type {
+    color: red !important;
+}

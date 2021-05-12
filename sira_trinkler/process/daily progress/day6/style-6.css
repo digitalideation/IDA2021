@@ -1,0 +1,37 @@
+a {
+   background-color: tomato;
+   color: white;
+}
+
+.robot {
+    border: 10px solid purple;
+    background-color: lightcoral;
+    border-width: 10px;
+    border-color: tomato;
+    border-style: solid;
+    padding: 2rem;
+    margin: 0.25rem;
+    border-left-color: teal;
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    box-sizing: border-box;
+ }
+
+body {
+    background-color: lightblue;
+    background-image: url(https://www.tierwelt.ch/sites/default/files/styles/header_news_2x/public/images/shutterstock_1114115513.jpg?itok=cO1Nj67e);
+    height: 100%;
+    width: 100%;
+}
+
+/* anything that has the class body inside of the robot */
+.robot .body {
+
+}
+
+/* comment: cmd shift 7 */
+div{
+    border: black solid 1px;
+}
