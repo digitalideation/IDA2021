@@ -12,7 +12,7 @@
     <style>
         .screen-wrapper {
             margin-top: 30px;
-
+            position: relative;
         }
 
         .screen-wrapper.right-wrap {
@@ -27,46 +27,51 @@
             display: flex;
             justify-content: center;
             width: 60vw;
-            border: solid 1px var(--white);
             height: 33.75vw;
+            border: solid 3px var(--white);
             background-color: var(--darkgrey);
             border-radius: 20px;
             position: relative;
             filter: url(filters.svg#blur1);
-            animation: noise .3s ease 0s infinite forwards;
+            animation: noise .6s ease 0s infinite forwards;
+            margin: 0;
         }
 
         @keyframes noise {
-  0% {
-    filter:url(filters.svg#noise-0);
-  }
-  20% {
-    filter:url(filters.svg#noise-1);
-  }
-  40% {
-    filter:url(filters.svg#noise-2);
-  }
-  60% {
-    filter:url(filters.svg#noise-3);
-  }
-  80% {
-    filter:url(filters.svg#noise-4);
-  }
-}
+            0% {
+                filter: url(filters.svg#noise-0);
+            }
+
+            20% {
+                filter: url(filters.svg#noise-1);
+            }
+
+            40% {
+                filter: url(filters.svg#noise-2);
+            }
+
+            60% {
+                filter: url(filters.svg#noise-3);
+            }
+
+            80% {
+                filter: url(filters.svg#noise-4);
+            }
+        }
 
 
         h2 {
             text-align: center;
             text-transform: uppercase;
-            font-size: 3em;
+            font-size: 3.4em;
         }
-        
+
         .band-pic {
             width: 45%;
             fill: var(--white);
         }
 
-        .screen figcaption  {
+        .screen figcaption {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -74,43 +79,361 @@
             mix-blend-mode: difference;
         }
 
-        .screen:hover {
+        .screen-hover {
+            width: 60vw;
+        }
+
+        .glow {
+            width: 59vw;
+            height: 32vw;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: noise .6s ease 0s infinite forwards;
+        }
+
+        .screen-hover:hover .glow{
+            transition: 0.3s;
+            -webkit-transition: 0.8s;
+            box-shadow: 0 0 80px 5px var(--red);
+            animation: glowflicker 0.15s infinite;
+            mix-blend-mode: soft-light;
+        }
+
+
+        .screen-hover:hover .screen {
+            transition: 1.5s;
             -webkit-transition: 1.5s;
             background-color: var(--white);
-            filter: url(filters.svg#r);
             filter: url(filters.svg#blur2);
 
         }
 
-        .screen:hover .band-pic {
+        .screen-hover:hover .screen .band-pic {
             fill: var(--black);
         }
 
-        .screen:hover figcaption h2{
+        .screen-hover:hover .screen figcaption h2 {
             transition: 3s;
             color: var(--red);
         }
 
         /* Screen 3D Transform */
-        .screen.left {
+        .screen-hover.left {
             transform: perspective(75em) rotateY(38deg) rotateX(1deg);
         }
 
-        .screen.right {
+        .screen-hover.right {
             transform: perspective(100em) rotateY(-38deg) rotateX(1deg);
         }
 
-        .screen.left:hover {
+        .screen-hover.left:hover {
             transform: perspective(75em) rotateY(28deg) rotateX(6deg);
             transition: 1.5s;
         }
 
-        .screen.right:hover {
+        .screen-hover.right:hover {
             transform: perspective(100em) rotateY(-28deg) rotateX(6deg);
             transition: 1.5s;
         }
 
+        @keyframes glowflicker {
+            0% {
+                opacity: 0.047861;
+            }
+
+            5% {
+                opacity: 0.064769;
+            }
+
+            10% {
+                opacity: 0.043604;
+            }
+
+            15% {
+                opacity: 0.180626;
+            }
+
+            20% {
+                opacity: 0.028128;
+            }
+
+            25% {
+                opacity: 0.163891;
+            }
+
+            30% {
+                opacity: 0.125583;
+            }
+
+            35% {
+                opacity: 0.127807;
+            }
+
+            40% {
+                opacity: 0.046559;
+            }
+
+            45% {
+                opacity: 0.164693;
+            }
+
+            50% {
+                opacity: 0.186019;
+            }
+
+            55% {
+                opacity: 0.16594;
+            }
+
+            60% {
+                opacity: 0.040313;
+            }
+
+            65% {
+                opacity: 0.141988;
+            }
+
+            70% {
+                opacity: 0.103455;
+            }
+
+            75% {
+                opacity: 0.067288;
+            }
+
+            80% {
+                opacity: 0.141428;
+            }
+
+            85% {
+                opacity: 0.140419;
+            }
+
+            90% {
+                opacity: 0.14003;
+            }
+
+            95% {
+                opacity: 0.066108;
+            }
+
+            100% {
+                opacity: 0.044387;
+            }
+        }
         
+
+
+        @keyframes flicker {
+            0% {
+                opacity: 0.27861;
+            }
+
+            5% {
+                opacity: 0.34769;
+            }
+
+            10% {
+                opacity: 0.23604;
+            }
+
+            15% {
+                opacity: 0.90626;
+            }
+
+            20% {
+                opacity: 0.18128;
+            }
+
+            25% {
+                opacity: 0.83891;
+            }
+
+            30% {
+                opacity: 0.65583;
+            }
+
+            35% {
+                opacity: 0.67807;
+            }
+
+            40% {
+                opacity: 0.26559;
+            }
+
+            45% {
+                opacity: 0.84693;
+            }
+
+            50% {
+                opacity: 0.96019;
+            }
+
+            55% {
+                opacity: 0.08594;
+            }
+
+            60% {
+                opacity: 0.20313;
+            }
+
+            65% {
+                opacity: 0.71988;
+            }
+
+            70% {
+                opacity: 0.53455;
+            }
+
+            75% {
+                opacity: 0.37288;
+            }
+
+            80% {
+                opacity: 0.71428;
+            }
+
+            85% {
+                opacity: 0.70419;
+            }
+
+            90% {
+                opacity: 0.7003;
+            }
+
+            95% {
+                opacity: 0.36108;
+            }
+
+            100% {
+                opacity: 0.24387;
+            }
+        }
+
+        @keyframes textShadow {
+            0% {
+                text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5), -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            5% {
+                text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5), -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            10% {
+                text-shadow: 0.02956275843481219px 0 1px rgba(0, 30, 255, 0.5), -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            15% {
+                text-shadow: 0.40218538552878136px 0 1px rgba(0, 30, 255, 0.5), -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            20% {
+                text-shadow: 3.4794037899852017px 0 1px rgba(0, 30, 255, 0.5), -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            25% {
+                text-shadow: 1.6125630401149584px 0 1px rgba(0, 30, 255, 0.5), -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            30% {
+                text-shadow: 0.7015590085143956px 0 1px rgba(0, 30, 255, 0.5), -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            35% {
+                text-shadow: 3.896914047650351px 0 1px rgba(0, 30, 255, 0.5), -3.896914047650351px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            40% {
+                text-shadow: 3.870905614848819px 0 1px rgba(0, 30, 255, 0.5), -3.870905614848819px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            45% {
+                text-shadow: 2.231056963361899px 0 1px rgba(0, 30, 255, 0.5), -2.231056963361899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            50% {
+                text-shadow: 0.08084290417898504px 0 1px rgba(0, 30, 255, 0.5), -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            55% {
+                text-shadow: 2.3758461067427543px 0 1px rgba(0, 30, 255, 0.5), -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            60% {
+                text-shadow: 2.202193051050636px 0 1px rgba(0, 30, 255, 0.5), -2.202193051050636px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            65% {
+                text-shadow: 2.8638780614874975px 0 1px rgba(0, 30, 255, 0.5), -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            70% {
+                text-shadow: 0.48874025155497314px 0 1px rgba(0, 30, 255, 0.5), -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            75% {
+                text-shadow: 1.8948491305757957px 0 1px rgba(0, 30, 255, 0.5), -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            80% {
+                text-shadow: 0.0833037308038857px 0 1px rgba(0, 30, 255, 0.5), -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            85% {
+                text-shadow: 0.09769827255241735px 0 1px rgba(0, 30, 255, 0.5), -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            90% {
+                text-shadow: 3.443339761481782px 0 1px rgba(0, 30, 255, 0.5), -3.443339761481782px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            95% {
+                text-shadow: 2.1841838852799786px 0 1px rgba(0, 30, 255, 0.5), -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+
+            100% {
+                text-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5), -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+            }
+        }
+
+        .crt::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(18, 16, 16, 0.1);
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+            animation: flicker 0.15s infinite;
+            border-radius: 20px;
+        }
+
+        .crt::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            border-radius: 20px;
+        }
+
+        .crt {
+            animation: textShadow 1.6s infinite;
+            border-radius: 20px;
+        }
     </style>
 </head>
 
@@ -132,8 +455,10 @@
         <section class="band">
             <article class="2d">
                 <div class="screen-wrapper left-wrap">
-                    <div class="screen-overlay"></div>
-                    <figure class="screen left">
+                    <div class="screen-hover left">
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <div class="crt "></div>
                         <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.29 414.67">
                             <g id="Ebene_2" data-name="Ebene 2">
                                 <g id="Ebene_1-2" data-name="Ebene 1">
@@ -219,14 +544,17 @@
                             <h2>2D, The Vocals</h2>
                         </figcaption>
                     </figure>
+                    </div>
                 </div>
             </article>
 
 
             <article class="murdock">
                 <div class="screen-wrapper right-wrap">
-                    <div class="screen-overlay"></div>
-                    <figure class="screen right">
+                    <div class="glow"></div>
+                    <div class="screen-hover right">
+                    <figure class="screen">
+                        <div class="crt"></div>
                         <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.39 416.17">
                             <g id="Ebene_2" data-name="Ebene 2">
                                 <g id="Ebene_1-2" class="band-svg" data-name="Ebene 1">
@@ -245,13 +573,16 @@
                             <h2>Murdock, The Bass</h2>
                         </figcaption>
                     </figure>
+                    </div>
                 </div>
             </article>
 
             <article class="noodle">
                 <div class="screen-wrapper left-wrap">
-                    <div class="screen-overlay"></div>
-                    <figure class="screen left">
+                    <div class="glow"></div>
+                    <div class="screen-hover left">
+                    <figure class="screen">
+                        <div class="crt"></div>
                         <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.92 416.38">
                             <g id="Ebene_2" class="band-svg" data-name="Ebene 2">
                                 <g id="Ebene_1-2" data-name="Ebene 1">
@@ -307,13 +638,16 @@
                             <h2>Noodle, The Strings</h2>
                         </figcaption>
                     </figure>
+                    </div>
                 </div>
             </article>
 
             <article class="russle">
                 <div class="screen-wrapper right-wrap">
-                    <div class="screen-overlay"></div>
-                    <figure class="screen right">
+                    <div class="glow"></div>
+                    <div class="screen-hover right">
+                    <figure class="screen">
+                        <div class="crt"></div>
                         <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.21 416.38">
                             <g id="Ebene_2" class="band-svg" data-name="Ebene 2">
                                 <g id="Ebene_1-2" data-name="Ebene 1">
@@ -403,11 +737,9 @@
                             <h2>Russle Hobbs, the Drums</h2>
                         </figcaption>
                     </figure>
+                    </div>
                 </div>
-
             </article>
-
-
         </section>
 
 
