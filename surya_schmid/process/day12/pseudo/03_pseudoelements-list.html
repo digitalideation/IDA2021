@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Pseudo Elements</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        * {
+            font-family: 'Noto Sans HK', sans-serif;
+            font-size: 1.3rem;
+            color: rgb(38, 158, 228);
+        }
+        
+        div {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        ul,
+        div {
+            text-align: left;
+        }
+
+      
+         li:hover{
+             color: thistle;
+         }
+
+         li:hover::before {
+            content: '🧁';
+            position: absolute;
+            padding-right: 10px;
+            transform: translateX(-100%);
+            }
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        Mein Angebot:
+        <ul>
+            <li>Schreibwerkstatt</li>
+            <li>Katzen hüten und Pflanzen giessen</li>
+            <li>Yogastunden</li>
+            <li>Suppen kochen</li>
+            <li>Mathe Nachhilfestunden</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
