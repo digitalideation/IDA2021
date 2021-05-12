@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../Flyer_Code"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../IDA_day7"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Flyer_Code"
+	}
+}

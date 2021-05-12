@@ -1,0 +1,17 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+article {
+    position: relative;
+    background-color: rgb(1, 157, 253);
+    top: 0px;
+    left: 0px;
+    max-width: 600px;
+    min-height: 40vh;
+    margin-bottom: 2rem;
+}
+
+article.myclass {
+    background-color: rgb(19, 196, 13);
+}

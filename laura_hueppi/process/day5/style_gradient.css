@@ -1,0 +1,25 @@
+body {
+    background-image: linear-gradient(to bottom right, blue, lime, yellow, orange, tomato);
+    height: 100%;
+    min-height: 100vh;
+
+    /* Guter Link für CSS Gradient: https://cssgradient.io/ */
+}
+
+
+.arrow {
+    width: 500px;
+    height: 100px;
+    background-color: tomato;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.arrow:after {
+    content: "";
+    border: 50px solid transparent;
+    border-left-color: dodgerblue;
+    position: absolute;
+    display: inline-block;
+    right: -100px;
+}
