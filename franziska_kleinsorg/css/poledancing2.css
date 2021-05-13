@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;490;700&display=swap');
 
+.looper:hover {animation: perspect 4s infinite linear }
+@keyframes perspect {
+   0% {transform: scalex(0)}
+   20% {transform: scalex(-1)}
+   40% {transform: scalex(0)}
+   60% {transform: scalex(-1)}
+   80% {transform: scalex(0)}
+}
+
 body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: white;
@@ -32,13 +41,20 @@ a:hover {
     font-style: italic;
 }
 
-.pole {
+div.pole {
     position: fixed;
     left: 50%;
     height: auto; 
     width: 15px;
     top: 0px;
     z-index: 2;
+}
+
+div.dancer1 {
+    width: 450px;
+    height: auto;
+    z-index: 3;
+    position: relative;
 }
 
 .background1 {
