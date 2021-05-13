@@ -1,58 +1,428 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+  <title>Page Title</title>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDA Modul - Firstname Lastname</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
+<style>
+
+   @font-face {
+            font-family: Walsheim Regular;
+            src: url(/sira_trinkler/css/fonts/GT-Walsheim-Regular.woff);
+        }
+
+        @font-face {
+            font-family: Walsheim Bold;
+            src: url(/sira_trinkler/css/fonts/GT-Walsheim-Pro-Bold.woff);
+        }
+
+        @font-face {
+            font-family: Walsheim Medium;
+            src: url(/sira_trinkler/css/fonts/GT-Walsheim-Medium.woff);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Walsheim Regular";
+            height: 100%;
+            margin: 0;
+        }
+
+        p {
+            font-family: "Walsheim Regular";
+            font-size: 30px;
+            text-align: left;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        
+        .side {
+            flex: 25%;
+            padding-left: 50px;
+            padding-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            display: block;
+            justify-content: center;
+        }
+
+
+        .main {
+            flex: 37.5%;
+            padding: 50px;
+            margin-top: 40px;
+            /* background-color: rgb(235, 235, 235); */
+            border-right: black solid 2px;
+            border-left: black solid 2px;
+        }
+
+        .main-2 {
+          flex: 37.5%;
+          padding: 50px;
+          margin-top: 40px;
+        }
+
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+
+            .row,
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+
+        /* meine weiteren Styles */
+
+        .title {
+
+            margin-right: 10px;
+            color: #0d0e0e;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .line {
+            width: 70%;
+            height: 1px;
+            border: 1px solid #0d0e0e;
+            background-color: #0d0e0e;
+        }
+
+    /* Sweep To Right */
+        .hvr-sweep-to-right {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            -webkit-transition-property: color;
+            transition-property: color;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-sweep-to-right:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            bottom: 13px;
+            background: #FCDF3E;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            height: 30px;
+            align-items: center;
+        }
+
+        .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: white;
+            position: fixed;
+            overflow: hidden;
+            /* bottom: 0; */
+            width: 100%;
+            box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.15);
+            z-index: 4;
+        }
+
+        nav li {
+            list-style-type: none;
+            margin-right: 5px;
+            border: solid black 1px;
+            /* border-radius: 50px; */
+        }
+
+        nav li:last-of-type {
+            margin-right: 50px;
+        }
+
+
+        nav ul li {
+            display: inline;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav li:hover {
+            background-color: tomato;
+        }
+
+
+/* von w3schools */
+nav li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  /* padding: 14px 16px; */
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+.dropdown-content a {
+  color: black;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Footer - Social Media Icons */
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: end;
+  background: #ddd;
+  padding-right: 50px;
+  }
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  text-align: end;
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.fa:hover {
+    background-color: tomato;
+}
+
+.fa-facebook {
+  color: black;
+}
+
+  /* .title {
+    font-size: 20px;
+  } */
+
+  .title {
+    font-family: Walsheim Bold;
+    font-size: 100px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+  }
+
+  .title-2 {
+    font-size: 30px;
+  }
+
+  video {
+    width: 110%;
+    margin-top: 540px;
+    margin-left: -40px;
+  }
+  
+  audio {
+    margin-top: -30px;
+    margin-left: -20px;
+  }
+
+</style>
 
 <body>
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="robotworld.html">Robot</a></li>
-      <li><a href="song.html">My Song</a></li>
-      <li><a href="process.html">Process</a></li>
+      <li><a href="https://ida2021-staging.netlify.app/">Home</a></li>
+      <li><a href="/sira_trinkler/robotworld.html">My Robot</a></li>
+      <li><a href="/sira_trinkler/song.html">My Song</a></li>
+      <li class="dropdown">
+        <a href="/sira_trinkler/myprocess.html" class="dropbtn">My Process</a>
+        <div class="dropdown-content">
+          <a href="/sira_trinkler/myprocess.html">Daily Progress</a>
+          <a href="/sira_trinkler/moodboard.html">Moodboard</a>
+        </div>
+      </li>
+      <li><a href="/sira_trinkler/day14/svg3.html">SVG</a></li>
     </ul>
   </nav>
-  <h1></h1>
-  <div>
-    <img src="/sira_trinkler/assets/allgemein.jpg" alt="BILD">
-  </div>
-  <div class="songtext">
-    <p>your house that sits behind me <br> 
-      is covered in ivy <span class="green">green</span> <br>
-      the windows that we watch from <br>
-      are old and chipping at the beam <br>
-    </p>
-  </div>
-  <div>
-    <div class="songtext-left">
-    <p class="p-left">
-      your <br>
-      house <br>
-      that <br>
-      sits <br>
-      behind <br>
-    </p>
-    </div>
-    <div class="songtext-right">
-    <p class="p-right">
-      me
-    </p>
-    </div>
-    <div>
-      is
-      covered
-      in 
-      ivy
-      green
+
+
+  <div class="row">
+
+    <div class="side">
+      <audio src="/sira_trinkler/audio/1957-audio.mp3" controls></audio>
+      <div class="title">1957</div>
+      <div class="title-2">- Milo Greene</div>
+      <video src="/sira_trinkler/video/1957.mp4" controls></video>
     </div>
 
+    <div class="main">
+      <p>english</p>
+      Your house that sits behind me <br>
+      Is covered in ivy green <br>
+      The windows that we watch from <br>
+      Are old and chipping at the beam <br>
+      <br>
+      It takes me away <br>
+      It takes me away <br>
+      Takes me away <br>
+      It takes me away <br>
+      It takes me away <br>
+      Takes me away <br>
+      <br>
+      The scent you wear moves in lines <br>
+      From your apartment into mine <br>
+      You act like you don't know me <br>
+      My God, you tempt my anxious mind <br>
+      <br>
+      It takes me away <br>
+      It takes me away <br>
+      Takes me away <br>
+      It takes me away <br>
+      It takes me away <br>
+      Takes me away <br>
+      <br>
+      Would it be much better if I knew nothing about you? <br>
+      Would it be much better if I knew nothing about you? <br>
+      Would it be much better if I knew nothing about you? <br>
+      Would it be much better if I knew nothing about you? <br>
+      <br>
+      I'll go, I'll go, I'll go, I <br>
+      I'll go, I'll go, I'll go, I <br>
+      I'll go, I'll go, I'll go, I <br>
+      I'll go, I'll go, I'll go, I <br>
+      I'll go, I'll go, I'll go, I <br>
+      I'll go, I'll go, I'll go, I <br>
+      I'll go, I'll go, I'll go, I <br>
+      <br>
+      I'll go, I'll go, I'll go, I (it takes me away) <br>
+      I'll go, I'll go, I'll go, I (it takes me away) <br>
+      I'll go, I'll go, I'll go, I (it takes me away) <br>
+      I'll go, I'll go, I'll go, I (it takes me away) <br>
+      I'll go, I'll go, I'll go, I (it takes me away) <br>
+      I'll go, I'll go, I'll go, I (it takes me away) <br>
+      I'll go, I'll go, I'll go, I (it takes me away) <br>
+      I'll go, I'll go, I'll go, I <br>
+      I'll go, I'll go, I'll go, I <br>
+    </div>
+
+    <div class="main-2">
+      <p>german</p>
+      Dein Haus liegt hinter meinem, <br>
+      es ist efeuumrankt. <br>
+      Die Fenster, aus denen wir schauen, <br>
+      sind alt und zerplatzen an den Balken. <br>
+      <br>
+      Das nimmt mich mit <br>
+      das nimmt mich mit, <br>
+      nimmt mich mit. <br>
+      Das nimmt mich mit <br>
+      das nimmt mich mit, <br>
+      nimmt mich mit. <br>
+      <br>
+      Dein Duft breitet sich aus <br>
+      von deiner Wohnung in meine. <br>
+      Du tust so, als würdest du mich nicht kennen. <br>
+      Mein Gott, du schürst meine tiefsten Ängste. <br>
+      <br>
+      Das nimmt mich mit <br>
+      das nimmt mich mit, <br>
+      nimmt mich mit. <br>
+      Das nimmt mich mit <br>
+      das nimmt mich mit, <br>
+      nimmt mich mit. <br>
+      <br>
+      Wäre es nicht viel besser, wenn ich gar nichts von dir wüsste? <br>
+      Wäre es nicht viel besser, wenn ich gar nichts von dir wüsste? <br>
+      Wäre es nicht viel besser, wenn ich gar nichts von dir wüsste? <br>
+      Wäre es nicht viel besser, wenn ich gar nichts von dir wüsste? <br>
+      <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+      Ich werde gehen, ich werde gehen, ich werde gehen, ich <br>
+    </div>
   </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="https://www.instagram.com/triation.ch/" target="_blank" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-linkedin"></a>
 </body>
 
 </html>

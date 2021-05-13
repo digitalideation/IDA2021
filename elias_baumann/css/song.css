@@ -1,0 +1,109 @@
+.window-content-song {
+    /* background-color: red; */
+    height: 100%;
+    overflow: scroll;
+    padding: 20px;
+}
+
+.facts {
+    position: relative;
+    text-align: left;
+    /* background-color: blue; */
+    max-width: 900%;
+}
+
+.s1 {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.s2 {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.s3 {
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.s4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: violet; */
+    padding-bottom: 80px;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.s4-lyrics {
+    width: 50%;
+    position: relative;
+
+}
+
+.rest-lyrics {
+    margin-bottom: 30px;
+}
+
+.s4-gifs {
+    width: 60%;
+    margin-left: 20px;
+    /* background-color: #fff; */
+}
+
+.lyrics {
+    /* background-color: green; */
+    width: 50%;
+    padding-right: 10px;
+    line-height: 1.6;
+
+}
+
+.reason {
+    width: 60%;
+    padding-left: 10px;
+    padding-top: 28px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.artist {
+    text-decoration: underline;
+    font-size: 18px;
+    /* line-height: 1; */
+
+}
+
+mark {
+    background-color:rgba(229, 122, 117, 0.7);
+}
+
+.travis {
+    width: 70%;
+}
+
+figcaption {
+    margin-bottom: 20px;
+}
+
+.childish {
+    width: 50%;
+}
+
+
+/* --------------------------------- */

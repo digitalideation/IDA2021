@@ -1,0 +1,127 @@
+body {
+    height: 1000px;
+    background-color: rgb(79, 79, 79);
+}
+
+.robot {
+    position: relative;
+    margin: auto;
+    display: flex;
+    /*optional background or border*/
+    /* border: solid 4px red; */
+    margin-top: 2%;
+    width: 800px;
+    height: 800px;
+    background: none;
+    z-index: -2;
+    align-items: center;
+    justify-content: center;
+}
+  
+.head {
+    /* position: absolute; */
+    width: 50%;
+    height: 50%;
+    background: rgb(0, 119, 128);
+    z-index: -1;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-bottom: dotted 10px darkblue;
+    
+}
+
+.mouth {
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    width: 32%;
+    height: 17%;
+    /* background: none;  */
+    border-radius: 50%;
+    border-bottom: solid 8px black;
+}
+
+.nose{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    width: 5%;
+    height: 5%;
+    background-color: rgb(0, 0, 0);
+    /* background: none;  */
+    /* border-radius: 50%;
+    border-bottom: solid 8px black; */
+    clip-path: ellipse(30% 50% at 50% 50%);
+}
+
+.facecolor {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 32%;
+    height: 40%;
+    background: rgb(31, 187, 75); 
+    border-radius: 50%;
+    /* border-left: solid 3px grey; */
+    z-index: -1;
+   
+}
+
+.secfacecolor{
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    width: 300px;
+    height: 300px;
+    background: rgb(209, 225, 33); 
+    border-radius: 2%;
+    border-left: solid 3px grey;
+    
+   
+}
+  
+.eye-left{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    width: 32%;
+    height: 40%;
+    background: rgb(57, 3, 254); 
+    border-radius: 50%;
+    border: solid 3px rgb(0, 0, 0);
+}
+
+
+.eye-right{
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    width: 32%;
+    height: 40%;
+    background: rgb(57, 3, 254); 
+    border-radius: 50%;
+    border: solid 3px rgb(0, 0, 0);
+}
+  
+.pupille {
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    width: 32%;
+    height: 40%;
+    background: rgb(255, 5, 247); 
+    border-radius: 50%;
+    /* border-left: solid 3px grey; */
+}
+  
+.inner-eye {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 12%;
+    height: 20%;
+    background: rgb(0, 0, 0); 
+    border-radius: 50%;
+    border-left: solid 3px rgb(211, 211, 211);
+}
+  
+  

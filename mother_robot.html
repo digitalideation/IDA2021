@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src=""></script>
     <title>IDA Digital Design, 2021</title>
 
 </head>
@@ -40,12 +41,15 @@
     <script>
         const ROBOT = document.querySelector('.robot')
         const LINK = document.getElementsByTagName('link')[0]
+        const SCRIPT = document.getElementsByTagName('script')[0]
         const CLASS_INPUT = document.querySelector('#class-input')
         const TRIGGER = document.querySelector('#class-trigger')
 
         TRIGGER.addEventListener('click', function() {
-            const PATH = CLASS_INPUT.value + '/css/style.css'
-            LINK.setAttribute('href', PATH)
+            const CSSPATH = CLASS_INPUT.value + '/css/style.css'
+            const JSPATH = CLASS_INPUT.value + '/js/app.js'
+            LINK.setAttribute('href', CSSPATH)
+            SCRIPT.setAttribute('src', JSPATH)
         })
     </script>
 </body>

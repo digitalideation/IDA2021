@@ -77,7 +77,7 @@ const boombox = document.querySelector('.boombox-body');
 
 // the transforms we can set
 let transform = {
-    xAxis: 0,
+    xAxis: 2,
     yAxis: 0,
     zAxis: 0.8,
     rotateX: 0,

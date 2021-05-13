@@ -1,293 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDA Modul - Surya Schmid</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-    *{
-      box-sizing: border-box;
-    }
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    div{
-      background-color: white;
-    }
+        }
 
-  main{
-      display: flex;
-    }
-      
-        .robot {
-            border: 1px solid #de9c9c;
-            padding: 1rem;
-   
-            position: relative;
-            width: 300px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 40px;
+        body{
+            padding-bottom: 5rem;
+    
             
         }
 
-         .head{
-          border: 0px solid #000000;
-          position: absolute;
-          width: 150px;
-          height: 100px;
-          top: 70px;
-          justify-content: center;
-          display: flex;
-
-          transition-timing-function: ease-in-out;
-          transition-duration: 1s;
-        }
-
-        .head2{
-          border: 0px solid #000000;
-          position: absolute;
-          width: 200px;
-          height: 120px;
-          top: 50px;
-          justify-content: center;
-          align-items: center;
-          display: flex;
-          background-image: url(img/hearts_Zeichenfläche\ 1.svg);
-          background-size:80%;
-          background-position-x: center;
-          background-position-y: center;
-         
-          transition-timing-function: ease-in-out;
-          transition-duration: 1s;
-        }
-
-        .tv{
-          border: 0px solid #000000;
-          position: absolute;
-          width: 80px;
-          height: 60px;
-          background-color: rgba(255, 255, 255, 0);
-      
-        }
-
         img{
-          padding: 0px;
-          width: cover;
-        }
-       
-        .leg{
-          border: 3px solid #000000;
-          position: absolute;
-          width: 30px;
-          height: 120px;
-          bottom: 0;
-        }
+            width: auto;
+            height: 500px;
 
-        .leg--left{
-          left: 105px;
-        }
-        .leg--right{
-          right: 105px;
-        }
-
-         .body{
-           border: 3px solid #000000;
-          position: absolute;
-           width: 120px;
-          height: 111px;
-          top: 170px;
-        }
-
-       
-
-         .arm{
-           border: 3px solid #000000;
-          position: absolute;
-          width: 30px;
-          height: 130px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            
          
         }
 
-        .arm--left{
-          left: 62px;
-          top: 170px;
+        header{
+            background-image: linear-gradient(to right, rgb(152, 229, 254), rgb(234, 214, 198));
+            height: 2rem;
+            
 
-          transition-timing-function: ease-in-out;
-          transition-duration: 1s;
-          transform-origin: top right;
-        }
+            padding: 0.6rem;
+            padding-bottom: 0.2rem;
+            
+            font-size: 18px;
+            text-align: center;
 
-        .arm--right{
-          right: 62px;
-          top: 170px;
-
-          transition-timing-function: ease-in-out;
-          transition-duration: 1s;
-          transform-origin: top right;
-        }
-
-        .hand{
-          border: 3px solid #000000;
-          position:absolute;
-          width: 40px;
-          height: 20px;
-          bottom: 0;    
-          margin-bottom: -3px;    
-        }
-
-        .arm--left .hand{
-          right: 0;
-          margin-right: -3px;  
-        }
-         
-        .arm--right .hand{
-          left: 0;
-           margin-left: -3px;  
         }
 
 
-        .foot{
-          border: 3px solid #000000;
-          position:absolute;
-          width: 50px;
-          height: 20px;
-          bottom: 0;  
-          margin-bottom: -3px;        
+        main{
+            display: flex;
+            justify-content: center;
+            padding: 5vw;
+            position: relative;
+ 
         }
 
-        .leg--left .foot{
-          right: 0;
-          bottom: 0;
-           margin-right: -3px;  
-        }
-         
-        .leg--right .foot{
-          left: 0;
-          margin-left: -3px;  
+        div{
+            position: relative;
+            margin-top: 5rem;
+           
         }
 
-
-      
-
-        .head:hover{
-          top: 30px;
-          
+        figure{
+            position:absolute;
+            filter: opacity(0.7);
+            background-attachment: fixed;
+    
         }
 
-        .head2:hover{
-          top: 30px;
+        figcaption{
+            display: block;
+            background-color: rgb(231, 216, 186);
+            margin: 0;
+            padding: 0.2rem;
+            text-align: center;
+            margin-bottom: 10rem;
+            opacity: 0;
+
+
         }
 
-        .robot:hover .arm--left{
-          transform: rotate(90deg);
-          transform-origin: top right;
-          top: 200px;
+        figure:hover figcaption{
+           opacity: 100;
+        }
+
+        figure:hover{
+            filter: opacity(1);
+        }
+
+        .one{
+            left: 3rem;
+        }
+        .two{
+            top: 35vw;
+        }
+
+        .three{
+            right: 3rem;
+
+        }
         
-        }
-
-        .robot:hover .arm--right{
-          transform: rotate(-90deg);
-          transform-origin: top left;
-          top: 200px;
         
 
+
+        .gradiant{
+            margin-top: 80vw;
+            width: 100%;
+            height: 100px;
+            background-color: lightblue;
+             background-image: linear-gradient(to right, rgb(152, 229, 254), rgb(234, 214, 198));
         }
 
+       div img:nth-child(2n){
+            filter: sepia(5);
+        }
 
+        .galer{
+            height: 200px;
+            overflow: scroll;
+        }
+
+       
         a{
-        
+            position: absolute;
             text-decoration: none;
-            color: black;
+            color: rgb(255, 255, 255);
             padding: 0.8rem;
-            margin-right: 5.5rem;
-            padding-bottom: 0.3rem;
-            margin-top: 0; 
-            padding-top: 1rem;
+            top: 0;
         }
 
         a:hover{
-            background-color: rgb(0, 0, 0);
-            color: white;
+            background-color: rgb(255, 255, 255);
+            color: rgb(152, 229, 254);
         }
-
-
     </style>
+
+
 </head>
-
 <body>
-  <a href="index.html">Back</a>
-  </nav>
+    
 
-  <main>
-      <div class="robot">
-        <div class="leg leg--left">
-          <div class="foot"></div>
-        </div>
-        <div class="leg leg--right">
-          <div class="foot"></div>
-        </div>
-        <div class="body"></div>
-        <div class="head">
-          <img src="img/tv_head_Zeichenfläche 1.svg" alt="">
-          <div class="eye eye--left"></div>
-          <div class="eye eye--right"></div>
-          <div class="nose"></div>
-          <div class="mouth"></div>
-        </div>
-        <div class="arm arm--left">
-          <div class="hand"></div>
-        </div>
-        <div class="arm arm--right">
-          <div class="hand"></div>
-        </div>
-      </div>
+    <header>
+        Summer Vibes
+    </header>
 
-      <div class="robot">
-        <div class="leg leg--left">
-          <div class="foot"></div>
-        </div>
-        <div class="leg leg--right">
-          <div class="foot"></div>
-        </div>
-        <div class="body"></div>
-        <div class="head">
-          <img src="img/TV_HEART_Zeichenfläche 1.svg" alt="">
-          <div class="eye eye--left"></div>
-          <div class="eye eye--right"></div>
-          <div class="nose"></div>
-          <div class="mouth"></div>
-        </div>
-        <div class="arm arm--left">
-          <div class="hand"></div>
-        </div>
-        <div class="arm arm--right">
-          <div class="hand"></div>
-        </div>
-      </div>
+    <a href="index.html">Back</a>
+ 
 
-      <div class="robot">
-        <div class="leg leg--left">
-          <div class="foot"></div>
-        </div>
-        <div class="leg leg--right">
-          <div class="foot"></div>
-        </div>
-        <div class="body"></div>
-        <div class="head2">
-          <div class="tv"></div>
-        </div>
-        <div class="arm arm--left">
-          <div class="hand"></div>
-        </div>
-        <div class="arm arm--right">
-          <div class="hand"></div>
-        </div>
-      </div>
-  </main>
+    
+
+    <main>
+        <figure class="one">
+            <img src="https://i.pinimg.com/564x/42/d1/7c/42d17c806fdbd304895b6f51e07f02bd.jpg" alt="palmen">
+            <figcaption>Sunshine</figcaption>
+        </figure>
+
+        <figure class="two">
+            <img src="https://i.pinimg.com/564x/68/26/0b/68260b61d2c756b5dcdf99048f75d998.jpg" alt="schatten">
+            <figcaption>Shadow</figcaption>
+        </figure>
+
+        <figure class="three">
+            <img src="https://i.pinimg.com/564x/42/27/a2/4227a2d158feb3345bad757877045ff0.jpg" alt="meer">
+            <figcaption>Beach</figcaption>
+        </figure>
+    </main>
+
+    <div class="gradiant"></div>
+    <div>
+   
+
+    <div class="galer">
+        <img class="glarie" src="https://i.pinimg.com/564x/42/d1/7c/42d17c806fdbd304895b6f51e07f02bd.jpg" alt="palmen">
+        <img class="glarie" src="https://i.pinimg.com/564x/42/d1/7c/42d17c806fdbd304895b6f51e07f02bd.jpg" alt="palmen">
+        <img class="glarie" src="https://i.pinimg.com/564x/42/d1/7c/42d17c806fdbd304895b6f51e07f02bd.jpg" alt="palmen">
+       
+    </div>
+    
+
+
 </body>
-
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Elias Robot</title>
+</head>
+<body class="menu-body">
+    <div class="tv-border"></div>
+    <div class="tv-effect">
+        <audio id="audio1" loop="">
+            <source src="audio/onlyflute.mp3" type="audio/mpeg">
+            </audio>
+        <div id="startmodal" style="display: inline;">
+            <div id="buttonwrap">
+                <button onclick="musicplay()">GET STARTED AND ENJOY IT</button>
+            </div>
+        </div>
+        <!-- <div class="landing-effect finish"> -->
+            <div class="menu-content-zusatz">
+                <div class="nav-bar"></div>
+            </div>
+            <div class="menu-content">
+                <div class="nav-bar">
+                    <p class="bar-title">Feels Like Summer</p>
+                </div>
+                <div class="menu-video">
+                    <div class="menu-video-wrapper">
+                        <div class="menu-gif">
+                            <a href="https://www.youtube.com/watch?v=Yag7AaQePs0" target="_blank">
+                            <img src="img/childishxtravis.gif" class="childish-gif" alt="Videoclip Feels Like Summer">
+                        </a>
+                            <a href="https://www.instagram.com/cetaceous.jpg/" target="_blank"</a>
+                            <img src="img/Logo-gif.gif" class="menu-cetaceous" alt="cetaceous logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-options">
+                    <a href="robot.html" class="menu-button1">
+                            <img src="img/icon/smile.gif" class="menu-icon icon1">
+                            <p class="button-text">Robot</p>
+                    </a>
+                    <a href="song.html" class="menu-button2">
+                            <img src="img/icon/cd.gif" class="menu-icon icon2">
+                            <p class="button-text">About Song</p>
+                    </a>
+                    <a href="process/overview.html" class="menu-button3">
+                            <img src="img/icon/prozess2.gif" class="menu-icon icon2">
+                            <p class="button-text">Process</p>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-copyright">
+                <div class="landing-copyright-div">
+                    <h3 class="menu-copyright-text">©&nbsp;&nbsp;2021&nbsp;&nbsp;Elias Baumann</h3>
+                </div>
+            </div>
+    </div>
+
+            </div>
+        <!-- </div> -->
+    </div>
+    <script>
+        let audio1 = document.getElementById("audio1");
+audio1.play();
+function musicplay() {
+    if (audio1.paused) {
+        audio1.play();
+    }
+    let startmodal = document.getElementById("startmodal");
+    startmodal.style.display = "none"
+}
+if (audio1.paused) {
+    let startmodal = document.getElementById("startmodal");
+    startmodal.style.display = "inline"
+}
+    </script>
+</body>
+</html>

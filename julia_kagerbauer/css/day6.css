@@ -1,0 +1,63 @@
+img {
+    padding: 5px;
+    width: 250px;
+    height: auto;
+    clip-path: circle(40% at 50% 50%);
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10rem;
+    list-style-type: none;
+}
+
+.Bilder {
+    position: relative;
+    display: flex;
+}
+
+/*.chicken1 {
+    margin-top: 30px;
+    position: absolute;   
+}*/
+
+.chicken2 {
+    position: absolute;
+    top: 10em;
+    left: 35em;
+
+}
+
+.chicken3 {
+    position: absolute;
+    top: 20em;
+    right: 0em;
+}
+
+.chicken1 {
+    opacity: 50%;
+    
+}
+
+
+.chicken1:hover {
+    opacity: 100%;
+}
+
+figcaption {
+    background-color:transparent;
+    color: transparent;
+    padding: 2px;
+    width: 260px;
+}
+
+figcaption:hover {
+    color:black;
+    padding: 2px;
+    width: 260px;
+    margin-left: 100px;
+}
+
+

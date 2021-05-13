@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    @font-face {
+        font-family: Walsheim-Bold;
+        src: url(/sira_trinkler/css/fonts/GT-Walsheim-Pro-Bold.woff);
+    }
+
+   body {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+   }
+
+    .container {
+        width: 800px;
+        text-align: center;
+        /* border: solid 2px blue; */
+        margin: 0 auto;
+        margin-top: 10%;
+    }
+
+    img {
+        width: 800px;
+        opacity: 0.6;
+        border-radius: 10px;
+    }
+    
+    /* img:hover + figcaption{
+        opacity: 100%;
+        display: block;
+    } */
+
+    figcaption {
+        font-family: Walsheim-Bold;
+        font-size: 30px;
+        display: none;
+        text-align: center;
+    }
+
+    .container:hover img {
+        opacity: 1;
+    } 
+
+    .container:hover figcaption {
+        display: block;
+    }
+
+    /* figcaption:hover {
+        visibility: visible;
+    } */
+</style>
+
+<body>
+    <div class="container">
+        <figure">
+            <img src="/sira_trinkler/assets/grumpy.jpeg" alt="Grumpy-Cat">
+            <figcaption>FUCKER</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0;
+    scroll-margin-block-end: 0;
+    background-image: url(../img/background_2_web.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background-color: rgba(255 , 255, 255, 0.0);
+}
+
+nav ul li{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-end; */
+    display: inline-block;
+    padding: 20px;
+}
+nav ul li:first-child{
+    padding-left: 60vw;
+    margin-left: 5vw;
+}
+
+nav ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+nav ul .active{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    text-decoration: none;
+}
+
+.leg, .body, .head, .arm{
+    height: 100vh;
+    width: 100vw;
+    /* border: solid red 1px; */
+    
+    overflow: hidden;
+}
+
+.leg {
+    
+}
+.leg--left .foot h1{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+}
+.leg--left .foot p{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    max-width: 50vw;
+    margin-left: 25vw;
+    
+}
+.leg--left .foot img{
+    position: absolute;
+    bottom: -4vh;
+    left: 15%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center baseline; */
+    width: 70%;
+    mix-blend-mode: lighten;
+    
+}
+.leg--right .foot img{
+    display: inline-block;
+    width: 40vw;
+    position: relative;
+    left: 10vw;
+    top: 10vh;
+
+}
+
+.leg--right .foot .info-box{
+    display: none;
+    width: 30vw;
+    position: relative;
+    left: 24vw;
+    top: 3vh;
+    background-color: rgba(49, 48, 48, 0.9);
+    color: white;
+    z-index: 2;
+    padding: 2vw 2vh;
+}
+
+.leg--right .foot:hover .info-box{
+    display: inline-block;
+}
+
+
+.leg--right .foot .info-box button{
+    /* width: 4vw;
+    height: 5vh; */
+    padding: 10px;
+    display: inline-block;
+    float: right;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+
+}
+
+.leg--right .foot .info-box button img{
+    width: 100%;
+    position: unset;
+
+}
+
+.leg--right .foot .info-box h2{
+    height: 5vh;
+    display: inline-block;
+}
+
+.body {
+    color: white;  
+}
+
+.body img{
+    display: inline-block;
+    width: 40vw;
+    position: relative;
+    left: 10vw;
+    top: 10vh;
+}
+.body .info-box{
+    display: inline-block;
+    width: 40vw;
+    margin-left: 10vw;
+}
+.body .info-box h2{
+    height: 5vh;
+    display: inline-block;
+}
+.body .info-box p{
+
+
+}
+
+
+.head{
+    
+}
+.arm {
+   
+}

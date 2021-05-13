@@ -1,0 +1,41 @@
+
+
+main {
+    
+}
+
+svg {
+    width: 400px;
+    height: 400px;
+    display: inline;
+    /*border: 5px solid black;*/
+}
+
+.whirl {
+    fill: none;
+    stroke: #222221;
+    stroke-miterlimit: 10;
+    /*set dashoffset to 0 so that if JS is off the image will still appear => Progressive Enhancement*/
+    stroke-dashoffset: 0;
+}
+
+.hex {
+    fill: none;
+    stroke: #222221;
+    /*set dashoffset to 0 so that if JS is off the image will still appear => Progressive Enhancement*/
+    stroke-dashoffset: 0;
+}
+
+.font {
+    fill: none;
+    stroke: #222221;
+    /*set dashoffset to 0 so that if JS is off the image will still appear => Progressive Enhancement*/
+    stroke-dashoffset: 0;
+}
+
+.fontSVG {
+    width: 800px;
+    height: 400px;
+    display: inline;
+    /*border: 5px solid black;*/
+}

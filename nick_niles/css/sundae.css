@@ -1,0 +1,19 @@
+
+.nick.top {
+  background-image: url(../img/head.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: none;
+  transform: scale(1.2);
+}
+
+.nick.middle {
+  transform: scale(1.2);
+  background-color: none;
+  background-image: url(../img/body.svg);
+}
+
+.nick.bottom {
+  transform: scale(1.2);
+  background-image: url(../img/legs.svg);
+}

@@ -1,0 +1,49 @@
+section{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    vertical-align: center;
+    
+}
+section .songtext{
+    margin: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    padding-top: 45vh;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+section .songtext:hover{
+    font-size: 4rem;
+}
+
+#section_1{
+    background-color: teal ;
+}
+#section_2{
+    background-color: orange ;
+}
+#section_3{
+    background-color: green ;
+}
+#section_4{
+    background-color: teal;
+}
+#section_5{
+    background-color: orange;
+}
+#section_6{
+    background-color: green;
+}
+#section_7{
+    background-color: teal;
+}
+
+.transition_2{
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease; 
+}

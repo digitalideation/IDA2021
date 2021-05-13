@@ -1,0 +1,30 @@
+li a.navbarhome {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 15px;
+    font-family: 'Antonio', sans-serif;
+    font-size: 40px;
+    padding-left: 40px;
+    padding-top: 60px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    opacity: 50%;
+    transition: 1s;
+    margin: auto;
+}
+  
+li a.navbarhome:hover {
+    opacity: 100%;
+}
+
+
+.ulhome {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navhome {
+    margin-top: 150px;
+}

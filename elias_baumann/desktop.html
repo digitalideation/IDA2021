@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Elias Robot</title>
+</head>
+
+<body class="tv-effect">
+    <main>
+
+        <div class="desk-icons">
+            <a href="index.html" class="desk-start app">
+                <img src="img/icon/start.png" class="start-icon icon" alt="Start Icon">
+                <p class="start-text">Start</p>
+            </a>
+            <a href="menu.html" class="desk-menu app">
+                <img src="img/icon/menu.png" class="menu-icon icon" alt="Menu Icon">
+                <p class="menu-text">Menu</p>
+            </a>
+            <button id="ASong" onClick="playPause()" class="desk-play app">
+                <audio src="audio/feelslikesummer.mp3" autoplay loop></audio>
+                <img src="img/icon/play.png" class="play-icon icon" alt="Play Icon">
+                <p class="play-text">Play Song</p>
+            </button>
+        </div>
+
+        <div id="mydiv" class="desk-window tv-effect">
+            <div id="mydivheader" class="window-header">
+                <p class="header-text">Feels Like Sommer</p>
+                <div class="header-icons">
+                    <div class="header-minimize">
+                        <!-- <span class="fa-minus"></span> -->
+                        <img src="img/minimize.svg" class="minimize-icon">
+                    </div>
+                    <div class="header-big">
+                        <!-- <span class="fa-square"></span> -->
+                        <img src="img/big.svg" class="big-icon">
+                    </div>
+                    <div class="header-close">
+                        <!-- <span class="fa-minus"></span> -->
+                        <img src="img/x.svg" class="close-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="window-content">
+            </div>
+        </div>
+    </main>
+    <footer class="footer tv-effect">
+        <a href="index.html" class="footer-start">
+            <img src="img/icon/start-button.png" class="footer-start-icon">
+        </a>
+        <div class="footer-time">
+            <p><span class="time" id="datetime"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+    </script>
+
+    <script>
+
+        dragElement(document.getElementById(("mydiv")));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+
+    </script>
+    <script>
+        var aud = document.getElementById("ASong").children[0];
+        var isPlaying = false;
+        aud.pause();
+      
+        function playPause() {
+          if (isPlaying) {
+            aud.pause();
+          } else {
+            aud.play();
+          }
+          isPlaying = !isPlaying;
+        }
+      </script>
+      
+</body>
+
+</html>

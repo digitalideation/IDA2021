@@ -5,37 +5,156 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDA Modul - Firstname Lastname</title>
+  <title>IDA Modul 2021 - My Process</title>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
 
-  <style>
-    body {
-      background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(238, 255, 0));
-  }
+  <style>  
+  
+  :root {
+            --gradient: linear-gradient(
+                45deg,
+                #6200ff,
+                /* #d65db1,
+                #ff6f91,
+                #ff9671,
+                #ffc75f, */
+                #6c4bfd,
+                #fd4b4b
+            );
+        }
+  
+  body {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgb(2, 255, 36) 0%, rgba(148,187,233,1) 100%); 
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Zen Dots', cursive;
+  color: rgb(0, 0, 0);
+  font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  background: #ddd;
+  background-size: 300%;
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 15s infinite alternate;
+    }
 
-  li {
-    font-family: 'Zen Dots', cursive;
-  }
+@keyframes bg-animation {
+            0% 
+            {background-position: left; 
+            }
+            100% 
+            {background-position: right;
+            }
+        }
 
-  span {
-    font-family: 'Zen Dots', cursive;
-    font-size: 15rem;
-  }
-  </style>
+li,
+p,
+h1 {
+  font-family: 'Zen Dots', cursive;
+}
+
+h1 {
+  font-family: 'Zen Dots', cursive;
+  font-size: 15vw;
+  display: inline;
+  justify-self: center;
+  text-align: center;
+  letter-spacing: 0.6rem;
+  position:absolute ;
+  left:5px;
+  color: #6200ff;
+  opacity: 0.5;
+}
+
+a:visited {
+  font-family: 'Zen Dots', cursive;
+  color: #6200ff;
+  text-decoration: none!important;
+}
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainrow {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.box div {
+    font-weight: 700;
+    border: 1px solid #6200ff;
+    padding: 6px;
+    min-width: 15vw;
+    line-height: 120%;
+    /* The default line-height is about 110% to 120% for the majority of the browsers. The line-height property sets the leading of lines of a text. If the line-height value is greater than the font-size value of an element, the difference will be the leading of text.*/
+}
+
+.exp {
+    margin: 10px;
+    /* border: 1px dotted blue; */
+    width:100vw;
+    display: inline;
+    justify-content: center;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+
+}
+
+
+.gina {
+  background-color: #fd4b4b;
+  opacity: 0.5;
+}
+
+.op {
+  opacity: 0;
+}
+.nav {
+  background-color: #6200ff;
+}
+
+.col {
+  color:#fd4b4b;
+  font-family: 'Zen Dots', cursive;
+}
+
+.day {
+  font-family: 'Zen Dots', cursive;
+  color: #6200ff;
+  text-decoration: none!important;
+}
+</style>
 
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li><a href="robotworld.html">My Robot</a></li>
-      <li><a href="song.html">My Song</a></li>
-      <li><a href="process/index.html">Process</a></li>
-    </ul>
-  </nav>
-  <span>Gina</span>
-  <span>Burri</span>
+ 
+  <h1>Gina Burri</h1>
+  
+    <div class="exp">
+      <div class="box mainrow wrap">
+        <div class="nav"><a href="../index.html"><span class="col">Home</span></a></div>
+        <div class="nav"><a href="robotworld.html"> <span class="col">My Robot</span></a></div>
+        <div class="nav"><a href="song.html"> <span class="col">My Song</span></a></div>
+        <div class="nav"><a href="process/index.html"> <span class="col">Process</span></a></div>
+      </div>
+    <div>
+
 </body>
 
 </html>
