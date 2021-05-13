@@ -1,3 +1,39 @@
+/* magic gradients! */
+
+body {
+    background: black radial-gradient(
+      circle farthest-side at
+        calc(var(--mouseX, 1) * 1px)
+        calc(var(--mouseY, 1) * 1px),
+      hsl(var(--mouseX, 5), 75%, 75%),
+      hsl(var(--mouseY, 45), 75%, 75%)
+    );
+  }
+  
+  /* the rest of the code here is
+     for making the demo look pretty */
+  
+  html {
+    height: 100%;
+    font: 1em/1.5 sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    margin: 0;
+  }
+  
+  body:after {
+    background: hsla(0, 0%, 0%, .3);
+    color: #fff;
+    padding: 10px;
+    align-self: center;
+    pointer-events: none;
+  }
+
 body {
     background-color:black;
 }
@@ -88,7 +124,7 @@ h1 {
 
 
 .robot {
-    border: 1px solid #de9c9c;
+    
     padding: 1rem;
     position: relative;
     width: 500px;

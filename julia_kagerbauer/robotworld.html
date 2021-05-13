@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/my robot/julia_kagerbauer/css/robotworld.css">
+  <link rel="stylesheet" href="../julia_kagerbauer/css/robotworld.css">
+  <script src="/julia_kagerbauer/css/day14.js"></script>
   <title>IDA Modul - Firstname Lastname</title>
   <style>
         .robot * {
-            border: 1px solid #1e90ff;
             padding: 1rem;
             margin: .25rem;
+        
         }
     </style> 
 </head>
@@ -20,30 +21,39 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li>My Robot</li>
+      <li class="active">My Robot</li>
       <li><a href="song.html">My Song</a></li>
       <li><a href="process/index.html">Process</a></li>
     </ul>
   </nav>
   <div class="robot">
     <div class="leg leg--left">
+      <svg id="Bein_Links" data-name="Bein Links" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.68 446.87"><defs><style>.cls-1{fill:#c1a070;stroke-width:3px;}.cls-1,.cls-2{stroke:#dbc39c;stroke-miterlimit:10;}.cls-2{fill:none;stroke-width:2px;}</style></defs><path class="cls-1" d="M874,493s-17,32.38-20.27,50.44,11.06,67.2-3.08,80.13-27.15.93-25.15,19.93,5.49,28.07,12.25,27,14,3.93,11.9,6.44-8.56,35.79-24.35,33.16-3.21,38.83,0,39.6,13.74,9,19,7.36,8.23,16.4-17.77,34.4S790,839.63,801.73,856.56s-.74,93.62,36,78.28,47.13-35.64,44.94-52.49,5.85-41.67,16.83-37.76,30,6.26,44-18.42,37.6-37,27.8-71.83-29.8-66-27.8-76.44,5-26-8-26.7-30.66-15.93-27.83-31.31S891.5,536.5,904,527,873.5,492.5,874,493Z" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M853.73,543.44s5.78,25,18,23.29S885.28,571,885.28,571" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M841.8,629s11.2,14,7.2,23-13.59,6-14.79,0" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M905.67,629s-29.16-1.32-33.91,14.34-14.1,14.33-14.1,14.33" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M931,650.42s-11.07,1.63-8,10.1,13.38,5.56,15.75,4.47c4.31-2-.45-10.63-8.07-7.31" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M825.3,710.14S845,731,838,742s-12.7-10.57-12.7-10.57" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M899.52,844.59s-14.18-46.42,6.15-59,16.74-36.85,16.74-36.85" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M806.81,811.24s.2-10.1,32.69-6.67,37.14-7.91,37.14-7.91" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M806.81,864.31s7-17.61,25.59-14" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M882.69,882.35s-31.62-4.62-40.66,16-16.73,14-16.73,14" transform="translate(-795.44 -491.49)"/><path class="cls-2" d="M946,686s-19.71-2.73-31.7,24.14S865,740,865,740" transform="translate(-795.44 -491.49)"/></svg>
       <div class="foot"></div>
     </div>
     <div class="leg leg--right">
+      <svg id="Bein_Rechts" data-name="Bein Rechts" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 233.78 331.91"><defs><style>.cls-1{fill:#c1a070;stroke-width:3px;}.cls-1,.cls-2{stroke:#dbc39c;stroke-miterlimit:10;}.cls-2{fill:none;stroke-width:2px;}</style></defs><path class="cls-1" d="M968.66,509.5s36.84,20.44,32.34,47.72S971.8,573,982.65,588.74s2.36,42.45,41.6,54.61,59.74,55.45,59,78.8c-.46,14.59,45.26,63.35,32.26,101.35-13.4,39.17-57-13-65,1-22.66,39.65-65-27.07-64.5-49.53s-28.61-41.47-37-47.34c-24.5-17.13,10.69-55.69-22-70-32.5-14.18-39-99.49-39-99.49-.47.31-5.41-44.29,13.56-44.49S968.66,509.5,968.66,509.5Z" transform="translate(-885.55 -507.97)"/><path class="cls-2" d="M982.65,588.74s-38.56-24.86-29.1-45.3,25.68-.44,24.57,3.56-3.23,14.12-11.18,13.06" transform="translate(-885.55 -507.97)"/><path class="cls-2" d="M902,573s18.86,7.09,31.43,8S956,591.38,957,594.69" transform="translate(-885.55 -507.97)"/><path class="cls-2" d="M995.25,622.49S975,608,963,619s-29.2,3.49-29.2,3.49" transform="translate(-885.55 -507.97)"/><path class="cls-2" d="M976.87,751s-10.37-19,8.3-33,38.38,10,50.83,2" transform="translate(-885.55 -507.97)"/><path class="cls-2" d="M1082,734s-32-4-41,9-22,11-22,11" transform="translate(-885.55 -507.97)"/><path class="cls-2" d="M1024.25,643.35s-43.42,10.14-52.84,32.9" transform="translate(-885.55 -507.97)"/><path class="cls-2" d="M986,775s18-12,35-2" transform="translate(-885.55 -507.97)"/><path class="cls-2" d="M1050.5,824.5s-4.23-28.58,17.64-27.84c9.86.34,18.86,6.34,15.13,14.58-2.43,5.37-16.29,15.24-15.78,0" transform="translate(-885.55 -507.97)"/></svg>
       <div class="foot"></div>
     </div>
-    <div class="body"></div>
-    <div class="head">
-      <div class="eye eye--left"></div>
-      <div class="eye eye--right"></div>
-      <div class="nose"></div>
-      <div class="mouth"></div>
-    </div>
+    
     <div class="arm arm--left">
-      <div class="hand"></div>
+      <div class="hand">
+        <svg id="Arm_left" data-name="Arm left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 191.84 151.8"><defs><style>.cls-1{fill:#c1a070;stroke-width:3px;}.cls-1,.cls-2{stroke:#dbc39c;}.cls-1,.cls-2,.cls-3{stroke-miterlimit:10;}.cls-2,.cls-3{fill:none;stroke-width:2px;}.cls-3{stroke:#d3b881;}</style></defs><path class="cls-1" d="M927.33,378.82s16.62,14,9.65,26.95-53.59,37.69-60.67,43.54-49.38-12.26-55.6,26.65S801.5,524.44,791.32,525s-27.16,8.1-38.19-7.12,9-8.74,11.79-18.41-6.94-23.3-2.37-33.45,17.43-16.79,17.89-28.7,17.85-20.57,26.56-22.83,17.11-10.35,31.09-19.82S917,377.12,927.33,378.82Z" transform="translate(-748.35 -377.09)"/><path class="cls-2" d="M821,483.15S794.5,460.5,782.5,463.5" transform="translate(-748.35 -377.09)"/><path class="cls-2" d="M779,445.18s15-6.81,25.66,3S820,456,820,456" transform="translate(-748.35 -377.09)"/><path class="cls-2" d="M767.38,478.15c6.62,3.85,10.65,9.15,6.14,12.5s-10.53-4.5-8-5.07" transform="translate(-748.35 -377.09)"/><path class="cls-2" d="M796.5,522.5s-6.5-11.54,0-18-1.44-13.33-1.44-13.33" transform="translate(-748.35 -377.09)"/><path class="cls-2" d="M799.05,421.91s-1,6.9,19,8.5,19.75,12.47,19.75,12.47" transform="translate(-748.35 -377.09)"/><path class="cls-2" d="M838.53,427.72s14.72,8.42,17,21.75" transform="translate(-748.35 -377.09)"/><path class="cls-3" d="M888,393.27s-.8,17.41,9.87,21.37S913,426,913,426" transform="translate(-748.35 -377.09)"/></svg>
+      </div>
     </div>
+
+    <div class="body">
+      <svg id="Body" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134.78 174.29"><defs><style>.cls-1{fill:#c1a070;stroke-width:3px;}.cls-1,.cls-2{stroke:#dbc39c;stroke-miterlimit:10;}.cls-2{fill:none;stroke-width:2px;}</style></defs><path class="cls-1" d="M895.21,357s-13.1,2-18.65,11.47-31,12.5-31.8,29S870,455.88,870,455.88s6,4.12-2,19.12,6,18,6,18,4,34,30,34,67,9,70-22,4.6-52.75-2.7-62.38-12.22-10.3-7.76-19,10.22-16.34-3.16-19.5S937.64,375,920.32,368.5,906.42,356.06,895.21,357Z" transform="translate(-843.25 -355.43)"/><path class="cls-2" d="M850.65,386s4.69,31,26.09,28S907,421.91,907,421.91" transform="translate(-843.25 -355.43)"/><path class="cls-2" d="M859.27,380.15s7.41-5.91,19.07,6.47,28,8.44,32.33,8.41,13.06,2,16.7,5.47S939,414,949,411" transform="translate(-843.25 -355.43)"/><path class="cls-2" d="M876.56,369.11S886.7,358.68,901,386" transform="translate(-843.25 -355.43)"/><path class="cls-2" d="M871.84,464.94s13.43-10.06,38.79,0,32.87,0,32.87,0" transform="translate(-843.25 -355.43)"/><path class="cls-2" d="M971.3,442.62s-10.61-5.37-25.95,0" transform="translate(-843.25 -355.43)"/><path class="cls-2" d="M956.57,404.16s-3.31,10.09,2.53,9.84.53-4.92.53-4.92" transform="translate(-843.25 -355.43)"/><path class="cls-2" d="M874,493s8.68-.39,7.34-7.2-8.67-9.88-9.5-5.84,5.27,6.19,4.72,5.62" transform="translate(-843.25 -355.43)"/><path class="cls-2" d="M881.34,513.7s8.66-21.37,32.16-11.53,35.5,1.55,35.5,1.55,5.09-6.56,15.55-4.14" transform="translate(-843.25 -355.43)"/></svg>
+    </div>
+
+    <div class="head">
+      <svg id="Head" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.05 120.15"><defs><style>.cls-1{fill:#c1a070;stroke-width:3px;}.cls-1,.cls-2{stroke:#dbc39c;stroke-miterlimit:10;}.cls-2{fill:none;stroke-width:2px;}</style></defs><path class="cls-1" d="M900.5,355.5s5,1,5-5,3-9,3-9a22.43,22.43,0,0,0,0-12.7c-2-7.3,22-45.68,51.5-40.49s18.5,17.19,24.5,19.19S993,321.7,993,321.7s-2.48,11.8,4.52,19.8,10.63,10,10,27c-.5,13.5-22,19-22,19s-20,2.27-28,13c-5.42,7.23-11,4-13,2-22.2-22.2-36.38-17.11-44-39.38C898.3,356.68,900.5,355.5,900.5,355.5Z" transform="translate(-898.02 -286.33)"/><path class="cls-1" d="M957,335.73s4,4.27,10.76,0" transform="translate(-898.02 -286.33)"/><circle class="cls-1" cx="105.98" cy="78.67" r="3"/><path class="cls-1" d="M986,334s5,3,7-.16" transform="translate(-898.02 -286.33)"/><path class="cls-2" d="M910.67,320.4a39.51,39.51,0,0,0,26.83,6.1c16-2,21-1,21-1" transform="translate(-898.02 -286.33)"/><path class="cls-2" d="M962.8,305.68c16-2,21-1,21-1" transform="translate(-898.02 -286.33)"/><path class="cls-2" d="M941.5,346.5s-9,2-9,9-26.71,5-29.36,0" transform="translate(-898.02 -286.33)"/><path class="cls-2" d="M917.23,310s5.27,8.55,20.27,8.55" transform="translate(-898.02 -286.33)"/><path class="cls-2" d="M992.5,324.5s-5.7-3-9.85,0" transform="translate(-898.02 -286.33)"/><path class="cls-2" d="M943.5,380.5s11.6-1.63,19.3,2.18,18.85,4.74,24.78,3.28" transform="translate(-898.02 -286.33)"/></svg>
+    </div>
+    
     <div class="arm arm--right">
-      <div class="hand"></div>
+      <div class="hand">
+        <svg id="arm_rechts" data-name="arm rechts" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.53 202.79"><defs><style>.cls-1{fill:#c1a070;stroke-width:3px;}.cls-1,.cls-2{stroke:#dbc39c;stroke-miterlimit:10;}.cls-2{fill:none;stroke-width:2px;}</style></defs><path class="cls-1" d="M915.25,416.89s7.64-15.55,15.29-16.35,7.9-1.54,14.35,4.84S946,428.32,963,445.54s32.73,7.31,43.22,15.81,28,15.19,38.61,24.85,12.34,7.66,15.68,12.53,6.53,18,3.12,18.81,1.35,11.21,7.93,11.13,23.66,17.37,24,25.43,4.26,19.56,7.38,20.06,9.69,15.62,0,18.25-23.85,15.1-32.38.3-23.7-26.78-37.81-29.36-23-17.54-22.65-28.64-23-29.71-37.3-30.29-21.4-34.05-24.81-44S914.9,444.71,913.79,437,914.85,417.11,915.25,416.89Z" transform="translate(-911.98 -398.53)"/><path class="cls-2" d="M919.23,442.57s13.77,3.9,16.27-2.34,6.79-2.44,6.79-2.44" transform="translate(-911.98 -398.53)"/><path class="cls-2" d="M966.94,449.07S956,455.29,960,463.65s3,11.84,3,11.84" transform="translate(-911.98 -398.53)"/><path class="cls-2" d="M972.77,504.42s-8.17-10.32-1.47-16.87S991,481,991,474" transform="translate(-911.98 -398.53)"/><path class="cls-2" d="M1054.56,493.74S1032,504,1040,516s11.92-2.3,11.92-2.3" transform="translate(-911.98 -398.53)"/><path class="cls-2" d="M1010.75,538.37s3.62-8.63,19.43,0S1053,542,1053,542" transform="translate(-911.98 -398.53)"/><path class="cls-2" d="M1050,569.37s5-17.37,19-15.37,11-7,11-7" transform="translate(-911.98 -398.53)"/><path class="cls-2" d="M1099,571s-15.46-.19-14.73,5.4,5,5.08,7.35,3.84" transform="translate(-911.98 -398.53)"/></svg>
+      </div>
     </div>
   </div>
 </body>

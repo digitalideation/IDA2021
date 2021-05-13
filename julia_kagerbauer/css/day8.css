@@ -1,81 +1,36 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* magic gradients! */
 
 body {
-    text-align: center;
-    font-family:monospace;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    margin-bottom: 10rem;
-}
-
-.girl {
-    margin: 3em;
-}
-
-#blume-links, 
-#blume-rechts {
-    animation: blume 1s ease-in-out infinite alternate;
-    transform-origin: bottom;
-}
-
-#stiel-links,
-#stiel-rechts {
-    animation: stiel 1s ease-in-out infinite alternate;
-    transform-origin: bottom;
-}
-
-#arm-links {
-    animation: arm1 1s ease-in-out infinite alternate;
-    transform-origin: top;
-    transform-box: fill-box;
-}
-
-#arm-rechts {
-    animation: arm2 1s ease-in-out infinite alternate;
-    transform-origin: top;
-    transform-box: fill-box;
-    animation-delay: 0.5s;
-}
-
-@keyframes blume {
-    from{
-    transform: translateY(15%);
-    }
-    to{
-    transform: translateY(0%);
-    }
-}
-
-@keyframes stiel {
-    from{
-    transform: rotateX(0deg);
-    }
-    to {
-    transform: rotateX(40deg);
-    }
-}
-
-@keyframes arm1 {
-    from{
-    transform: rotateZ(0deg);
-    }
-    to{
-    transform: rotateZ(40deg);
-    }
-}
-
-@keyframes arm2 {
-    from{
-    transform: rotateZ(0deg);
-    }
-    to{
-    transform: rotateZ(-35deg);
-    }
-}
+    background: black radial-gradient(
+      circle farthest-side at
+        calc(var(--mouseX, 1) * 1px)
+        calc(var(--mouseY, 1) * 1px),
+      hsl(var(--mouseX, 5), 75%, 75%),
+      hsl(var(--mouseY, 45), 75%, 75%)
+    );
+  }
+  
+  /* the rest of the code here is
+     for making the demo look pretty */
+  
+  html {
+    height: 100%;
+    font: 1em/1.5 sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    margin: 0;
+  }
+  
+  body:after {
+    background: hsla(0, 0%, 0%, .3);
+    color: #fff;
+    padding: 10px;
+    align-self: center;
+    pointer-events: none;
+  }
+  

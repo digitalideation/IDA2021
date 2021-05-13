@@ -1,0 +1,82 @@
+
+h1 {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    color:wheat;
+    font-size: 60px;
+}
+
+div .robot{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    top: 100px;
+
+    
+}
+
+.head {
+    position: absolute;
+    display: flex;
+    width: 200px;
+    top: 20px;
+    left: 200px;
+   /* animation: kopf 1s ease-in-out infinite alternate;
+    transform-origin: bottom; */
+}
+
+.body {
+    position: absolute;
+    display: flex;
+    width: 200px;
+    left: 130px;
+    top: 180px;
+}
+
+.leg  {
+    position: absolute;
+    width: 100px;
+    left: 200px;
+    top: 320px;
+}
+
+.leg--left {
+    position: absolute;
+    width: 100px;
+    left: 70px;
+}
+
+.leg--right {
+    position: absolute;
+    width: 100px;
+    left: 180px;
+    top: 330px;
+}
+
+.leg--left .foot {
+    position: absolute;
+    width: 80px;
+    top: 190px;
+    left: -30px;
+}
+
+.leg--right .foot {
+    position: absolute;
+    width: 80px;
+    top: 150px;
+    left: 50px;
+}
+
+
+@keyframes kopf {
+    from{
+        transform: translateY(15%);
+        }
+        to{
+        transform: translateY(0%);
+        }
+}
