@@ -3,12 +3,19 @@ body {
 background: linear-gradient(270deg, rgba(45,7,70,1) 0%, rgba(108,19,19,1) 50%, rgba(156,91,0,1) 100%);
 }
 
+.robot {
+  border: 1px solid lime;
+}
+
 .robot .head {
   width: 300px;
   height: 300px;
   border-radius: 150px;
   border: 2px solid white;
   animation: squiggle .3s ease 0s infinite forwards;
+  background-repeat: no-repeat;
+  transform: rotate(10deg);
+  background-image: url(../img/buffalo2.svg);
   filter:url(../img/distortion.svg#squiggly-0);
 }
 
