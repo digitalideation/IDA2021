@@ -1,12 +1,11 @@
 .top.julia {
     position: relative;
-    display: flex;
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     border-radius: 100%;
     background-image: url("https://source.unsplash.com/random/?acid");
-    background-color: blue;
-    background-blend-mode: multiply;
+    background-color:chartreuse;
+    background-image: url(/julia_kagerbauer/images/kopf.svg) ;
 }
 
 .middle.julia {
