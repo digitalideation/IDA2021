@@ -1,6 +1,13 @@
 .top.julia {
     position: relative;
     background-color: brown;
+    display: flex;
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    background-image: url("https://source.unsplash.com/random/?acid");
+    background-color: blue;
+    background-blend-mode: multiply;
 }
 
 .middle.julia {
