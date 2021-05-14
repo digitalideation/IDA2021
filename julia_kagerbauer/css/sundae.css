@@ -1,19 +1,18 @@
 .top.julia {
     position: relative;
-    height: auto;
-    width: auto;
     border-radius: 100%;
-    background-image: url("https://source.unsplash.com/random/?acid");
-    background-color:chartreuse;
+    background-color:rgb(111, 0, 255);
     
 }
 
 .middle.julia {
     position: relative;
-    background-color: cadetblue;
+    border-radius: 100%;
+    background-color: rgb(8, 247, 255);
 }
 
 .bottom.julia {
     position: relative;
+    border-radius: 100%;
     background-color: chartreuse;
 }
