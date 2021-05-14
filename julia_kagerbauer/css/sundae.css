@@ -16,9 +16,12 @@
 }
 
 .bottom.julia {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background-color: chartreuse;
+    position: absolute;
+            background-image: url(/julia_kagerbauer/images/gingerman.svg);
+            background-repeat: no-repeat;
+            display: flex;
+            width: 200px;
+            height: 500px;
+            left: 100px;
+            top: 125px;
 }
