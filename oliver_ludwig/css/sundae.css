@@ -3,6 +3,7 @@
     background-image: url(../process/day15/img/victor-freitas-B0zAPSrEcFw-unsplash.jpg);
     background-blend-mode: multiply;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .middle.oliver{
@@ -14,5 +15,6 @@
 .bottom.oliver{
     background-image: url(../process/day15/img/nino-liverani-EayqAlQiFeQ-unsplash.jpg);
     background-blend-mode: multiply;
-    background-size: cover;    
+    background-size: cover;  
+    background-repeat: no-repeat;  
 }
