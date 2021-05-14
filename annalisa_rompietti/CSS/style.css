@@ -7,7 +7,7 @@ body{
 
 body {
     background-color: rgb(20, 40, 151);
-    background-image: url(https://i.pinimg.com/originals/6d/0b/ac/6d0bacef7a21495ad8afa34ec44b04aa.jpg);
+    background-image: url("../images/cmp_fiatimnebel_druckmodul.jpg");
     background-repeat: no-repeat;
     background-position: right top;
     background-attachment: fixed;
@@ -91,10 +91,10 @@ pre {
     /* margin: 2rem;
     box-sizing: border-box;
     display: inline-block;
-    /* vertical-align: middle; */
-}
+    /* vertical-align: middle; 
+}*/
 
-}
+
 
 /* .circle {
     width: 200px;
@@ -104,4 +104,4 @@ pre {
 
 /* .shape.circle {
     border-color: red;
-} */ */
+} */ 
