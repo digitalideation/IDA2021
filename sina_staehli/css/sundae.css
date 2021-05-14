@@ -1,0 +1,34 @@
+body {
+    height: 100%;
+    width: 100%;
+    /* display: block; */
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+
+div {
+    height: 200px;
+    width: 200px;
+}
+
+
+.top.sina_s {
+    background-image: url(https://i.pinimg.com/originals/af/ed/4c/afed4c1bc0bae0b91b09c456bd76dc43.gif);
+    background-size: 150% auto;
+    background-repeat: no-repeat;
+    margin-left: 10%;
+    background-position: -50px 10px;
+
+
+}
+
+.middle.sina_s {
+    background-color: red;
+    margin-left: 10%;
+    
+}
+
+.bottom.sina_s {
+    background-color: yellow;
+    margin-left: 10%;
+}
