@@ -39,3 +39,38 @@ svg {
     display: inline;
     /*border: 5px solid black;*/
 }
+
+.special1 { 
+   display: inline-block;
+}
+
+
+.specialText1 {
+    position: relative;
+    margin: 0px;
+    font-size: 4em;
+}
+
+.specialBlinder1 {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    display: inline;
+    text-align: right;
+    margin: 0px;
+    margin-left: 50%;
+    height: 4em;
+    width: 450px;
+    /*border: 3px solid black;*/
+    animation: moveBlinder 3s;
+}
+
+@keyframes moveBlinder {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: 50%;
+    }
+}
