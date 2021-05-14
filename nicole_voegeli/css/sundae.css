@@ -1,0 +1,21 @@
+.top.nicole{
+    background-image: url("https://source.unsplash.com/random/900×700/?flowers"),url("https://source.unsplash.com/random/900×700/?city");
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100px;
+}
+
+.middle.nicole{
+    clip-path: polygon(39% 0%, 25% 8%, 1% 39%, 13% 52%, 29% 37%, 19% 99%, 77% 100%, 62% 37%, 83% 49%, 98% 35%, 68% 7%, 59% 0%, 48% 5%);
+    background-image: url("https://source.unsplash.com/random/900×700/?pattern"),url("https://source.unsplash.com/random/900×700/?shape"),url("https://source.unsplash.com/random/900×700/?fabric");
+    background-blend-mode:overlay;
+    background-repeat: no-repeat;
+
+}
+.bottom.nicole{
+    clip-path: polygon(29% 0%, 20% 68%, 28% 69%, 25% 79%, 9% 86%, 8% 98%, 32% 98%, 35% 84%, 40% 72%, 46% 74%, 53% 29%, 56% 77%, 64% 78%, 65% 88%, 65% 100%, 89% 100%, 88% 89%, 75% 80%, 75% 75%, 87% 71%, 72% 0%);
+    background-image: url("https://source.unsplash.com/random/900×700/?pattern"),url("https://source.unsplash.com/random/900×700/?fish"),url("https://source.unsplash.com/random/900×700/?fabric");
+    background-blend-mode:overlay;
+    background-repeat: no-repeat;
+}
