@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="416672a2-1a1e-4d0b-a214-54065c267d8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hanna_zuellig/css/sundae.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gina_burri/process/Day14/svg.html" afterPath="$PROJECT_DIR$/gina_burri/process/Day14/svg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annalisa_rompietti/CSS/process.css" afterPath="$PROJECT_DIR$/annalisa_rompietti/CSS/process.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/annalisa_rompietti/CSS/style.css" afterPath="$PROJECT_DIR$/annalisa_rompietti/CSS/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -183,6 +183,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IDA2021" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IDA2021" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="annalisa_rompietti" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -286,7 +300,7 @@
       <workItem from="1620664615736" duration="3000" />
       <workItem from="1620926520767" duration="316000" />
       <workItem from="1620926881384" duration="159000" />
-      <workItem from="1620974276688" duration="1364000" />
+      <workItem from="1620974276688" duration="1721000" />
     </task>
     <task id="LOCAL-00001" summary="add files for day6">
       <created>1619537030989</created>
@@ -344,11 +358,18 @@
       <option name="project" value="LOCAL" />
       <updated>1620927213996</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="before fresh pull">
+      <created>1620991672003</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620991672003</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17027000" />
+    <option name="totallyTimeSpent" value="17384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="121" y="109" width="1413" height="798" extended-state="0" />
@@ -387,7 +408,8 @@
     <MESSAGE value="aufraeumen directory sina_staehli" />
     <MESSAGE value="aufraeumen directory annalisa" />
     <MESSAGE value="add material for day 15" />
-    <option name="LAST_COMMIT_MESSAGE" value="add material for day 15" />
+    <MESSAGE value="before fresh pull" />
+    <option name="LAST_COMMIT_MESSAGE" value="before fresh pull" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
