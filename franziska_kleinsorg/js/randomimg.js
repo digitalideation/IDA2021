@@ -1,11 +1,19 @@
 
 let images = new Array();
 /* Pfade sind vom HTML File her gesehen! */
-images[0] = "../img/scan0026.jpg";
-images[1] = "../img/scan0027.jpg";
-images[2] = "../img/scan0028.jpg";
-images[3] = "../img/scan0030.jpg";
-images[4] = "../img/scan0032.jpg";
+images[0] = "../img/DSCN9041.JPG";
+images[1] = "../img/DSCN8975.JPG";
+images[2] = "../img/DSC04698.JPG";
+images[3] = "../img/DSC04639.JPG";
+images[4] = "../img/DSC04507.JPG";
+images[5] = "../img/DSC04431.JPG";
+images[6] = "../img/DSC04341.JPG";
+images[7] = "../img/DSC04302.JPG";
+images[8] = "../img/DSC04293.JPG";
+images[9] = "../img/DSC04199.JPG";
+images[10] = "../img/DSC04164.JPG";
+images[11] = "../img/DSC03998.JPG";
+images[12] = "../img/DSC03991.JPG";
 
 
 

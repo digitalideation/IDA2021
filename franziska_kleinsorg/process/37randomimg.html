@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
     <title>Get Random Image from Folder</title>
+
+
     <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;490;700&display=swap');
+
 
 body {
     background-color: #334661;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-
-p {
-    font-size: 20px;
-    color: white;
 }
 
 li { 
@@ -63,17 +63,33 @@ a.active {
     font-size: 30px;
 }
 
-        img {
-            width: 500px;
-            height: auto;
-        }
+button {
+    background-color: #c4a5a6;
+    border: solid #d59d8d 5px;
+    box-shadow: 1px 1px 20px 0 #8f4141;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 30px;
+    color: #334661;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+} 
+
+    
+    
+img {
+    width: 800px;
+    height: auto;
+}
         
-        #platzhalter {
-            margin-top: 20px;
-            width: 500px;
-            height: auto;
-        }
+#platzhalter {
+        margin-top: 20px;
+        width: 800px;
+        height: auto;
+}
+
     </style>
+
 </head>
 
 <body>
@@ -84,7 +100,7 @@ a.active {
         </ul>
     </nav>
 
-    <button onclick="getRandImg()" id="btn">Get Random Image from Folder</button>
+    <button onclick="getRandImg()" id="btn">Look at a random Iceland travel photo!</button>
     <div id="platzhalter"></div>
 </body>
 <script src="../js/randomimg.js"></script>
