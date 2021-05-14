@@ -27,6 +27,10 @@
 }
 
 .bottom.gina {
+    background-image: url(https://source.unsplash.com/random/?feet), url(https://www.wbcsd.org/var/site/storage/images/media/page-assets/program-areas/water/water-overview/60619-4-eng-GB/Water-Overview_i1140.jpg);
+    background-size: cover;
+
+
 
     width: 100px;
     height: 100px;
