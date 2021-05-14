@@ -96,13 +96,25 @@ body {
 
   .container {
     z-index: 2;
+    animation-name: contain;
+    animation-duration: 10s;
+    animation-delay: 1s;
   }
+/* 
+  @keyframes contain {
+    50% {
+      opacity: 0;
+    }
+    100% {
+      display: none;
+    }
+  } */
 
-
+/* 
   .container:hover {
-    opacity: 0;
+  opacity: 0;
     
-  }
+  }  */
   .container:hover::after{
        visibility: hidden;
   }
@@ -117,7 +129,7 @@ body {
 
   .nav-container {
     position: absolute;
-    width: 100vw;
+    width: 130vw;
     height: 200vw;
     display: flex;
     align-items: center;
@@ -127,7 +139,7 @@ body {
 
   .nav {
     
-    width: 300px;
+    width: 350px;
     height: 250px;
     text-align: center;
   }
@@ -138,13 +150,24 @@ body {
     font-family: 'Secular One', sans-serif;
     font-size: 20px;
      width: 250px;
-    color: black;
+    color: rgb(107, 107, 107);
    background-color: rgb(172,172,172);
    background: 
  linear-gradient(90deg, rgba(172,172,172,1) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
    padding: 2vh;
    border-radius: 40%;
   }
+  .home:hover {
+ width: 300px;
+ height: 50px;
+ font-size: 30px;
+ color: rgb(37, 37, 37);
+ background-color: rgb(109, 109, 109);
+   background: 
+ linear-gradient(90deg, rgb(255, 255, 255) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
+
+}
+
    /* .home:hover {
       background-color: #000;
 
@@ -163,36 +186,47 @@ body {
   }
 
    a:hover {
-    color: #fff;
+    color: rgb(196, 195, 195);
+    
   }
 
  
   .robotw {
    
-    color: black;
+     color: rgb(107, 107, 107);
       font-family: 'Chakra Petch', sans-serif;
     font-family: 'Inconsolata', monospace;
     font-family: 'Secular One', sans-serif;
     font-size: 20px;
     display: block;
      width: 250px;
-    color: black;
+    
  background-color: rgb(172,172,172);
    background: 
  linear-gradient(90deg, rgba(172,172,172,1) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
    padding: 2vh;
    border-radius: 40%;
   }
+  .robotw:hover {
+    width: 300px;
+ height: 50px;
+ font-size: 30px;
+ color: rgb(37, 37, 37);
+ background-color: rgb(109, 109, 109);
+   background: 
+ linear-gradient(90deg, rgb(255, 255, 255) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
+  }
+  
   .songg {
  
-    color: black;
+     color: rgb(107, 107, 107);
       font-family: 'Chakra Petch', sans-serif;
     font-family: 'Inconsolata', monospace;
     font-family: 'Secular One', sans-serif;
     font-size: 20px;
     display: block;
      width: 250px;
-    color: black;
+   
 background-color: rgb(172,172,172);
    background: 
  linear-gradient(90deg, rgba(172,172,172,1) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
@@ -200,9 +234,18 @@ background-color: rgb(172,172,172);
    border-radius: 40%;
 
   }
+  .songg:hover {
+    width: 300px;
+ height: 50px;
+ font-size: 30px;
+ color: rgb(37, 37, 37);
+ background-color: rgb(109, 109, 109);
+   background: 
+ linear-gradient(90deg, rgb(255, 255, 255) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
+  }
   .process {
   
-    color: black;
+    color: rgb(107, 107, 107);
       font-family: 'Chakra Petch', sans-serif;
     font-family: 'Inconsolata', monospace;
     font-family: 'Secular One', sans-serif;
@@ -216,4 +259,13 @@ background-color: rgb(172,172,172);
    padding: 2vh;
    border-radius: 40%;
 outline-offset: 4px;
+  }
+  .process:hover {
+    width: 300px;
+ height: 50px;
+ font-size: 30px;
+ color: rgb(37, 37, 37);
+ background-color: rgb(109, 109, 109);
+   background: 
+ linear-gradient(90deg, rgb(255, 255, 255) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
   }
