@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <title>Get Random Image from Folder</title>
+    <style>
+
+body {
+    background-color: #334661;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+}
+
+li { 
+    color: #d59d8d;
+}
+
+a {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:visited {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover { 
+    font-weight: 600;
+    font-style: italic;
+}
+
+a.navi {
+    color:#ccc7c2;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a.navi:visited {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a.navi:hover { 
+    font-style: italic;
+    font-size: 30px;
+}
+
+a.active {
+    color: #c4a5a6;
+    font-size: 30px;
+}
+
+        img {
+            width: 500px;
+            height: auto;
+        }
+        
+        #platzhalter {
+            margin-top: 20px;
+            width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+        <li><a href="index.html">Back</a></li>
+        </ul>
+    </nav>
+
+    <button onclick="getRandImg()" id="btn">Get Random Image from Folder</button>
+    <div id="platzhalter"></div>
+</body>
+<script src="../js/randomimg.js"></script>
+
+</html>

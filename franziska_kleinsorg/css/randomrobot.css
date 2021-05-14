@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;490;700&display=swap');
+
+
+body {
+    background-image: url(https://images.ctfassets.net/rporu91m20dc/4KrCV1uQj6CvFqZIYRoQuG/c92e4dcf285e1424bf063ea375baa79a/1_Hell_on_Earth.jpg), url(https://source.unsplash.com/random/?fire);
+    background-blend-mode: difference;
+    background-color: black;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+a {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:visited {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover { 
+    font-weight: 600;
+    font-style: italic;
+}
+
+a.navi {
+    color:#ccc7c2;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a.navi:visited {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a.navi:hover { 
+    font-style: italic;
+    font-size: 30px;
+}
+
+a.active {
+    color: #c4a5a6;
+    font-size: 30px;
+}
+
+li { 
+    color: #ccc7c2;
+}
+
+.top.franziska {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 500px;
+    z-index: 9 !important;
+    background-image: url(https://source.unsplash.com/collection/2291682/200x200);
+}
+
+.middle.franziska {
+    border-radius: 10%;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 200px;
+    left: 450px;
+    background-image: url(https://source.unsplash.com/collection/2702818/300x400);
+    z-index: 1;
+}
+
+.bottom.franziska {
+    background-image: url(../img/legs.gif);
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 540px;
+    left: 380px;
+    transform: rotate(-90deg);
+}
