@@ -1,5 +1,7 @@
 .top.julia {
     position: relative;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     background-color:rgb(111, 0, 255);
     
@@ -7,12 +9,16 @@
 
 .middle.julia {
     position: relative;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     background-color: rgb(8, 247, 255);
 }
 
 .bottom.julia {
     position: relative;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     background-color: chartreuse;
 }
