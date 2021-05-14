@@ -1,0 +1,34 @@
+/* body {
+    background-color: teal;
+} */
+
+/* div {
+    width: 100px;
+    height: 100px;
+
+} */
+
+.top.gina {
+    width: 100px;
+    height: 100px;
+    /* background-color: teal; */
+    background-image: url(https://static.kino.de/wp-content/uploads/2015/08/brazil-1984-film.jpg);
+    background-size: cover;
+
+  
+}
+
+.middle.gina {
+    width: 100px;
+    height: 100px;
+    background-image: url(https://media4.giphy.com/media/BXVRf5GyMlElO/200.webp?cid=ecf05e47is857gxi0vu4lqer8zom5b5kye0p3nu54nonj8jw&rid=200.webp&ct=g);
+
+}
+
+.bottom.gina {
+
+    width: 100px;
+    height: 100px;
+    
+
+}
