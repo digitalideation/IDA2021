@@ -8,7 +8,7 @@
   <title>IDA Modul - Firstname Lastname</title>
   <!-- CSS -->
   <link rel="stylesheet" href="css/globalstyles.css">
-  <link rel="stylesheet" href="css/homestyles.css">
+  <link rel="stylesheet" href="css/robotstyles.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -18,11 +18,11 @@
   <!-- Libraries -->
   <script src="https://kit.fontawesome.com/abf77cb1ab.js" crossorigin="anonymous"></script>
   <style>
-        .robot * {
+        /* .robot * {
             border: 1px solid #1e90ff;
             padding: 1rem;
             margin: .25rem;
-        }
+        } */
     </style>
 </head>
 
@@ -49,12 +49,23 @@
     </div>
     <div class="body"></div>
     <div class="head">
-
-        <div id="container">
-          <video autoplay="true" id="videoElement">
-      
-          </video>
+        <div class="screen-wrapper right-wrap">
+          <div class="screen-hover right">
+            <div class="glow"></div>
+            <figure class="screen">
+              <div class="crt"></div>
+              <div id="container">
+                <video autoplay="true" id="videoElement">
+              
+                </video>
+              </div>
+              <figcaption>
+                <h2>Live</h2>
+              </figcaption>
+            </figure>
+          </div>
         </div>
+        
 
       <div class="eye eye--left"></div>
       <div class="eye eye--right"></div>
