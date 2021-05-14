@@ -1,55 +1,17 @@
 .cyril.top {
-    background-color: blueviolet;
-    content: "Liebi";
-    animation: grow 2s infinite;
-}
-
-.top::before {
-    content: "Liebi";
+    background-image: url("https://banner2.cleanpng.com/20180630/puc/kisspng-shaquille-o-neal-boston-celtics-los-angeles-lakers-5b38406ef01336.5224648015304131669834.jpg");
+    background-size: 100px;
+    background-repeat: no-repeat;
 }
 
 .cyril.middle {
-    background-color: crimson;
-    animation: grow 2s 0.5s infinite;
-}
-
-.middle::before {
-    content: 'isch';
+    background-image: url("https://www.pngfind.com/pngs/m/527-5275233_torso-png-transparent-png.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
 }
 
 .cyril.bottom {
-    animation: grow 2s 1s infinite;
-    background-color: coral;
-}
-
-.bottom::before {
-    content: "lebe!";
-}
-
-.cyril {
-    text-align: center;
-    font-family: Helvetica;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1.0em #f0f, 0 0 1.2em #f0f;
-    color: #fff;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.def {
-    width: 100px;
-    height: 100px;
-}
-
-@keyframes grow {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    100% {
-        transform: scale(1);
-    }
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.anglomaniacy.pl%2Fimg%2Fv-legs.png&f=1&nofb=1");
+    background-size: 100px;
+    background-repeat: no-repeat;
 }
