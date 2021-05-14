@@ -22,6 +22,7 @@
     width: 100px;
     height: 100px;
     background-image: url(https://media4.giphy.com/media/BXVRf5GyMlElO/200.webp?cid=ecf05e47is857gxi0vu4lqer8zom5b5kye0p3nu54nonj8jw&rid=200.webp&ct=g);
+    background-size: cover;
 
 }
 
