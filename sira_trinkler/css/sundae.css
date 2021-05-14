@@ -1,0 +1,100 @@
+
+
+body {
+    height: 100%;
+    width: 100%;
+    /* background-image: url(https://images.ctfassets.net/rporu91m20dc/4KrCV1uQj6CvFqZIYRoQuG/c92e4dc…/1_Hell_on_Earth.jpg), url(https://source.unsplash.com/random/?fire);
+    background-blend-mode: difference;
+    background-color: black;
+    font-family: 'Yanone Kaffeesatz', sans-serif; */
+}
+
+div {
+    height: 300px;
+    width: 300px;
+}
+
+
+.top.sira {
+    /* background-color: blue ; */
+    border: pink 5px dotted;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url(/sira_trinkler/assets/head.gif);
+    transform: translateY(10%);
+    z-index: 3;
+}
+
+.middle.sira {
+    /* background-color: red; */
+    background-image: url(https://source.unsplash.com/random/?breast), url(https://source.unsplash.com/random/?body);
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    background-position: center center;
+    background-blend-mode: screen;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 70%;
+    left: 50%;
+    /* transform-origin: center; */
+    transform: translateX(-50%);
+    position: relative;
+}
+
+.middle.sira::before {
+    content: "";
+    height: 100px;
+    width: 30px;
+    background-color: black;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    transform: translateX(-30px) rotate(10deg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* transform: rotate(10deg); */
+}
+
+.middle.sira::after {
+    content: "";
+    height: 100px;
+    width: 30px;
+    background-color: black;
+    position: absolute;
+    right: 10%;
+    top: 0%;
+    transform: translateX(30px) rotate(-10deg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* transform: rotate(10deg); */
+}
+
+.bottom.sira {
+    background-color: yellow;
+    background-image: url(/sira_trinkler/assets/feet.gif), url(https://source.unsplash.com/random/?foot);
+    background-size: cover;
+    background-blend-mode: multiply;
+    /* background-blend-mode: overlay; */
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+.bottom.sira:before {
+    content: "";
+    height: 100px;
+    width: 50px;
+    background-color: green;
+    background-image: ;
+    position: absolute;
+    right: 10%;
+    top: 80%;
+    /* transform: rotate(10deg); */
+}
+
+/* .container {
+  background-color: red;
+  background-image: url(...);
+  background-blend-mode: multiply;
+} */
