@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/randocalrissian.css">
+  <title>Rando Calrissian</title>
+</head>
+<body onload="init()">
+  <svg viewBox="0 0 100 100" height="0" width="0">
+    
+    <defs>
+      <clipPath id="eye1" clipPathUnits="objectBoundingBox">
+        <path d="M0,0.462 A1,3,0,0,1,0.191,0.196 L0.217,0.166 A0.623,1,0,0,1,0.347,0.039 C0.359,0.031,0.37,0.023,0.382,0.017 A0.451,0.946,0,0,1,0.507,0 C0.521,0.002,0.534,0.005,0.548,0.009 C0.683,0.075,0.822,0.196,0.938,0.399 C0.951,0.427,0.962,0.453,0.972,0.475 C0.99,0.519,1,0.546,1,0.546 A0.638,1,0,0,1,0.857,0.844 A0.245,0.514,0,0,1,0.83,0.879 C0.695,0.945,0.545,1,0.396,0.947 C0.385,0.939,0.374,0.93,0.363,0.921 C0.167,0.754,0,0.462,0,0.462"/>
+      </clipPath>
+      <clipPath id="eye2" clipPathUnits="objectBoundingBox">
+        <path d="M0,0.56 S0.378,0,0.597,0.088 S1,0.637,1,0.637 S0.827,1,0.562,1 S0,0.56,0,0.56"/>
+      </clipPath>
+
+      <clipPath id="head1" clipPathUnits="objectBoundingBox">
+        <!-- <circle cx=".2" cy=".2" r=".2" /> -->
+        <path
+          d="M0.283,0.028 A0.814,0.734,0,0,0,0.081,0.188 A0.229,0.207,0,0,0,0.054,0.227 C0.012,0.351,0,0.497,0.069,0.611 A0.173,0.156,0,0,0,0.119,0.66 A1,1,0,0,1,0.288,0.791 A0.485,0.437,0,0,0,0.327,0.824 A0.506,0.456,0,0,0,0.369,0.853 A0.559,0.504,0,0,0,0.642,0.974 Q0.672,0.979,0.702,0.982 C0.774,0.985,0.859,0.999,0.914,0.956 C1,0.887,1,0.767,1,0.665 Q1,0.635,1,0.605 C1,0.462,1,0.292,0.889,0.189 A0.346,0.312,0,0,0,0.842,0.154 C0.825,0.141,0.807,0.129,0.789,0.118 Q0.767,0.101,0.742,0.086 C0.726,0.076,0.709,0.066,0.691,0.057 C0.585,0,0.446,-0.043,0.331,0.011" />
+      </clipPath>
+    </defs>
+    </svg>
+      <div class="robot" id="main-robot">
+        <div class="leg leg--left">
+          <div class="foot"></div>
+        </div>
+        <div class="leg leg--right">
+          <div class="foot"></div>
+        </div>
+        <div class="body"></div>
+        <div class="head">
+          <div class="eye eye--left"></div>
+          <div class="eye eye--right"></div>
+          <div class="nose"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="arm arm--left">
+          <div class="hand"></div>
+        </div>
+        <div class="arm arm--right">
+          <div class="hand"></div>
+        </div>
+      </div>
+
+      <script>
+        function init() {
+          setInterval(() => {
+            rotateMe()
+          }, 2000);
+
+          setInterval(() => {
+            eyeBallMe()
+          }, 500);
+        }
+        function randomIntFromInterval(min, max) { // min and max included 
+            return Math.floor(Math.random() * (max - min + 1) + min);
+          }
+
+        function rotateMe() {
+          const randomRotation = Math.random() * 100
+          document.documentElement.style.setProperty('--rotate', randomRotation + 'deg')
+        }
+        
+        function eyeBallMe() {
+          
+          const randomLeftScale = 
+          const randomRightScale = 1 + Math.random(.2)
+          document.documentElement.style.setProperty('--eyeLeftScale', randomLeftScale)
+          document.documentElement.style.setProperty('--eyeRightScale', randomRightScale)
+        }
+      </script>
+</body>
+</html>

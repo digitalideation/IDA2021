@@ -1,20 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day2</title>
+    <title>IDA Modul - Firstname Lastname</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- vvvvvvvvvv Für Nav Bar: vvvvvvvvvvv -->
     <link rel="stylesheet" href="../../../css/styleNavBar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-    GlobalIsInProcessPath = true;
+        GlobalIsInProcessPath = true;
         GlobalWeek = 4;</script>
     <script src="../../../js/NavBar.js"></script>
     <!-- ^^^^^^^^  Für Nav Bar: ^^^^^^^^^^^^ -->
+    <script src="js/robot.js"></script>
 </head>
 
 <body>
@@ -35,18 +36,36 @@
     </header>
     <!-- ^^^^^^^^  Für Nav Bar: ^^^^^^^^^^^^ -->
 
-    <main>
+    <div class="robot">
+
+        <div class="leg leg--left">
+            <div class="foot"></div>
+        </div>
+
+        <div class="leg leg--right">
+            <div class="foot"></div>
+        </div>
 
 
+        <div class="body">
+        </div>
 
+        <div class="head">
+            <div class="eye eye--left"></div>
+            <div class="eye eye--right"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
 
-    </main>
+        <div class="arm arm--left">
+            <div class="hand"></div>
+        </div>
 
+        <div class="arm arm--right">
+            <div class="hand"></div>
+        </div>
 
-
-
+    </div>
 </body>
-
-    <p> Hier nichts neues.</p>   
 
 </html>

@@ -1,0 +1,25 @@
+
+nav{
+    border-bottom: black solid 2px;
+    padding-bottom: 10px;
+}
+ul{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    align-items: center;
+    width: fit-content;
+    height: auto;
+    margin: auto;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+li {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    margin: auto;
+}
+li.hover{
+    background-color: lightgrey;
+}

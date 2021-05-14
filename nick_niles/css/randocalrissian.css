@@ -1,0 +1,55 @@
+:root {
+  --rotate: 1deg;
+  --eyeLeftScale: 1;
+  --eyeRightScale: 1;
+}
+
+body {
+  background-color: rgb(36, 0, 31);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.robot {
+  width: 100vw;
+}
+
+.head {
+  width: 40vh;
+  height: 40vh;
+  background-color: lime;
+  background: url(https://source.unsplash.com/random/?lips), url(https://source.unsplash.com/random/?face), url(https://source.unsplash.com/random/?hands);
+  clip-path: url(#head1);
+  transform: rotate(var(--rotate));
+  transition: transform .4s ease;
+  position: relative;
+  overflow: visible;
+  background-blend-mode: screen;
+}
+
+.eye {
+  width: 30%;
+  height: 20%;
+  position: absolute;
+  background: url(../img/eye.png), url(https://source.unsplash.com/random/?red), url(https://source.unsplash.com/random/?skin);
+  clip-path: url(#eye1);
+  filter: drop-shadow(0 1px 20px rgba(0,0,0,.8));
+  top: 60%;
+  left: 20%;
+  background-blend-mode: soft-light;
+  transform: rotate(10deg);
+}
+
+.eye--left {
+  transform: rotate(-40deg) scale(var(--eyeLeftScale));
+}
+
+.eye--right {
+  background: url(https://source.unsplash.com/random/?hand), url(https://source.unsplash.com/random/?arm);
+  left: 50%;
+  top: 25%;
+  clip-path: url(#eye2);
+  transform: rotate(-45deg) scale(var(--eyeRightScale));
+}

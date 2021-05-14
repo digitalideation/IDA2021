@@ -11,6 +11,9 @@ h1{
 div{
     position: relative;
     border: white, solid;
+    height: 1000px;
+    
+   
 
 }
 .boble1{
@@ -30,12 +33,10 @@ div{
 }
 .boble3{
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
 }
-nav{
-    position: relative;
-}
+
 
 a{
     color: yellow;

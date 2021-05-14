@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/tv-effect.css">
+    <title>Document</title>
+
+    <style>
+body {
+  background: #333333;
+  color: white;
+  background-image: url(../../img/tv-border.png), url(https://source.unsplash.com/1600x900/?beach,sunset,sea);
+  height: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.robot {
+    /* align-items: center; */
+    position: absolute;
+    left: 38%;
+    width: 25%;
+    /* background-color: red; */
+    height: 100%;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.head {
+    position: relative;
+    /* background-color: #fff; */
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+.random-img {
+    width: auto;
+    height: 100%;
+
+}
+
+.chest {
+    position: relative;
+    background-color: grey;
+    width: 80%;
+    height: 230px;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.knopfe {
+    width: 50%;
+    height: 50%;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.knopf {
+    margin-top: 25%;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.kreis {
+    width: 50%;
+    height: 50%;
+    /* background-color: black; */
+}
+
+/* .bildschirm {
+    width: 50%;
+    height: 50%;
+    background-color:red;
+} */
+
+.legs {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 230px;
+    /* background-color: wheat; */
+}
+
+.leg {
+    width: 20%;
+    height: 100%;
+    background-color: grey;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+.shadow {
+    -webkit-box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.5); 
+box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.5);
+}
+
+    </style>
+</head>
+<body class="tv-effect border">
+
+<div class="robot">
+    <div class="head">
+        <img class="random-img" src="https://source.unsplash.com/1600x900/?head">
+    </div>
+    <div class="chest shadow">
+        <div class="knopfe">
+            <div class="knopf1 knopf"></div>
+            <div class="knopf2 knopf"></div>
+            <div class="knopf3 knopf"></div>
+        </div>
+        <div class="kreis"></div>
+        <div class="bildschirm"></div>
+        <div class="rest"></div>
+
+    </div>
+    <div class="legs">
+        <div class="left leg shadow">
+
+        </div>
+        <div class="right leg shadow">
+
+        </div>
+    </div>
+</div>
+
+
+    
+
+</body>
+</html>

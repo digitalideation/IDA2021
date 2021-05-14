@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <title>Get Random Image from Folder</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 3vw;
+            text-align: center;
+        }
+        
+        button {
+            margin-top: 20px;
+            background: #3D94F6;
+            background-image: -webkit-gradient(to bottom, #3D94F6, #06544A);
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 100;
+            padding: 20px;
+            box-shadow: 1px 1px 20px 0 #000000;
+            text-shadow: 1px 1px 20px #000000;
+            border: solid #337FED 1px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        #platzhalter {
+            margin-top: 100px;
+            padding: 20px;
+            box-shadow: 1px 1px 20px 0 #000000;
+            min-width: 500px;
+            min-height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="getRandImg()" id="btn">Get Random Image from Folder</button>
+    <div id="platzhalter"></div>
+</body>
+<script src="js/random.js"></script>
+
+</html>
