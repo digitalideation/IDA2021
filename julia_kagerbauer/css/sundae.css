@@ -1,0 +1,14 @@
+.top.julia {
+    position: relative;
+    background-color: brown;
+}
+
+.middle.julia {
+    position: relative;
+    background-color: cadetblue;
+}
+
+.bottom.julia {
+    position: relative;
+    background-color: chartreuse;
+}
