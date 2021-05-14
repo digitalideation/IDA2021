@@ -1,20 +1,3 @@
-
-
-body {
-    height: 100%;
-    width: 100%;
-    /* background-image: url(https://images.ctfassets.net/rporu91m20dc/4KrCV1uQj6CvFqZIYRoQuG/c92e4dc…/1_Hell_on_Earth.jpg), url(https://source.unsplash.com/random/?fire);
-    background-blend-mode: difference;
-    background-color: black;
-    font-family: 'Yanone Kaffeesatz', sans-serif; */
-}
-
-div {
-    height: 300px;
-    width: 300px;
-}
-
-
 .top.sira {
     /* background-color: blue ; */
     border: pink 5px dotted;
