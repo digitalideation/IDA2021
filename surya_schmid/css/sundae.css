@@ -1,11 +1,51 @@
+
+
+
 .top.surya{
-    background-color: blue;
+
+    
+    background-color: rgb(207, 0, 179);
+    background-image: url(../process/img/patternKreis_Zeichenfläche\ 1.svg);
+    background-repeat: none;
+    background-size: 150%;
+    
+    width: 210px;
+    height: 100px;
+    margin-bottom: 1rem;
+
+    border-radius: 100% 100% 0 0 / 170% 170% 0 0;
+}
+  
+.middle.surya{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,57,121,1) 35%, rgba(0,212,255,1) 100%);
+    
+    border: pink dotted 5px;
+    margin-bottom: 1rem;
+   
 }
 
-.middle.surya{
-    background-color: blueviolet;
-}
+
 
 .bottom.surya{
-    background-color: crimson;
+    background-color: blue;
+    background-image: url(https://i.pinimg.com/564x/ff/c4/9f/ffc49fe77281ba0a4662e6f2eea9bf47.jpg);
+    transform: rotate(30deg);
+
+    border: 1px solid rgb(144, 142, 112) ;
+    border-radius: 35%;
+
+    animation: rotate 40s linear infinite;
+    transition-property: all;
+
+}
+
+
+@keyframes rotate {
+0%{
+    transform: rotate(0deg);
+}
+
+100%{
+    transform: rotate(360deg);
+}
 }

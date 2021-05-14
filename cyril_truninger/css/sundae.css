@@ -1,22 +1,55 @@
 .cyril.top {
     background-color: blueviolet;
     content: "Liebi";
+    animation: grow 2s infinite;
 }
 
-.cyril.middle. {
+.top::before {
+    content: "Liebi";
+}
+
+.cyril.middle {
     background-color: crimson;
-    content: "isch";
+    animation: grow 2s 0.5s infinite;
+}
+
+.middle::before {
+    content: 'isch';
 }
 
 .cyril.bottom {
+    animation: grow 2s 1s infinite;
     background-color: coral;
+}
+
+.bottom::before {
     content: "lebe!";
 }
 
 .cyril {
     text-align: center;
-    text-transform: uppercase;
     font-family: Helvetica;
     font-weight: bold;
-    box-shadow: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 59%, rgba(252, 176, 69, 1) 100%);
+    text-transform: uppercase;
+    text-shadow: 0 0 0.1em #fff, 0 0 0.2em #fff, 0 0 0.3em #fff, 0 0 0.4em #f7f, 0 0 0.6em #f0f, 0 0 0.8em #f0f, 0 0 1.0em #f0f, 0 0 1.2em #f0f;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.def {
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

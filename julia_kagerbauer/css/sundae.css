@@ -1,19 +1,24 @@
 .top.julia {
     position: relative;
-    height: 200px;
     width: 200px;
+    height: 200px;
     border-radius: 100%;
-    background-image: url("https://source.unsplash.com/random/?acid");
-    background-color:chartreuse;
-    background-image: url(/julia_kagerbauer/images/kopf.svg) ;
+    background-color:rgb(111, 0, 255);
+    
 }
 
 .middle.julia {
     position: relative;
-    background-color: cadetblue;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: rgb(8, 247, 255);
 }
 
 .bottom.julia {
     position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
     background-color: chartreuse;
 }
