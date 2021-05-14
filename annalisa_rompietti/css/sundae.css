@@ -1,0 +1,29 @@
+.top.annalisa{
+    /* background-image: url("https://e7.pngegg.com/pngimages/832/27/png-clipart-pinball-ball-bearing-ball-transfer-unit-steel-shot-slingshot-ammo-balls-ball-angle-bearing.png"); */
+    background-size: 0px;
+    position: relative;
+    background-repeat: no-repeat;
+    
+}
+
+#head{
+    position: relative;
+   size: 6cm;
+}
+
+
+
+.middle.annalisa{
+    background-image: url("https://st2.depositphotos.com/1526816/5687/v/600/depositphotos_56876431-stock-illustration-tree.jpg");
+    background-size: 500%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.bottom.annalisa{
+    background-image: url("https://i.pinimg.com/564x/14/00/a3/1400a3b5fe91b869b2a78985cde5f93e.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
