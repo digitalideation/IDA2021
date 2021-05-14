@@ -11,22 +11,25 @@ div {
     width: 100px;
 }
 
-
 .top.laura {
     background-color: rgb(0, 255, 128) ;
     border: blueviolet 5px;
     border-radius: 80px;
-    background-image: url(../images/giphy.gif);
+    background-image: url(../img/giphy.gif);
     background-size: cover;
-
 
 }
 
 .middle.laura {
     background-color: rgb(54, 46, 179);
     border-radius: 100px;
+    background-image: url(https://media.giphy.com/media/42D6A6kwVwTyVLAfI9/giphy.gif);
+    background-size: cover;
 }
 
 .bottom.laura {
     background-color: rgb(183, 0, 255);
+    border-radius: 100px;
+    background-image: url(https://media.giphy.com/media/vrcoalzSZ7ivu/giphy.gif);
+    background-size: cover;
 }
