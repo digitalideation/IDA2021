@@ -72,6 +72,12 @@ a:hover {
     font-style: italic;
 }
 
+a.now{ 
+  font-weight: 600;
+  font-style: italic;
+  color: #c4a5a6;
+}
+
 a.navi {
     color:#ccc7c2;
     text-decoration: none;

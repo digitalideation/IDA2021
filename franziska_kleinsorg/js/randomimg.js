@@ -14,6 +14,22 @@ images[9] = "../img/DSC04199.JPG";
 images[10] = "../img/DSC04164.JPG";
 images[11] = "../img/DSC03998.JPG";
 images[12] = "../img/DSC03991.JPG";
+images[13] = "../img/DSC04467.JPG";
+images[14] = "../img/30072018_050.JPG";
+images[15] = "../img/03082018_125a.JPG";
+images[16] = "../img/02082018_327.JPG";
+images[17] = "../img/02082018_316.JPG";
+images[18] = "../img/02082018_282.JPG";
+images[19] = "../img/DSC05464.JPG";
+images[20] = "../img/DSC05041.JPG";
+images[21] = "../img/DSC04811.JPG";
+images[22] = "../img/DSC04703.JPG";
+images[23] = "../img/DSC04625.JPG";
+images[24] = "../img/DSC04609.JPG";
+images[25] = "../img/31072018_198.JPG";
+images[26] = "../img/IMG-20180806-WA0022.jpg";
+images[27] = "../img/IMG_20180805_215538.jpg";
+
 
 
 
