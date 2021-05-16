@@ -70,4 +70,170 @@
         font-family: "Skyline";
         font-size: 40px;
         text-align: center;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        padding-bottom: 3rem;
+        margin-bottom: 6rem;
     }
+
+        .robot {
+            border: 0px solid #de9c9c;
+            padding: 1rem;
+   
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+
+            background-image: url(https://i.pinimg.com/originals/f5/f3/27/f5f327dc0b3619d95f20eba2d71aec78.gif);
+            /* background-image: url(https://i.pinimg.com/originals/13/7b/26/137b2650381f68239e643ed58dfc8777.gif); */
+            background-size: 110%;
+        }
+
+         .head{
+          position: absolute;
+          width: 120px;
+          height: 100px;
+          top: 70px;
+          justify-content: center;
+          display: flex;
+
+          background-image: url(../process/img/1_Random.svg);
+          background-size:100%;
+          background-position-x: center;
+          background-position-y: center;
+          background-repeat: none;
+
+          transition-timing-function: ease-in-out;
+          transition-duration: 1s;
+        }
+
+        .leg{
+          border: 3px solid #000000;
+          background-color: black;
+          position: absolute;
+          width: 30px;
+          height: 120px;
+          bottom: 0;
+        }
+
+        .leg--left{
+          left: 155px;
+        }
+        .leg--right{
+          right: 155px;
+        }
+
+         .body{
+          border: 3px solid #000000;
+          position: absolute;
+           width: 130px;
+          height: 130px;
+          top: 170px;
+
+           background-color: black;
+        }
+
+       
+
+         .arm{
+           border: 3px solid #000000;
+          position: absolute;
+          width: 30px;
+          height: 130px;
+
+          background-color: black;
+         
+        }
+
+        .arm--left{
+          left: 112px;
+          top: 170px;
+          border-top-left-radius: 60%;
+
+          transition-timing-function: ease-in-out;
+          transition-duration: 1s;
+          transform-origin: top right;
+        }
+
+        .arm--right{
+          right: 112px;
+          top: 170px;
+          border-top-right-radius: 60%;
+
+          transition-timing-function: ease-in-out;
+          transition-duration: 1s;
+          transform-origin: top left;
+        }
+
+        .hand{
+          border: 3px solid #000000;
+          position:absolute;
+          width: 40px;
+          height: 20px;
+          bottom: 0;    
+          margin-bottom: -3px;   
+          
+          background-color: rgb(210, 94, 107);
+        }
+
+        .arm--left .hand{
+          right: 0;
+          margin-right: -3px;  
+        }
+         
+        .arm--right .hand{
+          left: 0;
+           margin-left: -3px;  
+        }
+
+
+        .foot{
+          border: 3px solid #000000;
+          position:absolute;
+          width: 50px;
+          height: 20px;
+          bottom: 0;  
+          margin-bottom: -3px;  
+          
+          background-color: rgb(210, 94, 107);
+        }
+
+        .leg--left .foot{
+          right: 0;
+          bottom: 0;
+           margin-right: -3px;  
+        }
+         
+        .leg--right .foot{
+          left: 0;
+          margin-left: -3px;  
+        }
+
+
+      
+
+        .head:hover{
+          top: 30px;
+          
+        }
+
+        .robot:hover .arm--left{
+          transform: rotate(90deg);
+          transform-origin: top right;
+          top: 189px;
+          left: 114px;
+        
+        }
+
+        .robot:hover .arm--right{
+          transform: rotate(-90deg);
+          transform-origin: top left;
+          top: 189px;
+          right: 114px;
+        
+
+        }
+
