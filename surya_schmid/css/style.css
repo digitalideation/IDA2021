@@ -1,14 +1,19 @@
-
-    
-    @font-face {
+  @font-face {
       font-family: Skyline;
-      src: url(../process/img/NewParisEDUSkyline-Regular.otf);
+      src: url(../img/NewParisEDUSkyline-Regular.otf);
     }
 
-    body{
+    h1{
         font-family: "Skyline";
+        font-size: 80px;
+        text-align: center;
+        
+    } 
+    p{
+        font-family: "Skyline";
+        font-size: 40px;
+        text-align: center;
     }
-    
 
     nav{
         border-bottom: 1px solid rgb(0, 0, 0);
@@ -60,17 +65,19 @@
     }
 
 
-
-     h1{
-        font-family: "Skyline";
-        font-size: 80px;
-        text-align: center;
-    } 
-    p{
-        font-family: "Skyline";
-        font-size: 40px;
-        text-align: center;
+    .process{
+        /* background-color: blanchedalmond; */
         border-bottom: 1px solid rgb(0, 0, 0);
-        padding-bottom: 3rem;
-        margin-bottom: 6rem;
+        border-top: 1px solid rgb(0, 0, 0);
+        height: 20rem;
+        width: 100%;
+        margin-bottom: 1rem;
     }
+
+    .process2:hover{
+        background-color: rgb(0, 0, 0);
+    }
+
+    
+
+    
