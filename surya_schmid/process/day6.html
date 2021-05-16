@@ -1,188 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        
-/* * {
-    border: 1px solid black;
-} */
-
-        body {  
-            display: flex;
-            margin: 0;
-            position: relative;
-            background-image: linear-gradient(pink, rgb(169, 224, 255) );
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-          
-        }
-
-        section{
-            position: relative;;
-            width: 50%;
-           
-        }   
-
-        img{
-        /*padding-bottom: 50px;
-        padding-left: 50px;*/
-        display: block;
-        size: cover;
-        width: 100%;
-        margin: 0.5rem;
- 
-    }
-
-        
-
-    
-        .left{
-            position: fixed;
-            width:50%;
-            margin: -0.5rem;
-            height: 100%;
-            z-index: 2;
-        }
-
-        .right{
-            position: relative;
-            /*float: right;*/
-            left: 50%;
-            box-sizing: inherit;
-            width:45%;
-            padding:1rem;
-         
-        }
-
-        section.r1{
-            position: relative;
-            /*float: right;*/
-            top: 0px;
-            box-sizing: inherit;
-            width:47%;
-            float:left;
-            margin: 0.5rem;
-        }
-
-        section.r2{
-            float:left;
-            left: 0%;
-            top: 0px;
-            margin: 0.5rem;
-            width: 47%;
-
-        }
-    
-
-        figcaption {
-            position:absolute;
-            color: white;
-            background-color: rgb(0,0,0,0.6);
-            bottom:0rem;
-            left: 0rem;
-            padding-bottom: 1rem;
-            padding-top: 1rem;
-            width: 100%;
-            text-align: center;
-        }
-
-        span{
-            width: 100%;
-            padding: 1rem;
-            padding-bottom: 1rem;
-        }
-
-        header{
-            
-            position: fixed;    
-            background-color:white;
-            padding: 1rem;
-        
-            padding-left: 3rem;
-            opacity: 1;
-            height: 0.5rem;
-            width: 100%;
-            z-index: 1;
-            text-align: right;
-            align-items: center;
-            
-        }
-
-        a{
-        
-            text-decoration: none;
-            color: black;
-            padding: 0.8rem;
-            margin-right: 5.5rem;
-            padding-bottom: 0.3rem;
-            margin-top: 0; 
-            padding-top: 1rem;
-        }
-
-        a:hover{
-            background-color: pink;
-            color: white;
-        }
-
-    
-        
-    </style>
-
-
     <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "Text";
+            src: url("img/NewParisEDUText-Regular.otf");
 
-</head> 
+        }
+
+        @font-face {
+            font-family: "Skyline";
+            src: url("img/NewParisEDUSkyline-Regular.otf");
+        }
+
+
+        * {
+            border: 0px solid black;
+            
+        }
+
+
+        body {
+            border: 0px solid seagreen;
+            color: black;
+            padding: 0rem;
+            margin: 0;
+             /* background-image: linear-gradient(to bottom, navy, deepskyblue);
+            height: 700px; */
+        }
+         
+        .footer {
+            font-size: 0.8rem;
+            font-family: 'EuclidLight';
+            width: 100vw;
+            height: 1vw;
+            background-color: rgb(169, 231, 224);
+            padding-top: 1vh;
+            padding-left: 1vh;
+            position: fixed;
+            
+        }
+
+        div{
+             size: 100%;
+             height: 80%;
+             margin: 0rem;
+             padding: 0rem;
+             padding-bottom: 10rem;
+             border: 0px solid rgb(0, 0, 0);
+            
+             
+        }
+
+        .div1{
+            background-color: white;
+            color: black;
+            padding-top: 5rem;        }
+
+        .div2{
+            padding: 5rem;
+            padding-left: 0;
+            background-image: linear-gradient(to bottom, rgb(255, 0, 187), rgb(8, 1, 209))
+        }
+        header{
+            border-bottom: 2px solid rgb(0, 0, 0);
+            position: relative;
+            background-color: rgb(255, 255, 255);
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            font-family:Helvetica, sans-serif;
+            color: black;
+            font-size: 0.8rem;
+            padding: 0.5rem;
+            text-decoration: none;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+        }
+
+        main{
+            color: white;
+            border: 0px solid blue;
+            position: relative;
+            height: 70vw;
+            padding: 0;
+    
+        }
+      
+        li {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+
+        }
+
+      
+
+        p {
+            font-family: "Skyline";
+            font-size: 8vw;
+            line-height:0.9;
+            margin: 4rem;
+            margin-top: 4rem;
+            position: relative;
+
+            
+        }
+
+
+
+      span{
+          font-family: "Text";
+          font-size: 20vw;
+          text-transform: uppercase;
+          line-height: 1;
+          display: inline-block;
+
+          transition-duration: 0.5s;
+          transition-timing-function: ease-in-out;
+
+      }
+    
+        
+        p:hover .begun{
+        letter-spacing: 30px;
+    }
+       
+
+
+        a:visited {
+            color: black;
+        }
+
+
+        a:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            opacity: 100%;
+
+        }
+
+
+
+        a:focus {
+            border: green;
+        }
+
+        a:active {
+            color: indianred;
+        }
+
+     
+      
+    </style>
+</head>
+
 <body>
 
     <header>
-    <a href="index.html">Back</a>
-       
+
+        <li><a href="index.html">Process</a></li>
+        <li><a href="../robotworld.html">Robotworld</a></li>
+        <li class="youtube"><a href="https://www.youtube.com/watch?v=CRuOOxF-ENQ&list=RDCRuOOxF-ENQ&start_radio=1">Youtube - Joel Corry x MNEK</a></li>
+
+
     </header>
+
+
+    <main>
+
+
+        <div class="songtext">
+            
+            <div class="div1">
+            <p>
+                Oh my <br><span class="god">God</span><br> oh my God
+            </p>
+            </div>
+
+            <div class="div2">
+            <p>
+                This feeling's just <span class="begun">begun</span> 
+            </p>
+            </div>
+
+            <div class="div2">
+            <p>
+                I'm saying things I've <span>never</span> said
+            
+            </p>
+            </div>
+
+            <div class="div2">
+            <p>
+                Doing things I've <span>never</span> done
+            </p>
+            </div>
+        
+            <div class="div1">
+            <p>
+                Oh my <br><span>God</span><br> oh my God
+            </p>
+            </div>
+
+            <div class="div1">
+            <p>
+                When I see you i should <span>run</span>
+            </p>
+            </div>
+
+            <div class="div2">
+            <p>
+                But I'm <span>frozen</span> in motion
+            </p>
+            </div>
+
+            <div class="div1">
+            <p>
+                And my head tells me to <span>stop</span>
+            </p>
+            </div>
     
-    <section class="left">
-        
-       
-           <img src="https://i.pinimg.com/564x/e8/6a/42/e86a42b7445aadd6e022e1f1297f67d6.jpg" alt="" class=" bild1">
-            <figcaption> <span>
-                Head & Heart – Joel Corry x MNEK
-            </span></figcaption>
-       
-
-        
-    </section>
-
-    <section class="right">
-        
-      
-
-        <section class="r1">           
-          
+            <!-- <p class="p5">
+                Feeling feelings I feel about us<br>
+                Try to fight it but it's never enough
                 
-                <img src="https://i.pinimg.com/564x/d8/fc/f6/d8fcf6b71e26f5967c5a9cf53c993402.jpg" alt="">
-                <img src="https://i.pinimg.com/564x/c5/91/14/c59114fca2439f950d44f9f3e0c6026c.jpg" alt="" class="bild2">
-                <img src="img/ac611814328e6d2d7c6f643cf6f88836.jpeg">
-                <img src="https://i.pinimg.com/564x/f7/ab/05/f7ab0500d046b3ada8fd827933f494c3.jpg" alt="">
-                <img src="img/d645643d67d08dd488b4d680446e7671.jpeg" alt="">
-        </section>
+                My heart is certain<br>
+                It's more than a crush<br>
+                'Cause I'm frozen in motion<br>
+                And my head tells me to stop
+            </p>
+            
+            <p class="p6">
+                But my heart goes<br>
+                Bum bum bum da bum bum, bum bum bum da bum<br>
+                Bum bum bum da bum bum, bum bum bum da bum<br>
+                'Cause my heart goes<br>
+                Bum bum bum da bum bum, bum bum bum da bum<br>
+                Bum bum bum da bum bum, bum bum bum da bum
+
+                <span class="locationText"></span>
+        
+            </p> -->
+
+        </div>
+
+    
 
 
-        <section class="r2">
-                
-                
-                <img src="img/74f25a29e7cd69a7020e389dea4f6ce9.jpeg">
-                <img src="img/582d46f58f754c38595ba6c19519b0b9.jpeg" alt="">
-                <img src="https://i.pinimg.com/564x/11/50/2e/11502e04a1f4f37ac2af30bcb646bf2c.jpg" alt="">
-                <img src="https://i.pinimg.com/564x/90/57/c5/9057c50a07f705a775c1f062883b9d0b.jpg" alt="">
-                <img src="img/b4f60dc625d07693173490673a1217e9.jpeg">
-        </section>
-
-    </section>
+    </main>
 
 
-
+    <footer>
+        <p class="footer">&copy; 2021 Surya Schmid</p>
+    </footer>
 
 
 
