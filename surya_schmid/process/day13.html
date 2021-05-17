@@ -5,240 +5,213 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDA Modul - Surya Schmid</title>
+    <title>Document</title>
+
     <style>
-        * {
-            box-sizing: border-box;
+
+        @font-face {
+            font-family: 'brr';
+            src: url(img/EuclidCircularBEDU-Medium.otf);
+        }
+        :root {
+            --tile: 40px;
+            --radius: 50%;
         }
 
-        nav {
-            position: absolute;
-            left: 2rem;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        div {
-            background-color: white;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            width: 100vw;
-            height: 100vw;
-        }
-
-
-        .robot {
-            border: 1px solid #de9c9c;
-            padding: 1rem;
-
-            position: absolute;
-            width: 300px;
-            height: 400px;
+        BODY {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 40px;
-
+            min-height: 100vh;
         }
 
-        .head {
-            border: 0px solid #000000;
-            position: absolute;
-            width: 150px;
-            height: 100px;
-            top: 70px;
-            justify-content: center;
+        div{
+            position: relative;
             display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .glass {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        .glass+.glass {
+            margin-left: 1rem;
+        }
+
+        .glass:after,
+        .glass:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+            transition: -webkit-mask-size 0.75s;
+            transition: mask-size 0.75s;
+            transition: mask-size 0.75s, -webkit-mask-size 0.75s;
+            transition-property: background-position, -webkit-mask-size;
+            transition-property: mask-size, background-position;
+            transition-property: mask-size, background-position, -webkit-mask-size;
+        }
+
+        .glass--1,
+        .glass--1:after,
+        .glass--1:before {
+            background: url(https://i.pinimg.com/564x/95/5f/3a/955f3ac9a83107ec4cc8c3b7df721114.jpg);
+            background-size: 110% 110%;
+        }
+
+        .glass--1:after,
+        .glass--1:before {
+            -webkit-mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            -webkit-mask-size: var(--tile) var(--tile);
+            mask-size: var(--tile) var(--tile);
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+        }
+
+        .glass--1:after {
+            background-position: -0.5vw -0.5vw;
+            -webkit-mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+        }
+
+        .glass--1:hover:before,
+        .glass--1:hover:after {
+            --tile: 100px;
+            -webkit-mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+            mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+        }
+
+        .glass--1:hover:after {
+            background-position: -1vw -1vw;
+        }
+
+        .glass--2,
+        .glass--2:after,
+        .glass--2:before {
+            background: url(https://i.pinimg.com/564x/45/57/87/455787a20196ff83bddb9d3fadf6ee05.jpg);
+            background-size: 110% 110%;
+        }
+
+        .glass--2:after,
+        .glass--2:before {
+            -webkit-mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            -webkit-mask-size: var(--tile) var(--tile);
+            mask-size: var(--tile) var(--tile);
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+        }
+
+        .glass--2:after {
+            background-position: -0.5vw -0.5vw;
+            -webkit-mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+        }
+
+        .glass--2:hover:before,
+        .glass--2:hover:after {
+            --tile: 100px;
+            -webkit-mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+            mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+        }
+
+        .glass--2:hover:after {
+            background-position: -1vw -1vw;
+        }
+
+
+        div:hover{
+            animation: hover;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1s ;
+            animation-delay: 1s;
+        }
+
+        @keyframes hover{
+            0%{
+                transform: rotate(0deg);
+            }
             
-            background-image: url(img/tv_head_Zeichenfläche\ 1.svg);
-            background-size: 80%;
-            background-position-x: center;
-            background-position-y: center;
-
-            transition-timing-function: ease-in-out;
-            transition-duration: 1s;
-
+            100%{
+                transform: rotate(360deg);
+            }
         }
 
+   
 
-        .tv {
-            border: 0px solid #000000;
-            position: absolute;
-            width: 80px;
-            height: 60px;
-            background-color: rgba(255, 255, 255, 0);
+        /* 
+.glass--2, .glass--2:after, .glass--2:before {
+  background: url(https://i.pinimg.com/564x/45/57/87/455787a20196ff83bddb9d3fadf6ee05.jpg);
+  background-size: 110% 110%;
+}
+.glass--2:after, .glass--2:before {
+  -webkit-mask-image: repeating-radial-gradient(white, white 1em, transparent 0, transparent 2em);
+          mask-image: repeating-radial-gradient(white, white 1em, transparent 0, transparent 2em);
+  -webkit-mask-size: var(--radius) var(--radius);
+          mask-size: var(--radius) var(--radius);
+  -webkit-mask-position: 50% 50%;
+          mask-position: 50% 50%;
+}
+.glass--2:after {
+  background-position: -0.5vw -0.5vw;
+  background-position: -1vw -1vw;
+  -webkit-mask-image: repeating-radial-gradient(transparent, transparent 1em, white 0, white 2em);
+          mask-image: repeating-radial-gradient(transparent, transparent 1em, white 0, white 2em);
+}
+.glass--2:hover:before, .glass--2:hover:after {
+  --radius: 70%;
+}
+.glass--2:hover:after {
+  background-position: -0.5vw -0.5vw;
+} */
 
-        }
+figcaption{
+    font-family: "brr";
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    text-transform: uppercase;
+    width: 450px;
+    left: 0.2rem;
+    bottom: 0.2rem;
+}
 
-        img {
-            padding: 0px;
-            width: cover;
-        }
+div:hover .fig1{
+    letter-spacing: 50px;
 
-        .leg {
-            border: 3px solid #000000;
-            position: absolute;
-            width: 30px;
-            height: 120px;
-            bottom: 0;
-        }
+     -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  
+}
+div:hover .fig2{
+    letter-spacing: 41px;
 
-        .leg--left {
-            left: 105px;
-        }
-
-        .leg--right {
-            right: 105px;
-        }
-
-        .body {
-            border: 3px solid #000000;
-            position: absolute;
-            width: 120px;
-            height: 111px;
-            top: 170px;
-        }
-
-
-
-        .arm {
-            border: 3px solid #000000;
-            position: absolute;
-            width: 30px;
-            height: 130px;
-
-        }
-
-        .arm--left {
-            left: 62px;
-            top: 170px;
-
-            transition-timing-function: ease-in-out;
-            transition-duration: 1s;
-            transform-origin: top right;
-        }
-
-        .arm--right {
-            right: 62px;
-            top: 170px;
-
-            transition-timing-function: ease-in-out;
-            transition-duration: 1s;
-            transform-origin: top right;
-        }
-
-        .hand {
-            border: 3px solid #000000;
-            position: absolute;
-            width: 40px;
-            height: 20px;
-            bottom: 0;
-            margin-bottom: -3px;
-        }
-
-        .arm--left .hand {
-            right: 0;
-            margin-right: -3px;
-        }
-
-        .arm--right .hand {
-            left: 0;
-            margin-left: -3px;
-        }
-
-
-        .foot {
-            border: 3px solid #000000;
-            position: absolute;
-            width: 50px;
-            height: 20px;
-            bottom: 0;
-            margin-bottom: -3px;
-        }
-
-        .leg--left .foot {
-            right: 0;
-            bottom: 0;
-            margin-right: -3px;
-        }
-
-        .leg--right .foot {
-            left: 0;
-            margin-left: -3px;
-        }
-
-
-
-
-        .head:hover {
-            top: 30px;
-
-        }
-
-        
-
-        .robot:hover .arm--left {
-            transform: rotate(90deg);
-            transform-origin: top right;
-            top: 200px;
-
-        }
-
-        .robot:hover .arm--right {
-            transform: rotate(-90deg);
-            transform-origin: top left;
-            top: 200px;
-
-
-        }
-
-
-        a {
-
-            text-decoration: none;
-            color: black;
-            padding: 0.8rem;
-            margin-right: 5.5rem;
-            padding-bottom: 0.3rem;
-            margin-top: 0;
-            padding-top: 1rem;
-        }
-
-        a:hover {
-            background-color: rgb(0, 0, 0);
-            color: white;
-        }
+     -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
     </style>
 </head>
 
 <body>
-    <nav>
-        <a href="index.html">Back</a>
-    </nav>
 
-    <div class="robot">
-        <div class="leg leg--left">
-            <div class="foot"></div>
-        </div>
-        <div class="leg leg--right">
-            <div class="foot"></div>
-        </div>
-        <div class="body"></div>
-        <div class="head">
-            <div class="eye eye--left"></div>
-            <div class="eye eye--right"></div>
-            <div class="nose"></div>
-            <div class="mouth"></div>
-        </div>
-        <div class="arm arm--left">
-            <div class="hand"></div>
-        </div>
-        <div class="arm arm--right">
-            <div class="hand"></div>
-        </div>
+    <div class="glass glass--1">
+        <figcaption class="fig1">My head</figcaption>
     </div>
+    <div class="glass glass--2">
+        <figcaption class="fig2">My heart</figcaption>
+    </div>
+
 
 </body>
 
