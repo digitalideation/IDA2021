@@ -1,0 +1,38 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+article {
+    position: relative;
+    background-color: lightskyblue;
+    top: 0px;
+    left: 0px;
+    min-height: 80vh;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ease-in-out 1s;
+}
+
+article header {
+    font-size: 1rem;
+    transition: all 3s ease-in-out 1s;
+}
+
+
+/*
+Der Trick ist nun, dass was vorher über hover animiert wurde, über die neue Klasse auszulösen
+Statt:
+article:hover {
+    background-color: rgb(189, 202, 130);
+}
+*/
+
+article.myclass {
+    background-color: rgb(189, 202, 130);
+}
+
+article.myclass header {
+    font-size: 2rem;
+}
