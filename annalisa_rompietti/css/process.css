@@ -3,15 +3,30 @@ body {
     background-color: blueviolet;
 }
 
+.allbobles{
+    margin-left: 500px;
+    width: 500px;
+ 
+}
+/* g{
+    display: flex;
+    justify-content: center;
+} */
+
 .boble{
-   width: 600px; 
+
+width: 100%;
+height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+ z-index: -1;
+    top: 0;
 }
 
-div .boble{
-display: block;
-position: relative;
-left: 550px;
+text{
+    z-index: 1;
 }
+
 
 h1 {
     color: #FF0066;
@@ -20,3 +35,10 @@ h1 {
     top: 50px;
 }
 
+#Day1{
+color: black;
+}
+*a{
+    position: relative;
+    z-index: 4;
+}
