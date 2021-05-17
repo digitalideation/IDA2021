@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        @font-face {
+            font-family: 'brr';
+            src: url(img/EuclidCircularBEDU-Medium.otf);
+        }
+        :root {
+            --tile: 40px;
+            --radius: 50%;
+        }
+
+        BODY {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        div{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .glass {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        .glass+.glass {
+            margin-left: 1rem;
+        }
+
+        .glass:after,
+        .glass:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+            transition: -webkit-mask-size 0.75s;
+            transition: mask-size 0.75s;
+            transition: mask-size 0.75s, -webkit-mask-size 0.75s;
+            transition-property: background-position, -webkit-mask-size;
+            transition-property: mask-size, background-position;
+            transition-property: mask-size, background-position, -webkit-mask-size;
+        }
+
+        .glass--1,
+        .glass--1:after,
+        .glass--1:before {
+            background: url(https://i.pinimg.com/564x/45/57/87/455787a20196ff83bddb9d3fadf6ee05.jpg);
+            background-size: 110% 110%;
+        }
+
+        .glass--1:after,
+        .glass--1:before {
+            -webkit-mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            -webkit-mask-size: var(--tile) var(--tile);
+            mask-size: var(--tile) var(--tile);
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+        }
+
+        .glass--1:after {
+            background-position: -0.5vw -0.5vw;
+            -webkit-mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+        }
+
+        .glass--1:hover:before,
+        .glass--1:hover:after {
+            --tile: 100px;
+            -webkit-mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+            mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+        }
+
+        .glass--1:hover:after {
+            background-position: -1vw -1vw;
+        }
+
+        .glass--2,
+        .glass--2:after,
+        .glass--2:before {
+            background: url(https://i.pinimg.com/564x/95/5f/3a/955f3ac9a83107ec4cc8c3b7df721114.jpg);
+            background-size: 110% 110%;
+        }
+
+        .glass--2:after,
+        .glass--2:before {
+            -webkit-mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            -webkit-mask-size: var(--tile) var(--tile);
+            mask-size: var(--tile) var(--tile);
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+        }
+
+        .glass--2:after {
+            background-position: -0.5vw -0.5vw;
+            -webkit-mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+        }
+
+        .glass--2:hover:before,
+        .glass--2:hover:after {
+            --tile: 100px;
+            -webkit-mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+            mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+        }
+
+        .glass--2:hover:after {
+            background-position: -1vw -1vw;
+        }
+
+
+        div:hover{
+            animation: hover;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1s ;
+            animation-delay: 1s;
+        }
+
+        @keyframes hover{
+            0%{
+                transform: rotate(0deg);
+            }
+            
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+   
+
+        /* 
+.glass--2, .glass--2:after, .glass--2:before {
+  background: url(https://i.pinimg.com/564x/45/57/87/455787a20196ff83bddb9d3fadf6ee05.jpg);
+  background-size: 110% 110%;
+}
+.glass--2:after, .glass--2:before {
+  -webkit-mask-image: repeating-radial-gradient(white, white 1em, transparent 0, transparent 2em);
+          mask-image: repeating-radial-gradient(white, white 1em, transparent 0, transparent 2em);
+  -webkit-mask-size: var(--radius) var(--radius);
+          mask-size: var(--radius) var(--radius);
+  -webkit-mask-position: 50% 50%;
+          mask-position: 50% 50%;
+}
+.glass--2:after {
+  background-position: -0.5vw -0.5vw;
+  background-position: -1vw -1vw;
+  -webkit-mask-image: repeating-radial-gradient(transparent, transparent 1em, white 0, white 2em);
+          mask-image: repeating-radial-gradient(transparent, transparent 1em, white 0, white 2em);
+}
+.glass--2:hover:before, .glass--2:hover:after {
+  --radius: 70%;
+}
+.glass--2:hover:after {
+  background-position: -0.5vw -0.5vw;
+} */
+
+figcaption{
+    font-family: "brr";
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    text-transform: uppercase;
+    width: 450px;
+    left: 0.2rem;
+    bottom: 0.2rem;
+}
+
+div:hover .fig1{
+    letter-spacing: 50px;
+
+     -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  
+}
+div:hover .fig2{
+    letter-spacing: 41px;
+
+     -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="glass glass--1">
+        <figcaption class="fig1">My head</figcaption>
+    </div>
+    <div class="glass glass--2">
+        <figcaption class="fig2">My heart</figcaption>
+    </div>
+
+
+</body>
+
+</html>

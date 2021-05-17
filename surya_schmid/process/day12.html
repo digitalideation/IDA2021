@@ -1,0 +1,88 @@
+<!-- day15 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/sundae.css">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vw;
+
+        }
+    
+    div {
+
+        width: 200px;
+        height: 200px;
+    }
+        
+
+
+.top_surya{
+    margin-top: 4rem;
+    
+    background-color: rgb(207, 0, 179);
+    background-image: url(../process/img/patternKreis_Zeichenfläche\ 1.svg);
+    background-repeat: none;
+    background-size: 150%;
+    
+    width: 210px;
+    height: 100px;
+    margin-bottom: 1rem;
+
+    border-radius: 100% 100% 0 0 / 170% 170% 0 0;
+}
+  
+.middle_surya{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,57,121,1) 35%, rgba(0,212,255,1) 100%);
+    
+    border: pink dotted 5px;
+    margin-bottom: 1rem;
+   
+}
+
+
+
+.bottom_surya{
+    background-color: blue;
+    background-image: url(https://i.pinimg.com/564x/ff/c4/9f/ffc49fe77281ba0a4662e6f2eea9bf47.jpg);
+    transform: rotate(30deg);
+
+    border: 1px solid rgb(144, 142, 112) ;
+    border-radius: 35%;
+
+    animation: rotate 40s linear infinite;
+    transition-property: all;
+
+}
+
+
+@keyframes rotate {
+0%{
+    transform: rotate(0deg);
+}
+
+100%{
+    transform: rotate(360deg);
+}
+}
+    </style>
+
+</head>
+<body>
+    
+    <div class="top_surya"></div>
+    <div class="middle_surya"></div>
+    <div class="bottom_surya"></div>
+</body>
+</html>

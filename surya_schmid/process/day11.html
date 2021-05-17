@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <style>
+        @font-face {
+            font-family: "Skyline";
+            src: url(img/NewParisEDUSkyline-Regular.otf);
+        }
+
+
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: "Skyline" ;
+            overflow: hidden;
+
+        }
+
+        #cursor{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            /* border: 2px solid #000; */
+            background-color: black;
+            box-sizing: border-box;
+            transition: 0.1s;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            cursor: none;
+            z-index: 3;
+
+            mix-blend-mode: difference;
+            
+        }
+
+        h2{
+            font-size: 150px;
+            color:  #ff1f8f;
+            text-transform: uppercase;
+             
+            text-shadow:
+                                    10px 10px #000000;
+        }
+
+        h2:hover ~ #cursor{
+            width: 100px;
+            height: 100px;
+            border: dashed 5px black;
+            background-color: transparent;
+            z-index: 5;
+
+            animation: animate 5s linear infinite;
+        }
+
+        
+
+
+        @keyframes animate
+        {
+            0%
+            {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+             100%
+            {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+
+
+       .cls-1 {
+            animation: rotate 5s linear infinite;
+            transition-property: all;
+            transform-origin: center;
+        }
+
+        @keyframes rotate {
+            0%{
+                transform: translate(-0.5%, -0.9%);
+            }
+            /* 25%{
+                transform: translate(0%, -2%);
+            } */
+            50%{
+                transform: translate(0%, 0%);
+            }
+            /* 75%{
+                transform: translate(0%, 2%);
+            } */
+            
+            100%{
+               transform: translate(-0.5%, -0.9%);
+            }
+        }
+
+
+
+       .cls-2{
+
+            animation: blub 5s linear infinite;
+        }
+
+
+        @keyframes blub {
+        /* from {fill: #fceb23}
+        to { fill: rgba(43, 0, 255, 0.649)} */
+
+            0%{
+                fill: #fceb23
+            }
+
+            50% {
+                fill: rgba(43, 0, 255, 0.649)
+            }
+            100%{
+                fill: #fceb23
+            }
+        }
+
+        .blub {
+        animation-duration: 5s;
+        animation-name: blub;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        }
+                
+        
+        #Ebene_1 {
+            position: absolute;
+            z-index: -2;
+
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .second{
+            transform: scaleY(-1);
+        }
+
+        .blob{
+            position: absolute;
+            width: 700px;
+            opacity: 0.5;
+            z-index: -1;
+
+            animation: blob 5s linear infinite;
+      
+        }
+
+        @keyframes blob {
+           0%{
+               transform: rotate(0deg);
+               
+           }
+
+           50%{
+               transform: rotate(180deg);
+               
+           }
+           100%{
+               transform: rotate(360deg);
+               
+           }
+        }
+
+
+
+        .element.style{
+            opacity: 0;
+            transform: matrix(0, 0, 0, 0, 1062, 896);
+        }
+
+        #cursor-follower{
+            mix-blend-mode: difference;
+        }
+
+        #cursor-follower{
+            position: fixed;
+            top: -30px;
+            left: -30px;
+            width: 60px;
+            height: 60px;
+            pointer-events: none;
+            z-index: 3;
+        }
+    </style>
+   
+    <title>SVG</title>
+</head>
+<body>
+
+    <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+        <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+    </span>
+
+    <h2>This feeling <br> just begun</h2>
+    <div id="cursor"></div>
+
+    <div class="blob">
+        <img src="img/blob.svg" alt="blob">
+    </div>
+    
+    <script type="text/javascript">
+        var cursor = document.getElementById(
+            'cursor');
+        document.addEventListener ('mousemove' , function(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.left = x+ "px";
+            cursor.style.top = y + "px";
+        });
+
+
+        var s = Snap();
+
+            var circ = s.circle(50, 50, 40);
+            circ.attr({
+                fill: "red"
+            });
+
+            circ.animate({
+                r: 150
+            }, 2000, mina.easein);
+
+
+
+            // function animate() {
+            //        0
+            //     }
+
+            //     setInterval(animate, 1000);
+
+            // function animate() {
+            //         setTimeout(animate, 500);
+            //         // Berechnen
+            //     }
+            //     animate();
+    </script>
+
+
+    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260.62 791.01"><defs><style>.cls-1{fill:#1d1d1b;}.cls-2{fill:#fceb23;}</style></defs><circle class="cls-1" cx="69.27" cy="27.01" r="19.48"/><circle class="cls-1" cx="156.08" cy="27.01" r="19.48"/><circle class="cls-1" cx="242.88" cy="27.01" r="19.48"/><circle class="cls-1" cx="329.69" cy="27.01" r="19.48"/><circle class="cls-1" cx="416.5" cy="27.01" r="19.48"/><circle class="cls-1" cx="503.3" cy="27.01" r="19.48"/><circle class="cls-1" cx="590.11" cy="27.01" r="19.48"/><circle class="cls-1" cx="676.91" cy="27.01" r="19.48"/><circle class="cls-1" cx="763.72" cy="27.01" r="19.48"/><circle class="cls-1" cx="850.52" cy="27.01" r="19.48"/><circle class="cls-1" cx="937.33" cy="27.01" r="19.48"/><circle class="cls-1" cx="1024.13" cy="27.01" r="19.48"/><circle class="cls-1" cx="1110.94" cy="27.01" r="19.48"/><circle class="cls-1" cx="1197.75" cy="27.01" r="19.48"/><circle class="cls-1" cx="112.68" cy="87.66" r="19.48"/><circle class="cls-1" cx="25.87" cy="87.66" r="19.48"/><circle class="cls-1" cx="199.48" cy="87.66" r="19.48"/><circle class="cls-1" cx="286.29" cy="87.66" r="19.48"/><circle class="cls-1" cx="373.09" cy="87.66" r="19.48"/><circle class="cls-1" cx="459.9" cy="87.66" r="19.48"/><circle class="cls-1" cx="546.7" cy="87.66" r="19.48"/><circle class="cls-1" cx="633.51" cy="87.66" r="19.48"/><circle class="cls-1" cx="720.31" cy="87.66" r="19.48"/><circle class="cls-1" cx="807.12" cy="87.66" r="19.48"/><circle class="cls-1" cx="893.93" cy="87.66" r="19.48"/><circle class="cls-1" cx="980.73" cy="87.66" r="19.48"/><circle class="cls-1" cx="1067.54" cy="87.66" r="19.48"/><circle class="cls-1" cx="1154.34" cy="87.66" r="19.48"/><circle class="cls-1" cx="1241.15" cy="87.66" r="19.48"/><circle class="cls-1" cx="69.27" cy="151.1" r="19.48"/><circle class="cls-1" cx="156.08" cy="151.1" r="19.48"/><circle class="cls-1" cx="242.88" cy="151.1" r="19.48"/><circle class="cls-1" cx="329.69" cy="151.1" r="19.48"/><circle class="cls-1" cx="416.5" cy="151.1" r="19.48"/><circle class="cls-1" cx="503.3" cy="151.1" r="19.48"/><circle class="cls-1" cx="590.11" cy="151.1" r="19.48"/><circle class="cls-1" cx="676.91" cy="151.1" r="19.48"/><circle class="cls-1" cx="763.72" cy="151.1" r="19.48"/><circle class="cls-1" cx="850.52" cy="151.1" r="19.48"/><circle class="cls-1" cx="937.33" cy="151.1" r="19.48"/><circle class="cls-1" cx="1024.13" cy="151.1" r="19.48"/><circle class="cls-1" cx="1110.94" cy="151.1" r="19.48"/><circle class="cls-1" cx="1197.75" cy="151.1" r="19.48"/><circle class="cls-1" cx="112.68" cy="211.75" r="19.48"/><circle class="cls-1" cx="25.87" cy="211.75" r="19.48"/><circle class="cls-1" cx="199.48" cy="211.75" r="19.48"/><circle class="cls-1" cx="286.29" cy="211.75" r="19.48"/><circle class="cls-1" cx="373.09" cy="211.75" r="19.48"/><circle class="cls-1" cx="459.9" cy="211.75" r="19.48"/><circle class="cls-1" cx="546.7" cy="211.75" r="19.48"/><circle class="cls-1" cx="633.51" cy="211.75" r="19.48"/><circle class="cls-1" cx="720.31" cy="211.75" r="19.48"/><circle class="cls-1" cx="807.12" cy="211.75" r="19.48"/><circle class="cls-1" cx="893.93" cy="211.75" r="19.48"/><circle class="cls-1" cx="980.73" cy="211.75" r="19.48"/><circle class="cls-1" cx="1067.54" cy="211.75" r="19.48"/><circle class="cls-1" cx="1154.34" cy="211.75" r="19.48"/><circle class="cls-1" cx="1241.15" cy="211.75" r="19.48"/><circle class="cls-1" cx="69.27" cy="275.19" r="19.48"/><circle class="cls-1" cx="156.08" cy="275.19" r="19.48"/><circle class="cls-1" cx="242.88" cy="275.19" r="19.48"/><circle class="cls-1" cx="329.69" cy="275.19" r="19.48"/><circle class="cls-1" cx="416.5" cy="275.19" r="19.48"/><circle class="cls-1" cx="503.3" cy="275.19" r="19.48"/><circle class="cls-1" cx="590.11" cy="275.19" r="19.48"/><circle class="cls-1" cx="676.91" cy="275.19" r="19.48"/><circle class="cls-1" cx="763.72" cy="275.19" r="19.48"/><circle class="cls-1" cx="850.52" cy="275.19" r="19.48"/><circle class="cls-1" cx="937.33" cy="275.19" r="19.48"/><circle class="cls-1" cx="1024.13" cy="275.19" r="19.48"/><circle class="cls-1" cx="1110.94" cy="275.19" r="19.48"/><circle class="cls-1" cx="1197.75" cy="275.19" r="19.48"/><circle class="cls-1" cx="112.68" cy="335.84" r="19.48"/><circle class="cls-1" cx="25.87" cy="335.84" r="19.48"/><circle class="cls-1" cx="199.48" cy="335.84" r="19.48"/><circle class="cls-1" cx="286.29" cy="335.84" r="19.48"/><circle class="cls-1" cx="373.09" cy="335.84" r="19.48"/><circle class="cls-1" cx="459.9" cy="335.84" r="19.48"/><circle class="cls-1" cx="546.7" cy="335.84" r="19.48"/><circle class="cls-1" cx="633.51" cy="335.84" r="19.48"/><circle class="cls-1" cx="720.31" cy="335.84" r="19.48"/><circle class="cls-1" cx="807.12" cy="335.84" r="19.48"/><circle class="cls-1" cx="893.93" cy="335.84" r="19.48"/><circle class="cls-1" cx="980.73" cy="335.84" r="19.48"/><circle class="cls-1" cx="1067.54" cy="335.84" r="19.48"/><circle class="cls-1" cx="1154.34" cy="335.84" r="19.48"/><circle class="cls-1" cx="1241.15" cy="335.84" r="19.48"/><circle class="cls-1" cx="69.27" cy="399.27" r="19.48"/><circle class="cls-1" cx="156.08" cy="399.27" r="19.48"/><circle class="cls-1" cx="242.88" cy="399.27" r="19.48"/><circle class="cls-1" cx="329.69" cy="399.27" r="19.48"/><circle class="cls-1" cx="416.5" cy="399.27" r="19.48"/><circle class="cls-1" cx="503.3" cy="399.27" r="19.48"/><circle class="cls-1" cx="590.11" cy="399.27" r="19.48"/><circle class="cls-1" cx="676.91" cy="399.27" r="19.48"/><circle class="cls-1" cx="763.72" cy="399.27" r="19.48"/><circle class="cls-1" cx="850.52" cy="399.27" r="19.48"/><circle class="cls-1" cx="937.33" cy="399.27" r="19.48"/><circle class="cls-1" cx="1024.13" cy="399.27" r="19.48"/><circle class="cls-1" cx="1110.94" cy="399.27" r="19.48"/><circle class="cls-1" cx="1197.75" cy="399.27" r="19.48"/><circle class="cls-1" cx="112.68" cy="459.93" r="19.48"/><circle class="cls-1" cx="25.87" cy="459.93" r="19.48"/><circle class="cls-1" cx="199.48" cy="459.93" r="19.48"/><circle class="cls-1" cx="286.29" cy="459.93" r="19.48"/><circle class="cls-1" cx="373.09" cy="459.93" r="19.48"/><circle class="cls-1" cx="459.9" cy="459.93" r="19.48"/><circle class="cls-1" cx="546.7" cy="459.93" r="19.48"/><circle class="cls-1" cx="633.51" cy="459.93" r="19.48"/><circle class="cls-1" cx="720.31" cy="459.93" r="19.48"/><circle class="cls-1" cx="807.12" cy="459.93" r="19.48"/><circle class="cls-1" cx="893.93" cy="459.93" r="19.48"/><circle class="cls-1" cx="980.73" cy="459.93" r="19.48"/><circle class="cls-1" cx="1067.54" cy="459.93" r="19.48"/><circle class="cls-1" cx="1154.34" cy="459.93" r="19.48"/><circle class="cls-1" cx="1241.15" cy="459.93" r="19.48"/><circle class="cls-1" cx="69.27" cy="523.36" r="19.48"/><circle class="cls-1" cx="156.08" cy="523.36" r="19.48"/><circle class="cls-1" cx="242.88" cy="523.36" r="19.48"/><circle class="cls-1" cx="329.69" cy="523.36" r="19.48"/><circle class="cls-1" cx="416.5" cy="523.36" r="19.48"/><circle class="cls-1" cx="503.3" cy="523.36" r="19.48"/><circle class="cls-1" cx="590.11" cy="523.36" r="19.48"/><circle class="cls-1" cx="676.91" cy="523.36" r="19.48"/><circle class="cls-1" cx="763.72" cy="523.36" r="19.48"/><circle class="cls-1" cx="850.52" cy="523.36" r="19.48"/><circle class="cls-1" cx="937.33" cy="523.36" r="19.48"/><circle class="cls-1" cx="1024.13" cy="523.36" r="19.48"/><circle class="cls-1" cx="1110.94" cy="523.36" r="19.48"/><circle class="cls-1" cx="1197.75" cy="523.36" r="19.48"/><circle class="cls-1" cx="112.68" cy="584.01" r="19.48"/><circle class="cls-1" cx="25.87" cy="584.01" r="19.48"/><circle class="cls-1" cx="199.48" cy="584.01" r="19.48"/><circle class="cls-1" cx="286.29" cy="584.01" r="19.48"/><circle class="cls-1" cx="373.09" cy="584.01" r="19.48"/><circle class="cls-1" cx="459.9" cy="584.01" r="19.48"/><circle class="cls-1" cx="546.7" cy="584.01" r="19.48"/><circle class="cls-1" cx="633.51" cy="584.01" r="19.48"/><circle class="cls-1" cx="720.31" cy="584.01" r="19.48"/><circle class="cls-1" cx="807.12" cy="584.01" r="19.48"/><circle class="cls-1" cx="893.93" cy="584.01" r="19.48"/><circle class="cls-1" cx="980.73" cy="584.01" r="19.48"/><circle class="cls-1" cx="1067.54" cy="584.01" r="19.48"/><circle class="cls-1" cx="1154.34" cy="584.01" r="19.48"/><circle class="cls-1" cx="1241.15" cy="584.01" r="19.48"/><circle class="cls-1" cx="69.27" cy="647.45" r="19.48"/><circle class="cls-1" cx="156.08" cy="647.45" r="19.48"/><circle class="cls-1" cx="242.88" cy="647.45" r="19.48"/><circle class="cls-1" cx="329.69" cy="647.45" r="19.48"/><circle class="cls-1" cx="416.5" cy="647.45" r="19.48"/><circle class="cls-1" cx="503.3" cy="647.45" r="19.48"/><circle class="cls-1" cx="590.11" cy="647.45" r="19.48"/><circle class="cls-1" cx="676.91" cy="647.45" r="19.48"/><circle class="cls-1" cx="763.72" cy="647.45" r="19.48"/><circle class="cls-1" cx="850.52" cy="647.45" r="19.48"/><circle class="cls-1" cx="937.33" cy="647.45" r="19.48"/><circle class="cls-1" cx="1024.13" cy="647.45" r="19.48"/><circle class="cls-1" cx="1110.94" cy="647.45" r="19.48"/><circle class="cls-1" cx="1197.75" cy="647.45" r="19.48"/><circle class="cls-1" cx="69.27" cy="771.54" r="19.48"/><circle class="cls-1" cx="156.08" cy="771.54" r="19.48"/><circle class="cls-1" cx="242.88" cy="771.54" r="19.48"/><circle class="cls-1" cx="329.69" cy="771.54" r="19.48"/><circle class="cls-1" cx="416.5" cy="771.54" r="19.48"/><circle class="cls-1" cx="503.3" cy="771.54" r="19.48"/><circle class="cls-1" cx="590.11" cy="771.54" r="19.48"/><circle class="cls-1" cx="676.91" cy="771.54" r="19.48"/><circle class="cls-1" cx="763.72" cy="771.54" r="19.48"/><circle class="cls-1" cx="850.52" cy="771.54" r="19.48"/><circle class="cls-1" cx="937.33" cy="771.54" r="19.48"/><circle class="cls-1" cx="1024.13" cy="771.54" r="19.48"/><circle class="cls-1" cx="1110.94" cy="771.54" r="19.48"/><circle class="cls-1" cx="1197.75" cy="771.54" r="19.48"/><circle class="cls-1" cx="112.68" cy="708.1" r="19.48"/><circle class="cls-1" cx="25.87" cy="708.1" r="19.48"/><circle class="cls-1" cx="199.48" cy="708.1" r="19.48"/><circle class="cls-1" cx="286.29" cy="708.1" r="19.48"/><circle class="cls-1" cx="373.09" cy="708.1" r="19.48"/><circle class="cls-1" cx="459.9" cy="708.1" r="19.48"/><circle class="cls-1" cx="546.7" cy="708.1" r="19.48"/><circle class="cls-1" cx="633.51" cy="708.1" r="19.48"/><circle class="cls-1" cx="720.31" cy="708.1" r="19.48"/><circle class="cls-1" cx="807.12" cy="708.1" r="19.48"/><circle class="cls-1" cx="893.93" cy="708.1" r="19.48"/><circle class="cls-1" cx="980.73" cy="708.1" r="19.48"/><circle class="cls-1" cx="1067.54" cy="708.1" r="19.48"/><circle class="cls-1" cx="1154.34" cy="708.1" r="19.48"/><circle class="cls-1" cx="1241.15" cy="708.1" r="19.48"/><circle class="cls-2" cx="62.88" cy="19.48" r="19.48"/><circle class="cls-2" cx="149.68" cy="19.48" r="19.48"/><circle class="cls-2" cx="236.49" cy="19.48" r="19.48"/><circle class="cls-2" cx="323.3" cy="19.48" r="19.48"/><circle class="cls-2" cx="410.1" cy="19.48" r="19.48"/><circle class="cls-2" cx="496.91" cy="19.48" r="19.48"/><circle class="cls-2" cx="583.71" cy="19.48" r="19.48"/><circle class="cls-2" cx="670.52" cy="19.48" r="19.48"/><circle class="cls-2" cx="757.32" cy="19.48" r="19.48"/><circle class="cls-2" cx="844.13" cy="19.48" r="19.48"/><circle class="cls-2" cx="930.94" cy="19.48" r="19.48"/><circle class="cls-2" cx="1017.74" cy="19.48" r="19.48"/><circle class="cls-2" cx="1104.55" cy="19.48" r="19.48"/><circle class="cls-2" cx="1191.35" cy="19.48" r="19.48"/><circle class="cls-2" cx="106.28" cy="80.13" r="19.48"/><circle class="cls-2" cx="19.48" cy="80.13" r="19.48"/><circle class="cls-2" cx="193.09" cy="80.13" r="19.48"/><circle class="cls-2" cx="279.89" cy="80.13" r="19.48"/><circle class="cls-2" cx="366.7" cy="80.13" r="19.48"/><circle class="cls-2" cx="453.5" cy="80.13" r="19.48"/><circle class="cls-2" cx="540.31" cy="80.13" r="19.48"/><circle class="cls-2" cx="627.12" cy="80.13" r="19.48"/><circle class="cls-2" cx="713.92" cy="80.13" r="19.48"/><circle class="cls-2" cx="800.73" cy="80.13" r="19.48"/><circle class="cls-2" cx="887.53" cy="80.13" r="19.48"/><circle class="cls-2" cx="974.34" cy="80.13" r="19.48"/><circle class="cls-2" cx="1061.14" cy="80.13" r="19.48"/><circle class="cls-2" cx="1147.95" cy="80.13" r="19.48"/><circle class="cls-2" cx="1234.76" cy="80.13" r="19.48"/><circle class="cls-2" cx="62.88" cy="143.56" r="19.48"/><circle class="cls-2" cx="149.68" cy="143.56" r="19.48"/><circle class="cls-2" cx="236.49" cy="143.56" r="19.48"/><circle class="cls-2" cx="323.3" cy="143.56" r="19.48"/><circle class="cls-2" cx="410.1" cy="143.56" r="19.48"/><circle class="cls-2" cx="496.91" cy="143.56" r="19.48"/><circle class="cls-2" cx="583.71" cy="143.56" r="19.48"/><circle class="cls-2" cx="670.52" cy="143.56" r="19.48"/><circle class="cls-2" cx="757.32" cy="143.56" r="19.48"/><circle class="cls-2" cx="844.13" cy="143.56" r="19.48"/><circle class="cls-2" cx="930.94" cy="143.56" r="19.48"/><circle class="cls-2" cx="1017.74" cy="143.56" r="19.48"/><circle class="cls-2" cx="1104.55" cy="143.56" r="19.48"/><circle class="cls-2" cx="1191.35" cy="143.56" r="19.48"/><circle class="cls-2" cx="106.28" cy="204.22" r="19.48"/><circle class="cls-2" cx="19.48" cy="204.22" r="19.48"/><circle class="cls-2" cx="193.09" cy="204.22" r="19.48"/><circle class="cls-2" cx="279.89" cy="204.22" r="19.48"/><circle class="cls-2" cx="366.7" cy="204.22" r="19.48"/><circle class="cls-2" cx="453.5" cy="204.22" r="19.48"/><circle class="cls-2" cx="540.31" cy="204.22" r="19.48"/><circle class="cls-2" cx="627.12" cy="204.22" r="19.48"/><circle class="cls-2" cx="713.92" cy="204.22" r="19.48"/><circle class="cls-2" cx="800.73" cy="204.22" r="19.48"/><circle class="cls-2" cx="887.53" cy="204.22" r="19.48"/><circle class="cls-2" cx="974.34" cy="204.22" r="19.48"/><circle class="cls-2" cx="1061.14" cy="204.22" r="19.48"/><circle class="cls-2" cx="1147.95" cy="204.22" r="19.48"/><circle class="cls-2" cx="1234.76" cy="204.22" r="19.48"/><circle class="cls-2" cx="62.88" cy="267.65" r="19.48"/><circle class="cls-2" cx="149.68" cy="267.65" r="19.48"/><circle class="cls-2" cx="236.49" cy="267.65" r="19.48"/><circle class="cls-2" cx="323.3" cy="267.65" r="19.48"/><circle class="cls-2" cx="410.1" cy="267.65" r="19.48"/><circle class="cls-2" cx="496.91" cy="267.65" r="19.48"/><circle class="cls-2" cx="583.71" cy="267.65" r="19.48"/><circle class="cls-2" cx="670.52" cy="267.65" r="19.48"/><circle class="cls-2" cx="757.32" cy="267.65" r="19.48"/><circle class="cls-2" cx="844.13" cy="267.65" r="19.48"/><circle class="cls-2" cx="930.94" cy="267.65" r="19.48"/><circle class="cls-2" cx="1017.74" cy="267.65" r="19.48"/><circle class="cls-2" cx="1104.55" cy="267.65" r="19.48"/><circle class="cls-2" cx="1191.35" cy="267.65" r="19.48"/><circle class="cls-2" cx="106.28" cy="328.3" r="19.48"/><circle class="cls-2" cx="19.48" cy="328.3" r="19.48"/><circle class="cls-2" cx="193.09" cy="328.3" r="19.48"/><circle class="cls-2" cx="279.89" cy="328.3" r="19.48"/><circle class="cls-2" cx="366.7" cy="328.3" r="19.48"/><circle class="cls-2" cx="453.5" cy="328.3" r="19.48"/><circle class="cls-2" cx="540.31" cy="328.3" r="19.48"/><circle class="cls-2" cx="627.12" cy="328.3" r="19.48"/><circle class="cls-2" cx="713.92" cy="328.3" r="19.48"/><circle class="cls-2" cx="800.73" cy="328.3" r="19.48"/><circle class="cls-2" cx="887.53" cy="328.3" r="19.48"/><circle class="cls-2" cx="974.34" cy="328.3" r="19.48"/><circle class="cls-2" cx="1061.14" cy="328.3" r="19.48"/><circle class="cls-2" cx="1147.95" cy="328.3" r="19.48"/><circle class="cls-2" cx="1234.76" cy="328.3" r="19.48"/><circle class="cls-2" cx="62.88" cy="391.74" r="19.48"/><circle class="cls-2" cx="149.68" cy="391.74" r="19.48"/><circle class="cls-2" cx="236.49" cy="391.74" r="19.48"/><circle class="cls-2" cx="323.3" cy="391.74" r="19.48"/><circle class="cls-2" cx="410.1" cy="391.74" r="19.48"/><circle class="cls-2" cx="496.91" cy="391.74" r="19.48"/><circle class="cls-2" cx="583.71" cy="391.74" r="19.48"/><circle class="cls-2" cx="670.52" cy="391.74" r="19.48"/><circle class="cls-2" cx="757.32" cy="391.74" r="19.48"/><circle class="cls-2" cx="844.13" cy="391.74" r="19.48"/><circle class="cls-2" cx="930.94" cy="391.74" r="19.48"/><circle class="cls-2" cx="1017.74" cy="391.74" r="19.48"/><circle class="cls-2" cx="1104.55" cy="391.74" r="19.48"/><circle class="cls-2" cx="1191.35" cy="391.74" r="19.48"/><circle class="cls-2" cx="106.28" cy="452.39" r="19.48"/><circle class="cls-2" cx="19.48" cy="452.39" r="19.48"/><circle class="cls-2" cx="193.09" cy="452.39" r="19.48"/><circle class="cls-2" cx="279.89" cy="452.39" r="19.48"/><circle class="cls-2" cx="366.7" cy="452.39" r="19.48"/><circle class="cls-2" cx="453.5" cy="452.39" r="19.48"/><circle class="cls-2" cx="540.31" cy="452.39" r="19.48"/><circle class="cls-2" cx="627.12" cy="452.39" r="19.48"/><circle class="cls-2" cx="713.92" cy="452.39" r="19.48"/><circle class="cls-2" cx="800.73" cy="452.39" r="19.48"/><circle class="cls-2" cx="887.53" cy="452.39" r="19.48"/><circle class="cls-2" cx="974.34" cy="452.39" r="19.48"/><circle class="cls-2" cx="1061.14" cy="452.39" r="19.48"/><circle class="cls-2" cx="1147.95" cy="452.39" r="19.48"/><circle class="cls-2" cx="1234.76" cy="452.39" r="19.48"/><circle class="cls-2" cx="62.88" cy="515.83" r="19.48"/><circle class="cls-2" cx="149.68" cy="515.83" r="19.48"/><circle class="cls-2" cx="236.49" cy="515.83" r="19.48"/><circle class="cls-2" cx="323.3" cy="515.83" r="19.48"/><circle class="cls-2" cx="410.1" cy="515.83" r="19.48"/><circle class="cls-2" cx="496.91" cy="515.83" r="19.48"/><circle class="cls-2" cx="583.71" cy="515.83" r="19.48"/><circle class="cls-2" cx="670.52" cy="515.83" r="19.48"/><circle class="cls-2" cx="757.32" cy="515.83" r="19.48"/><circle class="cls-2" cx="844.13" cy="515.83" r="19.48"/><circle class="cls-2" cx="930.94" cy="515.83" r="19.48"/><circle class="cls-2" cx="1017.74" cy="515.83" r="19.48"/><circle class="cls-2" cx="1104.55" cy="515.83" r="19.48"/><circle class="cls-2" cx="1191.35" cy="515.83" r="19.48"/><circle class="cls-2" cx="106.28" cy="576.48" r="19.48"/><circle class="cls-2" cx="19.48" cy="576.48" r="19.48"/><circle class="cls-2" cx="193.09" cy="576.48" r="19.48"/><circle class="cls-2" cx="279.89" cy="576.48" r="19.48"/><circle class="cls-2" cx="366.7" cy="576.48" r="19.48"/><circle class="cls-2" cx="453.5" cy="576.48" r="19.48"/><circle class="cls-2" cx="540.31" cy="576.48" r="19.48"/><circle class="cls-2" cx="627.12" cy="576.48" r="19.48"/><circle class="cls-2" cx="713.92" cy="576.48" r="19.48"/><circle class="cls-2" cx="800.73" cy="576.48" r="19.48"/><circle class="cls-2" cx="887.53" cy="576.48" r="19.48"/><circle class="cls-2" cx="974.34" cy="576.48" r="19.48"/><circle class="cls-2" cx="1061.14" cy="576.48" r="19.48"/><circle class="cls-2" cx="1147.95" cy="576.48" r="19.48"/><circle class="cls-2" cx="1234.76" cy="576.48" r="19.48"/><circle class="cls-2" cx="62.88" cy="639.91" r="19.48"/><circle class="cls-2" cx="149.68" cy="639.91" r="19.48"/><circle class="cls-2" cx="236.49" cy="639.91" r="19.48"/><circle class="cls-2" cx="323.3" cy="639.91" r="19.48"/><circle class="cls-2" cx="410.1" cy="639.91" r="19.48"/><circle class="cls-2" cx="496.91" cy="639.91" r="19.48"/><circle class="cls-2" cx="583.71" cy="639.91" r="19.48"/><circle class="cls-2" cx="670.52" cy="639.91" r="19.48"/><circle class="cls-2" cx="757.32" cy="639.91" r="19.48"/><circle class="cls-2" cx="844.13" cy="639.91" r="19.48"/><circle class="cls-2" cx="930.94" cy="639.91" r="19.48"/><circle class="cls-2" cx="1017.74" cy="639.91" r="19.48"/><circle class="cls-2" cx="1104.55" cy="639.91" r="19.48"/><circle class="cls-2" cx="1191.35" cy="639.91" r="19.48"/><circle class="cls-2" cx="62.88" cy="764" r="19.48"/><circle class="cls-2" cx="149.68" cy="764" r="19.48"/><circle class="cls-2" cx="236.49" cy="764" r="19.48"/><circle class="cls-2" cx="323.3" cy="764" r="19.48"/><circle class="cls-2" cx="410.1" cy="764" r="19.48"/><circle class="cls-2" cx="496.91" cy="764" r="19.48"/><circle class="cls-2" cx="583.71" cy="764" r="19.48"/><circle class="cls-2" cx="670.52" cy="764" r="19.48"/><circle class="cls-2" cx="757.32" cy="764" r="19.48"/><circle class="cls-2" cx="844.13" cy="764" r="19.48"/><circle class="cls-2" cx="930.94" cy="764" r="19.48"/><circle class="cls-2" cx="1017.74" cy="764" r="19.48"/><circle class="cls-2" cx="1104.55" cy="764" r="19.48"/><circle class="cls-2" cx="1191.35" cy="764" r="19.48"/><circle class="cls-2" cx="106.28" cy="700.57" r="19.48"/><circle class="cls-2" cx="19.48" cy="700.57" r="19.48"/><circle class="cls-2" cx="193.09" cy="700.57" r="19.48"/><circle class="cls-2" cx="279.89" cy="700.57" r="19.48"/><circle class="cls-2" cx="366.7" cy="700.57" r="19.48"/><circle class="cls-2" cx="453.5" cy="700.57" r="19.48"/><circle class="cls-2" cx="540.31" cy="700.57" r="19.48"/><circle class="cls-2" cx="627.12" cy="700.57" r="19.48"/><circle class="cls-2" cx="713.92" cy="700.57" r="19.48"/><circle class="cls-2" cx="800.73" cy="700.57" r="19.48"/><circle class="cls-2" cx="887.53" cy="700.57" r="19.48"/><circle class="cls-2" cx="974.34" cy="700.57" r="19.48"/><circle class="cls-2" cx="1061.14" cy="700.57" r="19.48"/><circle class="cls-2" cx="1147.95" cy="700.57" r="19.48"/><circle class="cls-2" cx="1234.76" cy="700.57" r="19.48"/></svg>
+    <!-- <img src="../img/blob-scene-haikei.svg" alt="blob">
+    <img src="../img/blob-scene-haikei (1).svg" alt="blob" class="second"> -->
+
+
+    
+
+</body>
+</html>
