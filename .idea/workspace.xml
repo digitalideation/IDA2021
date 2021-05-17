@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="416672a2-1a1e-4d0b-a214-54065c267d8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/00_exercise-files/day16/01-viewport.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/00_exercise-files/day16/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/00_exercise-files/day16/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/00_exercise-files/day16/js/viewport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="01-viewport.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="01-viewport.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/00_exercise-files/day16/01-viewport.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -103,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+            <state relative-caret-position="309">
+              <caret line="34" column="129" lean-forward="false" selection-start-line="34" selection-start-column="129" selection-end-line="34" selection-end-column="129" />
               <folding />
             </state>
           </provider>
@@ -137,9 +134,9 @@
         <option value="$PROJECT_DIR$/annalisa_rompietti/index.html" />
         <option value="$PROJECT_DIR$/annalisa_rompietti/Prozess/excercises/heba.excercise1.html" />
         <option value="$PROJECT_DIR$/lukas_hefti/js/NavBar.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/00_exercise-files/day15/index.html" />
         <option value="$PROJECT_DIR$/gina_burri/process/Day14/svg.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -182,20 +179,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IDA2021" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="00_exercise-files" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -303,7 +286,7 @@
       <workItem from="1620926881384" duration="159000" />
       <workItem from="1620974276688" duration="3280000" />
       <workItem from="1621245553891" duration="1692000" />
-      <workItem from="1621258704952" duration="45000" />
+      <workItem from="1621258704952" duration="112000" />
     </task>
     <task id="LOCAL-00001" summary="add files for day6">
       <created>1619537030989</created>
@@ -375,11 +358,18 @@
       <option name="project" value="LOCAL" />
       <updated>1620993963341</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add files day16">
+      <created>1621258763919</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621258763919</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20680000" />
+    <option name="totallyTimeSpent" value="20747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1776" y="272" width="1609" height="910" extended-state="0" />
@@ -419,7 +409,8 @@
     <MESSAGE value="aufraeumen directory annalisa" />
     <MESSAGE value="add material for day 15" />
     <MESSAGE value="before fresh pull" />
-    <option name="LAST_COMMIT_MESSAGE" value="before fresh pull" />
+    <MESSAGE value="Add files day16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files day16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -658,14 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/00_exercise-files/day15/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -718,6 +701,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="34" column="129" lean-forward="false" selection-start-line="34" selection-start-column="129" selection-end-line="34" selection-end-column="129" />
           <folding />
         </state>
       </provider>
