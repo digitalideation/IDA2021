@@ -86,6 +86,7 @@
             align-items: center;
             justify-content: center;
             margin: auto;
+            margin-bottom: 6rem;
 
             background-image: url(https://i.pinimg.com/originals/f5/f3/27/f5f327dc0b3619d95f20eba2d71aec78.gif);
             /* background-image: url(https://i.pinimg.com/originals/13/7b/26/137b2650381f68239e643ed58dfc8777.gif); */
@@ -237,3 +238,6 @@
 
         }
 
+
+
+        
