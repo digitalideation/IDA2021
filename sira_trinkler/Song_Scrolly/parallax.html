@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parallax Nature</title>
+        <link rel="stylesheet" type="text/css" href="/Song_Scrolly/css/style_para.css">
+</head>
+
+<body>
+    <section>
+        <img src="sky.jpg" id="sky">
+        <img src="mountain.png" id="mountain">
+        <img src="house.png" id="house">
+        <img src="wiese.png" id="wiese">
+        <img src="flower.png" id="flower">
+        <h2 id="text">1957</h2>
+    </section>
+
+    <div class="content">
+        <p>
+            <!-- <span>1957</span> <br> -->
+            Your house that sits behind me <br>
+            Is covered in ivy green <br>
+            The windows that we watch from <br>
+            Are old and chipping at the beam <br>
+            <br>
+            It takes me away <br>
+            It takes me away <br>
+            Takes me away <br>
+            It takes me away <br>
+            It takes me away <br>
+            Takes me away <br>
+            <br>
+            The scent you wear moves in lines <br>
+            From your apartment into mine <br>
+            You act like you don't know me <br>
+            My God, you tempt my anxious mind <br>
+            <br>
+            It takes me away <br>
+            It takes me away <br>
+            Takes me away <br>
+            It takes me away <br>
+            It takes me away <br>
+            Takes me away <br>
+            <br>
+            Would it be much better if I knew nothing about you? <br>
+            Would it be much better if I knew nothing about you? <br>
+            Would it be much better if I knew nothing about you? <br>
+            Would it be much better if I knew nothing about you? <br>
+            <br>
+            I'll go, I'll go, I'll go, I <br>
+            I'll go, I'll go, I'll go, I <br>
+            I'll go, I'll go, I'll go, I <br>
+            I'll go, I'll go, I'll go, I <br>
+            I'll go, I'll go, I'll go, I <br>
+            I'll go, I'll go, I'll go, I <br>
+            I'll go, I'll go, I'll go, I <br>
+            <br>
+            I'll go, I'll go, I'll go, I (it takes me away) <br>
+            I'll go, I'll go, I'll go, I (it takes me away) <br>
+            I'll go, I'll go, I'll go, I (it takes me away) <br>
+            I'll go, I'll go, I'll go, I (it takes me away) <br>
+            I'll go, I'll go, I'll go, I (it takes me away) <br>
+            I'll go, I'll go, I'll go, I (it takes me away) <br>
+            I'll go, I'll go, I'll go, I (it takes me away) <br>
+            I'll go, I'll go, I'll go, I <br>
+            I'll go, I'll go, I'll go, I <br>
+        </p>
+    </div>
+
+    <!-- von codepen
+    <div class="parallax">
+    
+        <div class="parallax-group">
+    
+            <div class="layer base">
+                <div class="content-2">
+                    Your house that sits behind me
+                </div>
+            </div>
+    
+            <div class="layer closer">
+                <div class="content-2">
+                    is covered in ivy green
+                </div>
+            </div>
+    
+            <div class="layer closest">
+                <div class="content-2">
+                    Closest
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="parallax">
+    
+        <div class="parallax-group">
+    
+            <div class="layer base">
+                <div class="content-2">
+                    Our Base Layer
+                </div>
+            </div>
+    
+            <div class="layer closer">
+                <div class="content-2">
+                    Closer Layer
+                </div>
+            </div>
+    
+            <div class="layer closest">
+                <div class="content-2">
+                    Closest
+                </div>
+            </div>
+    
+        </div>
+    
+    </div> -->
+
+    <script type="text/javascript">
+        let sky = document.getElementbyId("sky");
+        let mountain = document.getElementbyId("mountain");
+        let house = document.getElementbyId("house");
+        let wiese = document.getElementbyId("wiese");
+        let flower = document.getElementbyId("flower");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+
+            sky.style.top = value + 'px';
+        })
+    </script>
+</body>
+
+</html>
