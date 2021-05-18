@@ -104,10 +104,11 @@ nav{
 
 
 #section_3 .band-members #band-member_1:hover {
-width: 80%;
+/*width: 80%;*/
+    transform:scale(2);
 }
 
-#section_3 .band-members #band-member_1:hover .bandmember-textbox{
+#section_3 .band-members #band-member_1:hover ~ .bandmember-textbox{
     display: none;
 }
 

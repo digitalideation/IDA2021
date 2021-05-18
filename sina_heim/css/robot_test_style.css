@@ -36,6 +36,10 @@
   -webkit-perspective: 1px;
   perspective: 1px;
 }
+
+.parallax-group{
+  height: 200vh;
+}
 .content{
   position: absolute;
   left: 50%;
@@ -54,12 +58,12 @@
 }
 .base {
   font-family: 'Droid Sans', sans-serif;
-  transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) translateY(300px) scale(3);
   color:black;
 }
 .closer {
   font-family: 'Droid Sans', sans-serif;
-  transform: translateZ(-1px) scale(2);
+  transform: translateZ(-1px) translateY(300px) scale(2);
   font-size:300%;
   color:black;
 }
