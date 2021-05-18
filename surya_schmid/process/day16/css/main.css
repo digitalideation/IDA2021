@@ -1,0 +1,90 @@
+* {
+    font-family:'skyline';
+}
+
+@font-face {
+    font-family: 'skyline';
+    src: url(NewParisEDUSkyline-Regular.otf);
+}
+
+article {
+    position: relative;
+    background-color: lightskyblue;
+    top: 0px;
+    left: 0px;
+    min-height: 80vh;
+    border-radius: 5%;
+    margin: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* transition: all 3s ease-in-out 1s; */
+    padding: 2rem;
+    letter-spacing: 5px;
+}
+
+article header {
+    font-size: 2rem;
+    transition: all 3s ease-in-out 1s;
+}
+
+
+/*
+Der Trick ist nun, dass was vorher über hover animiert wurde, über die neue Klasse auszulösen
+Statt:
+article:hover {
+    background-color: rgb(189, 202, 130);
+}
+*/
+
+article.myclass {
+
+    color: white;
+    animation: letterSpace 5s ;  
+}
+
+@keyframes letterSpace{
+            0%{
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+                background-color: lightskyblue;
+            }
+
+            50%{
+                letter-spacing: 30px;
+                transform: skewX(30deg);
+                padding-left:10rem;
+                 background-color: teal;
+            }
+
+            100%{
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+                background-color: lightskyblue;
+            }
+
+}
+
+article.myclass header {
+    font-size: 3.5rem;
+    animation: letterSp 5s ; 
+}
+
+
+@keyframes letterSp{
+            0%{
+                letter-spacing: 5px;
+            }
+            30%{
+                letter-spacing: 25px;
+                transform: skewX(30deg);
+                padding-left:10rem;
+            }
+
+
+            100%{
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+            }
+
+            }           
