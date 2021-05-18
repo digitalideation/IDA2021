@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  height: 100vmin;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.jitter {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  animation: slideOne 10s ease 0s;
+  position: relative;
+  padding: 1rem;
+  color: wheat;
+}
+
+.no-jitter {
+    width: 200px;
+  height: 200px;
+  background-color: orangered;
+  animation: slideTwo 10s ease 0s;
+  padding: 1rem;
+  color: wheat;
+}
+
+@keyframes slideOne {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 200px);
+  }
+}
+
+@keyframes slideTwo {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(calc(100vw - 200px));
+  }
+}
