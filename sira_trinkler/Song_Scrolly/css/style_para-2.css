@@ -1,0 +1,76 @@
+/* VON CODEPEN SVG */
+ @font-face {
+    font-family: Walsheim Regular;
+    src: url(/sira_trinkler/css/fonts/GT-Walsheim-Regular.woff);
+}
+
+@font-face {
+    font-family: Walsheim Bold;
+    src: url(/sira_trinkler/css/fonts/GT-Walsheim-Pro-Bold.woff);
+}
+
+@font-face {
+    font-family: Walsheim Medium;
+    src: url(/sira_trinkler/css/fonts/GT-Walsheim-Medium.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Walsheim Regular;
+}
+
+body {
+    background: #0a2a43;
+    min-height: 1500px;
+    text-align: center;
+}
+
+.parallax {
+  perspective: 1px;
+  perspective-origin: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 0;
+  height: 100vh;
+}
+
+.parallax .group {
+  position: relative;
+	height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax .layer {
+  position: absolute;
+  overflow: hidden;
+}
+
+#texts {
+  transform: translateZ(-3.5px) translateY(80vh) translateX(120px) scale(30);
+  color: white;
+}
+
+#blume {
+    transform: translateZ(-2px) translateY(-1vh) translateX(-300px) scale(2.2);
+}
+
+#rasen {
+    transform: translateZ(-3px) translateY(-1vh) translateX(-300px) scale(2.9);
+}
+
+#haus {
+    transform: translateZ(-3px) translateY(14vh) scale(2);
+}
+
+#berg {
+    transform: translateZ(-5px) translateY(-20vh) translateX(-325px) scale(4.3);
+}
+
+#himmel {
+    transform: translateZ(-6px) translateY(-25vh) translateX(-300px) scale(5);
+}
+
+h2 {
+    text-align: center;
+}

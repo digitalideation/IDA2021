@@ -1,0 +1,83 @@
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  font-size: 200%;
+  text-align: center;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 100vh 0;
+  bottom: 0;
+}
+
+.parallax__layer--1 {
+  transform: translateZ(0);
+}
+
+.parallax__layer--2_1 {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--2_2 {
+  transform: translateZ(-1px) scale(2);
+  top: 20vh;
+}
+
+.parallax__layer--3 {
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer--4 {
+  transform: translateZ(-3px) scale(4);
+}
+
+.title1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white; 
+  background: #df8772;
+  letter-spacing: 10px;
+}
+
+.title2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color:#a7a7a7; 
+  background: #dfb072;
+  letter-spacing: 10px;
+}
+
+.title3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color:#5c5c5c; 
+  background: #d3b8b1;
+  letter-spacing: 10px;
+}
+
+.title4 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color:#000000; 
+  background: #ffe8e8;
+  letter-spacing: 10px;
+}
