@@ -1,0 +1,99 @@
+body{
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(250, 167, 225);
+    color: white;
+    margin: 1%;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color:white;
+  }
+  
+  p {
+    font-size: 70px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color:transparent;
+      position: relative;
+    }
+  
+    
+    li {
+      float:left;
+      position: relative;
+      display: flexbox;
+      
+    }
+    
+    li a {
+      position: relative;
+      display: flexbox;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color: hotpink;
+      color: white;
+    }
+  
+    .active {
+      display: flexbox;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      background-color: hotpink;
+    }
+  
+    ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      list-style-type: none;
+      margin: 10px;
+      padding: 0;
+      width: 100%;
+      display: flexbox;
+      flex-direction:row;
+    }
+  
+    .days:hover {
+        color: white;
+        background-color:hotpink;
+    }
+  
+  
+    li a {
+      display: block;
+      text-align: center;
+    }
+  
+  .days {
+       background-color:transparent;
+       display: inline-flexbox;
+       text-align: center;
+       color: black;
+       font-size: 25px;
+       
+   } 
+
+
+
+  

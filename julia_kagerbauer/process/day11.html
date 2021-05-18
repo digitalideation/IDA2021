@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <script src="/julia_kagerbauer/js/day11.js"></script>
+    <title>Day 11</title>
+
+    <style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+
+  
+  li {
+    float:left;
+    
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(250, 167, 225);
+    color: white;
+  }
+
+  .active {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color:rgb(250, 167, 225);
+  }
+
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .days:hover {
+      color: white;
+      background-color: blueviolet;
+  }
+
+
+  li a {
+    display: block;
+    text-align: center;
+  }
+
+        body{
+            display: flex;
+            align-items: center;
+            background-image:url("https://source.unsplash.com/random/?flames"),url("https://source.unsplash.com/random/?music");
+            background-blend-mode: overlay;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        div{
+            background-blend-mode: multiply;
+            display: flex;
+            align-items: center;
+        }
+        .links {
+            left: 150px;
+            top: 200px;
+            display: flex;
+            position: absolute;
+            text-align: center;
+            height: 500px;
+            width: 500px;
+            border-radius: 100%;
+            background-image: url("https://source.unsplash.com/random/?night");
+            background-color: aqua;
+            background-blend-mode: multiply;
+        
+        }
+
+        .mitte {
+            left: 150px;
+            top: 40px;
+            margin: 10px;
+            display: flex;
+            position: relative;
+            text-align: center;
+            height: 400px;
+            width: 400px;
+            border-radius: 100%;
+            background-image: url("https://source.unsplash.com/random/?acid");
+            background-color: blue;
+            background-blend-mode: multiply;
+        }
+
+        .rechts {
+            left: 150px;
+            top: 30px;
+            margin: 10px;
+            display: flex;
+            position: relative;
+            text-align: center;
+            height: 500px;
+            width: 500px;
+            border-radius: 100%;
+            background-image: url("https://source.unsplash.com/random/?party");
+            background-color: rgb(72, 255, 0);
+            background-blend-mode: multiply;
+        }
+        .container {
+            background-color: red;
+            background-image: url(https://source.unsplash.com/random/?flames);
+            background-blend-mode: multiply;
+}
+    </style>
+ <nav>
+        <ul>
+          <li><a href="index.html">Back</a></li>
+        </ul>
+      </nav>
+</head>
+
+<body class="container">
+   
+  <div class="links"></div>  
+  <div class="mitte"></div>
+  <div class="rechts"></div>
+</body>
+</html>

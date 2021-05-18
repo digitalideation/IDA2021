@@ -1,14 +1,30 @@
-h1 {
-  font-size: 108px;
-  margin-top: 10px;
-  line-height: 100px;
-  margin-bottom: 10px;
+body{
+  font-family: 'Orbitron', sans-serif;
+  background-color: rgb(250, 167, 225);
+  color: white;
+  margin: 1%;
 }
 
+h1 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color:white;
+  }
+  
+
 p {
-  font-size: 50px;
-  margin-top: 20px;
+  font-size: 70px;
+  margin-top: 20%;
   text-align: center;
+  color: white;
+  animation-name: farben;
+  animation-duration: 8s;
+  animation-iteration-count:infinite ;
+  animation-direction: alternate;
 }
 
 ul {
@@ -16,7 +32,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color:black;
+    background-color:transparent;
     position: relative;
   }
 
@@ -37,7 +53,7 @@ ul {
   }
   
   li a:hover {
-    background-color: blueviolet;
+    background-color: hotpink;
     color: white;
   }
 
@@ -47,7 +63,7 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    background-color: blueviolet;
+    background-color: hotpink;
   }
 
   ol {
@@ -63,22 +79,23 @@ ul {
     flex-direction: column;
   }
 
-  .days:hover {
-      color: white;
-      background-color: blueviolet;
-  }
-
 
   li a {
     display: block;
     text-align: center;
   }
 
-.days {
-     background-color:transparent;
-     display: inline-flexbox;
-     text-align: center;
-     color: black;
-     font-size: 25px;
-     
- } 
+
+  @keyframes farben {
+    0% {color:white;}
+    10% {color: rgb(152, 193, 255);}
+    20% {color: rgb(144, 146, 255);}
+    30% {color: rgb(149, 137, 255);}
+    40% {color: rgb(132, 0, 255);}
+    50% {color: rgb(215, 57, 247);}
+    60% {color: rgb(255, 0, 98);}
+    70% {color: rgb(255, 0, 98);}
+    80% {color: rgb(255, 138, 92);}
+    90% {color: rgb(253, 161, 132);}
+    100% {color: white;}
+  }

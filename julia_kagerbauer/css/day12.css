@@ -1,0 +1,165 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+
+  
+  li {
+    float:left;
+    
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(250, 167, 225);
+    color: white;
+  }
+
+  .active {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color:rgb(250, 167, 225);
+  }
+
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  li a {
+    display: block;
+    text-align: center;
+  }
+
+
+
+body {
+    background-image: url(/julia_kagerbauer/images/hintergrund.jpg);
+    background-size:cover;
+    height:4000px ;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+
+.robot {
+    padding: 1rem;
+    margin: auto; 
+    width: 34vw;
+    height: 44vw;
+    align-items: center;
+    position:fixed;
+    left: 27%;
+    top: 10%;
+}
+
+.arm--right {
+    background-image: url(/julia_kagerbauer/images/arm_rechts.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    right: 7%;
+    top: 18%;
+}
+.arm--left {
+    background-image: url(/julia_kagerbauer/images/arm_links.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    left: 3%;
+    top: 17%;
+}
+
+.head {
+    background-image: url(/julia_kagerbauer/images/kopf.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 23%;
+    height: 30%;
+    top: -2%;
+    left: 50%;
+}
+
+.body {
+    background-image: url(/julia_kagerbauer/images/körper.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 11%;
+    left: 38%;
+}
+
+.leg--left {
+    background-image: url(/julia_kagerbauer/images/bein_links.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    bottom: -18.5%;
+    left: 34%;
+}
+
+.leg--right {
+    background-image: url(/julia_kagerbauer/images/bein_rechts.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 42%;
+    height: 70%;
+    bottom: -9.5%;
+    right: 9%;
+}
+
+
+.head {
+    animation: rot 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+@keyframes rot {
+    from{
+    transform: translateY(5%);
+    }
+    to{
+    transform: translateY(0%);
+    }
+}
+
+
+/*
+.body {
+    border: 1px solid rgb(24, 153, 7);
+    position: absolute;
+    background-image: url(/julia_kagerbauer/images/gingerman.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    width: 200px;
+    height: 500px;
+    left: 100px;
+    top: 125px;
+}
