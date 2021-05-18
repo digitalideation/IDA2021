@@ -1,0 +1,125 @@
+body{
+    padding: 0;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+}
+.robot{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.section{
+    width: 100vw;
+    height: 100vh; 
+}
+
+#section_1{
+    background-color: black;
+    padding-top: 10%;
+
+}
+
+#section_1 img{
+    display: block;
+    width: 40%;
+    margin: auto;
+    z-index: 20;
+}
+#section_1 .sub_nav{
+    height: 5vh;
+    width: 40%;
+    margin: auto;
+}
+
+#section_1 .sub_nav ul li{
+    display: inline-block;
+    color: white;
+    border: solid white 2px;
+    border-radius: 3vh;
+    padding: 5px 10px ;
+
+}
+
+#section_2{
+    background-color: #3A3939;
+}
+#section_2 .foot{
+    position: relative;
+    top: 10vh;
+    left: 10vw;
+    margin-top: 10%;
+    color: white;
+}
+#section_2 img{
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+    
+}
+#section_2 .text-box{
+    width: 40%;
+    display: inline-block;
+    padding-left: 2vw;
+}
+#section_2 h2{
+    
+}
+#section_2 p{
+    
+}
+
+#section_3{
+    background-color: black;
+}
+
+#section_3 .band-members{
+    width: 80%;
+    position: relative;
+    top: 10vh;
+    left: 10vw;
+}
+
+#section_3 .band-members .band-member{
+    width: 49%;
+    display: inline-block;
+}
+
+.bandmember-textbox{
+    display: block;
+    background-color:  #3A3939 ;
+}
+
+
+#section_3 .band-members #band-member_1:hover {
+width: 80%;
+}
+
+#section_3 .band-members #band-member_1:hover .bandmember-textbox{
+    display: none;
+}
+
+
+#section_4{
+    background-color: orange;
+}
+
+#section_5{
+    background-color:grey;
+}
+
+#section_6{
+    background-color: teal;
+}
