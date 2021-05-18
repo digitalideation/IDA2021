@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            width: 100%;
+             height:250vh;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+             /* background: radial-gradient(circle at 50% 60%,rgb(132, 165, 254), rgba(149,176,249,0) 50%), radial-gradient(circle at 10% 10%,rgb(114, 116, 253), rgba(114,226,253,0) 50%), radial-gradient(circle at 90% 10%,rgb(255, 199, 211), rgba(184,150,255,0) 50%), radial-gradient(circle at 90% 90%,rgb(114, 116, 253), rgba(86, 88, 210, 0) 50%), radial-gradient(circle at 10% 90%,rgb(255, 167, 177), rgba(112, 119, 253, 0) 50%) ;
+             background-repeat: no-repeat; */
+            background-size: auto;
+            background-repeat: no-repeat;
+
+   
+        }
+
+       
+
+        @font-face {
+            font-family: "brr";
+            src: url(fonts/BRRREDU-Medium.otf);
+        }
+
+        @font-face {
+            font-family:"simblonLightItalic" ;
+            src: url(fonts/OTF/SimplonEDUNorm-LightItalic.otf);
+        }
+
+        @font-face {
+            font-family: "simblonLight";
+            src: url(fonts/OTF/SimplonEDUNorm-Light.otf);
+        }
+
+        .text{
+            top: 3rem;
+            position: absolute;
+
+
+            color: white;
+            border: 0px solid tomato;
+             width: 100%;
+             height:95vw;
+            letter-spacing: 60px;
+            line-height: 30px;
+            text-align: center;
+
+            font-family: "simblonLight";
+            overflow: hidden;
+
+    
+        
+
+            -webkit-animation: letterSpace 7s infinite; /* Chrome, Safari, Opera */
+            animation: letterSpace 7s infinite;            
+        }
+
+        /* div:hover{
+            letter-spacing: 3px;
+            line-height: 40px;
+            justify-content: center;
+            
+             -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        } */
+
+
+        @keyframes letterSpace {
+            0%{
+                letter-spacing: 60px;
+            }
+            30%{
+                letter-spacing: 3px;
+                justify-content: center;
+                transform: skewX(30deg);
+                padding-left:10rem;
+            }
+
+            80%{
+                letter-spacing: 40px;
+       
+            }
+
+            100%{
+                letter-spacing: 60px;
+                transform: skewX(0deg);
+            }
+        }
+
+/* BILDER */
+        @font-face {
+            font-family: 'brr';
+            src: url(img/EuclidCircularBEDU-Medium.otf);
+        }
+        :root {
+            --tile: 40px;
+            --radius: 50%;
+        }
+
+
+        figure{
+            position: fixed;
+            opacity: 0.5;
+            padding: 0;
+            margin: 0;
+        }
+
+        .glass {
+            width: 400px;
+            height: 400px;
+        }
+
+        .glass--1{
+            right: 0;
+            top: 3rem;
+        }
+
+
+        .glass--2{
+            left: 0;
+            top: 20rem;
+        }
+
+        
+
+        .glass:after,
+        .glass:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+            transition: -webkit-mask-size 0.75s;
+            transition: mask-size 0.75s;
+            transition: mask-size 0.75s, -webkit-mask-size 0.75s;
+            transition-property: background-position, -webkit-mask-size;
+            transition-property: mask-size, background-position;
+            transition-property: mask-size, background-position, -webkit-mask-size;
+        }
+
+        .glass--1,
+        .glass--1:after,
+        .glass--1:before {
+            background: url(https://i.pinimg.com/564x/45/57/87/455787a20196ff83bddb9d3fadf6ee05.jpg);
+            background-size: 110% 110%;
+        }
+
+        .glass--1:after,
+        .glass--1:before {
+            -webkit-mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            -webkit-mask-size: var(--tile) var(--tile);
+            mask-size: var(--tile) var(--tile);
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+        }
+
+        .glass--1:after {
+            background-position: -0.5vw -0.5vw;
+            -webkit-mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+        }
+
+        .glass--1:hover:before,
+        .glass--1:hover:after {
+            --tile: 100px;
+            -webkit-mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+            mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+        }
+
+        .glass--1:hover:after {
+            background-position: -1vw -1vw;
+        }
+
+        .glass--2,
+        .glass--2:after,
+        .glass--2:before {
+            background: url(https://i.pinimg.com/564x/95/5f/3a/955f3ac9a83107ec4cc8c3b7df721114.jpg);
+            background-size: 110% 110%;
+        }
+
+        .glass--2:after,
+        .glass--2:before {
+            -webkit-mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to right bottom, white 51%, rgba(0, 0, 0, 0) 0);
+            -webkit-mask-size: var(--tile) var(--tile);
+            mask-size: var(--tile) var(--tile);
+            -webkit-mask-position: 50% 50%;
+            mask-position: 50% 50%;
+        }
+
+        .glass--2:after {
+            background-position: -0.5vw -0.5vw;
+            -webkit-mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+            mask-image: linear-gradient(to left top, white 51%, rgba(0, 0, 0, 0) 0);
+        }
+
+        .glass--2:hover:before,
+        .glass--2:hover:after {
+            --tile: 100px;
+            -webkit-mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+            mask-size: calc(var(--tile) * 0.45) calc(var(--tile) * 1.5);
+        }
+
+        .glass--2:hover:after {
+            background-position: -1vw -1vw;
+        }
+
+
+        figure:hover{
+            animation: hover;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1s ;
+            animation-delay: 1s;
+            opacity: 1;
+        }
+
+
+  
+
+        figcaption{
+    font-family: "brr";
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: 4;
+    text-transform: uppercase;
+    width: 450px;
+    height: 30px;
+    left: 0.2rem;
+    bottom: 0.2rem;
+}
+
+div:hover .fig1{
+    letter-spacing: 50px;
+
+     -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  
+}
+div:hover .fig2{
+    letter-spacing: 41px;
+
+     -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+    </style>
+</head>
+<body>
+  
+    <div class="text">
+
+        
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+       
+            Oh my God, oh my God<br>
+            This feeling's just begun<br>
+            I'm saying things I've never said<br>
+            Doing things I've never done<br>
+       
+            Oh my God, oh my God<br>
+            When I see you I should run<br>
+            But I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            Tells me to stop<br>
+      
+            Feeling feelings I feel about us<br>
+            Try to fight it but it's never enough<br>
+        
+            My heart is certain<br>
+            It's more than a crush<br>
+            'Cause I'm frozen in motion<br>
+            And my head tells me to stop<br>
+      
+            But my heart goes<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            'Cause my heart goes<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+        
+            Oh my God, oh my God<br>
+            Can't believe what I've become<br>
+            I'm thinking things I shouldn't think<br>
+            Singing songs I've never sung<br>
+            
+            Oh my God, oh my God<br>
+            When I see you I should run<br><br>
+            But I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            Tells me to stop<br>
+            
+            Feeling feelings I feel about us<br>
+            Try to fight it but it's never enough<br>
+            ('Cause my heart)<br>
+            My heart is certain<br>
+            It's more than a crush<br>
+            'Cause I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            
+            But my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            'Cause my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            
+            But my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            'Cause my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            
+            My head and my heart<br>
+            My head and my heart<br>
+            I can't tell them apart<br>
+            My head tells me to run<br>
+            But I can't<br>
+            
+            'Cause my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            'Cause my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            
+            Oh my God, oh my God<br>
+            This feeling's just begun<br>
+            I'm saying things I've never said<br>
+            Doing things I've never done<br>
+            
+            Oh my God, oh my God<br>
+            When I see you I should run<br>
+            But I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            
+            But my heart goes<br>
+    
+    </div>
+
+
+    <div class="bilder">
+        <figure class="glass glass--1">
+            <figcaption class="fig1">My head</figcaption>
+        </figure>
+        <figure class="glass glass--2">
+            <figcaption class="fig2">My heart</figcaption>
+        </figure>
+    </div>
+</body>
+</html>
