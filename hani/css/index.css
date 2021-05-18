@@ -5,7 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #240229;
+    /* background: #370e69; */
+    /* background:linear-gradient(180deg,#370e69 0,#0f0021);
+    background-size: cover; */
+   background: rgb(55,14,105);
+background: radial-gradient(circle, rgba(55,14,105,1) 0%, rgba(15,0,33,1) 100%);
+    
   }
 
   .loader {
@@ -44,9 +49,14 @@ body {
 
   h1 {
     text-align: center;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Raleway', sans-serif;
+  /* font-family: 'Chakra Petch', sans-serif;
     font-family: 'Inconsolata', monospace;
-    font-family: 'Secular One', sans-serif;
+    font-family: 'Secular One', sans-serif;  */
+    font-weight: 400;
+   /* text-shadow: 0 0 2px #FFF, 0 0 5px #FFF, 0 0 15px #FFF, -17px -40px 5px rgba(206,48,48,0); */
+   text-shadow: 0 0 15px #FFF, -17px -40px 2px rgba(206,48,48,0);
+    font-style: normal;
     font-size: 50px;
     line-height: 1.25em;
   }
@@ -58,7 +68,9 @@ body {
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background: #240229;
+    /* background: #240229; */
+  background: rgb(55,14,105);
+background: radial-gradient(circle, rgba(55,14,105,1) 0%, rgba(41,10,79,1) 53%);
     border-radius: 50%;
 
   }
@@ -145,9 +157,7 @@ body {
   }
 
   .home {
-    font-family: 'Chakra Petch', sans-serif;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Secular One', sans-serif;
+  font-family: 'Raleway', sans-serif;
     font-size: 20px;
      width: 250px;
     color: rgb(107, 107, 107);
@@ -156,6 +166,8 @@ body {
  linear-gradient(90deg, rgba(172,172,172,1) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
    padding: 2vh;
    border-radius: 40%;
+   text-shadow: 0 0 2px #FFF, 0 0 5px #FFF, 0 0 15px #FFF, -17px -40px 5px rgba(206,48,48,0);
+   
   }
   .home:hover {
  width: 300px;
@@ -183,6 +195,7 @@ body {
     text-decoration: none;
     color: #000;
     display: block;
+    text-shadow: 0 0 2px #FFF, 0 0 5px #FFF, 0 0 15px #FFF, -17px -40px 5px rgba(206,48,48,0);
   }
 
    a:hover {
@@ -194,9 +207,7 @@ body {
   .robotw {
    
      color: rgb(107, 107, 107);
-      font-family: 'Chakra Petch', sans-serif;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Secular One', sans-serif;
+     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     display: block;
      width: 250px;
@@ -220,9 +231,7 @@ body {
   .songg {
  
      color: rgb(107, 107, 107);
-      font-family: 'Chakra Petch', sans-serif;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Secular One', sans-serif;
+  font-family: 'Raleway', sans-serif;
     font-size: 20px;
     display: block;
      width: 250px;
@@ -246,13 +255,10 @@ background-color: rgb(172,172,172);
   .process {
   
     color: rgb(107, 107, 107);
-      font-family: 'Chakra Petch', sans-serif;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Secular One', sans-serif;
+   font-family: 'Raleway', sans-serif;
     font-size: 20px;
     display: block;
      width: 250px;
-
    background-color: rgb(172,172,172);
    background: 
  linear-gradient(90deg, rgba(172,172,172,1) 2%, rgba(255,255,255,1) 46%, rgba(173,173,173,1) 100%);
@@ -261,7 +267,7 @@ background-color: rgb(172,172,172);
 outline-offset: 4px;
   }
   .process:hover {
-    width: 300px;
+      width: 300px;
  height: 50px;
  font-size: 30px;
  color: rgb(37, 37, 37);

@@ -6,158 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - Hani Aslani</title>
- <style>
-   body {
-     /* background: rgb(215, 235, 241); */
-    
-  color: #FFF;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: changa-one, sans-serif;
-  font-size: 80px;
-  margin-top: 0px;
-  background-color: #03031A;
-  background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNjAwJyBoZWlnaHQ9JzYwMCcgdmlld0JveD0nMCAwIDE1MCAxNTAnPgo8ZmlsdGVyIGlkPSdpJyB4PScwJyB5PScwJz4KCTxmZUNvbG9yTWF0cml4IHR5cGU9J21hdHJpeCcgdmFsdWVzPScxIDAgMCAwIDAgIDAgMSAwIDAgMCAgMCAwIDEgMCAwICAwIDAgMCAwIDAnIC8+CjwvZmlsdGVyPgo8ZmlsdGVyIGlkPSduJyB4PScwJyB5PScwJz4KCTxmZVR1cmJ1bGVuY2UgdHlwZT0ndHVyYnVsZW5jZScgYmFzZUZyZXF1ZW5jeT0nLjcnIHJlc3VsdD0nZnV6eicgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPGZlQ29tcG9zaXRlIGluPSdTb3VyY2VHcmFwaGljJyBpbjI9J2Z1enonIG9wZXJhdG9yPSdhcml0aG1ldGljJyBrMT0nMCcgazI9JzEnIGszPSctNzMnIGs0PScuMDEnIC8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjMDMwMzFhJy8+CjxyZWN0IHg9Jy0xJScgeT0nLTElJyB3aWR0aD0nMTAyJScgaGVpZ2h0PScxMDIlJyBmaWxsPScjZmZmZmZmJyBmaWx0ZXI9J3VybCgjbiknIG9wYWNpdHk9JzEnLz4KPHJlY3QgeD0nLTElJyB5PSctMSUnIHdpZHRoPScxMDIlJyBoZWlnaHQ9JzEwMiUnIGZpbGw9JyMwMzAzMWEnIGZpbHRlcj0ndXJsKCNpKScgb3BhY2l0eT0nMScvPgo8L3N2Zz4=');
-  
-   }
-   .head {
-     width: 300px;
-  height: 325px;
-  background-color: rgb(194, 198, 199);
-  border: 1px solid black;
-  margin-left: 35%;
-  margin-top: 10%; 
-  border-radius: 5%;
-  position: absolute;
-  transform: translate3d(20%,-50%,0)
-}
+  <link rel="stylesheet" href="css/robot.css">
 
-
-.eye.eye--left {
-  width: 95px;
-  height: 115px;
-  background-color: aqua;
-  border: 1px solid black;
-  margin-left: 0%;
-  position: absolute;
-  border-radius: 5%;
-}
-.eye.eye--right {
-width: 95px;
-  height: 115px;
-  background-color: aqua;
-  border: 1px solid black;
-  margin-left: 68%;
-  position: absolute;
-  border-radius: 5%;
-
-}
-.inside-eye-left {
-  position: absolute;
-  background-color: rgb(0, 0, 0);
-  width: 55%;
-  height: 45%;
-  border-radius: 50%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  right: 25%;
-  top: 30%;
-  margin: auto;
-}
-.inside-eye-right {
-  position: absolute;
-  background-color: rgb(0, 0, 0);
-  width: 55%;
-  height: 45%;
-  border-radius: 50%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  right: 25%;
-  top: 30%;
-  margin: auto;
-}
-.mouth {
-  width: 30%;
-  height: 10%;
-  left: 35%;
-  position: absolute;
-  border: 3px solid black;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-border-radius: 50%;
-  top: 40%;
-}
-.arm.arm-left
-{ 
-  /* transform-origin: center left; */
-  position: relative;
-  top: 0;
-  left: 50px;
-  right: 230px;
-  bottom: 25px;
-  margin: auto;
-  height: 30px;
-  width: 100px;
-  background: lightgray;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 10px;
-
-}
-.arm.arm--right {
-  position: absolute;
-top: -10%;
-  left: -12%;
-  right: 230px;
-  bottom: 30%;
-  margin: auto;
-  height: 30px;
-  width: 170px;
-  background: lightgray;
-  transform: rotate(45deg);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 0px;
-/* border-right: 20px solid rgb(255, 255, 255) ; */
-
-}
-.arm.arm--left {
-position: absolute;
-width: 130px;
-height: 15px;
-border-radius: 40%;
-background-color: brown;
-}
-
-.leg{
-  width:10px;
-  height:100px;
-  background-color:blue;
-  
-
-}
-.leg.leg--right{
-  margin-left:100px;
-  height:20px;
-  width:12px;
-  background:#FF0;
-  bottom:20%;
-  background:#7AA6C1;
-  border:1px solid #000;
-  border-radius:5px;
-  z-index:3;
-}
-       
-    </style>
 </head>
 
 <body class="roby">
-  
+
   <div class="robot">
     <div class="leg leg--left">
       <div class="foot"></div>
@@ -166,28 +20,157 @@ background-color: brown;
       <div class="foot"></div>
     </div>
     <section class="body">
-    <div class="head">
-      <div class="hat"></div>
-      <div class="eye eye--left"> <div class="inside-eye-left"></div></div>
-      <div class="eye eye--right"><div class="inside-eye-right"></div></div>
-      
-     
-      <div class="nose"></div>
-      <div class="mouth"></div>
-    </div>
+      <div class="head">
+        <div class="hat"></div>
+        <div class="eye eye--left">
+          <div class="inside-eye-left">
+          
+            <img class="gif" src="https://i.pinimg.com/originals/1a/33/ab/1a33ab0abdb651b19bdde7264ca23f1b.gif"alt="">
+          </div>
+        </div>
+        <div class="eye eye--right">
+          <div class="inside-eye-right">
+            <img class="gif" src="https://i.pinimg.com/originals/1a/33/ab/1a33ab0abdb651b19bdde7264ca23f1b.gif" alt="">
+          </div>
+        </div>
+
+
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </div>
     </section>
+
     <div class="arm arm--left">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#0099ff" fill-opacity="1"
-          d="M0,160L60,133.3C120,107,240,53,360,53.3C480,53,600,107,720,117.3C840,128,960,96,1080,101.3C1200,107,1320,149,1380,170.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-        </path>
-      </svg>
-      <div class="hand"></div>
+
+      <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+
     </div>
     <div class="arm arm--right">
-      <div class="hand"></div>
+
+      <svg class="right" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384.72 341.6"
+         0 0 384.72 341.6;" xml:space="preserve">
+
+        <path class="st0" d="M150.72,287.74c9.34-11.12-1.53-39.78-8.96-59.36c-0.68-1.79-1.5-3.9-1.5-3.91c-2.18-5.65-4.66-11.83-7.79-19.3
+	c-2.9-6.9-5.24-12.24-6.07-14.13C106.43,145.71,92.92,96.7,68.46,54.02c-2.54-4.44-7.44-12.65-7.48-23.83
+	c-0.04-13.44,7-22.69,4.58-24.59C63.54,4,56.94,9.28,53.09,14.66c-2.46,3.44-3.73,6.83-4.42,9.16c-3.67-1.31-9.08-2.76-15.67-2.78
+	C21.19,21.01,8.91,25.6,9.1,28.47c0.11,1.73,4.74,2.77,6.49,3.15c2.24,0.49,5.19,0.37,10.99,0.12c2.13-0.09,4.57-0.23,4.57-0.23
+	c0,0-0.73,0.04-1.55,0.08c-1.77,0.09-2.95,0.15-3.02,0.15c-2.92,0.14-16.49,0.79-18.03,6.5c-0.43,1.58,0.11,3.38,1,4.42
+	c1.71,2.02,4.72,1.25,9.42,0.93c7.26-0.49,12.28,0.5,12.28,0.67c0,0.49-21.79-0.47-22.57,4.01c-0.33,1.92,3.2,4.63,6.18,5.64
+	c3.16,1.07,4.88-0.04,11.14-0.25c1.05-0.03,4.58-0.15,7.28,0.25c2.07,0.3,7.09,1.41,13.82,7.97c7.55,7.36,11.67,16.4,17.25,28.78
+	c3.79,8.42,7.43,17.25,11.96,29.44c2.22,5.98,5.97,16.85,13.36,38.63c12.96,38.15,12.04,34.97,14.18,41.74
+	c8.18,25.83,12.27,38.75,15.55,52.24c0,0,7.26,33.01,14.35,39.15c0.61,0.53,1.3,0.91,1.3,0.91c0,0,0.9,0.48,1.94,0.74
+	C141.99,294.76,147.65,291.39,150.72,287.74z" />
+        <path class="st0" d="M127.62,218.25c-0.06,1.39-1.51,2.36-1.83,2.57c-1.85,1.24-3.52,0.46-6.54,0.29c-5.39-0.3-7.37,1.77-8.6,0.33
+	c-1.14-1.34-0.48-4.36,0.8-6.15c2.38-3.32,7.05-2.61,8.41-2.4C123.39,213.45,127.72,215.8,127.62,218.25z" />
+        <path class="st0" d="M259.57,25.65" />
+        <path class="st0" d="M137.9,58.47" />
+        <path class="st0" d="M134.29,290.97c6.4-3.29,12.79-6.59,19.19-9.88" />
+        <path class="st0" d="M461.16,351.03c0.03-0.31,0.14-0.48,0.22-0.57c0.34-0.4,1.05-0.42,2.37-0.01c1.61,0.5,2.76,1.2,3.04,1.36
+	c1.03,0.61,2.55,1.35,4.65,1.85c2.21,1.06,8.17,3.91,13.87,6.18c3.04,1.21,7.36,2.8,8.06,3.05c1.36,0.49,2.66,0.95,2.66,0.95
+	c2.73,0.96,4.35,1.48,12.41,4.35c0,0,5.36,1.92,10.66,3.83c11.16,4.01,34.45,13.07,101.7,43.3c10.68,4.8,78.78,36.41,79.09,51.93
+	c0.1,4.93-1.87,11.6-6.28,14.44c-0.92,0.59-1.88,0.91-1.88,0.91c0,0-0.74,0.24-1.52,0.31c-9.04,0.84-35.28-17.66-35.28-17.66
+	c-11.19-6.12-24.38-13.24-39.24-21.1c-21.06-11.13-31.58-16.69-46.53-23.96c-1.72-0.84-1.57-0.76-8.32-3.9
+	c-3.91-1.82-20.2-9.3-32.26-15.05c-6.53-3.11-13.13-6.36-26.35-12.86c-6.22-3.06-10.32-5.1-15.51-7.76
+	c-6.1-3.14-11.16-5.83-14.74-7.76" />
+        <path class="st0" d="M286.49,46.66" />
+        <path class="st0" d="M219.16,161.27" />
+        <path class="st0" d="M204.13,316.76" />
+        <path class="st0" d="M134.58,211.12c0.74,5.25,0.11,9.22-1.53,9.84c-0.91,0.34-2.01-0.37-2.19-0.49c-1.33-0.9-1.69-2.64-2.15-4.89
+	c-0.1-0.49-0.35-1.7-0.38-2.96c-0.12-4.69,2.77-8.87,3.44-9.82" />
+        <path class="st1" d="M141.76,228.39" />
+        <path class="st0" d="M135.32,218.83" />
+        <path class="st0" d="M136.54,221.69" />
+        <path class="st0" d="M128.98,224.74c0.5,1.22-0.06,2.72-0.61,3.54c-0.8,1.2-1.89,1.41-7.15,2.23c-4.77,0.74-5.76,0.85-7.07,0.16
+	c-0.53-0.28-2.06-1.08-2.67-2.93c-0.41-1.23-0.41-2.93,0.38-4.08c0.62-0.91,1.73-1.46,7.68-1.15
+	C128.04,222.95,128.77,224.22,128.98,224.74z" />
+        <path class="st0" d="M131.59,234.93c-0.62,1.94-3.02,2.39-6.61,3.06c-2.52,0.47-6.59,1.17-9.34-1.1c-1.17-0.97-1.36-1.87-1.41-2.17
+	c-0.19-1.21,0.44-2.41,1.18-3.07c0.8-0.72,1.56-0.67,3.78-0.83c1.06-0.08,2.67-0.26,5.89-0.63c3.33-0.38,3.82-0.6,4.61-0.12
+	C131.17,230.94,132.12,233.25,131.59,234.93z" />
+        <path class="st0" d="M127.83,239.13" />
+        <path class="st0" d="M90.87,277.98" />
+        <path class="st0" d="M140.26,224.48" />
+        <path class="st0" d="M143.09,224.76" />
+        <path class="st0" d="M140.91,225.35c-0.19,0-0.39,0-0.58,0" />
+        <ellipse transform="matrix(0.1066 -0.9943 0.9943 0.1066 -98.6042 343.0658)" class="st0" cx="141.6" cy="226.4"
+          rx="0.61" ry="0.43" />
+        <path class="st2" d="M0,145.52" />
+        <path class="st0" d="M162.07,311.48c-1.28-2.71-2.53-4.88-3.51-6.45c-1.9-3.06-2.88-4.62-4.4-5.77c-2.44-1.85-3.68-1.15-5.48-2.7
+	c-1.25-1.08-2.69-3.17-3.02-7.69c1.18-0.44,2.35-0.88,3.53-1.32c0.79,3.29,2.14,4.85,3.25,5.66c1.43,1.04,2.39,0.81,4.02,1.89
+	c1.89,1.24,2.76,2.98,3.76,4.87c5.2,9.89,7.73,12.74,6.54,14.62c-0.32,0.5-0.87,0.89-1.43,0.92
+	C164.15,315.55,162.9,313.98,162.07,311.48z" />
+        <path class="st0" d="M163.99,306.34" />
+        <path class="st0" d="M154.46,383.25" />
+        <path class="st0" d="M145.57,307.02c0.34-2.86-0.71-5.21-0.97-5.8c-1.02-2.29-2.12-2.32-2.8-4.13c-0.47-1.26-0.72-3.3,0.65-6.55
+	c1.91-1.37,2.7-1.4,3.06-1.1c0.95,0.79-1.2,3.88,0.06,6.9c0.6,1.42,1.26,1.18,2.09,2.97c0.19,0.41,0.58,1.33,0.86,4.92
+	c0.26,3.39,0.38,5.1-0.36,5.95c-0.93,1.09-2.74,1.36-3.28,0.68C144.38,310.24,145.3,309.25,145.57,307.02z" />
+        <path class="st0" d="M131.49,341.6" />
+      </svg>
+
+      
+<svg class="left" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+  y="0px" viewBox="0 0 384.72 341.6" style="enable-background:new 0 0 384.72 341.6;" xml:space="preserve">
+
+  <path class="st0" d="M-396.14,521.57c9.34-11.12-1.53-39.78-8.96-59.36c-0.68-1.79-1.5-3.9-1.5-3.91
+	c-2.18-5.65-4.66-11.83-7.79-19.3c-2.9-6.9-5.24-12.24-6.07-14.13c-19.97-45.35-33.48-94.36-57.94-137.04
+	c-2.54-4.44-7.44-12.65-7.48-23.83c-0.04-13.44,7-22.69,4.58-24.59c-2.03-1.59-8.63,3.69-12.48,9.07c-2.46,3.44-3.73,6.83-4.42,9.16
+	c-3.67-1.31-9.08-2.76-15.67-2.78c-11.82-0.03-24.1,4.56-23.91,7.43c0.11,1.73,4.74,2.77,6.49,3.15c2.24,0.49,5.19,0.37,10.99,0.12
+	c2.13-0.09,4.57-0.23,4.57-0.23c0,0-0.73,0.04-1.55,0.08c-1.77,0.09-2.95,0.15-3.02,0.15c-2.92,0.14-16.49,0.79-18.03,6.5
+	c-0.43,1.58,0.11,3.38,1,4.42c1.71,2.02,4.72,1.25,9.42,0.93c7.26-0.49,12.28,0.5,12.28,0.67c0,0.49-21.79-0.47-22.57,4.01
+	c-0.33,1.92,3.2,4.63,6.18,5.64c3.16,1.07,4.88-0.04,11.14-0.25c1.05-0.03,4.58-0.15,7.28,0.25c2.07,0.3,7.09,1.41,13.82,7.97
+	c7.55,7.36,11.67,16.4,17.25,28.78c3.79,8.42,7.43,17.25,11.96,29.44c2.22,5.98,5.97,16.85,13.36,38.63
+	c12.96,38.15,12.04,34.97,14.18,41.74c8.18,25.83,12.27,38.75,15.55,52.24c0,0,7.26,33.01,14.35,39.15c0.61,0.53,1.3,0.91,1.3,0.91
+	c0,0,0.9,0.48,1.94,0.74C-404.87,528.59-399.21,525.22-396.14,521.57z" />
+  <path class="st0" d="M-419.24,452.08c-0.06,1.39-1.51,2.36-1.83,2.57c-1.85,1.24-3.52,0.46-6.54,0.29c-5.39-0.3-7.37,1.77-8.6,0.33
+	c-1.14-1.34-0.48-4.36,0.8-6.15c2.38-3.32,7.05-2.61,8.41-2.4C-423.46,447.28-419.14,449.63-419.24,452.08z" />
+  <path class="st0" d="M-287.29,259.48" />
+  <path class="st0" d="M-408.95,292.3" />
+  <path class="st0" d="M-412.57,524.8c6.4-3.29,12.79-6.59,19.19-9.88" />
+  <path class="st0" d="M80.43,78.34c0.03-0.31,0.14-0.48,0.22-0.57c0.34-0.4,1.05-0.42,2.37-0.01c1.61,0.5,2.76,1.2,3.04,1.36
+	c1.03,0.61,2.55,1.35,4.65,1.85c2.21,1.06,8.17,3.91,13.87,6.18c3.04,1.21,7.36,2.8,8.06,3.05c1.36,0.49,2.66,0.95,2.66,0.95
+	c2.73,0.96,4.35,1.48,12.41,4.35c0,0,5.36,1.92,10.66,3.83c11.16,4.01,34.45,13.07,101.7,43.3c10.68,4.8,78.78,36.41,79.09,51.93
+	c0.1,4.93-1.87,11.6-6.28,14.44c-0.92,0.59-1.88,0.91-1.88,0.91c0,0-0.74,0.24-1.52,0.31c-9.04,0.84-35.28-17.66-35.28-17.66
+	c-11.19-6.12-24.38-13.24-39.24-21.1c-21.06-11.13-31.58-16.69-46.53-23.96c-1.72-0.84-1.57-0.76-8.32-3.9
+	c-3.91-1.82-20.2-9.3-32.26-15.05c-6.53-3.11-13.13-6.36-26.35-12.86c-6.22-3.06-10.32-5.1-15.51-7.76
+	c-6.1-3.14-11.16-5.83-14.74-7.76" />
+  <path class="st0" d="M-260.37,280.48" />
+  <path class="st0" d="M-327.7,395.1" />
+  <path class="st0" d="M-342.73,550.59" />
+  <path class="st0" d="M-412.28,444.95c0.74,5.25,0.11,9.22-1.53,9.84c-0.91,0.34-2.01-0.37-2.19-0.49c-1.33-0.9-1.69-2.64-2.15-4.89
+	c-0.1-0.49-0.35-1.7-0.38-2.96c-0.12-4.69,2.77-8.87,3.44-9.82" />
+  <path class="st1" d="M-405.1,462.21" />
+  <path class="st0" d="M-411.54,452.66" />
+  <path class="st0" d="M-410.31,455.52" />
+  <path class="st0" d="M-417.88,458.57c0.5,1.22-0.06,2.72-0.61,3.54c-0.8,1.2-1.89,1.41-7.15,2.23c-4.77,0.74-5.76,0.85-7.07,0.16
+	c-0.53-0.28-2.06-1.08-2.67-2.93c-0.41-1.23-0.41-2.93,0.38-4.08c0.62-0.91,1.73-1.46,7.68-1.15
+	C-418.82,456.78-418.09,458.05-417.88,458.57z" />
+  <path class="st0" d="M-415.27,468.76c-0.62,1.94-3.02,2.39-6.61,3.06c-2.52,0.47-6.59,1.17-9.34-1.1c-1.17-0.97-1.36-1.87-1.41-2.17
+	c-0.19-1.21,0.44-2.41,1.18-3.07c0.8-0.72,1.56-0.67,3.78-0.83c1.06-0.08,2.67-0.26,5.89-0.63c3.33-0.38,3.82-0.6,4.61-0.12
+	C-415.69,464.77-414.74,467.08-415.27,468.76z" />
+  <path class="st0" d="M-419.03,472.96" />
+  <path class="st0" d="M-455.99,511.81" />
+  <path class="st0" d="M-406.59,458.31" />
+  <path class="st0" d="M-403.77,458.59" />
+  <path class="st0" d="M-405.95,459.18c-0.19,0-0.39,0-0.58,0" />
+  <ellipse transform="matrix(0.1066 -0.9943 0.9943 0.1066 -819.6707 8.2294)" class="st0" cx="-405.26" cy="460.23"
+    rx="0.61" ry="0.43" />
+  <path class="st2" d="M-546.86,379.35" />
+  <path class="st0" d="M-384.79,545.31c-1.28-2.71-2.53-4.88-3.51-6.45c-1.9-3.06-2.88-4.62-4.4-5.77c-2.44-1.85-3.68-1.15-5.48-2.7
+	c-1.25-1.08-2.69-3.17-3.02-7.69c1.18-0.44,2.35-0.88,3.53-1.32c0.79,3.29,2.14,4.85,3.25,5.66c1.43,1.04,2.39,0.81,4.02,1.89
+	c1.89,1.24,2.76,2.98,3.76,4.87c5.2,9.89,7.73,12.74,6.54,14.62c-0.32,0.5-0.87,0.89-1.43,0.92
+	C-382.71,549.38-383.96,547.81-384.79,545.31z" />
+  <path class="st0" d="M-382.86,540.17" />
+  <path class="st0" d="M-392.4,617.08" />
+  <path class="st0" d="M-401.29,540.85c0.34-2.86-0.71-5.21-0.97-5.8c-1.02-2.29-2.12-2.32-2.8-4.13c-0.47-1.26-0.72-3.3,0.65-6.55
+	c1.91-1.37,2.7-1.4,3.06-1.1c0.95,0.79-1.2,3.88,0.06,6.9c0.6,1.42,1.26,1.18,2.09,2.97c0.19,0.41,0.58,1.33,0.86,4.92
+	c0.26,3.39,0.38,5.1-0.36,5.95c-0.93,1.09-2.74,1.36-3.28,0.68C-402.48,544.07-401.55,543.08-401.29,540.85z" />
+  <path class="st0" d="M-415.37,575.43" />
+</svg>
+
+
     </div>
-    
+    <div class="hand"></div>
 </body>
 
 </html>
