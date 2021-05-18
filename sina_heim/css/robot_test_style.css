@@ -1,19 +1,19 @@
-body {
-  background: black;
-}
+
 
 .container {
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
   display: grid;
   place-items: center;
 }
-div {
-  background-color: silver;
+.ball {
+  background-color: blue;
   height: 250px;
   width: 250px;
   display: block;
-  position: relative;
+  position: fixed;
+  left: 40%;
+  top: 40%;
   border-radius:30% 70% 70% 30% / 30% 30% 70% 70% ;
   animation: morph 3s linear infinite alternate;
 }
@@ -22,4 +22,50 @@ div {
     border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
   100% {
     border-radius: 40% 60%; }
+}
+
+
+
+.parallax {
+  padding:0px;
+  perspective: 1px;
+  height: 100vh;
+  font-size:40px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+.content{
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity:.7;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 50vh 0;
+}
+.base {
+  font-family: 'Droid Sans', sans-serif;
+  transform: translateZ(-2px) scale(3);
+  color:black;
+}
+.closer {
+  font-family: 'Droid Sans', sans-serif;
+  transform: translateZ(-1px) scale(2);
+  font-size:300%;
+  color:black;
+}
+.closest {
+  font-family: 'Droid Sans', sans-serif;
+  transform: translateZ(0);
+  color: black;
+  font-size:700%;
 }
