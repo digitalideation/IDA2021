@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="index.php?signin" 
+    class="topopup asignin  black" id="aaddissue" 
+    data-balloon-length="medium" data-balloon="add issue" d
+    ata-balloon-pos="bottom">I</a>
+    
+</body>
+</html>
+
+<script>
+    // create an Outlayer layout class
+    var MasonryHorizontal = LayoutMode.create('masonryHorizontal');
+    var proto = MasonryHorizontal.prototype;
+  
+    proto._resetLayout = function() {
+      this.getRowHeight();
+      this._getMeasurement( 'gutter', 'outerHeight' );
+  
+      this.rowHeight += this.gutter;
+      // measure rows
+      this.rows = Math.floor( ( this.isotope.size.innerHeight + this.gutter ) / this.rowHeight );
+      this.rows = Math.max( this.rows, 1 );
+  
+      // reset row Xs
+      var i = this.rows;
+      this.rowXs = [];
+      while (i--) {
+        this.rowXs.push( 0 );
+      }
+  
+      this.maxX = 0;
+    };
+
+
+</script>
