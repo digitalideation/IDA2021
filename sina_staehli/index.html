@@ -7,56 +7,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - Sina Stähli</title>
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 
 </head>
 
 <style>
+
   body {
       margin: 0px;
       padding: 0px;
       font-family: 'Montserrat', sans-serif;
-      background-color: black;
+      background-color: white;
+      list-style: none;
+      text-decoration: none;
   }
   
   .box {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
+      text-align: center;
       font-family: 'Montserrat', sans-serif;
-      border: 1px solid white;
-      color: white;
+      font-weight: 400;
+      /*border: 3px solid black;*/
+      color: black;
       padding: 6px;
-      width: 99.2%;
-      line-height: 120%;
+      width: 99%;
+      line-height: 1340%;
+      list-style: none;
+      text-decoration: none;
   }
 
   li{
+    font-weight: 400;
+    font-size: 600%;
     list-style: none;
+    text-decoration: none;
+
   }
 
   h1 {
-    color: white;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    font-size: 80%;
+
   }
 
-  p {
-    color: white;
+  .robotworld {
+      width: 100%;
+      border: 3px solid black;
+      
   }
+
+  .robotworld:hover {
+      background-color: rgb(255, 85, 23);
+      font-style: oblique;
+
+  }
+
+  .song {
+      width: 100%;
+      border: 3px solid black;
+      
+  }
+
+  .song:hover {
+      background-color: rgb(255, 75, 159);
+      font-style: oblique;
+
+  }
+
+  .process {
+    width: 100%;
+      border: 3px solid black;
+      
+  }
+
+  .process:hover {
+      background-color: rgb(104, 40, 255);
+      font-style: oblique;
+  }
+
+
+  .home {
+    width: 100%;
+      border: 3px solid black;
+      
+  }
+
 
 </style>
 
 
 <body>
-  
+    <h1>Sina Stähli</h1>
+
     <div class="box mainrow">
-      <li>Home</li>
-      <li><a href="robotworld.html">My Robot</a></li>
-      <li><a href="song.html">My Song</a></li>
-      <li><a href="process/index.html">Process</a></li>
+      <li class="home">Home</li>
+      <li class="robotworld"><a href="robotworld.html">My Robot</a></li>
+      <li class="song"><a href="song.html">My Song</a></li>
+      <li class="process"><a href="process/index.html">Process</a></li>
     </div>
 
-  <h1>Sina Stähli</h1>
-  <p>Hi! This webpage is still under construction.</p>
+  
 </body>
 
 </html>

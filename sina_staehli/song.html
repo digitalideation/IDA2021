@@ -19,6 +19,14 @@
       background-color: white;
   }
   
+
+  img {
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+  }
+
   .box {
       display: flex;
       flex-direction: row;
@@ -46,10 +54,26 @@
     font-size: 460%;
   }
 
-  span {
+  a {
     font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: black;
   }
 
+  a div {
+    position: absolute;
+    top: -5vw;
+    left: 0px;
+    width: 15vw;
+    height: 15vw;
+    z-index: 1;
+    /*mix-blend-mode: multiply;*/
+    border-radius: 50%;
+    }
+
+  
 
 
 
@@ -60,6 +84,7 @@
 </head>
 
 <body>
+
     <div class="box mainrow">
       <li><a href="index.html">Home</a></li>
       <li><a href="robotworld.html">My Robot</a></li>
@@ -71,30 +96,30 @@
 
   <div class="songtext">
     I want you to want me
-    but you just wanna love me <span class="fortheday">for the day</span>.
+    but you just wanna love me for the <a class="getImg" href="#">day</a>.
     And I can‘t just walk away
-    even though I know you‘re <span>trouble</span>, babe.
+    even though I know you‘re <a class="getImg" href="img/sun_svg.svg">trouble</a>, babe.
 
     So I‘mma take my time,
-    go with the <span>flow</span>, can‘t get too involved.
-    You got a face that I
-    just <span>can‘t say no</span> to.
+    go with the <a class="getImg" href="#">flow</a>, can‘t get too involved.
+    You got a <a class="getImg" href="#">face</a> that I
+    just can‘t say <a class="getImg" href="#">no</a> to.
     Just can‘t say no to you.
 
     You know I want you, baby.
     You know I do.
-    I‘ll give you my heart and the rest is up to you.
-    You <span>ain‘t no good</span> for me, I know it‘s true.
+    I‘ll give you my <a class="getImg" href="#">heart</a> and the rest is up to you.
+    You <a class="getImg" href="#">ain‘t no good</a> for me, I know it‘s true.
     But you don‘t have to be
 
-    ‚cause I do it for the <span>thrill</span>, for the <span>rush</span>.
-    I do it for the <span>pain</span>, for your <span>touch</span>.
-    When I OD, when it‘s too much
+    ‚cause I do it for the <a class="getImg" href="#">thrill</a>, for the <a class="getImg" href="#">rush</a>.
+    I do it for the <a class="getImg" href="#">pain</a>, for your <a class="getImg" href="#">touch</a>.
+    When I <a class="getImg" href="#">OD</a>, when it‘s too much
     if I survive, baby you‘re the one.
-    <span>You‘re the one</span>.
+    <a class="getImg" href="#">You‘re the one</a>.
 
     I feel like I‘m walking
-    the <span>tightrope of love</span> in your circus, babe.
+    the <a class="getImg" href="#">tightrope of love</a> in your circus, babe.
     If I were a fella it‘d be my last day
     even though you‘re right under me.
 
@@ -105,6 +130,31 @@
   
 
 </body>
+
+<script>
+    let els = document.getElementsByTagName("a");
+    for (i in els) {
+        els[i].addEventListener("mouseover", function(event) { //hier wird auf alle a Elemente ein Event listener auf das Event mouseover gelegt
+            if (event.target.className === 'getImg') { // hier wird gefragt ob sie die Klasse getImg besitzen
+
+                let div = document.createElement('div'); //hier wird ein Div kreiiert
+                //hier wird dem div zwei background images zugewiesen. Der Trick ist, den Inhalt vom a über event.target.innerHTML abzufragen und der URL mitzugeben
+                div.style.backgroundImage = 'url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=1), url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=2), radial-gradient(rgb(201, 192, 192), rgb(0, 140, 255))';
+                //hier wird das CSS konstruiert
+                div.style.backgroundPosition = '0 0, 0 50px, 0 0';
+                div.style.backgroundBlendMode = 'overlay, screen';
+                div.style.backgroundSize = 'cover, cover';
+                //hier wird das kreierte div dem a angehängt
+                event.target.appendChild(div);
+                //hier wird die Klasse getImg entfernt -- sonst würden bei jedem mouseover event immer neue Bilder hinzugefügt
+                event.target.classList.remove("getImg");
+                // hier wird der Textstil auf weiss gesetzt 
+                event.target.setAttribute("class", "white");
+            }
+
+        }, false);
+    }
+</script>>
 
 
 </html>
