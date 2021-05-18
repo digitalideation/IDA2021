@@ -1,17 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <title>Get Random Image from API</title>
     <style>
-        
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 4vw;
+            font-weight: 200;
+        }
+
+        .songtext {
+            z-index: 5;
+            position: relative;
+        }
+
+        a {
+            font-weight: 400;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            color: black;
+        }
+
+        a div {
+            position: absolute;
+            top: -5vw;
+            left: 0px;
+            width: 15vw;
+            height: 15vw;
+            z-index: 1;
+            mix-blend-mode: multiply;
+            border-radius: 50%;
+        }
+
+        a div img {
+            width: 100%;
+            display: block;
+            ;
+        }
+
+        a.white {
+            color: white;
+        }
     </style>
 </head>
-<body>
-    <div class="radial-gradient"></div>
-</body>
 
-<script></script>
+<body>
+
+
+    Oh my God, oh my God<br>
+    This <a class="getImg" href="#">feeling's</a> just begun<br>
+    I'm saying <a class="getImg" href="#">things</a> I've never said<br>
+    Doing <a class="getImg" href="#">things</a> I've never done<br>
+    
+    Oh my God, oh my God<br>
+    When I see you I should <a class="getImg" href="#">run</a><br>
+    But I'm <a class="getImg" href="#">frozen</a>in motion<br>
+    And my <a class="getImg" href="#"></a>head </a>tells me to <a class="getImg" href="#">stop</a><br>
+    Tells me to stop
+
+</body>
+<script>
+    let els = document.getElementsByTagName("a");
+    for (i in els) {
+        els[i].addEventListener("mouseover", function (event) { //hier wird auf alle a Elemente ein Event listener auf das Event mouseover gelegt
+            if (event.target.className === 'getImg') { // hier wird gefragt ob sie die Klasse getImg besitzen
+
+                let div = document.createElement('div'); //hier wird ein Div kreiiert
+                //hier wird dem div zwei background images zugewiesen. Der Trick ist, den Inhalt vom a über event.target.innerHTML abzufragen und der URL mitzugeben
+                div.style.backgroundImage = 'url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=1), url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=2), radial-gradient(#010c55, #093979, #ff0072 ';
+                //hier wird das CSS konstruiert
+                div.style.backgroundPosition = '0 0, 0 50px, 0 0';
+                div.style.backgroundBlendMode = 'overlay, screen';
+                div.style.backgroundSize = 'cover, cover';
+                //hier wird das kreierte div dem a angehängt
+                event.target.appendChild(div);
+                //hier wird die Klasse getImg entfernt -- sonst würden bei jedem mouseover event immer neue Bilder hinzugefügt
+                event.target.classList.remove("getImg");
+                // hier wird der Textstil auf weiss gesetzt 
+                event.target.setAttribute("class", "white");
+            }
+
+        }, false);
+    }
+</script>>
+
+</html>
+</script>
 </html>
