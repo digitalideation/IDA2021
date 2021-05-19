@@ -1,0 +1,36 @@
+body {
+  height: 100vmin;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box, .box2 {
+  width: 200px;
+  height: 200px;
+  background-color: dodgerblue;
+  animation: spin 1s linear infinite 0s alternate forwards;
+  position: relative;
+}
+
+.box2 {
+  position: absolute;
+  top: 100%;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform:rotate(-30deg) ;
+    background-color: red;
+  }
+}
