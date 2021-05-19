@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vmin;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            animation-name: spin;
+            animation-duration: 3s;
+            animation-delay: 0s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+            animation-fill-mode: backwards; 
+            animation: spin 3s linear .5s 1 noraml forwards;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0);
+            }
+
+            25% {
+                transform: rotateY(180deg);
+            }
+
+            50% {
+                transform: translateY(-100%) rotateZ(180deg);
+
+            }
+
+
+            100% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: royalblue;
+            } 
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html>
