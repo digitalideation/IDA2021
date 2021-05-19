@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.frog {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 100px;
+    font-size: 200%;
+    transform: translateX(25%);
+}
+
+.frog .part {
+    width: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100vh 0;
+    /* transform: translateZ(0px); */
+}
+
+.part:nth-child(1) {
+    transform: translateZ(-10px) scale(1.3);
+}
+
+.part:nth-child(2) {
+    transform: translateZ(-20px) scale(1.6);
+}

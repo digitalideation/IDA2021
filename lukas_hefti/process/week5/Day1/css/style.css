@@ -1,0 +1,72 @@
+
+/* All */
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* attribute */
+
+body {
+    margin: 0px;
+}
+
+
+main {
+    
+
+}
+
+    main article p {
+        margin: 0;
+        padding-top: 30px;
+        font-size: 2em;
+    }
+
+    main article {
+        background-color: rgb(174, 162, 154);
+        min-height: 400px;
+
+    }
+
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* The scale factor can be calculated with 1 + (translateZ * -1) / perspective.
+    For example, if our viewport perspective is set to 1px and we translate an
+    element -2px along the Z axis the correction scale factor would be 3: */
+
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+    background-color: rgb(186, 103, 48);
+}
+
+.parallax__group {
+    position: relative;
+    height: 100vh; /* fill the viewport */
+    transform-style: preserve-3d;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

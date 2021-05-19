@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <title>Document</title>
+    <style>
+         :root {
+            --hue: 100;
+        }
+        
+        #scrolly {
+            position: relative;
+        }
+        
+        article {
+            position: relative;
+            padding: 0 1rem;
+            margin: 0 auto;
+            width: 33%;
+        }
+        
+        .step {
+            margin: 2rem auto 4rem auto;
+            background-color: #3b3b3b;
+            color: #fff;
+        }
+        
+        .step.is-active {
+            background-color: goldenrod;
+            color: #3b3b3b;
+        }
+        
+        .step p {
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        h1.intro__hed {
+            color: hsl(var(--hue), 100%, 56%);
+            /* color: dodgerblue; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="intro">
+        <h1 class="intro__hed" data-hue="10">Basic Example</h1>
+        <p class="intro__dek">
+            Start scrolling to see how it works.
+        </p>
+    </section>
+    <section id="scrolly">
+        <article>
+            <div class="step is-active" data-step="1" style="padding: 309px 0px;" data-scrollama-index="0">
+                <p>STEP 1</p>
+            </div>
+            <div class="step" data-step="2" style="padding: 101px 0px;" data-scrollama-index="1">
+                <p>STEP 2</p>
+            </div>
+            <div class="step" data-step="3" style="padding: 274px 0px;" data-scrollama-index="2">
+                <p>STEP 3</p>
+            </div>
+            <div class="step" data-step="4" style="padding: 230px 0px;" data-scrollama-index="3">
+                <p>STEP 4</p>
+            </div>
+        </article>
+    </section>
+    <section id="outro"></section>
+    <script>
+        // instantiate the scrollama
+        const scroller = scrollama();
+
+        // setup the instance, pass callback functions
+        scroller
+            .setup({
+                step: ".step",
+                debug: true
+            })
+            .onStepEnter((response) => {
+                // { element, index, direction }
+            })
+            .onStepExit((response) => {
+                // { element, index, direction }
+            });
+
+        // setup resize event
+        window.addEventListener("resize", scroller.resize);
+        console.log('scroller', scroller);
+    </script>
+</body>
+
+</html>

@@ -10,14 +10,26 @@ body {
     margin: 0px;
 }
 
+header {
+    position: sticky;
+    top:0;
+    left:0;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #252525;
+    width: 100%;
+    z-index: 100;
+}
+
 nav {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
     display: flex;
-    background-color: #252525;
     box-shadow: 0em 0.1em 10px 0 #252525;
+
 }
 
     nav ul {

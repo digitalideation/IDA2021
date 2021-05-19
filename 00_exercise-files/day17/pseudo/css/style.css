@@ -1,0 +1,41 @@
+body{
+  perspective: 10px;
+  height: 200vh;
+}
+span {
+  color: purple;
+}
+
+span::before {
+  content: 'Yesterday';
+}
+
+span::after {
+  content: 'Tomorrow';
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: darkorange;
+  position: relative;
+}
+
+
+.box::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: purple;
+  position: absolute;
+  top: 50px;
+  left:50px;
+}
+
+.backbox {
+  width: 400px;
+  height: 400px;
+  background:salmon;
+  position: absolute;
+  transform: translateZ(-100px);
+}

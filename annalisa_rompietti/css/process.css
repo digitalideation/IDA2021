@@ -1,6 +1,6 @@
 
 body {
-    background-color: blueviolet;
+    background-color: grey;
 }
 
 .allbobles{
@@ -19,7 +19,7 @@ width: 100%;
 height: 100%;
     position: -webkit-sticky;
     position: sticky;
- /*z-index: -1;*/
+ /* z-index: -1; */
     top: 0;
 }
 
@@ -41,4 +41,8 @@ color: black;
 *a{
     position: relative;
     z-index: 4;
+}
+
+.links{
+    margin-top: 500px;
 }

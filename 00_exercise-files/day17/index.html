@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/typo.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>IDA Digital Design 2021 - Day 17</title>
+</head>
+<body>
+  <div class="main-ctnr">
+    <header>
+      <a target="_blank" href="/" class="homelink">&#8592; Home</a>
+      <p style="margin-bottom: 0">IDA Module, Day 17</p>
+      <h1>Motion &amp; Performance</h1>
+    </header>
+    <p>Good morning and welcome to Day 17!</p>
+    <p>
+      <strong>
+        <mark>Note:</mark> I have to go quickly to the Migrationsamt this morning, so please start without me.
+      </strong> I will give some short inputs starting at 10:30. After lunch I will be available for 20-minute Office Hours sessions. You will have to <a href="https://docs.google.com/spreadsheets/d/1ZAg00oksRpOnx2CTy1-4XEj20i9C84kNP3r8TAq8IDM/edit?usp=sharing">
+        sign up if you want a session
+      </a>.
+    </p>
+    <h5>Agenda Today</h5>
+    <ul>
+      <li><strong>10:30:</strong> Short Input: CSS Animations (this page)</li>
+      <li><strong>11:00:</strong> Short Input: GPU & Performance (<a target="_blank" href="./2_GPU/index.html">demo page</a>)</li>
+      <li><strong>11:15:</strong> Other demos— Parallax? Audio? <a target="_blank" href="https://www.jcchouinard.com/install-git-in-vscode/">Git</a>?</li>
+      <li><strong>After lunch:</strong> Office Hours (<a target="_blank" href="https://docs.google.com/spreadsheets/d/1ZAg00oksRpOnx2CTy1-4XEj20i9C84kNP3r8TAq8IDM/edit?usp=sharing">20min sessions</a>)</li>
+    </ul>
+    <p>Presentations are on <mark>Friday</mark>. Try to focus today on getting your project ready to present. Below are some topics to explore today.</p>
+    <hr>
+    <h3>Adding Audio</h3>
+    <p>It may be time to start adding audio to your pages and triggering the play/pause function with a button. I've added a simple demo here: <a target="_blank" href="./1_triggering_audio/index.html">Audio Demo</a></p>
+    <p>Check the source code and see how to:</p>
+    <ul>
+      <li>Embed Audio in a page with an <mark>audio</mark> element.</li>
+      <li>Trigger the play/pause with JavaScript.</li>
+      <li>Use the same function to add/remove a class on the <mark>body</mark> element.</li>
+    </ul>
+    <hr>
+    <h3>CSS Animations</h3>
+    <p>Let's try something like this using layered CSS animations:</p>
+    <div class="legs">
+      <div class="leg-wrapper">
+        <div class="leg">
+          <div class="lower">
+          </div>
+        </div>
+      </div>
+      <div class="leg-wrapper">
+        <div class="leg">
+          <div class="lower">
+          </div>
+        </div>
+      </div>
+      <div class="leg-wrapper">
+        <div class="leg">
+          <div class="lower">
+          </div>
+        </div>
+      </div>
+        </div>
+        <p>If you'd like to go futher on your own, here's another cool resource:</p>
+        <ul>
+          <li>
+            <a href="https://tobiasahlin.com/blog/curved-path-animations-in-css/">Curved Path Animation in CSS</a>
+          </li>
+        </ul>
+        <hr>
+
+        <!-- GPU -->
+        <h3>GPU Acceleration</h3>
+        <p>Basically: GPU's are really powerful these days. If you can offload the processing of motion on your web page to the GPU, it will perform more smoothly. You can do that by "promoting" an element to a compositing layer by using CSS 3D transforms. What we're trying to do is avoid "repaints" (when the browser has to repaint the whole page because something changed).</p>
+
+        <p>Here's a quick <a target="_blank" href="./2_GPU/index.html">demo page</a>.</p>
+
+        <p>This article gives a nice brief introduction to the topic: <a href="https://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css">Increase Your Site’s Performance with Hardware-Accelerated CSS</a></p>
+
+        <p>Here's another <a target="_blank" href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/">much more in-depth exploration</a> of the topic.</p>
+        <hr>
+        <h3 id="slots">Office Hours Slots</h3>
+        <p>Sign up for a 20min feedback or support session with me here: <a href="https://docs.google.com/spreadsheets/d/1ZAg00oksRpOnx2CTy1-4XEj20i9C84kNP3r8TAq8IDM/edit?usp=sharing">Google Sheet</a></p>
+        <br>
+    </div>
+</body>
+</html>

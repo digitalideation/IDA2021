@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    font-size: 200%;
+}
+
+.box {
+    padding: 100vh 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.box-front {
+    transform: translateZ(0);
+    background-image: radial-gradient(circle at center, red 20%, red 30%, transparent);
+    background-size: 100px 100px;
+}
+
+.box-back {
+    transform: translateZ(-1px) scale(2);
+}

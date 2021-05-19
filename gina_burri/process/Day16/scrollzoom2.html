@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body
+{
+    margin: 0;
+    padding: 0;
+}
+div
+{
+    width: 100%;
+    height: 700px;
+    /* overflow: hidden; */
+    position: relative;
+}
+div img
+{
+    max-width: 200%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+        .main-text {
+  text-align: center;
+  
+}
+.main-text h2 {
+  font-family: merienda;
+  font-size: 40px;
+ 
+}
+.main-text p {
+  font-size: 25px;
+  font-family: roboto;
+  line-height: 35px;
+ 
+}
+    </style>
+
+
+</head>
+<body>
+    <div class="zoom">
+        <img src="/images/james.jpeg">
+       </div>
+    <div class="main-text">
+    </div>
+           <!-- <h2>
+    Main Text</h2>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis doloremque, placeat tenetur minus, aspernatur dolor dolorum porro cum earum saepe aperiam suscipit ipsam. Explicabo blanditiis rem qui quaerat earum totam iusto necessitatibus, consectetur, alias labore, aliquid id dolorem eveniet officia nihil debitis fugit. Quisquam laborum nam libero ea? Deleniti, accusantium!</p>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis doloremque, placeat tenetur minus, aspernatur dolor dolorum porro cum earum saepe aperiam suscipit ipsam. Explicabo blanditiis rem qui quaerat earum totam iusto necessitatibus, consectetur, alias labore, aliquid id dolorem eveniet officia nihil debitis fugit. Quisquam laborum nam libero ea? Deleniti, accusantium!</p>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis doloremque, placeat tenetur minus, aspernatur dolor dolorum porro cum earum saepe aperiam suscipit ipsam. Explicabo blanditiis rem qui quaerat earum totam iusto necessitatibus, consectetur, alias labore, aliquid id dolorem eveniet officia nihil debitis fugit. Quisquam laborum nam libero ea? Deleniti, accusantium!</p>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis doloremque, placeat tenetur minus, aspernatur dolor dolorum porro cum earum saepe aperiam suscipit ipsam. Explicabo blanditiis rem qui quaerat earum totam iusto necessitatibus, consectetur, alias labore, aliquid id dolorem eveniet officia nihil debitis fugit. Quisquam laborum nam libero ea? Deleniti, accusantium!</p>
+    </div> -->
+
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    
+    
+<script>$(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    $(".zoom img").css({
+        width: (100 + scroll/5) + "%"
+    })
+})
+</script>
