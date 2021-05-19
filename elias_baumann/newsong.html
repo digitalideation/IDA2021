@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/newsong.css">
+    <!-- Desktop css is in newsong.css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Elias Robot</title>
+</head>
+
+<body class="tv-effect">
+    <main>
+
+        <div class="desk-icons">
+            <a href="index.html" class="desk-start app">
+                <img src="img/icon/start.png" class="start-icon icon" alt="Start Icon">
+                <p class="start-text">Start</p>
+            </a>
+            <a href="menu.html" class="desk-menu app">
+                <img src="img/icon/menu.png" class="menu-icon icon" alt="Menu Icon">
+                <p class="menu-text">Menu</p>
+            </a>
+            <button id="ASong" onClick="playPause()" class="desk-play app">
+                <audio src="audio/feelslikesummer.mp3" autoplay loop></audio>
+                <img src="img/icon/play.png" class="play-icon icon" alt="Play Icon">
+                <p class="play-text">Play Song</p>
+            </button>
+        </div>
+
+
+        <div id="mydiv" class="desk-window tv-effect">
+            <div id="mydivheader" class="window-header">
+                <p class="header-text">Feels Like Sommer</p>
+                <div class="header-icons">
+                    <div class="header-minimize">
+                        <!-- <span class="fa-minus"></span> -->
+                        <img src="img/minimize.svg" class="minimize-icon">
+                    </div>
+                    <div class="header-big">
+                        <!-- <span class="fa-square"></span> -->
+                        <img src="img/big.svg" class="big-icon">
+                    </div>
+                    <div class="header-close">
+                        <!-- <span class="fa-minus"></span> -->
+                        <img src="img/x.svg" class="close-icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <button onclick="myFunction()">Try it</button>
+                <button onclick="myFunction3()">Try it again</button>
+                <button onclick="myFunction4()">Try it a third time</button>
+
+            </div>
+
+        </div>
+        <div id="myDIVextra2">
+            <div id="mydiv2" class="desk-window2 tv-effect">
+                <div id="mydiv2header2" class="window-header2">
+                    <p class="header-text">Feels Like Sommer</p>
+                    <div class="header-icons">
+                        <div class="header-minimize">
+                            <!-- <span class="fa-minus"></span> -->
+                            <img src="img/minimize.svg" class="minimize-icon">
+                        </div>
+                        <div class="header-big">
+                            <!-- <span class="fa-square"></span> -->
+                            <img src="img/big.svg" class="big-icon">
+                        </div>
+                        <button class="header-close-extra" onclick="myFunction()">
+                            <img src="img/x.svg" class="close-icon">
+                        </button>
+                        <!-- <span class="fa-minus"></span> -->
+                    </div>
+                </div>
+
+                <div class="window-content">
+                </div>
+            </div>
+        </div>
+
+        <div id="myDIVextra3">
+            <div id="mydiv3" class="desk-window3 tv-effect">
+                <div id="mydiv3header3" class="window-header3">
+                    <p class="header-text">Feels Like Sommer</p>
+                    <div class="header-icons">
+                        <div class="header-minimize">
+                            <!-- <span class="fa-minus"></span> -->
+                            <img src="img/minimize.svg" class="minimize-icon">
+                        </div>
+                        <div class="header-big">
+                            <!-- <span class="fa-square"></span> -->
+                            <img src="img/big.svg" class="big-icon">
+                        </div>
+                        <button class="header-close-extra" onclick="myFunction3()">
+                            <img src="img/x.svg" class="close-icon">
+                        </button>
+                        <!-- <span class="fa-minus"></span> -->
+                    </div>
+                </div>
+
+                <div class="window-content">
+                </div>
+            </div>
+        </div>
+
+        <div id="myDIVextra4">
+            <div id="mydiv4" class="desk-window4 tv-effect">
+                <div id="mydiv4header4" class="window-header4">
+                    <p class="header-text">Feels Like Sommer</p>
+                    <div class="header-icons">
+                        <div class="header-minimize">
+                            <!-- <span class="fa-minus"></span> -->
+                            <img src="img/minimize.svg" class="minimize-icon">
+                        </div>
+                        <div class="header-big">
+                            <!-- <span class="fa-square"></span> -->
+                            <img src="img/big.svg" class="big-icon">
+                        </div>
+                        <button class="header-close-extra" onclick="myFunction4()">
+                            <img src="img/x.svg" class="close-icon">
+                        </button>
+                        <!-- <span class="fa-minus"></span> -->
+                    </div>
+                </div>
+
+                <div class="window-content">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer tv-effect">
+        <a href="index.html" class="footer-start">
+            <img src="img/icon/start-button.png" class="footer-start-icon">
+        </a>
+        <div class="footer-time">
+            <p><span class="time" id="clock"></span></p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+
+</body>
+
+</html>

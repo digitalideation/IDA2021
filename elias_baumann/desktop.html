@@ -49,6 +49,25 @@
                 </div>
             </div>
             <div class="window-content">
+                <button id="open-btn">
+                    OPEN THE MODAL
+                  </button>
+                
+                  <!-- Modal Background and Modal -->
+                  <div id="modal-background">
+                    <div id="modal">
+                      <span id="close-btn">&times;</span>
+                      <p>HOWDY FOLKS!</p>
+                      <div class="buttons">
+                        <button class="yes">
+                          YES
+                        </button>
+                        <button class="no">
+                          NO
+                        </button>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </main>
@@ -57,66 +76,13 @@
             <img src="img/icon/start-button.png" class="footer-start-icon">
         </a>
         <div class="footer-time">
-            <p><span class="time" id="datetime"></span></p>
+            <p><span class="time" id="clock"></span></p>
         </div>
     </footer>
 
-    <script>
-        var dt = new Date();
-        document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
-    </script>
+    <script type="text/javascript" src="js/script.js"></script>
 
-    <script>
-
-        dragElement(document.getElementById(("mydiv")));
-
-        function dragElement(elmnt) {
-            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-            if (document.getElementById(elmnt.id + "header")) {
-                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-            } else {
-                elmnt.onmousedown = dragMouseDown;
-            }
-
-            function dragMouseDown(e) {
-                e = e || window.event;
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                document.onmouseup = closeDragElement;
-                document.onmousemove = elementDrag;
-            }
-
-            function elementDrag(e) {
-                e = e || window.event;
-                pos1 = pos3 - e.clientX;
-                pos2 = pos4 - e.clientY;
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-            }
-
-            function closeDragElement() {
-                document.onmouseup = null;
-                document.onmousemove = null;
-            }
-        }
-
-    </script>
-    <script>
-        var aud = document.getElementById("ASong").children[0];
-        var isPlaying = false;
-        aud.pause();
-      
-        function playPause() {
-          if (isPlaying) {
-            aud.pause();
-          } else {
-            aud.play();
-          }
-          isPlaying = !isPlaying;
-        }
-      </script>
+    
       
 </body>
 
