@@ -1,0 +1,30 @@
+.frogsvg{
+    width: 50%;
+    height:50%;
+}
+
+
+
+
+/* PARALLAX SCROLL STYLE */
+
+.parallax{
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax__layer{
+    position: absolute;
+  
+  }
+
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+
+  .parallax__layer--back {
+    transform: translateZ(-1px);
+  }
+
