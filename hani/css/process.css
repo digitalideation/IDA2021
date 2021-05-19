@@ -2,9 +2,9 @@ body {
     width: 100vw;
     height: 100vw;
       background: rgb(55,14,105);
-background: radial-gradient(circle, rgb(86, 22, 165) 0%, rgba(15,0,33,1) 100%);
-  background-color: #5417c7;
- /* background-image: url("https://www.transparenttextures.com/patterns/textured-paper.png");  */
+background: url("https://www.transparenttextures.com/patterns/textured-paper.png"), radial-gradient(circle, rgb(102, 34, 184) 0%, rgb(45, 6, 92) 100%);
+  /* background-color: #5417c7; */
+background-blend-mode: multiply, screen;
 
 
 }
@@ -92,6 +92,9 @@ margin-top: 8%;
 border: solid #BE79F4;
 border-width: 0.10ex;
 margin-top: 17%;
+animation-name: bazi ;
+animation-duration: 2s ;
+transition: all 5s;
 }
 .circle-one3 {
        width: 17vw;
@@ -115,13 +118,8 @@ text-align: center;
 
     position: absolute;
 }
-.circle-one:hover {
-animation-name: bazi ;
-animation-duration: 2s ;
-animation-timing-function: ease-out;
+.circle-one2:hover {
+
+transform: scale(1.5);
 }
-@keyframes bazi {
-    0% {
-  
-    }
-}
+

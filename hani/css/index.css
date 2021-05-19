@@ -9,8 +9,8 @@ body {
     /* background:linear-gradient(180deg,#370e69 0,#0f0021);
     background-size: cover; */
    background: rgb(55,14,105);
-background: radial-gradient(circle, rgba(55,14,105,1) 0%, rgba(15,0,33,1) 100%);
-    
+background: url("https://www.transparenttextures.com/patterns/textured-paper.png"), radial-gradient(circle, rgba(55,14,105,1) 0%, rgba(15,0,33,1) 100%);
+    background-blend-mode: multiply, screen;
   }
 
   .loader {
@@ -70,8 +70,9 @@ background: radial-gradient(circle, rgba(55,14,105,1) 0%, rgba(15,0,33,1) 100%);
     bottom: 10px;
     /* background: #240229; */
   background: rgb(55,14,105);
-background: radial-gradient(circle, rgba(55,14,105,1) 0%, rgba(41,10,79,1) 53%);
+background: url("https://www.transparenttextures.com/patterns/textured-paper.png"), radial-gradient(circle, rgba(55,14,105,1) 0%, rgba(41,10,79,1) 53%);
     border-radius: 50%;
+    background-blend-mode: multiply, screen;
 
   }
 

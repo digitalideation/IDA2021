@@ -12,13 +12,15 @@
    */
    height: 65vw;
 background-size: cover;
-background: rgb(77,103,121);
-background: linear-gradient(0deg, rgba(77,103,121,1) 0%, rgba(45,31,125,1) 45%, rgb(4, 6, 36) 69%);
-   }
+background: rgb(36,85,116);
+background: linear-gradient(0deg, rgba(36,85,116,1) 24%, rgba(36,22,115,1) 49%, rgba(14,19,77,1) 81%);
+background-blend-mode: multiply, screen;
+}
    .head {
      width: 300px;
   height: 300px;
-  border: 6px solid #A0EEFF;
+  border: 6px solid #eccc87;
+  background-color: #ebdab5 ;
   margin-left: 35%;
   margin-top: 10%; 
   border-radius: 5%;
@@ -29,7 +31,7 @@ background: linear-gradient(0deg, rgba(77,103,121,1) 0%, rgba(45,31,125,1) 45%, 
  -moz-box-shadow:    inset 0 0 10px #000000;
    -webkit-box-shadow: inset 0 0 10px #000000;
    box-shadow:         inset 0 0 10px #000000; 
-   box-shadow: 2px 1px 13px 11px rgba(54,141,158,0.64);
+   box-shadow: 2px 1px 4px 1px #eccc87;
  
 }
 
@@ -38,19 +40,27 @@ background: linear-gradient(0deg, rgba(77,103,121,1) 0%, rgba(45,31,125,1) 45%, 
   width: 95px;
   height: 115px;
   /* background-color: aqua; */
-  border: 5px solid rgb(117, 188, 255);;
+  border: 5px solid #A0EEFF;
   margin-left: 0%;
   position: absolute;
   border-radius: 5%;
+  -moz-box-shadow:    inset 0 0 7px #000000;
+   -webkit-box-shadow: inset 0 0 7px #000000;
+   box-shadow:         inset 0 0 7px #000000; 
+   box-shadow: 2px 1px  4px 1px rgba(54,141,158,0.64);
 }
 .eye.eye--right {
 width: 95px;
   height: 115px;
  
-  border: 5px solid rgb(117, 188, 255);;
+  border: 5px solid #A0EEFF;
   margin-left: 65%;
   position: absolute;
   border-radius: 5%;
+  -moz-box-shadow:    inset 0 0 7px #000000;
+   -webkit-box-shadow: inset 0 0 7px #000000;
+   box-shadow:         inset 0 0 7px #000000; 
+   box-shadow: 2px 1px 13px 5px rgba(54,141,158,0.64);
 
 }
 
@@ -71,15 +81,19 @@ width: 95px;
 }
 
 .mouth {
- 
-  width: 297px;
-  height: 50px;
- background-color: white;
-  position: absolute;
-  top: 55%;
-  border: 1px solid rgb(230, 0, 0)
+margin-left: 30%;
+  width: 120px;
+  height: 65px;
+  border-radius: 45%;
 
-}
+  position: absolute;
+  top: 32%;
+  border: 5px solid rgb(93, 200, 233);
+border-top-color: transparent;
+border-left-color: transparent;
+border-right-color: transparent;
+
+} 
 .arm.arm-left
 { 
   /* transform-origin: center left; */
@@ -102,77 +116,246 @@ width: 95px;
 color: black;
 
 }
-svg.right { 
-  width: 20%;
-stroke-width: 0.5%;
-  position: absolute;
-  height: 25%;
-top: -15%;
-  left: -18.5%;
-  right: 230px;
-  bottom: 30%;
-  margin: auto;
-  z-index: -3;
-animation-timing-function: ease-in-out;
-  animation-name: hand;
-animation: 5s forwards ;
-}
 
-svg.left {
-    width: 20%;
-stroke-width: 0.5%;
-  position: absolute;
-  height: 25%;
-top: 5%;
-  left: -14.5%;
-  right: 230px;
-  bottom: 30%;
-  margin: auto;
-  z-index: -4; 
-  fill:blue;
-}
-@keyframes hand {
-    0% {
-        opacity: 10;
-    }
-    50% {
-        opacity: 0;
-    }
-    100%{
-        opacity: 10;
-    }
-}
 
 .leg{
   width:10px;
   height:100px;
-  background-color:blue;
-  
 
 }
+
 .leg.leg--right{
-  margin-left:100px;
+  margin-left:50%;
   height:20px;
   width:12px;
-  background:#FF0;
+
   bottom:20%;
-  background:#7AA6C1;
-  border:1px solid #000;
+ 
+
   border-radius:5px;
   z-index:3;
 }
+svg.right { 
+  width: 50%;
+stroke-width: 0.5%;
+  position: absolute;
+  height: 20%;
+top: -15%;
+  left: -27%;
+  right: 230px;
+  bottom: 30%;
+  margin: auto;
+  z-index: -3;
+  fill: black;
 
+}
+
+svg.left {
+    width: 40%;
+stroke-width: 0.5%;
+  position: absolute;
+  height: 26%;
+top: 5%;
+  left: -15%;
+  right: 230px;
+  bottom: 30%;
+  margin: auto;
+  z-index: -4; 
+  fill:blue; 
+}
+@keyframes hand {
+  20% {
+           transform: rotate(-5deg);
+    
+  transform-origin: bottom left ; 
+   }
+    50% {
+       transform: rotate(-25deg);
+    
+  transform-origin: bottom left ;
+    }
+    65%{
+          transform: rotate(-15deg);
+    
+      transform-origin: bottom left ;
+
+    }
+    80% {
+                 transform: rotate(-10deg);
+    
+  transform-origin: bottom left ; 
+    }
+    90% {
+        transform: rotate(-5deg);
+    
+  transform-origin: bottom left ; 
+    }
+    100% {
+      transform: rotate(0deg);
+    
+  transform-origin: bottom left ;   
+    }
+}
         .st0 {
-          fill: #FFFFFF;
+          fill:  #A0EEFF;
           stroke: #000000;
           stroke-miterlimit: 10;
+          
+             transform-origin: bottom left ;
+          animation-timing-function: cubic-bezier(0, 0, 0, 0);
+ animation-name: hand ;
+animation-duration: 4s ;
+transition: all 5s;
+ animation-iteration-count: infinite; 
+ box-shadow:  1px 10px rgba(0,0,0,.2);
         }
     
         .st1 {
-          fill: #FFFFFF;
-          stroke: #000000;
+          fill:  #48ceec;
+          stroke: #ca0000;
           stroke-width: 0.5;
           stroke-miterlimit: 10;
+          box-shadow:  1px 10px rgba(0,0,0,.2);
         }
-      
-       
+    .bar {
+        width: 135px;
+        background-color: #999999;
+        height: 45px;
+       margin-top: 75%;
+       margin-left: 28%;
+       border-radius: 10px;
+       border: 5px solid rgb(74, 152, 255);
+       display: flex;
+       flex-direction: row;
+        
+    }
+    .one {
+        
+        width: 20px ;
+        height: 25px;
+        background-color: rgb(185, 184, 184);
+        margin-top: 15%;
+        margin-left: 8%;
+
+
+        animation-name: one;
+        animation-timing-function: ease-in;
+        animation-duration: 4s;
+        transition: all 4s;
+        animation-iteration-count: infinite; 
+        animation-delay: 0s;
+    }
+    @keyframes one {
+     
+      50% {
+          transform: scaleY(1.5); 
+           transform-origin: bottom;
+       }
+       100% {
+               transform: scaleY(1);
+           transform-origin: bottom;
+       }
+    }
+    .two {
+         width: 20px ;
+        height: 40px;
+        background-color: rgb(185, 184, 184);
+        margin-top: 5px;
+        margin-left: 3%;
+
+        animation-name: two;
+        animation-timing-function: ease-in;
+        animation-duration: 4s;
+        transition: all 4s;
+        animation-iteration-count: infinite; 
+        animation-delay: 0s;
+    }
+    @keyframes two {
+       50% {
+          transform: scaleY(0.5); 
+           transform-origin: bottom;
+       }
+       100% {
+               transform: scaleY(1);
+           transform-origin: bottom;
+       }
+    }
+    .three {
+          width: 20px ;
+        height: 30px;
+        background-color: rgb(185, 184, 184);
+        margin-top: 15px;
+        margin-left: 3%;
+           animation-name: three;
+        animation-timing-function: ease-in;
+        animation-duration: 4s;
+        transition: all 4s;
+        animation-iteration-count: infinite; 
+        animation-delay: 0s;
+    }
+      @keyframes three {
+       50% {
+          transform: scaleY(0.5); 
+           transform-origin: bottom;
+       }
+       100% {
+               transform: scaleY(1);
+           transform-origin: bottom;
+       }
+    }
+    .four {
+          width: 20px ;
+        height: 10px;
+        background-color: rgb(185, 184, 184);
+        margin-top: 35px;
+        margin-left: 3%;
+
+            animation-name: four;
+        animation-timing-function: ease-in;
+        animation-duration: 4s;
+        transition: all 4s;
+        animation-iteration-count: infinite; 
+        animation-delay: 0s;
+    }
+    @keyframes four {
+       50% {
+          transform: scaleY(1.5); 
+           transform-origin: bottom;
+       }
+       80% {
+            transform: scaleY(2); 
+           transform-origin: bottom;
+       }
+       100% {
+               transform: scaleY(1);
+           transform-origin: bottom;
+       }
+    }
+    .five {
+        width: 20px ;
+        height: 40px;
+        background-color: rgb(185, 184, 184);
+        margin-top: 5px;
+        margin-left: 3%;
+
+            animation-name: five;
+        animation-timing-function: ease-in;
+        animation-duration: 4s;
+        transition: all 4s;
+        animation-iteration-count: infinite; 
+        animation-delay: 0s;
+    }
+     @keyframes five {
+       50% {
+          transform: scaleY(0.5); 
+           transform-origin: bottom;
+       }
+       80% {
+            transform: scaleY(1); 
+           transform-origin: bottom;
+       }
+       100% {
+               transform: scaleY(1);
+           transform-origin: bottom;
+       }
+       }
