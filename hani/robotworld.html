@@ -7,12 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - Hani Aslani</title>
   <link rel="stylesheet" href="css/robot.css">
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
 
 </head>
 
-<body class="roby">
+<body class="paused">
 
-  <div class="robot">
+  <audio id="myAudio" src="media/neil.mp3"></audio>
+  <a onclick="togglePlay()" class="trigger">
+ me 
+  </a>
+
+
+ <div class="robot">
     <div class="leg leg--left">
 
       <div class="foot"></div>
@@ -21,23 +28,28 @@
       <div class="foot"></div>
     </div>
     <section class="body">
+
       <div class="head">
-        <div class="hat"></div>
+        <div class="cowboy"> </div>
+
         <div class="eye eye--left">
           <div class="inside-eye-left">
 
-            <img class="gif" src="https://i.pinimg.com/originals/1a/33/ab/1a33ab0abdb651b19bdde7264ca23f1b.gif" alt="">
+            <!-- <img class="gif" src="https://i.pinimg.com/originals/1a/33/ab/1a33ab0abdb651b19bdde7264ca23f1b.gif" alt=""> -->
           </div>
         </div>
         <div class="eye eye--right">
           <div class="inside-eye-right">
-            <img class="gif" src="https://i.pinimg.com/originals/1a/33/ab/1a33ab0abdb651b19bdde7264ca23f1b.gif" alt="">
+            <!-- <img class="gif" src="https://i.pinimg.com/originals/1a/33/ab/1a33ab0abdb651b19bdde7264ca23f1b.gif" alt=""> -->
           </div>
         </div>
-
+        <!-- <div class="player"> <audio> <source src="media/neil.mp3" type="audio/mp3"> </audio> </div> -->
 
         <div class="nose"></div>
         <div class="mouth">
+        </div>
+        <div class="pixeled">
+          <div class="heart"></div>
         </div>
         <div class="bar">
           <div class="one"></div>
@@ -46,10 +58,10 @@
           <div class="four"></div>
 
           <div class="five"></div>
-          <div class="six"> 
+          <div class="six">
           </div>
           <div class="seven"></div>
-          <div class="eight"></div>
+          <div class=""></div>
         </div>
       </div>
     </section>
@@ -194,6 +206,32 @@
 
     </div>
     <div class="hand"></div>
+    </div>
+    <!-- <script>window.alert("Will you Dance with me?");</script> -->
+    <script>
+      var myAudio = document.getElementById("myAudio");
+      var isPlaying = false;
+
+      function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play();
+      };
+
+      myAudio.onplaying = function () {
+        isPlaying = true;
+        document.body.classList.remove('paused')
+        document.body.classList.add('playing')
+      };
+
+      myAudio.onpause = function () {
+        isPlaying = false;
+        document.body.classList.remove('playing')
+        document.body.classList.add('paused')
+      };
+
+    </script>
+
+
+
 </body>
 
 </html>
