@@ -1,0 +1,53 @@
+body{
+    background-color: #1d1b1d;
+    font-family: 'Courier Prime', monospace;
+    color: blanchedalmond;
+    
+}
+img{
+    max-width: 400px;
+    height: auto;
+}
+a{
+    color: orange;
+    line-height: 1;
+    /*text-decoration-line: none;*/
+}
+
+.dunkelblau{
+    color:#327ab4;
+}
+
+.hellblau{
+    color: #75b5d6 ;
+}
+
+.orange{
+    color: orange;
+    text-decoration-line: underline;
+}
+
+.orange:hover{
+    cursor: pointer;
+}
+
+iframe{
+    border: none;
+    width: 100%;
+    overflow-y: hidden;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.123);
+}
+
+details{
+    list-style-type: none;
+}
+
+summary{
+    list-style-type: none;
+    line-height: 1;
+}
+
+.gans{
+    color: #6f6e6f;
+}

@@ -1,0 +1,32 @@
+body{
+    height: 100vmin;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: dodgerblue;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
