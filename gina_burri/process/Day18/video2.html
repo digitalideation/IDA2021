@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+  padding: 20px 0;
+  background-color: #efefef;
+}
+
+body {
+  width: 400px;
+  padding: 40px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  /* opacity: 0; */
+}
+
+video {
+  width: 400px;
+  display: block;
+  /* opacity: 0; */
+}
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<video id="myVideo" autobuffer controls autoplay>
+  <source id="mp4" src="/images/PPP_Visual_2021_mit Pause.mp4" type="video/mp4">
+
+  <script>
+      $(function() {
+
+var video = $('#myVideo');
+var videoEl = video[0];
+var delta = 0.01; //you can choose whatever delta ( + delta + volume change speed )
+video.on('wheel', function(event) {
+  event.preventDefault(); //prevent default page scroll;
+  //check for scroll down 
+  if (event.originalEvent.deltaY > 0 && videoEl.volume - delta >= 0) {
+    videoEl.volume -= delta;
+  //check for scroll up 
+  } else if(event.originalEvent.deltaY < 0 && videoEl.volume + delta <= 1) {
+    videoEl.volume += delta;
+  }
+});
+
+})
+  </script>
+</video>
+
+<!-- https://stackoverflow.com/questions/44434357/control-audio-volume-with-scrolling -->
