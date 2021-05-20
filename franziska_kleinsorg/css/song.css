@@ -51,15 +51,16 @@ a {
 
 a:hover{
     color: #d79e8e;
-    background-color: #afaeae80;
+    background: linear-gradient(104deg, rgba(196, 134, 76, 0) 0.9%, rgba(209, 180, 143, 0) 2.4%, rgba(226, 201, 133, 0.5) 5.8%, rgba(247, 216, 176, 0) 98%), linear-gradient(183deg, rgba(199, 149, 40, 0) 0%, rgba(255, 215, 130, 0.13) 7.9%, rgba(255, 215, 130, 0) 15%);
     text-decoration: none;
 }
 
 a.active {
     color: #d79e8e;
-    background-color: #96616b80;
+    background: linear-gradient(104deg, rgba(196, 134, 76, 0) 0.9%, rgba(209, 180, 143, 0) 2.4%, rgba(226, 201, 133, 0.5) 5.8%, rgba(247, 216, 176, 0) 98%), linear-gradient(183deg, rgba(199, 149, 40, 0) 0%, rgba(255, 215, 130, 0.13) 7.9%, rgba(255, 215, 130, 0) 15%);
     text-decoration: none;
 }
+
 
 /* INTERANCTIVITY */
 
