@@ -1,0 +1,43 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .5s ease;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  a:hover {
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  body.playing {
+    background-color: #95606b;
+  }
+  
+  body.paused {
+    background-color: #334661;
+  }
+  
+  .playing .trigger::before {
+    content: 'DO NOT CALL ME BY YOUR NAME';
+  }
+   
+  .paused .trigger::before {
+    content: 'CALL ME BY YOUR NAME';
+  }

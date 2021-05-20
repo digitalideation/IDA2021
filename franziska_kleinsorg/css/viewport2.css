@@ -1,0 +1,68 @@
+
+/* All */
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* attribute */
+
+body {
+    margin: 0px;
+}
+
+
+main {
+    min-height: 1400px;
+
+}
+
+
+
+.special1 {
+    display: inline;
+    position: absolute;
+    font-size: 50px;
+}
+
+.special2 {
+    display: inline;
+    position: absolute;
+    top: 1200px;
+    font-size: 50px;
+}
+
+.specialText1 {
+    display: inline;
+    margin: 0px;
+}
+
+.specialBlinder1 {
+    position: absolute;
+    z-index: 1;
+    background-color: #ffffff;
+    display: inline;
+    text-align: right;
+    margin: 0px;
+    margin-left: 00%;
+    height: 100%;
+    width: 100%;
+}
+
+
+.specialBlinderAnimation {
+    animation: moveBlinder 3s;
+    animation-fill-mode: forwards;
+}
+
+    @keyframes moveBlinder {
+        from {
+            margin-left: 0%;
+            width: 100%;
+        }
+
+        to {
+            margin-left: 100%;
+            width: 00px;
+        }
+}

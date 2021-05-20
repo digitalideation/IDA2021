@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;490;700&display=swap');
+
+body {
+    background-color: #334661;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h3 {
+    color:#d59d8d; 
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+}
+
+a {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:visited {
+    color: #ccc7c2;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover { 
+    font-weight: 600;
+    font-style: italic;
+}
+
+/*here starts the FUN animation part*/
+
+
+:root {
+  --body-padding: 1rem;
+}
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+
+.legs {
+  width: 100%;
+  height: 420px;
+  display: flex;
+}
+.leg-wrapper {
+  width: 30%;
+  /* float: left; */
+  transform: rotate(0);
+}
+
+.leg, .lower {
+  width: 70px;
+  height: 200px;
+  background-color: #d59d8d;
+  border-radius: 40px;
+  animation: swingtop 3s ease-in-out 0s infinite forwards;
+  transform-origin: center top;
+  position: relative;
+  box-shadow: 0 3px 30px #ffb8a4a5;
+}
+
+.lower {
+  position: absolute;
+  top: 100%;
+}
+
+.leg-wrapper:nth-child(3) .lower {
+  animation-duration: 4s;
+}
+.leg-wrapper:nth-child(1) .lower {
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+
+@keyframes swingtop {
+
+
+  0% {
+    transform: rotate(-30deg);
+  }
+  
+  50% {
+    transform: rotate(30deg);
+  }
+  
+  100% {
+    
+    transform: rotate(-30deg);
+  }
+}
+@media screen and (min-width: 1000px) {
+  :root {
+    --body-padding: 2rem;
+  }
+}

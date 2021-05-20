@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+article {
+    position: relative;
+    background-color: #d79e8e;
+    top: 0px;
+    left: 0px;
+    min-height: 80vh;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ease-in-out 1s;
+}
+
+article header {
+    font-size: 1rem;
+    transition: all 3s ease-in-out 1s;
+    color: #334662;
+    font-weight: 400;
+}
+
+
+/*
+Der Trick ist nun, dass was vorher über hover animiert wurde, über die neue Klasse auszulösen
+Statt:
+article:hover {
+    background-color: rgb(189, 202, 130);
+}
+*/
+
+article.myclass {
+    background-color: #d3bebf;
+}
+
+article.myclass header {
+    font-size: 2rem;
+}
+
+p {
+    color: #334662;
+    font-weight: 400;
+}
+
+li { 
+    color: #334662;
+}
+
+a {
+    color: #334662;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 3;
+}
+
+a:visited {
+    color: #334662;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover { 
+    font-weight: 700;
+    font-style: italic;
+}
