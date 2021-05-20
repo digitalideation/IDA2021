@@ -1,9 +1,9 @@
-
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap'); /* font-family: 'Days One', sans-serif; */
 /* Nav Bar*/
 
 /* All */
 * {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1em;
 }
 body {
@@ -11,9 +11,10 @@ body {
 }
 
 header {
+    font-family: 'Days One', sans-serif;
     position: sticky;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: block;
     text-align: center;
     margin-left: auto;

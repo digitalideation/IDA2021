@@ -3,7 +3,7 @@
 
 /* All */
 * {
-    font-family: 'Source Sans Pro', sans-serif;
+    
 }
 
 
@@ -11,6 +11,7 @@
 
 body {
     margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 

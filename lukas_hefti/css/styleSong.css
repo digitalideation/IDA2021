@@ -1,0 +1,129 @@
+/* Import NavBar CSS*/
+@import "styleNavBar.css";
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');  /* font-family: 'Bangers', cursive; */
+
+
+/* All */
+* {
+    
+}
+
+
+/* attribute */
+
+body {
+    margin: 0px;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Bangers', cursive;
+}
+
+
+main {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main div {
+    display: block;
+    height: 100vh;
+    min-width: 100%;
+
+}
+
+p {
+    font-size: 6em;
+}
+
+.scrollTrigger {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /*background-color: burlywood;*/
+    background-color: transparent;
+    top: 50%;
+}
+
+
+
+/*---------------------------------------- SITE 1 ------------------------*/
+#site1 {
+    background-color: white;
+}
+
+    #site1 div.n2 {
+        position: relative;
+        left: 0%;
+        top: 190%;
+    }
+
+#text_well {
+    font-size: 16em;
+    color: black;
+    display: inline;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    transition: color linear 1.5s, font-size ease-in 1.5s, top ease-in 1.5s;
+}
+
+    #text_well.visible {
+        font-size: 6em;
+        top: 40%;
+    }
+
+    #text_well.visible.n2 {
+        color: transparent;
+
+    }
+
+
+/*---------------------------------------- SITE 2 ------------------------*/
+#site2 {
+    background-color: white;
+    transition: background-color ease-in 2s;
+}
+
+    #site2.visible {
+        background-color: black;
+    }
+
+
+#text_above {
+    color: transparent;
+    display: inline;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    transition: color linear 3s;
+}
+
+    #text_above.visible {
+        color: white;
+        position: sticky;
+    }
+
+
+
+/*---------------------------------------- SITE 3 ------------------------*/
+#site3 {
+    background-color: black;
+    text-align: center;
+}
+
+
+#text_plain {
+    color: white;
+    margin-top: 20%;
+    display: block;
+    font-size: 13em;
+    filter: blur(30px);
+    transition: filter ease-out 2s;
+}
+
+    #text_plain.visible {
+        filter: blur(0px);
+    }
