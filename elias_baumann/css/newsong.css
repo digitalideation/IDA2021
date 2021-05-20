@@ -226,6 +226,50 @@ button {
     z-index: 9;
 }
 
+.window-content {
+    height: 85%;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    padding: 20px;
+    z-index: 10;
+}
+
+.title {
+    font-size: 27px;
+    margin-bottom: 6px;
+}
+
+.facts {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.lyrics {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+mark {
+    background-color:rgba(169,169,169, 0.5);
+    cursor: url(../img/pointer-small.png) 10 0,pointer;
+}
+
+mark:hover {
+    background-color:rgba(229, 122, 117, 0.7);
+
+}
+
+.explain {
+    font-size: 20px;
+}
+.artist {
+    text-decoration: underline;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
 .header-icons {
     float: right!important;
     display:flex;
@@ -275,25 +319,10 @@ button {
     margin-left: 5px;
     cursor: url(../img/icon/drag-small.png),auto;
 }
-/* .header-close3 {
-    border: 2px solid;
-    line-height: 0;
-    padding: 1px;
-    height: 21px;
-    width: 21px;
-    margin-left: 5px;
-    cursor: url(../img/icon/drag-small.png),auto;
-}
-.header-close4 {
-    border: 2px solid;
-    line-height: 0;
-    padding: 1px;
-    height: 21px;
-    width: 21px;
-    margin-left: 5px;
-    cursor: url(../img/icon/drag-small.png),auto;
-} */
 
+.close-curser {
+    cursor: url(../img/pointer-small.png) 10 0,pointer;
+}
 
 .header-text {
     margin-left: 10px;
@@ -365,22 +394,31 @@ button {
 
 @keyframes flicker {
     from {opacity: 0;}
-    to {opacity: 0.4;}
+    to {opacity: 0.35;}
   }
+
 
   /* ---------------------------- */
 
-  
+button {
+    cursor: url(../img/pointer-small.png) 10 0,pointer;
+    text-align: left;
+    background: none;
+    font-size: 20px;
+}  
 
 #myDIVextra2 {
     background-color: none;
     z-index: 7;
+    display:none;
 }
 #myDIVextra3 {
     background-color: none;
     z-index: 7;
+    display:none;
 }
 #myDIVextra4 {
     background-color: none;
     z-index: 7;
+    display:none;
 }
