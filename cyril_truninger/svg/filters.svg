@@ -1,5 +1,27 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <!-- define the filter #blur -->
+  
+  <filter id="video-color">
+    <feColorMatrix
+      type="matrix"
+      values=" 1.600  0.000  0.000  0.000  0.000 
+               0.000  0.000  0.700  0.000  0.000 
+               0.500  0.000  0.900  0.000  0.000 
+               0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
+  </filter>
+
+  <filter id="video-bw">
+    <feColorMatrix
+      type="matrix"
+      values=" 1.000  0.000  1.000  0.000  0.000 
+               1.000  0.000  1.000  0.000  0.000 
+               1.000  0.000  1.000  0.000  0.000 
+               0.000  0.000  0.000  1.000  0.000">
+    </feColorMatrix>
+  </filter>
+
+   
+    <!-- Screen Filters -->
     <filter id="blur1">
       <feGaussianBlur stdDeviation="2"/>
     </filter>
@@ -8,7 +30,7 @@
       <feGaussianBlur stdDeviation="1"/>
     </filter>
 
-    <!-- Nicks Filter -->
+    <!-- Nick's Turbulence Distortion Filter -->
     <filter id="noise-0">
 	    <feTurbulence 
       type="turbulence" 
@@ -99,6 +121,9 @@
       x="0%" y="0%" 
       result="displacementMap"/>
     </filter>
+
+
+    
    
   </svg>
 
