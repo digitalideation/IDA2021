@@ -236,8 +236,7 @@ button {
 .window-content-extra {
     height: 85%;
     overflow: scroll;
-    margin: 20px;
-
+    padding: 7px;
 }
 
 .title {

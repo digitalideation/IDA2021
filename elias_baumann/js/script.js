@@ -1,33 +1,17 @@
+// Here we can store the divs of the 4 main windows, to cycle through later...
+var myWindowIDs = ['mydiv', 'myDIVextra2', 'myDIVextra3', 'myDIVextra4'];
 
-function myFunction() {
-    var x = document.getElementById("myDIVextra2");
+
+// One function for all the window toggles
+// you just need to pass in which ID to handle...
+function toggleMe(id) {
+    var x = document.getElementById(id);
     if (x.style.display === "none") {
-      x.style.display = "block";
+        x.style.display = "block";    
     } else {
-      x.style.display = "none";
+        x.style.display = "none";
     }
   }
-
-
-  function myFunction3() {
-    var x = document.getElementById("myDIVextra3");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-
-
-  function myFunction4() {
-    var x = document.getElementById("myDIVextra4");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-
 
 // ____________________________________________
 
@@ -87,131 +71,48 @@ setInterval(showTime, 1000)
 // Window Drag n dop
 dragElement(document.getElementById(("mydiv")));
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-        elmnt.onmousedown = dragMouseDown;
-    }
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-}
-
-// ____________________________________________
-
 
 // Drag n drop Element 2
 dragElement(document.getElementById(("mydiv2")));
-
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header2")) {
-        document.getElementById(elmnt.id + "header2").onmousedown = dragMouseDown;
-    } else {
-        elmnt.onmousedown = dragMouseDown;
-    }
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-}
-
-// ____________________________________________
-
 
 
 // Drag n drop Element 3
 dragElement(document.getElementById(("mydiv3")));
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header3")) {
-        document.getElementById(elmnt.id + "header3").onmousedown = dragMouseDown;
-    } else {
-        elmnt.onmousedown = dragMouseDown;
-    }
-
-    function dragMouseDown(e) {
-        e = e || window.event;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-        e = e || window.event;
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
-}
-// ____________________________________________
 
 // Drag n drop Element 4
 dragElement(document.getElementById(("mydiv4")));
 
+// You can only have one of these functions, because they were all named the same
+// and they all do the same thing.
+
 function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    console.log('Function 4')
+    var pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
     if (document.getElementById(elmnt.id + "header4")) {
         document.getElementById(elmnt.id + "header4").onmousedown = dragMouseDown;
     } else {
         elmnt.onmousedown = dragMouseDown;
     }
 
+// As soon as the mouse button goes down, this happens...
+
     function dragMouseDown(e) {
         e = e || window.event;
         pos3 = e.clientX;
         pos4 = e.clientY;
+// here we cycle through the window IDs and reset each z-index to 0
+        myWindowIDs.forEach(id => {
+            document.querySelector(`#${id}`).style.zIndex = '0'
+        })
+// Then we can set the PARENT of the clicked one to 99 
+// (because it's the parents that are on the same stacking order)
+    elmnt.parentElement.style.zIndex = '99'
+// Except for the 1st one, which doesn't have a parent :)...
+    elmnt.style.zIndex = '99'
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;
     }
