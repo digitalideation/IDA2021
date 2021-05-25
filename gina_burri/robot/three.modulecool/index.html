@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>animation</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link type="text/css" rel="stylesheet" href="./css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
+
+	<style>
+
+@font-face {
+  font-family: 'Zen Dots';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/zendots/v1/XRXX3ICfm00IGoesQdaDRs7nczIH.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Zen Dots';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/zendots/v1/XRXX3ICfm00IGoesQdaNRs7nczIHNHI.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+		/* .background {
+			background-color: blue;
+		} */
+		.left {
+            position: absolute;
+            left: 0px;
+            width:33.3vw;
+            height: 100vh;
+            /* border: 3px solid rgb(0, 255, 128); */
+            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots, cursive' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>EYE</text></svg>") 16 0, auto;}
+        
+
+        .middle {
+            position: absolute;
+            left: 33.3vw;
+            width:33.3vw;
+            height: 100vh;
+            /* border: 3px solid rgb(0, 38, 255); */
+            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEART</text></svg>") 16 0, auto;}
+        
+
+        .right {
+            position: absolute;
+            right: 0px;
+            width:33.3vw;
+            height: 100vh;
+			background-color: blueviolet;
+			opacity: 0;
+            /* border: 3px solid red; */
+            /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='red'>Eye</text></svg>") 16 0, auto; */
+            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEAD</text></svg>") 16 0, auto;}
+	</style>
+</head>
+
+<body>
+	<div class="left"></div>
+    <div class="middle"></div>
+    <div class="right"><a href="../../process/Day19/roomcool.html"></a></div>
+
+	<script type="module">
+		// import * as THREE from './js/three.module.js';
+
+		// Find the latest version by visiting https://cdn.skypack.dev/three.
+		import * as THREE from 'https://cdn.skypack.dev/three@0.128.0';
+
+
+		import { Lensflare, LensflareElement } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/objects/Lensflare.js';
+		// import { Reflector } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/objects/Reflector.js';
+		// import { VRButton } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/webxr/VRButton.js';
+		// import { HTMLMesh } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/interactive/HTMLMesh.js';
+		import { InteractiveGroup } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/interactive/InteractiveGroup.js';
+		import { XRControllerModelFactory } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/webxr/XRControllerModelFactory.js';
+
+		// import { GUI } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/libs/dat.gui.module.js';
+
+		let camera, scene, renderer;
+		let reflector;
+
+		const parameters = {
+			radius: 0.5,
+			tube: 0.17,
+			tubularSegments: 150,
+			radialSegments: 20,
+			p: 2,
+			q: 3
+		};
+
+		init();
+		animate();
+
+		function init() {
+
+			// const background = new THREE.CubeTextureLoader()
+			// 	.setPath( './textures/background/' )
+				// .load( [ 'violett.png', 'violett.png', 'violett.png', 'violett.png', 'violett.png', 'violett.png' ] );
+
+			scene = new THREE.Scene();
+			scene.background = new THREE.Color( 0x0400FF );
+
+			camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 10);
+			camera.position.set(0, 1.6, 1.5);
+
+			//
+			const loader = new THREE.TextureLoader();
+			const torusGeometry = new THREE.TorusKnotGeometry(...Object.values(parameters));
+			// const torusMaterial = new THREE.MeshStandardMaterial( { roughness: 0.01, metalness: 0.2, envMap: background } );
+			const torusMaterial = new THREE.MeshStandardMaterial({ roughness: 1, metalness: 0.0, map: loader.load('./textures/torus/color_spiral.png'),});
+			const torus = new THREE.Mesh(torusGeometry, torusMaterial);
+			torus.name = 'torus';
+			torus.position.y = 1.6;
+			torus.position.z = - 1.5;
+			torus.castShadow = true;
+			torus.receiveShadow = true;
+			scene.add(torus);
+
+			// const cylinderGeometry = new THREE.CylinderGeometry( 1, 1, 0.1, 50 );
+			// const cylinderMaterial = new THREE.MeshPhongMaterial();
+			// const cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
+			// cylinder.position.z = - 2;
+			// cylinder.castShadow = true;
+			// cylinder.receiveShadow = true;
+			// scene.add( cylinder );
+
+			const light1 = new THREE.DirectionalLight(0xaaaaaa);
+			light1.position.set(- 1, 1.5, - 1.5);
+			light1.castShadow = true;
+			light1.shadow.camera.zoom = 4;
+			scene.add(light1);
+			light1.target.position.set(0, 0, - 2);
+			scene.add(light1.target);
+
+			// const helper1 = new THREE.CameraHelper( light.shadow.camera );
+			// scene.add( helper1 );
+
+			const light2 = new THREE.DirectionalLight(0x777777);
+			light2.position.set(1, 1.5, - 2.5);
+			light2.castShadow = true;
+			light2.shadow.camera.zoom = 4;
+			scene.add(light2);
+			light2.target.position.set(0, 0, - 2);
+			scene.add(light2.target);
+
+			const light = new THREE.AmbientLight( 0xF300FF ); // soft white light
+			scene.add( light );
+
+			// const helper2 = new THREE.CameraHelper( light.shadow.camera );
+			// scene.add( helper2 );
+
+			// lensflare
+			// const loader = new THREE.TextureLoader();
+			// const texture0 = loader.load("textures/lensflare/lensflare0.png");
+			// const texture3 = loader.load("textures/lensflare/lensflare3.png");
+
+			// const lensflare = new Lensflare();
+			// lensflare.position.set(0, 5, - 5);
+			// lensflare.addElement(new LensflareElement(texture0, 700, 0));
+			// lensflare.addElement(new LensflareElement(texture3, 60, 0.6));
+			// lensflare.addElement(new LensflareElement(texture3, 70, 0.7));
+			// lensflare.addElement(new LensflareElement(texture3, 120, 0.9));
+			// lensflare.addElement(new LensflareElement(texture3, 70, 1));
+			// scene.add(lensflare);
+
+			//
+
+			// reflector = new Reflector( new THREE.PlaneGeometry( 2, 2 ), {
+			// 	textureWidth: window.innerWidth * window.devicePixelRatio,
+			// 	textureHeight: window.innerHeight * window.devicePixelRatio
+			// } );
+			// reflector.position.x = 1;
+			// reflector.position.y = 1.25;
+			// reflector.position.z = - 3;
+			// reflector.rotation.y = - Math.PI / 4;
+			// scene.add( reflector );
+
+			// const frameGeometry = new THREE.BoxGeometry( 2.1, 2.1, 0.1 );
+			// const frameMaterial = new THREE.MeshPhongMaterial();
+			// const frame = new THREE.Mesh( frameGeometry, frameMaterial );
+			// frame.position.z = - 0.07;
+			// frame.castShadow = true;
+			// frame.receiveShadow = true;
+			// reflector.add( frame );
+
+			//
+
+			renderer = new THREE.WebGLRenderer({ antialias: true });
+			renderer.autoClear = false;
+			renderer.setPixelRatio(window.devicePixelRatio);
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.shadowMap.enabled = true;
+			renderer.xr.enabled = true;
+			document.body.appendChild(renderer.domElement);
+
+			// document.body.appendChild(VRButton.createButton(renderer));
+
+			window.addEventListener('resize', onWindowResize);
+
+			//
+
+			// const geometry = new THREE.BufferGeometry();
+			// geometry.setFromPoints([new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, 0, - 5)]);
+
+			// const controller1 = renderer.xr.getController(0);
+			// controller1.add(new THREE.Line(geometry));
+			// scene.add(controller1);
+
+			// const controller2 = renderer.xr.getController(1);
+			// controller2.add(new THREE.Line(geometry));
+			// scene.add(controller2);
+
+			//
+
+			// const controllerModelFactory = new XRControllerModelFactory();
+
+			// const controllerGrip1 = renderer.xr.getControllerGrip(0);
+			// controllerGrip1.add(controllerModelFactory.createControllerModel(controllerGrip1));
+			// scene.add(controllerGrip1);
+
+			// const controllerGrip2 = renderer.xr.getControllerGrip(1);
+			// controllerGrip2.add(controllerModelFactory.createControllerModel(controllerGrip2));
+			// scene.add(controllerGrip2);
+
+			// GUI
+
+			// function onChange() {
+
+			// 	torus.geometry.dispose();
+			// 	torus.geometry = new THREE.TorusKnotGeometry( ...Object.values( parameters ) );
+
+			// }
+
+			// const gui = new GUI( { width: 300 } );
+			// gui.add( parameters, 'radius', 0.0, 1.0 ).onChange( onChange );
+			// gui.add( parameters, 'tube', 0.0, 1.0 ).onChange( onChange );
+			// gui.add( parameters, 'tubularSegments', 10, 150, 1 ).onChange( onChange );
+			// gui.add( parameters, 'radialSegments', 2, 20, 1 ).onChange( onChange );
+			// gui.add( parameters, 'p', 1, 10, 1 ).onChange( onChange );
+			// gui.add( parameters, 'q', 0, 10, 1 ).onChange( onChange );
+			// gui.domElement.style.visibility = 'hidden';
+
+			const group = new InteractiveGroup(renderer, camera);
+			scene.add(group);
+
+			// const mesh = new HTMLMesh( gui.domElement );
+			// mesh.position.x = - 0.75;
+			// mesh.position.y = 1.5;
+			// mesh.position.z = - 0.5;
+			// mesh.rotation.y = Math.PI / 4;
+			// mesh.scale.setScalar( 2 );
+			// group.add( mesh );
+
+		}
+
+		function onWindowResize() {
+
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+
+			renderer.setSize(window.innerWidth, window.innerHeight);
+
+		}
+
+		function animate() {
+
+			renderer.setAnimationLoop(render);
+
+		}
+
+		function render() {
+
+			const time = performance.now() * 0.00015;
+			const torus = scene.getObjectByName('torus');
+			torus.rotation.x = time * 2;
+			torus.rotation.y = time * 5;
+
+			renderer.render(scene, camera);
+
+		}
+
+
+
+
+		
+
+		
+    
+
+    
+  
+	</script>
+</body>
+
+</html>
