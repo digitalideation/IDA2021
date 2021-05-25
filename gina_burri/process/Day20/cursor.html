@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
+
+    <style>
+
+
+
+
+body {
+
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 15s infinite alternate;
+    }
+
+@keyframes bg-animation {
+            0% 
+            {background-position: left; 
+            }
+            100% 
+            {background-position: right;
+            }
+        }
+
+        :root {
+            --gradient: linear-gradient(
+                45deg,
+                #6200ff,
+                /* #d65db1,
+                #ff6f91,
+                #ff9671,
+                #ffc75f, */
+                #6c4bfd,
+                #fd4b4b
+            );
+        }
+
+
+        .left {
+            position: absolute;
+            left: 0px;
+            width:33.3vw;
+            height: 100vh;
+            border: 3px solid rgb(0, 255, 128);
+            cursor: alias;
+        }
+
+        .middle {
+            position: absolute;
+            left: 33.3vw;
+            width:33.3vw;
+            height: 100vh;
+            border: 3px solid rgb(0, 38, 255);
+            cursor: url("favicon.svg"), auto;
+        }
+
+        .right {
+            position: absolute;
+            right: 0px;
+            width:33.3vw;
+            height: 100vh;
+            border: 3px solid red;
+            /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='red'>Eye</text></svg>") 16 0, auto; */
+            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px rgb(251, 255, 0), 0 0 25px rgb(251, 255, 0), 0 0 5px rgb(251, 255, 0);' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots, cursive' font-weight='cursive' font-size='50' dominant-baseline='middle' text-anchor='middle' fill='red'>Eye</text></svg>") 16 0, auto;}
+    
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="middle"></div>
+    <div class="right"></div>
+</body>
+</html>
