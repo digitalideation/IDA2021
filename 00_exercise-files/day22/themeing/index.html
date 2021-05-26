@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js"></script>
     <title>Riding Hood</title>
 </head>
 
 <body>
     <div id="check">
-        <input type="checkbox" id="nightmode" name="nightmode" value="Night" onclick="handleNight()">
-        <label for="nightmode"> Night Mode</label><br>
+        <input type="checkbox" id="nightcheck" name="nightmode" value="Night">
+        <label for="nightcheck"> Night Mode</label><br><br>
+        <button id="nightbutton">Toggle</button>
     </div>
+
     <div class="content">
         <a href="../">Back to Day 22</a>
         <h1>Little Red Riding Hood</h1>
@@ -74,6 +75,7 @@
             <p><strong>The End.</strong></p>
         </div>
     </div>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
