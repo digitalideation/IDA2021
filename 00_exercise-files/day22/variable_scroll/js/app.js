@@ -10,8 +10,8 @@ document.addEventListener('scroll', function() {
     _scrollPercent = Math.round(window.scrollY / _maxScroll * 100)
         // change the text of the output div every scroll
     OUTPUT_SELECTOR.innerHTML = 'Scroll ' + window.scrollY + ' / ' + _maxScroll + ': ' + _scrollPercent + '%'
-    root.style.setProperty('--hue', (_scrollPercent / 100) * 255);
-    root.style.setProperty('--circleSize', (_scrollPercent / 100) + 1.2);
+    root.style.setProperty('--hue', (_scrollPercent / 100) * 360);
+    root.style.setProperty('--circleSize', (_scrollPercent / 100) + 1);
 })
 
 // when the document is loaded, measure the document height and store it in the placeholder

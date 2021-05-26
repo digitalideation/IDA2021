@@ -7,11 +7,13 @@
     --c-lightest: #85e0c9;
     --body-padding: 1rem;
     --columns: 1fr;
+    --borderStyle: 10px solid #333;
 }
 
 @media screen and (min-width: 800px) {
      :root {
         --columns: 1fr 1fr;
+        --borderStyle: 20px solid #333;
     }
 }
 
@@ -28,7 +30,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: var(--c-darkest);
-    border: 20px solid #333;
+    border: var(--borderStyle);
 }
 
 a img {
@@ -45,7 +47,7 @@ a img {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    border-bottom: 20px solid #333;
+    border-bottom: var(--borderStyle);
     padding: 1rem;
     /* margin-bottom: 2rem; */
 }
@@ -55,7 +57,7 @@ a img {
 }
 
 header {
-    border-bottom: 20px solid #333;
+    border-bottom: var(--borderStyle);
     grid-row-start: 0;
     grid-row-end: -1;
     padding: 2rem 2rem 2rem 1rem;
@@ -69,14 +71,14 @@ h1 {
 }
 
 .info-top {
-    border-bottom: 20px solid #333;
+    border-bottom: var(--borderStyle);
     display: grid;
     grid-template-columns: var(--columns);
     /* gap: 20px; */
 }
 
 .info-left {
-    border-right: 20px solid #333;
+    border-right: var(--borderStyle);
     padding: 1rem;
     font-size: 1.25rem;
 }
@@ -100,12 +102,12 @@ hr {
 .exercise {
     /* border: 1px solid var(--c-darkest); */
     padding: var(--body-padding);
-    border-bottom: 20px solid #333;
+    border-bottom: var(--borderStyle);
     /* box-shadow: 0 1px 10px rgba(172, 145, 216, .3); */
 }
 
 .exercise:nth-child(odd) {
-    border-right: 20px solid #333;
+    border-right: var(--borderStyle);
 }
 
 .exercise img {
