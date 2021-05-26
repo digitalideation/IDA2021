@@ -5,12 +5,15 @@ var originalContent;
 function haveFun() {
     // Store the content in a variable
     const ALL_CONTENT = document.getElementById('content').innerHTML
-        // Store the number of letters in a variable
+    console.log('my content: ', ALL_CONTENT);
+    // Store the number of letters in a variable
     const CHAR_COUNT = ALL_CONTENT.length
-        // Save a place in memory for my new markup
+    console.log('how many chars?: ', CHAR_COUNT);
+    // Save a place in memory for my new markup
     let newContent = ""
-        // Cycle through all the letters and do stuff
-    for (let i = 0; i < CHAR_COUNT; i++) {
+
+    // Cycle through all the letters and do stuff
+    for (var i = 0; i < CHAR_COUNT; i++) {
         // get the current character and create a bunch of random numbers
         const CURRENT_CHARACTER = ALL_CONTENT[i]
         const RANDOM_SIZE = parseInt(Math.random() * 10)
@@ -26,14 +29,10 @@ function haveFun() {
     document.getElementById('content').innerHTML = newContent
 }
 
-// when the document is loaded store the current content in the variable above
-window.addEventListener('load', function() {
-    originalContent = document.getElementById('content').innerHTML
-})
 
-function handleFun() {
+function handleFun(e) {
     // Get the checkbox
-    var checkBox = document.getElementById("toggleCheck");
+    var checkBox = e.target;
 
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true) {
@@ -42,3 +41,8 @@ function handleFun() {
         document.getElementById('content').innerHTML = originalContent
     }
 }
+
+// when the document is loaded store the current content in the variable above
+window.addEventListener('load', function() {
+    originalContent = document.getElementById('content').innerHTML
+})

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Character Size and Color</title>
+</head>
+
+<body>
+
+    <p id="content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsum similique veritatis iure unde consequuntur nihil labore minima! Molestias nesciunt cupiditate, odit sapiente obcaecati laborum eligendi possimus eaque ipsam harum.
+    </p>
+
+    <script>
+        const ALL_CONTENT = document.getElementById('content').innerHTML
+        const CHAR_COUNT = ALL_CONTENT.length
+        let newContent = ""
+        for (let i = 0; i < CHAR_COUNT; i++) {
+            const CURRENT_CHARACTER = ALL_CONTENT[i]
+            const RANDOM_SIZE = parseInt(Math.random() * 10)
+            const RANDOM_R = parseInt(Math.random() * 255)
+            const RANDOM_G = parseInt(Math.random() * 255)
+            const RANDOM_B = parseInt(Math.random() * 255)
+            const NEW_MARKUP = `<span style="font-size:${RANDOM_SIZE}rem;color:white;background-color:rgb(${RANDOM_R},${RANDOM_G},${RANDOM_B});">${CURRENT_CHARACTER}</span>`
+            newContent += NEW_MARKUP
+        }
+        document.getElementById('content').innerHTML = newContent
+    </script>
+</body>
+
+</html>
