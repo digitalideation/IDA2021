@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
 
     <style>
-        html,body{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  /* font-size: 14px;
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            /* font-size: 14px;
   font-family: 'Wire One', sans-serif; */
-}
-/* h1{
+        }
+        /* h1{
   padding: 200px 20px 20px 20px;
   font-family: helvetica;
   font-weight: bold;
   font-size: 4em;
 } */
-/* .floor .about{width:50%;
+        /* .floor .about{width:50%;
   margin: 0 auto;
   text-align: center;
   font-family: helvetica;
@@ -30,67 +32,72 @@
   transform: rotateX(180deg);
   font-size: 6em;
 } */
-/* .floor h1{
+        /* .floor h1{
   font-size: 8em;
   transform: rotateX(180deg);
 } */
-/* h1 div{
+        /* h1 div{
   font-size: 0.4em;
 } */
-/* a{
+        /* a{
   color: #fff;
   text-decoration: none;
 } */
-.content{
-  text-align: left;
-  height: 100%;
-  color: #fff;
-  font-size: 2em;
-  line-height: 1.4;
-  letter-spacing: 0.2em;
-  /* background: rgba(0,0,0,.5); */
-}
-.content article{
-    overflow-y: auto;
-  height: 80%;
-  display: none;
-  position: relative;
-  top: 0;
-  padding: 0 10%;
-  height: 100%;
-  background: none;
-}
-.content article h2{
-  margin: 5% 0 0;
-  font-size: 2em;
-}
-.content .row{
-  margin: 0 0 1em;
-}
-.content .row .img{
-  margin: 0 20px 0 0;
-  width: 50%;
-  float: left;
-}
-.content .row img{
-  width: 100%;
-}
-.content article::-webkit-scrollbar { 
-    display: none; 
-}
-/* #home{
+        
+        .content {
+            text-align: left;
+            height: 100%;
+            color: #fff;
+            font-size: 2em;
+            line-height: 1.4;
+            letter-spacing: 0.2em;
+            /* background: rgba(0,0,0,.5); */
+        }
+        
+        .content article {
+            overflow-y: auto;
+            height: 80%;
+            display: none;
+            position: relative;
+            top: 0;
+            padding: 0 10%;
+            height: 100%;
+            background: none;
+        }
+        
+        .content article h2 {
+            margin: 5% 0 0;
+            font-size: 2em;
+        }
+        
+        .content .row {
+            margin: 0 0 1em;
+        }
+        
+        .content .row .img {
+            margin: 0 20px 0 0;
+            width: 50%;
+            float: left;
+        }
+        
+        .content .row img {
+            width: 100%;
+        }
+        
+        .content article::-webkit-scrollbar {
+            display: none;
+        }
+        /* #home{
   background: transparent;
 } */
-
-
-section{
-  position: relative;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-
-}
-/* nav li {
+        
+        section {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+        /* nav li {
   position: relative;
 }
 nav li a {
@@ -131,7 +138,7 @@ nav li a:focus {
 nav li a:focus{
   cursor: default;
 } */
-/* .space{
+        /* .space{
   height: 3000px;
 }
 @-webkit-keyframes spin {
@@ -142,8 +149,7 @@ nav li a:focus{
 	0% { -webkit-transform: translateY(0); }
   50% { -webkit-transform: translateY(-80px);}
 } */
-
-/* .pyramid-gyro {
+        /* .pyramid-gyro {
   cursor: pointer;
 	-webkit-transform-origin: center center;
     -webkit-perspective: 800px;
@@ -162,47 +168,45 @@ nav li a:focus{
   -webkit-animation: float 4s infinite ease-in-out;
  transition: all 1s ease-in-out;
 } */
-/* .open .pyramid-gyro{
+        /* .open .pyramid-gyro{
   opacity: 0;
      -webkit-transition-delay: 0s; 
 } */
-/* .pyramid-axis {
+        /* .pyramid-axis {
 	position: relative;
 	width: 200px;
 	-webkit-transform-style: preserve-3d;
   -webkit-animation: spin 14s infinite linear;
 } */
-
-/* .pyramid-wall {
+        /* .pyramid-wall {
 	position: absolute;
   border: 100px solid transparent;
 } */
-
-/* .front {
+        /* .front {
   bottom: -20px;
   border-bottom: 200px solid rgba(0, 0, 0, 0.3);
 	-webkit-transform: translateZ(25px) rotateX(30deg);
 } */
-/* .back {
+        /* .back {
   bottom: -20px;
   border-bottom: 200px solid rgba(0, 0, 0, 0.3);
 	-webkit-transform: translateZ(-25px) rotateY(180deg) rotateX(30deg);
 } */
-/* .left {
+        /* .left {
   bottom: -20px;
   left: 75px;
   border-bottom: 200px solid rgba(0, 0, 0, 0.5);
 	-webkit-transform: rotateY(270deg) translateX(-100px) rotateX(30deg);
 	-webkit-transform-origin: center left;
 } */
-/* .right {
+        /* .right {
   bottom: -40px;
   right: 150px;
   border-bottom: 200px solid rgba(0, 0, 0, .5);
   -webkit-transform: rotateY(-270deg) translateX(100px) rotateX(30deg);
     -webkit-transform-origin: top right;
 } */
-/* .bottom {
+        /* .bottom {
   background: #000;
   opacity: 0.4;
   width: 200px;
@@ -210,7 +214,7 @@ nav li a:focus{
   -webkit-transform: rotateX(90deg) translateY(100px);
 	-webkit-transform-origin: bottom center;
 } */
-/* @-webkit-keyframes nofloat {
+        /* @-webkit-keyframes nofloat {
 	0% { box-shadow: 0 0 60px 100px rgba(0,0,0,0.7);}
 	50% { box-shadow: 0 0 80px 100px rgba(0,0,0,0.4);}
 }
@@ -218,7 +222,7 @@ nav li a:focus{
 	from { -webkit-transform: rotateZ(0deg); }
   to { -webkit-transform: rotateZ(360deg); }
 } */
-/* .shadow {
+        /* .shadow {
   z-index: 10;
   position: absolute;
   top: 40%;
@@ -232,7 +236,7 @@ nav li a:focus{
       -webkit-animation: nofloat 4s infinite ease-in-out;
   
 } */
-/* .letter{
+        /* .letter{
   font-family: "Times New Roman", Times, serif;
   width: 50px;
   text-align: center;
@@ -246,80 +250,89 @@ nav li a:focus{
   -webkit-transform: translateX(-35px);
   transition: all 0.4s ease-in-out;
 } */
-/* .pyramid-gyro:hover .letter{
+        /* .pyramid-gyro:hover .letter{
   text-shadow: 0px 1px 0px rgba(255,255,255,.4);
   opacity: .4;
 } */
-
-.room {
-  zoom:1;
-	position: relative;
-	width: 100%;
-  height: 100%;
-	overflow:hidden;
-  transform: translateX(0) translateY(0);
-}
-.damper {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	width: 100%;
-	height: 100%;
-}
-.container {
-  z-index: -100;
-	text-align: center;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
-	width: 100%;
-  height: 100%;
-  opacity: 1;
-	-webkit-perspective: 800px;
-	-moz-perspective: 800px;
-	perspective: 800px;/*
+        
+        .room {
+            zoom: 1;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transform: translateX(0) translateY(0);
+        }
+        
+        .damper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            width: 100%;
+            height: 100%;
+        }
+        
+        .container {
+            z-index: -100;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            -webkit-perspective: 800px;
+            -moz-perspective: 800px;
+            perspective: 800px;
+            /*
   transition: all 1s ease-in-out;*/
-}
-.room:after{
-  z-index: -100;
-  content: "";
-  width:100%;
-  height: 100;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  /* right: 0; */
-  position: absolute;
-
-}
-.active .container{
-    opacity: 0;
-}
-
-/* roof */
-
-.roof {
-  /* background-image: var(--gradient); */
-  background-size: 100%;
-  animation: rotate-gradient 30s ease infinite alternate;
-  /* background: linear-gradient(180deg, rgb(234, 0, 255), rgb(4, 0, 255)); */
-    }
-
-
-
-@keyframes rotate-gradient {
-  0% {background:linear-gradient(180deg, rgb(234, 0, 255), rgb(4, 0, 255))}
-    100% { background: linear-gradient(180deg, rgb(4, 0, 255), rgb(234, 0, 255))}
-  } 
-
-
-/* .roof .middle{
+        }
+        
+        .room:after {
+            z-index: -100;
+            content: "";
+            width: 100%;
+            height: 100;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            /* right: 0; */
+            position: absolute;
+        }
+        
+        .active .container {
+            opacity: 0;
+        }
+        /* roof */
+        
+        .roof {
+            /* background-image: var(--gradient); */
+            background-size: 100%;
+            /* animation: rotate-gradient 10s linear infinite; */
+            /* animation: testAnimation 5s 0s infinite alternate linear forwards; */
+            /* animation-fill-mode: both; */
+            background-image: linear-gradient(hsl(var(--color1), 100%, 50%), hsl(var(--color2), 100%, 50%));
+            /* background: linear-gradient(180deg, rgb(234, 0, 255), rgb(4, 0, 255)); */
+        }
+        
+        @keyframes rotate-gradient {
+            0% {
+                background: linear-gradient(180deg, rgb(234, 0, 255), rgb(4, 0, 255))
+            }
+            50% {
+                background: linear-gradient(180deg, rgb(4, 0, 255), rgb(234, 0, 255))
+            }
+            100% {
+                background: linear-gradient(180deg, rgb(234, 0, 255), rgb(4, 0, 255))
+            }
+        }
+        /* .roof .middle{
   opacity: 0;
   width: 50%;
   height: 100%;
@@ -327,7 +340,7 @@ nav li a:focus{
   background: url(http://bgfons.com/upload/tile_texture3096.jpg) repeat center center;
   background-size: 200px 200px;
 } */
-/* .roof .ref-left{
+        /* .roof .ref-left{
   position: absolute;
   top:0;
   right: 75%;
@@ -337,7 +350,7 @@ nav li a:focus{
   background: url(http://bgfons.com/upload/tile_texture3096.jpg) repeat center center;
   background-size: 200px 200px;
 } */
-/* .roof .ref-right{
+        /* .roof .ref-right{
   position: absolute;
   top:0;
   right: -25%;
@@ -347,72 +360,70 @@ nav li a:focus{
   background: url(http://bgfons.com/upload/tile_texture3096.jpg) repeat center center;
   background-size: 200px 200px;
 } */
-.roof, .floor {
-	position: absolute;
-	outline: 1px solid transparent;
-	top: 0px;
-  left: -50%;
-	width: 200%;
-	height: 400px;
-	/* background: linear-gradient(#ccc, #666); */
-	-webkit-transform: rotateX(-90deg);
-	-moz-transform: rotateX(-90deg);
-	transform: rotateX(-90deg);
-	-webkit-transform-origin: top;
-	-moz-transform-origin: top;
-	transform-origin: top;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-  z-index: -1;
-}
-
-/* floor */
-
-.floor {
-  z-index: -1;
-	top: 100%;
-	/* background: radial-gradient(#fff, #ddd) url(http://us.123rf.com/450wm/nanisimova/nanisimova1204/nanisimova120400103/13410080-%E8%B3%AA%E3%81%AE%E9%AB%98%E3%81%84%E3%82%B7%E3%83%BC%E3%83%A0%E3%83%AC%E3%82%B9%E3%81%AA%E5%B8%82%E6%9D%BE%E6%A8%A1%E6%A7%98%E3%81%AE%E5%A4%A7%E7%90%86%E7%9F%B3%E3%81%AE%E5%BA%8A%E3%82%BF%E3%82%A4%E3%83%AB.jpg) repeat left top; */
-  background-size: 200px;
-  /* background-color: rgb(71, 74, 255); */
-  /* background-image: linear-gradient(180deg, rgb(234, 0, 255), rgb(4, 0, 255)); */
-  background-image: var(--gradientfloor);
-  background-size: 300%;
-  background-position: center;
-  animation: rotate-floor 30s infinite alternate;
-}
-@keyframes rotate-floor {
-  0% 
-            {background-position: right; 
+        
+        .roof,
+        .floor {
+            position: absolute;
+            outline: 1px solid transparent;
+            top: 0px;
+            left: -50%;
+            width: 200%;
+            height: 400px;
+            /* background: linear-gradient(#ccc, #666); */
+            -webkit-transform: rotateX(-90deg);
+            -moz-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+            -webkit-transform-origin: top;
+            -moz-transform-origin: top;
+            transform-origin: top;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            z-index: -1;
+        }
+        /* floor */
+        
+        .floor {
+            z-index: -1;
+            top: 100%;
+            /* background: radial-gradient(#fff, #ddd) url(http://us.123rf.com/450wm/nanisimova/nanisimova1204/nanisimova120400103/13410080-%E8%B3%AA%E3%81%AE%E9%AB%98%E3%81%84%E3%82%B7%E3%83%BC%E3%83%A0%E3%83%AC%E3%82%B9%E3%81%AA%E5%B8%82%E6%9D%BE%E6%A8%A1%E6%A7%98%E3%81%AE%E5%A4%A7%E7%90%86%E7%9F%B3%E3%81%AE%E5%BA%8A%E3%82%BF%E3%82%A4%E3%83%AB.jpg) repeat left top; */
+            background-size: 200px;
+            /* background-color: rgb(71, 74, 255); */
+            /* background-image: linear-gradient(180deg, rgb(234, 0, 255), rgb(4, 0, 255)); */
+            background-image: var(--gradientfloor);
+            background-size: 300%;
+            background-position: center;
+            animation: rotate-floor 30s infinite alternate;
+        }
+        
+        @keyframes rotate-floor {
+            0% {
+                background-position: right;
             }
-    100% 
-            {background-position: left;
+            100% {
+                background-position: left;
             }
         }
-
-        :root {
-            --gradientfloor: linear-gradient(
-                90deg,
-                rgb(4, 0, 255),
-                rgb(234, 0, 255),
-                rgb(4, 0, 255),
-                rgb(4, 0, 255)
-               
-            );
+        
+         :root {
+            --gradientfloor: linear-gradient( 90deg, hsl(241, 100%, 50%), hsl(295, 100%, 50%), rgb(4, 0, 255), rgb(4, 0, 255));
+            --color1: 241;
+            --color2: 295;
         }
-aside, .wallRight {
-  overflow:hidden;
-  z-index: 1;
-	top: 0px;
-	height: 100%;
-	width: 400px;
-	/* background: radial-gradient(#fff, #ccc); */
-	-webkit-transform-origin: left;
-	-moz-transform-origin: left;
-	transform-origin: left;
-	transition: all 1s ease;
-  
-}
-/* .wallRight ul{
+        
+        aside,
+        .wallRight {
+            overflow: hidden;
+            z-index: 1;
+            top: 0px;
+            height: 100%;
+            width: 400px;
+            /* background: radial-gradient(#fff, #ccc); */
+            -webkit-transform-origin: left;
+            -moz-transform-origin: left;
+            transform-origin: left;
+            transition: all 1s ease;
+        }
+        /* .wallRight ul{
   padding: 80px 0 0;
   transform: rotateY(180deg);
 }
@@ -428,7 +439,7 @@ aside, .wallRight {
   letter-spacing:0.1em;
   margin: 0 0 20px;
 } */
-/* .wallRight .copyright{
+        /* .wallRight .copyright{
   width: 100%;
   font-size: 2em;
   color: #fff;
@@ -437,30 +448,33 @@ aside, .wallRight {
   text-align: center;
   transform: rotateY(180deg);
 } */
-
-
-/* rigth */
-
-
-.wallRight {
-  position: absolute;
-  left: 0px;
-	left: 100%;
-  -webkit-transform: rotateY(100deg);
-	-moz-transform: rotateY(100deg);
-	transform: rotateY(90deg);
-  background-image: linear-gradient(90deg, rgb(234, 0, 255), rgb(4, 0, 255)); 
-    animation: rotate-right 32s infinite alternate;
-  /* background-image: var(--gradientright); */
-  background-size: 400%;
-  background-position: center;
-
-}
-@keyframes rotate-right {
-  0%{background-position:100% 0%}
-  50%{background-position:0% 100%}
-  100%{background-position:100% 0%}}
-
+        /* rigth */
+        
+        .wallRight {
+            position: absolute;
+            left: 0px;
+            left: 100%;
+            -webkit-transform: rotateY(100deg);
+            -moz-transform: rotateY(100deg);
+            transform: rotateY(90deg);
+            background-image: linear-gradient(90deg, rgb(234, 0, 255), rgb(4, 0, 255));
+            animation: rotate-right 32s infinite alternate;
+            /* background-image: var(--gradientright); */
+            background-size: 400%;
+            background-position: center;
+        }
+        
+        @keyframes rotate-right {
+            0% {
+                background-position: 100% 0%
+            }
+            50% {
+                background-position: 0% 100%
+            }
+            100% {
+                background-position: 100% 0%
+            }
+        }
         /* :root {
             --gradientright: linear-gradient(
                 90deg,
@@ -471,51 +485,39 @@ aside, .wallRight {
                
             );
         } */
-
-
-/* left */
-
-aside{
-  position: absolute;
-  left: 0%;
-  /* -webkit-transform: rotateY(80deg);
+        /* left */
+        
+        aside {
+            position: absolute;
+            left: 0%;
+            /* -webkit-transform: rotateY(80deg);
 	-moz-transform: rotateY(80deg); */
-    /* background: linear-gradient(90deg, rgb(234, 0, 255), rgb(4, 0, 255)); */
-	transform: rotateY(90deg);
-  animation: rotate-left 32s infinite alternate;
-  background-image: var(--gradientleft);
-  background-size: 300%;
-  background-position: center;
-  /* animation-delay: 0s; */
-
-}
-@keyframes rotate-left {
-    0% 
-            {background-position: right; 
+            /* background: linear-gradient(90deg, rgb(234, 0, 255), rgb(4, 0, 255)); */
+            transform: rotateY(90deg);
+            animation: rotate-left 32s infinite alternate;
+            background-image: var(--gradientleft);
+            background-size: 300%;
+            background-position: center;
+            /* animation-delay: 0s; */
+        }
+        
+        @keyframes rotate-left {
+            0% {
+                background-position: right;
             }
-    100% 
-            {background-position: left;
+            100% {
+                background-position: left;
             }
         }
-
-        :root {
-            --gradientleft: linear-gradient(
-                90deg,
-                rgb(4, 0, 255),
-                rgb(234, 0, 255),
-                rgb(4, 0, 255),
-                rgb(4, 0, 255)
-               
-            );
+        
+         :root {
+            --gradientleft: linear-gradient( 90deg, rgb(4, 0, 255), rgb(234, 0, 255), rgb(4, 0, 255), rgb(4, 0, 255));
         }
-/* @keyframes rotate-sides {
+        /* @keyframes rotate-sides {
   0% {background:linear-gradient(90deg, rgb(234, 0, 255), rgb(4, 0, 255))}
     100% { background: linear-gradient(90deg, rgb(4, 0, 255), rgb(234, 0, 255))}
   }  */
-
-  
-
-/* aside nav{
+        /* aside nav{
   padding: 20px;
   font-size: 4em;
   width: 360px;
@@ -523,41 +525,37 @@ aside{
   line-height: 1.2em;
   letter-spacing: 0.2em;
 } */
-
-
-/* back */
-
-.wallBack{
-  /* background: radial-gradient(closest-side, rgb(234, 0, 255), rgb(234, 0, 255), rgb(4, 0, 255));   */
-  background-color: blue;
-  /* border: 1px solid rgb(4, 0, 255); */
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left:50%;
-  margin: 0 0 0 -50%;
-	transform: translateZ(-400px);
-	-webkit-transform-origin: center;
-	-moz-transform-origin: center;
-	transform-origin: center;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-  z-index: -5;
-
-  animation: gradientback 30s infinite alternate;
-}
-
-@keyframes gradientback {
-0% {
-background-color: blue;
-}
-100% {
-  background-color: rgb(234, 0, 255)}
-}
-
-
-/* .wallBack .middle,
+        /* back */
+        
+        .wallBack {
+            /* background: radial-gradient(closest-side, rgb(234, 0, 255), rgb(234, 0, 255), rgb(4, 0, 255));   */
+            background-color: blue;
+            /* border: 1px solid rgb(4, 0, 255); */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            margin: 0 0 0 -50%;
+            transform: translateZ(-400px);
+            -webkit-transform-origin: center;
+            -moz-transform-origin: center;
+            transform-origin: center;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            z-index: -5;
+            animation: gradientback 30s infinite alternate;
+        }
+        
+        @keyframes gradientback {
+            0% {
+                background-color: blue;
+            }
+            100% {
+                background-color: rgb(234, 0, 255)
+            }
+        }
+        /* .wallBack .middle,
 .wallBack .leftback,
 .wallBack .rightback{
   width: 100%;
@@ -565,125 +563,134 @@ background-color: blue;
     background: url(http://myob.ocnk.net/data/myob/image/high.quality/20150416_6bc9af.jpg) no-repeat center center;
   background-size: cover;
 } */
-.wallBack .leftback{
-  position: absolute;
-  left: 100%;
-  top: 0;
-  transform: rotateY(180deg);
-}
-/* .wallBack .rightback{
+        
+        .wallBack .leftback {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            transform: rotateY(180deg);
+        }
+        /* .wallBack .rightback{
   transform: rotateY(180deg);
   position: absolute;
   left: -100%;
   top: 0;
   background-color: pink;
 } */
-.menue {
-  position: fixed;
-}
-.typo{
-  font-family: 'Zen Dots', cursive;
-        width: 100%;
-        font-size: 3.6vw;
-        z-index: 0;
-        color: rgb(234, 0, 255);
-        text-shadow: 1px 1px 2px rgb(234, 0, 255), 0 0 25px rgb(234, 0, 255), 0 0 5px rgb(234, 0, 255);
-}
-
-.einzeln {
-    opacity: 0%;
-
-}
-
-.einzeln:hover:after { 
-    /* transition-duration: 100s; */
-    color: #4b2f89; }
-
-.typo:nth-of-type(4n) .einzeln {
-    color: rgb(234, 0, 255);
-    text-shadow: 1px 1px 2px rgb(234, 0, 255), 0 0 25px rgb(234, 0, 255), 0 0 5px rgb(234, 0, 255);
-}
-
-.typo:nth-of-type(5n) .einzeln {
-    color: rgb(4, 0, 255);
-    text-shadow: 1px 1px 2px rgb(4, 0, 255), 0 0 25px rgb(4, 0, 255), 0 0 5px rgb(4, 0, 255);
-}
-
-.typo:nth-of-type(7n) .einzeln {
-    color: rgb(251, 255, 0);
-    text-shadow: 1px 1px 2px rgb(251, 255, 0), 0 0 25px rgb(251, 255, 0), 0 0 5px rgb(251, 255, 0);
-}
-
-.typo:nth-of-type(8n) .einzeln {
-    color: rgb(255, 0, 0);
-    text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 25px rgb(255, 0, 0), 0 0 5px rgb(255, 0, 0);
-}
-
-.typo:nth-of-type(10n) .einzeln {
-    color: rgb(0, 225, 255);
-    text-shadow: 1px 1px 2px rgb(0, 225, 255), 0 0 25px rgb(0, 225, 255), 0 0 5px rgb(255, 0, 0);
-}
-a {
-      font-family: 'Zen Dots', cursive;
-      color: rgb(234, 0, 255);
-      text-decoration: none !important;
-    }
+        
+        .menue {
+            position: fixed;
+        }
+        
+        .typo {
+            font-family: 'Zen Dots', cursive;
+            width: 100%;
+            font-size: 3.6vw;
+            z-index: 0;
+            color: rgb(234, 0, 255);
+            text-shadow: 1px 1px 2px rgb(234, 0, 255), 0 0 25px rgb(234, 0, 255), 0 0 5px rgb(234, 0, 255);
+        }
+        
+        .einzeln {
+            opacity: 0%;
+        }
+        
+        .einzeln:hover:after {
+            /* transition-duration: 100s; */
+            color: #4b2f89;
+        }
+        
+        .typo:nth-of-type(4n) .einzeln {
+            color: rgb(234, 0, 255);
+            text-shadow: 1px 1px 2px rgb(234, 0, 255), 0 0 25px rgb(234, 0, 255), 0 0 5px rgb(234, 0, 255);
+        }
+        
+        .typo:nth-of-type(5n) .einzeln {
+            color: rgb(4, 0, 255);
+            text-shadow: 1px 1px 2px rgb(4, 0, 255), 0 0 25px rgb(4, 0, 255), 0 0 5px rgb(4, 0, 255);
+        }
+        
+        .typo:nth-of-type(7n) .einzeln {
+            color: rgb(251, 255, 0);
+            text-shadow: 1px 1px 2px rgb(251, 255, 0), 0 0 25px rgb(251, 255, 0), 0 0 5px rgb(251, 255, 0);
+        }
+        
+        .typo:nth-of-type(8n) .einzeln {
+            color: rgb(255, 0, 0);
+            text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 25px rgb(255, 0, 0), 0 0 5px rgb(255, 0, 0);
+        }
+        
+        .typo:nth-of-type(10n) .einzeln {
+            color: rgb(0, 225, 255);
+            text-shadow: 1px 1px 2px rgb(0, 225, 255), 0 0 25px rgb(0, 225, 255), 0 0 5px rgb(255, 0, 0);
+        }
+        
+        a {
+            font-family: 'Zen Dots', cursive;
+            color: rgb(234, 0, 255);
+            text-decoration: none !important;
+        }
     </style>
 </head>
+
 <body>
     <header id="header"></header>
     <div class="room">
-       <div class="damper">
-           <div class="container">
-               <div class="wallBack"><div class="leftback">aaaa</div><div class="middle">
-                 <div class="content">
-                   <article id="home">
-                   </article>
-                   <article id="none">
-                     
-                   </article>
-                                     <article id="about"><h2>ABOUT</h2>
-                                       
-                    <div class="row"><div class="img"><img src="http://www.myob-nyc.com/image/top_maximage/myob_top_img_6.jpg" alt="" /></div>
-                   our accessories deserve your attention NY,LA,Sweden and Japan,so hit us up! </div>
-                   </article>
-                 </div>
-                 </div>
-                 <div class="rightback">
-                   <div class="menue">
-                    <div class="typo"><a href="../../robot/three.modulecool/index.html"><span class="einzeln">heart</span></a> <span class="einzeln">eye</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                    <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
-                   </div>
-                 </div>
-             </div>
-               <div class="roof">
-                 <div class="middle">
-                 </div>
-                 <div class="ref-left"></div>
-                 <div class="ref-right"></div>
-               </div>
-               <aside>
-                 <!-- <h1>M.Y.O.B<div>new york</div></h1>
+        <div class="damper">
+            <div class="container">
+                <div class="wallBack">
+                    <div class="leftback">aaaa</div>
+                    <div class="middle">
+                        <div class="content">
+                            <article id="home">
+                            </article>
+                            <article id="none">
+
+                            </article>
+                            <article id="about">
+                                <h2>ABOUT</h2>
+
+                                <div class="row">
+                                    <div class="img"><img src="http://www.myob-nyc.com/image/top_maximage/myob_top_img_6.jpg" alt="" /></div>
+                                    our accessories deserve your attention NY,LA,Sweden and Japan,so hit us up! </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="rightback">
+                        <div class="menue">
+                            <div class="typo"><a href="../../robot/three.modulecool/index.html"><span class="einzeln">heart</span></a> <span class="einzeln">eye</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                            <div class="typo"><span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span> <span class="einzeln">synchronizers</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="roof">
+                    <div class="middle">
+                    </div>
+                    <div class="ref-left"></div>
+                    <div class="ref-right"></div>
+                </div>
+                <aside>
+                    <!-- <h1>M.Y.O.B<div>new york</div></h1>
  <nav role='navigation'>
    <ul>
      <li class="home"><a href="#">Home</a></li>
@@ -692,9 +699,9 @@ a {
      <li class="Contact"><a href="#">Contact</a></li>
    </ul>
  </nav>   -->
-               </aside>
-             <div class="wallRight">
- <!-- <ul>
+                </aside>
+                <div class="wallRight">
+                    <!-- <ul>
    <li><a href="#">2015 SS TOUCH NATURE</a></li>
    <li><a href="#">2015 SS CUBE COLLECTION <br /> - TOKYO -</a></li>
    <li><a href="#">2015 SS CUBE COLLECTION <br /> -isfern-</a></li>
@@ -704,7 +711,7 @@ a {
    <li><a href="#">2014 SS</a></li>
    <li><a href="#">2013 WINTER</a></li>
  </ul> -->
-               <!-- <div class="copyright">All Rights Reserved 2015 MYOB</div>
+                    <!-- <div class="copyright">All Rights Reserved 2015 MYOB</div>
              </div>
              <div class="pyramid-gyro">
          <div class="pyramid-axis">
@@ -715,111 +722,119 @@ a {
            <div class="bottom"></div>
            
          </div> -->
-     </div>
-               <div class="floor">
-                 <div class="about"></div>
-                 <!-- <div class="shadow"></div> -->
-               </div>
-           </div>
-       </div>  
- </div>
- 
- <!--<div class="space"></div>-->
- </section>
-    
+                </div>
+                <div class="floor">
+                    <div class="about"></div>
+                    <!-- <div class="shadow"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="space"></div>-->
+    </section>
+
 </body>
+
 </html>
 
 
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+    var container = $('.container');
+    var damper = $('.damper');
+    var speed = 20;
+    var globalID;
+    var mouseX = 50,
+        mouseY = 50;
+    var xp = 50,
+        yp = 50;
+    var limit = 40;
 
-var container = $('.container');
-var damper = $('.damper');
-var speed = 20;
-var globalID;
-var mouseX = 50,
-  mouseY = 50;
-var xp = 50,
-  yp = 50;
-var limit = 40;
+    container.mouseenter(function(e) {
+        moveIt();
+    });
 
-container.mouseenter(function(e) {
-  moveIt();
-});
+    // Set up mouseX and mouseY to be center of element
+    damper.mousemove(function(e) {
+        mouseX = 100 * (e.pageX - damper.offset().left) / damper.width();
+        mouseY = 100 * (e.pageY - damper.offset().top) / damper.height();
+    });
 
-// Set up mouseX and mouseY to be center of element
-damper.mousemove(function(e) {
-  mouseX = 100 * (e.pageX - damper.offset().left) / damper.width();
-  mouseY = 100 * (e.pageY - damper.offset().top) / damper.height();
-});
+    container.mouseleave(function() {
+        cancelAnimationFrame(globalID);
+    });
 
-container.mouseleave(function() {
-  cancelAnimationFrame(globalID);
-});
+    function moveIt() {
+        xp += (mouseX - xp) / speed;
+        yp += (mouseY - yp) / speed;
+        //$('.pyramid-axis').css({"top": (100 - yp) + "%","left": (100 - xp) + "%",});
+        $('.pyramid-gyro').css({
+            "perspective-origin": (100 - xp) + "% " + (60 - yp) * 2.4 + "%"
+        });
+        $('.pyramid-axis').css({
+            "marginLeft": (50 - xp) + "px",
+            "marginTop": (50 - yp) + "px"
+        });
+        container.css("perspective-origin", (100 - xp) + "% " + (100 - yp) + "%");
 
-function moveIt() {
-  xp += (mouseX - xp) / speed;
-  yp += (mouseY - yp) / speed;
-  //$('.pyramid-axis').css({"top": (100 - yp) + "%","left": (100 - xp) + "%",});
-  $('.pyramid-gyro').css({
-    "perspective-origin": (100 - xp) + "% " + (60 - yp) * 2.4 + "%"
-  });
-  $('.pyramid-axis').css({
-    "marginLeft": (50 - xp) + "px",
-    "marginTop": (50 - yp) + "px"
-  });
-  container.css("perspective-origin", (100 - xp) + "% " + (100 - yp) + "%");
+        globalID = requestAnimationFrame(moveIt);
 
-  globalID = requestAnimationFrame(moveIt);
-};
-$('.content').hover(function(){
-}, function(){
-});
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('.content').animate({
-          scrollTop: target.offset().top
-        }, 600);
-        return false;
-      }
+    };
+    $('.content').hover(function() {}, function() {});
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('.content').animate({
+                        scrollTop: target.offset().top
+                    }, 600);
+                    return false;
+                }
+            }
+        });
+        $('nav li.home').click(function() {
+            $('.pyramid-gyro, .shadow').delay(600).fadeIn();
+        });
+        $('nav li:not(.home)').click(function() {
+            $('.pyramid-gyro, .shadow').fadeOut();
+        });
+        $('nav li').click(function() {
+            $('article.active').fadeOut();
+            var thisClass = $(this).attr('class');
+            $('article#' + thisClass).addClass('active').delay(600).fadeIn();
+        });
+    });
+</script>
+
+<script>
+    $(".einzeln").hover(function() {
+            $(this)[0].style.opacity = "100%"; //$ wählt alle Elemente diser Klasse aus eventlister mit hover, this das betroffene elment, 0 erstes element in dem arrae
+        },
+        function() {
+            var synchronizer = $(this)[0];
+            setTimeout(setOpacityZero, 4000, synchronizer); // hier 2000 auf eine beliebige zeit in ms stellen:)
+            //this ausgähltes elment 
+        }
+    );
+
+    function setOpacityZero(synchronizer) { //parameter
+        synchronizer.style.opacity = "0%";
     }
-  });
-  $('nav li.home').click(function(){
-    $('.pyramid-gyro, .shadow').delay(600).fadeIn();
-  });
-  $('nav li:not(.home)').click(function(){
-    $('.pyramid-gyro, .shadow').fadeOut();
-  });
-  $('nav li').click(function(){
-    $('article.active').fadeOut();
-    var thisClass = $(this).attr('class');
-    $('article#'+thisClass).addClass('active').delay(600).fadeIn();
-  });
-});
-    </script>
+</script>
 
 <script>
-  $(".einzeln").hover(function() {
-      $(this)[0].style.opacity = "100%"; //$ wählt alle Elemente diser Klasse aus eventlister mit hover, this das betroffene elment, 0 erstes element in dem arrae
-  },
-  function() {
-      var synchronizer = $(this)[0];
-      setTimeout(setOpacityZero, 4000, synchronizer); // hier 2000 auf eine beliebige zeit in ms stellen:)
-                                                      //this ausgähltes elment 
-  }
-  );
-
-  function setOpacityZero(synchronizer) {             //parameter
-      synchronizer.style.opacity = "0%";
-      }
+    //set the colors again every 5s
+    setInterval(() => {
+        console.log('interval?')
+        var root = document.documentElement;
+        var color1 = root.style.getPropertyValue('--color1')
+        var color2 = root.style.getPropertyValue('--color2')
+        root.style.setProperty('--color1', color2);
+        root.style.setProperty('--color2', color1);
+    }, 5000);
 </script>
 
 <!-- https://codepen.io/Ava1anche/pen/bdLByE -->
