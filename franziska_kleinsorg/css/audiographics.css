@@ -1,11 +1,5 @@
 div#player {
 	width: 90vw;
-	height: 90vh;
+	height: 60vh;
 	display: block;
-}
-
-canvas {
-    width: 90vw;
-	height: 90vh;
-	color: #d59d8d;
 }
