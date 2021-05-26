@@ -6,6 +6,13 @@
     --c-lighter: #4cdeb6;
     --c-lightest: #85e0c9;
     --body-padding: 1rem;
+    --columns: 1fr;
+}
+
+@media screen and (min-width: 800px) {
+     :root {
+        --columns: 1fr 1fr;
+    }
 }
 
 html {
@@ -14,13 +21,14 @@ html {
 
 body {
     height: 100%;
-    padding: var(--body-padding);
+    padding: 0;
     padding-bottom: 3rem;
     background-color: var(--c-lightest);
     background-image: linear-gradient(45deg, #C9FFBF 0%, #FFAFBD 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: var(--c-darkest)
+    color: var(--c-darkest);
+    border: 20px solid #333;
 }
 
 a img {
@@ -33,6 +41,50 @@ a img {
     box-sizing: border-box;
 }
 
+.topbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom: 20px solid #333;
+    padding: 1rem;
+    /* margin-bottom: 2rem; */
+}
+
+.topbar * {
+    margin: 0;
+}
+
+header {
+    border-bottom: 20px solid #333;
+    grid-row-start: 0;
+    grid-row-end: -1;
+    padding: 2rem 2rem 2rem 1rem;
+    /* width: fit-content; */
+    /* border-right: 20px solid #333; */
+}
+
+h1 {
+    margin: 0;
+    line-height: 1;
+}
+
+.info-top {
+    border-bottom: 20px solid #333;
+    display: grid;
+    grid-template-columns: var(--columns);
+    /* gap: 20px; */
+}
+
+.info-left {
+    border-right: 20px solid #333;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.info-right {
+    padding: 1rem;
+}
+
 hr {
     outline: none;
     border: none;
@@ -40,12 +92,24 @@ hr {
     margin: 2rem 0;
 }
 
+.exercises {
+    display: grid;
+    grid-template-columns: var(--columns);
+}
+
 .exercise {
     /* border: 1px solid var(--c-darkest); */
     padding: var(--body-padding);
-    border-radius: 4px;
-    margin-bottom: var(--body-padding);
-    box-shadow: 0 1px 10px rgba(172, 145, 216, .3);
+    border-bottom: 20px solid #333;
+    /* box-shadow: 0 1px 10px rgba(172, 145, 216, .3); */
+}
+
+.exercise:nth-child(odd) {
+    border-right: 20px solid #333;
+}
+
+.exercise img {
+    width: 100%;
 }
 
 .agenda hr {
