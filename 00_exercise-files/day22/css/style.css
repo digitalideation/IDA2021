@@ -47,3 +47,7 @@ hr {
     margin-bottom: var(--body-padding);
     box-shadow: 0 1px 10px rgba(172, 145, 216, .3);
 }
+
+.agenda hr {
+    margin: .25rem 0;
+}
