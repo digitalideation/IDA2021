@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
     <title>IDA Digital Design Day 21 – Responsiveness – Audio</title>
     <style>
@@ -44,6 +45,13 @@
         h2 {
             font-size: 24px;
             font-weight: 400;
+        }
+        .do::before {
+            font-family: "Font Awesome 5 Brands";
+            content: "\f1be";
+            color:black;
+            font-size:3rem;
+            display:block;
         }
     </style>
 
@@ -91,8 +99,9 @@
         <p>Ihr findet <a target="_blank" href="audio.html">hier ein kleines kommentiertes Beispiel</a>. Ihr könnt es out-of-the box verwenden, ohne etwas im JavaScript anzupassen. Die CSS Variable wird von JavaScript gesetzt in Abhängigkeit der Lautstärke.
             Die CSS Variable selber könnt ihr für Animationen verwenden und Grösse, Farbe, Transparenz etc. steuern.
         </p>
+        <hr/>
         <h2>Exercise</h2>
-        <p>Nehmt das obige Beispiel und baut es bei euch ein. Nehmt euren eigenen Song und steuert einen Aspekt des Robots.</p>
+        <p class="do">Nehmt das obige Beispiel und baut es bei euch ein. Nehmt euren eigenen Song und steuert einen Aspekt des Robots oder der Site.</p>
 
         </p>
         <p>Ein bisschen Background: <a target="_blank" href="https://www.youtube.com/watch?v=NxUzZzGrEkA">10 Minuten Intro zu Web Audio API von Ruth Jones.</a> Sie kreiert hier Sound über JavaScript.</p>
