@@ -1,0 +1,201 @@
+<!-- COOLE VERSION -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_robot.css">
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li class="homelink"><a href="https://ida2021-staging.netlify.app/">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 99.2 99.2"
+                    style="enable-background:new 0 0 99.2 99.2;" xml:space="preserve">
+                    <g>
+                        <path
+                            d="M98.2,47.7l-46-46.7c-1.4-1.4-3.7-1.4-5.1,0L23.8,24.6v-5.4H13.6V35L1,47.7c-1.4,1.4-1.4,3.7,0,5.1l0.1,0.1
+            		c1.4,1.4,3.7,1.4,5.1,0l40.9-41.4c1.4-1.4,3.7-1.4,5.1,0L93,52.9c1.4,1.4,3.7,1.4,5.1,0l0.1-0.1C99.5,51.4,99.5,49.1,98.2,47.7z" />
+                        <polygon
+                            points="13.6,52 13.6,99.2 36.9,99.2 36.9,70.3 62.3,70.3 62.3,99.2 85.6,99.2 85.6,52.7 49.3,15.8 	" />
+                    </g>
+                </svg>
+            </a>
+        </li>
+        <li><a href="/index.html">Home</a></li>
+        <li class="active"><a href="/robotmouse.html">Robot</a></li>
+        <li><a href="/sira_trinkler/song.html">My Song</a></li>
+        <li class="dropdown">
+            <a href="/process4.html" class="dropbtn">My Process</a>
+            <div class="dropdown-content">
+                <a href="/sira_trinkler/myprocess.html">Daily Progress</a>
+                <a href="/moodboard.html">Moodboard</a>
+            </div>
+        </li>
+        <li class="last">
+            <div>
+                <audio id="myAudio" src="assets/audio/1957-audio.mp3"></audio>
+                <a onClick="togglePlay()" class="trigger">♪ 1957</a>
+            </div>
+            </a>
+        </li>
+    </ul>
+</nav>
+    <canvas id="canvas">
+    </canvas>
+
+    <!-- JS für BACKGROUND -->
+    <script>
+
+        const canvas = document.querySelector("#canvas");
+        const ctx = canvas.getContext("2d");
+
+        let w, h, particles;
+        let particleDistance = 20;
+        let mouse = {
+            x: undefined,
+            y: undefined,
+            radius: 200
+        }
+
+        function init() {
+            resizeReset();
+            animationLoop();
+        }
+
+        function resizeReset() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+
+            particles = [];
+            for (let y = (((h - particleDistance) % particleDistance) + particleDistance) / 2; y < h; y += particleDistance) {
+                for (let x = (((w - particleDistance) % particleDistance) + particleDistance) / 2; x < w; x += particleDistance) {
+                    particles.push(new Particle(x, y));
+                }
+            }
+        }
+
+        function animationLoop() {
+            ctx.clearRect(0,0, w, h);
+            drawScene();
+            requestAnimationFrame(animationLoop);
+        }
+
+        function drawScene() {
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            drawLine();
+        }
+
+        function drawLine() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let dx = particles[a].x - particles[b].x;
+                    let dy = particles[a].y - particles[b].y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < particleDistance * 1) {
+                        opacity = 1 - (distance / (particleDistance * 2));
+                        ctx.strokeStyle = "rgba(255,255,255,0.3" + opacity + ")";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function mousemove(e) {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        }
+
+        function mouseout() {
+            mouse.x = undefined;
+            mouse.y = undefined;
+        }
+
+        class Particle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.size = 7;
+                this.baseX = this.x;
+                this.baseY = this.y;
+                this.speed = (Math.random() * 50) + 5;
+            }
+            draw() {
+                ctx.fillStyle = "rgba(104,127,162,0.8)";
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+            update() {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                let maxDistance = mouse.radius;
+                let force = (maxDistance - distance) / maxDistance; // 0 ~ 1
+                let forceDirectionX = dx / distance;
+                let forceDirectionY = dy / distance;
+                let directionX = forceDirectionX * force * this.speed;
+                let directionY = forceDirectionY * force * this.speed;
+
+                if (distance < mouse.radius) {
+                    this.x -= directionX;
+                    this.y -= directionY;
+                } else {
+                    if (this.x !== this.baseX) {
+                        let dx = this.x - this.baseX;
+                        this.x -= dx / 50;
+                    }
+                    if (this.y !== this.baseY) {
+                        let dy = this.y - this.baseY;
+                        this.y -= dy / 50;
+                    }
+                }
+            }
+        }
+
+        init();
+        window.addEventListener("resize", resizeReset);
+        window.addEventListener("mousemove", mousemove);
+        window.addEventListener("mouseout", mouseout);
+    </script>
+
+    <!-- JS für AUDIO -->
+    <script>
+        var myAudio = document.getElementById("myAudio");
+        var isPlaying = false;
+
+        function togglePlay() {
+            isPlaying ? myAudio.pause() : myAudio.play();
+        };
+
+        myAudio.onplaying = function () {
+            isPlaying = true;
+            document.body.classList.remove('paused')
+            document.body.classList.add('playing')
+        };
+
+        myAudio.onpause = function () {
+            isPlaying = false;
+            document.body.classList.remove('playing')
+            document.body.classList.add('paused')
+        };
+    </script>
+</body>
+
+</html>
