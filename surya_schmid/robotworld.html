@@ -7,44 +7,172 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/robotworld.css" />
   <title>IDA Modul - Surya Schmid</title>
+<style>
 
-  
+  /* ----------------------- MOVE ON MUSIC -----------------------> */
+      :root {
+        /*************************** Page-wide variables ****************************/
+        --scalesize: 2;
+        /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
+      }
+
+      section {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 10vh;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 2vw;
+        left: 40rem;
+      }
+      section:hover{
+        color: black;
+        background-color: white;
+        border-radius: 50%;
+      }
+
+      .head {
+        transform: scale(var(--scalesize));
+
+      }
+
+      /* some fun with pseudo elements */
+
+      .head:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: -50px;
+        top: -50px;
+        border-radius: 120px;
+        box-shadow: 0px 0px 100px 10px #ff4a46;
+      }
+
+      .button {
+        cursor: pointer;
+      
+      }
+  /* ----------------------- MOVE ON MUSIC -----------------------> */
+</style>
+
+<!-- /* ----------------------- MOVE ON MUSIC SCRIPT-----------------------> 
+<script>
+  const minscale = 0.3; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
+  const maxscale = 4; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
+</script>
+<!-- /* ----------------------- MOVE ON MUSIC SCRIPT----------------------->
 </head>
 
 <body>
+<!-----------------------  CURSOR ----------------------->
+<span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+  <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+</span>
+
+<div id="cursor"> </div>
+<div id="outerCursor"></div>
+<!-----------------------  CURSOR ----------------------->
+  
+<!-----------------------  OVERLAY ----------------------->
   <nav>
-    <ul>
-      <li> <a href="https://ida2021-staging.netlify.app/"> Home </a></li>
-      <li><a href="robotworld.html">My Robot</a></li>
-      <li><a href="song.html">My Song</a></li>
-      <li><a href="process/index.html">Process</a></li>
-    </ul>
+      <div id="myNav" class="overlay">
+      
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a class="menu home1" href="index.html">Home</a>
+          <a class="menu song1" href="song.html">My Song</a>
+          <a class="menu robot1" href="robotworld.html">My Robot</a>
+          <a class="menu process1" href="process/index.html">Process</a>
+        </div>
+      
+      </div>
+      
+      <!-- Use any element to open/show the overlay navigation menu -->
+      <span onclick="openNav()" class="openbutton">&#43;</span>
   </nav>
+<!----------------------- OVERLAY ----------------------->
 
-  <h1>Surya Schmid</h1>
-  <p>My Robot</p>
+<!----------------------- AUDIO ----------------------->
+  <section>
+    <audio src="process/audio/head&heart.mp3">
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+    
+    
+    <a onclick="togglePlay()" class="button trigger">Dance</a>
+  </section>
+<!-----------------------  AUDIO ----------------------->
 
-  <div class="robot">
-    <div class="leg leg--left">
-      <div class="foot"></div>
+<!-----------------------  ROBOT ----------------------->
+  <main>
+    <div class="robot">
+      <div class="leg leg--left">
+        <div class="foot"></div>
+      </div>
+      <div class="leg leg--right">
+        <div class="foot"></div>
+      </div>
+      <div class="body"></div>
+      <div class="head">
+        <div class="eye eye--left"></div>
+        <div class="eye eye--right"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="arm arm--left">
+        <div class="hand"></div>
+      </div>
+      <div class="arm arm--right">
+        <div class="hand"></div>
+      </div>
+      
     </div>
-    <div class="leg leg--right">
-      <div class="foot"></div>
-    </div>
-    <div class="body"></div>
-    <div class="head">
-      <div class="eye eye--left"></div>
-      <div class="eye eye--right"></div>
-      <div class="nose"></div>
-      <div class="mouth"></div>
-    </div>
-    <div class="arm arm--left">
-      <div class="hand"></div>
-    </div>
-    <div class="arm arm--right">
-      <div class="hand"></div>
-    </div>
-  </div>
+  </main>
+<!-----------------------  ROBOT ----------------------->
+
+  <script>
+    // ------------------------ THE OVERLAY ------------------------------->
+      /* Open when someone clicks on the span element */
+        function openNav() {
+          document.getElementById("myNav").style.width = "40%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+    // ------------------------ THE OVERLAY ------------------------------->
+
+
+    // ------------------------ CURSOR ------------------------------->
+      var cursor = document.getElementById('cursor');
+      document.addEventListener('mousemove', function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+      });
+
+       var outerCursor = document.getElementById('outerCursor');
+        document.addEventListener('mousemove', function (e) {
+          var x = e.clientX;
+          var y = e.clientY;
+          outerCursor.style.left = x + "px";
+          outerCursor.style.top = y + "px";
+        });
+      // ------------------------ CURSOR ------------------------------->
+      
+  </script>
+  <script src="css/robotworld.js"></script>
 </body>
 
 </html>
