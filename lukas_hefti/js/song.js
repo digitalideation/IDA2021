@@ -13,7 +13,7 @@ $(document).ready(function () {
 
       if ((domRect.top < window.innerHeight) && (domRect.bottom > 0)) {
       // if in viewport; get Id of parent "site" and attach "visible" class to all childs and itself.
-        console.log("ich bin im viewport", siteDivTriggers[i]);
+        //console.log("ich bin im viewport", siteDivTriggers[i]);
 
         let parentDiv = $(siteDivTriggers[i]).parent();
         parentDiv.addClass("visible");
@@ -34,7 +34,7 @@ $(document).ready(function () {
 
       } else {
         //remove class if not visible ------ not yet implemented -------
-        console.log("ich bin noch nicht im viewport", siteDivTriggers[i]);
+        //console.log("ich bin noch nicht im viewport", siteDivTriggers[i]);
 
       }
     }
