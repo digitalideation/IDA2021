@@ -1,37 +1,37 @@
 /* ALLGEMEIN */
  @font-face {
     font-family: Walsheim Regular;
-    src: url(/assets/fonts/GT-Walsheim-Regular.woff);
+    src: url(../assets/fonts/GT-Walsheim-Regular.woff);
 }
 
 @font-face {
     font-family: Walsheim Bold;
-    src: url(/assets/fonts/GT-Walsheim-Pro-Bold.woff);
+    src: url(../assets/fonts/GT-Walsheim-Pro-Bold.woff);
 }
 
 @font-face {
     font-family: Walsheim Medium;
-    src: url(/assets/fonts/GT-Walsheim-Medium.woff);
+    src: url(../assets/fonts/GT-Walsheim-Medium.woff);
 }
 
  @font-face {
     font-family: HKGrotesk Bold;
-    src: url(/assets/fonts/HKGrotesk-Bold.otf);
+    src: url(../assets/fonts/HKGrotesk-Bold.otf);
 }
 
 @font-face {
     font-family: HKGrotesk Medium;
-    src: url(/assets/fonts/HKGrotesk-Medium.otf);
+    src: url(../assets/fonts/HKGrotesk-Medium.otf);
 }
 
 @font-face {
     font-family: HKGrotesk Regular;
-    src: url(/assets/fonts/HKGrotesk-Regular.otf);
+    src: url(../assets/fonts/HKGrotesk-Regular.otf);
 }
 
 @font-face {
     font-family: HKGrotesk Light;
-    src: url(/assets/fonts/HKGrotesk-Light.otf);
+    src: url(../assets/fonts/HKGrotesk-Light.otf);
 }
 
 * {
