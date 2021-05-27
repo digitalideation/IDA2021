@@ -1,218 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song</title>
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/song.css">
+    <style>
+    
+
+
+    </style>
 </head>
-
 <body>
-    <section class="one">
-        <div class="mom">
-            <div class="son1">
-                <div class="son2">
-                    w <br>
-                    e <br> <br>
-                    c <br>
-                    o <br>
-                    u <br>
-                    l <br>
-                    d <br>
-                </div>
-                <div class="son3">
-                    d <br>
-                    r <br>
-                    e <br>
-                    a <br>
-                    m <br>
-
-                </div>
-                <div class="son4">
-                    a <br>
-                    w <br>
-                    a <br>
-                    y <br>
-                </div>
-
-            </div>
-            <div class="son5">
-                L <br>
-                E <br>
-                T <br>
-                S <br>
-                G <br>
-                O <br>
-            </div>
-        </div>
-        <div class="dad">
-            <div class="dau1">
-                t <br>
-                h <br>
-                e <br>
-                r <br>
-                e' <br>
-                s <br>
-            </div>
-            <div class="dau2">
-                f <br>
-                u <br>
-                l <br>
-                l <br> <br>
-                m <br>
-                o <br>
-                o <br>
-                n <br>
-            </div>
-            <div class="dau3">
-                r <br>
-                i <br>
-                s <br>
-                i <br>
-                n<br>
-            </div>
-        </div>
-
-    </section>
-    <section class="two">
-        <div class="uncle">
-            <div class="cousine1">
-                <div class="cousine2">
-                    I <br>
-                    w <br>
-                    a <br>
-                    n <br>
-                    n <br>
-                    a <br>
-                </div>
-                <div class="cousine3">
-                    c <br>
-                    e <br>
-                    l <br>
-                    e <br>
-                    b <br>
-                    r <br>
-                    a <br>
-                    t <br>
-                    e <br>
-                </div>
-                <div class="cousine4">
-                    o <br>
-                    n <br>
-                    t <br>
-                    h <br>
-                    i <br>
-                    s <br>
-                </div>
-            </div>
-            <div class="cousine5">
-                D <br>
-                A <br>
-                N <br>
-                C <br>
-                I <br>
-                N <br>
-            </div>
-
-
-
-
-        </div>
-
-        <div class="aunt">
-            <div class="aunt1">
-                h <br>
-                a <br>
-                r <br>
-                v <br>
-                e <br>
-                s <br>
-                t <br>
-            </div>
-            <div class="aunt2">
-                m <br>
-                o <br>
-                o <br>
-                n <br>
-            </div>
-        </div>
-
-
-    </SEction>
-    <section class="three">
-        <div class="papa">
-            <div class="gson1">
-                <div class="gson2"> I <br>
-                    a <br>
-                    m <br>
-                    i <br>
-                    n <br>
-                </div>
-                <div class="gson3">
-                    L <br>
-                    o <br>
-                    v <br>
-                    e <br>
-                </div>
-                <div class="gson4">
-                    w <br>
-                    i <br>
-                    t <br>
-                    h <br> <br> <br>
-                    y <br>
-                    o <br>
-                    u <br>
-                </div>
-            </div>
-            <div class="gson5"> IN <br>
-                THE
-            </div>
-            <div class="gson6">
-                L <br>
-                I <br>
-                G <br>
-                H <br>
-                T <br>
-            </div>
-        </div>
-        <div class="oma">
-            <div class="gbaby1">
-                o <br>
-                n <br>
-                t <br>
-                h <br>
-                i <br>
-                s <br>
-            </div>
-            <div class="gbaby2">
-                h <br>
-                a <br>
-                r <br>
-                v <br>
-                e <br>
-                s <br>
-                t <br>
-            </div>
-            <div class="gbaby3">
-                m <br>
-                o <br>
-                o <br>
-                n <br>
-            </div>
-
-        </div>
-        <div class="navsong">
-            <ul class="navsong">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="robotworld.html"></a> My Robot</li>
-                <li><a href="process/index.html">Process</a></li>
-            </ul>
-        </div>
-
-    </section>
+<canvas id="c"></canvas>
+<div class="one">
+<span aria-hidden="true"> L <br>
+E <br>
+T <br>
+S <br>
+G <br>
+O <br>
+</span>
+<span aria-hidden="true">
+    L <br>
+    E <br>
+    T <br>
+    S <br>
+    G <br>
+    O <br>
+</span>
+</div>
+<div class="two">
+    D <br>
+    A <br>
+    N <br>
+    C <br>
+    I <br>
+    N <br>
+</div>
 </body>
+<script>
+    window.onload = function (argument) {
 
+            // var lyric = "i couldn't take it couldn't stand another minute couldn't bear another day without you in it";
+            var lyric = "Come little bit closer Hear what have  say Just like children sleepin  could dream this night away But theres  full moon risin Lets go dancin in the light We know where the music playin Lets go out and feel the night Because Im still in love with you want  see you dance again Because  still in love with you  this harvestmoon";
+            var words = {};
+            var words_attr = [];
+            string_handle(lyric);
+
+            var canvas = document.getElementById('c');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            if (canvas.getContext) {
+                var c = canvas.getContext('2d'),
+                    w = canvas.width,
+                    h = canvas.height;
+
+                c.strokeStyle = 'red';
+                c.fillStyle = 'white';
+                c.lineWidth = 5;
+
+                // constructor
+                Word = function (key) {
+                    this.text = key;
+                    this.x = Math.random() * w;
+                    this.y = Math.random() * h;
+                    this.font = words[key] * 10 + 'px arial'
+                    this.speed = (words[key]);
+                }
+                for (key in words) {
+                    words_attr.push(new Word(key));
+                }
+                console.log(words_attr.length);
+
+                function animation() {
+                    for (var i = 0; i < words_attr.length; i++) {
+                        c.font = words_attr[i].font;
+                        c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
+                        words_attr[i].width = c.measureText(words_attr[i].text).width;
+                        c.stroke();
+                    }
+                    move();
+                }
+
+                function move() { for (var i = 0; i < words_attr.length; i++) { if (words_attr[i].y > h) { words_attr[i].y = 0; words_attr[i].x = Math.random() * w; } else { words_attr[i].y += words_attr[i].speed; } } }
+                setInterval(function () {
+                    c.clearRect(0, 0, w, h);
+                    animation();
+                }, 24);
+
+            }
+
+            function string_handle(str) {
+                var split_str = str.split(" ");
+                var word_array = [];
+                var word_count = [];
+                for (var i = 0; i < split_str.length; i++) {
+                    check = true;
+                    for (var j = 0; j <= word_array.length; j++) {
+                        if (split_str[i] == word_array[j]) {
+                            word_count[j]++;
+                            check = false;
+                            break;
+                        }
+                    }
+                    if (check) {
+                        word_array.push(split_str[i]);
+                        word_count.push(1);
+                    }
+                }
+                for (var i = 0; i < word_array.length; i++) {
+                    words[word_array[i]] = word_count[i];
+                }
+                return words;
+            }
+
+        }
+</script>
 </html>
