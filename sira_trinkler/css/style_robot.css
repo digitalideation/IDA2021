@@ -45,7 +45,7 @@
 body {
 	margin: 0;
 	padding: 0;
-  background-image: url(assets/image/backgroundnew.jpg);
+  background-image: url(../assets/image/backgroundnew.jpg);
 }
 #canvas {
 	position: fixed;
