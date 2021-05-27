@@ -8,20 +8,58 @@
   <link rel="stylesheet" href="css/style.css">
   <title>IDA Modul - Surya Schmid</title>
 
-
 </head>
 
 <body>
+  <!--------------------- CURSOR ----------------------->
+    <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+      <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+    </span>
+
+    <div id="cursor"> </div>
+    <div id="outerCursor"></div>
+  <!-----------------------  CURSOR ----------------------->
+
+
+  <!-----------------------  CONTENT ----------------------->
+    <div class="landingPage">
+        <h1>Welcome</h1>
+    </div>
+
+
   <nav>
-    <ul>
-      <li> <a href="https://ida2021-staging.netlify.app/"> Home </a></li>
-      <li><a href="robotworld.html">My Robot</a></li>
-      <li><a href="song.html">My Song</a></li>
-      <li><a href="process/index.html">Process</a></li>
-    </ul>
+      <a class="nav homeDiv home" href="https://ida2021-staging.netlify.app/"> Home </a>
+
+      <a class="nav robotDiv robot" href="robotworld.html">My Robot</a>
+
+      <a  class="nav songDiv song" href="song.html">My Song</a>
+
+      <a class="nav processDiv process" href="process/index.html">Process</a>
   </nav>
-  <h1>Surya Schmid</h1>
-  <p>Hello, World.</p>
+
+  <!-----------------------  CONTENT ----------------------->
+
+
+
+<script>
+  // --------------------- CURSOR --------------------->
+      var cursor = document.getElementById('cursor');
+      document.addEventListener('mousemove', function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+      });
+
+      var outerCursor = document.getElementById('outerCursor');
+      document.addEventListener('mousemove', function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        outerCursor.style.left = x + "px";
+        outerCursor.style.top = y + "px";
+      });
+  // <--------------------- CURSOR ---------------------  
+  </script>
 </body>
 
 </html>

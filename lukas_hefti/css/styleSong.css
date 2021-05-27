@@ -2,12 +2,11 @@
 @import "styleNavBar.css";
 
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');  /* font-family: 'Bangers', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); /* font-family: 'Bangers', cursive; */
 
 
 /* All */
 * {
-    
 }
 
 
@@ -26,12 +25,11 @@ main {
     margin-right: auto;
 }
 
-main div {
-    display: block;
-    height: 100vh;
-    min-width: 100%;
-
-}
+    main div {
+        display: block;
+        height: 100vh;
+        min-width: 100%;
+    }
 
 p {
     font-size: 6em;
@@ -43,7 +41,7 @@ p {
     width: 100%;
     height: 50px;
     /*background-color: burlywood;*/
-    background-color: transparent;
+    /*background-color: transparent;*/
     top: 50%;
 }
 
@@ -62,7 +60,6 @@ p {
 
 #text_well {
     font-size: 16em;
-    color: black;
     display: inline;
     position: fixed;
     top: 20%;
@@ -72,13 +69,13 @@ p {
 
     #text_well.visible {
         font-size: 6em;
+        color: rgb(178, 178, 178);
         top: 40%;
     }
 
-    #text_well.visible.n2 {
-        color: transparent;
-
-    }
+        #text_well.visible.n2 {
+            color: transparent;
+        }
 
 
 /*---------------------------------------- SITE 2 ------------------------*/
@@ -95,7 +92,7 @@ p {
 #text_above {
     color: transparent;
     display: inline;
-    position: fixed;
+    position: sticky;
     top: 40%;
     left: 30%;
     transition: color linear 3s;
@@ -107,7 +104,6 @@ p {
     }
 
 
-
 /*---------------------------------------- SITE 3 ------------------------*/
 #site3 {
     background-color: black;
@@ -116,6 +112,7 @@ p {
 
 
 #text_plain {
+    z-index: 100;
     color: white;
     margin-top: 20%;
     display: block;
@@ -127,3 +124,382 @@ p {
     #text_plain.visible {
         filter: blur(0px);
     }
+
+#site3 div.deko {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    top: 43%;
+}
+
+/*---------------------------------------- SITE 4 ------------------------*/
+#site4 {
+    background-color: black;
+    text-align: center;
+    overflow-y: visible;
+    overflow-x: visible;
+}
+
+    #site4 .scrollTrigger {
+        top: 30%;
+    }
+
+
+#text_but {
+    box-sizing: border-box;
+    color: red;
+    margin-top: -35%;
+    display: block;
+    font-size: 70em;
+    transform: scale(5,1);
+    transition: transform ease-out 1s, box-shadow ease-out 1s;
+    z-index: -100;
+}
+
+    #text_but.visible {
+        transform: translate(0px,30%) scale(1,1);
+    }
+
+#site4 .anim_blinder {
+    position: absolute;
+    top: -300%;
+    left: 0px;
+    z-index: 1;
+    background-color: white;
+    display: block;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes moveBlinder {
+    from {
+        margin-top: 0%;
+        width: 100%;
+    }
+
+    to {
+        margin-top: 100%;
+        width: 00px;
+    }
+}
+
+/*---------------------------------------- SITE 5 ------------------------*/
+#site5 {
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 100px 150px white;
+    overflow-y: visible;
+    overflow-x: visible;
+}
+
+#site5 div.n2 {
+    position: relative;
+    left: 0%;
+    top: 150%;
+}
+
+#text_came {
+    color: transparent;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: block;
+    font-size: 30em;
+    z-index: -100;
+    transform: translate(0px,-230%);
+    transition: transform ease-out 1s, color ease-out 1s;
+}
+
+    #text_came.visible {
+        transform: translate(0px,30%);
+        color: black;
+    }
+
+
+#text_love {
+    color: red;
+    margin-top: 50px;
+    margin-bottom: 0%;
+    display: block;
+    font-size: 40em;
+    z-index: -100;
+    line-height: 0.8em;
+
+}
+
+
+#text_anyway {
+    color: black;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: block;
+    font-size: 15em;
+    z-index: -100;
+    transform: translate(0px,0%);
+    transition: letter-spacing ease-out 2s, transform ease-out 2s;
+    letter-spacing: 1em;
+}
+
+    #text_anyway.visible.n2 {
+        transform: translate(-150%, 0%);
+        letter-spacing: 10em;
+    }
+
+/*---------------------------------------- SITE 6 ------------------------*/
+#site6 {
+    background-color: white;
+    text-align: center;
+}
+
+/*---------------------------------------- SITE 7 ------------------------*/
+#site7 {
+    background-color: white;
+    text-align: center;
+    transition: background-color ease 1s;
+}
+    #site7.visible {
+        background: red;
+    }
+
+    #site7 .scrollTrigger {
+        top: 100%;
+    }
+
+
+#text_pulled {
+    color: black;
+    display: inline;
+    top: 40%;
+    left: 30%;
+    transition: color linear 3s;
+}
+
+
+.heart {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    fill: red;
+    position: relative;
+    top: 20%;
+    width: 50px;
+    animation: pulse 1s ease infinite ;
+    animation-fill-mode:none;
+}
+    .heart.visible {
+        animation: explode 1s ease;
+        animation-fill-mode: forwards;
+    }
+
+@keyframes pulse {
+    0% {
+        transform: scale(6);
+        filter: blur(0px);
+    }
+
+    50% {
+        transform: scale(9);
+        filter: blur(4px);
+    }
+
+    100% {
+        transform: scale(6);
+        filter: blur(0px);
+    }
+}
+
+@keyframes explode {
+    0% {
+
+    }
+
+    50% {
+
+    }
+
+    100% {
+        transform: scale(30);
+        filter: blur(10px);
+    }
+}
+
+#text_out {
+    color: transparent;
+    display: block;
+    position: relative;
+    font-size: 8em;
+    top: 30%;
+    left: 20%;
+    transition: color ease 1s;
+}
+
+    #text_out.visible {
+        color: white;
+    }
+
+#text_bleeding {
+    color: transparent;
+    display: inline;
+    position: sticky;
+    font-size: 8em;
+    top: 30%;
+    left: 20%;
+    margin: -30%;
+    transition: color ease 4s;
+}
+
+    #text_bleeding.visible {
+        color: rgb(141, 33, 33);
+    }
+
+/*---------------------------------------- SITE 8 ------------------------*/
+
+#site8 {
+    background-color: white;
+    text-align: center;
+    transition: background-color ease 1s;
+}
+#text_keep {
+    color: black;
+    display: block;
+    position: relative;
+    font-size: 8em;
+    top: 50%;
+    left: 20%;
+    margin: 0%;
+    transition: color ease 4s;
+}
+
+    #text_bleeding.visible {
+        color: rgb(141, 33, 33);
+    }
+
+/*---------------------------------------- SITE 9 ------------------------*/
+
+#site9 {
+    background-color: white;
+    text-align: center;
+    transition: background-color ease 1s;
+}
+
+#site9 .scrollTrigger {
+    top: 100%;
+}
+    #site9 .scrollTrigger.n2 {
+        top: 120%;
+    }
+
+.text_waiting {
+    color: black;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: block;
+    font-size: 15em;
+    transform: translate(0%, 50%);
+    transition: letter-spacing ease-out 2s, transform ease-out 2s;
+    letter-spacing: 1em;
+}
+
+    .text_waiting.wait1.visible {
+        transform: translate(-150%, 0%);
+        letter-spacing: 10em;
+    }
+    .text_waiting.wait2.visible.n2 {
+        transform: translate(-150%, 0%);
+        letter-spacing: 10em;
+    }
+
+
+/*---------------------------------------- SITE 10 ------------------------*/
+
+#site10 {
+    background-color: black;
+    transition: background-color ease 1s;
+}
+
+#site10 .scrollTrigger {
+    top: 10%;
+}
+
+    #site10 .scrollTrigger.n2 {
+        top: 120%;
+    }
+
+    #site10 .text_oh {
+        color: white;
+        position: sticky;
+        font-size: 8em;
+        margin: 0px;
+        margin-top: 0%;
+        top: 30%;
+        left: 10%;
+        transition: transform ease-out 1s;
+        transform: translate(0%,20%);
+    }
+
+        #site10 .text_oh.visible {
+            transform: rotateY(170deg);
+        }
+
+    #site10 .text_got {
+        color: white;
+        display: block;
+        font-size: 8em;
+        margin: 0px;
+        margin-top: 23%;
+    }
+
+/*---------------------------------------- SITE 11 ------------------------*/
+
+#site11 {
+    background-color: black;
+    text-align: center;
+}
+
+/*---------------------------------------- SITE 12 ------------------------*/
+
+#site12 {
+    background-color: black;
+    text-align: center;
+    transition: background-color ease 1s;
+}
+
+
+
+#site12 .text_lonely {
+    color: white;
+    display: block;
+    font-size: 8em;
+    margin: 0px;
+    margin-top: 0%;
+}
+
+    #site12 .text_lonely2 {
+        color: white;
+        position: sticky;
+        display: block;
+        font-size: 14em;
+        top: 40%;
+        left: 10%;
+        margin: 0px;
+        margin-top: 0%;
+        transition: color ease 1.2s;
+    }
+
+        #site12 .text_lonely2.visible {
+            color: red;
+        }
+
+
+/*---------------------------------------- SITE 13 ------------------------*/
+
+#site13 {
+    background-color: white;
+    text-align: center;
+    transition: background-color ease 1s;
+}

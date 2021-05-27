@@ -15,11 +15,9 @@
 
   <audio id="myAudio" src="media/neil.mp3"></audio>
   <a onclick="togglePlay()" class="trigger">
- me 
+    me
   </a>
-
-
- <div class="robot">
+  <div class="robot">
     <div class="leg leg--left">
 
       <div class="foot"></div>
@@ -201,37 +199,44 @@
 	c1.91-1.37,2.7-1.4,3.06-1.1c0.95,0.79-1.2,3.88,0.06,6.9c0.6,1.42,1.26,1.18,2.09,2.97c0.19,0.41,0.58,1.33,0.86,4.92
 	c0.26,3.39,0.38,5.1-0.36,5.95c-0.93,1.09-2.74,1.36-3.28,0.68C-402.48,544.07-401.55,543.08-401.29,540.85z" />
         <path class="st1" d="M-415.37,575.43" />
+
       </svg>
 
 
     </div>
     <div class="hand"></div>
-    </div>
-    <!-- <script>window.alert("Will you Dance with me?");</script> -->
-    <script>
-      var myAudio = document.getElementById("myAudio");
-      var isPlaying = false;
+  </div>
+  <!-- <script>window.alert("Will you Dance with me?");</script> -->
+  <script>
+    var myAudio = document.getElementById("myAudio");
+    var isPlaying = false;
 
-      function togglePlay() {
-        isPlaying ? myAudio.pause() : myAudio.play();
-      };
+    function togglePlay() {
+      isPlaying ? myAudio.pause() : myAudio.play();
+    };
 
-      myAudio.onplaying = function () {
-        isPlaying = true;
-        document.body.classList.remove('paused')
-        document.body.classList.add('playing')
-      };
+    myAudio.onplaying = function () {
+      isPlaying = true;
+      document.body.classList.remove('paused')
+      document.body.classList.add('playing')
+    };
 
-      myAudio.onpause = function () {
-        isPlaying = false;
-        document.body.classList.remove('playing')
-        document.body.classList.add('paused')
-      };
+    myAudio.onpause = function () {
+      isPlaying = false;
+      document.body.classList.remove('playing')
+      document.body.classList.add('paused')
+    };
 
-    </script>
+  </script>
 
-
-
+  <!-- 
+<div class="navsong">
+  <ul class="navsong">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="song.html"></a>My Song</li>
+    <li><a href="process/index.html">Process</a></li>
+  </ul>
+</div> -->
 </body>
 
 </html>

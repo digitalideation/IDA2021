@@ -1,76 +1,232 @@
 
-    
+/* ----------------------- ALLGEMEIN ----------------------->*/
+
     @font-face {
-      font-family: Skyline;
+      font-family: 'Skyline';
       src: url(../process/img/NewParisEDUSkyline-Regular.otf);
     }
 
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body{
-        font-family: "Skyline";
+      width: 100vw;
+      height: 100vh;
+      overflow-x: hidden;
+      display: block;
+      mix-blend-mode: difference;
     }
+    div{
+      z-index: 1;
+    }
+
+  
+/* <----------------------- ALLGEMEIN ----------------------*/
     
+/* ----------------------- CURSOR -----------------------> */
+        #cursor{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            /* background-color: rgb(255, 255, 255); */
+            border: 1px solid white;
+            box-sizing: border-box;
+            transition: 0.2s;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            cursor: none;
+            z-index: 3;
 
-    nav{
-        border-bottom: 1px solid rgb(0, 0, 0);
+            mix-blend-mode: difference;  
+        }
+
+        #outerCursor{
+           position: absolute;
+            width: 30px;
+            height: 30px;
+            /* border: 1px solid white; */
+            background-color: white;
+            box-sizing: border-box;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            cursor: none;
+            z-index: 3;
+
+            mix-blend-mode: difference;  
+        }
+
+        .element.style{
+            opacity: 0;
+            transform: matrix(0, 0, 0, 0, 1062, 896);
+        }
+
+        
+        #cursor-follower{
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            pointer-events: none;
+
+        }
+
+        #cursor-follower{
+            mix-blend-mode: difference;
+        }
+/* <----------------------- CURSOR ----------------------- */
+
+/* <----------------------- LANDING PAGE ----------------------- */
+
+        .landingPage{
+          width: 100vw;
+          height: 100vh;
+          background-color: rgb(160, 196, 255);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+         
+      }
+
+      h1{
+          font-family: 'Skyline';
+          font-size: 300px;
+          color: rgb(255, 255, 255);
+  
+      }
+  
+/* <----------------------- LANDING PAGE ----------------------- */
+/*  ----------------------- NAVIGATION  ----------------------->*/
+
+  a{
+      text-decoration: none;
+      color: black;
+      font-family: 'Skyline';
+      font-size: 7rem;
+      z-index: 2;
+      
+    }
+
+      nav{
         position: relative;
-        background-color: rgb(255, 255, 255);
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .nav{
+        box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
-        padding: 0rem;
-        margin: 0rem;
-    }
-
-    ul{
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin: 0rem;
-      padding: 0rem
-    }
-
-    li{
-        position: relative;
-        display: inline-flex;
+        justify-content: start;
         align-items: center;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
-        text-decoration: none;
-        font-family: "Skyline";
-        color: black;
-       
-    }
+        padding-left:1rem;
+        background-color: white;
+      }
 
-    a{
-       text-decoration: none;
-       color: black;
-          }
+      
 
-    li:hover a{
-      color: white;
-    }
-   
+      .homeDiv{
+        position: absolute;
+        width: 60vw;
+        height: 30vh;
+        
+        border-bottom: black solid 5px;
+
+        z-index: 1;
+      }
 
 
-    li:hover  {
-      background-color: rgb(0, 0, 0);
-      color: white;
-      opacity: 100%;
-    }
+      /* .homeDiv:hover{
+        height: 50vh;
+        transition: ease-in-out 0.5s;
+      }
+     */
 
+      .songDiv{
+        position: absolute;
+        width: 60vw;
+        height: 70vh;
+        bottom: 0;
+        left: 0;
+        background: var(--backgroundStyle);
+      }
 
+    
+      .processDiv{
+        position: absolute;
+        width: 40vw;
+        height: 30vh;
+        top: 0;
+        right: 0;
+       z-index: 2;
+        border-bottom: black solid 5px;
+        border-left:black solid 5px ;
+      }
+/* 
+      .processDiv:hover{
+        width: 60vw;
+        transition: ease-in-out 0.5s;
+      } */
+      .robotDiv{
+        position: absolute;
+        width: 40vw;
+        height: 70vh;
+        right: 0;
+        bottom: 0;
+        border-left:black solid 5px ;
+      }
+/* 
+      .robotDiv:hover{
+         width: 60vw;
+        transition: ease-in-out 0.5s;
+        z-index:3;
+      } */
 
-     h1{
-        font-family: "Skyline";
-        font-size: 80px;
-        text-align: center;
-    } 
-    p{
-        font-family: "Skyline";
-        font-size: 40px;
-        text-align: center;
-        border-bottom: 1px solid rgb(0, 0, 0);
-        padding-bottom: 3rem;
-        margin-bottom: 6rem;
-    }
+  /*HOVER NAVIGATION */
+   .nav {
+    
+    padding: 15px 30px;
+    
+    background: white;
+    color: black;
+
+    mix-blend-mode: normal;
+    overflow:hidden;
+    
+  }
+
+  .nav:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100%; height: 100%;
+    background: white;
+    mix-blend-mode: difference;
+    transform-origin:0 0 ;
+    transform:translateX(-100%);
+    transition: transform .5s;
+    z-index: 3;
+  }
+  .nav:hover:before {
+    transform: translateX(-0%);
+  }
+
+  .nav:after{
+    content: '';
+    display:block;
+    top: 0;
+    left:0;
+    bottom:0;
+    right:0;
+    position: absolute;
+    z-index: 100;
+    background: #000000;
+    mix-blend-mode: screen;
+  }
+
+  
+/*  <----------------------- NAVIGATION  -----------------------*/

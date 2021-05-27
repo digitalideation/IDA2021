@@ -1,0 +1,111 @@
+body{
+   
+/*Animation Gradient*/
+    animation-name: gradient;
+    animation: gradient 100s ease infinite;
+/*Hintergrund*/
+    width: 100vw;
+    height: auto;
+    background-image: url(../img/doublewave.svg), linear-gradient(rgb(102, 179, 179), rgb(82, 82, 151),teal, black);
+    background-size: contain;
+    background-repeat: repeat, no-repeat;
+    background-blend-mode:overlay;
+    align-items: center;
+}
+@keyframes gradient { 
+    0%{background-position:0% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
+/*cursor*/
+
+/*Page*/
+
+*{
+    font-family: 'Krona One', sans-serif;
+    cursor: url("../img/cursorwhite.png"), auto;
+}
+.titel{
+    text-align: center;
+    font-size: 35pt;
+    color: white;
+    text-shadow: 4px 4px rgb(44, 0, 65);
+    transform: translateY(300px);
+}
+
+.lyrics{
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 18pt;
+    color: white;
+    line-height: 30pt;
+}
+
+.platzhalter{
+    width: auto;
+    height: 600px; 
+}
+
+.schwarm {
+    height: 350px;
+    animation-name: schwarm;
+    animation-duration: 2.5s;
+    animation-delay: 0.5s; 
+    animation-timing-function:cubic-bezier(.17,.67,.83,.67);
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards; 
+    transform: translateX(-100vw)
+} 
+@keyframes schwarm {
+    0%{
+        transform: translateX(-1300px);
+    }
+
+    100%{
+        transform: translateX(110vw);
+    }
+}
+    
+.swim{
+    margin-top: 100px;
+    max-width: 320px;
+    height: auto;
+    animation-name: swim;
+    animation-duration: 4s;
+    animation-delay: 1s; 
+    animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards; 
+} 
+@keyframes swim {
+    0%{
+        transform: translateX(100vw);
+    }
+
+    100%{
+        transform: translateX(-350px);
+    }
+}
+
+.moveTop {
+    animation-name: moveTop;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards; 
+}
+
+    @keyframes moveTop{
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(50px);
+        }
+        100% {
+            transform: translateY(0); }
+        }

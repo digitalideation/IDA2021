@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <title>IDA Digital Design Day 21 – Responsiveness – Audio</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 18px;
+            height: 100%;
+        }
+        
+        a {
+            color: black;
+        }
+        
+        main {
+            padding: 20px;
+            width: 50%;
+            min-width: 600px;
+        }
+        
+        header {
+            padding: 20px;
+            width: 50%;
+            min-width: 600px;
+            box-shadow: 5px 5px 15px 5px #000000;
+        }
+        
+        h1 {
+            font-size: 36px;
+            font-weight: 400;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .do::before {
+            font-family: "Font Awesome 5 Brands";
+            content: "\f1be";
+            color:black;
+            font-size:3rem;
+            display:block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav><a href="../../index.html">Home</a></nav>
+        IDA Digital Design, Day 23
+
+        <h1>Programm für heute:</h1>
+        <p> 9:05 - 11:30<br/> <a target="_blank" href="https://hslu.zoom.us/j/98153901831?pwd=dWQyR0c2NnZSY0RpWDdzQUd1RnFyQT09">Zoomlink</a>
+            <br/>Heba gibt einen Einblick in Responsive Web Design und Media Queries. <a href="Responsive-Designs.pdf">Links zu Slides</a>
+        </p>
+        <p>
+            12:50 - 13:10<br/> Hanna gibt Einblick in ein Beispiel mit Web Audio. Der Wert einer CSS Variable wird abhängig von der Lautstärke gesetzt.
+        </p>
+        <p>
+            13:20 - 15:30<br/> Wer Bedarf hat: 20-minütige Support Slots. Ihr könnt euch <a target="_blank" href="https://docs.google.com/spreadsheets/d/1lIJ2nSaPXPrlvZJ5L3Oiv90d0aZ81WdeS4BGBOPCOMw/edit#gid=1779620156">hier</a> eintragen.
+        </p>
+
+        <p>
+            17:30 - 19:00<br/> Alan Shapiro, Rethinking Asimov’s Laws of Robotics <a target="_blank" href="https://hslu.zoom.us/j/69701259927?pwd=cktHS3hldi9ldTdRK2YrY295SEpHQT09">Zoomlink</a>
+        </p>
+
+
+
+
+
+    </header>
+
+    <main>
+
+
+        <h2>Responsive Web Design</h2>
+        <p>
+            Hebas Input and Exercises.
+        </p>
+        <hr/>
+
+        <h2>Web Audio API (und CSS Variablen) </h2>
+
+        <p>Ihr findet <a target="_blank" href="audio.html">hier ein kleines kommentiertes Beispiel</a>. Ihr könnt es out-of-the box verwenden, ohne etwas im JavaScript anzupassen. Die CSS Variable wird von JavaScript gesetzt in Abhängigkeit der Lautstärke.
+            Die CSS Variable selber könnt ihr für Animationen verwenden und Grösse, Farbe, Transparenz etc. steuern.
+        </p>
+        <hr/>
+        <h2>Exercise</h2>
+        <p class="do">Nehmt das obige Beispiel und baut es bei euch ein. Nehmt euren eigenen Song und steuert einen Aspekt des Robots oder der Site.</p>
+
+        </p>
+        <p>Ein bisschen Background: <a target="_blank" href="https://www.youtube.com/watch?v=NxUzZzGrEkA">10 Minuten Intro zu Web Audio API von Ruth Jones.</a> Sie kreiert hier Sound über JavaScript.</p>
+        <hr/>
+
+
+        <h2>Advanced Web Audio API</h2>
+        <p>Ausführliche Dokumentation und Beispiele auf <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Mozilla </a></p>
+        <p>Zum Beispiel auf das Canvas Element zeichnen, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualisierung in Abhängigkeit von Sound</a>.</p>
+        <p>Das obige Prinzip als Tutorial: <a target="_blank" href="https://www.youtube.com/watch?v=rY2v7HIWQEI">Create a Visualizer mit Web Audio API. </a></p>
+        <p><a target="_blank" href="https://webaudioapi.com/">Beispiele </a>und <a target="_blank" href="https://webaudioapi.com/book/Web_Audio_API_Boris_Smus.pdf">Buch</a> von Boris Smus </p>
+
+        <hr/>
+        <h2>P5.js und Sound</h2>
+
+        <p>
+            P5.js ist eine JavaScript basierte Library, die das Zeichnen auf die Canvas einfacher macht. Sie hat auch viele Erweiterungen, um mit externen Daten wie Sound oder Video zu arbeiten.
+
+        </p>
+        <p>
+            Daniel Shiffman Einführung Sound:
+            <a target="_blank" href="https://www.youtube.com/watch?v=Pn1g1wjxl_0">https://www.youtube.com/watch?v=Pn1g1wjxl_0</a>
+        </p>
+
+        <p>
+            Tutorial Sound Visualization mit P5.js: <a target="_blank" href="https://www.youtube.com/watch?v=uk96O7N1Yo0">https://www.youtube.com/watch?v=uk96O7N1Yo0</a>
+        </p>
+
+    </main>
+
+
+
+
+
+
+</body>
+
+
+</html>

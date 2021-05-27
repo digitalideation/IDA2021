@@ -16,7 +16,7 @@ window.onscroll = function() {
         // ist das Element entweder im viewport oder bereits oben wieder rausgerutscht 
         if (domRect.top < window.innerHeight) {
             console.log("ich bin im viewport");
-            var myName = articles[i].getAttribute('data-name')
+            var myName = articles[i].getAttribute('data-name');
             document.getElementsByClassName('kopf')[0].classList.toggle(myName);
 
             // falls der untere Punkt im Minus liegt ist es oben rausgerutscht

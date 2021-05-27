@@ -2,54 +2,125 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDA Modul - AnnaLisa Rompietti</title>
-    <link rel="stylesheet" href="./css/song.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDA Modul - AnnaLisa Rompietti</title>
+  <link rel="stylesheet" href="./css/song.css">
+
 </head>
 
 <body>
+ 
+  <audio id="tooinsistent">
+    <source src="./song/Too Insistent (Trentemller Remix).mp3" type="audio/mpeg">
+  </audio>
 
-    <div class="parallax">
-        <svg class="frogsvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1280 1024" xml:space="preserve">
-<g>
-    <g class="parallax-layer parallax-layer--front">
-          <ellipse transform="matrix(0.8813 -0.4726 0.4726 0.8813 -100.4472 458.0731)" cx="861.5" cy="429" rx="114" ry="37.8"/>
-          <path d="M481,270c0,16.3-15.2,29-34,29s-28-12.7-28-29s15.2-30,34-30S481,253.7,481,270z"/>
-          <path d="M843,286c0,59.4-58.1,143-131,143s-140-82.6-140-142s63.1-85,136-85S843,226.6,843,286z"/>
-          <path d="M923.1,334.6c-2.4,22.5-58.4,34.9-80.9,32.5c-22.5-2.4,9.4-31.5,11.9-54c2.4-22.5-2.3-40.5,20.2-38.1
-          S925.5,312,923.1,334.6z"/>
-    </g> 
-    <g class="parallax-layer parallax-layer--back">
-          <path d="M707,185c-3.3-16.2-67.3-8.5-123,3s-87.3,14.8-84,31s60,33,103-4C646.1,177.9,710.3,201.2,707,185z"/>
-          <path d="M441,206c2.1,9.4-12,8-29,15c-14.6,6-23.9,15.4-26,6s2.6-24.5,18-28S438.9,196.6,441,206z"/>
-          <path d="M574,512c11.7-22.3,37-23,46-29c5.7-3.8-22.7-28.3-42-9s-44.9,72.1-40,77S561.3,536.2,574,512z"/>
-          <path d="M579,455c0,5.8-29,8-59-4c-30.5-12.2-40.6,4.2-46,2c-5-2-10.9-11,22-11S579,449.2,579,455z"/>
-          <path d="M356,294c14.7,7.7,30.4,6.7,25,17s-11.3,27.7-26,20s-23.4-38.7-18-49S341.3,286.3,356,294z"/>
-          <path d="M537,316c0,20.4-51.7,19-65,19s23-13.6,23-34s-5.3-38,8-38S537,295.6,537,316z"/>
-          <path class="st2" d="M466,265c-1.2-4.2-8.2-13.9-22-10c-13.8,3.9-15,13-14,17c2.1,8.2,5.8,10.4,20,8C462,278,467.2,269.2,466,265z"/>
-          <path d="M380.5,304"/>
-    </g> 
- </g> 
-</svg>
+  <div class="parallax">
+
+    <div class="parallax_layer musicbubbles"> 
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt="">
+         <div class="buttoninboble">
+            <button id="buttonplay"> </button>
+         </div> 
+      </div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt="">
+        <div class="buttoninboble">
+           <button class="buttonpause"></button>
+           </div>
+      </div>  
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+      <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+    </div> 
+
+    <div class="parallax_layer frog">
+     
+        <div class="part"><img src="./images/frog/bubble1.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble2.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble3.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble4.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble5.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble6.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble7.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble8.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble9.svg" alt=""></div>
+        <div class="part"><img src="./images/frog/bubble10.svg" alt=""></div>
+      
     </div>
 
 
 
 
+    <div class="parallax_layer prison">
+
+        <div id="prison1"></div>
+        <div id="prison2"></div>
+        <div id="prison3"></div>
+        <div id="prison4"></div>
+        <div id="prison5"></div>
+
+    </div>
+  </div>
 
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="process/index.html">Process</a></li>
-            <li><a href="robotworld.html">My Robot</a></li>
-            <li>My Song</li>
-        </ul>
-    </nav>
 
 
+
+
+
+
+
+
+
+
+
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="process/index.html">Process</a></li>
+      <li><a href="robotworld.html">My Robot</a></li>
+      <li>My Song</li>
+    </ul>
+  </nav>
+ 
+ 
 </body>
-
+<script src="js/mysong.js"></script>
 </html>

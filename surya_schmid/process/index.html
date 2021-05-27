@@ -10,41 +10,109 @@
 </head>
 
 <body>
+<!--------------------- CURSOR ----------------------->
+<span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+  <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+</span>
+
+<div id="cursor"> </div>
+<div id="outerCursor"></div>
+<!-----------------------  CURSOR ----------------------->
+
+
+
+  <!---------------- The overlay ---------------->
   <nav>
-    <ul>
-      <li><a href="https://ida2021-staging.netlify.app/">Home</a></li>
-      <li><a href="../robotworld.html">My Robot</a></li>
-      <li><a href="../song.html">My Song</a></li>
-      <li>Process</li>
-    </ul>
+    <div id="myNav" class="overlay">
+  
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a class="menu home1" href="../index.html">Home</a>
+        <a class="menu song1" href="../song.html">My Song</a>
+        <a class="menu robot1" href="../robotworld.html">My Robot</a>
+        <a class="menu process1" href="index.html">Process</a>
+      </div>
+  
+    </div>
+  
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <span onclick="openNav()" class="openbutton">&times;</span>
   </nav>
+  <!---------------- The overlay ---------------->
 
-  <h1>Surya Schmid</h1>
-  <p>My process</p>
-  <ul class="process">
-    <li class="process2"><a href="day1.html"></a>Day 1</a></li>
-    <li class="process2"><a href="day2.html">Day 2</a></li>
-    <li class="process2"><a href="day3.html">Day 3</a></li>
-    <li class="process2"><a href="day4.html">Day 4</a></li>
-    <li class="process2"><a href="day5.html">Day 5</a></li>
-    <li class="process2"> <a href="day6.html">Day 6</a></li>
-    <li class="process2"><a href="day7.html">Day 7</a></li>
-    <li class="process2"><a href="day8.html">Day 8</a></li>
-    
-    <!-- <li class="process2"><a href="day11.html">Day 11</a></li> -->
-  </ul>
+  <main>
+      <h1>My process</h1>
 
-<ul class="process">
-  <li class="process2"><a href="day9.html">Day 9</a></li>
-  <li class="process2"><a href="day10.html">Day 10</a></li>
-  <li class="process2"><a href="day11.html">Day 11</a></li>
-  <li class="process2"><a href="day12.html">Day 12</a></li>
-  <li class="process2"><a href="day13.html">Day 13</a></li>
-  <li class="process2"> <a href="day14.html">Day 14</a></li>
-  <li class="process2"><a href="day15.html">Day 15</a></li>
-  <li class="process2"><a href="day16.html">Day 16</a></li>
-  <!-- <li class="process2"><a href="day11.html">Day 11</a></li> -->
-</ul>
+
+      <div class="list">
+      <ul class="process">
+        <li class="process2"><a href="day1.html">Day 1</a></li>
+        <li class="process2"><a href="day2.html">Day 2</a></li>
+        <li class="process2"><a href="day3.html">Day 3</a></li>
+        <li class="process2"><a href="day4.html">Day 4</a></li>
+        <li class="process2"><a href="day5.html">Day 5</a></li>
+        <li class="process2"> <a href="day6.html">Day 6</a></li>
+        <li class="process2"><a href="day7.html">Day 7</a></li>
+        <li class="process2"><a href="day8.html">Day 8</a></li>
+        <li class="process2"><a href="day9.html">Day 9</a></li>
+        <li class="process2"><a href="day10.html">Day 10</a></li>
+        
+        <!-- <li class="process2"><a href="day11.html">Day 11</a></li> -->
+      </ul>
+
+    <ul class="process">
+      
+      <li class="process2"><a href="day11.html">Day 11</a></li>
+      <li class="process2"><a href="day12.html">Day 12</a></li>
+      <li class="process2"><a href="day13.html">Day 13</a></li>
+      <li class="process2"> <a href="day14.html">Day 14</a></li>
+      <li class="process2"><a href="day15.html">Day 15</a></li>
+      <li class="process2"><a href="day16.html">Day 16</a></li>
+      <li class="process2"><a href="day17.html">Day 17</a></li>
+      <li class="process2"><a href="day18.html">Day 18</a></li>
+      <li class="process2"><a href="day19.html">Day 19</a></li>
+      <li class="process2"><a href="day20.html">Day 20</a></li>
+      <!-- <li class="process2"><a href="day11.html">Day 11</a></li> -->
+    </ul>
+    </div>
+</main>
+
+
+<script>
+  // THE OVERLAY ------------------------------------------------------->
+  /* Open when someone clicks on the span element */
+  function openNav() {
+    document.getElementById("myNav").style.width = "40%";
+  }
+
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  // <-------------------------------------------------------THE OVERLAY
+
+
+      // --------------------- Mouse follower  --------------------->
+      var cursor = document.getElementById('cursor');
+      document.addEventListener('mousemove', function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+      });
+
+      var outerCursor = document.getElementById('outerCursor');
+      document.addEventListener('mousemove', function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        outerCursor.style.left = x + "px";
+        outerCursor.style.top = y + "px";
+      });
+      // <--------------------- Mouse follower  ---------------------
+</script>
 </body>
 
 </html>
