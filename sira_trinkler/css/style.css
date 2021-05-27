@@ -1,0 +1,287 @@
+ /* style-sheet für myprocess */
+ 
+ @font-face {
+            font-family: Walsheim Regular;
+            src: url(/sira_trinkler/css/fonts/GT-Walsheim-Regular.woff);
+        }
+
+        @font-face {
+            font-family: Walsheim Bold;
+            src: url(/sira_trinkler/css/fonts/GT-Walsheim-Pro-Bold.woff);
+        }
+
+        @font-face {
+            font-family: Walsheim Medium;
+            src: url(/sira_trinkler/css/fonts/GT-Walsheim-Medium.woff);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Walsheim Regular";
+            height: 100%;
+            margin: 0;
+        }
+
+        p {
+            font-family: "Walsheim Regular";
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .process li {
+            display: flex;
+            justify-content: left;
+            border: black solid 2px;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+        }
+
+        .process a {
+            font-size: 4vw;
+            text-decoration: none;
+            color: black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: "Walsheim Medium";
+        }
+
+        /* .pocess li:first-of-type {
+        border-top: solid 1px black;
+    } */
+
+        /* .process-2 a::before {
+    counter-increment: item;
+    content: counter(item, decimal-leading-zero);
+    font-size: calc(11px + .2vw);
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #0d0e0e;
+    position: absolute;
+    margin-top: calc(14px + .7vw);
+    margin-right: 10px;
+} */
+
+        ul.process {
+            margin: 0;
+            padding: 0;
+        }
+
+        .process {
+            margin-top: 100px;
+        }
+
+        /* style von w3 schools */
+
+
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .side {
+            flex: 25%;
+            /* background-color: #f1f1f1; */
+            padding-left: 50px;
+            padding-top: 50px;
+            /* border-right: red solid 2px; */
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+            margin-top: 80px;
+        }
+
+        .main {
+            flex: 75%;
+            background-color: white;
+            padding: 50px;
+            margin-top: 80px;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: end;
+            background: #ddd;
+            padding-right: 50px;
+        }
+
+
+        @media screen and (max-width: 700px) {
+
+            .row,
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+
+        /* meine weiteren Styles */
+
+        .title {
+
+            margin-right: 10px;
+            color: #0d0e0e;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .line {
+            width: 70%;
+            height: 1px;
+            border: 1px solid #0d0e0e;
+            background-color: #0d0e0e;
+        }
+
+    /* Sweep To Right */
+        .hvr-sweep-to-right {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            position: relative;
+            -webkit-transition-property: color;
+            transition-property: color;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-sweep-to-right:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            bottom: 13px;
+            background: #FCDF3E;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            height: 30px;
+            align-items: center;
+        }
+
+        .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: white;
+            position: fixed;
+            overflow: hidden;
+            /* bottom: 0; */
+            width: 100%;
+            box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.15);
+            z-index: 4;
+        }
+
+        nav li {
+            list-style-type: none;
+            margin-right: 5px;
+            border: solid black 1px;
+            /* border-radius: 50px; */
+        }
+
+        nav li:last-of-type {
+            margin-right: 50px;
+        }
+
+
+        nav ul li {
+            display: inline;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav li:hover {
+            background-color: tomato;
+        }
+
+
+/* von w3schools */
+nav li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  /* padding: 14px 16px; */
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+.dropdown-content a {
+  color: black;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Footer - Social Media Icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  text-align: end;
+  text-decoration: none;
+  margin: 5px 5px;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.fa:hover {
+    background-color: tomato;
+}
+
+.fa-facebook {
+  color: black;
+}
