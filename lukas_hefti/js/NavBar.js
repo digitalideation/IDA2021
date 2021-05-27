@@ -20,6 +20,7 @@ $(document).ready(function () {
     "Week 3": "week3/day1/day1.html",
     "Week 4": "week4/day1/day1.html",
     "Week 5": "week5/day1/day1.html",
+    "Week 6": "week6/day1/day1.html",
 
   }
 

@@ -84,8 +84,6 @@
             flex-wrap: wrap;
         }
 
-        /* Create two unequal columns that sits next to each other */
-        /* Sidebar/left column */
         .side {
             flex: 25%;
             /* background-color: #f1f1f1; */
@@ -98,7 +96,6 @@
             margin-top: 80px;
         }
 
-        /* Main column */
         .main {
             flex: 75%;
             background-color: white;
@@ -106,7 +103,6 @@
             margin-top: 80px;
         }
 
-        /* Footer */
         .footer {
             padding: 20px;
             text-align: end;
@@ -114,7 +110,7 @@
             padding-right: 50px;
         }
 
-        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
         @media screen and (max-width: 700px) {
 
             .row,

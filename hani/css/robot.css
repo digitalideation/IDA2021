@@ -16,6 +16,9 @@ background-size: cover;
 background: linear-gradient(0deg, rgba(36,85,116,1) 24%, rgba(36,22,115,1) 49%, rgba(14,19,77,1) 81%); */
 background-blend-mode: multiply, screen;
 }
+.robot {
+  margin-top: 10%;
+}
    .head {
      width: 300px;
   height: 300px;
@@ -143,7 +146,7 @@ color: black;
 }
 
 
-.leg{
+/* .leg{
   width:10px;
   height:100px;
 
@@ -159,14 +162,14 @@ color: black;
 
   border-radius:5px;
   z-index:3;
-}
+} */
 svg.right { 
   width: 50%;
 stroke-width: 0.5%;
   position: absolute;
   height: 25%;
-top: -10%;
-  left: -27%;
+top: 15%;
+  left: -26%;
   right: 230px;
   bottom: 30%;
   margin: auto;
@@ -180,7 +183,7 @@ svg.left {
 stroke-width: 0.5%;
   position: absolute;
   height: 26%;
-top: 5%;
+top: 30%;
   left: -15%;
   right: 230px;
   bottom: 30%;
@@ -461,5 +464,15 @@ a {
  
 .paused .trigger::before {
   content: 'Play';
+}
+
+
+.leg--left {
+
+  width: 2vw;
+  height: 5vw;
+  background-color: #999999;
+  border-radius: 10%;
+ 
 }
 

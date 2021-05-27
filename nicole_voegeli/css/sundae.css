@@ -1,9 +1,8 @@
 .top.nicole{
-    background-image: url("https://source.unsplash.com/random/900×700/?flowers"),url("https://source.unsplash.com/random/900×700/?city");
-    background-blend-mode: screen;
-    background-repeat: no-repeat;
+    background-image: url(../img/face.gif);
     background-size: cover;
     border-radius: 100px;
+ 
 }
 
 .middle.nicole{
