@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 5000px;
+    background-image: linear-gradient(white, blue,teal);
+    background-size: cover;
+}
+#title{
+    margin-top: 50px;
+    transform: translateX(50%);
+    width: 1100px;
+    height: auto;
+    
+}
+
+p{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 80px;
+    color:darkslategray;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+}
+
+#wave{
+    position: relative;
+    padding-top: 150px;
+}
+#wave2{
+    position:fixed;
+    background-blend-mode: color-dodge;
+}
+
+
+/*Animation*/
+.spin{
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spin{
+0% {
+    transform: rotate(0);
+}
+100% {
+    transform: rotate(360deg);
+    background-color: white;
+}
+}
+/*Animation*/
+/*Objekt*/
+
+.box{
+    position: absolute;
+    width: 100vw;
+}
+
+.animation{
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: rgba(24, 92, 112, 0.5);
+    width: 400px;
+    height: 400px;
+    position: relative;
+    display: block;
+}
+
+#star1{
+    transform: translateX(50%);
+}
+
+#star2{
+    transform: translateX(80px);
+}
+
+#star3{
+    transform: translateX(20%);
+}
+
+#star4{
+    transform: translateX(20px);
+}
+
+/*.animation:nth-child(2){
+    background-color: rgba(10, 24, 29, 0.5);
+    width: 200px;
+    height: 200px;
+}*/

@@ -23,3 +23,18 @@ li {
 li.hover{
     background-color: lightgrey;
 }
+
+.head{
+    clip-path: polygon(46% 0%, 20% 22%, 19% 34%, 19% 50%, 12% 69%, 16% 82%, 36% 99%, 48% 99%, 73% 80%, 89% 58%, 84% 44%, 78% 29%, 77% 14%, 60% 2%);
+    background-color: coral;
+ width: 200px;
+ height: 200px;
+}
+
+.eye--left{
+    clip-path: polygon(15% 36%, 54% 22%, 85% 53%, 46% 66%);
+    background-color: black;
+ width: 100px;
+ height: 100px;
+ transform:translate(25px,0px)
+}
