@@ -60,7 +60,7 @@ p {
 }
 
 body {
-    height: 5000px;
+    /*height: 5000px;*/
 }
 
 
@@ -114,6 +114,11 @@ h1 {
     transform: rotate(720deg);
 }
 
+.kopf.rotate{
+     transition-duration: 600ms;
+     transform: scale(0.5) rotate(720deg);
+}
+
 .background1 {
     background-color: #000000;
     position: static;
@@ -136,14 +141,15 @@ h1 {
 }
 
 .scrollelement {
-    height: 100vh;
+    /*height: 100vh !important;*/
+    width:100vw !important;
     border-bottom: 20px solid pink;
 }
 
 .background2 {
     background-color: #93f0d9;
     position: static;
-    width: auto;
+
     height: 1000px;
     z-index: 1;
 }

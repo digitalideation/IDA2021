@@ -108,9 +108,8 @@ margin-top: 8%;
 border: solid #BE79F4;
 border-width: 0.10ex;
 margin-top: 17%;
-animation-name: bazi ;
-animation-duration: 2s ;
-transition: all 5s;
+
+transition: transform 5s;
 }
 .circle-one3 {
        width: 17vw;
