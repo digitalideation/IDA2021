@@ -74,8 +74,8 @@ body {
   border: 1px solid red;
   padding: 1rem;
   margin: auto; 
-  width: 34vw;
-  height: 44vw;
+  width: 32vw;
+  height: 42vw;
   align-items: center;
   position:fixed;
   left: 27%;
@@ -147,31 +147,79 @@ body {
   right: 9%;
 }
 
-/*
+
 .head {
-  animation: rot 1s ease-in-out infinite alternate;
+  animation: kopf 1s ease-in-out infinite alternate;
   transform-origin: bottom;
 }
 
-@keyframes rot {
+.body{
+  animation: kopf 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+  animation-delay: 0.2s;
+}
+
+.robot {
+  animation: ganz 7s ease infinite alternate;
+  transform-origin: bottom;
+}
+
+.arm--left {
+  animation: arm1 3s ease-in-out infinite;
+  transform-origin: top right 2px;
+  transform-box: fill-box;
+}
+
+.arm--right {
+  animation: arm1 3s ease-in-out infinite;
+  transform-origin: top left 2px;
+  transform-box: fill-box;
+}
+
+.leg--left {
+  animation: bein1 3s ease-in-out infinite alternate;
+  transform-origin: top right 2px;
+  transform-box: fill-box;
+}
+
+.leg--right {
+  animation: bein1 3s ease-in-out infinite alternate;
+  transform-origin: top left 2px;
+  transform-box: fill-box;
+}
+
+@keyframes kopf {
   from{
-  transform: translateY(15%);
+  transform: translateY(3%);
   }
   to{
   transform: translateY(0%);
   }
 }
 
+@keyframes ganz {
+  from{
+    transform: rotateY(0deg);
+    }
+    to{
+    transform: rotateY(20deg);
+    }
+}
 
-/*
-.body {
-  border: 1px solid rgb(24, 153, 7);
-  position: absolute;
-  background-image: url(/julia_kagerbauer/images/gingerman.svg);
-  background-repeat: no-repeat;
-  display: flex;
-  width: 200px;
-  height: 500px;
-  left: 100px;
-  top: 125px;
+@keyframes arm1 {
+  from{
+    transform: rotateZ(0deg);
+    }
+    to{
+    transform: rotateZ(360deg);
+    }
+}
+
+@keyframes bein1 {
+  from{
+    transform: rotateZ(0deg);
+    }
+    to{
+    transform: rotateZ(10deg);
+    }
 }

@@ -85,7 +85,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 150vh 0;
+  padding: 100vh 0;
 }
 .base {
   transform: translateZ(-3px) scale(3);

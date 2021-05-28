@@ -1,0 +1,330 @@
+
+.parallax {
+    perspective: 1px;
+    perspective-origin: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 0;
+    height: 100vh;
+  }
+  
+  .parallax .group {
+    position: relative;
+      height: 100vh;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax .layer {
+    position: absolute;
+    width: 100%;
+      overflow: hidden;
+  }
+  
+  .city-front {
+    fill: #111115;
+    transform: translateZ(.25px) scale(.75) translateY(250vh);
+    background-image: url(/julia_kagerbauer/images/hellrosa2.svg);
+    background-size: cover;
+    height: 500vh;
+    background-repeat:no-repeat;
+  }
+
+  .hellrosa {
+    fill: #12161e;
+    transform: translateZ(0px) scale(1) translateY(80vh);
+    background-image: url(/julia_kagerbauer/images/hellrosa2.svg);
+    background-size: cover;
+    height: 1200px;
+    background-repeat:no-repeat;
+  }
+  
+  .hellorange {
+    fill: #19202f;
+    transform: translateZ(-.25px) scale(1.25) translateY(60vh);
+    background-image: url(/julia_kagerbauer/images/hellorange.svg);
+    background-size: cover;
+    height: 500px;
+    background-repeat:no-repeat;
+  }
+  
+  .blau2 {
+    fill: #222032;
+    transform: translateZ(-.5px) scale(1.5) translateY(45vh);
+    background-image: url(/julia_kagerbauer/images/blau2.svg);
+    background-size: cover;
+    height: 500px;
+    background-repeat:no-repeat;
+  }
+  
+  .violett {
+    fill: #15172a;
+    transform: translateZ(-.75px) scale(1.75) translateY(30vh);
+    background-image: url(/julia_kagerbauer/images/violett.svg);
+    background-size: cover;
+    height: 500px;
+    background-repeat:no-repeat;
+  }
+  
+  .blau {
+    transform: translateZ(-2.25px) scale(3.25) translateY(15vh);
+    background-image: url(/julia_kagerbauer/images/blau.svg);
+    background-size: cover;
+    height: 500px;
+    background-repeat:no-repeat;
+  }
+  
+  .orange {
+    transform: translateZ(-2.5px) scale(3.5) translateY(5vh) rotateY(180deg);
+    background-image: url(/julia_kagerbauer/images/orange.svg);
+    background-size: cover;
+    height: 400px;
+    background-repeat:no-repeat;
+  }
+  
+  .lila {
+    transform: translateZ(-3px) scale(4) translateY(0vh);
+    background-image: url(/julia_kagerbauer/images/lila.svg);
+    background-size: cover;
+    height: 50%;
+    background-repeat:no-repeat;
+  }
+  
+  .rosa {
+    transform: translateZ(-3.5px) scale(4.5) translateY(-15vh);
+    background-image: url(/julia_kagerbauer/images/rosa.svg);
+    width: 100%;
+    background-size: cover;
+    height: 35%;
+    background-repeat:no-repeat;
+  }
+  
+  #sun {
+    fill: #ffd6ad;
+    transform: translateZ(-6px) scale(7) translateY(-30vh);
+      height: 30vh;
+  }
+  
+  .hellrosa-front {
+    background: #12161e;
+    width: 100vw;
+    height: 30vh;
+    position: relative;
+    margin-top: -5px;
+  }
+  
+  .city-front {
+    position: relative;
+    margin-top: -5px;
+    background-color: rgb(255, 199, 210);
+    width: 100vw;
+    height: 50vh;
+  }
+  
+  .site_name {
+      color: #FFF;
+      display: inline-block;
+      margin: 0 0 0 20px;
+  }
+
+  body{
+    background-size: 500vh;
+    background-color: black;
+  }
+
+  body {
+    background-image: linear-gradient (rgb(255, 199, 210), black);
+    background-size:cover;
+    height:5520px ;
+    background-image: linear-gradient(rgb(255, 199, 210), black);
+    font-family: 'Orbitron', sans-serif;
+  
+  }
+
+  
+  .startDance{
+    background-color: hotpink;
+    display: flex;
+    text-decoration: none;
+    border-radius: 50%;
+    border-color: transparent;
+  color: white;
+  padding: 15px 32px;
+  padding-top: 85px;
+  padding-bottom: 85px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin: 10px;
+  }
+
+  .stopDance{
+    background-color: hotpink;
+    display: none;
+    text-decoration: none;
+    border-radius: 50%;
+    border-color: white;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin: 10px;
+    
+  }
+  
+  
+  
+  .robot {
+    padding: 1rem;
+    margin: auto; 
+    width: 32vw;
+    height: 42vw;
+    align-items: center;
+    position:fixed;
+    left: 27%;
+    top: 15%;
+  }
+  
+  .arm--right {
+    background-image: url(/julia_kagerbauer/images/arm_rechts.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    right: 7%;
+    top: 18%;
+  }
+  .arm--left {
+    background-image: url(/julia_kagerbauer/images/arm_links.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    left: 3%;
+    top: 17%;
+  }
+  
+  .head {
+    background-image: url(/julia_kagerbauer/images/kopf.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 23%;
+    height: 30%;
+    top: -2%;
+    left: 50%;
+  }
+  
+  .body {
+    background-image: url(/julia_kagerbauer/images/körper.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 11%;
+    left: 38%;
+  }
+  
+  .leg--left {
+    background-image: url(/julia_kagerbauer/images/bein_links.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    bottom: -18.5%;
+    left: 34%;
+  }
+  
+  .leg--right {
+    background-image: url(/julia_kagerbauer/images/bein_rechts.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 42%;
+    height: 70%;
+    bottom: -9.5%;
+    right: 9%;
+  }
+  
+  
+  .head {
+    animation: head 0.4926s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
+  }
+  
+  .body{
+    animation: head 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
+  }
+  
+  .robot {
+    animation: ganz 7s ease infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
+  }
+  
+  .arm--left {
+    animation: arm1 0.4926s ease-in-out infinite;
+    transform-origin: top right 2px;
+    transform-box: fill-box;
+    animation-play-state: paused;
+  }
+  
+  .arm--right {
+    animation: arm1 0.4926s ease-in-out infinite;
+    transform-origin: top left 2px;
+    transform-box: fill-box;
+    animation-play-state: paused;
+  }
+  
+  .leg--left {
+    animation: bein1 0.4926s ease-in-out infinite alternate;
+    transform-origin: top right 2px;
+    transform-box: fill-box;
+    animation-play-state: paused;
+  }
+  
+  .leg--right {
+    animation: bein1 0.4926s ease-in-out infinite alternate;
+    transform-origin: top left 2px;
+    transform-box: fill-box;
+    animation-play-state: paused;
+  }
+  
+  @keyframes head {
+    from{
+    transform: translateY(3%);
+    }
+    to{
+    transform: translateY(0%);
+    }
+  }
+  
+  @keyframes ganz {
+    from{
+      transform: rotateY(0deg);
+      }
+      to{
+      transform: rotateY(20deg);
+      }
+  }
+  
+  @keyframes arm1 {
+    from{
+      transform: rotateZ(0deg);
+      }
+      to{
+      transform: rotateZ(360deg);
+      }
+  }
+  
+  @keyframes bein1 {
+    from{
+      transform: rotateZ(0deg);
+      }
+      to{
+      transform: rotateZ(10deg);
+      }
+  }
+  
+  
