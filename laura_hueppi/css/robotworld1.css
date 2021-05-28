@@ -108,11 +108,32 @@ h1 {
     scrollbar-shadow-color: black;
 }
 
+.kopf.grayscale {filter: grayscale(100%);}
+
+.kopf.huerotate {filter: hue-rotate(300deg);}
+
+.kopf.saturate {filter: saturate(7);}
+
+
+/*
+.kopf.spiegel {
+    transform: scaleX(-1);
+  }
+
+@keyframes spiegel {
+    from {
+      transform: scaleX(-1); }
+    to {
+      transform: scaleX(1);}
+  }
+*/
+
 
 .kopf.rotate{
  
     animation: rotation 2s infinite linear;
 }
+
 
 @keyframes rotation {
     from {
@@ -173,7 +194,7 @@ h1 {
 }
 
 .background5 {
-    background: #222;
+    background: rgb(0, 0, 0);
     min-height: 100vh;
     display: grid;
     place-items: center;
