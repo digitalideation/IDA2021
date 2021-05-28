@@ -14,7 +14,7 @@ a {
     width: 100px;
     height: 100px; */
     margin: 2rem;
-    border: 10px solid linen;
+    border: 10px solid var(--pink);
     padding: 2rem;
     border-radius: 50px;
     border-top-left-radius: 0;
