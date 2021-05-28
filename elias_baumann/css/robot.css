@@ -1,0 +1,102 @@
+#myDIVextra2 {
+    background-color: none;
+    z-index: 10;
+    display:none;
+}
+
+
+button {
+    cursor: url(../img/pointer-small.png) 10 0,pointer;
+    text-align: left;
+    background: none;
+    font-size: 20px;
+}  
+
+.window-header2 {
+    background-color: #EF7F7A;
+    cursor: url(../img/icon/drag-small.png),auto;
+    height: 40px;
+    border-bottom: 4px solid black;
+    z-index: 10;
+}
+
+.header-close-extra {
+    border: 2px solid;
+    line-height: 0;
+    padding: 1px;
+    height: 21px;
+    width: 21px;
+    margin-left: 5px;
+    cursor: url(../img/icon/drag-small.png),auto;
+}
+
+.close-curser {
+    cursor: url(../img/pointer-small.png)  10 0,pointer;
+}
+
+.desk-window-robot {
+    position: absolute;
+    z-index: 8;
+    background-color: #FDEAAE;
+    /* text-align: center; */
+    border: 4px solid black;
+    left: 250px;
+    top: 100px;
+    width: 65%;
+    height: 70%;
+    overflow: visible;
+}
+
+
+.desk-window2 {
+    position: absolute;
+    z-index: 10;
+    background-color: #FDEAAE;
+    /* text-align: center; */
+    border: 4px solid black;
+    left: 50px;
+    top: 20px;
+    width: 28%;
+    height: 40%;
+    overflow: visible;
+}
+
+
+/* -----Shut down-------- */
+/* #shutdown-animation:hover {
+    animation: shutdown 0.5s;
+} */
+  .shutdown {
+    animation-duration: 0.5s;
+    animation-name: shutdown;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes shutdown {  
+    50% {
+      transform: scaleY(0.005);
+      background-color: white;
+    }
+    
+    90% {
+      transform: scaleX(0.001) scaleY(0.005);
+      background-color: white;
+      opacity: 1;
+    }
+    
+    100% {
+      transform: scaleX(0.001) scaleY(0.005);
+      background-color: white;
+      opacity: 0;
+    }
+  }
+  
+  #power {
+    cursor: pointer;
+    opacity: 0.2;
+  }
+  
+  #power:hover {
+    opacity: 1;
+    transition: opacity 0.5s; 
+  }
