@@ -39,6 +39,22 @@
     <!-- ^^^^^^^^  Für Nav Bar: ^^^^^^^^^^^^ -->
 
     <main>
+        <!-- vvvvvvvvvv Für Audio controll: vvvvvvvvvvv -->
+        <div id="player">
+            <audio src="audio/lonely_boy.mp3" controls>
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </div>
+        <a onclick="togglePlay()" class="button trigger">Dance</a>
+
+        <script>
+            const minscale = 0.3; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
+            const maxscale = 4; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
+        </script>
+        <script src="js/audio.js"></script>
+        <!-- ^^^^^^^^  Für Audio controll: ^^^^^^^^^^^^ -->
+
         <div id="site1">
             <div class="scrollTrigger"></div>
             <div class="scrollTrigger n2"></div>

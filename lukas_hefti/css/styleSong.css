@@ -1,9 +1,16 @@
 /* Import NavBar CSS*/
 @import "styleNavBar.css";
+@import "styleAudio.css";
 
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); /* font-family: 'Bangers', cursive; */
 
+
+:root {
+    /*************************** Page-wide variables ****************************/
+    --scalesize: 1;
+    /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
+}
 
 /* All */
 * {
@@ -16,6 +23,7 @@ body {
     margin: 0px;
     /*font-family: 'Source Sans Pro', sans-serif;*/
     font-family: 'Bangers', cursive;
+    overflow-x: hidden;
 }
 
 
@@ -28,6 +36,12 @@ main {
     main div {
         display: block;
         height: 100vh;
+        min-width: 100%;
+    }
+
+    main #player {
+        display: block;
+        height: 1vh;
         min-width: 100%;
     }
 
@@ -64,6 +78,7 @@ p {
     position: fixed;
     top: 20%;
     left: 30%;
+    transform: scale(var(--scalesize));
     transition: color linear 1.5s, font-size ease-in 1.5s, top ease-in 1.5s;
 }
 
@@ -152,7 +167,7 @@ p {
     color: red;
     margin-top: -35%;
     display: block;
-    font-size: 70em;
+    font-size: 30vw;
     transform: scale(5,1);
     transition: transform ease-out 1s, box-shadow ease-out 1s;
     z-index: -100;
