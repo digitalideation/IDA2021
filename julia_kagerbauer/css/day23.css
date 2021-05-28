@@ -1,0 +1,26 @@
+:root{
+    --backgroundColor: rgb(250, 167, 225);
+    --background-image: url(/julia_kagerbauer/images/waves.svg);
+    --background-size: cover;
+    --overflow-x: hidden;
+    --color: rgb(189, 14, 14);
+
+}
+.night {
+    --backgroundColor: black;
+    --background-image: url(/julia_kagerbauer/images/schichten_night.svg);
+    --background-size: cover;
+    --overflow-x: hidden;
+    --color: rgb(0, 0, 0);
+  }
+
+button{
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 60px;
+}
+
+body{
+    background-color: var(--backgroundColor);
+}

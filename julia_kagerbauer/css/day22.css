@@ -56,22 +56,22 @@ ul {
     text-align: center;
   }
 
+body
 
-body{
-    font-size:16px;
-    background-color: rgb(250, 167, 225);
-    background-image: url(/julia_kagerbauer/images/waves.svg);
-    background-size: cover;
-    overflow-x: hidden;
+:root{
+    --backgroundColor: rgb(250, 167, 225);
+    --background-image: url(/julia_kagerbauer/images/waves.svg);
+    --background-size: cover;
+    --overflow-x: hidden;
+    --color: rgb(189, 14, 14);
 
 }
-.dark-mode {
-    font-size:16px;
-    background-color: black;
-    background-image: url(/julia_kagerbauer/images/schichten_night.svg);
-    background-size: cover;
-    overflow-x: hidden;
-    color: black;
+.night {
+    --backgroundColor: black;
+    --background-image: url(/julia_kagerbauer/images/schichten_night.svg);
+    --background-size: cover;
+    --overflow-x: hidden;
+    --color: rgb(0, 0, 0);
   }
 
 .knopf1 {
@@ -92,7 +92,7 @@ body{
 
 .container1 {
     margin:20px 0; 
-    color:#fff; 
+    color: var(--color);
     font-size:26px; 
     font-family: 'Orbitron', sans-serif;  
     font-weight: 100;
@@ -100,7 +100,7 @@ body{
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 5%;
-    background-color: transparent;
+    background-color: var(--backgroundColor);
 }
 
 p{
@@ -185,8 +185,12 @@ p{
 
 h1{margin:0; line-height: 100px;text-align: center; font-size: 96px;}
 
-.block1{background: transparent;}
-.block1  h1{font-family: 'Orbitron', sans-serif;  color:rgba(0, 0, 0, 0);letter-spacing:.4rem;font-style: italic; 
+.block1{
+    color:var(--color);
+    background: transparent;}
+.block1  h1{
+    
+font-family: 'Orbitron', sans-serif;  color:rgba(0, 0, 0, 0);letter-spacing:.4rem;font-style: italic; 
 
 text-shadow:-2px 0 1px #0f0f0f, -4px 0 0 #000000,  -6px 0 1px #fff,-6px 1px 1px #fff,-6px 2px 1px #fff, 0px 2px 1px #fff, 0px 1px 0px #fff, 0px 0 1px #fff,-6px -1px 1px #fff,
     -6px -2px 0px #fff, 0px -1px 0px #fff
@@ -280,14 +284,14 @@ h1 {
     height: 500%;
     position: absolute;
     left: -10px;
-    background-image:url(/julia_kagerbauer/images/waves.svg);
+    background-image:var (var(--background-image));
     background-repeat: no-repeat;
     background-size: cover;
     animation: waves 2s ease-in-out infinite alternate;
     
 }
 
-.night {
+.dark {
     width:120%;
     height: 500%;
     position: absolute;

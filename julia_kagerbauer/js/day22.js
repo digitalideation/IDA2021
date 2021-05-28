@@ -1,9 +1,11 @@
+/*
+
 function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
  }
  function text() {
-    var element = document.getElementsByClassName ("h1");
+    var element = document.getElementsByTagName("h1")[0];
     element.classList.toggle("h1-night");
  }
 /*
@@ -27,5 +29,12 @@ function after(){
 }
 
 */
+
+var nightButton = document.querySelector("#night");
+console.log(nightButton)
+nightButton.addEventListener("click", function(){
+   console.log("just toggling")
+   document.body.classList.toggle("night")
+});
 
     
