@@ -69,7 +69,7 @@ transition: all 0.5s;
 
 @font-face {
 	font-family: 'euclid';
-	src: url(/font/EuclidFlexEDU-Medium-WebXL.woff);
+	src: url(../font/EuclidFlexEDU-Medium-WebXL.woff);
 	format:('woff')
   }
 
