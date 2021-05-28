@@ -33,6 +33,12 @@ analyser.connect(audioCtx.destination);
 // Play Button
 playButton.addEventListener('click', function () {
     
+    var ctxWidth = canvas.offsetWidth
+    var ctxHeight = canvas.offsetHeight
+
+    ctx.clearRect(0, 0, ctxWidth, ctxHeight);
+
+
     // check if context is in suspended state (autoplay policy)
     if (audioCtx.state === 'suspended') {
         audioCtx.resume();
@@ -60,12 +66,11 @@ song.addEventListener('ended', () => {
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-var ctxWidth = canvas.offsetWidth
-var ctxHeight = canvas.offsetHeight
-
-ctx.clearRect(0, 0, ctxWidth, ctxHeight);
+var ctxWidth = canvas.offsetWidth;
+var ctxHeight = canvas.offsetHeight;
 
 function draw() {
+
     var drawVisual = requestAnimationFrame(draw);
     analyser.getByteTimeDomainData(dataArray);
     ctx.fillStyle = 'rgb(200, 200, 200)';
@@ -80,6 +85,9 @@ function draw() {
 
     for (var i = 0; i < bufferLength; i++) {
 
+        ctxWidth = canvas.offsetWidth;
+        ctxHeight = canvas.offsetHeight;
+
         var v = dataArray[i] / 128.0;
         var y = v * ctxHeight / 2;
 
@@ -91,8 +99,8 @@ function draw() {
 
         x += sliceWidth;
     }
-
-    ctx.lineTo(canvas.width, canvas.height / 2);
+    console.log('Width: ', ctxWidth, ' Height: ', ctxHeight);
+    ctx.lineTo(ctxWidth, ctxHeight / 2);
     ctx.stroke();
 
 };

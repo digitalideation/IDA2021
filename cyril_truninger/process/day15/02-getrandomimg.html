@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <title>Get Random Image from API</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 3vw;
+            text-align: center;
+        }
+        
+        button {
+            margin-top: 20px;
+            background: #3D94F6;
+            background-image: -webkit-gradient(to bottom, #3D94F6, #06544A);
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 100;
+            padding: 20px;
+            box-shadow: 1px 1px 20px 0 #000000;
+            text-shadow: 1px 1px 20px #000000;
+            border: solid #337FED 1px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        #platzhalter {
+            margin-top: 100px;
+            padding: 20px;
+            box-shadow: 1px 1px 20px 0 #000000;
+            min-width: 500px;
+            min-height: 600px;
+        }
+        
+        form {
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        textarea,
+        select {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            font-size: 16px;
+            height: auto;
+            margin: 0;
+            outline: 0;
+            padding: 15px;
+            width: 100%;
+            background-color: #e8eeef;
+            color: #8a97a0;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+            margin-bottom: 30px;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0 4px 8px 0;
+        }
+        
+        select {
+            padding: 6px;
+            height: 32px;
+            border-radius: 2px;
+        }
+        
+        fieldset {
+            margin-bottom: 30px;
+            border: none;
+        }
+        
+        legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        label.light {
+            font-weight: 300;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="post" onsubmit="event.preventDefault(),getRandImgAPI()">
+
+        <h1>Get Random Picture from API</h1>
+
+        <fieldset>
+
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic">
+            <button type="submit">Get it</button>
+        </fieldset>
+    </form>
+
+
+
+    <div id="platzhalter"></div>
+</body>
+<script src="../../js/random.js"></script>
+
+</html>

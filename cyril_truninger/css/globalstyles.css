@@ -1,45 +1,62 @@
 :root {
-    --black: hsla(0, 0%, 10%, 1);
+    --black: hsla(0, 0%, 4%, 1);
+    --darkgrey: hsla(0, 0%, 6%, 1);
+    --grey: hsla(0, 0%, 16%, 1);
+    --lightgrey: hsla(0, 0%, 24%, 1);
     --white: hsla(212, 100%, 94%, 1);
-    --red: hsla(0, 60%, 30%, 1);
+    --red: hsla(0, 90%, 40%, 1);
+    --blue: hsla(211, 92%, 40%, 1);
     --orange: hsla(32, 100%, 50%, 1);
     --yellow: hsla(49, 99%, 50%, 1);
     --lime: hsla(22, 90%, 45%, 1);
     --green: hsla(127, 81%, 41%, 1);
     --pink: hsla(314, 85%, 45%, 1);
-    --blue: hsla(211, 92%, 52%, 1);
     --purple: hsla(283, 92%, 44%, 1);
     --cyan: hsla(195, 98%, 55%, 1);
 }
 
 * {
-    font-family: Helvetica;
-    color: white;
+    font-family: Helvetica Neue;
+    color: var(--white);
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    ;
+    background-color: var(--black);
+
 }
 
+/* Text Styling */
+
 h1, h2 {
-    text-align: center;
+    text-align: left;
+}
+
+h1 {
+    padding-top: 1rem;
+    font-size: 4rem;
+    line-height: 4.2rem;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 a {
-    color: grey;
+    color: var(--white);
     text-decoration: none;
 }
 
 a:active {
-    color: white;
+    color: var(--white);
 }
 
 a:hover {
-    color: red;
+    color: var(--red);
+    transition: 0.3s;
 }
 
 nav {
@@ -50,7 +67,12 @@ nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: black;
+    background-color: var(--black);
+    z-index: 1;
+}
+
+.navdiv::after {
+    content: "/";
 }
 
 nav ul {
@@ -60,9 +82,19 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+nav ul li, .navdiv {
     padding: 15px;
     display: inline;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+nav ul li:hover {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: 0.3s;
 }
 
 body {
@@ -71,6 +103,6 @@ body {
 }
 
 main {
-    width: 74vw;
+    width: 85vw;
     margin: auto;
 }

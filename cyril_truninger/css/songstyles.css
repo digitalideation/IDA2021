@@ -1,31 +1,96 @@
-@keyframes shabada {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.Sha {
-    opacity: 0;
-    animation: shabada 2s infinite;
-}
-
-@media screen and (max-width: 800px) {
-    :root {
-        --boxWidth: 460px;
-        --boxHeight: 600px;
-    }
-}
-
-* {
-    box-sizing: border-box;
-}
-
 /* TYPE ANIMATION */
 
-/* VHS DROP IN EFFECT */
+
+
+@keyframes worddrop {
+    0% {
+        transform: translate(0, -30%);
+        opacity: 0;
+        color: blue;
+    }
+    20% {
+        transform: translate(0, 0%);
+        opacity: 1;
+    }
+    40% {
+        transform: translate(0, 0%);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(0, 30%);
+        color: red;
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 30%);
+        color: red;
+        opacity: 0;
+    }
+}
+
+.worddrop-wrapper {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.shabada, .feelgood {
+    text-align: center;
+}
+
+.feelgood {
+    padding-top: 45px;
+}
+
+article.lyric {
+    height: 80vh;
+    margin-top: 25vh;
+}
+
+.worddrop span {
+    opacity: 0;
+    display: inline-block;
+    font-size: 3em;
+    animation: worddrop 6s ease-in-out infinite;
+    padding: 3px;
+}
+
+.shabada .worddrop span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.shabada .worddrop span:nth-child(3) {
+    animation-delay: 2.5s;
+}
+
+.shabada .worddrop span:nth-child(4) {
+    animation-delay: 2.8s;
+}
+
+.shabada .worddrop span:nth-child(5) {
+    animation-delay: 3.2s;
+}
+
+.shabada .worddrop span:nth-child(6) {
+    animation-delay: 3.5s;
+}
+
+.shabada .worddrop span:nth-child(7) {
+    animation-delay: 3.8s;
+}
+
+.feelgood .worddrop span:nth-child(1) {
+    animation-delay: 4.5s;
+}
+
+.feelgood .worddrop span:nth-child(2) {
+    animation-delay: 4.8s;
+}
+
+/* GLitch Effect */
+
+
+/* VHS DROP IN EFFECT
 
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 .jt {
@@ -62,7 +127,7 @@
     top: 0;
     left: 0;
     user-select: none;
-    witdh: 800px;
+    width: 800px;
 }
 
 .jt__text {
@@ -135,36 +200,35 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} */
 
 /* BOOMBOX */
 
 /* everything has to be pixels for 3D reasons */
 
-body {}
+/* Booxbox Colors */
 
 :root {
-    /* --orange: hsla(32, 100%, 50%, 1);
-    --yellow: hsla(49, 99%, 50%, 1);
-    --lime: hsla(82, 90%, 45%, 1);
-    --green: hsla(127, 81%, 41%, 1);
-    --red: hsla(342, 9x3%, 53%, 1);
-    --pink: hsla(314, 85%, 45%, 1);
-    --blue: hsla(211, 92%, 52%, 1);
-    --purple: hsla(283, 92%, 44%, 1);
-    --cyan: hsla(195, 98%, 55%, 1);
-    --white: hsla(0, 0%, 95%, 1);
-    --black: hsla(0, 0%, 10%, 1); */
-    /* abstract our colours */
-    --boxMain: var(--green);
-    --boxSecond: var(--lime);
+    --boxMain: var(--grey);
+    --boxSecond: var(--lightgrey);
     --boxHigh: var(--red);
     --border: 6px solid var(--black);
     --borderRad: 2px;
     /* dimensions */
-    --boxWidth: 800px;
+    --boxWidth: 760px;
     --boxHeight: 440px;
     --boxDepth: 200px;
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --boxWidth: 100%;
+        --boxHeight: 600px;
+    }
+}
+
+* {
+    box-sizing: border-box;
 }
 
 #boombox {
@@ -187,7 +251,7 @@ body {}
 [class^="bb"] {
     position: absolute;
     transform-style: preserve-3d;
-    background-color: var(--green);
+    background-color: var(--boxMain);
     border: var(--border);
 }
 
@@ -591,7 +655,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     display: inline-block;
     margin: 0px;
     padding: 3vmin 4vmin;
-    background-color: var(--green);
+    background-color: var(--boxMain);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 70% 70%;
@@ -607,7 +671,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 #move-controls button:hover {
-    background-color: var(--lime);
+    background-color: var(--boxSecond);
 }
 
 #move-controls button span {

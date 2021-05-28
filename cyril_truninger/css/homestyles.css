@@ -1,0 +1,10 @@
+.with {
+    color: var(--darkgrey);
+}
+
+.with:hover {
+    background: linear-gradient(var(--red), var(--blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
