@@ -31,3 +31,14 @@ nightButton.addEventListener('click', function() {
     console.log(this)
     document.body.classList.toggle('night')
 });
+
+function scrollMe(classname) {
+
+}
+
+
+document.getElementsByTagName('h1')[0].addEventListener('click', scrollMe(''))
+
+setTimeout(() => {
+    scrollMe()
+}, 2000);
