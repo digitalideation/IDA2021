@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'euclid';
-    src: url(/font/EuclidFlexEDU-Medium-WebXL.woff);
+    src: url(../font/EuclidFlexEDU-Medium-WebXL.woff);
     format:('woff')
   }
 
@@ -33,7 +33,7 @@
   }
 
   .augeBild {
-      background-image: url(/images/7aa0fe42d222328d2123c9495bdb87e0.jpg);
+      background-image: url(../images/7aa0fe42d222328d2123c9495bdb87e0.jpg);
       width: 420px;
       height: 370px;
       display: none;
@@ -59,7 +59,7 @@
 
 
       .traumbild {
-        background-image: url(/images/01624a393b16cfdd4b9e54117629bf66.jpg);
+        background-image: url(../images/01624a393b16cfdd4b9e54117629bf66.jpg);
         width: 420px;
         height: 600px;
         display: none;
@@ -84,7 +84,7 @@
 
 
 .glühtbild {
-    background-image: url(/images/5a9ff4ea5046e3cd8fec3bd88d56fade.jpg);
+    background-image: url(../images/5a9ff4ea5046e3cd8fec3bd88d56fade.jpg);
         width: 500px;
         height: 600px;
         display: none;
@@ -109,7 +109,7 @@
 
 
 .farbenbild {
-    background-image: url(/images/Unknown.jpeg);
+    background-image: url(../images/Unknown.jpeg);
         width: 300px;
         height: 200px;
         display: none;
@@ -134,7 +134,7 @@
 
 
 .blaubild {
-    background-image: url(/images/1200px-IKB_191.jpg);
+    background-image: url(../images/1200px-IKB_191.jpg);
         width: 700px;
         height: 1100px;
         display: none;
