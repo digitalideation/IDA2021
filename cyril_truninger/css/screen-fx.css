@@ -26,7 +26,7 @@
 .glow {
     width: var(--glow-width);
     height: var(--glow-height);
-    border-radius: 2em;
+    border-radius: var(--screen-radius);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -106,7 +106,7 @@
     height: var(--screen-height);
     border: solid 3px var(--white);
     background-color: var(--darkgrey);
-    border-radius: 2em;
+    border-radius: var(--screen-radius);
     position: relative;
     filter: url(../svg/filters.svg#blur1);
     animation: noise .6s ease 0s infinite forwards;
@@ -119,14 +119,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    font-size: calc(var(--scalesize)*4*24px);
+    font-family: Helvetica;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
-.screen figcaption h2 {
+/* .screen figcaption h2 {
     transition: all 1.5s ease-in-out;
     text-align: center;
     text-transform: uppercase;
-    font-size: 3.4em;
-}
+} */
 
 /* Noise Distortion Filter Keyframe */
 
@@ -350,6 +353,10 @@
 
 /* CTR/VHS Line Effect */
 
+.ctr {
+    border-radius: calc(var(--screen-radius) + 0.5);
+}
+
 .crt::after {
     content: " ";
     display: block;
@@ -363,7 +370,7 @@
     z-index: 2;
     pointer-events: none;
     animation: flicker 0.15s infinite;
-    border-radius: 2em;
+    border-radius: var(--screen-radius);
     width: 100%;
     height: 100%;
 }
@@ -380,12 +387,12 @@
     z-index: 2;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
-    border-radius: 2em;
+    border-radius: var(--screen-radius);
     width: 100%;
     height: 100%;
 }
 
 .crt {
     animation: textShadow 1.6s infinite;
-    border-radius: 20em;
+    border-radius: var(--screen-radius);
 }

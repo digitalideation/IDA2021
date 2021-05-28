@@ -85,9 +85,6 @@ function draw() {
 
     for (var i = 0; i < bufferLength; i++) {
 
-        ctxWidth = canvas.offsetWidth;
-        ctxHeight = canvas.offsetHeight;
-
         var v = dataArray[i] / 128.0;
         var y = v * ctxHeight / 2;
 

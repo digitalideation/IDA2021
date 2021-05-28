@@ -58,6 +58,7 @@ playButton.addEventListener('click', function () {
     // play or pause track depending on state
     if (this.dataset.playing === 'false') {
         song.play();
+        goLive();
         playButton.innerHTML = "Pause";
         this.dataset.playing = 'true';
         console.log('Play');
@@ -105,46 +106,65 @@ var speakers;
 var mic;
 var amplitude;
 
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 
-function preload(){
-}
+var ctxWidth = canvas.offsetWidth;
+var ctxHeight = canvas.offsetHeight;
 
-function setup() {
-    let cvs = createCanvas(boxwidth, boxheight);
-    cvs.parent("cvs-container");
-    window.document.getElementById('cvs-container').firstChild.classList.add("canvas");
-    
-    console.log("set up");
-
-    // mic = new p5.AudioIn();
-    // mic.start();
-
-    // amplitude = new p5.Amplitude;
-    // amplitude.setInput(mic);
-    // amplitude.smooth(0.6);
-}
 
 function draw() {
 
-    setTimeout(function () {
-        requestAnimationFrame(draw);
+    // --scale-size function
+    // setTimeout(function () {
+    //     requestAnimationFrame(draw);
 
-        analyser.getByteFrequencyData(dataArray); //werte von 0-255
+    //     analyser.getByteFrequencyData(dataArray); //werte von 0-255
 
-        let sum = 0;
+    //     let sum = 0;
 
-        //mittelwert rechnen
-        for (let i = 0; i < bufferLength; i++) {
-            sum += map(dataArray[i], 0, 255, minscale, maxscale);
 
+    //     const minscale = 1; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
+    //     const maxscale = 3; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
+
+    //     //mittelwert rechnen
+    //     for (let i = 0; i < bufferLength; i++) {
+    //         sum += map(dataArray[i], 0, 255, minscale, maxscale);
+    //     }
+
+    //     document.documentElement.style.setProperty('--scalesize', sum / bufferLength);
+
+    // }, 1000 / fps);
+
+    // soundwave function
+    var drawVisual = requestAnimationFrame(draw);
+    analyser.getByteTimeDomainData(dataArray);
+    // ctx.fillStyle = 'rgb(200, 200, 200)';
+    // ctx.fillRect(0, 0, ctxWidth, ctxHeight);
+
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'rgb(255, 0, 0)';
+    ctx.beginPath();
+
+    var sliceWidth = ctxWidth * 1.0 / bufferLength;
+    var x = 0;
+
+    for (var i = 0; i < bufferLength; i++) {
+
+        var v = dataArray[i] / 128.0;
+        var y = v * ctxHeight / 2;
+
+        if (i === 0) {
+            ctx.moveTo(x, y);
+        } else {
+            ctx.lineTo(x, y);
         }
 
-        document.documentElement.style.setProperty('--scalesize', sum / bufferLength);
-        console.log('Scale Size: ', sum / bufferLength);
-
-    }, 1000 / fps);
-
-
+        x += sliceWidth;
+    }
+    console.log('Width: ', ctxWidth, ' Height: ', ctxHeight);
+    ctx.lineTo(ctxWidth, ctxHeight / 2);
+    ctx.stroke();
 
 }
 
@@ -155,8 +175,6 @@ function map(val, in_min, in_max, out_min, out_max) {
     return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-
-
 window.addEventListener("resize", windowResized);
 function windowResized() {
     box = window.document.getElementById('cvs-container');
@@ -165,5 +183,29 @@ function windowResized() {
     // cvs.resizeCanvas(boxwidth, boxheight);
     console.log('I was resized:' + boxwidth + 'px ' + boxheight + 'px')
 }
+
+function goLive() {
+    let liveTag = document.getElementById('live');
+    liveTag.classList.add('live-fx');
+}
+
+
+// function preload(){
+// }
+
+// function setup() {
+//     let cvs = createCanvas(boxwidth, boxheight);
+//     cvs.parent("cvs-container");
+//     window.document.getElementById('cvs-container').firstChild.classList.add("canvas");
+
+//     console.log("set up");
+
+//     // mic = new p5.AudioIn();
+//     // mic.start();
+
+//     // amplitude = new p5.Amplitude;
+//     // amplitude.setInput(mic);
+//     // amplitude.smooth(0.6);
+// }
 
 

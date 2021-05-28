@@ -7,19 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - Firstname Lastname</title>
   <!-- CSS -->
-  <script>
-    const minscale = 0.8; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
-    const maxscale = 2; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
-  </script>
   <style>
     :root {
       /*************************** Page-wide variables ****************************/
       --scalesize: 1;
       /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
-    }
-
-    .screen figcaption h2 {
-      font-size: calc(var(--scalesize) * 12em) !important;
     }
 
     nav {
@@ -78,8 +70,8 @@
               <video autoplay="true" id="videoElement">
               </video>
             </div>
-            <figcaption>
-              <h2>Live</h2>
+            <figcaption id=live>
+              Live
             </figcaption>
           </figure>
         </div>
@@ -91,9 +83,7 @@
       </div>
       
       <audio id="song" src="sound/Feel-Good-Inc.mp3" crossorigin="anonymous"></audio>
-      
-      <p>Hello!</p>
-      
+
   </div>
 </main>
   
