@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Song</title>
+    <style>
+
+/* -----------------------ALLGEMEIN----------------------- */
+        @font-face {
+            font-family:"brr";
+            src: url(fonts/BRRREDU-Medium.otf);
+        }
+        @font-face {
+            font-family: 'skyline';
+            src: url(../process/day16/css/NewParisEDUSkyline-Regular.otf);
+        }
+       
+
+        *{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            border: gold 0px solid;
+            overflow-y: visible;
+           
+        }
+
+        body{
+             perspective: 100px;
+            overflow-y: auto;
+            position: fixed;
+            height: 100vh;
+            background-color: black;
+            color: white;
+        }
+        article{
+            position: relative;
+            width: 100vw;
+            height: 130vh;
+            display: flex;
+            justify-content: center;
+            overflow: visible;
+
+        }
+
+        section{
+            position: relative;
+            width: 100vw;
+            height: 290vh;
+            display: flex;
+            justify-content: center;
+            overflow: visible;
+            
+           
+        }
+
+        div{
+            position: absolute;
+            font-family:"brr";
+            font-size:70px;
+            
+        }
+
+        .s1{
+            top: 8rem;
+            left: 4rem;
+            transform: translateZ(1);
+
+        }
+
+        .s2{
+            top:10rem;
+            left: 30rem;
+              color: rgb(0, 0, 0);
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(255, 255, 255);
+            transform: translateZ(-1);
+        }
+
+        .s3{
+            top: 13rem;
+            right: 4rem;
+        }
+
+
+        figure{
+            width: 70rem;
+            background-size: cover ;
+            height: 70rem;
+          
+        }
+
+        figure{
+            transform: translateZ(-2);
+        }
+
+
+
+
+/* -----------------------PLAYBUTTON----------------------- */
+            .container {
+                position: fixed;
+                right: 2rem;
+                width: 6rem;
+                height: 6rem;
+                text-align: center;
+                z-index: 2;
+                background-color: black;
+            }
+
+            a{
+                z-index: 4;
+            }
+
+            .circle {
+            stroke: #85ebff;
+            stroke-dasharray: 650;
+            stroke-dashoffset: 650;
+            -webkit-transition: all 0.5s ease-in-out;
+            opacity: 0.3;
+            }
+
+            .playBut {
+            /*  border: 1px solid red;*/
+            display: inline-block;
+            -webkit-transition: all 0.5s ease;
+            }
+            .playBut .triangle {
+            -webkit-transition: all 0.7s ease-in-out;
+            stroke-dasharray: 240;
+            stroke-dashoffset: 480;
+            stroke: rgb(255, 255, 255);
+            transform: translateY(0);
+            }
+            .playBut:hover .triangle {
+            stroke-dashoffset: 0;
+            opacity: 1;
+            stroke: #85ebff;
+            animation: nudge 0.7s ease-in-out;
+            }
+            @keyframes nudge {
+            0% {
+                transform: translateX(0);
+            }
+            30% {
+                transform: translateX(-5px);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+            70% {
+                transform: translateX(-2px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+            }
+            .playBut:hover .circle {
+            stroke-dashoffset: 0;
+            opacity: 1;
+            }
+            
+/* -----------------------PLAYBUTTON----------------------- */
+
+/* -----------------------CURSOR----------------------- */
+
+            
+        #cursor{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            transition: 0.1s;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            cursor: none;
+            z-index: 3;
+
+            mix-blend-mode: difference;
+    
+
+            
+        }
+
+        .element.style{
+            opacity: 0;
+            transform: matrix(0, 0, 0, 0, 1062, 896);
+        }
+
+
+        #cursor-follower{
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            pointer-events: none;
+
+        }
+
+
+
+ #cursor-follower{
+            mix-blend-mode: difference;
+        }
+
+/* -----------------------STARTSEITE----------------------- */
+        .start{
+            width: 100vw;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+            padding:0.2rem;
+            font-family: "brr";
+            position: absolute;
+            width: auto;
+            left: 1rem;
+            top: 1rem;
+            font-size: 15px;
+        }
+
+        .back:hover{
+            color: rgb(0, 0, 0);
+            background-color:white ;
+  
+        }
+        h1{
+            position: absolute;
+            font-family: "brr";
+            font-size: 150px;
+            width: 100vw;
+            border: teal 0px solid;
+            bottom: 20rem;
+            margin-left: 8rem;
+           
+
+            text-shadow:10px 10px rgba(255, 255, 255, 0.211); 
+             animation: shadow infinite 6s;       
+        }
+
+    
+
+        @keyframes shadow {
+            0% {
+                
+                text-shadow:rgb(197, 197, 197) 10px 10px 5px;
+
+
+            }
+            30% {
+                text-shadow:rgb(197, 197, 197) -10px 10px 10px;
+            }
+
+            80% {
+                text-shadow:rgb(197, 197, 197) 10px -10px 10px;
+            }
+
+            100%{
+                 text-shadow:rgb(197, 197, 197) 10px 10px 5px;
+            }
+        }
+
+        
+
+
+        /* article.myclass .h1{
+    animation: text2 ease-in-out 7s ;
+  }
+
+
+  
+   @keyframes text2 {
+    0%{
+      letter-spacing: 10px;
+    }
+
+    50%{
+      font-size: 0.3rem;
+    }
+
+    100%{
+      font-size: 1rem;
+    }
+  } */
+
+
+
+
+/* -----------------------ERSTE SEKTION----------------------- */
+
+            .first{
+                margin-top: 40rem;
+            }
+
+            .one {
+                background-image: url(https://i.pinimg.com/564x/d3/aa/4c/d3aa4c47fdea6329b3a3fb31e6726ce6.jpg), url(https://i.pinimg.com/564x/9b/5f/f6/9b5ff6a517eb6a61d1f9b2029feceb60.jpg);
+                background-blend-mode: overlay;
+                left: -9rem;      
+
+            }
+            .two {
+                background-image: url(https://i.pinimg.com/564x/3c/50/1a/3c501a67f0e72fcb3f64177de1c0c620.jpg), url(https://i.pinimg.com/564x/96/da/ac/96daac8ba53ec8b030d0fcba273203ad.jpg) ;
+                background-blend-mode: overlay;
+                right:-15rem;
+                top: 75rem;
+            }
+
+            .parallax {
+            width: 100%;
+            perspective: 2px;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: visible;
+            }
+            .parallax__layer {
+            position: absolute;
+           
+            }
+            .parallax__layer--base {
+            transform: translateZ(1);
+            z-index: 1;
+      
+
+            }
+            .parallax__layer--back {
+            transform: translateZ(-1px);
+            
+            }
+
+             .parallax__layer--ground {
+            transform: translateZ(-4px);
+            z-index: -1;
+            
+            }
+
+            .feeling{
+                 top:-3rem;
+                 left: 10rem;
+            }
+
+            .begun{
+                top: 4rem;
+                left: 30rem;
+            }
+
+            .saying{
+                top: 39rem;
+            }
+
+            .said{
+                top: 42rem;
+            }
+
+            .doing{
+                top: 80rem;
+                left: 26rem;
+            }
+            .done{
+                top: 83rem;
+                left: 40rem;
+            }
+
+
+ /* -----------------------ZWEITE SEKTION----------------------- */
+
+            .second{
+                height: 150vh;
+            }
+
+
+            .text{
+                font-family: 'skyline';
+                position: relative;
+                text-align: center;
+                letter-spacing: 4rem;
+                line-height: 2rem;
+                border: 0px solid tomato;
+                color: white ;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 100%;
+                animation: text ease-in-out 7s infinite;
+
+
+            }
+
+
+            @keyframes text {
+                0%{
+                font-size: 1rem;
+                }
+
+                50%{
+                font-size: 0.3rem;
+                }
+
+                100%{
+                font-size: 1rem;
+                }
+            }
+
+   /* -----------------------DRITTE SEKTION----------------------- */
+            .head1{
+                background-image: url(https://i.pinimg.com/564x/89/4f/bf/894fbf78c79faccabd6ab21d48546408.jpg), 
+                        url(https://i.pinimg.com/564x/8b/a8/20/8ba820ff73dcd3de10870d4d19af94f4.jpg);
+                background-blend-mode: overlay; 
+                left: -30rem;
+            }
+            .head2{
+                background-image: url( https://i.pinimg.com/564x/8b/a8/20/8ba820ff73dcd3de10870d4d19af94f4.jpg), 
+                        url(https://i.pinimg.com/564x/68/29/33/682933d289021787f5420e1856a89581.jpg);
+                background-blend-mode: overlay;
+                right: -30rem;
+                top:40rem;
+            }
+
+            .s3{
+                top:90rem;
+                left: 55rem;
+                width: 100rem;
+                color: rgb(0, 0, 0);
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: rgb(255, 255, 255);
+                transform: translateZ(-1);
+            }
+
+           
+
+
+
+    </style>
+</head>
+<body>
+<!------------------------- PLAYBUTTON ------------------------->
+<div class='container'>
+    <audio id="myAudio" src="audio/head&heart.mp3"></audio>
+    <a href='#' class='playBut trigger' onclick="togglePlay()">
+
+        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="70px" height="70px"
+            viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+
+            <polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" points="
+        	73.5,62.5 148.5,105.8 73.5,149.1 " />
+
+            <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
+                stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
+        </svg>
+
+
+
+    </a>
+</div>
+<!------------------------- PLAYBUTTON ------------------------->
+
+<!------------------------- CURSOR ------------------------->
+    <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+        <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+    </span>
+    
+    <div id="cursor"></div>
+<!------------------------- CURSOR ------------------------->
+
+
+
+
+<main class="parallax">
+   
+
+    <article class="start">
+
+            <a class="back" href="https://ida2021-staging.netlify.app/surya_schmid/">Back</a>
+      
+        <h1 class="red">My head & <br> my heart</h1>
+        <div></div>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+    </article>
+
+    <section class="first">
+            <div class="s1 parallax__layer parallax__layer--base feeling">This Feeling's</div>
+            <div class="s2 parallax__layer parallax__layer--back begun">Just begun</div>
+            <figure class="one parallax__layer parallax__layer--ground"></figure>
+            <figure class="two parallax__layer parallax__layer--ground"></figure>
+          
+            <div class="s1 parallax__layer parallax__layer--base saying">I'm saying things</div>
+            <div class="s2 parallax__layer parallax__layer--back said" >I've never said</div>
+            <figure class="three parallax__layer parallax__layer--ground"></figure>
+            <figure class="four parallax__layer parallax__layer--ground"></figure>
+            <div class="s1 parallax__layer parallax__layer--base doing">Doing things</div>
+            <div class="s2 parallax__layer parallax__layer--back done">I've never done</div>
+            
+
+    </section>
+
+    <section class="second">
+        <div class="text">
+        
+            I'm saying things I've never said<br>
+            Doing things I've never done<br>
+        
+            Oh my God, oh my God<br>
+            When I see you I should run<br>
+            But I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            Tells me to stop<br>
+        
+            Feeling feelings I feel about us<br>
+            Try to fight it but it's never enough<br>
+        
+            My heart is certain<br>
+            It's more than a crush<br>
+            'Cause I'm frozen in motion<br>
+            And my head tells me to stop<br>
+        
+            But my heart goes<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            'Cause my heart goes<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+        
+            Oh my God, oh my God<br>
+            Can't believe what I've become<br>
+            I'm thinking things I shouldn't think<br>
+            Singing songs I've never sung<br>
+           
+            Oh my God, oh my God<br>
+            When I see you I should run<br>
+            But I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            Tells me to stop<br>
+            
+            Feeling feelings I feel about us<br>
+            Try to fight it but it's never enough<br>
+            ('Cause my heart)<br>
+            My heart is certain<br>
+            It's more than a crush<br>
+            'Cause I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            
+            But my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            'Cause my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            
+            But my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            'Cause my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            
+            My head and my heart<br>
+            My head and my heart<br>
+            I can't tell them apart<br>
+            My head tells me to run<br>
+            But I can't<br>
+
+            
+        </div>
+    
+    </section>
+
+    <section class="third">
+        <div class="s1 parallax__layer parallax__layer--base">When i see You</div>
+        <div class="s2 parallax__layer parallax__layer--back">I should run</div>
+        <figure class="head1 parallax__layer parallax__layer--ground"></figure>
+        <figure class="head2 parallax__layer parallax__layer--ground"></figure>
+    
+        <div class="s1 parallax__layer parallax__layer--base saying">But I'm frozen</div>
+        <div class="s2 parallax__layer parallax__layer--back said">in motion</div>
+        <figure class="head3 parallax__layer parallax__layer--ground"></figure>
+        <figure class="head4 parallax__layer parallax__layer--ground"></figure>
+        <div class="s1 parallax__layer parallax__layer--base doing">And my head</div>
+        <div class="s2 parallax__layer parallax__layer--back done">tells me to stop</div>
+        <div class="s3 parallax__layer parallax__layer--back done">tells me to stop</div>
+    
+    
+    </section>
+
+    <section class="fourth">
+        <div class="text">
+    
+            I'm saying things I've never said<br>
+            Doing things I've never done<br>
+    
+            Oh my God, oh my God<br>
+            When I see you I should run<br>
+            But I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            Tells me to stop<br>
+    
+            Feeling feelings I feel about us<br>
+            Try to fight it but it's never enough<br>
+    
+            My heart is certain<br>
+            It's more than a crush<br>
+            'Cause I'm frozen in motion<br>
+            And my head tells me to stop<br>
+    
+            But my heart goes<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            'Cause my heart goes<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+            Bum bum bum da bum bum, bum bum bum da bum<br>
+    
+            Oh my God, oh my God<br>
+            Can't believe what I've become<br>
+            I'm thinking things I shouldn't think<br>
+            Singing songs I've never sung<br>
+    
+            Oh my God, oh my God<br>
+            When I see you I should run<br>
+            But I'm frozen in motion<br>
+            And my head tells me to stop<br>
+            Tells me to stop<br>
+    
+            Feeling feelings I feel about us<br>
+            Try to fight it but it's never enough<br>
+            ('Cause my heart)<br>
+            My heart is certain<br>
+            It's more than a crush<br>
+            'Cause I'm frozen in motion<br>
+            And my head tells me to stop<br>
+    
+            But my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            'Cause my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+    
+            But my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            'Cause my heart goes<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+            Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+    
+            My head and my heart<br>
+            My head and my heart<br>
+            I can't tell them apart<br>
+            My head tells me to run<br>
+            But I can't<br>
+    
+    
+        </div>
+    
+    </section>
+
+
+</main>
+
+</body>
+
+<script>
+
+
+ // -----------------------AUDIO----------------------->
+    var myAudio = document.getElementById("myAudio");
+    var isPlaying = false;
+
+    function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play();
+    };
+
+    myAudio.onplaying = function () {
+        isPlaying = true;
+        document.body.classList.remove('paused')
+        document.body.classList.add('playing')
+    };
+
+    myAudio.onpause = function () {
+        isPlaying = false;
+        document.body.classList.remove('playing')
+        document.body.classList.add('paused')
+    };
+ // -----------------------AUDIO----------------------->
+
+
+// Mouse follower  
+    var cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+    });
+
+// -----------------------Mouse follower  ----------------------->
+
+    var s = Snap();
+
+    var circ = s.circle(50, 50, 40);
+    circ.attr({
+        fill: "red"
+    });
+
+    circ.animate({
+        r: 150
+    }, 2000, mina.easein);
+
+
+//-----------------------VIEWPORT ANIMATION----------------------->
+      
+    // javascript event handlers https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+        // hier wird die scroll Funktion abgehört, immer wenn der User scrollt wird die gesamte Funktion ausgeführt
+        window.onscroll = function () {
+            //alle Elemente mit dem Tag article werden in die Variable articles geschrieben, diese ist ein Array mit allenfalls mehreren Einträgen
+            let articles = document.getElementsByTagName("article");
+
+            //hier wird durch alle Einträge im Array durchgeloopt
+            //
+            for (let i = 0; i < articles.length; i++) {
+                // bei jedem einzelnen wird abgetragt, wo er sich im Moment in Bezug auf den Viewport befindet
+                let domRect = articles[i].getBoundingClientRect();
+                /* https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect*/
+
+                //falls die Distanz der oberen Ecke zum viewport kleiner ist als die Höhe des viewports
+                // ist das Element entweder im viewport oder bereits oben wieder rausgerutscht 
+                if (domRect.top < window.innerHeight) {
+                    console.log("ich bin im viewport");
+                    articles[i].setAttribute("class", "myclass");
+
+                    // falls der untere Punkt im Minus liegt ist es oben rausgerutscht
+                    if (domRect.bottom < 0) {
+                        console.log("ich bin oben rausgerutscht");
+                        articles[i].classList.remove("myclass");
+                    }
+                } else {
+                    console.log("ich bin noch nicht im viewport");
+                    articles[i].classList.remove("myclass");
+                }
+
+                // die console.log könnt ihr im live modus auskommentieren! Sind bloss zum Testen da.
+
+            }
+        };
+
+
+</script>
+
+
+
+</html>

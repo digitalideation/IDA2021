@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+    <title>Change Attributes</title>
+
+    <style>
+        * {
+            font-family: 'skyline';
+            border: tomato 0px solid;
+        }
+
+        body {
+             background: radial-gradient(circle at 50% 60%,rgba(149,176,249,1), rgba(149,176,249,0) 50%), radial-gradient(circle at 10% 10%,rgba(114,226,253,1), rgba(114,226,253,0) 50%), radial-gradient(circle at 90% 10%,rgba(184,150,255,1), rgba(184,150,255,0) 50%), radial-gradient(circle at 90% 90%,rgba(86,207,210,1), rgba(86,207,210,0) 50%), radial-gradient(circle at 10% 90%,rgba(168,112,253,1), rgba(168,112,253,0) 50%) ;
+            overflow-x: hidden;
+            }
+
+        @font-face {
+            font-family: 'skyline';
+            src: url(../process/day16/css/NewParisEDUSkyline-Regular.otf);
+        }
+
+        div{
+            position: relative;
+            margin: auto;
+            
+        }
+
+        article {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            min-height: 80vh;
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            /* transition: all 3s ease-in-out 1s; */
+            padding: 2rem;
+        }
+
+        article header {
+            font-size: 2rem;
+            transition: all 3s ease-in-out 1s;
+        }
+
+
+        /*
+Der Trick ist nun, dass was vorher über hover animiert wurde, über die neue Klasse auszulösen
+Statt:
+article:hover {
+    background-color: rgb(189, 202, 130);
+}
+*/
+
+        article.myclass .text{
+
+            color: white;
+            animation: letterSpace 5s ease-in-out;
+        }
+
+        @keyframes letterSpace {
+            0% {
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+                  }
+
+            50% {
+                letter-spacing: 30px;
+                transform: skewX(30deg);
+                }
+
+            100% {
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+                   }
+
+        }
+
+        article.myclass header{
+            font-size: 3.5rem;
+            animation: letterSp 5s;
+        }
+
+
+        @keyframes letterSp {
+            0% {
+                letter-spacing: 5px;
+            }
+
+            30% {
+                letter-spacing: 25px;
+                transform: skewX(30deg);
+            }
+
+
+            100% {
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+            }
+
+        }
+
+         article.myclass p{
+            font-size: 1rem;
+            animation: letterSp 5s;
+        }
+
+
+        @keyframes letterSp {
+            0% {
+                letter-spacing: 5px;
+            }
+
+            30% {
+                letter-spacing: 25px;
+                transform: skewX(30deg);
+            }
+
+
+            100% {
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+            }
+
+        }
+
+        .text{
+            line-height: 30px;
+        }
+
+        .text2{
+    position: relative;
+    text-align: center;
+    letter-spacing: 4rem;
+    line-height: 2rem;
+    border: 0px solid tomato;
+    white-space: nowrap;
+    width: 100vw;
+    height: 101vh;
+    
+  }
+
+  article.myclass .text2{
+    animation: text2 ease-in-out 7s ;
+  }
+
+
+  
+   @keyframes text2 {
+    0%{
+      letter-spacing: 3px;
+    }
+
+    50%{
+      font-size: 0.3rem;
+    }
+
+    100%{
+      font-size: 1rem;
+    }
+  }
+
+   .inside{
+            font-size: 60px;
+            color:  #ffffff;
+            text-transform: uppercase;
+            font-family:"Skyline" ;
+            text-shadow: 10px 10px #000000;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            text-align: center;
+
+            text-transform: uppercase;
+            letter-spacing: .125em;
+            animation-name: animateText;
+            animation-timing-function: ease;
+            animation-duration: 7s;
+            position: relative;
+            animation-iteration-count: infinite;
+
+      
+        }
+
+
+        @keyframes animateText {
+        0% {font-size: 1px;}
+       
+        100% {font-size: 70px;}
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <article class="seite1">
+
+            <div>
+                 <h2>I'm frozen in motion</h2>
+                <p>This feeling's just begun</p>
+            </div>
+
+        </article>
+
+        <article>
+            <div class="text">
+            
+                I'm saying things I've never said<br>
+                Doing things I've never done<br>
+            
+                Oh my God, oh my God<br>
+                When I see you I should run<br>
+                But I'm frozen in motion<br>
+                And my head tells me to stop<br>
+                Tells me to stop<br>
+            
+                Feeling feelings I feel about us<br>
+                Try to fight it but it's never enough<br>
+            
+                My heart is certain<br>
+                It's more than a crush<br>
+                'Cause I'm frozen in motion<br>
+                And my head tells me to stop<br>
+            
+                But my heart goes<br>
+                Bum bum bum da bum bum, bum bum bum da bum<br>
+                Bum bum bum da bum bum, bum bum bum da bum<br>
+                'Cause my heart goes<br>
+                Bum bum bum da bum bum, bum bum bum da bum<br>
+                Bum bum bum da bum bum, bum bum bum da bum<br>
+            
+                Oh my God, oh my God<br>
+                Can't believe what I've become<br>
+                I'm thinking things I shouldn't think<br>
+                Singing songs I've never sung<br>
+            </div>
+        </article>
+        <article class="seite2">
+            <div class="inside">
+                <h2>I'm saying things <br> I've never said</h2>
+                <p>Doing things I've never done</p>
+            </div>
+        </article>
+        <article class="seite3">
+            <div class="text2">
+                Oh my God, oh my God<br>
+                When I see you I should run<br><br>
+                But I'm frozen in motion<br>
+                And my head tells me to stop<br>
+                Tells me to stop<br>
+            
+                Feeling feelings I feel about us<br>
+                Try to fight it but it's never enough<br>
+                ('Cause my heart)<br>
+                My heart is certain<br>
+                It's more than a crush<br>
+                'Cause I'm frozen in motion<br>
+                And my head tells me to stop<br>
+            
+                But my heart goes<br>
+                Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+                Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+                'Cause my heart goes<br>
+                Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+                Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            
+                But my heart goes<br>
+                Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+                Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+                'Cause my heart goes<br>
+                Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+                Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+            
+                My head and my heart<br>
+                My head and my heart<br>
+                I can't tell them apart<br>
+                My head tells me to run<br>
+                But I can't<br>
+            </div>
+        </article>
+        <article class="seite4">
+            <div>
+                <header>But I'm frozen in motion</header>
+                <p>And my head tells me to stop</p>
+            </div>
+        </article>
+    </section>
+</body>
+<script>
+    // javascript event handlers https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+    // hier wird die scroll Funktion abgehört, immer wenn der User scrollt wird die gesamte Funktion ausgeführt
+    window.onscroll = function () {
+        //alle Elemente mit dem Tag article werden in die Variable articles geschrieben, diese ist ein Array mit allenfalls mehreren Einträgen
+        let articles = document.getElementsByTagName("article");
+
+        //hier wird durch alle Einträge im Array durchgeloopt
+        //
+        for (let i = 0; i < articles.length; i++) {
+            // bei jedem einzelnen wird abgetragt, wo er sich im Moment in Bezug auf den Viewport befindet
+            let domRect = articles[i].getBoundingClientRect();
+            /* https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect*/
+
+            //falls die Distanz der oberen Ecke zum viewport kleiner ist als die Höhe des viewports
+            // ist das Element entweder im viewport oder bereits oben wieder rausgerutscht 
+            if (domRect.top < window.innerHeight) {
+                console.log("ich bin im viewport");
+                articles[i].setAttribute("class", "myclass");
+
+                // falls der untere Punkt im Minus liegt ist es oben rausgerutscht
+                if (domRect.bottom < 0) {
+                    console.log("ich bin oben rausgerutscht");
+                    articles[i].classList.remove("myclass");
+                }
+            } else {
+                console.log("ich bin noch nicht im viewport");
+                articles[i].classList.remove("myclass");
+            }
+
+            // die console.log könnt ihr im live modus auskommentieren! Sind bloss zum Testen da.
+
+        }
+    };
+    
+    
+
+        document.body.addEventListener("click", createNewImg, false);
+
+            function createNewImg(event) {
+                let div = document.createElement('div'); //hier wird ein Div kreiiert
+                //hier wird dem div zwei background images zugewiesen. Der Trick ist, den Inhalt vom a über event.target.innerHTML abzufragen und der URL mitzugeben
+                div.style.backgroundImage = 'url(https://source.unsplash.com/random/300×300?Gold), url(https://source.unsplash.com/random/300×300?Blume), radial-gradient(rgb(201, 192, 192), rgb(0, 140, 255))';
+
+                //div.style.backgroundImage = 'url(' + event.target.getAttribute('myimg') + ')';
+
+                //hier wird das CSS konstruiert
+                div.style.backgroundPosition = '0 0, 0 50px, 0 0';
+                div.style.backgroundBlendMode = 'overlay';
+                div.style.backgroundSize = 'cover, cover';
+                div.style.top = event.pageY + "px"; //Math.random() * window.innerWidth;
+                div.style.left = event.pageX + "px"; //Math.random() * window.innerHeight;
+                div.style.border = '0px solid red';
+                div.style.position = "absolute";
+                div.style.width = "200px";
+                div.style.height = "200px";
+                div.style.borderRadius = "50%";
+
+                //hier wird das kreierte div dem a angehängt
+                document.body.appendChild(div);
+            }
+     </script>
+
+</html>
