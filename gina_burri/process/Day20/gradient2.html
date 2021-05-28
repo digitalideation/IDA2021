@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #canvas-basic {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+  </style>
+</head>
+<body>
+  <canvas id="canvas-basic"></canvas>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+  <script>
+    var granimInstance = new Granim({
+      element: '#canvas-basic',
+      direction: 'left-right',
+      isPausedWhenNotInView: true,
+      states : {
+          "default-state": {
+              gradients: [
+                  ['#EA00FF', '#0400FF'],
+                  ['#0400FF', '#EA00FF'],
+                  ['#EA00FF', '#0400FF']
+              ],
+              transitionSpeed: 5000
+          }
+      }
+  });
+  </script>
+</body>
+</html>
+

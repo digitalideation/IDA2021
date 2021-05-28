@@ -8,6 +8,14 @@
 
     <style>
 
+        .container {
+width:100vw ;
+height:100vh ;
+overflow: hidden;
+background-color: blue;
+margin: 0;
+        }
+
 .circle {
     height: 50vh;
     width: 50vh;
@@ -21,21 +29,68 @@
     transition: all 0.5s ease
  }
 
+ .a {
+     left: 30vw;
+     top: 40vh;
+
+ }
+
+ .b {
+     left: 0vw;
+     top: 40vh;
+
+ }
+
+ .c {
+     left: 75vw;
+     top: 20vh;
+
+ }
+
+ .d {
+     left: 0vw;
+     top: 0vh;
+
+ }
+ .e{
+     left: 30vw;
+     top: 80vh;
+
+ }
+
+ .f {
+     left: 90vw;
+     top: 90vh;
+
+ }
+ .g {
+     left: 40vw;
+     top: 80vh;
+
+ }
 .hover {
     opacity: 1;
-    transition: all 0.5s ease
+    transition: all 5s ease
 }  
     </style>
 </head>
 
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <div class="circle"></div>
+    <div class="container">
+    <div class="circle a"></div>
+    <div class="circle b"></div>
+    <div class="circle c"></div>
+    <div class="circle d"></div>
+    <div class="circle e"></div>
+    <div class="circle f"></div>
+    <div class="circle g"></div>
+</div>
 
     <script>
 $(document).ready(function(){
 $('.circle').hover(function(){
-$('.circle').removeClass('hover');
+// $('.circle').removeClass('hover');
 $(this).addClass('hover');
 })
 })

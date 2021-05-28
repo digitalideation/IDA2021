@@ -8,28 +8,35 @@
 </head>
 <style>
     body {
-        background: black;
-        padding: 0px;
-        margin: 0px;
+       background-color: blue;
+       /* background-color: #ea00ff4d; */
     }
 
     div#player {
-        width: 50vw;
+        position: absolute;
+        left: 0px;
+        bottom: 0;
+        width: 100vw;
         height: 50vh;
-        background: rgb(148, 26, 132);
         margin: 20vh auto 0px auto;
         display: block;
     }
 
     .grafik {
+        position: absolute;
+        bottom: 0;
         width: 100vw;
-        height: 50vh;
+        height: 5000px;
+        z-index: -1;
     }
+/* #audio {
+    z-index: 3;
+} */
 
 </style>
 
 <body>
-    <button onclick="visualize_audio()">start</button>
+    <button onclick="togglePlay()">start</button>
     <div id="player">
         <div id="audio"></div>
         <canvas class="grafik" id="canvas" ></canvas>
@@ -58,7 +65,7 @@
     audio.autoplay = false;
 
     
-    function visualize_audio() {
+    function togglePlay() {
         document.getElementById("audio").appendChild(audio);
         
         context = new AudioContext();
@@ -89,7 +96,7 @@
         analyser.getByteFrequencyData(fbc_array);
         
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#fd4b4b";
+        ctx.fillStyle = "#ea00ff4d";
         
         for (var i = 0; i < bar_count; i++) {
             bar_pos = i * 4;
