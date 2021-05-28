@@ -10,36 +10,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
   <style>
         .robot * {
-            border: 1px solid #1e90ff;
+            border: 1px solid var(--blue);
             padding: 1rem;
             margin: .25rem;
         }
 
-        .own {
-          color: red;
-          background-color: royalblue;
+        :root {
+            --pink: #fd4b4b;
+            --blue: #6200ff;
+            --purple: #6c4bfd;
         }
 
-        :root {
-            --gradient: linear-gradient(
-                45deg,
-                #6200ff,
-                /* #d65db1,
-                #ff6f91,
-                #ff9671,
-                #ffc75f, */
-                #6c4bfd,
-                #fd4b4b
-            );
+        .night {
+          --pink: 		#0000FF;
+          --blue: #FFFF00;
+          --purple: #FFFF00;
         }
   
   body {
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgb(2, 255, 36) 0%, rgba(148,187,233,1) 100%); 
   margin: 0px;
   padding: 0px;
   font-family: 'Zen Dots', cursive;
-  color: rgb(0, 0, 0);
   font-family: basic-sans, sans-serif;
   min-height: 100vh;
   /* display: flex; */
@@ -47,14 +38,14 @@
   align-items: center;
   font-size: 1.125em;
   line-height: 1.6;
-  background: #ddd;
   background-size: 300%;
   background-image: var(--gradient);
+  background-image:linear-gradient(45deg, var(--blue),var(--purple),var(--pink));
   background-size: 400%;
   animation: bg-animation 15s infinite alternate;
     }
 
-@keyframes bg-animation {
+    @keyframes bg-animation {
             0% 
             {background-position: left; 
             }
@@ -69,22 +60,10 @@ h1 {
   font-family: 'Zen Dots', cursive;
 }
 
-h1 {
-  font-family: 'Zen Dots', cursive;
-  font-size: 15vw;
-  display: inline;
-  justify-self: center;
-  text-align: center;
-  letter-spacing: 0.6rem;
-  position:absolute ;
-  left:5px;
-  color: #6200ff;
-  opacity: 0.5;
-}
 
 a:visited {
   font-family: 'Zen Dots', cursive;
-  color: #6200ff;
+  color: var(--blue);
   text-decoration: none!important;
 }
 
@@ -106,7 +85,7 @@ a:visited {
 
 .box div {
     font-weight: 700;
-    border: 1px solid #6200ff;
+    border: 1px solid var(--blue);
     padding: 6px;
     min-width: 15vw;
     line-height: 120%;
@@ -127,7 +106,8 @@ a:visited {
 
 
 .gina {
-  background-color: #fd4b4b;
+  background-color: var(--pink);
+;
   opacity: 0.5;
 }
 
@@ -135,26 +115,62 @@ a:visited {
   opacity: 0;
 }
 .nav {
-  background-color: #6200ff;
+  background-color: var(--blue);
 }
 
 .col {
-  color:#fd4b4b;
+  color:var(--pink);
   font-family: 'Zen Dots', cursive;
 }
 
 .day {
   font-family: 'Zen Dots', cursive;
-  color: #6200ff;
+  color: var(--blue);
   text-decoration: none!important;
 }
+
+input {
+  display: none;
+}
+
+button {
+  background-color: var(--blue);
+  text-decoration: none;
+  border: none;
+  font-family: 'Zen Dots', cursive;
+  color:var(--pink);
+  font-size: 1.125em;
+  line-height: 120%;
+  min-width: 15vw;
+  margin: 0;
+  padding: 0;
+  
+
+  
+}
+
+
     </style>
 </head>
 
 <body>
 
+
+  <!-- daynight -->
+  
+
   <!-- <h1>Gina Burri</h1> -->
   
+  <div class="exp">
+    <div class="box mainrow wrap">
+      <div class="noborder"></div>
+      <div class="nav">
+      <input><button id="nightbutton">Click me!</button>
+    </div>
+    <div class="noborder"></div>
+    </div>
+  <div>
+
   <div class="exp">
     <div class="box mainrow wrap">
       <div class="nav"><a href="../index.html"><span class="col">Home</span></a></div>
@@ -191,6 +207,8 @@ a:visited {
 
         <div class="gina"><a href="robot/three.modulecool/index.html"><span class="day">scond Torus</span></a></div>
 
+        <div class="gina"><a href="process/Day22/taschenlampe.html"><span class="day">Taschenlampe</span></a></div>
+
 
 
 
@@ -225,7 +243,20 @@ a:visited {
     </div>
 
   </div>
+  <script>
+    function handleNight(thing) {
+}
 
+// This is another way to listen for the event
+// and toggle the class:
+var nightButton = document.getElementById('nightbutton');
+
+nightButton.addEventListener('click', function() {
+console.log('just toggling')
+console.log(this)
+document.body.classList.toggle('night')
+});
+</script>
 </body>
 
 </html>
