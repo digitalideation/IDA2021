@@ -8,6 +8,80 @@
   <title>IDA Modul - Laura Hüppi</title>
 
   <style>
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    overflow: hidden;
+    /* bottom: 0; */
+    width: 100%;
+   /* box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
+    z-index: 4;
+  }
+
+  nav li {
+    list-style-type: none;
+    margin-right: 5px;
+  
+    /* border-radius: 50px; */
+  }
+
+  nav li:last-of-type {
+    margin-right: 50px;
+  }
+
+
+  nav ul li {
+    display: inline;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  nav li:hover {
+    background-color: rgb(0, 0, 0);
+  }
+
+
+  /* von w3schools */
+  nav li a,
+  .dropbtn {
+    display: inline-block;
+    color: rgb(0, 255, 213);
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: end;
+      background: rgb(171, 126, 255);
+      padding-right: 50px;
+      position: fixed;
+    }
+
+
+
+
+p {
+    font-family: monospace, sans-serif;
+}
+
+
 .verlauf {
     width: 100%;
     height: 400vh;
@@ -18,18 +92,49 @@
     animation: change 5s ease-in-out infinite;
 }
 
-p {
 
-  font-family: monospace
-  
+
+article {
+    position: relative;
+    
+    top: 0px;
+    left: 0px;
+    min-height: 80vh;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ease-in-out 1s;
 }
+
+article header {
+    font-size: 1rem;
+    transition: all 2s ease-in-out 1s;
+}
+
+
+/*
+Der Trick ist nun, dass was vorher über hover animiert wurde, über die neue Klasse auszulösen
+Statt:
+article:hover {
+    background-color: rgb(189, 202, 130);
+}
+*/
+
+article.myclass {
+    background-color: darkviolet;
+}
+
+article.myclass header {
+    font-size: 2rem;
+}
+
 
 
 id.sign:hover {
 
 animation: bounce 3s;
 }
-
 
 
 
@@ -46,7 +151,7 @@ animation: bounce 3s;
     <ul>
       <li><a href="https://ida2021-staging.netlify.app/">Home</a></li>
       <li><a href="process/index1.html">Process</a></li>
-      <li><a href="robotworld.html">My Robot</a></li>
+      <li><a href="robotworld1.html">My Robot</a></li>
       <li>My Song</li>
     </ul>
   </nav>
@@ -54,65 +159,65 @@ animation: bounce 3s;
   <h1>INZO - Overthinker</h1>
 
 
- <div>
-  <p>A person who thinks all the time<br>
-    Has nothing to think about except thoughts<br>
-    So, he loses touch with reality<br>
-    And lives in a world of illusions<br>
-    
-    By thoughts, I mean specifically, chatter in the skull<br>
-    Perpetual and compulsive repetition of words<br>
-    Of reckoning and calculating<br>
-    I‘m not saying that thinking is bad<br>
-    Like everything else, It‘s useful in moderation<br>
-    A good servant, but a bad master<br>
-    
-    And all so-called civilized peoples<br>
-    Have increasingly become crazy and self-destructive<br>
-    Because, through excessive thinking<br>
-    They have lost touch with reality<br>
-    That‘s to say<br>
-    We confuse 
-    
-    <span id="signs">signs</span>
+</head>
 
 
-    
-    <br>
-    With the real world<br>
-    
-    This is the beginning of meditation<br>
-    
-    Most of us would have<br>
-    Rather money than tangible wealth<br>
-    And a great occasion is somehow spoiled for us unless photographed<br>
-    And to read about it the next day in the newspaper<br>
-    Is oddly more fun for us than the original event<br>
-    
-    This is a disaster<br>
-    For as a result of confusing the real world of nature with mere signs<br>
-    We are destroying nature<br>
-    We are so tied up in our minds that we‘ve lost our senses<br>
-    
-    Time to wake up<br>
-    What is reality?<br>
-    Obviously no one can say<br>
-    Because it isn‘t words<br>
-    It isn‘t material, that‘s just an idea<br>
-    
-    Reality is<br>
-    
-    The point cannot be explained in words<br>
-    
-    I‘m not trying to put you down<br>
-    It‘s an expression of you as you are<br>
-    One must live<br>
-    We need to survive, to go on<br>
-    We must go on<br></p>
-  </div>
 
 
+    <div class="verlauf">
+    <section>
+        <article>
+
+            <div>
+                
+                <p>A person who thinks<header>all the time</header> Has nothing to think about except thoughts<br>
+                    So, he loses touch with reality<br>
+                    And lives in a world of illusions</p>
+            </div>
+
+        </article>
+        <article>
+            <div>
+                
+                <p>By thoughts, I mean specifically, <header>chatter in the skull</header><br>
+                    Perpetual and compulsive repetition of words<br>
+                    Of reckoning and calculating<br>
+                    I'm not saying that thinking is bad<br>
+                    Like everything else, It's useful in moderation<br>
+                    A good servant, but a bad master</p>
+            </div>
+        </article>
+        <article>
+            <div>
+               
+                <p>And all so-called civilized peoples<br>
+                    Have increasingly become crazy and self-destructive<br>
+                    Because, through excessive thinking<br>
+                     <header>They have lost touch with reality</header><br>
+                    That's to say<br>
+                    We confuse signs<br>
+                    With the real world</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <header>This is the beginning of <br>meditation</header>
+                <p>Most of us would have<br>
+                    Rather money than tangible wealth<br>
+                    And a great occasion is somehow spoiled for us unless photographed<br>
+                    And to read…</p>
+            </div>
+        </article>
+    </section>
+
+
+
+
+
+  <!-- Footer -->
+  <div class="footer">
 
 </body>
 
 </html>
+<script src="js/viewport.js"></script>
