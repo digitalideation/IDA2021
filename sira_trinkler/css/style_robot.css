@@ -46,6 +46,10 @@ body {
 	margin: 0;
 	padding: 0;
   background-image: url(../assets/image/backgroundnew.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 100vh;
 }
 #canvas {
 	position: fixed;
