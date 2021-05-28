@@ -1,4 +1,4 @@
-body { 	font-family: 'Droid Sans', sans-serif;  }
+
 .header { width: 100%; }
 
 .header .nav { 
@@ -66,3 +66,13 @@ transition: all 0.5s;
 .contact:target ~ .line {
 	left: 300px;
 }
+
+@font-face {
+	font-family: 'euclid';
+	src: url(/font/EuclidFlexEDU-Medium-WebXL.woff);
+	format:('woff')
+  }
+
+  body {
+	  font-family: 'euclid';
+  }

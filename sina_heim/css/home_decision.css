@@ -1,0 +1,67 @@
+.rectangle {
+    position: absolute;
+    left: 350px;
+    top: 300px;
+    width: 1000px;
+    height: 150px;
+    background: black;
+    border-radius: 50%
+  
+  }
+
+
+
+  .rectangle2 {
+    position: absolute;
+    left: 350px;
+    top: 455px;
+    width: 1000px;
+    height: 150px;
+    background: black;
+    border-radius: 50%
+  
+  }
+
+
+  .rectangle:hover {
+      background-color: tomato;
+  }
+
+
+  .rectangle2:hover {
+      background-color:tomato;
+  }
+
+
+
+  .calm {
+    position: absolute;
+    left: 790px;
+    top: 345px;
+    font-size: 50px;
+    color: white;
+  }
+
+
+  .nervous {
+    position: absolute;
+    left: 755px;
+    top: 500px;
+    font-size: 50px;
+    color: white;
+  }
+
+  a{
+	text-decoration: none;
+	color: white;
+	list-style-type: none;  
+  } 
+
+  body { 	font-family: 'euclid';
+  }
+
+  @font-face {
+    font-family: 'euclid';
+    src: url(/font/EuclidFlexEDU-Medium-WebXL.woff);
+    format:('woff')
+  }
