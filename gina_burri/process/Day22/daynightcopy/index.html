@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Riding Hood</title>
+    <style>
+        :root {
+    --background: lemonchiffon;
+    --textColor: #333;
+    --headingColor: #666;
+    --infoBackground: yellow;
+    --highlightColor: lime;
+    --blendmode: normal;
+}
+
+body {
+    background-color: var(--background);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 2rem;
+    transition: all .4s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--headingColor);
+}
+
+body.night {
+    --background: rgb(17, 17, 41);
+    --textColor: #fff;
+    --headingColor: blue;
+    --infoBackground: blue;
+    --highlightColor: blue;
+    --blendmode: hard-light;
+}
+
+.infobox {
+    background-color: var(--infoBackground);
+    padding: 1rem 2rem;
+}
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content img {
+    width: 100%;
+    border-radius: 2rem;
+    border: 2px solid var(--highlightColor);
+    margin-bottom: 2rem;
+    mix-blend-mode: var(--blendmode);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+#text p,
+.infobox p {
+    color: var(--textColor);
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+#check {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
+#check label {
+    color: var(--textColor)
+}
+    </style>
+</head>
+
+<body>
+        <input type="checkbox" id="nightcheck" name="nightmode" value="Night">
+        <button id="nightbutton"></button>
+    
+
+    <div class="content">
+        <a href="../">Back to Day 22</a>
+        <h1>Little Red Riding Hood</h1>
+        <img src="img/riding2.jpeg" alt="">
+        <div class="infobox">
+            <p>
+                Little Red Riding 
+            </p>
+        </div>
+        <div id="text" class="GM">
+            <p>Once upon a time there was a little girl who was called little Red Riding-Hood, because she was quite small and because she always wore a red cloak with a big red hood to it, which her grandmother had made for her.</p>
+          
+            <p>And sure enough the wolf, though but for the wood-
+                <a name="l_268" id="l_268"></a>cutters he would surely have eaten little Red Riding-Hood, only stopped and asked her politely where she was going.</p>
+            <p>"I am going to see Grannie, take her this cake and this pot of butter, and ask how she is," says little Red Riding-Hood.</p>
+            
+            <p>So the wolf pulled the bobbin, the latch went up, and—
+                <a name="l_269" id="l_269"></a>oh my!—it wasn't a minute before he had gobbled up old Grannie, for he had had nothing to eat for a week.</p>
+           
+            <p>
+                <a name="l_270" id="l_270"></a>"All the better to hug you with," says he.</p>
+            <p>"But, Grandmamma, Grandmamma, what big legs you have!"</p>
+           
+        </div>
+    </div>
+
+
+<script>
+        function handleNight(thing) {
+}
+
+// This is another way to listen for the event
+// and toggle the class:
+var nightButton = document.getElementById('nightbutton');
+
+nightButton.addEventListener('click', function() {
+    console.log('just toggling')
+    console.log(this)
+    document.body.classList.toggle('night')
+});
+    </script>
+</body>
+
+</html>

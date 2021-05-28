@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-image: url(../../images/martin.jpg);
+            background-size: cover;
+        }
+        .radial-gradient {
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  
+  /*Fallback if gradeints don't work */
+  background: #9b59b6;
+  /*Linear gradient... */
+  background: 
+    radial-gradient(
+     200px at center, #c5000000, #003cff
+    );
+}
+    </style>
+</head>
+<body>
+    <div class="radial-gradient"></div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).mousemove(function(event) {
+      windowWidth = $(window).width();
+      windowHeight = $(window).height();
+      
+      mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+      mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+      
+      $('.radial-gradient').css('background', 'radial-gradient(200px at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #c5000000, #003cff)');
+    });
+    </script>
+</body>
+</html>
