@@ -54,10 +54,13 @@ body{
     background-color: rgb(0, 0, 0);
 }
 
-
+.planet1{
+margin-top: 100px;
+height: auto;
+display: flex;
+}
 
 .title {
-   margin-top: 500px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -66,7 +69,6 @@ body{
 }
 
 .base {
-    margin-top: 300px;
     height: 300px;
     width: 300px;
     background-image: url(../img/orbit.svg);
@@ -90,7 +92,6 @@ body{
 }
 
 .midground {
-  margin-top: 300px;
     background-image: url(../img/clouds2.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -99,14 +100,12 @@ body{
 }
 
   .background {
-    margin-top: 300px;
-    /*animation-name: rotate;*/
-    height: 1500px;
-    width: 1500px;
-    border-radius: 750px;
-    background-image: linear-gradient(rgb(102, 179, 179), rgb(82, 82, 151),teal, black); 
-    background-size: 200% 200%;
-    animation: gradient 11s ease infinite;
+    height: 1000px;
+    width: 1000px;
+    border-radius: 500px;
+    background-image: linear-gradient(red orange black);
+    background-size: 150% 150%;
+    animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {
@@ -115,17 +114,9 @@ body{
     100%{background-position:70% 0%}
 }
 
-.background2 {
-    height: 1000px;
-    width: 1000px;
-    border-radius: 500px;
-    background-image: linear-gradient( orange red black); 
-    }
-
   .behind {
-    margin-top: 300px;
-    height: 3000px;
-    width: 3000px;
+    height: 2000px;
+    width: 2000px;
     background-image: url(../img/blur.svg);
     background-repeat: no-repeat;
     background-size: contain;
