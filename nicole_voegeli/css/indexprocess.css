@@ -27,7 +27,7 @@ h1{
 .container{
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    align-items: center;
+    text-align: center;
     width: fit-content;
     height: auto;
     margin: auto;
@@ -58,10 +58,11 @@ li{
     display: inline-block;
     margin: auto;
     margin-right: 20px;
+    margin-bottom: 20px;
     background-color: mediumorchid;
     border: none;
-    padding: 10px 35px;
-    border-radius: 20px;
+    padding: 20px 35px;
+    border-radius: 35px;
     font-size: 20px;
 }
 
@@ -71,7 +72,7 @@ a{
 }
 
 li:hover{
-    background-color: rgb(138, 32, 111);
+    background-color: rgb(0, 0, 0);
 }
 
 .tab:hover{
