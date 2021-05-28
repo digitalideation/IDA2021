@@ -1,207 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDA Modul - Sina Stähli</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com"> 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
+    <style>
+        @font-face {
+        font-family: 'simplonmonoregular';
+        src: url('img/Mono/Web Complete/WOFF2/SimplonEDUMono-Regular-WebXL.woff2') format('woff2'),
+        url('img/Mono/Web Complete/WOFF/SimplonEDUMono-Regular-WebXL.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
 
-  <style>
-
-    body {
-      margin: 0px;
-      padding: 0px;
-      font-family: 'Montserrat', sans-serif;
-      background-color: white;
-  }
-  
-
-  img {
-    width: 100%;
-    height: 100%;
-    padding: 0%;
-    margin: 0%;
-  }
-
-  .box {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      font-family: 'Montserrat', sans-serif;
-      border: 3px solid black;
-      padding: 6px;
-      width: 99%;
-      line-height: 120%;
-
-  }
-
-  li{
-    list-style: none;
-  }
-
-  p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 210px;
-    margin: 2%;
-    padding: 2%;
-    font-weight: 400;
-  }
-
-  .songtext {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 460%;
-  }
-
-  a {
-    font-weight: 500;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    color: black;
-  }
-
-  a div {
-    position: absolute;
-    top: -5vw;
-    left: 0px;
-    width: 15vw;
-    height: 15vw;
-    z-index: 1;
-    /*mix-blend-mode: multiply;*/
-    border-radius: 50%;
-    font-weight: 500;
-    }
-
-    .index{
-        font-family: 'Montserrat', sans-serif;
-        color: black;
-        font-weight: 500;
-      }
-
-      .index:hover{
-          font-style: oblique;
-          font-weight: 500;
-      }
-
-      .myrobot{
-        font-family: 'Montserrat', sans-serif;
-        color: black;
-        font-weight: 500;
-      }
-
-      .myrobot:hover {
-        font-family: 'Montserrat', sans-serif;
-        color: black;
-        font-weight: 500;
-        font-style: oblique;
-      }
-
-      .mysong{
-        font-family: 'Montserrat', sans-serif;
-        color: black;
-        font-weight: 500;
-      }
-
-      .process{
-        font-family: 'Montserrat', sans-serif;
-        color: black;
-        font-weight: 500;
-      }
-
-      .process:hover{
-          font-style: oblique;
-          font-weight: 500;
-      }
-
-
-
-
-  </style>
+        .songtext {
+            font-family: 'simplonmonoregular';
+        }
+    </style>
 
 </head>
-
 <body>
+    <div class="songtext">
 
-    <div class="box mainrow">
-      <li class="index"><a href="index.html">Home</a></li>
-      <li class="myrobot"><a href="robotworld.html">My Robot</a></li>
-      <li class="mysong">My Song</li>
-      <li class="process"><a href="process/index.html">Process</a></li>
-    </div>
-
-  <p>KAYTRANADA You're the One</p>
-
-  <div class="songtext">
-    I want you to want me
-    but you just wanna love me for the <a class="getImg" href="#" myimg="img/sun_svg.svg">day</a>.
-    And I can‘t just walk away
-    even though I know you‘re <a class="getImg" href="#" myimg="">trouble</a>, babe.
-
-    So I‘mma take my time,
-    go with the <a class="getImg" href="#" myimg="">flow</a>, can‘t get too involved.
-    You got a <a class="getImg" href="#" myimg="">face</a> that I
-    just can‘t say <a class="getImg" href="#" myimg="">no</a> to.
-    Just can‘t say no to <a class="getImg" href="#" myimg="img/flower.svg">you</a>.
-
-    You know I want you, baby.
-    You know I do.
-    I‘ll give you my <a class="getImg" href="#" myimg="">heart</a> and the rest is up to you.
-    You ain‘t no <a class="getImg" href="#" myimg="">good</a> for me, I <a class="getImg" href="#" myimg="img/eye.svg">know</a> it‘s true.
-    But you don‘t have to be
-
-    ‚cause I do it for the <a class="getImg" href="#" myimg="img/thrill.svg">thrill</a>, for the <a class="getImg" href="#" myimg="">rush</a>.
-    I do it for the <a class="getImg" href="#" myimg="">pain</a>, for your <a class="getImg" href="#" myimg="">touch</a>.
-    When I <a class="getImg" href="#" myimg="">OD</a>, when it‘s too much
-    if I survive, baby you‘re the one.
-    You‘re the <a class="getImg" href="#" myimg="">one</a>.
-
-    I feel like I‘m walking
-    the <a class="getImg" href="#">tightrope</a> of <a class="getImg" href="#">love</a> in your circus, babe.
-    If I were a fella it‘d be my last day
-    even though you‘re right under me.
-
-  </div>
-  
-
+        I want you to want me
+        but you just wanna love me for the day.
+        And I can‘t just walk away
+        even though I know you‘re trouble, babe.
+    
+        So I‘mma take my time,
+        go with the flow</a>, can‘t get too involved.
+        You got a face that I
+        just can‘t say no to.
+        Just can‘t say no to you.
+    
+        You know I want you, baby.
+        You know I do.
+        I‘ll give you my heart and the rest is up to you.
+        You ain‘t no good for me, I know it‘s true.
+        But you don‘t have to be
+    
+        ‚cause I do it for the thrill, for the rush.
+        I do it for the pain, for your touch.
+        When I OD, when it‘s too much,
+        if I survive, baby you‘re the one.
+        You‘re the one.
+    
+        I feel like I‘m walking
+        the tightrope of love in your circus, babe.
+        If I were a fella it‘d be my last day
+        even though you‘re right under me.
+    
+        
+      </div>
 </body>
-
-<script>
-  let els = document.getElementsByTagName("a");
-  for (i in els) {
-      els[i].addEventListener("mouseover", function(event) { //hier wird auf alle a Elemente ein Event listener auf das Event mouseover gelegt
-          if (event.target.className === 'getImg') { // hier wird gefragt ob sie die Klasse getImg besitzen
-
-              console.log(event.pageX);
-
-              let div = document.createElement('div'); //hier wird ein Div kreiiert
-              //hier wird dem div zwei background images zugewiesen. Der Trick ist, den Inhalt vom a über event.target.innerHTML abzufragen und der URL mitzugeben
-
-              div.style.backgroundImage = 'url(' + event.target.getAttribute('myimg') + ')';
-
-              //hier wird das CSS konstruiert
-              div.style.backgroundPosition = '0 0, 0 50px, 0 0';
-              div.style.backgroundBlendMode = 'overlay';
-              div.style.backgroundSize = 'cover, cover';
-              div.style.left = Math.random() * window.innerWidth + "px";
-              div.style.top = Math.random() * window.innerHeight + "px";
-              div.style.position = "absolute";
-              div.style.width = "600px";
-              div.style.height = "600px";
-              //hier wird das kreierte div dem a angehängt
-              document.body.appendChild(div);
-              //hier wird die Klasse getImg entfernt -- sonst würden bei jedem mouseover event immer neue Bilder hinzugefügt
-              event.target.classList.remove("getImg");
-              // hier wird der Textstil auf weiss gesetzt 
-              event.target.setAttribute("class", "white");
-          }
-
-      }, false);
-  }
-</script>
-
 </html>
