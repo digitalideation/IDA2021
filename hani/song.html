@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,116 +8,142 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/song.css">
     <style>
-    
-
 
     </style>
 </head>
-<body>
-<canvas id="c"></canvas>
-<div class="one">
-<span aria-hidden="true"> L <br>
-E <br>
-T <br>
-S <br>
-G <br>
-O <br>
-</span>
-<span aria-hidden="true">
-    L <br>
-    E <br>
-    T <br>
-    S <br>
-    G <br>
-    O <br>
-</span>
-</div>
-<div class="two">
-    D <br>
-    A <br>
-    N <br>
-    C <br>
-    I <br>
-    N <br>
-</div>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+
+
+<body class="paused">
+
+    <audio id="myAudio" src="media/neil.mp3"></audio>
+    <a onclick="togglePlay()" class="trigger">
+
+    </a>
+    <canvas id="c"></canvas>
+    <div class="one">
+
+        L <br> E <br> T <br> S <br> G <br> O <br>
+
+    </div>
+    <div class="two">
+        D <br> A <br> N <br> C <br> I <br> N <br>
+    </div>
+    <div class="three"> IN <br> THE
+    </div>
+    <div class="three2">
+        L <br> I <br> G <br> H <br> T <br>
+    </div>
+
+    <i class="fas fa-play-circle"></i>
+
 </body>
 <script>
-    window.onload = function (argument) {
+    window.onload = function(argument) {
 
-            // var lyric = "i couldn't take it couldn't stand another minute couldn't bear another day without you in it";
-            var lyric = "Come little bit closer Hear what have  say Just like children sleepin  could dream this night away But theres  full moon risin Lets go dancin in the light We know where the music playin Lets go out and feel the night Because Im still in love with you want  see you dance again Because  still in love with you  this harvestmoon";
-            var words = {};
-            var words_attr = [];
-            string_handle(lyric);
+        // var lyric = "i couldn't take it couldn't stand another minute couldn't bear another day without you in it";
+        var lyric = "Come little bit closer Hear what have  say Just like children sleepin  could dream this night away But theres  full moon risin Lets go dancin in the light We know where the music playin Lets go out and feel the night Because Im still in love with you want  see you dance again Because  still in love with you  this harvestmoon";
+        var words = {};
+        var words_attr = [];
+        string_handle(lyric);
 
-            var canvas = document.getElementById('c');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+        var canvas = document.getElementById('c');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-            if (canvas.getContext) {
-                var c = canvas.getContext('2d'),
-                    w = canvas.width,
-                    h = canvas.height;
+        if (canvas.getContext) {
+            var c = canvas.getContext('2d'),
+                w = canvas.width,
+                h = canvas.height;
 
-                c.strokeStyle = 'red';
-                c.fillStyle = 'white';
-                c.lineWidth = 5;
+            c.strokeStyle = 'red';
+            c.fillStyle = 'white';
+            c.lineWidth = 5;
 
-                // constructor
-                Word = function (key) {
-                    this.text = key;
-                    this.x = Math.random() * w;
-                    this.y = Math.random() * h;
-                    this.font = words[key] * 10 + 'px arial'
-                    this.speed = (words[key]);
+            // constructor
+            Word = function(key) {
+                this.text = key;
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.font = words[key] * 10 + 'px arial'
+                this.speed = (words[key]);
+            }
+            for (key in words) {
+                words_attr.push(new Word(key));
+            }
+            console.log(words_attr.length);
+
+            function animation() {
+                for (var i = 0; i < words_attr.length; i++) {
+                    c.font = words_attr[i].font;
+                    c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
+                    words_attr[i].width = c.measureText(words_attr[i].text).width;
+                    c.stroke();
                 }
-                for (key in words) {
-                    words_attr.push(new Word(key));
-                }
-                console.log(words_attr.length);
-
-                function animation() {
-                    for (var i = 0; i < words_attr.length; i++) {
-                        c.font = words_attr[i].font;
-                        c.fillText(words_attr[i].text, words_attr[i].x, words_attr[i].y);
-                        words_attr[i].width = c.measureText(words_attr[i].text).width;
-                        c.stroke();
-                    }
-                    move();
-                }
-
-                function move() { for (var i = 0; i < words_attr.length; i++) { if (words_attr[i].y > h) { words_attr[i].y = 0; words_attr[i].x = Math.random() * w; } else { words_attr[i].y += words_attr[i].speed; } } }
-                setInterval(function () {
-                    c.clearRect(0, 0, w, h);
-                    animation();
-                }, 24);
-
+                move();
             }
 
-            function string_handle(str) {
-                var split_str = str.split(" ");
-                var word_array = [];
-                var word_count = [];
-                for (var i = 0; i < split_str.length; i++) {
-                    check = true;
-                    for (var j = 0; j <= word_array.length; j++) {
-                        if (split_str[i] == word_array[j]) {
-                            word_count[j]++;
-                            check = false;
-                            break;
-                        }
-                    }
-                    if (check) {
-                        word_array.push(split_str[i]);
-                        word_count.push(1);
+            function move() {
+                for (var i = 0; i < words_attr.length; i++) {
+                    if (words_attr[i].y > h) {
+                        words_attr[i].y = 0;
+                        words_attr[i].x = Math.random() * w;
+                    } else {
+                        words_attr[i].y += words_attr[i].speed;
                     }
                 }
-                for (var i = 0; i < word_array.length; i++) {
-                    words[word_array[i]] = word_count[i];
-                }
-                return words;
             }
+            setInterval(function() {
+                c.clearRect(0, 0, w, h);
+                animation();
+            }, 24);
 
         }
+
+        function string_handle(str) {
+            var split_str = str.split(" ");
+            var word_array = [];
+            var word_count = [];
+            for (var i = 0; i < split_str.length; i++) {
+                check = true;
+                for (var j = 0; j <= word_array.length; j++) {
+                    if (split_str[i] == word_array[j]) {
+                        word_count[j]++;
+                        check = false;
+                        break;
+                    }
+                }
+                if (check) {
+                    word_array.push(split_str[i]);
+                    word_count.push(1);
+                }
+            }
+            for (var i = 0; i < word_array.length; i++) {
+                words[word_array[i]] = word_count[i];
+            }
+            return words;
+        }
+
+    }
+    var myAudio = document.getElementById("myAudio");
+    var isPlaying = false;
+
+    function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play();
+    };
+
+    myAudio.onplaying = function() {
+        isPlaying = true;
+        document.body.classList.remove('paused')
+        document.body.classList.add('playing')
+    };
+
+    myAudio.onpause = function() {
+        isPlaying = false;
+        document.body.classList.remove('playing')
+        document.body.classList.add('paused')
+    };
 </script>
+<script src="media/neil.mp3"></script>
+
 </html>

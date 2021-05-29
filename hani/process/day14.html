@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            --clip-play-state: running;
+            --color-play-state: running;
+            --which-shape-animation: reveal-shape;
+            animation: var(--which-shape-animation) 7000ms 3000ms infinite alternate ease-in-out both, hue-adjust 6000ms 0ms infinite alternate ease-in-out;
+            animation-play-state: var(--clip-play-state), var(--color-play-state);
+            --hue: 43;
+            background: cyan;
+            background: radial-gradient(hsl(var(--hue), 62%, 52%), hsl(var(--hue), 92%, 42%));
+            width: 100vmin;
+            height: 100vmin;
+        }
+        
+        @supports (not (clip-path: circle())) {
+            main {
+                --which-shape-animation: reveal-transform;
+            }
+        }
+        
+        @keyframes reveal-shape {
+            0% {
+                clip-path: circle(0)
+            }
+            100% {
+                clip-path: circle(35vmin)
+            }
+        }
+        
+        @keyframes hue-adjust {
+            20% {
+                filter: hue-rotate(50deg)
+            }
+            40% {
+                filter: hue-rotate(150deg)
+            }
+            60% {
+                filter: hue-rotate(200deg)
+            }
+            80% {
+                filter: hue-rotate(240deg)
+            }
+            100% {
+                filter: hue-rotate(320deg)
+            }
+        }
+        
+        @keyframes reveal-transform {
+            0% {
+                transform: scale(0);
+            }
+        }
+        
+        body,
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        body {
+            height: 100vh;
+            color: hsl(23, 12%, 12%);
+            background: currentColor;
+            overflow: hidden;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 12vmin;
+        }
+        
+        body>p {
+            position: absolute;
+            bottom: 50%;
+            right: 50%;
+            z-index: -1;
+            transform: translate(50%, 50%);
+            color: #fcfdff;
+        }
+        
+        body>p:nth-of-type(1) {
+            transform: translate(50%, -50%);
+        }
+        
+        body>p:nth-of-type(3) {
+            transform: translate(50%, 150%);
+        }
+        
+        form {
+            position: absolute;
+            bottom: .5rem;
+            left: 0;
+            right: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: hsla(0, 0%, 100%, .7);
+            font-size: .8rem;
+        }
+        
+        form div {
+            padding: .25rem 1rem;
+        }
+        
+        label {
+            background: transparent;
+            border-radius: .3rem;
+            color: hsla(0, 0%, 100%, .7);
+            padding: .25rem;
+            width: 5rem;
+            font-size: .8rem;
+        }
+        
+        label:hover,
+        label:active {
+            background: hsla(0, 0%, 100%, .1);
+        }
+        
+        @supports (--foo: bar) {
+            form {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p id="b1">Come </p>
+        <p id="b2"> a little bit</p>
+        <p id="b3">closer</p>
+    </main>
+    <p id="a1">hear</p>
+    <p id="a2">what I</p>
+    <p id="a3">have to say</p>
+    <form>
+        <div>
+            <input type="checkbox" id="clip" />
+            <label for="clip">Pause Shape</label>
+        </div>
+        <div>
+            <input type="checkbox" id="color" />
+            <label for="color">Pause Color</label>
+        </div>
+    </form>
+
+
+    <script>
+        const main = document.querySelector('main');
+        document.getElementById('clip').addEventListener('click', updatePlayState);
+        document.getElementById('color').addEventListener('click', updatePlayState);
+
+        function updatePlayState(e) {
+            const variable = `--${e.currentTarget.id}-play-state`;
+            main.style.setProperty(variable, e.currentTarget.checked ? 'paused' : 'running')
+        }
+        /*
+        CSS Variables (Custom Properties) again for the win... allowing you to control an individual value of a property that has multiple values at the same time.  Otherwise the code looks something like the following (and you'd have to change the JS if you change the order of the animations in CSS... and it gets more complicated the more animations there are):
+        
+        function updatePlayState(e) {
+          var current = window.getComputedStyle(main).animationPlayState;
+          var parts = current.split(',');
+          var index = (e.currentTarget.id === 'clip') ? 0 : 1;
+          parts[index] = e.currentTarget.checked ? 'paused' : 'running';
+          main.style.animationPlayState = parts.join(',');
+        }
+        */
+        //Extra fun
+        var p = {
+            a: [
+                document.getElementById('a1'),
+                document.getElementById('a2'),
+                document.getElementById('a3')
+            ],
+            b: [
+                document.getElementById('b1'),
+                document.getElementById('b2'),
+                document.getElementById('b3')
+            ]
+        }
+        var lyrics = {
+            a: [
+                ['lets', 'go', 'dancin'],
+                ['in', 'the', 'light'],
+                ['I', 'want', 'to see you dance']
+            ],
+            b: [
+                ['lets', 'go', 'dancin'],
+                ['and', 'feel', 'the night'],
+                ['on', 'this', 'Harves moon']
+            ]
+        }
+        var iteration = 0
+        main.addEventListener('animationiteration', function(e) {
+            if (e.animationName.indexOf('reveal-') !== 0) {
+                return false;
+            }
+            iteration++;
+            var step = iteration % 6;
+            console.log(step, Math.floor(step / 2));
+            // if (step % 2 === 1) {
+            //   var index = Math.floor(step/2);
+            //   updateLyrics('a', index);
+            // } else {
+            //   var index = Math.round(step/2);
+            //   updateLyrics('b', index);
+            // }
+            var index = Math.floor(step / 2);
+            updateLyrics((step % 2 === 1) ? 'a' : 'b', index);
+
+        });
+
+        function updateLyrics(key, index) {
+            p[key][0].textContent = lyrics[key][index][0];
+            p[key][1].textContent = lyrics[key][index][1];
+            p[key][2].textContent = lyrics[key][index][2];
+        }
+    </script>
+</body>
+
+</html>
+
+
+function move() { for (var i = 0; i
+< words_attr.length; i++) { if (words_attr[i].y> h) { words_attr[i].y = 0; words_attr[i].x = Math.random()*w; }else{ words_attr[i].y += words_attr[i].speed; } } }

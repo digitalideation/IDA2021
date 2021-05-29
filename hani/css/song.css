@@ -1,124 +1,134 @@
-    body{
-  background:#141414;
-  overflow:hidden;
-  
-}
-canvas {
-    position: fixed;
-    z-index: -1;
-
-}
-.one {
-     font-size: 100px;
-        margin-left: 50%;
-        color: rgb(146, 146, 146);
-        font-weight: 600;
-    color:white;
-    font-size:100px;
-    
-
-    text-shadow:
-        0px -5px 10px rgba(255,255,255,1),
-        0px 0px 5px rgba(255,255,255,0),
-        0px 0px 10px rgba(255,255,255,0),
-        0px 0px 15px rgba(255,255,255,0),
-        0px 0px 20px rgba(255,255,255,0);
- /* text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                                                               body {
+                                                                   background: #141414;
+                                                               }
+                                                               
+                                                               canvas {
+                                                                   position: fixed;
+                                                                   z-index: -1;
+                                                               }
+                                                               
+                                                               .one {
+                                                                   font-size: 100px;
+                                                                   margin-left: 50%;
+                                                                   color: rgb(146, 146, 146);
+                                                                   font-weight: 600;
+                                                                   color: white;
+                                                                   font-size: 100px;
+                                                                   text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                                   /* text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
     -0.025em -0.05em 0 rgba(91, 31, 231, 0.75),
     0.025em 0.05em 0 rgba(65, 65, 228, 0.75); */
-
-  animation: glitch 500ms infinite;
-  
-}
-.one span {
-  position: absolute;
-  
- 
-}
-
-.one span:first-child {
-  animation: glitch 650ms infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-  transform: translate(-0.025em, -0.0125em);
-  /* color: green; */
-  opacity: 0.8;
-}
-
-.one span:last-child {
-  animation: glitch 375ms infinite;
-  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
-  transform: translate(0.0125em, 0.025em);
-  /* color: red; */
-  opacity: 0.8;
-}
-
-
-
-@keyframes glitch {
-    0% {
-            text-shadow:
-        0px -5px 10px rgba(255,255,255,1),
-        0px 0px 5px rgba(255,255,255,0),
-        0px 0px 10px rgba(255,255,255,0),
-        0px 0px 15px rgba(255,255,255,0),
-        0px 0px 20px rgba(255,255,255,0);
-    }
- 
-  14% {
-    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-      -0.05em -0.025em 0 rgba(91, 31, 231, 0.75),
-      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  15% {
-    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-      0.025em 0.025em 0 rgba(91, 31, 231, 0.75),
-      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  40% {
-  
-                text-shadow:
-        0px -5px 10px rgba(255,255,255,1),
-        0px 0px 5px rgba(255,255,255,0),
-        0px 0px 10px rgba(255,255,255,0),
-        0px 0px 15px rgba(255,255,255,0),
-        0px 0px 20px rgba(255,255,255,0);
-  }
-  49% {
-    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-      0.025em 0.025em 0 rgba(91, 31, 231, 0.75),
-      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  50% {
-    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-      0.05em 0 0 rgba(91, 31, 231, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  99% {
-    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-      0.05em 0 0 rgba(91, 31, 231, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  100% {
-    text-shadow: -0.025em 0 0 rgba(0, 0, 0, 0.75),
-      -0.025em -0.025em 0 rgba(91, 31, 231, 0.75),
-      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-}
-
-.two {
-     font-size: 100px;
-        margin-left: 50%;
-        color: rgb(146, 146, 146);
-        font-weight: 600;
-    color:white;
-    font-size:100px;
-    position:absolute;
-    margin-top: 50%;
-    
-    text-shadow:
-        0px -5px 10px rgba(255,255,255,1),
-        0px 0px 5px rgba(255,255,255,0),
-        0px 0px 10px rgba(255,255,255,0),
-        0px 0px 15px rgba(255,255,255,0),
-        0px 0px 20px rgba(255,255,255,0);
-   
-}
-
+                                                               }
+                                                               
+                                                               .one:hover {
+                                                                   animation: glitch 500ms;
+                                                               }
+                                                               
+                                                               @keyframes glitch {
+                                                                   0% {
+                                                                       text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                                   }
+                                                                   14% {
+                                                                       text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(91, 31, 231, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+                                                                   }
+                                                                   15% {
+                                                                       text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(91, 31, 231, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+                                                                   }
+                                                                   40% {
+                                                                       text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                                   }
+                                                                   49% {
+                                                                       text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(91, 31, 231, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+                                                                   }
+                                                                   50% {
+                                                                       text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(91, 31, 231, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+                                                                   }
+                                                                   99% {
+                                                                       text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(91, 31, 231, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+                                                                   }
+                                                                   100% {
+                                                                       text-shadow: -0.025em 0 0 rgba(0, 0, 0, 0.75), -0.025em -0.025em 0 rgba(91, 31, 231, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+                                                                   }
+                                                               }
+                                                               
+                                                               .two {
+                                                                   font-size: 100px;
+                                                                   margin-left: 50%;
+                                                                   color: rgb(146, 146, 146);
+                                                                   font-weight: 600;
+                                                                   color: white;
+                                                                   font-size: 100px;
+                                                                   position: absolute;
+                                                                   margin-top: 5%;
+                                                                   text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                                   text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                                   /* text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(91, 31, 231, 0.75),
+    0.025em 0.05em 0 rgba(65, 65, 228, 0.75); */
+                                                               }
+                                                               
+                                                               .two:hover {
+                                                                   animation: glitch 500ms infinite;
+                                                               }
+                                                               
+                                                               .three {
+                                                                   font-size: 60px;
+                                                                   margin-left: 50%;
+                                                                   color: rgb(146, 146, 146);
+                                                                   font-weight: 600;
+                                                                   color: white;
+                                                                   position: absolute;
+                                                                   margin-top: 55%;
+                                                                   text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                                   text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                               }
+                                                               
+                                                               .three2 {
+                                                                   font-size: 100px;
+                                                                   margin-left: 50%;
+                                                                   color: rgb(146, 146, 146);
+                                                                   font-weight: 600;
+                                                                   color: white;
+                                                                   font-size: 100px;
+                                                                   position: absolute;
+                                                                   margin-top: 68%;
+                                                                   text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                                   text-shadow: 0px -5px 10px rgba(255, 255, 255, 1), 0px 0px 5px rgba(255, 255, 255, 0), 0px 0px 10px rgba(255, 255, 255, 0), 0px 0px 15px rgba(255, 255, 255, 0), 0px 0px 20px rgba(255, 255, 255, 0);
+                                                               }
+                                                               
+                                                               .three:hover {
+                                                                   animation: glitch 500ms infinite;
+                                                               }
+                                                               
+                                                               .three2:hover {
+                                                                   animation: glitch 500ms infinite;
+                                                               }
+                                                               
+                                                               .trigger {
+                                                                   font-size: 2rem;
+                                                                   font-family: 'Krona One', sans-serif;
+                                                                   cursor: pointer;
+                                                                   color: white;
+                                                               }
+                                                               /* .playing {
+                                                                   background: linear-gradient(-45deg, #eebb99, #d593e9, #80d7ec, #9b89fd);
+                                                                   background-size: 400% 400%;
+                                                               } */
+                                                               
+                                                               .playing .trigger::before {
+                                                                   content: '\2590\A0\258C';
+                                                                   animation: glitch 500ms infinite;
+                                                               }
+                                                               
+                                                               .paused .trigger::before {
+                                                                   content: '\25B6';
+                                                                   animation: glitch 500ms infinite;
+                                                               }
+                                                               
+                                                               .playing {
+                                                                   margin-left: 3%;
+                                                               }
+                                                               
+                                                               .paused {
+                                                                   margin-left: 4%;
+                                                               }
