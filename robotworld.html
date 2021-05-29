@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDA Modul - Hani Aslani</title>
+    <link rel="stylesheet" href="css/robot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="paused">
+
+    <audio id="myAudio" src="media/neil.mp3"></audio>
+    <a onclick="togglePlay()" class="trigger">
+    me
+  </a>
+
+
+
+    </div>
+    <div class="hand"></div>
+    <div class="fazai"></div>
+    </div>
+
+    <div class="moon">
+
+        <img src="img/ezgif.com-gif-maker.gif" alt="" width="500px" height="">
+    </div>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div id="galaxy">
+        <div class="bg"></div>
+        <div class="stars-back"></div>
+        <div class="stars-middle"></div>
+        <div class="stars-front"></div>
+        <div class="bg center"></div>
+    </div>
+    <div id="galaxy">
+        <div class="bg"></div>
+        <div class="stars-back"></div>
+        <div class="stars-middle"></div>
+        <div class="stars-front"></div>
+        <div class="bg center"></div>
+    </div>
+
+
+    <script>
+        var myAudio = document.getElementById("myAudio");
+        var isPlaying = false;
+
+        function togglePlay() {
+            isPlaying ? myAudio.pause() : myAudio.play();
+        };
+
+        myAudio.onplaying = function() {
+            isPlaying = true;
+            document.body.classList.remove('paused')
+            document.body.classList.add('playing')
+            document.getElementsByClassName("fazai")[0].classList.add("animated")
+        };
+
+        myAudio.onpause = function() {
+            isPlaying = false;
+            document.body.classList.remove('playing')
+            document.body.classList.add('paused')
+        };
+    </script>
+
+
+    <div class="navsong">
+        <ul class="navsong">
+            <li><a class="home" href="index.html">Home</a></li>
+            <li><a class="firsrobot" href="robot1.html">First robot</a></li>
+            <li>
+                <a class="mysong" href="song.html">My Song</a></li>
+            <li><a class="process" href="process/index.html">Process</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
