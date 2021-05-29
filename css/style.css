@@ -1,0 +1,299 @@
+
+    * {
+        font-family: 'Krona One', sans-serif;
+        margin: 0;
+     }
+   
+body,html {
+  margin: 0;
+  height: 110vh;
+}
+
+body {
+  perspective: 800px;
+  
+}
+
+  .one {
+          background-color: rgb(255, 251, 244); 
+        height: 110vh;
+    padding: 0;
+    overflow-x: hidden;
+  overflow-y: auto;
+   transform-style: preserve-3d;
+         }
+   
+
+    .mom {
+
+        width: 45%;
+        height: 80%;
+        margin-left: 200px;
+        padding-top: 20px;
+    }
+
+    .son2 {
+        font-size: 30px;
+        margin-top: 70px;
+        color: rgb(146, 146, 146);
+        animation-name: example;
+  animation-duration: 6s;
+  /* animation-iteration-count: infinite;  */
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+    }
+    @keyframes example {
+   0% {
+  margin-top: 80px;
+    opacity: 1;
+  }
+  50% {
+      margin-top: 150px;
+    opacity: .7;
+  }
+  100% {
+        margin-top: 200px;
+    opacity: 0;
+  }
+}
+
+
+    .son3 {
+        font-size: 30px;
+        margin-left: 45%;
+        color: rgb(146, 146, 146);
+        margin-top: -60px;
+             animation-name: example2;
+  animation-duration: 5s;
+  /* animation-iteration-count: infinite;  */
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+
+    }
+      @keyframes example2 {
+   0% {
+  margin-top: 50px;
+    opacity: 1;
+  }
+  50% {
+      margin-top: 80px;
+    opacity: .7;
+  }
+  100% {
+        margin-top: 100px;
+    opacity: 0;
+  }
+}
+
+    .son4 {
+        font-size: 30px;
+        margin-left: 175px;
+        color: rgb(146, 146, 146);
+        margin-top: 60px;
+               animation-name: example3;
+  animation-duration: 3s;
+  /* animation-iteration-count: infinite;  */
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+    }
+     @keyframes example3 {
+   0% {
+  margin-top: 10px;
+    opacity: 1;
+  }
+  50% {
+      margin-top: 25px;
+    opacity: .7;
+  }
+  100% {
+        margin-top: 40px;
+    opacity: 0;
+  }
+}
+
+    .son5 {
+        font-size: 98px;
+        margin-top: -725px;
+         /* text-align: right; 
+        margin-left: 200px;
+        margin-right: 30px; */
+        transform: translate(50%);
+    }
+
+    .dad {
+
+        width: 30%;
+        height: 80%;
+        margin-left: 1000px;
+        margin-top: -725px;
+        padding-top: 30px;
+    }
+
+    .dau1 {
+        font-size: 30px;
+        color: rgb(146, 146, 146);
+
+    }
+
+    .dau2 {
+        font-size: 30px;
+        color: rgb(146, 146, 146);
+        margin-left: 250px;
+    }
+
+    .dau3 {
+        font-size: 30px;
+        color: rgb(146, 146, 146);
+        margin-left: 85px;
+        margin-top: -95px;
+
+    }
+    .two {
+         background-color: rgb(38, 38, 38); 
+        
+         height: 120vh;
+         padding: 0;
+         position: relative;
+         box-sizing: border-box;
+         transform-style: preserve-3d;
+         transform: translateZ(-1px) scale(1);
+    }
+    .uncle {
+        
+        width: 45%;
+        height: 80%;
+        margin-left: 185px;
+        padding-top: 35px;
+    }
+    
+    .cousine2 {
+        font-size: 30px;
+        margin-top: 20px;
+        color:  rgb(255, 255, 255);
+ 
+
+      
+    }
+    .cousine3 {
+         font-size: 30px;
+        margin-left: 45%;
+        color: rgb(255, 255, 255);
+        margin-top: -60px;
+       
+    }
+    .cousine4 {
+         font-size: 30px;
+        margin-left: 175px;
+        color:  rgb(255, 255, 255);
+        margin-top: 60px;
+    }
+    .cousine5 {
+      
+         font-size: 98px;
+        margin-top: -800px;
+        /* text-align: right;
+        margin-left: 62px;
+        margin-right: 50px; */
+       color:  rgb(255, 255, 255);
+        transform: translate(480px);
+      
+    }
+    
+
+.aunt {
+
+    width: 30%;
+        height: 80%;
+        margin-left: 1000px;
+        margin-top: -650px;
+}
+.aunt1 {
+     font-size: 30px;
+        color: rgb(255, 255, 255);
+
+}
+.aunt2 {
+    font-size: 30px;
+        color:rgb(255, 255, 255) ;
+        margin-left: 210px;
+}
+.three {
+     background-color: rgb(255, 251, 244); 
+        height: 900px;
+    padding: 10px;
+  
+}
+.papa {
+ 
+  width: 45%;
+        height: 88%;
+        margin-left: 170px;
+        padding-top: 25px;
+         
+}
+.gson1 {
+ 
+  margin-top: 40px;
+  width: 48%;
+  height: 91%;
+
+
+}
+.gson2 {
+   font-size: 30px;
+   color: rgb(146, 146, 146);
+}
+.gson3 {
+  font-size: 30px;
+   color: rgb(146, 146, 146);
+   margin-left: 220px;
+    margin-top: -55px;
+}
+.gson4 {
+  font-size: 30px;
+   color: rgb(146, 146, 146);
+    margin-left: 110px;
+    
+        margin-top: 80px; 
+}
+.gson5 
+{
+  font-size: 50px;
+  color: black;
+  margin-top: -760px;
+   transform: translate(370px);
+}
+.gson6 {
+  font-size: 98px;
+   color: black;
+       transform: translate(480px);
+}
+.oma {
+    width: 30%;
+        height: 80%;
+        margin-left: 960px;
+        margin-top: -750px;
+         
+}
+.gbaby1 {
+  font-size: 30px;
+  color: rgb(146, 146, 146);
+}
+.gbaby2 {
+  font-size: 30px;
+  color: rgb(146, 146, 146);
+  margin-left: 210px;
+}
+.gbaby3 {
+     font-size: 30px;
+     color: rgb(146, 146, 146);
+     margin-left: 85px;
+     margin-top: 5px;
+}
+.navsong {
+  display: inline;
+  float: left;
+  width: 29%;
+  margin: 1%;
+  padding: 1%;
+}

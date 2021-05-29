@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            overflow: hidden;
+        }
+        
+        body {
+            margin: 0;
+            color: white;
+            font-size: 26px;
+            height: 100vh;
+            perspective: 1px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            transform-style: preserve-3d;
+        }
+        
+        .parallel-wrapper {
+            width: 100vw;
+            height: 100vh;
+            padding-top: 20vh;
+            box-sizing: border-box;
+            transform-style: preserve-3d;
+        }
+        
+        .parallel-wrapper::before {
+            content: '';
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background: #000 url(https://cssanimation.rocks/levelup/public/03/04-end/images/moon.jpg) center no-repeat;
+            background-image: url("https://cdn.mos.cms.futurecdn.net/VSy6kJDNq2pSXsCzb6cvYF.jpg");
+            position: absolute;
+            z-index: -1;
+            transform: translateZ(-1px) scale(2);
+        }
+        
+        .regular-wrapper {
+            width: 100vw;
+            height: 110vh;
+            padding-top: 20vh;
+            margin-top: 0%;
+            background-image: url("https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg");
+            position: relative;
+        }
+        
+        .content {
+            margin: 0 auto;
+            padding: 50px;
+            width: 50%;
+            background: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar"><span> scrolling tuti </span></div>
+    <div class="parallel-wrapper">
+        <div class="content ">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+    </div>
+    <div class="regular-wrapper">
+        <div class="content ">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li><a id="one" href="index.html">Back</a></li>
+            <li><a href="day13.html"> millestone 8</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
