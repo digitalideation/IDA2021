@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+/* General Formatting */
+
+body {
+    font-family: 'Amiko', sans-serif; 
+    /* font-family: 'Yatra One', cursive; */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Story1 formatting */
+
+.body_normal  {
+    background: rgb(219,200,243);
+}
+
+.heavensgate {
+    margin: 0 auto;
+    max-width: 600px;
+    height: auto;
+    display: block;
+}
+
+.cls-1 {
+    fill:transparent;
+    stroke:rgb(255, 255, 255);
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:10px;
+    transition: fill 250ms;
+}
+
+.container {
+    width: 50vw;
+    height: 50vh;
+    margin: 20vh auto;
+    transition: all 1s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(2);
+    cursor: pointer;
+}
+
+.transparentfill:hover {
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+/* Story2 formatting */
+
+
+
+
+
+
