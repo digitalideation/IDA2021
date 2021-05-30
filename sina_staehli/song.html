@@ -14,44 +14,425 @@
         font-style: normal;
         }
 
-        .songtext {
-            font-family: 'simplonmonoregular';
+
+        @font-face {
+        font-family: 'simplonmonomedium';
+        src: url('img/Mono/Web Complete/WOFF2/SimplonEDUMono-Medium-WebXL.woff2') format('woff2'),
+        url('img/Mono/Web Complete/WOFF/SimplonEDUMono-Regular-WebXL.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
         }
+
+
+        .marquee {
+		max-width: 100vw; /* iOS braucht das */
+		white-space: nowrap;
+		overflow: hidden;
+        font-family: 'simplonmonomedium';
+        font-size: 12px;
+		/* hier evtl. noch font-size, color usw. */
+        }
+
+        .marquee span {
+            display: inline-block;
+            padding-left: 105%; /* die zusätzlichen 5% erzeugen einen verzögerten Start und vermeiden so ein Ruckeln auf langsamen Seiten */
+            animation: marquee 18s linear infinite;
+        }
+
+        /* Make it move */
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @keyframes marquee2 {
+            0%   { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .marquee2 {
+		max-width: 100vw; /* iOS braucht das */
+		white-space: nowrap;
+		overflow: hidden;
+        font-family: 'simplonmonomedium';
+        font-size: 12px;
+        animation: marquee2 18s linear infinite;
+
+        display: inline-block;
+            padding-left: 105%;
+        }
+
+
     </style>
-
 </head>
-<body>
-    <div class="songtext">
 
-        I want you to want me
-        but you just wanna love me for the day.
-        And I can‘t just walk away
-        even though I know you‘re trouble, babe.
+<body>
+    <div class="marquee"><span>I want you to want me but you just wanna love me for the day. 
+        And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
     
-        So I‘mma take my time,
-        go with the flow, can‘t get too involved.
-        You got a face that I
-        just can‘t say no to.
-        Just can‘t say no to you.
-    
-        You know I want you, baby.
+    <div class="marquee2"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+        You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+
+        
+    <div class="marquee"><span>You know I want you, baby.
         You know I do.
         I‘ll give you my heart and the rest is up to you.
         You ain‘t no good for me, I know it‘s true.
-        But you don‘t have to be
-    
-        ‚cause I do it for the thrill, for the rush.
+        But you don‘t have to be</span></div>    
+   
+    <div class="marquee2"><span>‚cause I do it for the thrill, for the rush.
         I do it for the pain, for your touch.
         When I OD, when it‘s too much,
         if I survive, baby you‘re the one.
-        You‘re the one.
-    
-        I feel like I‘m walking
+        You‘re the one.</span></div>
+
+    <div class="marquee"><span>I feel like I‘m walking
         the tightrope of love in your circus, babe.
         If I were a fella it‘d be my last day
-        even though you‘re right under me.
+        even though you‘re right under me.</span></div>
+
+
+
+
+        <div class="marquee2"><span>I want you to want me but you just wanna love me for the day. 
+            And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+        
+        <div class="marquee"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+            You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+    
+            
+        <div class="marquee2"><span>You know I want you, baby.
+            You know I do.
+            I‘ll give you my heart and the rest is up to you.
+            You ain‘t no good for me, I know it‘s true.
+            But you don‘t have to be</span></div>    
+       
+        <div class="marquee"><span>‚cause I do it for the thrill, for the rush.
+            I do it for the pain, for your touch.
+            When I OD, when it‘s too much,
+            if I survive, baby you‘re the one.
+            You‘re the one.</span></div>
+    
+        <div class="marquee2"><span>I feel like I‘m walking
+            the tightrope of love in your circus, babe.
+            If I were a fella it‘d be my last day
+            even though you‘re right under me.</span></div>
+
+
+
+
+
+            <div class="marquee"><span>I want you to want me but you just wanna love me for the day. 
+                And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+            
+            <div class="marquee2"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+        
+                
+            <div class="marquee"><span>You know I want you, baby.
+                You know I do.
+                I‘ll give you my heart and the rest is up to you.
+                You ain‘t no good for me, I know it‘s true.
+                But you don‘t have to be</span></div>    
+           
+            <div class="marquee2"><span>‚cause I do it for the thrill, for the rush.
+                I do it for the pain, for your touch.
+                When I OD, when it‘s too much,
+                if I survive, baby you‘re the one.
+                You‘re the one.</span></div>
+        
+            <div class="marquee"><span>I feel like I‘m walking
+                the tightrope of love in your circus, babe.
+                If I were a fella it‘d be my last day
+                even though you‘re right under me.</span></div>
+
+
+
+
+
+
+                <div class="marquee2"><span>I want you to want me but you just wanna love me for the day. 
+                    And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                
+                <div class="marquee"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                    You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+            
+                    
+                <div class="marquee2"><span>You know I want you, baby.
+                    You know I do.
+                    I‘ll give you my heart and the rest is up to you.
+                    You ain‘t no good for me, I know it‘s true.
+                    But you don‘t have to be</span></div>    
+               
+                <div class="marquee"><span>‚cause I do it for the thrill, for the rush.
+                    I do it for the pain, for your touch.
+                    When I OD, when it‘s too much,
+                    if I survive, baby you‘re the one.
+                    You‘re the one.</span></div>
+            
+                <div class="marquee2"><span>I feel like I‘m walking
+                    the tightrope of love in your circus, babe.
+                    If I were a fella it‘d be my last day
+                    even though you‘re right under me.</span></div>
+
+
+
+
+
+
+
+                    <div class="marquee"><span>I want you to want me but you just wanna love me for the day. 
+                        And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                    
+                    <div class="marquee2"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                        You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                
+                        
+                    <div class="marquee"><span>You know I want you, baby.
+                        You know I do.
+                        I‘ll give you my heart and the rest is up to you.
+                        You ain‘t no good for me, I know it‘s true.
+                        But you don‘t have to be</span></div>    
+                   
+                    <div class="marquee2"><span>‚cause I do it for the thrill, for the rush.
+                        I do it for the pain, for your touch.
+                        When I OD, when it‘s too much,
+                        if I survive, baby you‘re the one.
+                        You‘re the one.</span></div>
+                
+                    <div class="marquee"><span>I feel like I‘m walking
+                        the tightrope of love in your circus, babe.
+                        If I were a fella it‘d be my last day
+                        even though you‘re right under me.</span></div>
+
+
+
+
+                        <div class="marquee2"><span>I want you to want me but you just wanna love me for the day. 
+                            And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                        
+                        <div class="marquee"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                            You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                    
+                            
+                        <div class="marquee2"><span>You know I want you, baby.
+                            You know I do.
+                            I‘ll give you my heart and the rest is up to you.
+                            You ain‘t no good for me, I know it‘s true.
+                            But you don‘t have to be</span></div>    
+                       
+                        <div class="marquee"><span>‚cause I do it for the thrill, for the rush.
+                            I do it for the pain, for your touch.
+                            When I OD, when it‘s too much,
+                            if I survive, baby you‘re the one.
+                            You‘re the one.</span></div>
+                    
+                        <div class="marquee2"><span>I feel like I‘m walking
+                            the tightrope of love in your circus, babe.
+                            If I were a fella it‘d be my last day
+                            even though you‘re right under me.</span></div>
+
+
+
+
+
+
+                            <div class="marquee"><span>I want you to want me but you just wanna love me for the day. 
+                                And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                            
+                            <div class="marquee2"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                                You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                        
+                                
+                            <div class="marquee"><span>You know I want you, baby.
+                                You know I do.
+                                I‘ll give you my heart and the rest is up to you.
+                                You ain‘t no good for me, I know it‘s true.
+                                But you don‘t have to be</span></div>    
+                           
+                            <div class="marquee2"><span>‚cause I do it for the thrill, for the rush.
+                                I do it for the pain, for your touch.
+                                When I OD, when it‘s too much,
+                                if I survive, baby you‘re the one.
+                                You‘re the one.</span></div>
+                        
+                            <div class="marquee"><span>I feel like I‘m walking
+                                the tightrope of love in your circus, babe.
+                                If I were a fella it‘d be my last day
+                                even though you‘re right under me.</span></div>
+
+
+
+
+
+                                <div class="marquee2"><span>I want you to want me but you just wanna love me for the day. 
+                                    And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                                
+                                <div class="marquee"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                                    You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                            
+                                    
+                                <div class="marquee2"><span>You know I want you, baby.
+                                    You know I do.
+                                    I‘ll give you my heart and the rest is up to you.
+                                    You ain‘t no good for me, I know it‘s true.
+                                    But you don‘t have to be</span></div>    
+                               
+                                <div class="marquee"><span>‚cause I do it for the thrill, for the rush.
+                                    I do it for the pain, for your touch.
+                                    When I OD, when it‘s too much,
+                                    if I survive, baby you‘re the one.
+                                    You‘re the one.</span></div>
+                            
+                                <div class="marquee2"><span>I feel like I‘m walking
+                                    the tightrope of love in your circus, babe.
+                                    If I were a fella it‘d be my last day
+                                    even though you‘re right under me.</span></div>
+
+
+
+
+                                    <div class="marquee"><span>I want you to want me but you just wanna love me for the day. 
+                                        And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                                    
+                                    <div class="marquee2"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                                        You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                                
+                                        
+                                    <div class="marquee"><span>You know I want you, baby.
+                                        You know I do.
+                                        I‘ll give you my heart and the rest is up to you.
+                                        You ain‘t no good for me, I know it‘s true.
+                                        But you don‘t have to be</span></div>    
+                                   
+                                    <div class="marquee2"><span>‚cause I do it for the thrill, for the rush.
+                                        I do it for the pain, for your touch.
+                                        When I OD, when it‘s too much,
+                                        if I survive, baby you‘re the one.
+                                        You‘re the one.</span></div>
+                                
+                                    <div class="marquee"><span>I feel like I‘m walking
+                                        the tightrope of love in your circus, babe.
+                                        If I were a fella it‘d be my last day
+                                        even though you‘re right under me.</span></div>
+        
+        
+        
+        
+        
+                                        <div class="marquee2"><span>I want you to want me but you just wanna love me for the day. 
+                                            And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                                        
+                                        <div class="marquee"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                                            You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                                    
+                                            
+                                        <div class="marquee2"><span>You know I want you, baby.
+                                            You know I do.
+                                            I‘ll give you my heart and the rest is up to you.
+                                            You ain‘t no good for me, I know it‘s true.
+                                            But you don‘t have to be</span></div>    
+                                       
+                                        <div class="marquee"><span>‚cause I do it for the thrill, for the rush.
+                                            I do it for the pain, for your touch.
+                                            When I OD, when it‘s too much,
+                                            if I survive, baby you‘re the one.
+                                            You‘re the one.</span></div>
+                                    
+                                        <div class="marquee2"><span>I feel like I‘m walking
+                                            the tightrope of love in your circus, babe.
+                                            If I were a fella it‘d be my last day
+                                            even though you‘re right under me.</span></div>
+
+
+
+
+
+
+                                            <div class="marquee"><span>I want you to want me but you just wanna love me for the day. 
+                                                And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                                            
+                                            <div class="marquee2"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                                                You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                                        
+                                                
+                                            <div class="marquee"><span>You know I want you, baby.
+                                                You know I do.
+                                                I‘ll give you my heart and the rest is up to you.
+                                                You ain‘t no good for me, I know it‘s true.
+                                                But you don‘t have to be</span></div>    
+                                           
+                                            <div class="marquee2"><span>‚cause I do it for the thrill, for the rush.
+                                                I do it for the pain, for your touch.
+                                                When I OD, when it‘s too much,
+                                                if I survive, baby you‘re the one.
+                                                You‘re the one.</span></div>
+                                        
+                                            <div class="marquee"><span>I feel like I‘m walking
+                                                the tightrope of love in your circus, babe.
+                                                If I were a fella it‘d be my last day
+                                                even though you‘re right under me.</span></div>
+                
+                
+                
+                
+                
+                                                <div class="marquee2"><span>I want you to want me but you just wanna love me for the day. 
+                                                    And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                                                
+                                                <div class="marquee"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                                                    You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                                            
+                                                    
+                                                <div class="marquee2"><span>You know I want you, baby.
+                                                    You know I do.
+                                                    I‘ll give you my heart and the rest is up to you.
+                                                    You ain‘t no good for me, I know it‘s true.
+                                                    But you don‘t have to be</span></div>    
+                                               
+                                                <div class="marquee"><span>‚cause I do it for the thrill, for the rush.
+                                                    I do it for the pain, for your touch.
+                                                    When I OD, when it‘s too much,
+                                                    if I survive, baby you‘re the one.
+                                                    You‘re the one.</span></div>
+                                            
+                                                <div class="marquee2"><span>I feel like I‘m walking
+                                                    the tightrope of love in your circus, babe.
+                                                    If I were a fella it‘d be my last day
+                                                    even though you‘re right under me.</span></div>
+
+
+
+
+
+
+                                                    <div class="marquee"><span>I want you to want me but you just wanna love me for the day. 
+                                                        And I can‘t just walk away even though I know you‘re trouble, babe.</span></div>
+                                                    
+                                                    <div class="marquee2"><span>So I‘mma take my time, go with the flow, can‘t get too involved.
+                                                        You got a face that I just can‘t say no to. Just can‘t say no to you.</span></div>
+                                                
+                                                        
+                                                    <div class="marquee"><span>You know I want you, baby.
+                                                        You know I do.
+                                                        I‘ll give you my heart and the rest is up to you.
+                                                        You ain‘t no good for me, I know it‘s true.
+                                                        But you don‘t have to be</span></div>    
+                                                   
+                                                    
+                        
+                    
+
+
+
+                
+
+
+
+
+        
     
         
-      </div>
+      
 </body>
 </html>
