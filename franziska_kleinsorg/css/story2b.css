@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+/* General Formatting */
+
+body {
+    font-family: 'Amiko', sans-serif; 
+    /* font-family: 'Yatra One', cursive; */
+    height: 100%;
+    background: rgb(219,200,243);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+}
+
+/* Player Formatting */
+
+canvas {
+    display: block;
+}
+
+.player {
+    width: 740px;
+    height: 740px;
+    margin-left: -370px;
+    margin-top: -370px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.player .playarea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 126px;
+    width: 320px;
+    margin-top: -63px;
+    margin-left: -160px;
+}
+
+.player .playarea div {
+    display: inline-block;
+}
+
+.player .playarea .play {
+    cursor: pointer;
+    opacity: 0.85;
+    vertical-align: middle;
+    margin: 0 26px;
+    border: 3px solid white;
+    border-radius: 120px;
+    width: 120px;
+    height: 120px;
+    background: url(../pics/playbutton.svg) 42px 34px no-repeat;
+    color: white;
+    background-size: 45px 55px;
+}
+
+.player .playarea .pause {
+    display: none;
+    cursor: pointer;
+    opacity: 0.85;
+    vertical-align: middle;
+    margin: 0 26px;
+    border: 3px solid white;
+    border-radius: 120px;
+    width: 120px;
+    height: 120px;
+    background: url(../pics/pausebutton.svg) 43px 35px no-repeat;
+    fill: white;
+    background-size: 35px 51px;
+}
+
+.player .playarea .prevSong {
+    color: transparent;
+}
+
+.player .playarea .nextSong {
+    color: transparent;
+}
+
+.player .playarea .prevSong,
+.player .playarea .nextSong {
+    vertical-align: middle;
+    background-size: 66px 43px;
+    width: 66px;
+    height: 43px;
+}
+
+.player .playarea .prevSong:hover,
+.player .playarea .nextSong:hover,
+.player .playarea .pause:hover,
+.player .playarea .play:hover,
+.player .soundControl:hover {
+    opacity: 0.7;
+}
+
+.player .song {
+    color: white;
+    position: absolute;
+    top: 225px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.player .song .artist {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.player .song .name {
+    font-size: 18px;
+}
+
+.player .soundControl {
+    cursor: pointer;
+    width: 31px;
+    height: 27px;
+    position: absolute;
+    bottom: 240px;
+    left: 50%;
+    margin-left: -16px;
+    background: url(../pics/soundcontrol.svg);
+    background-size: 31px 27px;
+    transform: scale(2);
+    text-align: center;
+}
+
+.player .soundControl.disable {
+    opacity: 0.4;
+}
+
+.player .time {
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -22px;
+    font-size: 20px;
+    bottom: 190px;
+}

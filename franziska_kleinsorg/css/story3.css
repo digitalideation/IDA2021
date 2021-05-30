@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+/* General Formatting */
+
+body {
+    font-family: 'Amiko', sans-serif; 
+    /* font-family: 'Yatra One', cursive; */
+    background: rgb(219,200,243);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Story3 formatting */
+
+.body_gradient {
+    height: 15000px;
+    background: rgb(219,200,243);
+    background: linear-gradient(180deg, rgba(219,200,243,1) 0%, rgba(163,95,134,1) 10%, rgba(143,86,122,1) 16%, rgba(92,63,92,1) 17%, rgba(43,28,46,1) 24%, rgba(29,11,13,1) 31%, rgba(43,15,16,1) 38%, rgba(84,27,23,1) 39%, rgba(124,39,34,1) 48%, rgba(150,46,40,1) 57%, rgba(212,48,30,1) 70%, rgba(255,47,0,1) 91%, rgba(255,158,0,1) 100%);
+}
+
+span {
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 7px;
+    background-color:rgb(80, 80, 80);
+  }
+
+.pole {
+    left: 50%;
+    position: fixed;
+} 
+
+.snake {
+    position: fixed;
+    width: 15rem;
+    height: 15rem;
+}
+
+#snakeID {
+
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:10px;
+    fill:transparent;
+    transition: fill 250ms;
+}
