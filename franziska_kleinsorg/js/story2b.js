@@ -5,7 +5,7 @@ var Framer = {
     frequencyData: [],
 
     tickSize: 10,
-
+    
     PI: 360,
 
     index: 0,
