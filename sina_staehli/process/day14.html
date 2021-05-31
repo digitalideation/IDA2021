@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're the One</title>
+    
+    <style>
+        @font-face {
+        font-family: 'simplonmonoregular';
+        src: url('img/Mono/Web Complete/WOFF2/SimplonEDUMono-Regular-WebXL.woff2') format('woff2'),
+        url('img/Mono/Web Complete/WOFF/SimplonEDUMono-Regular-WebXL.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        body {
+            font-family: 'simplonmonoregular';
+            background-color: rgb(255, 0, 234);
+            font-size: 28rem;   
+            text-align: center;
+            top: 25%;
+            list-style: none;
+        }
+
+        @keyframes strobo { 
+            0% {
+                opacity: 0;
+                
+            }
+
+            100% {
+                opacity: 1;
+            }
+            }
+
+        #thrill {
+            display: flex;
+            justify-content: center;
+            padding-top: 12%;
+            padding-bottom: 12%;
+            margin: 0px auto 0;
+            /*animation: strobo 0.2s infinite;*/
+            list-style: none;
+            left: 2%;
+            top: 30%;
+
+            /* The image used */
+            background-image: url("img/eye.svg");
+            mix-blend-mode: multiply;
+
+            /* Set a specific height */
+            min-height: 500px; 
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+
+        div {
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            top: 0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+        }
+
+
+        div#rush {
+            padding-top: 12%;
+            padding-bottom: 12%;
+            height: 500px;
+            background-color: rgb(89, 0, 255);
+            background-size: cover;
+            margin: 0px auto 0;
+            /*animation: strobo 0.2s infinite;*/
+            
+
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="thrill">Thrill</div>
+    <div id="rush">Rush</div>
+</body>
+</html>
