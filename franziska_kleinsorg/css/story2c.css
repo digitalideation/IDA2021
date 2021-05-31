@@ -10,8 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
     align-items: center;
-    min-height: 100vh;
     font-size: 3vw;
 }
 
@@ -34,30 +34,24 @@ a {
 
 
 .head {
-    margin-top: 100px;
-    transform: scale(var(--scalesize));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(var(--scalesize));
     width: 400px;
     height: 400px;
     transform-origin: bottom center;
     border-radius: 50%;
     /* CSS Variablen können auch für Farben im RGB Modus benutzt werden */
-    background-color: rgba(calc(var(--scalesize)* 100), 100, 100, 0.8);
-    box-shadow: 0px 0px 100px 10px rgb(100, calc(var(--scalesize) * 100), 100);
+    background-color: white;
+    box-shadow: 0px 0px 100px 10px rgb(100, calc(var(--scalesize) * 50), 100);
 }
-/* some fun with pseudo elements */
 
-/* .head:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    left: -30px;
-    top: -30px;
-    border-radius: 120px;
-    box-shadow: 0px 0px 100px 10px #1b1b1b;
-} */
 
 .button {
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
