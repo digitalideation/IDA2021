@@ -46,7 +46,7 @@ a {
 }
 /* some fun with pseudo elements */
 
-.head:before {
+/* .head:before {
     content: '';
     display: block;
     position: absolute;
@@ -56,7 +56,7 @@ a {
     top: -30px;
     border-radius: 120px;
     box-shadow: 0px 0px 100px 10px #1b1b1b;
-}
+} */
 
 .button {
     cursor: pointer;
