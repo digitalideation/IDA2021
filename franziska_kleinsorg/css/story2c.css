@@ -39,7 +39,7 @@ a {
     border-radius: 50%;
     /* CSS Variablen können auch für Farben im RGB Modus benutzt werden */
     background-color: white;
-    box-shadow: 0px 0px 100px 10px rgb(100, calc(var(--scalesize) * 50), 100);
+    box-shadow: 0px 0px 100px 10px rgb(calc(var(--scalesize) * 256), calc(var(--scalesize) * 256), 1calc(var(--scalesize) * 256));
     transition: all 1s ease-in-out;
 }
 

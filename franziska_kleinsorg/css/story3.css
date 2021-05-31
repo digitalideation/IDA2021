@@ -57,3 +57,32 @@ span {
     fill:transparent;
     transition: fill 250ms;
 }
+
+
+    /* Navigation */ 
+.menue {
+    position:relative;
+    top: 14900px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: white;
+}
+
+.scrolldown {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    height: 80px;
+    width: auto;
+}
+.scrollup {
+position: absolute;
+top: 14920px;
+right: 16px;
+height: 80px;
+width: auto;
+transform: rotate(180deg);
+}
