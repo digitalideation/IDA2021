@@ -21,7 +21,7 @@
      }
 
     main{
-      position: absolute;
+      position: fixed;
       height: 97vh;
       width: 50vw;
       right: 0.7vw;
@@ -35,13 +35,14 @@
     }
 
     nav {
-      position: absolute;
+      position: fixed;
       width: 10vw;
       height: 10vh;
       left: 0;
       right: 0;
       margin: 0;
       padding: 0;
+      z-index: 2;
     }
 /* ----------------------- ALLGEMEIN -----------------------> */
 
@@ -256,7 +257,7 @@
         /* 25% from the top */
         width: 100%; /* 100% width */
         text-align: start; /* Centered text/links */
-        margin-top: 50px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+        margin-top: 8vh; /* 30px top margin to avoid conflict with the close button on smaller screens */
         }
 
         /* The navigation links inside the overlay */
@@ -281,39 +282,37 @@
             background-size: 110%;
         }
 
-        /* Position the close button (top right corner) */
+       /* Position the close button (top right corner) */
         .overlay .closebtn {
         position: absolute;
-        font-size: 50px;
-        color: rgb(255, 255, 255); 
-        transform-origin: center;
-        top: 0;
-        right: 1rem;
+        right: 1rem;  top: 1rem;
+        fill: rgb(255, 255, 255); 
+        transform: rotate(45deg);
+        transform-origin: center; 
         }
 
         .closebtn:hover{
-          transform: rotate(360deg);
+           transform: rotate(225deg);
            transition: ease-in-out 0.25s;
-           transform-origin:center;
         }
 
         .openbutton{
-        color: white;
+         fill: rgb(255, 255, 255); 
         position: absolute;
-        font-size: 50px;
         transform-origin: center;
-        top: 0;
         left: 1rem;
-        /* line-height: 30px;
-        background-color: orange; */
-  
+        top: 1rem;
         }
-
+       
+         .openbutton, .closebtn{
+            width: 30px;
+            height: 30px;
+   
+         }
         .openbutton:hover {
             transform: rotate(180deg);
            transition: ease-in-out 0.25s;
-           transform-origin:center;
-           
+           transform-origin: center;
         }
 
     /* OVERLAY TEXT */
