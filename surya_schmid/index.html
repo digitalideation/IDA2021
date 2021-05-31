@@ -27,7 +27,7 @@
     </div>
 
 
-  <nav>
+  <nav class="menu">
       <a class="nav homeDiv home" href="https://ida2021-staging.netlify.app/"> Home </a>
 
       <a class="nav robotDiv robot" href="robotworld.html">My Robot</a>
@@ -59,6 +59,20 @@
         outerCursor.style.top = y + "px";
       });
   // <--------------------- CURSOR ---------------------  
+
+  // <--------------------- SCROLL TO ---------------------  
+      function scrollMe() {
+        document.querySelector('.menu').scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+
+      document.getElementsByTagName('h1')[0].addEventListener('click', scrollMe)
+      
+      setTimeout(() => {
+        scrollMe()
+      }, 2000);
+  // <--------------------- SCROLL TO ---------------------  
   </script>
 </body>
 
