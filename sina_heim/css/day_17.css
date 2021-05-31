@@ -1,0 +1,10 @@
+.container2 {
+    /*
+   display: table;
+   margin-top: 0;
+   position: absolute;
+   clear: both;*/
+   font-family: 'Droid Sans', sans-serif;
+   font-size: 70px; 
+   display: inline-flexbox ;
+   text-align: center;

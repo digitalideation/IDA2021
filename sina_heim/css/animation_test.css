@@ -1,0 +1,15 @@
+h1 {
+    font-family: monospace;
+    font-size: 800px;
+    text-align: left;
+    margin: 0px;
+    white-space: nowrap;
+
+}
+
+h1:hover {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-timing-function: linear;
+    transition-duration: 20s;
+    margin-left: -9000px;
+}

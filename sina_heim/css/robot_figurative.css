@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+}
+
+
+
+.bild {
+    background-image: url(../images/jesse_draxler_untitled_2_web_size_72cfe32e-0263-4c14-a25c-1b93f3b54d67_x1500.jpg);
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
+
+
+ @keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+

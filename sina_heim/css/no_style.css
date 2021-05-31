@@ -1,0 +1,28 @@
+.text {
+    font-size: 230px;
+    color: rgb(252, 2, 252);
+    position: fixed;
+    top: 0;
+
+}
+
+
+
+.kleiner {
+    position: absolute;
+    top: 245px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+@font-face {
+    font-family: 'euclid';
+    src: url(../font/EuclidFlexEDU-Medium-WebXL.woff);
+    format:('woff')
+  }
+
+
+  body {
+      font-family: 'euclid';
+  }
