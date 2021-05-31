@@ -9,7 +9,7 @@
         height: 100vh;
         width: 100vw;
         overflow: hidden;
-        background-color: rgb(255, 255, 255);
+        margin: 0;
     }
     h1{
         font-family: "Skyline";
@@ -40,6 +40,11 @@
         color: white;
     }
 
+    section{
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+    }
 
 /* ----------------------- CURSOR -----------------------> */
         #cursor{
@@ -117,7 +122,7 @@
         /* 25% from the top */
         width: 100%; /* 100% width */
         text-align: start; /* Centered text/links */
-        margin-top: 50px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+        margin-top: 8vh; /* 30px top margin to avoid conflict with the close button on smaller screens */
         }
 
         /* The navigation links inside the overlay */
@@ -146,38 +151,34 @@
         /* Position the close button (top right corner) */
         .overlay .closebtn {
         position: absolute;
-        right: 0.5rem;  top: 0.5rem;
-        font-size: 50px;
-        color: rgb(255, 255, 255); 
+        right: 1rem;  top:1rem;
+        fill: rgb(255, 255, 255); 
+        transform: rotate(45deg);
+        transform-origin: center; 
         }
 
         .closebtn:hover{
-           transform: rotate(180deg);
+           transform: rotate(225deg);
            transition: ease-in-out 0.25s;
-           transform-origin: center; right: -0.5rem; 
         }
 
         .openbutton{
         color: rgb(0, 0, 0);
         position: absolute;
-        font-size: 50px;
-        transform: rotate(-45deg);
         transform-origin: center;
+        left: 1rem;
+        top: 1rem;
         }
        
          .openbutton, .closebtn{
-            width: 40px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 30px;
+            height: 30px;
+   
          }
         .openbutton:hover {
-            transform: rotate(135deg);
+            transform: rotate(180deg);
            transition: ease-in-out 0.25s;
            transform-origin: center;
-           left: 0.8rem;
-           top: 0.8rem;
         }
 
     /* OVERLAY TEXT */
