@@ -10,14 +10,16 @@
 </head>
 
 <body>
-<!--------------------- CURSOR ----------------------->
-<span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
-  <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-</span>
 
-<div id="cursor"> </div>
-<div id="outerCursor"></div>
-<!-----------------------  CURSOR ----------------------->
+  <section>
+    <!--------------------- CURSOR ----------------------->
+    <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+      <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+    </span>
+
+    <div id="cursor"> </div>
+    <div id="outerCursor"></div>
+    <!-----------------------  CURSOR ----------------------->
 
 
 
@@ -26,7 +28,12 @@
     <div id="myNav" class="overlay">
   
       <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <svg viewBox="0 0 20 20">
+        <polygon
+          points="20 8.5 11.5 8.5 11.5 0 8.5 0 8.5 8.5 0 8.5 0 11.5 8.5 11.5 8.5 20 11.5 20 11.5 11.5 20 11.5 20 8.5" /></svg>
+      </div>
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
   
       <!-- Overlay content -->
       <div class="overlay-content">
@@ -39,7 +46,13 @@
     </div>
   
     <!-- Use any element to open/show the overlay navigation menu -->
-    <span onclick="openNav()" class="openbutton">&times;</span>
+    <div onclick="openNav()" class="openbutton">
+      <svg viewBox="0 0 20 20">
+        <polygon
+          points="20 8.5 11.5 8.5 11.5 0 8.5 0 8.5 8.5 0 8.5 0 11.5 8.5 11.5 8.5 20 11.5 20 11.5 11.5 20 11.5 20 8.5" />
+      </svg>
+    </div>
+    <!-- <span onclick="openNav()" class="openbutton">&times;</span> -->
   </nav>
   <!---------------- The overlay ---------------->
 
@@ -80,7 +93,7 @@
     </div>
 </main>
 
-
+</section>
 <script>
   // THE OVERLAY ------------------------------------------------------->
   /* Open when someone clicks on the span element */
