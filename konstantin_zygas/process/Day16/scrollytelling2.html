@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+body{
+  text-align:center;
+  padding:0;
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  background-color:#111;
+}
+.parallax {
+  padding:0px;
+  perspective: 1px;
+  height: 100vh;
+  font-size:40px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+.content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity:.7;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100vh 0;
+}
+.base {
+  transform: translateZ(-2px) scale(3);
+  color:#FFF;
+}
+.closer {
+  transform: translateZ(-1px) scale(2);
+  font-size:300%;
+  color:#BF55EC;
+  filter: blur(3px);
+}
+.closest {
+  transform: translateZ(0);
+  color:#19B5FE;
+  font-size:700%;
+  filter: blur(10px);
+}
+</style>
+<body>
+    <div class="parallax">
+  
+        <div class="parallax-group">
+          
+          <div class="layer base">
+            <div class="content">
+              RHYTHM
+            </div>
+          </div>
+          
+          <div class="layer closer">
+            <div class="content">
+              is a
+            </div>
+          </div>
+          
+          <div class="layer closest">
+            <div class="content">
+              Dancer
+            </div>
+          </div>
+          
+        </div>
+        
+      </div> 
+</body>
+</html>

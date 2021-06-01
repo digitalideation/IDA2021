@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+
+    <title>IDA Digital Design Day 16 – CSS Parallax and Viewport Detection</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 16px;
+            height: 100%;
+        }
+        
+        a {
+            color: black;
+        }
+        
+        page {
+            position: relative;
+            z-index: 10;
+        }
+        
+        main {
+            margin-top: 60px;
+            padding: 20px;
+            display: flex;
+        }
+        
+        .column {
+            flex-basis: 50%;
+            padding: 20px;
+        }
+        
+        header {
+            padding: 20px;
+            width: 50%;
+            min-width: 600px;
+        }
+        
+        .session {
+            display: flex;
+        }
+        
+        .time {
+            flex-basis: 100px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        /* https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/*/
+        
+        .parallax {
+            height: 100%;
+            width: 100vw;
+            perspective: 600px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            z-index: 40;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        
+        .parallax__layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .parallax__group {
+            transition: transform 0.5s;
+        }
+        
+        .parallax__group {
+            position: relative;
+            height: 500px;
+            height: 100vh;
+            transform-style: preserve-3d;
+        }
+        
+        .parallax__layer--base {
+            transform: translateZ(0);
+            z-index: 4;
+            display: block;
+        }
+        
+        .parallax__layer--back {
+            transform: translateZ(-300px) translateY(100px) scale(3);
+            z-index: 3;
+        }
+        
+        .parallax__layer--deep {
+            transform: translateZ(-600px) translateY(-100px) scale(2);
+            z-index: 2;
+        }
+        
+        .parallax__layer--deep .el {
+            background-color: rgba(0, 140, 255, 0.5);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        
+        .parallax__layer--back .el {
+            background-color: rgba(9, 148, 125, 0.3);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            transform: translateX(-100px);
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            left: 250px;
+            top: 200px;
+            background-color: rgba(21, 143, 31, 0.4);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            transform: translateX(-100px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parallax">
+        <div class="parallax__group">
+            <div class="parallax__layer parallax__layer--base">
+                <header>
+                    <nav><a href="../../index.html">Home</a></nav>
+                    IDA Digital Design, Day 16
+
+                    <h1>Todays Assignment:</h1>
+                    <p>
+                        Elaboration and further development of your project idea. <br/><br/> Your first priority should be to get on with the final project. You have learned many different techniques and topics until now , choose which ones you use and
+                        develop further. In the ongoing of the module, the focus is about building and designing your project - not everything we looked at will be relevant for you. You may want to review certain concepts. You have basically 3 weeks left,
+                        that may seem a lot of time, but it is not.<br/> <br/> You might be interested in the topic of scrollytelling and two techniques that are related to it. But it's not just about acquiring more skills! Take a look at it only if you
+                        want to use it in your project.
+                    </p>
+
+
+                    <p>
+                        Watch those two videos before Friday to prepare yourself for presentation and feedback rounds:<br/>
+                        <a target="_blank" href="http://scottberkun.com/essays/23-how-to-run-a-design-critique/
+                       http://scottberkun.com/essays/35-how-to-give-and-receive-criticism/
+                       ">
+                        http://scottberkun.com/essays/35-how-to-give-and-receive-criticism/
+                        </a><br/>
+                        <a target="_blank" href="http://scottberkun.com/essays/35-how-to-give-and-receive-criticism/">http://scottberkun.com/essays/35-how-to-give-and-receive-criticism/</a>
+                    </p>
+
+
+
+                </header>
+
+                <main>
+
+                    <div class="column">
+                        <h2>Scrollytelling</h2>
+                        <p>
+                            Scrollytelling is visual storytelling for the web: a powerful technique based on a simple concept: new content and visuals appear or change through transitions as users scroll down or up the web page.
+                        </p>
+                        <p>You will find lots of examples! Two sophisticated ones: <br/><br/>
+                            <a href="https://panamaalbrown.com/" target="_blank">https://panamaalbrown.com/</a>
+                            <br/> <a href="https://www.sbs.com.au/theboat/" target="_blank">https://www.sbs.com.au/theboat/</a><br/><br/> Most sites make use of these technique, parallax to create an effect of depth and viewport detection to trigger animation
+                            on an element when the user arrives there.
+                        </p>
+                        <h2>(Pure CSS) Parallax Effect</h2>
+                        <p>Parallax scrolling is one of those web design trends that just keeps on going, and there are sites that use it to brilliant effect. The technique involves designing the background of a website layout to move at a slower rate than
+                            the foreground when the user scrolls, creating a 3D-like effect.</p>
+                        <p>W3C very simple background-attachment: fixed; <br/>
+                            <a href="https://www.w3schools.com/howto/howto_css_parallax.asp" target="_blank">https://www.w3schools.com/howto/howto_css_parallax.asp</a>
+                        </p>
+                        <p>Demo Using CSS and perspective: <br/>
+                            <a href="https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/" target="_blank">https://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/</a>
+                        </p>
+                        <p>
+                            Tutorial using CSS <a href="https://developer.mozilla.org/de/docs/Web/CSS/transform-function/translateZ()" target="_blank">translateZ</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/perspective" target="_blank">perspective</a>:<br/>
+                            <a href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank">https://keithclark.co.uk/articles/pure-css-parallax-websites/</a>
+                        </p>
+                        <p><b>Assignment:</b><br/> Use the CSS Parallax Effect on your Typo/Song Page. Try to move certain words faster than others. <br/> See: <a href="https://codepen.io/fusco/pen/IfsAa" target="_blank">https://codepen.io/fusco/pen/IfsAa</a>
+                            <br/> <br/> Or try to work with your svg and move certain shapes faster than others while scrolling:
+                            <br/>See: <a href="https://codepen.io/coderado/pen/BzGdxW" target="_blank">https://codepen.io/coderado/pen/BzGdxW</a>
+                        </p>
+                        <h2>Detect if Element is in Viewport</h2>
+                        <p><a href="01-viewport.html" target="_blank">
+                            Simple example with detailed comments in JS File and CSS File.</a></p>
+
+                        <p><b>Assignment:</b><br/> Study the example above and try to understand how it works. Take one of your transistions that is triggered on hover and rebuild your example using the code. The trick is, to use the class added by JavaScript
+                            instead of hover.
+                        </p>
+
+                        <h2>Advanced Library</h2>
+                        <p>The ScrollTrigger Plugin that is part of Greensocks Library lets you detect and control just anything by Scrolling:
+                            <a href="https://greensock.com/docs/v3/Plugins/ScrollTrigger" target="_blank">https://greensock.com/docs/v3/Plugins/ScrollTrigger</a>
+
+                            <br/>
+                            <a href="https://www.williamrchase.com/scroll_trigger_demo/index.html" target="_blank">Additional Example Greensocks</a>
+                        </p>
+
+                    </div>
+                    <div class="column">
+
+                        <h2>One-On-Ones with Hanna</h2>
+                        <div class="timetable">
+                            <div class="session">
+                                <div class="time">9:30-9:45</div>
+                                <div class="student">Annalisa</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">9:45-10:00</div>
+                                <div class="student">Cyril</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">10:00-10:15</div>
+                                <div class="student">David</div>
+                            </div>
+                            <hr>
+                            <div class="session">
+                                <div class="time">10:25-10:40</div>
+                                <div class="student">Elias</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">10:40-10:55</div>
+                                <div class="student">Franziska</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">10:55-11:10</div>
+                                <div class="student">Gina</div>
+                            </div>
+                            <hr>
+                            <div class="session">
+                                <div class="time">11:20-11:35</div>
+                                <div class="student">Hanieh</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">11:35-11:50</div>
+                                <div class="student">Julia</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">11:50-12:10</div>
+                                <div class="student">Konstantin</div>
+                            </div>
+                            <hr>
+                            <div class="session">
+                                <div class="time">13:00-13:15</div>
+                                <div class="student">Laura</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">13:15-13:30</div>
+                                <div class="student">Lukas</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">13:30-13:45</div>
+                                <div class="student">Nicole</div>
+                            </div>
+                            <hr>
+                            <div class="session">
+                                <div class="time">13:55-14:10</div>
+                                <div class="student">Oliver</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">14:10-14:25</div>
+                                <div class="student">Sina H.</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">14:25-14:40</div>
+                                <div class="student">Sina S.</div>
+                            </div>
+                            <hr>
+                            <div class="session">
+                                <div class="time">14:50-15:05</div>
+                                <div class="student">Sira</div>
+                            </div>
+                            <div class="session">
+                                <div class="time">15:05-15:20</div>
+                                <div class="student">Surya</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </main>
+            </div>
+            <div class="parallax__layer parallax__layer--back">
+                <div class="el"></div>
+            </div>
+            <div class="parallax__layer parallax__layer--deep">
+                <div class="el"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

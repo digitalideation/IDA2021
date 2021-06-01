@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #changeme {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(235, 247, 97);
+            transition: all 2s;
+        }
+
+        #changeme.new {
+            background-image: url(https://source.unsplash.com/random/?rhythm); 
+        }
+
+        #button {
+            height: 200px;
+            width: 100px;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="changeme"></div>
+    <div id="button"></div>
+</body>
+
+<script>
+    var elem = document.getElementById('button');
+    var ausgabe = document.getElementById('changeme');
+    elem.addEventListener('mouseover', mouseOver);
+    elem.addEventListener('mouseout', mouseOut);
+
+    function mouseOver() {
+        ausgabe.classList.add("new");;
+    }
+
+    function mouseOut() {
+        ausgabe.classList.remove("new");;
+    }
+</script>
+
+</html>
