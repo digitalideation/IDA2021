@@ -17,23 +17,45 @@
     body{
             background-color: black;
             box-sizing: border-box;
-            margin: 0;      
-           
-         
+            margin: 0;  
+            width: 100vw;
+            height: 100vh; 
+            overflow: hidden;
      }
 
-    main{
-      position: fixed;
-      height: 97vh;
-      width: 50vw;
-      right: 0.7vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* background-image: url(https://i.pinimg.com/originals/f5/f3/27/f5f327dc0b3619d95f20eba2d71aec78.gif); */
-      /* background-image: url(https://i.pinimg.com/originals/13/7b/26/137b2650381f68239e643ed58dfc8777.gif); */
-      background-size: 110%;
-    }
+
+
+    body:after{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 60vw;
+      height: 70vh;
+      /* top: 110vh; */
+      top: 10vh;
+      left:20vw;
+      background: linear-gradient(-45deg, #c20ac9, #33348b, #140169, #000000);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      border-radius: 2%;
+      z-index: -1;
+      box-shadow: 0px 0px 100px 10px #d8b3f7;
+          }
+
+      
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
     nav {
       position: fixed;
@@ -116,7 +138,10 @@
             align-items: center;
             justify-content: center;
             margin: auto;
-            margin-bottom: 6rem; 
+            /* top: 120vh; */
+            top: 20vh;
+
+           
 
           animation: danceDown infinite 0.48s ease-in-out;
 
@@ -161,9 +186,15 @@
           background: var(--robotColor);
           clip-path: polygon(100% 0, 82% 54%, 100% 100%, 0% 100%, 17% 50%, 0% 0%) ;
 
-          animation: danceDown infinite 0.48s ease-in-out;
+          /* animation: danceDown infinite 0.48s ease-in-out;
+          transform-origin: top; */
+        }
+
+        .playing .body {
+        animation: danceDown infinite 0.48s ease-in-out;
           transform-origin: top;
         }
+
 
           @keyframes danceDown {
           0%{
@@ -172,6 +203,7 @@
           
           70%{
               transform: translate(0px, 20px);
+              
           }
           
           0%{
@@ -196,10 +228,16 @@
           top: 190px;
           border-top-left-radius: 60%;
 
-          animation: armDanceLeft infinite 3s ease-in-out;
-          transform-origin: top right;
+          /* animation: armDanceLeft infinite 3s ease-in-out;
+          transform-origin: top right; */
 
         }
+
+        .playing .arm--left{
+        animation: armDanceLeft infinite 3s ease-in-out;
+          transform-origin: top right;
+        }
+
          @keyframes armDanceLeft {
           0%{
               transform: rotate(0deg);
@@ -219,9 +257,14 @@
           top: 190px;
           border-top-right-radius: 60%;
 
-          animation: armDanceRight infinite 3s ease-in-out;
-          transform-origin: top left;
+          /* animation: armDanceRight infinite 3s ease-in-out;
+          transform-origin: top left; */
 
+        }
+
+        .playing .arm--right{
+        animation: armDanceRight infinite 3s ease-in-out;
+          transform-origin: top left;
         }
 
  @keyframes armDanceRight {
@@ -252,11 +295,15 @@
         .arm--left .hand{
           right: 0;
           margin-right: -3px; 
-
+/* 
           animation: armDanceLeft1 infinite 2s ease-in-out;
-          transform-origin: top;
+          transform-origin: top; */
         }
 
+        .playing .arm--left .hand{
+        animation: armDanceLeft1 infinite 2s ease-in-out;
+          transform-origin: top;
+        }
 
          @keyframes armDanceLeft1 {
           0%{
@@ -278,7 +325,12 @@
           left: 0;
            margin-left: -3px;  
 
-           animation: armDanceRight1 infinite 2s ease-in-out;
+           /* animation: armDanceRight1 infinite 2s ease-in-out;
+          transform-origin: top; */
+        }
+
+        .playing .arm--right .hand{
+        animation: armDanceRight1 infinite 2s ease-in-out;
           transform-origin: top;
         }
 
@@ -325,9 +377,15 @@
         .leg--left{
           left: 155px;
 
-           animation: legDanceLeft infinite 2s ease-in-out;
+           /* animation: legDanceLeft infinite 2s ease-in-out;
+          transform-origin: top; */
+        }
+
+         .playing .leg--left{
+        animation: legDanceLeft infinite 2s ease-in-out;
           transform-origin: top;
         }
+
          @keyframes legDanceLeft {
           0%{
               transform: rotate(0deg);
@@ -353,7 +411,12 @@
         .leg--right{
           right: 155px;
 
-          animation: legDanceRight infinite 2s ease-in-out;
+          /* animation: legDanceRight infinite 2s ease-in-out;
+          transform-origin: top; */
+        }
+
+        .playing .leg--right{
+        animation: legDanceRight infinite 2s ease-in-out;
           transform-origin: top;
         }
 
@@ -383,9 +446,15 @@
           right: 0;
            margin-right: -3px;  
 
-           animation: legDanceLeft1 infinite 2s ease-in-out;
+           /* animation: legDanceLeft1 infinite 2s ease-in-out;
+          transform-origin: top; */
+        }
+        
+        .playing .leg--left .foot{
+        animation: legDanceLeft1 infinite 2s ease-in-out;
           transform-origin: top;
         }
+        
           @keyframes legDanceLeft1 {
           0%{
               transform: rotate(0deg);
@@ -406,7 +475,12 @@
           left: 0;
           margin-left: -3px;  
 
-           animation: legDanceLeft1 infinite 2s ease-in-out;
+           /* animation: legDanceLeft1 infinite 2s ease-in-out;
+          transform-origin: top; */
+        }
+
+         .playing .leg--right .foot{
+        animation: legDanceLeft1 infinite 2s ease-in-out;
           transform-origin: top;
         }
 
@@ -535,4 +609,65 @@
 /* <----------------THE OVERLAY - MENU----------------*/
 
 
-        
+         /* ----------------------- MOVE ON MUSIC -----------------------> */
+      :root {
+        /*************************** Page-wide variables ****************************/
+        --scalesize: 2;
+        /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
+      }
+
+      section {
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 2vw;
+        margin: auto;
+        width: 10rem;
+        height: 3rem;
+      }
+      section:hover{
+        color:#000000;
+        background-color: white;
+        /* box-shadow: 10px 0px 100px 100px #ff00f2; */
+       
+      }
+
+
+      .head {
+        transform: scale(var(--scalesize));
+
+      }
+
+      /* some fun with pseudo elements */
+
+      .head:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        bottom: -8rem;
+        border-radius: 300px;
+        box-shadow: 0px 0px 100px 10px #ffffff;
+      }
+
+      .button {
+        cursor: pointer;
+      
+      }
+
+      button{
+        position: absolute;
+        top: 10rem;
+        left: 10rem;
+      }
+
+
+
+
+  /* ----------------------- MOVE ON MUSIC -----------------------> */
