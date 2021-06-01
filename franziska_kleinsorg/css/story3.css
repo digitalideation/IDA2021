@@ -64,6 +64,40 @@ span {
 }
 
 
+    /* Audio */ 
+
+    a.trigger {
+        color: white;
+        text-decoration: none;
+      }
+      
+      .trigger::before {
+          content: '▶';
+      }
+    
+      .playing .trigger::before {
+        content: 'II';
+      }
+       
+      .paused .trigger::before {
+        content: '▶';
+      }
+
+.player {
+    position: fixed;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+    border: solid white 2px;    
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.player:hover {
+    cursor: pointer;
+}
+
+
     /* Navigation */ 
 .menue {
     position: absolute;
