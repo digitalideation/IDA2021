@@ -28,8 +28,17 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
-  color: rgb(0, 0, 0);
+  font-size: 1vw;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  margin-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 50px;
+  color: rgb(255, 255, 255);
   margin-left: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
