@@ -1,0 +1,410 @@
+/* ALLGEMEIN */
+ @font-face {
+    font-family: HKGrotesk Bold;
+    src: url(../assets/fonts/HKGrotesk-Bold.otf);
+}
+
+@font-face {
+    font-family: HKGrotesk Medium;
+    src: url(../assets/fonts/HKGrotesk-Medium.otf);
+}
+
+@font-face {
+    font-family: HKGrotesk Regular;
+    src: url(../assets/fonts/HKGrotesk-Regular.otf);
+}
+
+@font-face {
+    font-family: HKGrotesk Light;
+    src: url(../assets/fonts/HKGrotesk-Light.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: HKGrotesk Medium;
+    box-sizing: border-box;
+}
+
+/* NAVIGATION */
+nav {
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
+      position: fixed;
+      top: 40px;
+      left: 15px;
+      right: 2rem;
+      z-index: 4;
+
+    }
+
+    nav li {
+      list-style-type: none;
+      margin-right: 10px;
+      border: solid white 1px;
+      /* border-radius: 50px; */
+      height: 40px;
+      display: inline;
+      padding: 8px;
+      display: inline-block;
+    }
+
+    /* nav li:last-of-type {
+      margin-right: 50px;
+    } */
+
+    /* li.last {
+      justify-self: flex-end;
+      position: relative;
+      margin-left: auto;
+      margin-right: 0;
+    } */
+
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    nav li:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    nav li.homelink a {
+      width: 15px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-items: flex-start;
+      justify-content: start;
+      width: 100%;
+      /* border: 2px solid greenyellow; */
+    }
+
+    nav svg {
+        margin: 0;
+        padding: 0;
+        transform: scale(1.2);
+        fill: white;
+    }
+
+    nav li a,
+    .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 5;
+      margin-top: 9px;
+      margin-left: -9px;
+      border: 1px solid white;
+    }
+
+    .dropdown-content a {
+      color: black;
+      /* padding: 12px 16px; */
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      margin: 10px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ffffff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .active {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+  
+/* NAVIGATION AUDIO */
+a.trigger {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 0px;
+}
+
+.trigger::before {
+    content: 'PLAY ';
+}
+
+/* body.playing {
+  background-color: seagreen;
+}
+
+body.paused {
+  background-color: darkred;
+} */
+
+.playing .trigger::before {
+  content: 'PAUSE ';
+}
+ 
+.paused .trigger::before {
+  content: 'PLAY ';
+}
+
+/* BILDER UND TEXT */
+
+p {
+    font-family: HKGrotesk Medium;
+    font-size: 120px;
+    color: white;
+}
+
+body {
+	background: black;
+	overflow-x: hidden;
+}
+figure {
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+figure img.black {
+    transform: scale(0.4) translateY(-60px) translateX(1500px) rotate(-9deg);
+    margin-bottom: -50px;
+}
+
+
+figure img.berge {
+	transform: scale(0.4) translateY(-60px) translateX(1500px) rotate(-9deg);
+    margin-bottom: -50px;
+}
+
+figure img.hauswiese {
+	transform: scale(0.3) translateY(-900px) translateX(-1700px);
+}
+
+figure img.bloom {
+	transform: scale(0.2) translateY(-650px) translateX(300px) rotate(9deg);
+}
+
+figure p.wehen {
+    transform: scale(0.5) translateY(130px) translateX(-1000px);
+    margin-bottom: 700px;
+}
+
+figure img.morningbook {
+	transform: scale(0.16) translateY(-2090px) translateX(-2100px);
+}
+
+figure img.sky {
+	transform: scale(0.45) translateY(-360px) translateX(-300px) rotate(70deg);
+}
+
+figure img.mohn {
+	transform: scale(0.25) translateY(-1660px) translateX(300px);
+}
+
+figure p.tauchen {
+    transform: scale(0.5) translateY(450px) translateX(-100px);
+    margin-bottom: 600px;
+}
+
+figure img.see {
+	transform: scale(0.15) translateY(-1000px) translateX(-800px);
+}
+
+figure img.mountainstreet {
+	transform: scale(0.4) translateY(-100px) translateX(800px) rotate(15deg);
+}
+
+figure p.schweben {
+    transform: scale(0.5) translateY(550px) translateX(-380px);
+    margin-bottom: 600px;
+}
+
+figure p.verschwinden {
+    transform: scale(0.5) translateY(1200px) translateX(640px);
+    margin-bottom: 600px;
+}
+
+figure img.oldwindow {
+	transform: scale(0.2) translateY(200px) translateX(2800px) rotate(-20deg);
+}
+
+figure img.orangeskybird {
+	transform: scale(0.4) translateY(-300px) translateX(550px) rotate(20deg);
+}
+
+figure p.rauschen {
+    transform: scale(0.5) translateY(100px) translateX(850px);
+    margin-bottom: 600px;
+}
+
+figure p.verlassen {
+    transform: scale(0.5) translateY(800px) translateX(-1040px);
+    margin-bottom: 700px;
+}
+
+figure img.poet {
+	transform: scale(0.4) translateY(700px) translateX(-800px) rotate(-10deg);
+  margin-bottom: 600px;
+}
+
+figure img.regenscheibe {
+	transform: scale(0.25) translateY(-200px) translateX(-2400px) rotate(20deg);
+}
+
+figure img.street {
+	transform: scale(0.25) translateY(-700px) translateX(2000px);
+}
+
+figure img.schreibmaschine {
+	transform: scale(0.25) translateY(300px) translateX(500px) rotate(20deg);
+}
+
+figure img.white {
+  opacity: 0.99;
+  height: 100%;
+  width: 100%;
+}
+
+/* SVG Scroll */
+
+svg.scrolldown {
+  fill: white;
+  margin: 0;
+  padding: 0;
+  display: block;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+  transform-origin: center;
+  height: 50%;
+  width: 50%;
+  top: 50px;
+}
+
+svg.scrolldown:hover {
+  transform: rotate(360deg);
+  fill: tomato;
+}
+
+svg.scrolldown-2 {
+  fill: white;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  transition-timing-function: ease-in-out;
+  transition-duration: 10s;
+  transform-origin: center;
+  height: 50%;
+  width: 50%;
+  top: 50px;
+  left: 800px;
+}
+
+svg.scrolldown-2:hover {
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  100%{transform: rotate(360deg)};
+}
+
+svg.scrolldown-3 {
+  fill: white;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  top: 70px;
+  right: 50px;
+}
+
+svg.arrow {
+  position: absolute;
+  fill: white;
+  width: 400px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  left: 520px;
+  top: 200px;
+  animation: updown 800ms ease-in-out infinite alternate;
+}
+
+@keyframes updown {
+  100%{transform: translateY(80px);}
+}
+
+svg.arrow-2 {
+  position: absolute;
+  fill: white;
+  width: 400px;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  left: 520px;
+  top: 200px;
+  transform: rotate(180deg);
+  animation: updown-2 800ms ease-in-out infinite alternate;
+}
+
+@keyframes updown-2 {
+  100%{transform: translateY(80px) rotate(180deg);}
+}
+
+/* für Scroll nach unten und oben */
+    .smoothScroll {
+        text-decoration: none;
+        color: white;
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+
+    a.smoothScroll {
+        margin: auto;
+        padding: auto;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 15px;
+        font-family: HKGrotesk Light;
+    }
+
+    .scrolly {
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 100px; */
+        transform: translateZ(1000px);
+    }

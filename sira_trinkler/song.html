@@ -6,51 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_song.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li class="homelink"><a href="https://ida2021-staging.netlify.app/">
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                    <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 99.2 99.2"
-                        style="enable-background:new 0 0 99.2 99.2;" xml:space="preserve">
-                        <g>
-                            <path
-                                d="M98.2,47.7l-46-46.7c-1.4-1.4-3.7-1.4-5.1,0L23.8,24.6v-5.4H13.6V35L1,47.7c-1.4,1.4-1.4,3.7,0,5.1l0.1,0.1
-            		c1.4,1.4,3.7,1.4,5.1,0l40.9-41.4c1.4-1.4,3.7-1.4,5.1,0L93,52.9c1.4,1.4,3.7,1.4,5.1,0l0.1-0.1C99.5,51.4,99.5,49.1,98.2,47.7z" />
-                            <polygon
-                                points="13.6,52 13.6,99.2 36.9,99.2 36.9,70.3 62.3,70.3 62.3,99.2 85.6,99.2 85.6,52.7 49.3,15.8 	" />
-                        </g>
-                    </svg>
-                </a>
-            </li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="robotmouse.html">Robot</a></li>
-            <li class="active"><a href="song.html">My Song</a></li>
-            <li class="dropdown">
-                <a href="myprocess.html" class="dropbtn">My Process</a>
-                <div class="dropdown-content">
-                    <a href="myprocess.html">Daily Progress</a>
-                    <a href="moodboard.html">Moodboard</a>
-                </div>
-            </li>
-            <li class="last">
-                <div>
-                    <audio id="myAudio" src="assets/audio/1957-audio.mp3"></audio>
-                    <a onClick="togglePlay()" class="trigger">♪ 1957</a>
-                </div>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <div class="overlay-navigation">
+        <nav role="navigation">
+            <ul>
+                <li class="homelink"><a href="https://ida2021-staging.netlify.app/">
+                        <svg class="house" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 99.2 99.2"
+                            style="enable-background:new 0 0 99.2 99.2;" xml:space="preserve">
+                            <g>
+                                <path
+                                    d="M98.2,47.7l-46-46.7c-1.4-1.4-3.7-1.4-5.1,0L23.8,24.6v-5.4H13.6V35L1,47.7c-1.4,1.4-1.4,3.7,0,5.1l0.1,0.1
+                                    		c1.4,1.4,3.7,1.4,5.1,0l40.9-41.4c1.4-1.4,3.7-1.4,5.1,0L93,52.9c1.4,1.4,3.7,1.4,5.1,0l0.1-0.1C99.5,51.4,99.5,49.1,98.2,47.7z" />
+                                <polygon
+                                    points="13.6,52 13.6,99.2 36.9,99.2 36.9,70.3 62.3,70.3 62.3,99.2 85.6,99.2 85.6,52.7 49.3,15.8 	" />
+                            </g>
+                        </svg>
+                    </a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="robotmouse.html">Robot</a></li>
+                <li class="active"><a href="song.html">Song</a></li>
+                <li class="dropdown">
+                    <a href="moodboard.html" class="dropbtn">Process</a>
+                    <div class="dropdown-content">
+                        <a href="myprocess.html">Daily Progress</a>
+                        <a href="moodboard.html">Moodboard</a>
+                    </div>
+                </li>
+                <li class="last">
+                    <div>
+                        <audio id="myAudio" src="assets/audio/1957-audio.mp3"></audio>
+                        <a onClick="togglePlay()" class="trigger">♪ 1957</a>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="home">
+        <div class="open-overlay">
+            <span class="bar-top"></span>
+            <span class="bar-middle"></span>
+            <span class="bar-bottom"></span>
+        </div>
+    </section>
 
 
     <div class="content">
+        <p class="comment">Hier bin ich noch dran:)</p>
         <p>
             <!-- <span>1957</span> <br> -->
             Your house that sits behind me <br>
@@ -121,6 +128,48 @@
             document.body.classList.add('paused')
         };
     </script>
+
+        <!-- NAV-Bar -->
+        <script>
+            $('.open-overlay').click(function () {
+                var overlay_navigation = $('.overlay-navigation'),
+                    nav_item_1 = $('nav li:nth-of-type(1)'),
+                    nav_item_2 = $('nav li:nth-of-type(2)'),
+                    nav_item_3 = $('nav li:nth-of-type(3)'),
+                    nav_item_4 = $('nav li:nth-of-type(4)'),
+                    nav_item_5 = $('nav li:nth-of-type(5)'),
+                    nav_item_6 = $('nav li:nth-of-type(6)'),
+                    top_bar = $('.bar-top'),
+                    middle_bar = $('.bar-middle'),
+                    bottom_bar = $('.bar-bottom');
+
+                overlay_navigation.toggleClass('overlay-active');
+                if (overlay_navigation.hasClass('overlay-active')) {
+
+                    top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
+                    middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
+                    bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
+                    overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+                    nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+                    nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+                    nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+                    nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+                    nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+                    nav_item_6.removeClass('slide-in-nav-item-delay-5-reverse').addClass('slide-in-nav-item-delay-5');
+                } else {
+                    top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
+                    middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
+                    bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
+                    overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+                    nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+                    nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+                    nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+                    nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+                    nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+                    nav_item_6.removeClass('slide-in-nav-item-delay-5').addClass('slide-in-nav-item-delay-5-reverse');
+                }
+            })
+        </script>
 </body>
 
 </html>

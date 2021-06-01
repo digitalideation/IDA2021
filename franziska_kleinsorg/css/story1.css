@@ -39,7 +39,6 @@ a {
     stroke-linecap:round;
     stroke-linejoin:round;
     stroke-width:10px;
-    transition: fill 250ms;
 }
 
 .container {
@@ -50,7 +49,7 @@ a {
 }
 
 .container:hover {
-    transform: scale(2);
+    transform: scale(1.5);
     cursor: pointer;
 }
 

@@ -1,0 +1,215 @@
+/* Import NavBar CSS*/
+@import "styleNavBar.css";
+@import "audioStyle.css";
+
+
+/* attribute */
+
+body {
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+main {
+    max-width: 900px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+    main article {
+        text-align: center;
+        min-height: 700px;
+    }
+
+
+.robot {
+    display:inline;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    max-width: 1200px;
+    
+}
+
+    .robot * {
+        text-align: center;
+        display: inline;
+        margin: 10px;
+        height: 20px;
+
+        /* : 2px solid red; */
+        
+    }
+
+    .robot .head {
+        position: absolute;
+        top: 100px;
+        left: 450px;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .robot .head * {
+            margin: 0px;
+        }
+
+    .robot .eye {
+        width: 30%;
+        margin-left: 8px;
+        margin-right: 8px;
+        box-sizing: border-box;
+        display: inline-flex;
+    }
+
+    .robot .eye--left {
+    }
+
+    .robot .nose {
+        display: block;
+        width: 30px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .robot .mouth {
+        margin: 20px;
+        margin-left: 0px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .robot .body {
+        position: absolute;
+        top: 230px;
+        left: 400px;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 300px;
+        border: 0px;
+        border-radius: 30px;
+    }
+
+        .robot .body img {
+            display:inline;
+            margin: 0px;
+            border: 0px;
+            width: 100%;
+            height: 100%;
+            border-radius:30px;
+        }
+
+    .robot .leg {
+        position: absolute;
+        left: 430px;
+        top: 550px;
+        width: 60px;
+        height: 210px;
+    }
+
+    .robot .leg--right {
+        position: absolute;
+        top: 550px;
+        left: 500px;
+    }
+
+    .robot .foot {
+        margin: 0px;
+        position: relative;
+        top: 100%;
+        width: 50px;
+        height: 30px;
+    }
+
+
+    .robot .arm {
+        position: absolute;
+        top: 230px;
+        left: 310px;
+        width: 60px;
+        height: 210px;
+        border: none;
+    }
+    
+    
+    .robot .arm--right {
+        position: absolute;
+        top: 230px;
+        left: 600px;
+    }
+    
+    .robot .hand {
+        margin: 0px;
+        position: relative;
+        top: 100%;
+        width: 50px;
+        height: 30px;
+    }
+
+    
+    #head {
+        width:200px;
+        height: 300px;
+        transform: scale(1.2) translate(20px,-20px);
+  
+    }
+    .svg_head {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+
+
+    #body {
+      width:200px;
+      height: 300px;
+      transform: scale(1.2) translate(20px,-20px);
+
+  }
+  .svg_body {
+      fill: none;
+      stroke: #1d1d1b;
+      stroke-miterlimit: 10;
+    }
+
+
+    #arm_right {
+        width:200px;
+        height: 300px;
+        transform: scale(1.4) translate(-120px,-30px);
+    }
+
+    .svg_arm_right {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+
+      #arm_left {
+        width:200px;
+        height: 300px;
+        transform:translate(20px,-40px) scale(-1,1) scale(1.4) ;
+    }
+    .svg_arm_left {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
