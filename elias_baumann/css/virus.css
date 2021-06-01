@@ -26,41 +26,30 @@ html, body {
     animation-name: shutdown;
     animation-fill-mode: forwards;
   }
-  
-  @keyframes shutdown {  
-    50% {
-      transform: scaleY(0.005);
-      background-color: white;
-    }
-    
-    90% {
-      transform: scaleX(0.001) scaleY(0.005);
-      background-color: white;
-      opacity: 1;
-    }
-    
-    100% {
-      transform: scaleX(0.001) scaleY(0.005);
-      background-color: white;
-      opacity: 0;
-    }
+
+  .back-text {
+    text-decoration: underline;
   }
-  
+
+  button {
+    appearance: auto;
+    background:none;
+    margin: 0em;
+    font-family: Nokia, monospace;
+    /* padding: 1px 6px; */
+    border:none;
+    color: white;
+}
+
   #power {
     cursor: pointer;
-    opacity: 0.2;
+    opacity: 0.4;
   }
   
   #power:hover {
     opacity: 1;
     transition: opacity 0.5s; 
   }
-
-  @font-face {
-    font-family: 'nokia';
-    src: url(../font/nokiafc22.ttf); 
-    font-style: normal;
-}
 
 a {
     cursor: url(../img/pointer-small.png) 10 0,pointer;
@@ -163,7 +152,47 @@ a {
     animation: flicker 0.07s infinite;
 }
 
+.text-after {
+    /* color: #06FF00; */
+    color: #9D9ACC;
+    position: absolute;
+}
+
+.text-after-effect {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 @keyframes flicker {
   from {opacity: 0;}
   to {opacity: 0.5;}
+}
+
+@keyframes shutdown {  
+  50% {
+    transform: scaleY(0.005);
+    background-color: white;
+  }
+  
+  90% {
+    transform: scaleX(0.001) scaleY(0.005);
+    background-color: white;
+    opacity: 1;
+  }
+  
+  100% {
+    transform: scaleX(0.001) scaleY(0.005);
+    background-color: white;
+    opacity: 0;
+  }
+}
+
+@font-face {
+  font-family: 'nokia';
+  src: url(../font/nokiafc22.ttf); 
+  font-style: normal;
 }
