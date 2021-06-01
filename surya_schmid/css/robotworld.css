@@ -39,7 +39,7 @@
       animation: gradient 10s ease infinite;
       border-radius: 2%;
       z-index: -1;
-      box-shadow: 0px 0px 100px 10px #d8b3f7;
+      box-shadow: 0px 0px 100px 10px #31155e;
           }
 
       
@@ -139,7 +139,7 @@
             justify-content: center;
             margin: auto;
             /* top: 120vh; */
-            top: 20vh;
+            top: 28vh;
 
            
 
