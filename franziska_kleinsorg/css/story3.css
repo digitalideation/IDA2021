@@ -91,6 +91,8 @@ span {
     border: solid white 2px;    
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.1);
+    display: inline;
+    display: inline-block;
 }
 
 .player:hover {
