@@ -5,7 +5,8 @@
 body {
     font-family: 'Amiko', sans-serif; 
     background: rgb(219,200,243);
-    /* font-family: 'Yatra One', cursive; */
+    height: 100%;
+    margin: 0;
 }
 
 h1 {
@@ -23,6 +24,14 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+h3 {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  margin-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -66,6 +75,7 @@ a:hover {
 /* GRID GALLERY */
 
 .row {
+
   display: flex;
   flex-wrap: wrap;
 }
@@ -105,4 +115,5 @@ a:hover {
  visibility: visible;
  opacity: 1; 
  background-color: rgba(0, 0, 0, 0.6);
+ box-shadow: 0px 0px 100px 100px rgba(0, 0, 0, 0.6);
 }
