@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/day17.css">
+  <title>IDA Modul - Firstname Lastname</title>
+  <!-- <style>
+        .robot * {
+            border: 1px solid #1e90ff;
+            padding: 1rem;
+            margin: .25rem;
+        }
+    </style> -->
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>My Robot</li>
+      <li><a href="song.html">My Song</a></li>
+      <li><a href="process/index.html">Process</a></li>
+    </ul>
+  </nav>
+  <div class="robot">
+    <div class="leg leg--left section" id="section_1">
+      <div class="foot">
+        <img src="img/Queen_Logo_prov.png" alt="">
+        <div class="sub_nav">
+          <ul>
+            <li><a href="#section_2"> Die Band</a></li>
+            <li><a href="#section_3"> Bandmitglieder </a></li>
+            <li><a href="#section_4"> Songs</a></li>
+          </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="leg leg--right section" id="section_2">
+      <div class="foot">
+        <img src="img/images-2.jpeg" alt="">
+        <div class="text-box">
+          <h2>Die  Band</h2>
+          <p> Queen ist eine 1970 gegründete britische Rockband. Ihre Besetzung mit Freddie Mercury, Brian May, Roger Taylor und John Deacon blieb zwei Jahrzehnte lang unverändert. Die Musik der Gruppe ist durch große stilistische Vielfalt gekennzeichnet, und alle Bandmitglieder waren wesentlich am Songwriting beteiligt.</p>
+        </div>
+      </div>
+    </div>
+    <div class="body section" id="section_3">
+      <div class="band-members">
+        <div class="band-member" id="band-member_1">
+          <img src="img/Bandmember-02.png" alt="">
+          <div class="bandmember-textbox-hide" id="bandmember-textbox_1">
+            <h3>Roger Meddows Taylor</h3>
+            <h4>26.07.1949 – </h4>
+            <p> Roger Meddows Taylor OBE 
+              ist ein britischer Multiinstrumentalist, Sänger, Gründungsmitglied und – 
+              wie die übrigen drei Bandmitglieder – Komponist der Rockgruppe Queen. Seine bekanntesten 
+              Beiträge zu deren Liederkatalog sind unter anderem die Stücke Radio Ga Ga, A Kind of Magic, 
+              Breakthru, These Are the Days of Our Lives und I’m in Love with My Car. </p>
+          </div>
+        </div>
+
+        <div class="band-member" id="band-member_2">
+          <img src="img/Bandmember-03.png" alt="">
+          <div class="bandmember-textbox-hide" id="bandmember-textbox_1">
+            <h3> John Richard Deacon</h3>
+            <h4>19.08.1951 – </h4>
+            <p> John Richard Deacon ist ein ehemaliger 
+              britischer Musiker. Er wurde als Bassist der britischen Rockband Queen bekannt, für die er 
+              auch Songs wie Another One Bites the Dust, I Want to Break Free und Spread Your Wings schrieb. 
+              Er ist seit 1997 nicht mehr bei Konzerten aufgetreten.</p>
+          </div>
+        </div>
+
+        <div class="band-member" id="band-member_3">
+          <img src="img/Bandmember-04.png" alt="">
+          <div class="bandmember-textbox-hide" id="bandmember-textbox_1">
+            <h3>Brian Harold May</h3>
+            <h4>19.07.1947 – </h4>
+            <p> May war zusammen mit Leadsänger Freddie Mercury und Schlagzeuger Roger Taylor 
+              Gründungsmitglied von Queen, nachdem er zuvor mit Taylor in der Band Smile gespielt hatte. 
+              Nach der Komplettierung der Besetzung durch Bassist John Deacon etablierten sich Queen als eine der 
+              führenden britischen Rockbands. </p>
+          </div>
+        </div>
+
+        <div class="band-member" id="band-member_4">
+          <img src="img/Bandmember-05.png" alt="">
+          <div class="bandmember-textbox-hide" id="bandmember-textbox_1">
+            <h3>Freddie Mercury</h3>
+            <h4>05.09.1946 – 24.11.1991</h4>
+            <p> Freddie Mercury  war ein britischer Musiker und einer der bedeutendsten Rocksänger 
+              der 1970er und 80er Jahre. Er wurde als Mitbegründer, Komponist und Leadsänger der Band Queen bekannt. Mercury
+              komponierte Welthits wie Bohemian Rhapsody (1975) oder We Are the Champions (1977).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="head section" id="section_4">
+      <div class="eye eye--left">
+        <button type="button" onclick="textFaerben('mercury')">Mercury</button>
+        <button type="button" onclick="textFaerben('taylor')">Taylor</button>
+        <button type="button" onclick="textFaerben('may')">May</button>
+        <button type="button" onclick="textFaerben('deacon')">Deacon</button>
+        <button type="button" onclick="reset()">Reset</button>
+      </div>
+      <div class="eye eye--right">
+        <h4 class="songtitel mercury">The March of the Black Queen	</h4>
+        <h4 class="songtitel taylor">Fun It</h4>
+        <h4 class="songtitel taylor">Rock It – Prime Jive</h4>
+        <h4 class="songtitel may">Sail Away Sweet Sister</h4>
+        <h4 class="songtitel may">Flash’s Theme</h4>
+        <h4 class="songtitel taylor">Action This Day</h4>
+        <h4 class="songtitel may">Who Wants to Live Forever</h4>
+        <h4 class="songtitel may">I Want It All</h4>
+        <h4 class="songtitel taylor">Ride The Wild Wind</h4>
+        <h4 class="songtitel may mercury">Mother Love</h4>
+        <h4 class="songtitel may mercury taylor">Let Me Live</h4>
+        Action This Day
+      </div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <!--div class="arm arm--left section" id="section_5">
+      <div class="hand"></div>
+    </div>
+    <div class="arm arm--right section" id="section_6">
+      <div class="hand"></div>
+    </div> -->
+  </div>
+
+
+  <script src="js/songtitel.js"></script>
+</body>
+
+</html>
