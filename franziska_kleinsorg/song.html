@@ -5,26 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/song.css">
-  <title>IDA Modul - Franziska Kleinsorg</title>
+  <link rel="stylesheet" href="css_final/ultimate.css">
+  <meta name="author" content="Franziska Kleinsorg">
+  <title>Song - call me by your name</title>
 </head>
 
 <body>
-  <nav>
-      <a class="navi" href="index.html">Home</a><br>
-      <a class="navi" target="_blank" href="story1.html">Story</a><br>
-      <a class="active" href="song.html">My Song</a><br>
-      <a class="navi" href="process/index.html">Process</a><br>
-  </nav>
-  <h1>Montero (Call me by your name) - Lil Nas X</h1>
-  
-<div class="row">
 
-  <div class="column1">
-    <audio src="audio/cmbyn.mp3" controls></audio>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Back to Start</a>
+    <a href="song.html"  class="active">About Song</a>
+    <a href="processindex.html">Process</a>
+    <a href="https://ida2021-staging.netlify.app/">Overview</a>
   </div>
 
-  <div class="column2">
+  <h4>Montero (Call Me By Your Name) - Lil Nas X</h4>
+
+
+  <div class="row">
+  <div class="column">
     <div class="p1">
       I caught it bad just today <br>
       You hit me with a call to your place<br>
@@ -91,14 +90,18 @@
       I do not care if you lyin'
     </div>
   </div>
-
-
-
-  <div class="column3">
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column">
+      <div class="player">
+        <audio id="myAudio" src="audio/cmbyn_short.mp3"></audio>
+        <a onClick="togglePlay()" class="trigger"> Call Me By Your Name</a>
+      </div>
+  </div>
   </div>
 
-</div>
-
 </body>
+
+<script src="js/song.js"></script>
 
 </html>

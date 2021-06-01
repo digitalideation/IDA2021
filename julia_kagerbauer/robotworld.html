@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/julia_kagerbauer/css/robotworld.css">
-  <script src="/julia_kagerbauer/css/day14.js"></script>
-  <title>IDA Modul - Firstname Lastname</title>
+  <script src="/julia_kagerbauer/js/day19.js"></script>
+  <title>IDA Modul - Julia Kagerbauer</title>
   <style>
 
 
@@ -25,8 +25,79 @@
       <li><a href="process/index.html">Process</a></li>
     </ul>
   </nav>
-  <main>
-  <div class="robot">
+
+
+
+  <div id="denver-parallax">
+
+    <div id="parallax" class="parallax">
+
+        <div class="group">
+          <div id="sun" class="layer">
+            <svg viewBox="-72 10 362 200" version="1.1">
+      <circle id="cSun" cy="45" cx="131" r="31"></circle>
+    </svg>
+        </div>
+
+            <div id="mountain4" class="layer rosa">
+            </div>
+
+            <div id="mountain3" class="layer lila">
+            </div>
+
+            <div id="mountain2" class="layer orange">
+            </div>
+
+            <div id="mountain1" class="layer blau">
+            </div>
+
+            <div id="city5" class="layer violett">
+            </div>
+
+            <div id="city4" class="layer blau2">
+            </div>
+
+            <div id="city3" class="layer hellorange">
+            </div>
+
+            <div id="city2" class="layer hellrosa">
+        
+                <div class="city2-front">
+
+                </div>
+
+            </div>
+            <div id="city1" class="layer gelb">
+                <div class="city-front limit">
+
+                </div>
+            </div>
+    
+
+</div>
+</div>
+</div>
+
+<div class="scroll"> <span class="up"> &#10158; </span> <br> scroll here <br> <span class="down"> &#10157; </span>  </div>
+
+<div class="rave">
+
+<div class="rave1"></div>
+<div class="rave2"></div>
+<div class="rave3"></div>
+<div class="rave4"></div>
+<div class="rave5"></div>
+<div class="rave6"></div>
+<div class="rave7"></div>
+
+</div>
+<div class="robot">
+  
+  <div class="arm arm--left">
+      <div class="hand">
+        
+      </div>
+    </div>
     <div class="leg leg--left">
       <div class="foot"></div>
     </div>
@@ -35,11 +106,7 @@
       <div class="foot"></div>
     </div>
     
-    <div class="arm arm--left">
-      <div class="hand">
-        
-      </div>
-    </div>
+    
 
     <div class="body">
     </div>
@@ -52,7 +119,20 @@
       </div>
     </div>
   </div>
-</main>
+
+
+  <div class="button">
+    <button onclick="toggleAnimation()" class="startDance">Make me Dance!</button>
+    <button onclick="toggleAnimation()" class="stopDance">Make me Stop!</button>
+    <audio class="musicplayer"><source src="/julia_kagerbauer/mpeg/riton-kah-lo-ginger-visualiser.mp3"></audio>
+  </div>
+
+  <div class="sternen"></div>
+
+
+ 
+
+
 </body>
 
 </html>

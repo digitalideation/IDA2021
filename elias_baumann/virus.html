@@ -10,10 +10,19 @@
 </head>
 <body class="tv-effect">
   <div id="container">
-    <div id="power">
-      <a id="circle">Click for going back</a>
-    </div>
+    <p class="failed-text">Download failed!</p>
+    <button id="ASong" onClick="playPause()">
+      <audio src="audio/feelslikesummer.mp3" autoplay loop></audio>
+      <div id="power">
+        <a class="back-text" id="circle">Go back and try again</a>
+      </div>
+  </button>
   </div>
+
+  <div class="text-after" id="after">
+    <p>You failed trying to safe the world. Your computer caught a virus and is not able to work anymore. <br><br> Click start for restart...</p>
+  </div>
+  
   <footer class="footer">
     <a href="index.html" class="footer-start">
         <img src="img/icon/start-button.png" class="footer-start-icon">

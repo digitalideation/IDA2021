@@ -56,23 +56,13 @@ ul {
     text-align: center;
   }
 
-
 body{
-    font-size:16px;
     background-color: rgb(250, 167, 225);
-    background-image: url(/julia_kagerbauer/images/waves.svg);
     background-size: cover;
     overflow-x: hidden;
+    color: rgb(0, 0, 0);
 
 }
-.dark-mode {
-    font-size:16px;
-    background-color: black;
-    background-image: url(/julia_kagerbauer/images/schichten_night.svg);
-    background-size: cover;
-    overflow-x: hidden;
-    color: black;
-  }
 
 .knopf1 {
     position: fixed;
@@ -92,7 +82,7 @@ body{
 
 .container1 {
     margin:20px 0; 
-    color:#fff; 
+    color: var(--color);
     font-size:26px; 
     font-family: 'Orbitron', sans-serif;  
     font-weight: 100;
@@ -114,7 +104,7 @@ p{
 .container1:hover > .satz5 { text-align: left;} 
 .container1:hover > .satz6 { text-align: right;} 
 .container1:hover > .satz7 { text-align: left;}  
-.container1:hover { color:rgb(0, 0, 0);}
+.container1:hover { color:rgb(255, 255, 255);}
 
 .container2 {
     margin:20px 0; 
@@ -185,8 +175,12 @@ p{
 
 h1{margin:0; line-height: 100px;text-align: center; font-size: 96px;}
 
-.block1{background: transparent;}
-.block1  h1{font-family: 'Orbitron', sans-serif;  color:rgba(0, 0, 0, 0);letter-spacing:.4rem;font-style: italic; 
+.block1{
+    color:var(--color);
+    background: transparent;}
+.block1  h1{
+    
+font-family: 'Orbitron', sans-serif;  color:rgba(0, 0, 0, 0);letter-spacing:.4rem;font-style: italic; 
 
 text-shadow:-2px 0 1px #0f0f0f, -4px 0 0 #000000,  -6px 0 1px #fff,-6px 1px 1px #fff,-6px 2px 1px #fff, 0px 2px 1px #fff, 0px 1px 0px #fff, 0px 0 1px #fff,-6px -1px 1px #fff,
     -6px -2px 0px #fff, 0px -1px 0px #fff
@@ -275,29 +269,19 @@ h1 {
     transform-origin: bottom;
 }
 
+
 .waves {
-    width:120%;
-    height: 500%;
+    width: 120%;
+    height: 200%;
     position: absolute;
     left: -10px;
-    background-image:url(/julia_kagerbauer/images/waves.svg);
+    top: 20px;
+    background-image: url(/julia_kagerbauer/images/waves.svg);
     background-repeat: no-repeat;
     background-size: cover;
     animation: waves 2s ease-in-out infinite alternate;
-    
 }
 
-.night {
-    width:120%;
-    height: 500%;
-    position: absolute;
-    left: -10px;
-    background-image:url(/julia_kagerbauer/images/schichten_night.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation: waves 2s ease-in-out infinite alternate;
-    
-}
 
     @keyframes titel {
 

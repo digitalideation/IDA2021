@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/process.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='favicon/favicon-32x32.ico' />
+
+    <title>Elias Robot</title>
+</head>
+
+<body class="tv-effect">
+    <main>
+
+        <div class="desk-icons">
+            <a href="index.html" class="desk-start app">
+                <img src="img/icon/start.png" class="start-icon icon" alt="Start Icon">
+                <p class="start-text">Start</p>
+            </a>
+            <a href="menu.html" class="desk-menu app">
+                <img src="img/icon/menu.png" class="menu-icon icon" alt="Menu Icon">
+                <p class="menu-text">Menu</p>
+            </a>
+            <button id="ASong" onClick="playPause()" class="desk-play app">
+                <audio src="audio/feelslikesummer.mp3" autoplay loop></audio>
+                <img src="img/icon/play.png" class="play-icon icon" alt="Play Icon">
+                <p class="play-text">Play Song</p>
+            </button>
+        </div>
+
+
+        <div id="mydiv" class="desk-window tv-effect">
+            <div id="mydivheader" class="window-header">
+                <p class="header-text">Process of my project</p>
+                <div class="header-icons">
+                    <div class="header-minimize">
+                        <!-- <span class="fa-minus"></span> -->
+                        <img src="img/minimize.svg" class="minimize-icon">
+                    </div>
+                    <div class="header-big">
+                        <!-- <span class="fa-square"></span> -->
+                        <img src="img/big.svg" class="big-icon">
+                    </div>
+                    <div class="header-close">
+                        <!-- <span class="fa-minus"></span> -->
+                        <img src="img/x.svg" class="close-icon">
+                    </div>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <h2 class="process-info">During my project, I've reached three important milestones. Those kind of changed my
+                    vision of my website. Everytime I've reached them, I was able to create new creative stuff and think
+                    more out of the box. Big shout out to Hanna and Nick for helping me reach my milestones.</h2>
+                <h1 class="title">Click for each milestone</h1>
+            
+            <div class="all-stones">
+                <div class="stone1">
+                    <a>
+                        <button class="milestone" onclick="toggleMe('myDIVextra2')">
+                            <img src="img/icon/prozess1.gif" alt="Process GIF" class="stone-icon">
+                            <p class="button-text">Milestone 1</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="stone2 milestone">
+                    <a>
+                        <button class="milestone" onclick="toggleMe('myDIVextra3')">
+                            <img src="img/icon/prozess1.gif" alt="Process GIF" class="stone-icon">
+                            <p class="button-text">Milestone 2</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="stone3 milestone">
+                    <a>
+                        <button class="milestone" onclick="toggleMe('myDIVextra4')">
+                            <img src="img/icon/prozess1.gif" alt="Process GIF" class="stone-icon">
+                            <p class="button-text">Milestone 3</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div id="myDIVextra2">
+            <div id="mydiv2" class="desk-window2 tv-effect">
+                <div id="mydiv2header2" class="window-header2">
+                    <p class="header-text">Moodboard</p>
+                    <div class="header-icons">
+                        <div class="header-minimize">
+                            <!-- <span class="fa-minus"></span> -->
+                            <img src="img/minimize.svg" class="minimize-icon">
+                        </div>
+                        <div class="header-big">
+                            <!-- <span class="fa-square"></span> -->
+                            <img src="img/big.svg" class="big-icon">
+                        </div>
+                        <button class="header-close-extra" onclick="toggleMe('myDIVextra2')">
+                            <img src="img/x.svg" class="close-icon close-curser">
+                        </button>
+                        <!-- <span class="fa-minus"></span> -->
+                    </div>
+                </div>
+
+                <div class="window-content-extra">
+                    <img src="img/song.png" class="moodboard-img">
+                    <p class="explain">I made three different Moodboards. But I only took one picture for each Moodboard. This one belongs to "Song" The picture is a screenshot from the actual music clip. But it fits perfectly to the song itself.</p>
+
+                    <img src="img/location.png" class="moodboard-img">
+                    <p class="explain">This picture describes the location. The best location for listening this song is a city at the sea. Hot weather and the sun is going down.</p>
+
+                    <img src="img/mood.png" class="moodboard-img">
+                    <p class="explain">The third picture describes the mood of the song. When I listen to the song, I feel myself on a beach at the golden hour.</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="myDIVextra3">
+            <div id="mydiv3" class="desk-window3 tv-effect">
+                <div id="mydiv3header3" class="window-header3">
+                    <p class="header-text">Mockup</p>
+                    <div class="header-icons">
+                        <div class="header-minimize">
+                            <!-- <span class="fa-minus"></span> -->
+                            <img src="img/minimize.svg" class="minimize-icon">
+                        </div>
+                        <div class="header-big">
+                            <!-- <span class="fa-square"></span> -->
+                            <img src="img/big.svg" class="big-icon">
+                        </div>
+                        <button class="header-close-extra" onclick="toggleMe('myDIVextra3')">
+                            <img src="img/x.svg" class="close-icon close-curser">
+                        </button>
+                        <!-- <span class="fa-minus"></span> -->
+                    </div>
+                </div>
+
+                <div class="window-content-extra">
+                    <p class="explain">asdf</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="myDIVextra4">
+            <div id="mydiv4" class="desk-window4 tv-effect">
+                <div id="mydiv4header4" class="window-header4">
+                    <p class="header-text">Default Desktop Browser</p>
+                    <div class="header-icons">
+                        <div class="header-minimize">
+                            <!-- <span class="fa-minus"></span> -->
+                            <img src="img/minimize.svg" class="minimize-icon">
+                        </div>
+                        <div class="header-big">
+                            <!-- <span class="fa-square"></span> -->
+                            <img src="img/big.svg" class="big-icon">
+                        </div>
+                        <button class="header-close-extra" onclick="toggleMe('myDIVextra4')">
+                            <img src="img/x.svg" class="close-icon close-curser">
+                        </button>
+                        <!-- <span class="fa-minus"></span> -->
+                    </div>
+                </div>
+
+                <div class="window-content-extra">
+                    <p class="explain">asdf</p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer tv-effect">
+        <a href="index.html" class="footer-start">
+            <img src="img/icon/start-button.png" class="footer-start-icon">
+        </a>
+        <div class="footer-time">
+            <p><span class="time" id="clock"></span></p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+
+</body>
+
+</html>

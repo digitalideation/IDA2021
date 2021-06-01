@@ -1,0 +1,376 @@
+:root{
+    --backgroundColor: rgb(250, 167, 225);
+    --background-image: url(/julia_kagerbauer/images/waves.svg);
+    --background-size: cover;
+    --overflow-x: hidden;
+    --color: rgb(0, 0, 0);
+    --color1: rgb(255, 255, 255);
+    --textShwadow: -2px 0 1px #0f0f0f, -4px 0 0 #000000,  -6px 0 1px #fff,-6px 1px 1px #fff,-6px 2px 1px #fff, 0px 2px 1px #fff, 0px 1px 0px #fff, 0px 0 1px #fff,-6px -1px 1px #fff,
+    -6px -2px 0px #fff, 0px -1px 0px #fff
+    ,-1px -2px 0px #fff, 1px -1px 1px #fff,  1px -1px 1px #fff,-4px -2px 0px #fff,-3px -2px 0px #fff,-4px 2px 1px #fff, -3px 2px 1px #fff,
+
+-6px 8px 0px #9B708E, -5px 7px 0px #9B708E, -4px 6px 0px #9B708E, -3px 5px 0px #9B708E, -2px 4px 0px #9B708E, -1px 3px 0px #9B708E, 0px 2px 0px #9B708E, 1px 1px 0px #9B708E,0px 3px 0px #9B708E,-8px 8px 0px #9B708E,
+    
+    
+    -6px 8px 0px #715169,-6px 9px 0px #715169, -6px 10px 0px #715169, -6px 11px 0px #715169, -6px 12px 0px #B290A9, -6px 13px 0px #B290A9, -6px 14px 0px #B290A9, -6px 15px 0px #B290A9, -6px 16px 0px #B290A9, -6px 17px 0px #B290A9, -6px 18px 0px #B290A9, -6px 19px 0px #B290A9, -6px 20px 0px #B290A9, -6px 21px 0px #B290A9, -6px 22px 0px #B290A9;
+}
+
+.night {
+    --backgroundColor: black;
+    --background-image: url(/julia_kagerbauer/images/schichten_night.svg);
+    --background-size: cover;
+    --overflow-x: hidden;
+    --color: rgb(255, 255, 255);
+    --color1: rgb(252, 80, 0);
+    --textShwadow: -2px 0 1px #ffffff, -4px 0 0 #ffffff,  -6px 0 1px rgb(83, 255, 4),-6px 1px 1px rgb(95, 230, 82),-6px 2px 1px rgb(75, 196, 102), 0px 2px 1px rgb(36, 196, 30), 0px 1px 0px rgb(77, 214, 59), 0px 0 1px rgb(35, 243, 28),-6px -1px 1px #fff,
+    -6px -2px 0px #fff, 0px -1px 0px #fff
+    ,-1px -2px 0px #fff, 1px -1px 1px #fff,  1px -1px 1px #fff,-4px -2px 0px #fff,-3px -2px 0px #fff,-4px 2px 1px #fff, -3px 2px 1px #fff,
+
+-6px 8px 0px #174417, -5px 7px 0px #174417, -4px 6px 0px #174417, -3px 5px 0px #174417, -2px 4px 0px #174417, -1px 3px 0px #174417, 0px 2px 0px #174417, 1px 1px 0px #174417,0px 3px 0px #174417,-8px 8px 0px #174417,
+    
+    
+    -6px 8px 0px #206320,-6px 9px 0px #206320, -6px 10px 0px #206320, -6px 11px 0px #206320, -6px 12px 0px #206320, -6px 13px 0px #206320, -6px 14px 0px #206320, -6px 15px 0px #206320, -6px 16px 0px #206320, -6px 17px 0px #206320, -6px 18px 0px #206320, -6px 19px 0px #206320, -6px 20px 0px #1b7c1b, -6px 21px 0px #1b7c1b, -6px 22px 0px #1b7c1b;
+  }
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+    
+    
+  }
+  
+  
+  li {
+    float:left;
+    
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: hotpink;
+    color: white;
+  }
+  
+  .active {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color:rgb(250, 167, 225);
+  }
+  
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  
+  li a {
+    display: block;
+    text-align: center;
+  }
+
+button{
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 60px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body{
+    background-color: var(--backgroundColor);
+    color: var(--color) ;
+    background-image: var(--background-image);
+    background-size: cover;
+}
+
+.block{ overflow:hidden; padding: 70px 0; position:relative; background-color: transparent;}
+
+.container1 {
+    margin:20px 0; 
+    color: var(--color);
+    font-size:26px; 
+    font-family: 'Orbitron', sans-serif;  
+    font-weight: 100;
+    text-align:center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    background-color: transparent;
+}
+
+p{
+    margin: 0;
+}
+
+.container1:hover > .satz1 { text-align: left;}
+.container1:hover > .satz2 { text-align: right;}  
+.container1:hover > .satz3 { text-align: left;} 
+.container1:hover > .satz4 { text-align: right;} 
+.container1:hover > .satz5 { text-align: left;} 
+.container1:hover > .satz6 { text-align: right;} 
+.container1:hover > .satz7 { text-align: left;}  
+.container1:hover {color: var(--color1);}
+
+.container2 {
+    margin:20px 0; 
+    color:#fff; 
+    font-size:26px; 
+    font-family: 'Orbitron', sans-serif;  
+    font-weight: 100;
+    text-align:center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+p{
+    margin: 0;
+}
+
+.container2:hover > .satz1 { text-align: left;}
+.container2:hover > .satz2 { text-align: right;}  
+.container2:hover > .satz3 { text-align: left;} 
+.container2:hover > .satz4 { text-align: right;} 
+.container2:hover > .satz5 { text-align: left;} 
+.container2:hover > .satz6 { text-align: right;} 
+.container2:hover > .satz7 { text-align: left;} 
+.container2:hover > .satz8 { text-align: right;}  
+.container2:hover > .satz9 { text-align: left;} 
+.container2:hover > .satz10 { text-align: right;} 
+.container2:hover > .satz11 { text-align: left;} 
+.container2:hover > .satz12 { text-align: right;} 
+.container2:hover > .satz13 { text-align: left;} 
+.container2:hover > .satz14 { text-align: right;}  
+.container2:hover > .satz15 { text-align: left;} 
+.container2:hover > .satz16 { text-align: right;} 
+.container2:hover > .satz17 { text-align: left;}  
+.container2:hover {color: var(--color1);}
+
+.container3 {
+    margin:20px 0; 
+    color:#fff; 
+    font-size:26px; 
+    font-family: 'Orbitron', sans-serif;  
+    font-weight: 100;
+    text-align:center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    background-color: transparent;
+}
+
+.container3:hover > .satz1 { text-align: left;}
+.container3:hover > .satz2 { text-align: right;}  
+.container3:hover > .satz3 { text-align: left;} 
+.container3:hover > .satz4 { text-align: right;} 
+.container3:hover > .satz5 { text-align: left;} 
+.container3:hover > .satz6 { text-align: right;} 
+.container3:hover > .satz7 { text-align: left;} 
+.container3:hover > .satz8 { text-align: right;}  
+.container3:hover > .satz9 { text-align: left;} 
+.container3:hover > .satz10 { text-align: right;} 
+.container3:hover > .satz11 { text-align: left;} 
+.container3:hover > .satz12 { text-align: right;} 
+.container3:hover > .satz13 { text-align: left;} 
+.container3:hover > .satz14 { text-align: right;}  
+.container3:hover > .satz15 { text-align: left;} 
+.container3:hover > .satz16 { text-align: right;} 
+.container3:hover > .satz17 { text-align: left;}  
+.container3:hover {color: var(--color1);}
+
+h1{margin:0; line-height: 100px;text-align: center; font-size: 96px;}
+
+.block1{
+    color:var(--color);
+    background: transparent;}
+.block1  h1{
+    
+font-family: 'Orbitron', sans-serif;  color:rgba(0, 0, 0, 0);letter-spacing:.4rem;font-style: italic; 
+
+text-shadow: var(--textShwadow);
+}
+
+h1 {
+    animation: titel 0.98s ease-in-out infinite alternate;
+   transform-origin: bottom;
+ }
+
+ .container1, .container2, .container3 {
+   animation: lyrics 1s ease-in-out infinite alternate;
+   transform-origin: bottom;
+   background-color: transparent;
+ }
+
+ .ingwer1 {
+    width: 10vw;
+    height:  50vw;
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    background-image: url(/julia_kagerbauer/images/körper.svg);
+    background-repeat: no-repeat;
+    animation: ingwer1 4s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+.ingwer2 {
+    width: 10vw;
+    height:  50vw;
+    position: absolute;
+    top: 60%;
+    right: -20%;
+    background-image: url(/julia_kagerbauer/images/kopf.svg);
+    background-repeat: no-repeat;
+    animation: ingwer2 5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+.ingwer3 {
+    width: 20vw;
+    height:  50vw;
+    position: absolute;
+    top: 5%;
+    left: -20%;
+    background-image: url(/julia_kagerbauer/images/arm_links.svg);
+    background-repeat: no-repeat;
+    animation: ingwer3 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+.ingwer4 {
+    width: 20vw;
+    height:  50vw;
+    position: absolute;
+    top: 60%;
+    right: -20%;
+    background-image: url(/julia_kagerbauer/images/arm_rechts.svg);
+    background-repeat: no-repeat;
+    animation: ingwer4 3s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+.special1 {
+    animation: special1 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+
+
+
+
+ @keyframes titel {
+
+    0% {
+        transform: translateY(0%) scaleY(1);
+    }
+    50%{
+        transform:  translateY(3%) scaleY(1.1);
+        }
+    100%{
+        transform: translateY(3%) scaleY(1.2) skewX(20deg);
+        }
+    
+
+}
+
+@keyframes lyrics {
+    from{
+        transform: translateY(3%) skewY(-5deg);
+        }
+        to{
+        transform: translateY(0%) skewY(5deg);
+        }
+
+}
+
+@keyframes ingwer1 {
+    0% {
+        transform: translate(0px,0px);
+    }
+
+    50% {
+        transform: translate(1000px,100px);
+    }
+
+    100% {
+        transform: translate(-700px,-00px);
+    }
+}
+
+@keyframes ingwer2 {
+    0% {
+        transform: translate(0px,0px);
+    }
+
+    50% {
+        transform: translate(-400px,500px);
+    }
+
+    100% {
+        transform: translate(-1000px,-200px);
+    }
+}
+
+@keyframes ingwer3 {
+    0% {
+        transform: translate(0px,100px);
+    }
+
+    50% {
+        transform: translate(1000px,700px);
+    }
+
+    100% {
+        transform: translate(10px,900px);
+    }
+}
+
+@keyframes ingwer4 {
+    0% {
+        transform: translate(0px,0px);
+    }
+
+    50% {
+        transform: translate(-400px,500px);
+    }
+
+    100% {
+        transform: translate(-1000px,-200px);
+    }
+}
+
+@keyframes waves {
+    from {
+        transform: translate(-200px,0px);
+    }
+
+    to {
+        transform: translate(0px,0px);
+    }
+}

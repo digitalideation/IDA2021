@@ -1,8 +1,32 @@
+
+
 body{
   font-family: 'Orbitron', sans-serif;
   background-color: rgb(250, 167, 225);
   color: white;
   margin: 1%;
+  background: black radial-gradient(
+    circle farthest-side at
+      calc(var(--mouseX, 1) * 1px)
+      calc(var(--mouseY, 1) * 1px),
+    hsl(var(--mouseX, 5), 75%, 75%),
+    hsl(var(--mouseY, 45), 75%, 75%)
+  );
+}
+
+/* the rest of the code here is
+   for making the demo look pretty */
+
+html {
+  height: 100%;
+}
+
+body:after {
+  background: hsla(0, 0%, 0%, .3);
+  color: #fff;
+  padding: 10px;
+  align-self: center;
+  pointer-events: none;
 }
 
 h1 {
@@ -14,17 +38,44 @@ h1 {
     right: 2%;
     color:white;
   }
+
+a {
+  text-decoration: none;
+}
   
 
 p {
   font-size: 70px;
-  margin-top: 20%;
+  margin-top: 17%;
   text-align: center;
   color: white;
   animation-name: farben;
   animation-duration: 8s;
   animation-iteration-count:infinite ;
   animation-direction: alternate;
+  text-shadow: -2px 0 1px #8d8a8a, -4px 0 0 #c9c9c9,  -6px 0 1px #fff,-6px 1px 1px #fff,-6px 2px 1px #fff, 0px 2px 1px #fff, 0px 1px 0px #fff, 0px 0 1px #fff,-6px -1px 1px #fff,
+  -6px -2px 0px #fff, 0px -1px 0px #fff
+  ,-1px -2px 0px #fff, 1px -1px 1px #fff,  1px -1px 1px #fff,-4px -2px 0px #fff,-3px -2px 0px #fff,-4px 2px 1px #fff, -3px 2px 1px #fff,
+
+-6px 8px 0px #9B708E, -5px 7px 0px #9B708E, -4px 6px 0px #9B708E, -3px 5px 0px #9B708E, -2px 4px 0px #9B708E, -1px 3px 0px #9B708E, 0px 2px 0px #9B708E, 1px 1px 0px #9B708E,0px 3px 0px #9B708E,-8px 8px 0px #9B708E,
+  
+  
+  -6px 8px 0px #715169,-6px 9px 0px #715169, -6px 10px 0px #715169, -6px 11px 0px #715169, -6px 12px 0px #B290A9, -6px 13px 0px #B290A9, -6px 14px 0px #B290A9, -6px 15px 0px #B290A9, -6px 16px 0px #B290A9, -6px 17px 0px #B290A9, -6px 18px 0px #B290A9, -6px 19px 0px #B290A9, -6px 20px 0px #B290A9, -6px 21px 0px #B290A9, -6px 22px 0px #B290A9;
+}
+
+p:hover {
+
+  text-shadow: -2px 0 1px #000000, -4px 0 0 #000000,  -6px 0 1px #fff,-6px 1px 1px #fff,-6px 2px 1px #fff, 0px 2px 1px #fff, 0px 1px 0px #fff, 0px 0 1px #fff,-6px -1px 1px #fff,
+  -6px -2px 0px #fff, 0px -1px 0px #fff
+  ,-1px -2px 0px #fff, 1px -1px 1px #fff,  1px -1px 1px #fff,-4px -2px 0px #fff,-3px -2px 0px #fff,-4px 2px 1px #fff, -3px 2px 1px #fff,
+
+-6px 8px 0px #9B708E, -5px 7px 0px #9B708E, -4px 6px 0px #9B708E, -3px 5px 0px #9B708E, -2px 4px 0px #9B708E, -1px 3px 0px #9B708E, 0px 2px 0px #9B708E, 1px 1px 0px #9B708E,0px 3px 0px #9B708E,-8px 8px 0px #9B708E,
+  
+  
+  -6px 8px 0px #715169,-6px 9px 0px #715169, -6px 10px 0px #715169, -6px 11px 0px #715169, -6px 12px 0px #B290A9, -6px 13px 0px #B290A9, -6px 14px 0px #B290A9, -6px 15px 0px #B290A9, -6px 16px 0px #B290A9, -6px 17px 0px #B290A9, -6px 18px 0px #B290A9, -6px 19px 0px #B290A9, -6px 20px 0px #B290A9, -6px 21px 0px #B290A9, -6px 22px 0px #B290A9;
+
+  animation-name: farben2;
+
 }
 
 ul {
@@ -91,11 +142,25 @@ ul {
     10% {color: rgb(152, 193, 255);}
     20% {color: rgb(144, 146, 255);}
     30% {color: rgb(149, 137, 255);}
-    40% {color: rgb(132, 0, 255);}
-    50% {color: rgb(215, 57, 247);}
-    60% {color: rgb(255, 0, 98);}
-    70% {color: rgb(255, 0, 98);}
+    40% {color: rgb(176, 122, 226);}
+    50% {color: rgb(213, 140, 228);}
+    60% {color: rgb(221, 123, 160);}
+    70% {color: rgb(255, 172, 204);}
     80% {color: rgb(255, 138, 92);}
     90% {color: rgb(253, 161, 132);}
     100% {color: white;}
+  }
+
+  @keyframes farben2 {
+    0% {color:rgb(0, 0, 0);}
+    10% {color: rgb(0, 102, 255);}
+    20% {color: rgb(4, 7, 189);}
+    30% {color: rgb(174, 0, 255);}
+    40% {color: rgb(204, 0, 255);}
+    50% {color: rgb(97, 0, 189);}
+    60% {color: rgb(255, 0, 179);}
+    70% {color: rgb(255, 60, 0);}
+    80% {color: rgb(21, 255, 0);}
+    90% {color: rgb(0, 255, 221);}
+    100% {color: rgb(0, 0, 0);}
   }
