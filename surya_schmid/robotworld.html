@@ -45,17 +45,22 @@
         content: '';
         display: block;
         position: absolute;
-        width: 100px;
-        height: 100px;
-        left: -50px;
-        top: -50px;
-        border-radius: 120px;
+        width: 20rem;
+        height: 20rem;
+        bottom: -8rem;
+        border-radius: 300px;
         box-shadow: 0px 0px 100px 10px #ff4a46;
       }
 
       .button {
         cursor: pointer;
       
+      }
+
+      button{
+        position: absolute;
+        top: 10rem;
+        left: 10rem;
       }
   /* ----------------------- MOVE ON MUSIC -----------------------> */
 </style>
@@ -96,7 +101,7 @@
       <a class="menu home1" href="index.html">Home</a>
       <a class="menu song1" href="song.html">My Song</a>
       <a class="menu robot1" href="robotworld.html">My Robot</a>
-      <a class="menu process1" href="index.html">Process</a>
+      <a class="menu process1" href="process/index.html">Process</a>
     </div>
 
   </div>
@@ -113,15 +118,16 @@
 <!---------------- The overlay ---------------->
 
 <!----------------------- AUDIO ----------------------->
-  <section>
+  <section >
     <audio src="process/audio/head&heart.mp3">
       Your browser does not support the
       <code>audio</code> element.
     </audio>
     
     
-    <a onclick="togglePlay()" class="button trigger">Dance</a>
+    <a onclick="togglePlay()" class="button trigger animating">Dance</a>
   </section>
+
 <!-----------------------  AUDIO ----------------------->
 
 <!-----------------------  ROBOT ----------------------->
