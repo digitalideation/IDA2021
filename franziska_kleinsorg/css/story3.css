@@ -34,6 +34,15 @@ a:hover {
     background: linear-gradient(180deg, rgba(219,200,243,1) 0%, rgba(163,95,134,1) 10%, rgba(143,86,122,1) 16%, rgba(92,63,92,1) 17%, rgba(43,28,46,1) 24%, rgba(29,11,13,1) 31%, rgba(43,15,16,1) 38%, rgba(84,27,23,1) 39%, rgba(124,39,34,1) 48%, rgba(150,46,40,1) 57%, rgba(212,48,30,1) 70%, rgba(255,47,0,1) 91%, rgba(255,158,0,1) 100%);
 }
 
+div.pole {
+    position: fixed;
+    left: 50%;
+    height: auto; 
+    width: 15px;
+    top: 0px;
+    z-index: 2;
+}
+
 span {
     position: absolute;
     display: block;
@@ -43,10 +52,12 @@ span {
     background-color:rgb(80, 80, 80);
   }
 
-.pole {
-    left: 50%;
-    position: fixed;
-} 
+div.dancer1 {
+    width: 450px;
+    height: auto;
+    z-index: 3;
+    position: relative;
+}
 
 .snake {
     position: fixed;
