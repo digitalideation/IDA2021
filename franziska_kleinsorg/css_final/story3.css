@@ -19,6 +19,8 @@ h1 {
 a {
     text-decoration: none;
     color: white;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 a:hover {
@@ -61,6 +63,8 @@ div.dancer1 {
 
 .snake {
     position: fixed;
+    top: 8px;
+    right: 16px;
     width: 15rem;
     height: 15rem;
 }
@@ -97,14 +101,17 @@ content: '▶';
 
 .player {
     position: fixed;
-    top: 8px;
-    right: 16px;
-    font-size: 18px;
-    border: solid white 2px;    
-    padding: 15px;
+    top: 10px;
+    left: 10px;   
+    padding: 7px 15px;
+    border: solid rgba(255, 255, 255, 0.5) 1px;
     background-color: rgba(0, 0, 0, 0.1);
     display: inline;
     display: inline-block;
+}
+
+.player:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -115,18 +122,14 @@ content: '▶';
     left: calc(50% + 20px);
 }
 
-.scrolldown {
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    height: 80px;
-    width: auto;
+a.navi {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-transform: none;
 }
-.scrollup {
-position: absolute;
-top: 14920px;
-right: 50%;
-height: 80px;
-width: auto;
-transform: rotate(180deg);
+
+a.navi:hover {
+    font-style: italic;
+    cursor: pointer;
 }
