@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/day24.css">
+  <link rel="stylesheet" href="../../css/day17.css">
   <title>IDA Modul - Firstname Lastname</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
-  <script src="https://cdn.rawgit.com/jasondavies/d3-cloud/v1.2.1/build/d3.layout.cloud.js"></script>
   <!-- <style>
         .robot * {
             border: 1px solid #1e90ff;
@@ -21,11 +19,10 @@
 <body>
   <nav>
     <ul>
-      <li><a href="https://ida2021-staging.netlify.app/">Netlify</a></li>
       <li><a href="index.html">Home</a></li>
       <li>My Robot</li>
       <li><a href="song.html">My Song</a></li>
-      <li><a href="process/index.html">Process</a></li>
+      <li><a href="../index.html">Process</a></li>
     </ul>
   </nav>
   <div class="robot">
@@ -127,22 +124,8 @@
       <div class="nose"></div>
       <div class="mouth"></div>
     </div>
-    <div class="arm arm--left section" id="section_5">
-      <form>
-        <div class="formBox">
-            <label for="title">Welches Gefühl löst der Song bei dir aus?</label>
-            <input type="text" id="title" placeholder="Title"/>
-        </div>
-        <div class="formBox">
-            <button id="btn">Click to Add</button>
-        </div>
-        <div id="msg">
-            <pre></pre>
-        </div>
-    </form>
-      <div class="hand" id="cloud">
-
-      </div>
+    <!--div class="arm arm--left section" id="section_5">
+      <div class="hand"></div>
     </div>
     <div class="arm arm--right section" id="section_6">
       <div class="hand"></div>
@@ -151,7 +134,6 @@
 
 
   <script src="js/songtitel.js"></script>
-  <script src="js/cloud_chart.js"></script>
 </body>
 
 </html>
