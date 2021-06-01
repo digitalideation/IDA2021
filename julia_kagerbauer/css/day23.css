@@ -1,82 +1,10 @@
-
-
-h2 {
-    font-size: 20px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    color:white;
-    font-family: 'Orbitron', sans-serif;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:transparent;
-    position: relative;
-  }
-
-  
-  li {
-    float:left;
-    position: relative;
-    display: flexbox;
-    
-  }
-  
-  li a {
-    position: relative;
-    display: flexbox;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: var(--color2);
-    color: white;
-  }
-
-  .active {
-    display: flexbox;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    background-color: hotpink;
-  }
-
-  ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style-type: none;
-    margin: 10px;
-    padding: 0;
-    width: 100%;
-    display: flexbox;
-    flex-direction:row;
-  }
-
-  li a {
-    display: block;
-    text-align: center;
-  }
-
-  :root{
+:root{
     --backgroundColor: rgb(250, 167, 225);
     --background-image: url(/julia_kagerbauer/images/waves.svg);
     --background-size: cover;
     --overflow-x: hidden;
     --color: rgb(0, 0, 0);
     --color1: rgb(255, 255, 255);
-    --color2: hotpink;
     --textShwadow: -2px 0 1px #0f0f0f, -4px 0 0 #000000,  -6px 0 1px #fff,-6px 1px 1px #fff,-6px 2px 1px #fff, 0px 2px 1px #fff, 0px 1px 0px #fff, 0px 0 1px #fff,-6px -1px 1px #fff,
     -6px -2px 0px #fff, 0px -1px 0px #fff
     ,-1px -2px 0px #fff, 1px -1px 1px #fff,  1px -1px 1px #fff,-4px -2px 0px #fff,-3px -2px 0px #fff,-4px 2px 1px #fff, -3px 2px 1px #fff,
@@ -93,16 +21,15 @@ ul {
     --background-size: cover;
     --overflow-x: hidden;
     --color: rgb(255, 255, 255);
-    --color1: rgb(255, 0, 212);
-    --color2: rgb(255, 0, 212);
-    --textShwadow: -2px 0 1px #ffffff, -4px 0 0 #ffffff,  -6px 0 1px rgb(0, 0, 0),-6px 1px 1px rgb(0, 0, 0),-6px 2px 1px rgb(39, 39, 39), 0px 2px 1px rgb(34, 34, 34), 0px 1px 0px rgb(41, 41, 41), 0px 0 1px rgb(53, 53, 53),-6px -1px 1px #fff,
+    --color1: rgb(252, 80, 0);
+    --textShwadow: -2px 0 1px #ffffff, -4px 0 0 #ffffff,  -6px 0 1px rgb(83, 255, 4),-6px 1px 1px rgb(95, 230, 82),-6px 2px 1px rgb(75, 196, 102), 0px 2px 1px rgb(36, 196, 30), 0px 1px 0px rgb(77, 214, 59), 0px 0 1px rgb(35, 243, 28),-6px -1px 1px #fff,
     -6px -2px 0px #fff, 0px -1px 0px #fff
     ,-1px -2px 0px #fff, 1px -1px 1px #fff,  1px -1px 1px #fff,-4px -2px 0px #fff,-3px -2px 0px #fff,-4px 2px 1px #fff, -3px 2px 1px #fff,
 
--6px 8px 0px #3b3b3b, -5px 7px 0px #3b3b3b, -4px 6px 0px #3b3b3b, -3px 5px 0px #3b3b3b, -2px 4px 0px #3b3b3b, -1px 3px 0px #3b3b3b, 0px 2px 0px #3b3b3b, 1px 1px 0px #3b3b3b,0px 3px 0px #3b3b3b,-8px 8px 0px #3b3b3b,
+-6px 8px 0px #174417, -5px 7px 0px #174417, -4px 6px 0px #174417, -3px 5px 0px #174417, -2px 4px 0px #174417, -1px 3px 0px #174417, 0px 2px 0px #174417, 1px 1px 0px #174417,0px 3px 0px #174417,-8px 8px 0px #174417,
     
     
-    -6px 8px 0px #535353,-6px 9px 0px #535353, -6px 10px 0px #535353, -6px 11px 0px #535353, -6px 12px 0px #535353, -6px 13px 0px #535353, -6px 14px 0px #696969, -6px 15px 0px #696969, -6px 16px 0px #696969, -6px 17px 0px #696969, -6px 18px 0px #696969, -6px 19px 0px #797979, -6px 20px 0px #797979, -6px 21px 0px #797979, -6px 22px 0px #797979;
+    -6px 8px 0px #206320,-6px 9px 0px #206320, -6px 10px 0px #206320, -6px 11px 0px #206320, -6px 12px 0px #206320, -6px 13px 0px #206320, -6px 14px 0px #206320, -6px 15px 0px #206320, -6px 16px 0px #206320, -6px 17px 0px #206320, -6px 18px 0px #206320, -6px 19px 0px #206320, -6px 20px 0px #1b7c1b, -6px 21px 0px #1b7c1b, -6px 22px 0px #1b7c1b;
   }
 
 
@@ -131,7 +58,7 @@ ul {
   }
   
   li a:hover {
-    background-color: var(--color2);
+    background-color: hotpink;
     color: white;
   }
   
@@ -141,7 +68,7 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    background-color:var(--color2);
+    background-color:rgb(250, 167, 225);
   }
   
   ol {
@@ -164,63 +91,22 @@ ul {
     text-align: center;
   }
 
-.button1{
+button{
     display: flex;
     position: fixed;
-    top: 180px;
-    left: 1%;
+    top: 20px;
+    right: 60px;
     text-decoration: none;
     background-color: white;
     color: black;
     font-family: 'Orbitron', sans-serif;
 }
-
-.button2{
-    display: none;
-    position: fixed;
-    top: 180px;
-    left: 1%;
-    text-decoration: none;
-    background-color: white;
-    color: black;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.button{
-    display: flex;
-    position: fixed;
-    top: 180px;
-    right: 1%;
-    text-decoration: none;
-    background-color: white;
-    color: black;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.stopDance {
-    display: none;
-    font-family: 'Orbitron', sans-serif;
-    text-decoration: none;
-    background-color: white;
-    color: black;
-}
-
-.startDance {
-    display: flex;
-    font-family: 'Orbitron', sans-serif;
-    text-decoration: none;
-    background-color: white;
-    color: black;
-}
-
-
 
 body{
     background-color: var(--backgroundColor);
     color: var(--color) ;
     background-image: var(--background-image);
     background-size: cover;
-    
 }
 
 .block{ overflow:hidden; padding: 70px 0; position:relative; background-color: transparent;}
@@ -253,7 +139,7 @@ p{
 
 .container2 {
     margin:20px 0; 
-    color: var(--color);
+    color:#fff; 
     font-size:26px; 
     font-family: 'Orbitron', sans-serif;  
     font-weight: 100;
@@ -288,7 +174,7 @@ p{
 
 .container3 {
     margin:20px 0; 
-    color: var(--color);
+    color:#fff; 
     font-size:26px; 
     font-family: 'Orbitron', sans-serif;  
     font-weight: 100;
@@ -318,7 +204,7 @@ p{
 .container3:hover > .satz17 { text-align: left;}  
 .container3:hover {color: var(--color1);}
 
-h1{margin:0; line-height: 100px;text-align: center; font-size: 90px;}
+h1{margin:0; line-height: 100px;text-align: center; font-size: 96px;}
 
 .block1{
     color:var(--color);
@@ -330,42 +216,27 @@ font-family: 'Orbitron', sans-serif;  color:rgba(0, 0, 0, 0);letter-spacing:.4re
 text-shadow: var(--textShwadow);
 }
 
-.h1 {
-    animation: titel 0.4926s ease-in-out infinite alternate;
+h1 {
+    animation: titel 0.98s ease-in-out infinite alternate;
    transform-origin: bottom;
-   animation-play-state: paused;
- }
-
- .h3 {
-    animation: titel 0.4926s ease-in-out infinite alternate;
-   transform-origin: bottom;
-   animation-play-state: paused;
- }
-
- .h4 {
-    animation: titel 0.4926s ease-in-out infinite alternate;
-   transform-origin: bottom;
-   animation-play-state: paused;
  }
 
  .container1, .container2, .container3 {
-   animation: lyrics 0.4926s ease-in-out infinite alternate;
+   animation: lyrics 1s ease-in-out infinite alternate;
    transform-origin: bottom;
    background-color: transparent;
-   animation-play-state: paused;
  }
 
  .ingwer1 {
-    width: 20vw;
+    width: 10vw;
     height:  50vw;
     position: absolute;
     top: 5%;
     left: 0%;
-    background-image: url(/julia_kagerbauer/images/arm_rechts.svg);
+    background-image: url(/julia_kagerbauer/images/körper.svg);
     background-repeat: no-repeat;
     animation: ingwer1 4s ease-in-out infinite alternate;
     transform-origin: bottom;
-    animation-play-state: paused;
 }
 
 .ingwer2 {
@@ -378,7 +249,6 @@ text-shadow: var(--textShwadow);
     background-repeat: no-repeat;
     animation: ingwer2 5s ease-in-out infinite alternate;
     transform-origin: bottom;
-    animation-play-state: paused;
 }
 
 .ingwer3 {
@@ -391,46 +261,18 @@ text-shadow: var(--textShwadow);
     background-repeat: no-repeat;
     animation: ingwer3 2s ease-in-out infinite alternate;
     transform-origin: bottom;
-    animation-play-state: paused;
 }
 
 .ingwer4 {
-    width: 10vw;
+    width: 20vw;
     height:  50vw;
     position: absolute;
     top: 60%;
     right: -20%;
-    background-image: url(/julia_kagerbauer/images/körper.svg);
+    background-image: url(/julia_kagerbauer/images/arm_rechts.svg);
     background-repeat: no-repeat;
     animation: ingwer4 3s ease-in-out infinite alternate;
     transform-origin: bottom;
-    animation-play-state: paused;
-}
-
-.ingwer5 {
-    width: 10vw;
-    height:  20vw;
-    position: absolute;
-    top: 20%;
-    right: 50%;
-    background-image: url(/julia_kagerbauer/images/bein_links.svg);
-    background-repeat: no-repeat;
-    animation: ingwer5 4s ease-in-out infinite alternate;
-    transform-origin: bottom;
-    animation-play-state: paused;
-}
-
-.ingwer6 {
-    width: 12vw;
-    height:  40vw;
-    position: absolute;
-    top: 70%;
-    right: -20%;
-    background-image: url(/julia_kagerbauer/images/bein_rechts.svg);
-    background-repeat: no-repeat;
-    animation: ingwer6 2s ease-in-out infinite alternate;
-    transform-origin: bottom;
-    animation-play-state: paused;
 }
 
 .special1 {
@@ -523,32 +365,12 @@ text-shadow: var(--textShwadow);
     }
 }
 
-@keyframes ingwer5 {
-    0% {
-        transform: translate(-300px,0px);
+@keyframes waves {
+    from {
+        transform: translate(-200px,0px);
     }
 
-    50% {
-        transform: translate(400px,300px);
-    }
-
-    100% {
-        transform: translate(1000px, 0px);
-    }
-}
-
-@keyframes ingwer6 {
-    0% {
+    to {
         transform: translate(0px,0px);
     }
-
-    50% {
-        transform: translate(-400px,500px);
-    }
-
-    100% {
-        transform: translate(-1000px,-200px);
-    }
 }
-
-

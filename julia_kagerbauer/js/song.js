@@ -1,24 +1,26 @@
 
-var imgs= document.getElementsByClassName("arm--left");
-var arm= document.getElementsByClassName("arm--right");
-var B= document.getElementsByClassName("head");
-var C= document.getElementsByClassName("leg--left");
-var D= document.getElementsByClassName("leg--right");
-var A= document.getElementsByClassName("body");
-var E= document.getElementsByClassName("rave1");
-var F= document.getElementsByClassName("rave2");
-var G= document.getElementsByClassName("rave3");
-var H= document.getElementsByClassName("rave4");
-var I= document.getElementsByClassName("rave5");
-var J= document.getElementsByClassName("rave6");
-var K= document.getElementsByClassName("rave7");
+var imgs= document.getElementsByClassName("ingwer1");
+var arm= document.getElementsByClassName("ingwer2");
+var B= document.getElementsByClassName("ingwer3");
+var C= document.getElementsByClassName("ingwer4");
+var D= document.getElementsByClassName("h1");
+var A= document.getElementsByClassName("container1");
+var E= document.getElementsByClassName("container2");
+var F= document.getElementsByClassName("container3");
+var G= document.getElementsByClassName("h3");
+var H= document.getElementsByClassName("h4");
+var I= document.getElementsByClassName("ingwer5");
+var J= document.getElementsByClassName("ingwer6");
 var audio = document.getElementsByClassName("musicplayer")
 var start = document.getElementsByClassName("startDance")
 var stop = document.getElementsByClassName("stopDance")
+var startRave = document.getElementsByClassName("button1")
+var stopRave = document.getElementsByClassName("button2")
 console.log(imgs)
 console.log ("audio",audio)
 
 
+var nightModeOn= false
 
 function toggleAnimation(){
     console.log();
@@ -151,44 +153,38 @@ function toggleAnimation(){
       document.body.className = '';
 
     }
-
-    if (K[0].style.animationPlayState === 'paused' || !K[0].style.animationPlayState) {
-      K[0].style.animationPlayState = 'running';
-      console.log("running")
-      document.body.className = 'running';
-    } else {
-      K[0].style.animationPlayState = 'paused';
-      document.body.className = '';
+    
+    if(nightModeOn){
+        document.body.classList.toggle("night")
+    }
+    
 
     }
 
+    function toggleNightMode(){
+        document.body.classList.toggle("night")
+        nightModeOn = !nightModeOn
+        if(nightModeOn) {
+            stopRave[0].style.display= "flex"
+            startRave[0].style.display= "none"
+        }
+        else{
+            stopRave[0].style.display= "none"
+            startRave[0].style.display= "flex"
+        }
+
     }
 
-  console.log(imgs)
+    /*
+    var nightButton = document.querySelector("#night");
+console.log(nightButton)
+nightButton.addEventListener("click", function(){
+    nightModeOn = !nightModeOn
+   console.log("just toggling")
+   document.body.classList.toggle("night")
+   
+}); */
+
 
   
 
-/*
-for (var i = 0; i < imgs.length; i++) {
-  /* imgs[i].onclick = toggleAnimation; 
-  imgs[i].style.animationPlayState = 'running';
-  console.log("Set all to running")
-}
-
-function toggleAnimation() {
-
-    console.log("animation clicked")
-  var style;
-  for (var i = 0; i < imgs.length; i++) {
-    style = imgs[i].style;
-    if (style.animationPlayState === 'running') {
-      style.animationPlayState = 'paused';
-      console.log("paused")
-      document.body.className = 'paused';
-    } else {
-      style.animationPlayState = 'running';
-      document.body.className = '';
-    }
-  }
-}
-*/
