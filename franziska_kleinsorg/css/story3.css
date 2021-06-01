@@ -23,6 +23,7 @@ a {
 
 a:hover {
     font-style: italic;
+    cursor: pointer;
 }
 
 /* Story3 formatting */
@@ -66,22 +67,22 @@ span {
 
     /* Audio */ 
 
-    a.trigger {
-        color: white;
-        text-decoration: none;
-      }
-      
-      .trigger::before {
-          content: '▶';
-      }
-    
-      .playing .trigger::before {
-        content: 'II';
-      }
-       
-      .paused .trigger::before {
-        content: '▶';
-      }
+a.trigger {
+color: white;
+text-decoration: none;
+}
+
+.trigger::before {
+    content: '▶';
+}
+
+.playing .trigger::before {
+content: 'II';
+}
+
+.paused .trigger::before {
+content: '▶';
+}
 
 .player {
     position: fixed;
@@ -93,10 +94,6 @@ span {
     background-color: rgba(0, 0, 0, 0.1);
     display: inline;
     display: inline-block;
-}
-
-.player:hover {
-    cursor: pointer;
 }
 
 
