@@ -96,6 +96,11 @@ a:hover {
   max-width: 25%;
 }
 
+.columnSONG {
+  flex: 33.3%;
+  max-width: 33.3%;
+}
+
 .column img {
   vertical-align: middle;
   width: 100%;
@@ -133,6 +138,26 @@ a:hover {
 
 
 /* About Song */
+
+.button {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: 'Amiko', sans-serif; 
+  border: none;
+  color: #96616b;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255);
+  font-style: italic;
+
+}
+
 
 .p1 {
   font-size: 20px;
@@ -184,7 +209,7 @@ background: linear-gradient(104deg, rgba(255, 130, 224, 0) 0.9%, rgba(255, 130, 
   }
   
   .player {
-    position: fixed;
+    position: absolute;
       right: 16px;
       font-size: 18px;
       border: solid white 2px;    
@@ -193,3 +218,53 @@ background: linear-gradient(104deg, rgba(255, 130, 224, 0) 0.9%, rgba(255, 130, 
       display: inline;
       display: inline-block;
   }
+
+   /* Song Lyrics Annotations */
+
+#text1 {
+display: none;
+}
+
+#text2 {
+display: none;
+}
+
+#text3 {
+display: none;
+}
+
+#text4 {
+display: none;
+}
+
+#text5 {
+display: none;
+}
+
+#text6 {
+display: none;
+}
+
+#text7 {
+display: none;
+}
+
+#text8 {
+display: none;
+}
+
+.annotation {
+  font-size: 20px;
+  font-family: 'Amiko', sans-serif; 
+  color: #ffffff;
+  text-align: left;
+  text-transform: lowercase;
+  margin-left:10px;
+  font-style: italic;
+}
+
+.annotationCONTAINER {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}

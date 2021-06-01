@@ -17,3 +17,11 @@ var myAudio = document.getElementById("myAudio");
             document.body.classList.remove('playing')
             document.body.classList.add('paused')
         };
+
+
+
+//LYRICS 
+function toggleParagraph(nbrShow, nbrHide) {
+    document.getElementById("text" + nbrHide).style.display = "none";
+    document.getElementById("text" + nbrShow).style.display = "block";
+}
