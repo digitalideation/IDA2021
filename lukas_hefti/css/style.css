@@ -1,10 +1,6 @@
 /* Import NavBar CSS*/
 @import "styleNavBar.css";
-
-/* All */
-* {
-    
-}
+@import "audioStyle.css";
 
 
 /* attribute */
@@ -12,32 +8,46 @@
 body {
     margin: 0px;
     font-family: 'Source Sans Pro', sans-serif;
-}
-
-
-main {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-    main article {
-        min-height: 700px;
-    }
-
-.robot {
-    max-width: 1200px;
+    background-color: white;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
+
+main {
+    max-width: 900px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+    main article {
+        text-align: center;
+        min-height: 700px;
+    }
+
+
+.robot {
+    display:inline;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    max-width: 1200px;
+    
+}
+
     .robot * {
+        text-align: center;
+        display: inline;
         margin: 10px;
         height: 20px;
-        width: 100%;
-        border: 2px solid red;
-        display: inline-block;
+
+        /* : 2px solid red; */
+        
     }
 
     .robot .head {
@@ -50,7 +60,6 @@ main {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        border: 2px solid rgb(208, 208, 80);
     }
 
         .robot .head * {
@@ -135,14 +144,16 @@ main {
         left: 310px;
         width: 60px;
         height: 210px;
+        border: none;
     }
-
+    
+    
     .robot .arm--right {
         position: absolute;
         top: 230px;
         left: 600px;
     }
-
+    
     .robot .hand {
         margin: 0px;
         position: relative;
@@ -150,3 +161,55 @@ main {
         width: 50px;
         height: 30px;
     }
+
+    
+    #head {
+        width:200px;
+        height: 300px;
+        transform: scale(1.2) translate(20px,-20px);
+  
+    }
+    .svg_head {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+
+
+    #body {
+      width:200px;
+      height: 300px;
+      transform: scale(1.2) translate(20px,-20px);
+
+  }
+  .svg_body {
+      fill: none;
+      stroke: #1d1d1b;
+      stroke-miterlimit: 10;
+    }
+
+
+    #arm_right {
+        width:200px;
+        height: 300px;
+        transform: scale(1.4) translate(-120px,-30px);
+    }
+
+    .svg_arm_right {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+
+      #arm_left {
+        width:200px;
+        height: 300px;
+        transform:translate(20px,-40px) scale(-1,1) scale(1.4) ;
+    }
+    .svg_arm_left {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
