@@ -1,0 +1,275 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  /* font-family: 'Montserrat', sans-serif; */
+  background-color: rgba(36, 88, 92, 0.571);
+  font-size: 100px;
+  height: 100%;
+}
+
+.parallax {
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+.parallax__group {
+  position: relative;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--fore {
+  -webkit-transform: translateZ(90px) scale(.7);
+  transform: translateZ(90px) scale(.7);
+  z-index: 1;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+}
+
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+  /* height: 5000px; */
+}
+
+#group1 {
+  z-index: 5; /* slide over group 2 */
+}
+#group1 .parallax__layer--base {
+  background-color: #ffffff;
+  background-image: linear-gradient( white, grey);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#group2 {
+  z-index: 3; /* slide under groups 1 and 3 */
+}
+
+#group2 .parallax__layer--base {
+  background-color: grey;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#group2 .parallax__layer--back {
+  background: rgb(123,210,102);
+}
+
+#group3 {
+  z-index: 4; /* slide over group 2 and 4 */
+}
+#group3 .parallax__layer--base {
+  background-color: grey;
+  background-image: linear-gradient(grey,blue, indigo);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#group4 {
+  z-index: 2; /* slide under group 3 and 5 */
+
+}
+
+#group4 .parallax__layer--base{
+  background-color: indigo;
+  background-image: linear-gradient(indigo,grey);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#group4 .parallax__layer--deep {
+  background:rgb(58, 58, 58);
+}
+
+#group5 {
+  z-index: 3; /* slide over group 4 and 6 */
+}
+#group5 .parallax__layer--base {
+  background:grey;
+}
+
+.parallax__layer--fore {
+  background: rgba(255, 255, 255, 0);
+  height: 100vh;
+}
+
+#group6 {
+  z-index: 2; /* slide under group 5 and 7 */
+}
+
+#group6 .parallax__layer--base{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#group6 .parallax__layer--back {
+  background:rgb(77, 77, 77);
+  
+}
+
+#group7 {
+  z-index: 3; /* slide over group 7 */
+}
+#group7 .parallax__layer--base {
+  background: grey;
+}
+
+
+#changeme {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: grey;
+  /* transition: 2s; */
+}
+
+#changeme.new {
+  position: absolute;
+  /* background-color:#FF0000, #FFFF00, #00CCFF ;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8000'/%3E%3Cstop offset='1' stop-color='%23ff8000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300ff19'/%3E%3Cstop offset='1' stop-color='%2300ff19' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239900ff'/%3E%3Cstop offset='1' stop-color='%239900ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffff00'/%3E%3Cstop offset='1' stop-color='%23ffff00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CF'/%3E%3Cstop offset='1' stop-color='%230CF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  background-size: cover; */
+  /* background-color: rgb(25, 103, 164); */
+  background-image: url(../BilderMood/colorexplosion.png); 
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}
+
+
+#button {
+  position: absolute;
+  margin: auto;
+  width: 400px;
+}
+
+
+.debug {
+  position: fixed;
+  top: 0;
+  left: .5em;
+  z-index: 999;
+  background: rgba(0,0,0,.85);
+  color: #fff;
+  padding: .5em;
+  border-radius: 0 0 5px 5px;
+  font-size: 20px;
+}
+.debug-on .parallax__group {
+  -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+  transform: translate3d(700px, 0, -800px) rotateY(30deg);
+}
+.debug-on .parallax__layer {
+  box-shadow: 0 0 0 2px #000;
+  opacity: 0.9;
+}
+.parallax__group {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+
+.deepbackground{
+  width: 100%;
+  height: 100%;
+  /* background-image: url(https://source.unsplash.com/random/?soul,rhythm);  */
+  background-size: cover;
+  background-blend-mode: darken;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color:#FF0000, #FFFF00, #00CCFF ;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8000'/%3E%3Cstop offset='1' stop-color='%23ff8000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300ff19'/%3E%3Cstop offset='1' stop-color='%2300ff19' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239900ff'/%3E%3Cstop offset='1' stop-color='%239900ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffff00'/%3E%3Cstop offset='1' stop-color='%23ffff00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CF'/%3E%3Cstop offset='1' stop-color='%230CF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
+
+
+  
+.rhythm {
+  display: flex;
+  font-family: 'Squada One';
+  font-size: 200px;
+}
+
+.R:hover {
+  color: #FF0000;
+}
+.H:hover {
+  color: #ffff00;
+}
+.Y:hover {
+  color: #22ff00;
+}
+.T:hover {
+  color: #00ffee;
+}
+.H2:hover {
+  color: #0000ff;
+}
+.M:hover {
+  color: #ff00ff;
+}
+
+.scroll{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  position: absolute;
+  bottom: 2rem;
+  animation-name: arrow;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  transition: all 1s ease-in-out;
+}
+
+
+@keyframes arrow {
+  0%   { transform: translateY(0);}
+  100% { transform: translateY(-100%);}
+}

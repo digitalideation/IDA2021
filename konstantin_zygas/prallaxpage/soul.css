@@ -1,0 +1,74 @@
+
+
+.rd {
+    display:flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.arm {
+    position: absolute;
+    top: 40%;
+    left: 41%;
+    width: 5%;
+    height: 42%;
+    background: rgb(5, 65, 111); 
+    /* z-index: -1; */
+    transform: rotate(-25deg);
+  }
+  .arm2 {
+    position: absolute;
+    top: 20%;
+    right: 41%;
+    width: 5%;
+    height: 22%;
+    background: black; 
+    z-index: -1;
+    transform: rotate(25deg);
+  }
+  
+  .rhythmdance {
+    position: absolute;
+    top: 15%;
+    left: 36%;
+    width: 42%;
+    height: 46%;
+    background: rgb(229, 245, 53); 
+    border-radius: 50%;
+    /* border-left: solid 9px blue;
+    border-top: solid 9px blue;
+    border-bottom: solid 9px blue; */
+ 
+  }
+  .souldance{
+    position: absolute;
+    top: 15%;
+    right: 37%;
+    width: 42%;
+    height: 46%;
+    background: rgb(43, 198, 210); 
+    border-radius: 50%;
+    /* border-right: solid 7px blue;
+    border-top: solid 7px blue;
+    border-bottom: solid 7px blue; */
+    text-align: center;
+
+
+  }
+
+  .rhythmtext{  
+    color: black;
+    position: absolute;
+    font-family: 'Audiowide';
+    font-size: 400%;
+    list-style-type: none;
+    
+  }
+  .soultext{  
+    color: black;
+    position: absolute;
+    font-family: 'Audiowide';
+    font-size: 400%;
+    list-style-type: none;
+
+  }
