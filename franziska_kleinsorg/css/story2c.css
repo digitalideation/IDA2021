@@ -38,15 +38,15 @@ a {
     height: 400px;
     transform-origin: bottom center;
     border-radius: 50%;
-    /* CSS Variablen können auch für Farben im RGB Modus benutzt werden */
+    box-shadow: 0px 0px 10px 10px white;
     background-color: white;
     transition: all 0.75s ease-in-out;
 }
 
 .head:hover {
-    /* transform: scale(1.4,1.4); */
+    transform: scale(1.4,1.4);
     cursor: pointer;
-    box-shadow: 0px 0px 100px 100px white;
+    box-shadow: 0px 0px 200px 200px white;
 
 }
 
