@@ -132,13 +132,13 @@
           
           /* background-image: url(../process/img/1_Random.svg); */           
           background-image: url(https://media0.giphy.com/media/zcZ1YVAWa42OgipIKb/giphy.gif?cid=ecf05e47oprnjmr94iys0eorhiajp9mixwbrd6ckahwjsqr0&rid=giphy.gif&ct=s);
-
+          background-image: url(img/heart.png);
           background-size:100%;
           background-position-x: center;
           background-position-y: center;
 
           
-          animation: changeBg 10s infinite; 
+          animation: danceDown 2s infinite; 
         }
 
 /* @keyframes changeBg{
