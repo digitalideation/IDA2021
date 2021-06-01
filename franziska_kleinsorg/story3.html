@@ -12,15 +12,17 @@
 
 <body class="body_gradient">
 
-    <a href="javascript:pageScroll()">
-        <img src="pics/arrowdown.svg" class="scrolldown"></img>
-    </a>
-
-    <div class="player">
+<!-- Music Player + Scrolldown -->
+<div class="player">
         <audio id="myAudio" src="audio/cmbyn_short.mp3"></audio>
-        <a onClick="togglePlay()" class="trigger"> Call Me By Your Name</a>
+        <a onClick="togglePlay()" class="trigger" href="javascript:pageScroll()"> Call Me By Your Name</a>
     </div>
 
+<div class="player" style="top: 60px;">
+        <a href="javascript:stopScroll()">Stop Scrolling</a>
+    </div>
+
+<!-- Snake -->
 
     <div class="snake">
         <svg viewBox="0 0 806.93 789.02">
@@ -29,6 +31,8 @@
                 transform="translate(0 0)" />
         </svg>
     </div>
+ 
+<!-- Pole -->
 
     <div class="pole">
         <img src="pics/pole.svg">
@@ -37,16 +41,20 @@
     </div>
 </div>
 
-
+<!-- Menue -->
 
     <div class="menue">
-        <a href="index.html">Back To Start</a> <br>
-        <a href="song.html">About the Song</a><br>
-        <a href="processindex.html">Process</a><br>
-        <a href="https://ida2021-staging.netlify.app/" target="_blank">Overview</a>
+        <a class="navi" href="index.html">Back To Start</a> <br>
+        <a class="navi" href="song.html">About the Song</a><br>
+        <a class="navi" href="processindex.html">Process</a><br>
+        <a class="navi" href="https://ida2021-staging.netlify.app/" target="_blank">Overview</a>
     </div>
 
-    <a href="javascript:jumpScroll()"><img src="pics/arrowdown.svg" class="scrollup"></img></a>
+<!-- Go Up + Scrollstop -->
+
+    <div class="player" style="position: absolute; top: 14970px;">
+        <a href="javascript:jumpScroll()">Go to Top</a>
+    </div>
 
 </body>
 <script src="js/story3.js"></script>
