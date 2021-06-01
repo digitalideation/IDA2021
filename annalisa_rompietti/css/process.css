@@ -3,6 +3,14 @@ body {
     background-color: grey;
 }
 
+h1, text{
+    font-family: 'Farro', sans-serif;
+}
+
+#zuruck{
+    fill:white;
+}
+
 .allbobles{
     margin-left: 500px;
     width: 500px;

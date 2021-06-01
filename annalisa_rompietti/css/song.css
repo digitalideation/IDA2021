@@ -4,7 +4,30 @@ body {
     overflow-x: hidden;
 }
 
-    .buttonplay{
+
+
+div.buttoninboble{
+    position: relative;
+    top: 60px;
+    right: 100px;
+
+    }
+
+#buttoninboble2{
+    right:160px;
+}
+
+#buttoninboble3{
+    right:160px;
+} 
+#buttoninboble4{
+    right:160px;
+} 
+#buttoninboble5{
+    right:160px;
+}  
+
+#buttonplay{
         cursor: pointer;
         background: none;
         box-sizing: border-box;
@@ -13,10 +36,54 @@ body {
         height: 74px;
         border-width: 37px 0px 37px 74px;
         border-color: transparent transparent transparent white;
+        display: inline;
+}
+
+#buttonplayall1, #buttonplayall2, #buttonplayall3, #buttonplayall4{
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 74px;
+    height: 74px;
+    border-width: 37px 0px 37px 74px;
+    border-color: transparent transparent transparent white;
+    display: inline;
+    
 }
 
 
-.buttonpause {
+
+
+#buttonplay2{
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 74px;
+    height: 74px;
+    border-width: 37px 0px 37px 74px;
+    border-color: transparent transparent transparent white;
+    display: none;
+}
+
+
+#buttonplay3{
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 74px;
+    height: 74px;
+    border-width: 37px 0px 37px 74px;
+    border-color: transparent transparent transparent white;
+    display: none;
+}
+
+
+
+#buttonpause {
+    display: none;
     cursor: pointer;
     z-index: 1;
     background: none;
@@ -29,14 +96,35 @@ body {
     border-width: 0px 0px 0px 40px;
   }
 
-  .buttoninboble{
-      position: relative;
-      top: 60px;
-      right: 100px;
-      width: 74px;
-      height: 74px;
-      }
+ 
 
+  #buttonpause2 {
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+    background: none;
+    width: 60px;
+    height: 60px;
+    border-style: solid;
+    border-width: 37px;
+    border-color: white;
+    border-style: double;
+    border-width: 0px 0px 0px 40px;
+  }
+
+  #buttonpause3 {
+    display: none;
+    cursor: pointer;
+    z-index: 1;
+    background: none;
+    width: 60px;
+    height: 60px;
+    border-style: solid;
+    border-width: 37px;
+    border-color: white;
+    border-style: double;
+    border-width: 0px 0px 0px 40px;
+  }
 
 .parallax{
     perspective: 1px;
@@ -186,3 +274,38 @@ body {
     
     height: 2000px;
 }
+
+.allplay{
+    height: auto;
+    display: inline;
+    margin-left:350px;
+    
+    
+}
+
+.overlappingplay{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin-top: 200px;
+
+}
+
+
+   .buttoninboble_all{
+       
+        position: relative;
+        cursor: pointer;
+        background: none;
+        box-sizing: border-box;
+        padding:0;
+        width: 74px;
+        height: 74px;
+        border-width: 37px 0px 37px 74px;
+        border-color: transparent transparent transparent white;
+        display: inline;
+        bottom:140px;
+        left:65px;
+}
+

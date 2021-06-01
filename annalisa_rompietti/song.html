@@ -7,14 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDA Modul - AnnaLisa Rompietti</title>
   <link rel="stylesheet" href="./css/song.css">
-
+  
 </head>
 
 <body>
  
-  <audio id="tooinsistent">
-    <source src="./song/Too Insistent (Trentemller Remix).mp3" type="audio/mpeg">
-  </audio>
+ 
 
   <div class="parallax">
 
@@ -39,22 +37,31 @@
       <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm1.svg" alt="">
         <div class="buttoninboble">
-           <button class="buttonpause"></button>
+           <button id="buttonpause"></button>
            </div>
       </div>  
       <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+          <div class="buttoninboble" id="buttoninboble2">
+                <button id="buttonplay3"> </button>
+          </div>
       <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
+          <div class="buttoninboble" id="buttoninboble2">
+             <button id="buttonplay2"> </button>
+          </div>
       <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
+          <div class="buttoninboble" id="buttoninboble2">
+              <button id="buttonpause2"> </button>
+          </div>
       <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
@@ -66,6 +73,9 @@
       <div class="rhytm"><img src="./images/rhytm1.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm2.svg" alt=""></div>
       <div class="rhytm"><img src="./images/rhytm3.svg" alt=""></div>
+          <div class="buttoninboble" id="buttoninboble2">
+               <button id="buttonpause3"> </button>
+          </div>
       <div class="rhytm"><img src="./images/rhytm4.svg" alt=""></div>
     </div> 
 
@@ -95,12 +105,47 @@
         <div id="prison4"></div>
         <div id="prison5"></div>
 
-    </div>
+      </div>
+
+<div class="allplay">
+        <div class="overlappingplay"><img src="./images/rhytm4.svg" alt="">
+             <div class="buttoninboble_all">
+                    <button id="buttonplayall1"> </button>
+              </div> 
+        </div>     
+        <div class="overlappingplay"><img src="./images/rhytm1.svg" alt="">
+                <div class="buttoninboble_all">
+                     <button id="buttonplayall2"> </button>
+                </div> 
+        </div>       
+        <div class="overlappingplay"><img src="./images/rhytm2.svg" alt="">
+                 <div class="buttoninboble_all">
+                      <button id="buttonplayall3"> </button>
+                 </div>    
+        </div>        
+        <div class="overlappingplay"><img src="./images/rhytm4.svg" alt="">
+                  <div class="buttoninboble_all">
+                      <button id="buttonplayall4"> </button>
+                   </div> 
+        </div>           
+      </div>
   </div>
 
 
 
 
+  <audio id="tooinsistent">
+    <source src="./song/Too Insistent (Trentemller Remix).mp3" type="audio/mpeg">
+  </audio>
+  <audio id="tooinsistent1">
+    <source src="./song/Too Insistent (Trentemller Remix).mp3" type="audio/mpeg">
+  </audio>
+  <audio id="tooinsistent2">
+    <source src="./song/Too Insistent (Trentemller Remix).mp3" type="audio/mpeg">
+  </audio>
+  <audio id="tooinsistent3">
+    <source src="./song/Too Insistent (Trentemller Remix).mp3" type="audio/mpeg">
+  </audio>
 
 
 
@@ -109,8 +154,7 @@
 
 
 
-
-
+<!-- 
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -119,7 +163,7 @@
       <li>My Song</li>
     </ul>
   </nav>
- 
+  -->
  
 </body>
 <script src="js/mysong.js"></script>
