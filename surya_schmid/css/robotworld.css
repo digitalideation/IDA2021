@@ -1,5 +1,7 @@
 
 /* ----------------------- ALLGEMEIN -----------------------> */
+
+
   
     @font-face {
       font-family: 'Skyline';
@@ -28,7 +30,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: white;
       /* background-image: url(https://i.pinimg.com/originals/f5/f3/27/f5f327dc0b3619d95f20eba2d71aec78.gif); */
       /* background-image: url(https://i.pinimg.com/originals/13/7b/26/137b2650381f68239e643ed58dfc8777.gif); */
       background-size: 110%;
@@ -102,6 +103,9 @@
 
 
 /* ---------------------- ROBOT ----------------------> */
+:root{
+  --robotColor: rgb(255, 255, 255);
+}
         .robot {
             border: 0px solid #de9c9c;
             padding: 1rem;
@@ -113,23 +117,38 @@
             justify-content: center;
             margin: auto;
             margin-bottom: 6rem; 
+
+          animation: danceDown infinite 0.48s ease-in-out;
+
         }
 
          .head{
           position: absolute;
-          width: 120px;
+          width: 100px;
           height: 100px;
           top: 70px;
           justify-content: center;
           display: flex;
+          
+          /* background-image: url(../process/img/1_Random.svg); */           
+          background-image: url(https://media0.giphy.com/media/zcZ1YVAWa42OgipIKb/giphy.gif?cid=ecf05e47oprnjmr94iys0eorhiajp9mixwbrd6ckahwjsqr0&rid=giphy.gif&ct=s);
 
-          background-image: url(../process/img/1_Random.svg);
           background-size:100%;
           background-position-x: center;
           background-position-y: center;
-          background-repeat: none;
 
+          
+          animation: changeBg 10s infinite; 
         }
+
+/* @keyframes changeBg{
+   0%, 45%, 100%  {background-image: url("img/kopfHerz.png");
+         }
+    
+   
+   50%, 95% {background-image: url("img/kopfKopf.png");
+        background-size: 100%;}
+} */
 
         
 
@@ -139,98 +158,263 @@
            width: 130px;
           height: 130px;
           top: 170px;
+          border-radius: 30%; 
+          background: var(--robotColor);
+          clip-path: polygon(100% 0, 82% 54%, 100% 100%, 0% 100%, 17% 50%, 0% 0%) ;
 
-           background-color: black;
+          animation: danceDown infinite 0.48s ease-in-out;
+          transform-origin: top;
         }
 
+          @keyframes danceDown {
+          0%{
+               transform: translate(0px);
+          }
+          
+          70%{
+              transform: translate(0px, 20px);
+          }
+          
+          0%{
+               transform: translate(0px);
+          }
+        }
        
 
          .arm{
            border: 3px solid #000000;
           position: absolute;
           width: 30px;
-          height: 130px;
+          height: 65px;
+          border-radius: 50%; 
+          background: var(--robotColor);
 
-          background-color: black;
          
         }
 
         .arm--left{
-          left: 112px;
-          top: 170px;
+          left: 120px;
+          top: 190px;
           border-top-left-radius: 60%;
 
+          animation: armDanceLeft infinite 3s ease-in-out;
+          transform-origin: top right;
+
+        }
+         @keyframes armDanceLeft {
+          0%{
+              transform: rotate(0deg);
+          }
+          25%{
+              transform: rotate(90deg);
+          }
+          
+          0%{
+              transform: rotate(0deg);
+          }
         }
 
 
         .arm--right{
-          right: 112px;
-          top: 170px;
+          right: 120px;
+          top: 190px;
           border-top-right-radius: 60%;
+
+          animation: armDanceRight infinite 3s ease-in-out;
+          transform-origin: top left;
 
         }
 
+ @keyframes armDanceRight {
+          0%{
+              transform: rotate(0deg);
+          }
+          25%{
+              transform: rotate(-90deg);
+          }
+          
+          0%{
+              transform: rotate(0deg);
+          }
+        }
        
         .hand{
           border: 3px solid #000000;
           position:absolute;
-          width: 40px;
-          height: 20px;
-          bottom: 0;    
-          margin-bottom: -3px;   
+          width: 30px;
+          height: 65px;
+          bottom: -65px;    
+          margin-bottom: -3px; 
+          border-radius: 50%;  
           
-          background-color: rgb(210, 94, 107);
+          background: var(--robotColor);
         }
 
         .arm--left .hand{
           right: 0;
-          margin-right: -3px;  
+          margin-right: -3px; 
+
+          animation: armDanceLeft1 infinite 2s ease-in-out;
+          transform-origin: top;
+        }
+
+
+         @keyframes armDanceLeft1 {
+          0%{
+              transform: rotate(0deg);
+          }
+          25%{
+              transform: rotate(360deg);
+          }
+          75%{
+              transform: rotate(-360deg);
+          }
+          
+          100%{
+              transform: rotate(0deg);
+          }
         }
          
         .arm--right .hand{
           left: 0;
            margin-left: -3px;  
+
+           animation: armDanceRight1 infinite 2s ease-in-out;
+          transform-origin: top;
         }
+
+              @keyframes armDanceRight1 {
+          0%{
+              transform: rotate(0deg);
+          }
+          25%{
+              transform: rotate(-360deg);
+          }
+          75%{
+              transform: rotate(360deg);
+          }
+          
+          100%{
+              transform: rotate(0deg);
+          }
+        }
+         
 
 
         .foot{
           border: 3px solid #000000;
           position:absolute;
-          width: 50px;
-          height: 20px;
-          bottom: 0;  
+          width: 30px;
+          height: 80px;
+          bottom: -80px;  
           margin-bottom: -3px;  
-          
-          background-color: rgb(210, 94, 107);
+          border-radius: 50%; 
+          background: var(--robotColor);
         }
 
         .leg{
           border: 3px solid #000000;
-          background-color: black;
+          background: var(--robotColor);
           position: absolute;
           width: 30px;
-          height: 160px;
-          bottom: 0;
+          height: 80px;
+          bottom: 40px;
+          border-radius: 50%; 
+          
         }
 
         .leg--left{
           left: 155px;
+
+           animation: legDanceLeft infinite 2s ease-in-out;
+          transform-origin: top;
+        }
+         @keyframes legDanceLeft {
+          0%{
+              transform: rotate(0deg);
+          }
+           25%{
+              transform: rotate(40deg);
+            
+          }
+          50%{
+              transform: rotate(-40deg);
+            
+          }
+          75%{
+              transform: rotate(-40deg);
+            
+          }
+          
+          100%{
+              transform: rotate(0deg);
+          }
         }
 
         .leg--right{
           right: 155px;
+
+          animation: legDanceRight infinite 2s ease-in-out;
+          transform-origin: top;
+        }
+
+          @keyframes legDanceRight {
+          0%{
+              transform: rotate(0deg);
+          }
+           25%{
+              transform: rotate(-40deg);
+            
+          }
+          50%{
+              transform: rotate(40deg);
+            
+          }
+          75%{
+              transform: rotate(-40deg);
+            
+          }
+          
+          100%{
+              transform: rotate(0deg);
+          }
         }
 
         .leg--left .foot{
           right: 0;
-          bottom: 0;
            margin-right: -3px;  
+
+           animation: legDanceLeft1 infinite 2s ease-in-out;
+          transform-origin: top;
+        }
+          @keyframes legDanceLeft1 {
+          0%{
+              transform: rotate(0deg);
+          }
+          35%{
+              transform: rotate(-60deg);
+          }
+          75%{
+              transform: rotate(60deg);
+          }
+          
+          100%{
+              transform: rotate(0deg);
+          }
         }
          
         .leg--right .foot{
           left: 0;
           margin-left: -3px;  
+
+           animation: legDanceLeft1 infinite 2s ease-in-out;
+          transform-origin: top;
         }
+
+
+
+
+       
 /* <---------------------- ROBOT ---------------------- */
 
 
@@ -338,7 +522,17 @@
         }
         .robot1{
             border-bottom: none;
+              color: rgb(0, 0, 0);
+                
         }
+
+  /* .robot1{
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: rgb(0, 0, 0);
+             background-image: url(https://i.pinimg.com/originals/f5/f3/27/f5f327dc0b3619d95f20eba2d71aec78.gif);
+             background-size: 100%;
+        } */
+
 /* <----------------THE OVERLAY - MENU----------------*/
 
 
