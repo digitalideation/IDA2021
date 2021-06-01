@@ -76,7 +76,7 @@ body {
     -moz-animation: x 5s infinite;
     -o-animation: x 5s infinite;
 }
-
+ 
 @keyframes x {
     0%,
     12.5% {
