@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Parallax*/
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 4px;
+    
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax__layer--base {
+    transform: translateZ(0px);
+    transform: translateZ(0px);
+    z-index: 0;
+}
+
+.parallax__layer--midground {
+    transform: translateZ(-1px);
+    transform: translateZ(-1px);
+    z-index: -1;
+}
+
+.parallax__layer--background {
+    transform: translateZ(-3px);
+    transform: translateZ(-3px);
+    z-index: -2;
+}
+
+.parallax__layer--behind {
+    transform: translateZ(-4px);
+    transform: translateZ(-4px);
+    z-index: -3;
+}
+
+.parallax__layer {
+    padding: 100vh 0;
+}
+
+/*Parallax*/
+/*Content*/
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.title {
+  margin-top: 800px;
+  margin-bottom: 2000px;
+  align-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/*Content*/
+/*Planet 1*/
+.base {
+    margin-top: 300px;
+    height: 300px;
+    width: 300px;
+    background-image: url(../img/orbit.svg);
+    background-repeat: no-repeat;
+    animation: rotate 5s ease infinite;
+}
+
+.midground {
+    background-image: url(../img/clouds2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1100px;
+    width: 1100px;
+    
+}
+
+.background {
+  margin-top: 300px;
+  /*animation-name: rotate;*/
+  height: 1500px;
+  width: 1500px;
+  border-radius: 750px;
+  background-image: linear-gradient(rgb(102, 179, 179), rgb(82, 82, 151),teal, black); 
+  background-size: 200% 200%;
+  animation: gradient 11s ease infinite;
+}
+
+.behind {
+  margin-top: 300px;
+  height: 3000px;
+  width: 3000px;
+  background-image: url(../img/blur.svg);
+  background-repeat: no-repeat;
+  animation: pulsate 5s ease infinite;
+  }
+
+  /*Planet 1*/
+  /*Planet 2*/
+  
+
+.midground2 {
+  margin-top: 400px;
+  height: 700px;
+  width: 700px;
+  background-image: url(../img/clouds2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.background2 {
+  margin-top: 400px;
+  /*animation-name: rotate;*/
+  height: 1000px;
+  width: 1000px;
+  border-radius: 500px;
+  background-image: linear-gradient(to right, red,rgb(255, 136, 0), rgb(216, 152, 34), rgb(4, 15, 65)); 
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+    }
+
+
+    .behind2 {
+      margin-top: 300px;
+      height: 1000px;
+      width: 1000px;
+      background-image: url(../img/blur.svg);
+      background-repeat: no-repeat;
+      animation: pulsate 5s ease infinite;
+      }
+
+  /*Planet 2*/
+  /*Planet 3*/
+  
+  .midground3 {
+    margin-top: 400px;
+    height: 700px;
+    width: 700px;
+    background-image: url(../img/clouds2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .background3 {
+    margin-top: 400px;
+    /*animation-name: rotate;*/
+    height: 1000px;
+    width: 1000px;
+    border-radius: 500px;
+    background-image: linear-gradient(to right, red,rgb(255, 136, 0), rgb(216, 152, 34), rgb(4, 15, 65)); 
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+      }
+  
+  
+      .behind3 {
+        margin-top: 300px;
+        height: 1000px;
+        width: 1000px;
+        background-image: url(../img/blur.svg);
+        background-repeat: no-repeat;
+        animation: pulsate 5s ease infinite;
+        }
+  
+    /*Planet 3*/
+
+  @keyframes rotate {
+    0% {
+      transform: rotate( 0deg );
+    }
+    10% {
+      transform: rotate( 15deg );
+    }
+    50% {
+      transform: rotate( 12deg );
+    }
+    100% {
+      transform: rotate( 0deg );
+    }
+    }
+
+
+  @keyframes gradient {
+    0%{background-position:70% 0%}
+    50%{background-position:31% 100%}
+    100%{background-position:70% 0%}
+}
+
+
+  @keyframes pulsate {
+    0% {
+      transform: scale( 1 );
+    }
+    10% {
+      transform: scale( 1 );
+    }
+    50% {
+      transform: scale( 1.13 );
+    }
+    100% {
+      transform: scale( 1 );
+    }
+  }
+
+}

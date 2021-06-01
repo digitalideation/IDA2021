@@ -1,47 +1,46 @@
 
 /*damit boder bis an Rand kommt*/
 body{
+    background-color: black;
     padding: 0px;
     margin: 0px;
     margin-top: 10px;
 }
 
 nav{
-    border-bottom: black solid 2px;
-    padding-bottom: 10px;
+    height: 5vh;
 }
 
 .kopf{
+    height: 25vh;
     text-align: center;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     font-size: larger;
-    margin-top: 100px;
-    margin-bottom: 70px;
 }
 
 h1{
+    color: white;
     font-size: 70px;
+    font-weight: 300;
+    transform: translateY(50%);
 }
 
 .container{
+    height: 30vh;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     text-align: center;
-    width: fit-content;
-    height: auto;
-    margin: auto;
-
-}
+    }
 
 .tab{
-    background-color: white;
+    background-color: black;
     padding: 10px 20px;
 
 }
 
-p {
-    color: black;
+.p {
+    color: white;
     text-decoration: none;
     font-size: 12px;
     margin: auto;
@@ -49,8 +48,8 @@ p {
 
 #gewaehlt{
     font-size: 12px;
-    color:white;
-    background-color: black; 
+    color:black;
+    background-color: white; 
     padding: 10px 20px;
 }
 
@@ -59,22 +58,36 @@ li{
     margin: auto;
     margin-right: 20px;
     margin-bottom: 20px;
-    background-color: mediumorchid;
+    background-color: rgb(102, 179, 179);
     border: none;
     padding: 20px 35px;
     border-radius: 35px;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 a{
+    font-size: 18pt;
     color: white;
     text-decoration: none;
 }
 
 li:hover{
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 
 .tab:hover{
-    background-color: lightgrey;
+    background-color: rgb(102, 179, 179);
 }
+
+section {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stars {
+    width: 100%;
+    height: 100%;
+    background-image:url(../img/stars.svg);
+  }
