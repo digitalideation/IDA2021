@@ -1,54 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>day21</title>
-    <link rel="stylesheet" href="../css/day21.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/song.css">
+    <title>Song</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/song.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
+    <nav>
+        <audio id="myAudio">
+            <source src="img/SIAMÉS 2 Feathers [Lyric Video].mp3" type="audio/mp3">
+        </audio>
+        <div class="buttons">
+            <button onclick="playAudio()" type="button">
+                <p>Play</p>
+            </button>
+        </div>
+    </nav>
+    <section>
+        <div class="planet"></div>
+        <div class="parallax clouds"></div>
+        <div class="parallax satellite"></div>
+    </section>
+    <section>
+        <div class="stars">
+        </div>
+    </section>
+    <section>
+        <div class="saturn">
+            <svg class="ring" data-name="Ebene 6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2872 1064.97">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #db9512;
+                        }
+                    </style>
+                </defs>
+                <path class="cls-1"
+                    d="M2386.27,625.86c-27-142.31-251.07-231.63-581.37-256.63C1864.84,465.38,1906,573,1936,687c2,9,3.08,15.11,4.6,23.12a106.72,106.72,0,0,1,1.76,24.69c-7.21,171-407.15,380.58-925.12,479-514.17,97.67-960.35,50.72-1034.73-103a107.79,107.79,0,0,1-9-27C-28.27,1074.34-30,1070-32,1055c-7-50-8.55-104.52-8.55-158.48A1003.81,1003.81,0,0,1-23.86,713.79c-304,145.47-483.73,312.72-456.41,456.56S-224.06,1404,112.47,1427.81c259.69,18.38,583.47-2.49,928.24-68,349.54-66.39,662.19-167.54,898.21-281.77C2237.41,933.62,2413.32,768.26,2386.27,625.86Z"
+                    transform="translate(483 -369.23)" />
+            </svg>
 
-   <div class="parallax">
-       <div>
-        <div class="parallax__layer parallax__layer--base">
-            <div class="title">
-                <div class="base"></div>
-                <div class="base"></div>
-            </div>
         </div>
 
-        <div class="parallax__layer parallax__layer--midground">
-            <div class="title">
-                <div class="midground"></div>
-                <div class="midground"></div>
-                
-            </div>
+        <div class="spaceship"></div>
+    </section>
+    <section>
+        <div class="stars">
+            <div class="parallax stars2"></div>
+            <div class="stars2Rotate"></div>
+        </div>
+    </section>
+    <section>
+        <div class="sun">
+            <div class="blur"></div>
+        </div>
+    </section>
+    <section>
+        <div class="stars2Rotate"></div>
+    </section>
+    
+    <footer>
+        <div class="buttons2">
+            <button onclick="pauseAudio()" type="button">
+                <p>Pause</p>
+            </button>
+            <p>2 Feathers by SIAMES</p>
         </div>
 
-        <div class="parallax__layer parallax__layer--background">
-            <div class="title">
-                <div class="background"></div>     
-                <div class="background"></div>             
-            </div>
-        </div>
+        <ul class="container">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="robotworld.html">My Robot</a>
+            </li>
+            <li id="gewaehlt">My Song</li>
+            <li>
+                <a href="process/index.html">Process</a>
+            </li>
+        </ul>
+    </footer>
 
-        <div class="parallax__layer parallax__layer--behind"> 
-            <div class="title">
-                <div class="behind"></div>
-                <div class="behind"></div>
-            </div>
-        </div>
-       </div>
+    <!--DOCUMEN END-->
+
+    <script>
+
+        var x = document.getElementById("myAudio");
+
+        function playAudio() {
+            x.play();
+        }
+
+        function pauseAudio() {
+            x.pause();
+        }
+
+        /*
+        // function which is called when we click the button
+        function siames
         
-    </div>
+        let audioContext = new AudioContext();
+        
+        // autoplay- state will be suspended by default
+        if (audioContext.state === 'suspended'){
+            audioContext.resume();
+        // call our laser function
+        siames(); 
+        // create oscillator node
+        let osc = audioContext.create0scillator();
+        // start oscillator
+        osc.start();
+        // stop it after a second
+        osc.stop(audioContext.currentTime + 1);
+        // connect our graph
+        osc.connect(audioContext.destination)*/
 
-
+        function scrollEffect() {
+            console.log('I am scrolling!')
+            var myParallaxElements = document.querySelectorAll('.parallax')
+            for (var i = 0; i < myParallaxElements.length; i++) {
+                var vertOffset = -(window.scrollY * (i + 0.4)) + 'px'
+                myParallaxElements[i].style.transform = 'translateY(' + vertOffset + ')'
+            }
+            // var vertOffset = -(window.scrollY * 1.1) + 'px'
+            // console.log('scrollY ', window.scrollY)
+            // console.log('offset ', vertOffset)
+        }
+        window.addEventListener('scroll', scrollEffect)
+            // var stars = document.getElementsByClassName('star')
+            // console.log('stars', stars)
+            // for (var i = 0; i < stars.length; i++) {
+            //     var randomX = Math.random() * window.innerWidth;
+            //     var randomY = Math.random() * window.innerHeight;
+            //     stars[i].style.setProperty('--verticalOffset', randomY - 100 + 'px')
+            //     stars[i].style.setProperty('--horizontalOffset', randomX - 100 + 'px')
+            // }
+    </script>
 </body>
 
 </html>
