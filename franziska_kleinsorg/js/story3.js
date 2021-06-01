@@ -22,13 +22,17 @@ window.addEventListener('scroll', drawWhenScroll);
 
 //AUTOMATIC SCROLLING
 function pageScroll() {
-    window.scrollBy(0,50); // horizontal and vertical scroll increments
-    scrolldelay = setTimeout('pageScroll()',50); // scrolls every 100 milliseconds
+    window.scrollBy(0,50); 
+    scrolldelay = setTimeout('pageScroll()',200); 
 }
 
-//JUMP TO TOP PLUS STOP SCROLLING DOWN
+//JUMP TO TOP 
 function jumpScroll() {
     window.scroll(0,0); // horizontal and vertical scroll targets
+}
+
+//STOP SCROLLING DOWN (ONLY)
+function stopScroll() {
     clearTimeout(scrolldelay);
 }
 
