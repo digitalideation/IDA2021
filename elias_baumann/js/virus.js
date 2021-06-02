@@ -4,6 +4,11 @@ $('#power').click(function() {
 
 // ____________________________________________
 
+$('#power').click(function() {
+  $('#after').addClass('text-after-effect');
+});
+
+// ____________________________________________
 
 // Live Time
 function showTime() {
@@ -53,3 +58,21 @@ function addZero(time) {
 
 showTime()
 setInterval(showTime, 1000)
+
+
+// -----------------------
+
+// Play Song$
+
+var aud = document.getElementById("ASong").children[0];
+var isPlaying = false;
+aud.pause();
+
+function playPause() {
+    if (isPlaying) {
+        aud.pause();
+    } else {
+        aud.play();
+    }
+    isPlaying = !isPlaying;
+}

@@ -1,19 +1,6 @@
-body {
-    justify-content: center;
-    text-align:center;
-    margin: 1%;
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgb(250, 167, 225);
-    color: white;
-}
 
-p {
-    font-size: 70px;
-    margin-top: 20px;
-    text-align: center;
-}   
 
-h1 {
+h2 {
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -21,6 +8,7 @@ h1 {
     top: 2%;
     right: 2%;
     color:white;
+    font-family: 'Orbitron', sans-serif;
 }
 
 ul {
@@ -50,7 +38,7 @@ ul {
   }
   
   li a:hover {
-    background-color: hotpink;
+    background-color: var(--color2);
     color: white;
   }
 
@@ -81,121 +69,486 @@ ul {
     text-align: center;
   }
 
-hr{
-  border: 5px solid white;
-  border-radius: 5px;
-  margin-left: 10px;
-  margin-right: 5px;
+  :root{
+    --backgroundColor: rgb(250, 167, 225);
+    --background-image: url(/julia_kagerbauer/images/waves.svg);
+    --background-size: cover;
+    --overflow-x: hidden;
+    --color: rgb(0, 0, 0);
+    --color1: rgb(255, 255, 255);
+    --color2: hotpink;
+    --textShwadow: -2px 0 1px #0f0f0f, -4px 0 0 #000000,  -6px 0 1px #fff,-6px 1px 1px #fff,-6px 2px 1px #fff, 0px 2px 1px #fff, 0px 1px 0px #fff, 0px 0 1px #fff,-6px -1px 1px #fff,
+    -6px -2px 0px #fff, 0px -1px 0px #fff
+    ,-1px -2px 0px #fff, 1px -1px 1px #fff,  1px -1px 1px #fff,-4px -2px 0px #fff,-3px -2px 0px #fff,-4px 2px 1px #fff, -3px 2px 1px #fff,
+
+-6px 8px 0px #9B708E, -5px 7px 0px #9B708E, -4px 6px 0px #9B708E, -3px 5px 0px #9B708E, -2px 4px 0px #9B708E, -1px 3px 0px #9B708E, 0px 2px 0px #9B708E, 1px 1px 0px #9B708E,0px 3px 0px #9B708E,-8px 8px 0px #9B708E,
+    
+    
+    -6px 8px 0px #715169,-6px 9px 0px #715169, -6px 10px 0px #715169, -6px 11px 0px #715169, -6px 12px 0px #B290A9, -6px 13px 0px #B290A9, -6px 14px 0px #B290A9, -6px 15px 0px #B290A9, -6px 16px 0px #B290A9, -6px 17px 0px #B290A9, -6px 18px 0px #B290A9, -6px 19px 0px #B290A9, -6px 20px 0px #B290A9, -6px 21px 0px #B290A9, -6px 22px 0px #B290A9;
 }
 
-.text-ganz {
-    display: inline-block;
-    position:static;
-    text-align:left;
-    font-size: 20px;
-    line-height:  50px;
-}
+.night {
+    --backgroundColor: black;
+    --background-image: url(/julia_kagerbauer/images/schichten_night.svg);
+    --background-size: cover;
+    --overflow-x: hidden;
+    --color: rgb(255, 255, 255);
+    --color1: rgb(255, 0, 212);
+    --color2: rgb(255, 0, 212);
+    --textShwadow: -2px 0 1px #ffffff, -4px 0 0 #ffffff,  -6px 0 1px rgb(0, 0, 0),-6px 1px 1px rgb(0, 0, 0),-6px 2px 1px rgb(39, 39, 39), 0px 2px 1px rgb(34, 34, 34), 0px 1px 0px rgb(41, 41, 41), 0px 0 1px rgb(53, 53, 53),-6px -1px 1px #fff,
+    -6px -2px 0px #fff, 0px -1px 0px #fff
+    ,-1px -2px 0px #fff, 1px -1px 1px #fff,  1px -1px 1px #fff,-4px -2px 0px #fff,-3px -2px 0px #fff,-4px 2px 1px #fff, -3px 2px 1px #fff,
 
-.text-1 {
-    display:inline-block;
-    position: inherit;
-}
+-6px 8px 0px #3b3b3b, -5px 7px 0px #3b3b3b, -4px 6px 0px #3b3b3b, -3px 5px 0px #3b3b3b, -2px 4px 0px #3b3b3b, -1px 3px 0px #3b3b3b, 0px 2px 0px #3b3b3b, 1px 1px 0px #3b3b3b,0px 3px 0px #3b3b3b,-8px 8px 0px #3b3b3b,
+    
+    
+    -6px 8px 0px #535353,-6px 9px 0px #535353, -6px 10px 0px #535353, -6px 11px 0px #535353, -6px 12px 0px #535353, -6px 13px 0px #535353, -6px 14px 0px #696969, -6px 15px 0px #696969, -6px 16px 0px #696969, -6px 17px 0px #696969, -6px 18px 0px #696969, -6px 19px 0px #797979, -6px 20px 0px #797979, -6px 21px 0px #797979, -6px 22px 0px #797979;
+  }
 
-.text-gross {
-    position: center;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+    
+    
+  }
+  
+  
+  li {
+    float:left;
+    
+  }
+  
+  li a {
+    display: block;
+    color: white;
     text-align: center;
-    font-size: 40px;
-    line-height:  40px;
-    margin-top: 40px;
-    margin-left: 10px;
-    transition-property: all;
-    transition-duration: 2s;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: var(--color2);
+    color: white;
+  }
+  
+  .active {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color:var(--color2);
+  }
+  
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  
+  li a {
+    display: block;
+    text-align: center;
+  }
+
+.button1{
+    display: flex;
+    position: fixed;
+    top: 180px;
+    left: 1%;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.button2{
+    display: none;
+    position: fixed;
+    top: 180px;
+    left: 1%;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.button{
+    display: flex;
+    position: fixed;
+    top: 180px;
+    right: 1%;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.stopDance {
+    display: none;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.startDance {
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+
+
+body{
+    background-color: var(--backgroundColor);
+    color: var(--color) ;
+    background-image: var(--background-image);
+    background-size: cover;
     
 }
 
-.text-gross:hover {
-    /*display: flex;*/
-    position: center;
-    text-align: center;
-    font-size: 40px;
-    line-height:  40px;
-    margin-top: 20px;
-    margin-left: 10px;
-    transform: rotate(-10deg);
-    color:rgb(8, 255, 222);
+.block{ overflow:hidden; padding: 70px 0; position:relative; background-color: transparent;}
+
+.container1 {
+    margin:20px 0; 
+    color: var(--color);
+    font-size:26px; 
+    font-family: 'Orbitron', sans-serif;  
+    font-weight: 100;
+    text-align:center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    background-color: transparent;
 }
 
-.box{ 
-    position: center;
-    text-align: center;
-    font-size: 40px;
-    line-height:  40px;
-    margin-top: 40px;
-    margin-left: 10px;
-    transition-property: all;
-    transition-duration: 2s;
+p{
+    margin: 0;
+}
+
+.container1:hover > .satz1 { text-align: left;}
+.container1:hover > .satz2 { text-align: right;}  
+.container1:hover > .satz3 { text-align: left;} 
+.container1:hover > .satz4 { text-align: right;} 
+.container1:hover > .satz5 { text-align: left;} 
+.container1:hover > .satz6 { text-align: right;} 
+.container1:hover > .satz7 { text-align: left;}  
+.container1:hover {color: var(--color1);}
+
+.container2 {
+    margin:20px 0; 
+    color: var(--color);
+    font-size:26px; 
+    font-family: 'Orbitron', sans-serif;  
+    font-weight: 100;
+    text-align:center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+p{
+    margin: 0;
+}
+
+.container2:hover > .satz1 { text-align: left;}
+.container2:hover > .satz2 { text-align: right;}  
+.container2:hover > .satz3 { text-align: left;} 
+.container2:hover > .satz4 { text-align: right;} 
+.container2:hover > .satz5 { text-align: left;} 
+.container2:hover > .satz6 { text-align: right;} 
+.container2:hover > .satz7 { text-align: left;} 
+.container2:hover > .satz8 { text-align: right;}  
+.container2:hover > .satz9 { text-align: left;} 
+.container2:hover > .satz10 { text-align: right;} 
+.container2:hover > .satz11 { text-align: left;} 
+.container2:hover > .satz12 { text-align: right;} 
+.container2:hover > .satz13 { text-align: left;} 
+.container2:hover > .satz14 { text-align: right;}  
+.container2:hover > .satz15 { text-align: left;} 
+.container2:hover > .satz16 { text-align: right;} 
+.container2:hover > .satz17 { text-align: left;}  
+.container2:hover {color: var(--color1);}
+
+.container3 {
+    margin:20px 0; 
+    color: var(--color);
+    font-size:26px; 
+    font-family: 'Orbitron', sans-serif;  
+    font-weight: 100;
+    text-align:center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    background-color: transparent;
+}
+
+.container3:hover > .satz1 { text-align: left;}
+.container3:hover > .satz2 { text-align: right;}  
+.container3:hover > .satz3 { text-align: left;} 
+.container3:hover > .satz4 { text-align: right;} 
+.container3:hover > .satz5 { text-align: left;} 
+.container3:hover > .satz6 { text-align: right;} 
+.container3:hover > .satz7 { text-align: left;} 
+.container3:hover > .satz8 { text-align: right;}  
+.container3:hover > .satz9 { text-align: left;} 
+.container3:hover > .satz10 { text-align: right;} 
+.container3:hover > .satz11 { text-align: left;} 
+.container3:hover > .satz12 { text-align: right;} 
+.container3:hover > .satz13 { text-align: left;} 
+.container3:hover > .satz14 { text-align: right;}  
+.container3:hover > .satz15 { text-align: left;} 
+.container3:hover > .satz16 { text-align: right;} 
+.container3:hover > .satz17 { text-align: left;}  
+.container3:hover {color: var(--color1);}
+
+h1{margin:0; line-height: 100px;text-align: center; font-size: 90px;}
+
+.block1{
+    color:var(--color);
+    background: transparent;}
+.block1  h1{
     
-}
-.text-gross-2 {
-    transition-property: all;
-    transition-duration: 2s;
+font-family: 'Orbitron', sans-serif;  color:rgba(0, 0, 0, 0);letter-spacing:.4rem;font-style: italic; 
+
+text-shadow: var(--textShwadow);
 }
 
-.text-gross-3 {
-    transition-property: all;
-    transition-duration: 2s;
+.h1 {
+    animation: titel 0.4926s ease-in-out infinite alternate;
+   transform-origin: bottom;
+   animation-play-state: paused;
+ }
+
+ .h3 {
+    animation: titel 0.4926s ease-in-out infinite alternate;
+   transform-origin: bottom;
+   animation-play-state: paused;
+ }
+
+ .h4 {
+    animation: titel 0.4926s ease-in-out infinite alternate;
+   transform-origin: bottom;
+   animation-play-state: paused;
+ }
+
+ .container1, .container2, .container3 {
+   animation: lyrics 0.4926s ease-in-out infinite alternate;
+   transform-origin: bottom;
+   background-color: transparent;
+   animation-play-state: paused;
+ }
+
+ .ingwer1 {
+    width: 20vw;
+    height:  50vw;
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    background-image: url(/julia_kagerbauer/images/arm_rechts.svg);
+    background-repeat: no-repeat;
+    animation: ingwer1 4s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
 }
 
-.box:hover .text-gross-2{
-    /*display: flex;*/
-    transform: rotate(-10deg) translate(200px,50px);
-    color:rgb(21, 239, 255);
+.ingwer2 {
+    width: 10vw;
+    height:  50vw;
+    position: absolute;
+    top: 60%;
+    right: -20%;
+    background-image: url(/julia_kagerbauer/images/kopf.svg);
+    background-repeat: no-repeat;
+    animation: ingwer2 5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
+}
+
+.ingwer3 {
+    width: 20vw;
+    height:  50vw;
+    position: absolute;
+    top: 5%;
+    left: -20%;
+    background-image: url(/julia_kagerbauer/images/arm_links.svg);
+    background-repeat: no-repeat;
+    animation: ingwer3 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
+}
+
+.ingwer4 {
+    width: 10vw;
+    height:  50vw;
+    position: absolute;
+    top: 60%;
+    right: -20%;
+    background-image: url(/julia_kagerbauer/images/körper.svg);
+    background-repeat: no-repeat;
+    animation: ingwer4 3s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
+}
+
+.ingwer5 {
+    width: 10vw;
+    height:  20vw;
+    position: absolute;
+    top: 20%;
+    right: 50%;
+    background-image: url(/julia_kagerbauer/images/bein_links.svg);
+    background-repeat: no-repeat;
+    animation: ingwer5 4s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
+}
+
+.ingwer6 {
+    width: 12vw;
+    height:  40vw;
+    position: absolute;
+    top: 70%;
+    right: -20%;
+    background-image: url(/julia_kagerbauer/images/bein_rechts.svg);
+    background-repeat: no-repeat;
+    animation: ingwer6 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    animation-play-state: paused;
+}
+
+.special1 {
+    animation: special1 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
 }
 
 
-.box:hover .text-gross-3 {
-    /*display: flex;*/
-    transform: rotate(10deg) translate(-200px,-50px);
-    color:rgb(21, 239, 255);
-}
 
-span {
-    display: inline-block;
-}
-.reckless {
-    transition-property: all;
-    transition-duration: 0,5s;
-    color:rgb(253, 213, 163);
-    display: inline-block;
-}
 
-.reckless:hover {
-    color: chartreuse;
-    transform: scale(2,2) translate(100px);
-}
 
-.aufblasen div {
-    transition-property: all;
-    transition-duration: 2s;
-    position: relative;
-}
+ @keyframes titel {
 
-.aufblasen:hover div {
-    transform: scale(3,5);
-    position: relative;
-    color: rgb(255, 17, 65);
-}
-
-.drehen div {
-    transition-property: all;
-    transition-duration: 1s;
-    position: relative;
-    margin: 40px;
-    color:rgb(253, 213, 163);
+    0% {
+        transform: translateY(0%) scaleY(1);
+    }
+    50%{
+        transform:  translateY(3%) scaleY(1.1);
+        }
+    100%{
+        transform: translateY(3%) scaleY(1.2) skewX(20deg);
+        }
     
+
 }
 
-.drehen:hover div {
-    transform: rotate(360deg) scale(2);
-    color: deeppink;
+@keyframes lyrics {
+    from{
+        transform: translateY(3%) skewY(-5deg);
+        }
+        to{
+        transform: translateY(0%) skewY(5deg);
+        }
+
 }
+
+@keyframes ingwer1 {
+    0% {
+        transform: translate(0px,0px);
+    }
+
+    50% {
+        transform: translate(1000px,100px);
+    }
+
+    100% {
+        transform: translate(-700px,-00px);
+    }
+}
+
+@keyframes ingwer2 {
+    0% {
+        transform: translate(0px,0px);
+    }
+
+    50% {
+        transform: translate(-400px,500px);
+    }
+
+    100% {
+        transform: translate(-1000px,-200px);
+    }
+}
+
+@keyframes ingwer3 {
+    0% {
+        transform: translate(0px,100px);
+    }
+
+    50% {
+        transform: translate(1000px,700px);
+    }
+
+    100% {
+        transform: translate(10px,900px);
+    }
+}
+
+@keyframes ingwer4 {
+    0% {
+        transform: translate(0px,0px);
+    }
+
+    50% {
+        transform: translate(-400px,500px);
+    }
+
+    100% {
+        transform: translate(-1000px,-200px);
+    }
+}
+
+@keyframes ingwer5 {
+    0% {
+        transform: translate(-300px,0px);
+    }
+
+    50% {
+        transform: translate(400px,300px);
+    }
+
+    100% {
+        transform: translate(1000px, 0px);
+    }
+}
+
+@keyframes ingwer6 {
+    0% {
+        transform: translate(0px,0px);
+    }
+
+    50% {
+        transform: translate(-400px,500px);
+    }
+
+    100% {
+        transform: translate(-1000px,-200px);
+    }
+}
+
+

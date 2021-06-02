@@ -1,0 +1,543 @@
+body {
+    width: 100vw;
+    height: 100vw;
+    background: #232450;
+    background: url("https://www.transparenttextures.com/patterns/textured-paper.png"), radial-gradient(circle, rgba(35, 36, 80, 1) 24%, rgba(26, 27, 70, 1) 49%, rgba(4, 4, 34, 1) 81%);
+    background-blend-mode: multiply, screen;
+}
+
+@import "compas/css3";
+.papa {
+    height: 60%;
+    width: 10%;
+    margin: auto;
+}
+
+.p {
+    font-size: 125px;
+    color: white;
+    text-align: center;
+}
+
+.rosi {
+    font-size: 125px;
+    color: white;
+    text-align: center;
+    line-height: 80%;
+}
+
+.rosi:hover {
+    animation: glitch 500ms infinite;
+}
+
+.p:hover {
+    animation: glitch 500ms infinite;
+}
+
+.navid {
+    margin: auto;
+    margin-top: -48%;
+    width: 60vw;
+    height: 5%;
+    position: relative;
+}
+
+a {
+    text-decoration: none
+}
+
+.home {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home:hover {
+    text-decoration: underline white;
+}
+
+.robot {
+    margin-left: 23vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.robot:hover {
+    text-decoration: underline white;
+}
+
+.song {
+    margin-left: 28%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.song:hover {
+    text-decoration: underline white;
+}
+
+.circle-one {
+    width: 28%;
+    height: 28%;
+    margin-left: 10%;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.1em;
+    margin-top: 8%;
+}
+
+.circle-one2 {
+    width: 18vw;
+    height: 18vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: 17%;
+    animation-name: bazi;
+    animation-duration: 2s;
+    transition: transform 5s;
+}
+
+.circle-one3 {
+    width: 17vw;
+    height: 17vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: -63%;
+    justify-content: center;
+    text-align: center;
+}
+
+.beginning {
+    margin-top: 7%;
+    margin-left: 2.5%;
+    display: flex;
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    position: absolute;
+}
+
+.beginning:hover {
+    animation: glitch 500ms infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    14% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    100% {
+        text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+}
+
+.circle-one2:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.circle-two {
+    width: 28%;
+    height: 28%;
+    margin-left: 60%;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.1em;
+    margin-top: -10%;
+}
+
+.circle-two1 {
+    width: 18vw;
+    height: 18vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: 18%;
+    animation-name: bazi;
+    animation-duration: 2s;
+    transition: transform 5s;
+}
+
+.circle-two2 {
+    width: 17vw;
+    height: 17vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: -63%;
+    justify-content: center;
+    text-align: center;
+}
+
+.Mileston2 {
+    margin-top: 3.5%;
+    margin-left: 6%;
+    display: flex;
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    color: white;
+    position: absolute;
+}
+
+.Mileston2:hover {
+    animation: glitch 500ms infinite;
+}
+
+.mileston3:hover {
+    animation: glitch 500ms infinite;
+}
+
+.mileston4:hover {
+    animation: glitch 500ms infinite;
+}
+
+.mileston5:hover {
+    animation: glitch 500ms infinite;
+}
+
+.mileston6:hover {
+    animation: glitch 500ms infinite;
+}
+
+.mileston7:hover {
+    animation: glitch 500ms infinite;
+}
+
+.circle-two1:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.circle-three {
+    width: 28%;
+    height: 28%;
+    margin-left: 10%;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.1em;
+    margin-top: -8%;
+}
+
+.circle-three2 {
+    width: 18vw;
+    height: 18vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: 17%;
+    animation-name: bazi;
+    animation-duration: 2s;
+    transition: transform 5s;
+}
+
+.circle-three3 {
+    width: 17vw;
+    height: 17vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: -63%;
+    justify-content: center;
+    text-align: center;
+}
+
+.mileston3 {
+    margin-top: 3.5%;
+    margin-left: 6%;
+    display: flex;
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    color: white;
+    position: absolute;
+}
+
+.circle-three2:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.circle-four {
+    width: 28%;
+    height: 28%;
+    margin-left: 60%;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.1em;
+    margin-top: -5%;
+}
+
+.circle-four2 {
+    width: 18vw;
+    height: 18vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: 17%;
+    animation-name: bazi;
+    animation-duration: 2s;
+    transition: transform 5s;
+}
+
+.circle-four3 {
+    width: 17vw;
+    height: 17vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: -63%;
+    justify-content: center;
+    text-align: center;
+}
+
+.mileston4 {
+    margin-top: 3.5%;
+    margin-left: 6.5%;
+    display: flex;
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    color: white;
+    position: absolute;
+}
+
+.circle-four2:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.circle-five {
+    width: 28%;
+    height: 28%;
+    margin-left: 15%;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.1em;
+    margin-top: -10%;
+}
+
+.circle-five2 {
+    width: 18vw;
+    height: 18vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: 17%;
+    animation-name: bazi;
+    animation-duration: 2s;
+    transition: transform 5s;
+}
+
+.circle-five3 {
+    width: 17vw;
+    height: 17vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: -63%;
+    justify-content: center;
+    text-align: center;
+}
+
+.mileston5 {
+    margin-top: 3.5%;
+    margin-left: 6.5%;
+    display: flex;
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    color: white;
+    position: absolute;
+}
+
+.circle-five2:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.circle-six {
+    width: 28%;
+    height: 28%;
+    margin-left: 60%;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.1em;
+    margin-top: -10%;
+}
+
+.circle-six2 {
+    width: 18vw;
+    height: 18vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: 17%;
+    animation-name: bazi;
+    animation-duration: 2s;
+    transition: transform 5s;
+}
+
+.circle-six3 {
+    width: 17vw;
+    height: 17vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: -63%;
+    justify-content: center;
+    text-align: center;
+}
+
+.mileston6 {
+    margin-top: 3.5%;
+    margin-left: 6.5%;
+    display: flex;
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    color: white;
+    position: absolute;
+}
+
+.circle-six2:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.circle-seven {
+    width: 28%;
+    height: 28%;
+    margin-left: 15%;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.1em;
+    margin-top: -10%;
+}
+
+.circle-seven2 {
+    width: 18vw;
+    height: 18vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: 17%;
+    animation-name: bazi;
+    animation-duration: 2s;
+    transition: transform 5s;
+}
+
+.circle-seven3 {
+    width: 17vw;
+    height: 17vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: -63%;
+    justify-content: center;
+    text-align: center;
+}
+
+.mileston7 {
+    margin-top: 3.5%;
+    margin-left: 6.5%;
+    display: flex;
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    color: white;
+    position: absolute;
+}
+
+.circle-seven2:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+.circle-eight {
+    width: 28%;
+    height: 28%;
+    margin-left: 60%;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.1em;
+    margin-top: -10%;
+}
+
+.circle-eight2 {
+    width: 18vw;
+    height: 18vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: 17%;
+    animation-name: bazi;
+    animation-duration: 2s;
+    transition: transform 5s;
+}
+
+.circle-eight3 {
+    width: 17vw;
+    height: 17vw;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #4c80e2;
+    border-width: 0.10ex;
+    margin-top: -63%;
+    justify-content: center;
+    text-align: center;
+}
+
+.mileston8 {
+    margin-top: 3.5%;
+    margin-left: 6.5%;
+    display: flex;
+    width: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7rem;
+    color: white;
+    position: absolute;
+}
+
+.circle-eight2:hover {
+    border-radius: 50%;
+    transform: scale(1.5);
+}

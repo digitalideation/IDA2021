@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You're the One</title>
-    
+    <title>Document</title>
+
     <style>
-        @font-face {
+    @font-face {
         font-family: 'simplonmonoregular';
         src: url('img/Mono/Web Complete/WOFF2/SimplonEDUMono-Regular-WebXL.woff2') format('woff2'),
         url('img/Mono/Web Complete/WOFF/SimplonEDUMono-Regular-WebXL.woff') format('woff');
@@ -14,17 +14,33 @@
         font-style: normal;
         }
 
-        body {
-            font-family: 'simplonmonoregular';
-            background-color: rgb(255, 0, 234);
-            font-size: 28rem;   
-            text-align: center;
-            position: absolute;
-            top: 25%;
-            list-style: none;
+    body {
+        background-color: rgb(255, 0, 191);
+    }
+
+    header {
+        height: 200vh;
         }
 
-        @keyframes strobo { 
+    .container {
+        /* hide fixed overflow contents */
+        clip: rect(0, auto, auto, 0);
+
+        /* does not work if overflow = visible */
+        overflow: hidden;
+
+        /* only works with absolute positioning */
+        position: absolute;
+
+        /* Make sure containers are full-width and height */
+        height: 100vh;
+        left: 0;
+        width: 100%;
+        
+        
+        }
+
+    @keyframes strobo { 
             0% {
                 opacity: 0;
                 
@@ -35,26 +51,201 @@
             }
             }
 
-        #thrill {
-            background-size: cover;
-            margin: 0px auto 0;
-            animation: strobo 0.2s infinite;
-            list-style: none;
-            text-align: center;
-            }
-
-        a {
-            list-style: none;
-            text-decoration: none;
-            color: black;
+    .container_solid {
+        background: rgb(255, 0, 191);
+        
+    
+        /* position this container at the top of its parent element */
+        top: 0;
+        background-image: url(img/whitebackground.png);
+        background-size:100vw auto;
+        background-position: center;
+        background-attachment: fixed;
+        mix-blend-mode: multiply;
         }
 
-        
+    .title_wrapper {
+        position: fixed;
+        display: block;  
+        margin: auto;
+        width: 100%;
+        /* center the text wrapper vertically */
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        }
 
+    .title_wrapper h1 {
+        text-align: center;
+        font-size: 80px;
+        text-align: center;
+        font-family: 'simplonmonoregular';
+        animation: strobo 0.2s infinite;
+
+        }
+
+
+    .container_imagethrill {
+        /* Grab a free image from unsplash */
+        background-image: url(img/thrill.svg);
+        background-size:100vw auto;
+        background-position: center;
+        background-attachment: fixed;
+        mix-blend-mode: multiply;
+        
+        /* position the second container below the first container */
+        top: 100vh;
+        }
+
+    .container_imagethrill .title_wrapper h1 {
+        color: white;
+        }
+
+    .container_rush {
+        /* Grab a free image from unsplash */
+        /*background-image: url(img/eye.svg);*/
+        background-size:100vw auto;
+        background-position: center;
+        background-attachment: fixed;
+        mix-blend-mode: multiply;
+        
+        /* position the second container below the first container */
+        top: 200vh;
+        }
+
+    .container_rush .title_wrapper h1 {
+        color: black;
+        }
+
+    .container_imageeye {
+        /* Grab a free image from unsplash */
+        background-image: url(img/eye.png);
+        background-size:100vw auto;
+        background-position: center;
+        background-attachment: fixed;
+        mix-blend-mode: multiply;
+        
+        /* position the second container below the first container */
+        top: 300vh;
+    }
+
+    .container_pain {
+        /* Grab a free image from unsplash */
+        /*background-image: url(img/hearts.png);*/
+        background-size:100vw auto;
+        background-position: center;
+        background-attachment: fixed;
+        mix-blend-mode: multiply;
+        
+        /* position the second container below the first container */
+        top: 400vh;
+    }
+
+    .container_imagesun {
+        /* Grab a free image from unsplash */
+        background-image: url(img/sun_svg.svg);
+        background-size:100vw auto;
+        background-position: bottom;
+        background-attachment: fixed;
+        mix-blend-mode: multiply;
+        
+        /* position the second container below the first container */
+        top: 500vh;
+    }
+
+    .container_touch {
+        /* Grab a free image from unsplash */
+        /*background-image: url(img/hearts.png);*/
+        background-size:100vw auto;
+        background-position: center;
+        background-attachment: fixed;
+        mix-blend-mode: multiply;
+        
+        /* position the second container below the first container */
+        top: 600vh;
+    }
+
+    .container_imageflower {
+        /* Grab a free image from unsplash */
+        /*background-image: url(img/auaaua.jpg);*/
+        background-size: 100vw auto;
+        background-position: bottom;
+        background-attachment: fixed;
+        mix-blend-mode: multiply;
+        
+        /* position the second container below the first container */
+        top: 700vh;
+    }
+
+    img{
+       width: 20%;
+       align-items: center;
+       padding: 10%;
+       margin: 10%;
+       padding-left: 29%;
+       padding-top: 10%;
+       animation: strobo 0.2s infinite;
+    }
 
     </style>
+
 </head>
+
 <body>
-    <a href="song.html" id="thrill">Thrill</a>
+    <div class="container container_solid">
+        <div class="title_wrapper">
+          <h1>Cause I do it for the thrill</h1>
+        </div>
+      </div>
+    
+      <!-- Second container -->
+      <div class="container container_imagethrill" aria-hidden="true">
+        <div class="title_wrapper">
+          <h1></h1>
+        </div>
+      </div>
+
+      <div class="container container_rush" aria-hidden="true">
+        <div class="title_wrapper">
+          <h1>For the rush</h1>
+        </div>
+      </div>
+
+      <div class="container container_imageeye" aria-hidden="true">
+        <div class="title_wrapper">
+          <h1></h1>
+        </div>
+      </div>
+
+      <div class="container container_pain" aria-hidden="true">
+        <div class="title_wrapper">
+          <h1>I do it for the pain</h1>
+        </div>
+      </div>
+
+      <div class="container container_imagesun" aria-hidden="true">
+        <div class="title_wrapper">
+          <h1></h1>
+        </div>
+      </div>
+
+      <div class="container container_touch" aria-hidden="true">
+        <div class="title_wrapper">
+          <h1>For your touch</h1>
+        </div>
+      </div>
+
+      <div class="container container_imageflower" aria-hidden="true">
+        <div class="title_wrapper">
+            <a href="song.html"><img src="img/flower.png" alt="PNG"/></a>
+        </div>
+      </div>
+
+      
+    
+    </div>
+    
+    
 </body>
 </html>

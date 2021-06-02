@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="visual" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 900 600" style="enable-background:new 0 0 900 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#6600FF;}
+	.st1{filter:url(#blur1);}
+	.st2{fill:#00CC99;}
+	.st3{fill:#ED98F4;}
+	.st4{fill:#F7A0F9;}
+	.st5{fill:#38F2E9;}
+</style>
+<filter  height="120%" id="blur1" width="120%" x="-10%" y="-10%">
+	<feFlood  flood-opacity="0" result="BackgroundImageFix"></feFlood>
+	<feBlend  in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape"></feBlend>
+	<feGaussianBlur  result="effect1_foregroundBlur" stdDeviation="161"></feGaussianBlur>
+</filter>
+<rect y="0" class="st0" width="900" height="600"/>
+<g class="st1">
+	<circle class="st2" cx="750" cy="558" r="357"/>
+	<circle class="st0" cx="756" cy="228" r="357"/>
+	<circle class="st2" cx="586" cy="331" r="357"/>
+	<circle class="st2" cx="155" cy="370" r="357"/>
+	<circle class="st0" cx="350" cy="359" r="357"/>
+	<circle class="st2" cx="803" cy="12" r="357"/>
+</g>
+</svg>

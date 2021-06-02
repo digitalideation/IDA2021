@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="prallaxpage/parallax.css">
+  <link rel="stylesheet" href="prallaxpage/clouds.css">
+  <link rel="stylesheet" href="prallaxpage/piano.css">
+  <link rel="stylesheet" href="prallaxpage/text.css">
+  <script src="../../js/canvas.js"></script>
+</head>
+
+<body>
+
+  <div class="debug">
+    <audio controls loop>
+      <source src="mp3/06 Rhythm Is A Dancer.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <label><input type="checkbox"> Debug</label>
+  </div>
+
+  <div class="parallax">
+    <div id="group1" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+
+
+        <div class="rhythm">
+          <div class="R">R</div>
+          <div class="H">H</div>
+          <div class="Y">Y</div>
+          <div class="T">T</div>
+          <div class="H2">H</div>
+          <div class="M">M</div>
+        </div>
+
+        <div class="scroll">
+
+          <div class="arrow"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+              fill="#000000">
+              <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
+            </svg></div>
+
+          <div class="arrow"> press play and scroll down </div>
+
+          <div class="arrow"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+              fill="#000000">
+              <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
+              <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
+            </svg></div>
+        </div>
+
+      </div>
+    </div>
+    <div id="group2" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+
+        <div class="title"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="soul">
+
+          <div class="pianoF"></div>
+          <div class="pianoG"></div>
+          <div class="pianoA"></div>
+          <div class="pianoB"></div>
+          <div class="pianoC"></div>
+          <div class="pianoD"></div>
+          <div class="pianoE"></div>
+
+        </div>
+      </div>
+    </div>
+    <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+        <svg class="wolke3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.28 71.71">
+
+          <g id="Ebene_2" data-name="Ebene 2">
+            <g id="Ebene_1-2" data-name="Ebene 1">
+              <ellipse class="kreis1" cx="28.43" cy="39.39" rx="27.93" ry="27.58" />
+              <ellipse class="kreis2" cx="71.56" cy="35.86" rx="35.71" ry="35.36" />
+              <ellipse class="kreis3" cx="108.69" cy="43.99" rx="19.09" ry="18.74" />
+            </g>
+          </g>
+        </svg>
+        <div class="title"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="content">
+          <div class="content__container">
+      
+
+            <ul class="content__container__list">
+              <li class="content__container__list__item">Rhythm is a dancer!</li>
+              <li class="content__container__list__item">It's a soul's companion!</li>
+              <li class="content__container__list__item">You can feel it everywhere!</li>
+              <li class="content__container__list__item">Lift your hands and voices!</li>
+              <!-- <li class="content__container__list__item">Free your mind and join us!</li>
+              <li class="content__container__list__item">You can feel it in the air!</li> -->
+            </ul>
+          </div>
+        </div>
+        <div class="feelings"></div>
+      </div>
+    </div>
+    <div id="group4" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="voice"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title"></div>
+      </div>
+      <!-- <div class="parallax__layer parallax__layer--deep">
+        <div class="deepbackground"></div>
+      </div> -->
+    </div>
+    <div id="group5" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+        <svg class="wolke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.28 71.71">
+          <g id="Ebene_2" data-name="Ebene 2">
+            <g id="Ebene_1-2" data-name="Ebene 1">
+              <ellipse class="kreis4" cx="28.43" cy="39.39" rx="27.93" ry="27.58" />
+              <ellipse class="kreis5" cx="71.56" cy="35.86" rx="35.71" ry="35.36" />
+              <ellipse class="kreis6" cx="108.69" cy="43.99" rx="19.09" ry="18.74" />
+            </g>
+          </g>
+        </svg>
+        <div class="title"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+
+      </div>
+    </div>
+    <div id="group6" class="parallax__group">
+      <div class="parallax__layer parallax__layer--back">
+
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="explosion" id="changeme">
+          <!-- <img src="BilderMood/colorexplosion.png"> -->
+        </div>
+        <img id="button" src="BilderMood/brain_1.svg" alt="">
+      </div>
+    </div>
+    <div id="group7" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+        <svg class="wolke2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.28 71.71">
+
+          <g id="Ebene_2" data-name="Ebene 2">
+            <g id="Ebene_1-2" data-name="Ebene 1">
+              <ellipse class="kreis7" cx="28.43" cy="39.39" rx="27.93" ry="27.58" />
+              <ellipse class="kreis8" cx="71.56" cy="35.86" rx="35.71" ry="35.36" />
+              <ellipse class="kreis9" cx="108.69" cy="43.99" rx="19.09" ry="18.74" />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    var debugInput = document.querySelector("input");
+    function updateDebugState() {
+      document.body.classList.toggle('debug-on', debugInput.checked);
+    }
+    debugInput.addEventListener("click", updateDebugState);
+    updateDebugState();
+
+    var elem = document.getElementById('button');
+    var ausgabe = document.getElementById('changeme');
+    elem.addEventListener('mouseover', mouseOver);
+    elem.addEventListener('mouseout', mouseOut);
+
+    function mouseOver() {
+      ausgabe.classList.add("new");;
+    }
+
+    function mouseOut() {
+      ausgabe.classList.remove("new");;
+    }
+  </script>
+
+</body>
+
+</html>

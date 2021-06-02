@@ -164,24 +164,28 @@ function map(val, in_min, in_max, out_min, out_max) {
 
 // Play Button
 playButton.addEventListener('click', function () {
-
+    
     // check if context is in suspended state (autoplay policy)
     if (audioCtx.state === 'suspended') {
         audioCtx.resume();
+        console.log('audioCtx.currentTime: ' + audioCtx.currentTime)
     }
 
     // play or pause track depending on state
     if (this.dataset.playing === 'false') {
         song.play();
         goLive();
+        musicTimer();
         playButton.innerHTML = "Pause";
         this.dataset.playing = 'true';
         console.log('Play');
+        console.log('audioCtx.currentTime: ' + audioCtx.currentTime)
     } else if (this.dataset.playing === 'true') {
         song.pause();
         playButton.innerHTML = "Play";
         this.dataset.playing = 'false';
         console.log('Pause');
+        console.log('audioCtx.currentTime: ' + audioCtx.currentTime)
     }
 
 }, false);
@@ -208,6 +212,29 @@ function goLive() {
     let liveTag = document.getElementById('live');
     liveTag.classList.add('live-fx');
 }
+
+function musicTimer() {
+    let background = document.getElementById('body');
+
+    function chorusOn () {
+        background.classList.add('sky');
+        document.documentElement.style.setProperty('--barColorL', 'var(--orange)');
+        document.documentElement.style.setProperty('--barColorR', 'var(--orange)');
+    };
+
+    function chorusOff () {
+        background.classList.remove('sky');
+        document.documentElement.style.setProperty('--barColorL', 'var(--red)');
+        document.documentElement.style.setProperty('--barColorR', 'var(--blue)')
+    };
+
+    setTimeout(chorusOn, 65000);
+    setTimeout(chorusOff, 95000);
+
+    setTimeout(chorusOn, 145000);
+    setTimeout(chorusOff,190000);
+}
+
 
 
 // function preload(){

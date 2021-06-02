@@ -6,110 +6,314 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    body{
-        background-color: black;
-    }
-    
-    .container {
-  width: 100%;
-  text-align: center;
-  margin-top: 25vh;
+html,
+body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #10171c;
+	color: white;
 }
-
-.circle {
-  stroke: #f8aa28;
-  stroke-dasharray: 650;
-  stroke-dashoffset: 650;
-  -webkit-transition: all 0.5s ease-in-out;
-  opacity: 0.3;
+#visbox {
+	height: 300px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	padding: 0;
+	margin: 0;
 }
-
-.playBut {
-  /*  border: 1px solid red;*/
-  display: inline-block;
-  -webkit-transition: all 0.5s ease;
+#music {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -150px;
+	z-index: 1000;
 }
-.playBut .triangle {
-  -webkit-transition: all 0.7s ease-in-out;
-  stroke-dasharray: 240;
-  stroke-dashoffset: 480;
-  stroke: rgb(255, 255, 255);
-  transform: translateY(0);
-}
-.playBut:hover .triangle {
-  stroke-dashoffset: 0;
-  opacity: 1;
-  stroke: #f8aa28;
-  animation: nudge 0.7s ease-in-out;
-}
-@keyframes nudge {
-  0% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-  70% {
-    transform: translateX(-2px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.playBut:hover .circle {
-  stroke-dashoffset: 0;
-  opacity: 1;
-}</style>
+    </style>
 </head>
 <body>
-<div class='container'>
-    <audio id="myAudio" src="audio/head&heart.mp3"></audio>
-    <a href='#' class='playBut trigger' onclick="togglePlay()">
-
-        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="70px" height="70px"
-            viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
-
-            <polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="10" points="
-        	73.5,62.5 148.5,105.8 73.5,149.1 " />
-
-            <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
-                stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
-        </svg>
-
-
-
-    </a>
-</div>
-
-
-
+  <audio id="music" controls crossorigin="anonymous"></audio>
+  <div id="visbox">
+    <canvas id="visCanvas"></canvas>
+  </div>
 </body>
 
 <script>
-     var myAudio = document.getElementById("myAudio");
-        var isPlaying = false;
+ /*
+   Music is by The XX
+   http://thexx.info
+   
+   options and constructor are at bottom of file
+ */
 
-        function togglePlay() {
-            isPlaying ? myAudio.pause() : myAudio.play();
-        };
+  var Vis = function (opt) {
+    function extend(a, b) {
+      for (var key in b)
+        if (b.hasOwnProperty(key))
+          a[key] = b[key];
+      return a;
+    }
+    var opts = {
+      preferredBarWidth: 16,
+      forcePreferredBarWidth: false,
+      barSpacing: 1,
+      color: 'rainbow',
+      rainbowOpacity: 1,
+      element: 'canvas#visCanvas',
+      sourceElement: 'audio#visSource',
+      height: null,
+      width: null, // if set, will use, else will use parent width
+      numBars: null, // if set, will use, else will calculate from bar width
+      hideIfZero: true,
+      loop: false,
+      autoplay: true,
+      volume: 1,
+      sources: [],
+      consecutiveZeroesLimit: 50,
+      onPlay: function (name) {
+        console.log('now playing ' + name);
+      },
+      onPause: function () {
 
-        myAudio.onplaying = function () {
-            isPlaying = true;
-            document.body.classList.remove('paused')
-            document.body.classList.add('playing')
-        };
+      },
+      onEnd: function () {
 
-        myAudio.onpause = function () {
-            isPlaying = false;
-            document.body.classList.remove('playing')
-            document.body.classList.add('paused')
-        };
+      },
+      onDragStart: function () {
 
+      },
+      onDragEnd: function () {
+
+      },
+      onVolumeChange: function () {
+
+      }
+    };
+
+    if (opt) extend(opts, opt);
+
+    var _this = this;
+    var seeking = false;
+    var cv = document.querySelector(opts.element);
+
+    if (!opts.width) {
+      opts.width = cv.parentElement.clientWidth;
+    }
+    if (!opts.height) {
+      opts.height = cv.parentElement.clientHeight;
+    }
+
+    var barColors = [];
+    cv.setAttribute('height', opts.height);
+    cv.setAttribute('width', opts.width);
+
+    var numBars = (opts.numBars ? opts.numBars : Math.floor(opts.width / (opts.preferredBarWidth + opts.barSpacing)));
+    var barWidth = opts.width / numBars - opts.barSpacing;
+
+    if (opts.forcePreferredWidth) {
+      barWidth = opts.preferredBarWidth;
+    }
+    if (barWidth < 4) barWidth = 4;
+
+    for (var i = 0; i < numBars; i++) {
+      var frequency = 5 / numBars;
+      if (opts.color == 'rainbow2') {
+        g = Math.floor(Math.sin(frequency * i + 0) * (127) + 128); //actual rainbow
+        r = Math.floor(Math.sin(frequency * i + 2) * (127) + 128);
+        b = Math.floor(Math.sin(frequency * i + 4) * (127) + 128);
+        barColors[i] = 'rgba(' + r + ',' + g + ',' + b + ',' + opts.rainbowOpacity + ')';
+      } else if (opts.color == 'rainbow') {
+        b = Math.floor(Math.sin(frequency * i + 0) * (127) + 128);
+        g = Math.floor(Math.sin(frequency * i + 1) * (127) + 128);
+        r = Math.floor(Math.sin(frequency * i + 3) * (127) + 128);
+        barColors[i] = 'rgba(' + r + ',' + g + ',' + b + ',' + opts.rainbowOpacity + ')';
+      } else if (opts.color == 'random') {
+        barColors[i] = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      } else {
+        barColors[i] = opts.color;
+      }
+    }
+
+    var c = cv.getContext('2d');
+
+    var cInd = 0;
+    var ind = 0;
+    for (var i = 0; i < cv.getAttribute('width'); i += (barWidth + opts.barSpacing)) {
+      c.save();
+      c.fillStyle = barColors[cInd++];
+      c.translate(i, 0);
+      c.fillRect(0, opts.height - opts.height * Math.random(), barWidth, opts.height);
+      c.restore();
+      ind += Math.floor(usableLength / numBars);
+    }
+
+
+    var ctx = new AudioContext();
+    var audio = document.querySelector(opts.sourceElement);
+
+    audio.src = opts.sources[0];
+
+    var audioSrc = ctx.createMediaElementSource(audio);
+    var analyser = ctx.createAnalyser();
+    audioSrc.connect(analyser);
+    analyser.connect(ctx.destination);
+
+    var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+    var usableLength = 250;
+    var consZ = 0;
+    var consZLim = opts.consecutiveZeroesLimit || 50;
+
+    function setUsableLength(len) {
+      if (len < usableLength) return;
+      //console.log('Increased usable length to '+usableLength);
+      usableLength = len;
+    }
+    function renderFrame() {
+      requestAnimationFrame(renderFrame);
+      analyser.getByteFrequencyData(frequencyData);
+
+      for (var i = 0; i < frequencyData.length; i++) {
+        if (frequencyData[i] == 0) {
+          consZ++;
+        } else {
+          consZ = 0;
+        }
+        if (consZ >= consZLim) {
+          setUsableLength(i - consZLim + 1);
+          break;
+        }
+      }
+      c.clearRect(0, 0, opts.width, opts.height);
+      var ind = 0;
+      var cInd = 0;
+      for (var i = 0; i < cv.getAttribute('width'); i += (barWidth + opts.barSpacing)) {
+        c.save();
+        c.fillStyle = barColors[cInd++];
+        c.translate(i, 0);
+        if (!opts.hideIfZero)
+          c.fillRect(0, opts.height - opts.height * (frequencyData[Math.floor(ind)] / 255) - 1, barWidth, opts.height);
+        else
+          c.fillRect(0, opts.height - opts.height * (frequencyData[Math.floor(ind)] / 255), barWidth, opts.height);
+
+        c.restore();
+        ind += Math.floor(usableLength / numBars);
+      }
+      if (audio.ended) {
+        opts.onEnd();
+        _this.next();
+      }
+    }
+
+    audio.volume = opts.volume;
+    this.loop = opts.loop;
+    // this is just here so codepen can make a nice preview
+    setTimeout(function () {
+      renderFrame(this);
+      if (opts.autoplay) {
+        audio.play();
+      }
+    }, 1);
+
+    audio.addEventListener('play', function () {
+      opts.onPlay(opts.sources[playlistIndex].match(/([\w|.|-|%]+)$/g)[0]);
+    });
+    audio.addEventListener('pause', function () {
+      opts.onPause();
+    });
+    audio.addEventListener('seeking', function () {
+      seeking = true;
+      opts.onDragStart();
+    });
+    audio.addEventListener('seeked', function () {
+      seeking = false;
+      if (audio.currentTime == audio.duration) {
+        _this.next();
+      }
+      opts.onDragEnd();
+    });
+    audio.addEventListener('volumechange', function () {
+      opts.onVolumeChange();
+    });
+
+    var playlistIndex = 0;
+
+    this.play = function (newSource) {
+      if (newSource) audio.src = newSource;
+      audio.pause();
+      audio.play();
+      return this;
+    }
+    this.pause = function () {
+      audio.pause();
+      return this;
+    }
+    this.volume = function (vol) {
+      audio.volume = vol;
+      return this;
+    }
+    this.loop = function (loop) {
+      this.loop = loop;
+      return this;
+    }
+    this.mute = function (muted) {
+      audio.muted = muted;
+      return this;
+    }
+    this.duration = function () {
+      return audio.duration;
+    }
+    this.seek = function (seconds) {
+      if (seconds != null) {
+        audio.currentTime = seconds;
+        return this;
+      } else {
+        return audio.currentTime;
+      }
+    }
+    this.next = function () {
+      playlistIndex++;
+      if (playlistIndex == opts.sources.length) {
+        playlistIndex = 0;
+        if (this.loop) {
+          /*if (opts.sources.length == 1) {
+            this.seek(0);
+            return this.play();
+          } else if (audio.paused) return this;
+          else*/
+          return this.play(opts.sources[playlistIndex]);
+        } else {
+          return this.pause();
+        }
+      } else {
+        /*if (audio.paused) return this;
+        else*/
+        return this.play(opts.sources[playlistIndex]);
+      }
+    }
+    this.prev = function () {
+      playlistIndex--;
+      if (playlistIndex < 0)
+        playlistIndex = opts.sources.length - 1;
+      /*if (audio.paused) return this;
+      else */
+      return this.play(opts.sources[playlistIndex]);
+    }
+
+  };
+
+  var vis = new Vis({
+    sourceElement: '#music',
+    preferredBarWidth: 30,
+    sources: ['../process/audio/head&heart.mp3'],
+    volume: 0.15,
+    loop: true
+    //hideIfZero: false,
+    //numBars: 10,
+    //color: 'rgba(255,255,255,.1)'
+    //rainbowOpacity: 0.2
+  });
 </script>
 </html>

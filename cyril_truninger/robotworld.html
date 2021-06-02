@@ -12,16 +12,30 @@
       /*************************** Page-wide variables ****************************/
       --scalesize: 1;
       --basssize: 1;
+      --barColorL: var(--red);
+      --barColorR: var(--blue);
       /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
     }
 
     nav {
       /* background-color: rgba(calc(var(--scalesize)* 100), 100, 100, 0.8) !important; */
       background: 
-        linear-gradient(90deg, var(--red), transparent calc(100% / var(--basssize))),
-        linear-gradient(-90deg, var(--blue) , transparent calc(100% / var(--basssize))) !important;
+        linear-gradient(90deg, var(--barColorL), transparent calc(100% / var(--basssize))),
+        linear-gradient(-90deg, var(--barColorR) , transparent calc(100% / var(--basssize))) !important;
        
     }
+
+    /* body {
+      background: radial-gradient(circle at bottom, var(--red), transparent calc(70% / var(--basssize)));
+      opacity: .8;
+    } */
+
+    .sky {
+    background-color: var(--blue);
+    background: radial-gradient(circle at top, var(--orange), transparent calc(70% / var(--basssize)));
+    opacity: .8;
+}  
+
 
   </style>
   <link rel="stylesheet" href="css/globalstyles.css">
@@ -41,7 +55,7 @@
   
 </head>
 
-<body>
+<body id="body">
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -69,6 +83,7 @@
           </div>
           <figure class="screen" id="screen">
             <div class="crt"></div>
+            <div class="overlay"></div>
             <div id="cvs-container">
               <canvas id="cvs"></canvas>
             </div>
@@ -93,6 +108,7 @@
   </div>
 </main>
   
+
   
 
 </body>

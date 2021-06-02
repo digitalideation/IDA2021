@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Parallax*/
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 4px;
+}
+
+.parallax__layer {
+    position: absolute;
+    padding: 100vh 0;
+    top: 50vmax;
+    left: 50vmax;
+    right: 50vmax;
+    bottom: 50vmax;
+}
+
+/*Parallax*/
+/*Content*/
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.base {
+    height: 300px;
+    width: 300px;
+    background-image: url(../img/orbit.svg);
+    background-repeat: no-repeat;
+    animation: rotate 5s ease infinite;
+    /*v*/
+    transform: translateZ(0px);
+    transform: translateZ(0px);
+    z-index: 0;
+}
+
+@keyframes rotate {
+0% {
+  transform: rotate( 0deg );
+}
+10% {
+  transform: rotate( 15deg );
+}
+50% {
+  transform: rotate( 12deg );
+}
+100% {
+  transform: rotate( 0deg );
+}
+}
+
+.midground {
+    background-image: url(../img/clouds2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1100px;
+    width: 1100px;
+/*v*/
+transform: translateZ(-1px);
+transform: translateZ(-1px);
+z-index: -1;
+}
+
+  .background {
+    /*animation-name: rotate;*/
+    height: 1500px;
+    width: 1500px;
+    border-radius: 750px;
+    background-image: linear-gradient(rgb(102, 179, 179), rgb(82, 82, 151),teal, black); 
+    background-size: 200% 200%;
+    animation: gradient 11s ease infinite;
+/*v*/
+    transform: translateZ(-3px);
+    transform: translateZ(-3px);
+    z-index: -2;
+}
+
+@keyframes gradient {
+    0%{background-position:70% 0%}
+    50%{background-position:31% 100%}
+    100%{background-position:70% 0%}
+}
+
+.background2 {
+    height: 1000px;
+    width: 1000px;
+    border-radius: 500px;
+    background-image: linear-gradient( orange red black); 
+    }
+
+  .behind {
+    height: 3000px;
+    width: 3000px;
+    background-image: url(../img/blur.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: pulsate 5s ease infinite;
+/*v*/
+    transform: translateZ(-4px);
+    transform: translateZ(-4px);
+    z-index: -3;
+    }
+
+@keyframes pulsate {
+    0% {
+      transform: scale( 1 );
+    }
+    10% {
+      transform: scale( 1 );
+    }
+    50% {
+      transform: scale( 1.13 );
+    }
+    100% {
+      transform: scale( 1 );
+    }
+  }
+
+}

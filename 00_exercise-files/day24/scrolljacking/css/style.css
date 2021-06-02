@@ -1,0 +1,42 @@
+body {
+    background-color: blue;
+    --verticalOffset: 0px;
+    --horizontalOffset: 0px;
+}
+
+section {
+    height: 100vh;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet {
+    width: 80vw;
+    height: 80vw;
+    background-color: orange;
+    border-radius: 40vw;
+}
+
+.stars {
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.star,
+.clouds,
+.satellite {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    position: absolute;
+    left: 60%;
+    top: 60%;
+}
+
+.clouds {
+    left: 30%;
+    background-color: lime;
+}

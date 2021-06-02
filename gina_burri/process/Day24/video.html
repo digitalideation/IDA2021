@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            background-color: blue;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            cursor: url("../Day20/favicon.svg"), auto;
+            
+            
+        }
+
+        .display {
+
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            margin: 0px;
+
+        }
+        .video.z {
+            transform: skew(-30deg,-45deg);
+            width: 100vw;
+            height: 100vh;
+            display: inline;
+            position: absolute;
+        }
+
+        .video.a {
+            transform: skew(30deg,45deg);
+            display: inline;
+            position: absolute;
+            left: 0px;
+            cursor: pointer;
+            
+        }
+
+        .video.b {
+            transform: skew(-60deg,10deg);
+            display: inline;
+            position: absolute;
+            right: 0px;
+            cursor: pointer;
+
+        }
+
+        .video.c {
+            transform: skew(-30deg,10deg);
+            display: inline;
+            position: absolute;
+            top: 70vh;
+            cursor: pointer;
+        }
+
+       
+        
+        button, input[type="submit"], input[type="reset"] {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        }
+
+        .triangle {
+         
+         width: 0; 
+         height: 0; 
+         border-top: 10px solid transparent;
+         border-bottom: 10px solid transparent;
+         border-left: 10px solid rgb(128, 0, 0);
+         cursor: pointer;
+         z-index: 8;
+
+     }
+
+     .pause {
+            width: 0; 
+        height: 0; 
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid rgb(121, 187, 101);
+        cursor: pointer;
+        z-index: 8;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <iframe class="video z" width="560" height="315" src="https://www.youtube.com/embed/ZKPFC8DA9_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="video a" width="560" height="315" src="https://www.youtube.com/embed/ZKPFC8DA9_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="video b" width="560" height="315" src="https://www.youtube.com/embed/ZKPFC8DA9_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    
+    <!-- <video controls loop class="video a" width="560" height="315"><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    <video controls loop class="video b" width="560" height="315"><source src="../../images/110::143.mp4" type="video/mp4"></video> -->
+    <!-- <video loop class="video c" width="1000" height="500" control="false"><source src="../../images/110::143.mp4" type="video/mp4"></video> -->
+    <div class="display">
+    <div style="text-align:center">     
+        <button id="playbutton" class="button triangle" onclick="playPause1()"></button> 
+        <video id="video1" class="video a" width="800" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div> 
+
+    <div style="text-align:center">  
+        <button id="playbutton2" class="button triangle" onclick="playPause2()"></button> 
+        <video id="video2" class="video b" width="800" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div>
+
+    <div style="text-align:center">  
+        <button id="playbutton3" class="button triangle" onclick="playPause3()"></button> 
+        <video id="video3" class="video c" width="800" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div>
+</div>
+
+        <script> 
+            var myVideo = document.getElementById("video1"); 
+            function playPause1() { 
+              if (myVideo.paused) 
+                myVideo.play(); 
+              else 
+                myVideo.pause(); 
+            } 
+
+            var myVideo2 = document.getElementById("video2"); 
+            function playPause2() { 
+              if (myVideo2.paused) 
+                myVideo2.play(); 
+              else 
+                myVideo2.pause(); 
+            } 
+
+            var myVideo2 = document.getElementById("video3"); 
+            function playPause3() { 
+              if (myVideo2.paused) 
+                myVideo2.play(); 
+              else 
+                myVideo2.pause(); 
+            } 
+
+            
+            myVideo.onplaying = function() {
+                isPlaying = true;
+                removeClass(document.getElementById("playbutton"), "triangle");
+                addClass(document.getElementById("playbutton"), "pause") 
+            };
+
+            myVideo.onpause = function() {
+                isPlaying = false;
+                removeClass(document.getElementById("playbutton"), "pause");
+                addClass(document.getElementById("playbutton"), "triangle") 
+            };
+
+            myVideo2.onplaying = function() {
+                isPlaying = true;
+                removeClass(document.getElementById("playbutton2"), "triangle");
+                addClass(document.getElementById("playbutton2"), "pause") 
+            };
+
+            myVideo2.onpause = function() {
+                isPlaying = false;
+                removeClass(document.getElementById("playbutton2"), "pause");
+                addClass(document.getElementById("playbutton2"), "triangle") 
+            };
+
+            myVideo3.onplaying = function() {
+                isPlaying = true;
+                removeClass(document.getElementById("playbutton3"), "triangle");
+                addClass(document.getElementById("playbutton3"), "pause") 
+            };
+
+            myVideo3.onpause = function() {
+                isPlaying = false;
+                removeClass(document.getElementById("playbutton3"), "pause");
+                addClass(document.getElementById("playbutton3"), "triangle") 
+            };
+
+
+            function hasClass(el, className)
+            {
+                if (el.classList)
+                    return el.classList.contains(className);
+                return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+            }
+
+            function addClass(el, className)
+            {
+                if (el.classList)
+                    el.classList.add(className)
+                else if (!hasClass(el, className))
+                    el.className += " " + className;
+            }
+
+            function removeClass(el, className)
+            {
+                if (el.classList)
+                    el.classList.remove(className)
+                else if (hasClass(el, className))
+                {
+                    var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+                    el.className = el.className.replace(reg, ' ');
+                }
+            }
+
+            
+            </script> 
+     
+      
+      
+
+
+
+</body>
+</html>

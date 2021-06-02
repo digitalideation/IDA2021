@@ -1,0 +1,97 @@
+/* wolken / clouds  */
+  
+.wolke {
+    width: 400px;
+    position: absolute;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 1s ease-in-out;
+  }
+  
+  .wolke:hover {
+    transform: scale(1.5);
+    animation-play-state: paused;
+  }
+  
+  .wolke2 {
+    width: 400px;
+    position: absolute;
+    animation-name: example2;
+    animation-duration:6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 1s ease-in-out;
+  }
+  
+  .wolke2:hover {
+    transform: scale(1.5);
+    animation-play-state: paused;
+  }
+  
+  .wolke3 {
+    width: 400px;
+    position: absolute;
+    animation-name: example3;
+    animation-duration:6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition: all 1s ease-in-out;
+  }
+
+  .wolke3:hover {
+    transform: scale(1.5);
+    animation-play-state: paused;
+  }  
+  
+  @keyframes example {
+    0%   {left:-400px; top:200px;}
+    100% {left:100%; top:200px;}
+  }
+  
+  @keyframes example2 {
+    0%   {left:-600px; top:300px;}
+    100% {left:100%; top:300px;}
+  }
+
+  @keyframes example3 {
+    0%   {left:-400px; top:350px;}
+    100% {left:100%; top:350px;}
+  }
+  
+  .kreis1 {
+      fill: purple;
+  }
+  
+  .kreis2 {
+      fill: mediumaquamarine;
+  }
+  
+  .kreis3 {
+      fill: orangered;
+  }
+  
+  .kreis4 {
+      fill: rgb(31, 74, 167);
+  }
+  
+  .kreis5 {
+      fill: rgb(227, 210, 28);
+  }
+  
+  .kreis6 {
+      fill: rgb(189, 117, 40);
+  }
+  
+  .kreis7 {
+      fill: rgb(31, 167, 97);
+  }
+  
+  .kreis8 {
+      fill: rgb(227, 28, 104);
+  }
+  
+  .kreis9 {
+      fill: rgb(189, 40, 40);
+  }

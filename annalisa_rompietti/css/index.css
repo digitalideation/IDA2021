@@ -4,10 +4,20 @@ body{
    
 }
 
+/* .navigators{
+    display:flex;
+    justify-content: center;
+} */
+
+
 h1{
+    font-family: 'Farro', sans-serif;
     color: white;
 }
 
+text{
+    font-family: 'Farro', sans-serif;
+}
 div{
     position: relative;
     border: white, solid;

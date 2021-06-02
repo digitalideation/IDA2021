@@ -14,6 +14,10 @@
 
 /* Text */
 
+body {
+    transition: all 2s ease-in-out;
+}
+
 #videoElement {
     width: 100%;
     height: 100%;
@@ -146,3 +150,16 @@ canvas {
 .video-filter {
     filter: url(../svg/filters.svg#video-color);
 }
+
+/* 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--screen-radius);
+    mix-blend-mode: hue;
+    filter: url(../svg/filters.svg#overlay-color);
+    z-index: 4;
+    background-color: blue;
+} */
+

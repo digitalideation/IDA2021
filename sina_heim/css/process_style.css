@@ -12,7 +12,7 @@
 .header .section { position: relative; width: 400px; margin: 0 auto; }
 
 .line { 
-	color: blue;
+	color: black;
 	text-align: center; 
 	bottom: 0; 
 	width: 100px; 
@@ -69,10 +69,317 @@ transition: all 0.5s;
 
 @font-face {
 	font-family: 'euclid';
-	src: url(/font/EuclidFlexEDU-Medium-WebXL.woff);
+	src: url(../font/EuclidFlexEDU-Medium-WebXL.woff);
 	format:('woff')
   }
 
   body {
 	  font-family: 'euclid';
   }
+
+
+.allrectangles {
+position: absolute;
+left: 15px;
+top: 4px;
+z-index: -1;
+}
+
+
+  .rectangle1 {
+    position: absolute;
+    top: 80px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle1:hover {
+	  background-color: tomato;
+  }
+
+
+  .rectangle2 {
+    position: absolute;
+    top: 190px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle2:hover {
+	  background-color: blue;
+  }
+
+
+  .rectangle3 {
+    position: absolute;
+    top: 300px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle3:hover {
+	  background-color: rgb(252, 2, 252);
+  }
+
+  .rectangle4 {
+    position: absolute;
+    top: 410px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle4:hover {
+	  background-color: tomato;
+  }
+
+  .rectangle5 {
+    position: absolute;
+    top: 520px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle5:hover {
+	  background-color: blue;
+  }
+
+
+  .rectangle6 {
+    position: absolute;
+    top: 630px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle6:hover {
+	  background-color: rgb(252, 2, 252);
+  }
+
+
+  .rectangle7 {
+    position: absolute;
+    top: 740px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle7:hover {
+	  background-color: tomato;
+  }
+
+
+  .rectangle8 {
+    position: absolute;
+    top: 850px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle8:hover {
+	  background-color: blue;
+  }
+
+
+  .rectangle9 {
+    position: absolute;
+    top: 960px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle9:hover {
+	  background-color: rgb(252, 2, 252);
+  }
+
+  .rectangle10 {
+    position: absolute;
+    top: 1070px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle10:hover {
+	  background-color: tomato;
+  }
+
+
+  .rectangle11 {
+    position: absolute;
+    top: 1180px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle11:hover {
+	  background-color: blue;
+  }
+
+
+  .rectangle12 {
+    position: absolute;
+    top: 1290px;
+    width: 1750px;
+    height: 100px;
+    background: black;
+    border-radius: 10%
+  
+  }
+
+  .rectangle12:hover {
+	  background-color: rgb(252, 2, 252);
+  }
+
+
+
+  .day1 {
+	  position: absolute;
+	  top: 70px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+
+
+  .day2 {
+	  position: absolute;
+	  top: 180px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+
+  .day3 {
+	  position: absolute;
+	  top: 290px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+  .day4 {
+	  position: absolute;
+	  top: 400px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+  .day5 {
+	  position: absolute;
+	  top: 510px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+  .day6 {
+	  position: absolute;
+	  top: 620px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+
+  .day7 {
+	  position: absolute;
+	  top: 730px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+  .day8 {
+	  position: absolute;
+	  top: 840px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+  .day9 {
+	  position: absolute;
+	  top: 950px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+  .day10 {
+	  position: absolute;
+	  top: 1060px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+
+  .day11 {
+	  position: absolute;
+	  top: 1170px;
+	  left: 780px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+
+
+  .day12 {
+	  position: absolute;
+	  left: 780px;
+	  top: 1280px;
+	  color: white;
+	  font-size: 90px;
+	  font-family: 'euclid';
+  }
+  
+
+
+
+
+

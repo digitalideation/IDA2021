@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>SCroll</title>
+</head>
+
+<body>
+    <section>
+        <div class="planet"></div>
+        <div class="parallax clouds"></div>
+        <div class="parallax satellite"></div>
+        <div class="parallax star"></div>
+    </section>
+    <section>
+        <div class="stars">
+
+
+        </div>
+    </section>
+    <section>
+        <div class="something"></div>
+    </section>
+
+    <script>
+        function scrollEffect() {
+            console.log('I am scrolling!')
+            var myParallaxElements = document.querySelectorAll('.parallax')
+            for (var i = 0; i < myParallaxElements.length; i++) {
+                var vertOffset = -(window.scrollY * (i + 1.1)) + 'px'
+                myParallaxElements[i].style.transform = 'translateY(' + vertOffset + ')'
+            }
+
+            // var vertOffset = -(window.scrollY * 1.1) + 'px'
+            // console.log('scrollY ', window.scrollY)
+            // console.log('offset ', vertOffset)
+        }
+        window.addEventListener('scroll', scrollEffect)
+            // var stars = document.getElementsByClassName('star')
+            // console.log('stars', stars)
+            // for (var i = 0; i < stars.length; i++) {
+            //     var randomX = Math.random() * window.innerWidth;
+            //     var randomY = Math.random() * window.innerHeight;
+            //     stars[i].style.setProperty('--verticalOffset', randomY - 100 + 'px')
+            //     stars[i].style.setProperty('--horizontalOffset', randomX - 100 + 'px')
+            // }
+    </script>
+</body>
+
+</html>

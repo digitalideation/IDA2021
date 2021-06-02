@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            background-color: blue;
+            width: 100vw;
+            height: 100vh;
+            margin: 0px;
+            /* cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots, cursive' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>EYE</text></svg>") 16 0, auto; */
+
+            
+        }
+
+        .display {
+
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            margin: 0px;
+
+        }
+        .video.z {
+            transform: skew(-30deg,-45deg);
+            width: 100vw;
+            height: 100vh;
+            display: inline;
+            position: absolute;
+        }
+
+        .video.a {
+            transform: skew(30deg,45deg);
+            display: inline;
+            position: absolute;
+            left: 0px;
+        }
+
+        .video.b {
+            transform: skew(-70deg,10deg);
+            display: inline;
+            position: absolute;
+            right: 130px;
+            top: 100px;
+            z-index: 2;
+            /* border: 2px solid rgb(226, 214, 43); */
+
+
+        }
+
+        .video.c {
+            transform: skew(40deg,-70deg);
+            display: inline;
+            position: absolute;
+            top: 40vh;
+            right: 50px;
+            z-index: 4;
+            /* border: 2px solid blueviolet; */
+        }
+
+        .video.d {
+            transform: skew(-50deg,-30deg);
+            display: inline;
+            position: absolute;
+            top: 50vh;
+            left: 0;
+        }
+
+        .video.e {
+            transform: skew(50deg,30deg);
+            display: inline;
+            position: absolute;
+            top: 50vh;
+            left: 0;
+        }
+
+        .video.f {
+            transform: skew(50deg,30deg);
+            display: inline;
+            position: absolute;
+            top: 50vh;
+            right: 0;
+            z-index: 3;
+        }
+
+        .video.g {
+            transform: skew(70deg,-10deg);
+            display: inline;
+            position: absolute;
+            right: 130px;
+            top: 100px;
+            z-index: 0;
+            /* border: 2px solid rgb(226, 214, 43); */
+
+
+        }
+        .video{
+            cursor: pointer;
+        }
+
+       
+        
+        button, input[type="submit"], input[type="reset"] {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        }
+
+        .triangle {
+         
+         width: 0; 
+         height: 0; 
+         border-top: 10px solid transparent;
+         border-bottom: 10px solid transparent;
+         border-left: 10px solid rgb(128, 0, 0);
+         cursor: pointer;
+         z-index: 8;
+
+     }
+
+     .pause {
+            width: 0; 
+        height: 0; 
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid rgb(121, 187, 101);
+        cursor: pointer;
+        z-index: 8;
+        }
+
+        .left {
+            position: absolute;
+            left: 0px;
+            top: 0;
+            width:33.3vw;
+            height: 100vh;
+			z-index: -1;
+            border: 3px solid rgb(0, 255, 128);
+			background-color: teal;
+            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots, cursive' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>EYE</text></svg>") 16 0, auto;
+		}
+        
+
+        .middle {
+            position: absolute;
+            top: 0;
+            left: 33.3vw;
+            width:33.3vw;
+            height: 100vh;
+            z-index: -1;
+			background-color: rgb(128, 0, 0);
+            /* border: 3px solid rgb(0, 38, 255); */
+            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEART</text></svg>") 16 0, auto;}
+        
+
+        .right {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            width:33.3vw;
+            height: 100vh;
+            z-index: -1;
+			background-color: blueviolet;
+			/* opacity: 0; */
+            /* border: 3px solid red; */
+            /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='red'>Eye</text></svg>") 16 0, auto; */
+            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEAD</text></svg>") 16 0, auto;
+			}
+    </style>
+</head>
+<body>
+    <!-- <iframe class="video z" width="560" height="315" src="https://www.youtube.com/embed/ZKPFC8DA9_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="video a" width="560" height="315" src="https://www.youtube.com/embed/ZKPFC8DA9_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="video b" width="560" height="315" src="https://www.youtube.com/embed/ZKPFC8DA9_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    
+    <!-- <video controls loop class="video a" width="560" height="315"><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    <video controls loop class="video b" width="560" height="315"><source src="../../images/110::143.mp4" type="video/mp4"></video> -->
+    <!-- <video loop class="video c" width="1000" height="500" control="false"><source src="../../images/110::143.mp4" type="video/mp4"></video> -->
+   
+    <div class="left"></div>
+    <div class="middle"></div>
+    <div class="right"></div> 
+   
+    <div class="display">
+    <div style="text-align:center">
+        <video id="video1" onclick="playPause('video1')" class="video a" width="800" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div> 
+
+    <div style="text-align:center"> 
+        <video id="video2" onclick="playPause('video2')" class="video b" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div>
+
+    <div style="text-align:center">
+        <video id="video3" onclick="playPause('video3')" class="video c" width="300" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div>
+
+    <div style="text-align:center">
+        <video id="video4" onclick="playPause('video4')" class="video d" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div>
+
+    <div style="text-align:center">
+        <video id="video5" onclick="playPause('video5')" class="video e" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div>
+
+    <div style="text-align:center">
+        <video id="video6" onclick="playPause('video6')" class="video f" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div>
+
+    <div style="text-align:center">
+        <video id="video7" onclick="playPause('video7')" class="video g" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+    </div>
+</div>
+
+<script> 
+    function playPause(videoID) { 
+        var myVideo = document.getElementById(videoID); 
+        if (myVideo.paused) 
+        myVideo.play();
+        else 
+        myVideo.pause(); 
+    } 
+</script> 
+     
+      
+      
+
+
+
+</body>
+</html>

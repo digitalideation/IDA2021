@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/moodboard-sticky.css">
+    <link rel="stylesheet" href="css/style_moodboard.css">
 </head>
 <body>
-
     <nav>
         <ul>
             <li class="homelink"><a href="https://ida2021-staging.netlify.app/">
@@ -29,9 +28,9 @@
             </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="robotmouse.html">Robot</a></li>
-            <li><a href="song.html">My Song</a></li>
-            <li class="dropdown">
-                <a href="moodboard.html" class="dropbtn">My Process</a>
+            <li><a href="song.html">Song</a></li>
+            <li class="dropdown active">
+                <a href="moodboard.html" class="dropbtn">Process</a>
                 <div class="dropdown-content">
                     <a href="myprocess.html">Daily Progress</a>
                     <a href="moodboard.html">Moodboard</a>
@@ -46,24 +45,23 @@
             </li>
         </ul>
     </nav>
-    
-    <!-- <figure>
-        <img src="/assets/image-sticky/black.jpg" class="black">
-    </figure> -->
+<div class="scrolly">
+    <a class="smoothScroll" href="#bottom" id="top">scroll down</a>
+</div>
 
-    <svg class="arrow" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-        y="0px" viewBox="0 0 62.2 80" style="enable-background:new 0 0 62.2 80;" xml:space="preserve">
-        <g>
+        <svg class="arrow" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            y="0px" viewBox="0 0 62.2 80" style="enable-background:new 0 0 62.2 80;" xml:space="preserve">
             <g>
-                <path class="st0" d="M28.9,80.2h4.3c0-16,13-28.9,28.9-28.9v-4.3C43.9,46.9,28.9,61.9,28.9,80.2z" />
+                <g>
+                    <path class="st0" d="M28.9,80.2h4.3c0-16,13-28.9,28.9-28.9v-4.3C43.9,46.9,28.9,61.9,28.9,80.2z" />
+                </g>
+                <rect x="-8.9" y="38" transform="matrix(6.123234e-17 -1 1 6.123234e-17 -9.0975 71.2794)" class="st0" width="80"
+                    height="4.3" />
+                <g>
+                    <path class="st0" d="M0,46.9l0,4.3c16,0,28.9,13,28.9,28.9h4.3C33.2,61.9,18.3,46.9,0,46.9z" />
+                </g>
             </g>
-            <rect x="-8.9" y="38" transform="matrix(6.123234e-17 -1 1 6.123234e-17 -9.0975 71.2794)" class="st0" width="80"
-                height="4.3" />
-            <g>
-                <path class="st0" d="M0,46.9l0,4.3c16,0,28.9,13,28.9,28.9h4.3C33.2,61.9,18.3,46.9,0,46.9z" />
-            </g>
-        </g>
-    </svg>
+        </svg>
 
         <figure>
             <img src="assets/image-sticky/black.jpg" class="black">
@@ -205,9 +203,27 @@
 
     <figure>
         <img src="assets/image-sticky/whitenew.jpg" class="white">
+                <svg class="arrow-2" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 62.2 80"
+                    style="enable-background:new 0 0 62.2 80;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path class="st0" d="M28.9,80.2h4.3c0-16,13-28.9,28.9-28.9v-4.3C43.9,46.9,28.9,61.9,28.9,80.2z" />
+                        </g>
+                        <rect x="-8.9" y="38" transform="matrix(6.123234e-17 -1 1 6.123234e-17 -9.0975 71.2794)" class="st0" width="80"
+                            height="4.3" />
+                        <g>
+                            <path class="st0" d="M0,46.9l0,4.3c16,0,28.9,13,28.9,28.9h4.3C33.2,61.9,18.3,46.9,0,46.9z" />
+                        </g>
+                    </g>
+                </svg>
     </figure>
 
+    <div class="scrolly">
+        <a class="smoothScroll" href="#top" id="bottom">top</a>
+    </div>
 
+<!-- Audio abspielen und Pausieren -->
     <script>
         var myAudio = document.getElementById("myAudio");
         var isPlaying = false;
@@ -228,6 +244,8 @@
             document.body.classList.add('paused')
         };
     </script>
+
+    <!-- Scrolldown svg Rotation -->
     <script>
         window.onscroll = function () {
                 scrollRotate();
@@ -237,6 +255,26 @@
                 let image = document.getElementById('scrolldown');
                 image.style.transform = "rotate(" + window.pageYOffset / 5 + "deg)";
             }
+    </script>
+
+    <!-- Scrolldown / ScrollToTop -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('.smoothScroll').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 4000); // Scrolltime in Millisekunden
+                        return false;
+                    }
+                }
+            });
+        });
+
     </script>
 </body>
 </html>

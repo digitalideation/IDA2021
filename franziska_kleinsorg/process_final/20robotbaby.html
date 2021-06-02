@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="author" content="Franziska Kleinsorg">
+    <title>Process - Robotbaby</title>
+</head>
+
+<style>
+
+body { 
+    background-color: #09111b;
+}
+
+.top {
+    height: 120px;
+    width: 120px;
+    background-color:  #9c9a97;
+    border-radius: 50%;
+}
+
+.emoji:before { 
+    content: '😎';
+    font-size: 130px;
+}
+.emoji:hover:before {
+    content: '🤡';
+}
+
+
+.hat1 { 
+    background-color: violet;
+    width: 130px;
+    height: 10px;
+}
+
+.hat2 {
+    background-color: violet;
+    width: 100px;
+    height: 40px;
+}
+
+.rectangle {
+    width: 150px;
+    height: 250px;
+    background-color: #9c9a97;
+    border-radius: 25px;
+}
+
+.rectangle:hover { 
+    animation: bounce 1.4s;
+}
+
+.limbright{
+    width: 30px;
+    height: 180px;
+    background-color:  #9c9a97;
+    transform:skew(20deg, 10deg);
+    border-radius: 25px;  
+}
+
+.limbright:hover { 
+    transform: rotate(90deg) translate(-80px,-30px);
+}
+
+.limbleft{
+    width: 30px;
+    height: 180px;
+    background-color:  #9c9a97;
+    transform:skew(-20deg, -10deg);
+    border-radius: 25px;
+}
+.limbleft:hover {
+    transform: rotate(90deg) translate(-80px,30px);
+}
+
+
+
+</style>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="../processindex.html">Back</a></li>
+        </ul>
+      </nav>
+
+      <div class="emoji" style="position: absolute; top: 30px; left: 515px;"></div>
+      <div class="hat1" style="position: absolute; top: 55px; left: 515px;"></div>
+      <div class="hat2" style="position: absolute; top: 15px; left: 530px;"></div>
+      <div class="rectangle" style="position: absolute; top: 180px; left: 500px;"> <p style="text-align: center;">babyrobot</p></div>
+      <div class="limbleft" style="position: absolute; top: 190px; left: 470px;"></div>
+      <div class="limbright" style="position: absolute; top: 190px; left: 650px;"></div>
+      <div class="limbleft" style="position: absolute; top: 420px; left: 480px;"></div>
+      <div class="limbright" style="position: absolute; top: 420px; left: 640px;"></div>
+
+</body>
+</html>

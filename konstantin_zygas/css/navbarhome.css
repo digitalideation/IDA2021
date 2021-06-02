@@ -23,6 +23,7 @@ li a.navbarhome:hover {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
+    padding-left: 0;
 }
 
 .navhome {

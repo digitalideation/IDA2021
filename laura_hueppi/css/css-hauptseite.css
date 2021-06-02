@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px ;
+    font-family: Helvetica;
+}
+
+.verlauf {
+    width: 100%;
+    height: 400vh;
+    color: black;
+    background-image: linear-gradient(-0deg, #EE7752, rgb(255, 60, 0), darkviolet, rgb(51, 3, 185), darkviolet, rgb(255, 60, 0), #EE7752);
+    background-size: 100% 100%;
+    position: relative;
+    animation: change 5s ease-in-out infinite;
+}
+
+h1{
+  
+    font-size: 15vw;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    position: absolute;
+    display: table;
+    top: 5%;
+    left: 10%;
+    transform: translate(-10%, -40%);
+    padding: 0px;
+    color: rgb(265, 60, 0);  
+}
+
+
+
+
+h2{
+  
+    font-size: 15vw;
+    letter-spacing: 6px;
+    position: absolute;
+    display: table;
+    bottom: 11%;
+    left: 60%;
+    transform: translate(-10%, -40%);
+    padding: 0px;
+    width: 84vw;
+    color:rgb(95, 0, 136);   
+}
+
+
+
+h5{
+  
+    font-size: 9vw;
+    letter-spacing: 6px;
+    position: absolute;
+    display: table;
+    bottom: 15.5%;
+    left: 37%;
+    transform: translate(-10%, -40%);
+    padding: 0px;
+    width: 84vw;
+    color: rgb(95, 0, 136);   
+}
+
+
+h4 {
+
+    font-weight: 400;
+}
+
+
+
+h3{
+    font-size: 1.5vw;
+    letter-spacing: 1.5px;
+    border: 0px solid lightseagreen;
+    position: absolute;
+    padding: 1rem 1rem;
+    line-height: normal;
+    color: black;
+}
+
+
+
+    #kardinal {
+
+        display: table;
+        position: absolute;
+        top: 25vw;
+        left: 4vw;
+    }
+
+    #ordnung {
+
+        display: table;
+        position: absolute;
+        top: 60vw;
+        left: 8.8vw;
+    }
+
+    #thunfisch {
+
+        display: table;
+        position: absolute;
+        top: 95vw;
+        left: 13.8vw;
+    }
+
+
+    #docks {
+
+        display: table;
+        position: absolute;
+        top: 130vw;
+        left: 23.8vw;  
+    }
+
+p{
+    font-size: 1.25vw;
+   
+    line-height: 2.3vw;
+    border: 0px solid ghostwhite;
+    position: absolute;
+    padding: 1rem 1rem;
+    color: black;
+    
+    
+}
+
+    #führungstrio {
+    
+        font-size: 6vw;
+        display: table;
+        position: absolute;
+        width: 84vw;
+        height: 10vw;
+        top: 28.1vw;
+        left: 13.8vw;
+        word-spacing: normal;
+        letter-spacing: 0.1vw;
+        overflow: hidden;
+        border: solid 0px  lightseagreen;
+    }
+
+
+    #konspiration {
+
+        font-size: 6vw;
+        display: table;
+        position: absolute;
+        width: 84vw;
+        height: 10vw;
+        top: 63.1vw;
+        left: 18.8vw;
+        word-spacing: normal;
+        letter-spacing: 0.1vw;
+        overflow: hidden;
+        border: solid 0px  lightseagreen;
+
+}
+
+
+    #kilopack {
+
+        font-size: 6vw;
+        display: table;
+        position: absolute;
+        width: 84vw;
+        height: 10vw;
+        top: 98.1vw;
+        left: 29.5vw;
+        word-spacing: normal;
+        letter-spacing: 0.1vw;
+        overflow: hidden;
+        border: solid 0px  lightseagreen;
+
+}
+
+
+#führungstrio :hover {
+
+    animation: bounce 3s;
+}
+
+#kardinal :hover{
+
+    animation: bounce 3s;
+}
+
+
+#kilopack :hover{
+
+    animation: bounce 3s;
+}
+
+
+
+#ordnung :hover {
+
+    animation: bounce 3s;
+}
+
+#konspiration :hover{
+
+    animation: bounce 3s;
+}
+
+#thunfisch :hover {
+
+    animation: bounce 3s;
+}
+
+
+
+#docks :hover{
+
+    animation: bounce 3s;
+}
+
+#ruckzuck {
+
+    color: orangered;
+    
+}
+
+
+
+@keyframes bounce {
+    0%{
+        word-spacing: normal;
+        letter-spacing: 0.1vw; 
+    }
+
+    33% {
+        word-spacing: 1vw;
+        letter-spacing: 1vw;
+    }
+
+    66% {
+        word-spacing: normal;
+        letter-spacing: -0.4em;
+
+    }
+
+    100%{
+        word-spacing: normal;
+        letter-spacing: 0.1vw; 
+    }
+    
+}
+
+
+    /*
+    
+
+    word-spacing: normal;
+    letter-spacing: 0.1vw;
+
+    word-spacing: normal;
+    letter-spacing: -0.07em;
+
+    word-spacing: 1vw;
+    letter-spacing: 1vw;
+    */
+
+
+
+
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+
+    
+}
+
+
+#e {
+
+    font-size: 5vw;
+    line-height: 2.3vw;
+    border: 0px solid ghostwhite;
+    position: absolute;
+    padding: 1rem 1rem;
+    color: black;
+    top: 143vw;
+    left: 55vw;
+    display: table;
+}
+
+#pdf {
+
+    font-size: 5vw;
+    line-height: 2.3vw;
+    border: 0px solid ghostwhite;
+    position: absolute;
+    padding: 1rem 1rem;
+    color: black;
+    top: 150vw;
+    left: 60vw;
+    display: table;
+    
+}
+
+#credits {
+
+    font-size: 5vw;
+    line-height: 2.3vw;
+    border: 0px solid ghostwhite;
+    position: absolute;
+    padding: 1rem 1rem;
+    color: black;
+    top: 157vw;
+    left: 65vw;
+    display: table;
+}
+
+
+
+
+#nahrungsnot {
+
+    word-spacing: normal;
+    letter-spacing: 0.5vw;
+    font-weight: bold;
+}
+
+#pfui {
+
+    font-weight: bold;   
+    word-spacing: normal;
+    letter-spacing: 0.9vw;
+}
+
+#gib {
+
+    font-weight: bold;
+    word-spacing: normal;
+    letter-spacing: 0.1vw;
+}
+
+#falsch {
+
+    font-weight: bold;
+   
+}
+
+#volk{
+
+    font-weight: bold;
+    word-spacing: normal;
+    letter-spacing: 1.5vw;
+}
+
+
+#angst{
+
+    font-weight: bold;
+    word-spacing: normal;
+    letter-spacing: 1vw;
+}
+
+
+#mund{
+
+    font-weight: bold;
+    word-spacing: normal;
+    letter-spacing: 1.5vw;
+}
+
+#griff{
+
+    font-weight: bold;
+    word-spacing: normal;
+    letter-spacing: 1.5vw;
+}
+
+#licht{
+
+    font-weight: bold;
+    
+}
+
+#faulig{
+
+    font-weight: bold;
+    word-spacing: normal;
+    letter-spacing: 1.5vw;
+}
+
+
+#kopfa {
+
+    font-weight: bold;
+    word-spacing: normal;
+    letter-spacing: 3vw;
+
+}
+
+
+#schlimm {
+
+    font-weight: bold;
+    
+    
+
+}

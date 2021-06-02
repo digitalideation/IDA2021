@@ -1,13 +1,16 @@
 body {
-  background-color: black;
+  background-image: url(Mood_Rhythm_Details.jpg);
+  background-size: cover;
+  font-family: Antonio ;
+
 }
 
-.moodbild {
+/* .moodbild {
     width: 200px;
     height: center;
-  }
-.moodpicture {
+  } */
+/* .moodpicture {
     color: white;
     display: block;
     
-}
+} */

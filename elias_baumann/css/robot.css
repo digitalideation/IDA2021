@@ -47,6 +47,28 @@ button {
     overflow: visible;
 }
 
+.window-content {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.window-content-extra {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.download-text {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
 .desk-window2 {
     position: absolute;
@@ -59,6 +81,15 @@ button {
     width: 28%;
     height: 40%;
     overflow: visible;
+}
+
+.download-button {
+  text-decoration: underline;
+}
+
+.download-button:hover {
+  color: #9D9ACC;
+  /* color: #EF7F7A; */
 }
 
 
@@ -91,12 +122,42 @@ button {
     }
   }
   
-  #power {
+  .btn {
+    background: #7C7C7C;
+    border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+    border-left: 6px inset rgba(0, 0, 0, 0.5);
+    border-right: 6px inset rgba(255, 255, 255, 0.5);
+    border-top: 6px inset rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    color: white;
     cursor: pointer;
-    opacity: 0.2;
+    display: inline-block;
+    font-size: 2.2rem;
+    /* margin: 1rem; */
+    min-width: 200px;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    width: auto;
+  }
+  .btn:focus, .btn:hover {
+    background: #BCBCBC;
   }
   
-  #power:hover {
-    opacity: 1;
-    transition: opacity 0.5s; 
+  .btn.primary {
+    background: #9D9ACC;
+    background: #31ad62;
   }
+  .btn.primary:focus, .btn.primary:hover {
+    background: #EF7F7A;
+  }
+
+  .btn:active{
+    border-left: 6px inset rgba(0, 0, 0, 0.5);
+    border-right: 6px inset rgba(255, 255, 255, 0.5);
+    border-top: 6px inset rgba(255, 255, 255, 0.5);
+    border-width:2px;
+    position:relative;
+    top:2px;
+  }
+
+  

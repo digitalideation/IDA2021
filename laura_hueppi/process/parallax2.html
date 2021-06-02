@@ -1,0 +1,128 @@
+<!DOCTYPE xml>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDA Modul - Laura Hüppi</title>
+
+
+</head>
+
+<style>
+
+body {
+
+    background-color: rgb(79, 0, 153);
+    color: white;
+
+}
+
+nav {
+    color: thistle;
+}
+
+p {
+
+    font-size: 80px;
+    color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    font-size: 200%;
+    text-align: center;
+    background-color: black;
+  }
+  
+  .parallax__layer {
+    position: absolute;
+    top: 600;
+    left: 600;
+    right: 0;
+    padding: 100vh 0;
+   
+  }
+  
+  .parallax__layer--1 {
+    transform: translateZ(0);
+    top: 600;
+  }
+  
+  .parallax__layer--2_1 {
+    transform: translateZ(-1px) scale(2);
+    top: 500vw;
+
+  }
+  
+  .parallax__layer--2_2 {
+    transform: translateZ(-3px) scale(2);
+    top: 180vh;
+  }
+  
+  .parallax__layer--3 {
+    transform: translateZ(-2px) scale(3);
+    top: 100vw;
+  }
+  
+  .parallax__layer--4 {
+    transform: translateZ(-4px) scale(4);
+    top: 100vw;
+  }
+  
+  
+
+
+</style>
+
+
+<body>
+    
+    <nav>
+        <ul>
+          <li><a href="/process/index1.html">Back</a></li>
+        </ul>
+      </nav>
+
+     
+      <div class="parallax">
+ <div>
+          <p>
+              Scroll down!
+          </p>
+      </div>
+
+
+            <div class="parallax__layer parallax__layer--1">
+                <img src="/img/giphy.gif" id="sky">
+            </div>  
+
+            <div class="parallax__layer parallax__layer--2_1">
+                <img src="/img/Kopf1.png" id="sky">
+            </div>  
+
+            <div class="parallax__layer parallax__layer--2_2">
+                <img src="/img/Kopf1.png" id="sky">
+            </div>  
+
+            <div class="parallax__layer parallax__layer--3">
+              
+              <img src="/img/Kopf1.png" id="sky">
+            </div>  
+
+            <div class="parallax__layer parallax__layer--4">
+              
+              <img src="/img/Kopf1.png" id="sky">
+          </div>
+      </div>
+
+
+</body>
+</html>
+

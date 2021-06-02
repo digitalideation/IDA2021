@@ -5,6 +5,13 @@ var B= document.getElementsByClassName("head");
 var C= document.getElementsByClassName("leg--left");
 var D= document.getElementsByClassName("leg--right");
 var A= document.getElementsByClassName("body");
+var E= document.getElementsByClassName("rave1");
+var F= document.getElementsByClassName("rave2");
+var G= document.getElementsByClassName("rave3");
+var H= document.getElementsByClassName("rave4");
+var I= document.getElementsByClassName("rave5");
+var J= document.getElementsByClassName("rave6");
+var K= document.getElementsByClassName("rave7");
 var audio = document.getElementsByClassName("musicplayer")
 var start = document.getElementsByClassName("startDance")
 var stop = document.getElementsByClassName("stopDance")
@@ -81,6 +88,76 @@ function toggleAnimation(){
       document.body.className = 'running';
     } else {
       A[0].style.animationPlayState = 'paused';
+      document.body.className = '';
+
+    }
+
+    if (E[0].style.animationPlayState === 'paused' || !E[0].style.animationPlayState) {
+      E[0].style.animationPlayState = 'running';
+      console.log("running")
+      document.body.className = 'running';
+    } else {
+      E[0].style.animationPlayState = 'paused';
+      document.body.className = '';
+
+    }
+
+    if (F[0].style.animationPlayState === 'paused' || !F[0].style.animationPlayState) {
+      F[0].style.animationPlayState = 'running';
+      console.log("running")
+      document.body.className = 'running';
+    } else {
+      F[0].style.animationPlayState = 'paused';
+      document.body.className = '';
+
+    }
+
+    if (G[0].style.animationPlayState === 'paused' || !G[0].style.animationPlayState) {
+      G[0].style.animationPlayState = 'running';
+      console.log("running")
+      document.body.className = 'running';
+    } else {
+      G[0].style.animationPlayState = 'paused';
+      document.body.className = '';
+
+    }
+
+    if (H[0].style.animationPlayState === 'paused' || !H[0].style.animationPlayState) {
+      H[0].style.animationPlayState = 'running';
+      console.log("running")
+      document.body.className = 'running';
+    } else {
+      H[0].style.animationPlayState = 'paused';
+      document.body.className = '';
+
+    }
+
+    if (I[0].style.animationPlayState === 'paused' || !I[0].style.animationPlayState) {
+      I[0].style.animationPlayState = 'running';
+      console.log("running")
+      document.body.className = 'running';
+    } else {
+      I[0].style.animationPlayState = 'paused';
+      document.body.className = '';
+
+    }
+
+    if (J[0].style.animationPlayState === 'paused' || !J[0].style.animationPlayState) {
+      J[0].style.animationPlayState = 'running';
+      console.log("running")
+      document.body.className = 'running';
+    } else {
+      J[0].style.animationPlayState = 'paused';
+      document.body.className = '';
+
+    }
+
+    if (K[0].style.animationPlayState === 'paused' || !K[0].style.animationPlayState) {
+      K[0].style.animationPlayState = 'running';
+      console.log("running")
+      document.body.className = 'running';
+    } else {
+      K[0].style.animationPlayState = 'paused';
       document.body.className = '';
 
     }

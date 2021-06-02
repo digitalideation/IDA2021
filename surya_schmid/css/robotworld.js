@@ -106,3 +106,56 @@ function map(val, in_min, in_max, out_min, out_max) {
     return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 // ---------------------------- MOVE ON MUSIC ----------------------------
+
+//---------------------- MOVE ON MUSIC SCRIPT----------------------->
+
+  const minscale = 0.3; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
+  const maxscale = 4; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
+
+//----------------------- MOVE ON MUSIC SCRIPT----------------------->
+
+
+
+
+
+// ------------------------ THE OVERLAY ------------------------------->
+/* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("myNav").style.width = "40%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+// ------------------------ THE OVERLAY ------------------------------->
+
+
+// ------------------------ CURSOR ------------------------------->
+var cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+});
+
+var outerCursor = document.getElementById('outerCursor');
+document.addEventListener('mousemove', function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    outerCursor.style.left = x + "px";
+    outerCursor.style.top = y + "px";
+});
+      // ------------------------ CURSOR ------------------------------->
+
+// <--------------------- SCROLL TO ---------------------  
+// function scrollMe() {
+//     document.querySelector('.robot').scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// }
+
+// document.getElementsByTagName('section')[0].addEventListener('click', scrollMe)
+
+  // <--------------------- SCROLL TO ---------------------

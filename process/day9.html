@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url(https://source.unsplash.com/random/1200x1200/?night-sky);
+        background-blend-mode: screen;
+    }
+
+    .container {
+        width: 500px;
+        height: 500px;
+      
+        margin: auto;
+        margin-top: 10%;
+    }
+    .head {
+    
+        margin: auto;
+        width: 30%;
+        height: 30%;
+        border-radius: 50%;
+        background-image: url("https://images.unsplash.com/photo-1481819613568-3701cbc70156?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80");
+        background-position: center center ;
+        background-size: 150%;
+        background-blend-mode: screen;
+     
+
+    }
+    .body2{
+        position: absolute;
+        width: 15%;
+        height: 20%;
+        background-image: url("https://st3.depositphotos.com/4278403/18160/v/600/depositphotos_181603903-stock-video-white-eye-icon-form-white.jpg");
+      display: block;
+      background-size: 120%;
+      background-position: center center ;
+    
+
+      margin-left: 150px;
+animation:  infinite;
+animation-duration: 10s;
+transition: ease-in-out;
+animation-name: eye;
+      
+    }
+    .hand {
+        position: absolute;
+
+   
+    }
+
+    @keyframes eye {
+        0% {
+             background-size: 120%;
+      background-position: center center ;
+    
+        }
+       50% {
+                    background-size: 50%;
+      background-position: center center ;
+    
+        }
+        100% {
+               background-size: 120%;
+               background-position: center center ;
+     
+        }
+    }
+    .moon {
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 5%;
+        color: rgb(116, 116, 116);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 60px;
+        stroke-width: 10px solid white;
+    } 
+    .hand-left
+    {
+        width: 5vh;
+        height: 15vh;
+        background-color: rgb(153, 153, 153);
+        border-radius: 10%;
+        position: relative;
+        margin-left: 75px;
+        transform: rotate(40deg);
+    }
+
+
+</style>
+<body>
+    <h1 class="moon"> See it shining in your eyes</h1>
+   <div class="container">
+      
+   <div class="head">
+       <div class="eye-right"></div>
+       <div class="eye-left"></div>
+
+   </div>
+   <div class="two">
+       <div class="body2"></div>
+   <div class="hand hand-right"></div>
+   <div class="hand hand-left"></div>
+   <div class="leg leg-left"></div>
+   <div class="leg leg-right"></div>
+</div>
+</div>
+<div>
+    <ul>
+        <li><a id="one" href="index.html">Back</a></li>
+        <li><a href="day10.html"> millestone 7</a></li>
+    </ul>
+</div>
+</body>
+</html>

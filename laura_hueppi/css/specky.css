@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    height: 100vh;
+    background:url(../img/backgrounds/pawel-czerwinski-arwTpnIUHdM-unsplash.jpg);
+    
+   
+  }
+  
+  .stone {
+    margin: auto;
+    width: 468px;
+    height: 246px;
+    background: #e7e6ed;
+    box-shadow: inset -28px -22px 36px #778, inset 38px 18px 36px #fffffc, 12px 8px 18px hsla(0,0%,0%,0.25);
+    display: flex;
+    border-radius: 49% 68% 86% 200px /62% 54% 80% 180px;
+    transition: 1s;
+    transform: rotate(8deg);
+    background: url(../img/backgrounds/blurry-gradient-haikei-02.svg)
+  }
+  .stone:hover {
+    transform: rotate(1deg);
+  }
+  
+  .content {
+    margin: auto;
+  }
+  .content h1 {
+    font-size: 2.75em;
+    letter-spacing: 2px;
+    background-color: #94909a;
+    color: transparent;
+    -webkit-background-clip: text;
+     -moz-background-clip: text;
+        background-clip: text;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+  .carved-text {
+    text-shadow: 1px 1px 1px hsla(0,0%,255%,0.5);
+  }
+  .relief-text {
+    text-shadow: -1px -1px 1px hsla(0,0%,255%,0.6); 
+    transform: translate(-1px, -1px);
+  }
