@@ -5,212 +5,31 @@
   <title>Page Title</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: monospace;
-      height: 100%;
-      margin: 0;
-    }
-
-    p {
-      font-family: monospace;
-      font-size: 40px;
-      text-align: center;
-    }
-
-    .process li {
-      display: flex;
-      justify-content: left;
-      border: rgb(255, 255, 255) solid 2px;
-      border-left: none;
-      border-right: none;
-      border-top: none;
-    }
-
-    .process a {
-      font-size: 2vw;
-      text-decoration: none;
-      color: black;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-family: monospace;
-    }
-
-    /* .pocess li:first-of-type {
-        border-top: solid 1px black;
-    } */
-
-    /* .process-2 a::before {
-    counter-increment: item;
-    content: counter(item, decimal-leading-zero);
-    font-size: calc(11px + .2vw);
-    font-weight: 600;
-    letter-spacing: 3px;
-    color: #0d0e0e;
-    position: absolute;
-    margin-top: calc(14px + .7vw);
-    margin-right: 10px;
-} */
-
-    ul.process {
-      margin: 0;
-      padding: 0;
-    }
-
-    .process {
-      margin-top: 80px;
-    }
-
-    /* style von w3 schools */
-
-
-
-    /* Column container */
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    /* Create two unequal columns that sits next to each other */
-    /* Sidebar/left column */
-    .side {
-      flex: 30%;
-      /* background-color: #f1f1f1; */
-      padding-left: 50px;
-      padding-top: 50px;
-      /* border-right: red solid 2px; */
-      display: flex;
-      justify-content: space-between;
-      /* align-items: center; */
-      margin-top: 70px;
-    }
-
-    /* Main column */
-    .main {
-      flex: 75%;
-      background-color: rgb(0, 255, 213);
-      padding: 50px;
-      margin-top: 80px;
-    }
-
-    /* Footer */
-    .footer {
-      padding: 20px;
-      text-align: end;
-      background: rgb(171, 126, 255);
-      padding-right: 50px;
-    }
-
-    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 700px) {
-
-      .row,
-      .navbar {
-        flex-direction: column;
-      }
-    }
-
-
-    /* meine weiteren Styles */
-
-    .title {
-
-      margin-right: 10px;
-      color: #000000;
-      font-size: 30px;
-      line-height: 16px;
-      font-weight: 400;
-      
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-  
-
-   
-
-    nav {
-      display: flex;
-      justify-content: flex-end;
-      background-color: rgb(137, 121, 223);
-      position: fixed;
-      overflow: hidden;
-      /* bottom: 0; */
-      width: 100%;
-      box-shadow: 0px 0px 8px 5px rgb(137, 121, 223);
-      z-index: 4;
-    }
-
-    nav li {
-      list-style-type: none;
-      margin-right: 5px;
-    
-      /* border-radius: 50px; */
-    }
-
-    nav li:last-of-type {
-      margin-right: 50px;
-    }
-
-
-    nav ul li {
-      display: inline;
-      padding: 10px;
-      display: inline-block;
-    }
-
-    nav a {
-      color: black;
-      text-decoration: none;
-      padding: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    nav li:hover {
-      background-color: rgb(137, 121, 223);
-    }
-
-
-    /* von w3schools */
-    nav li a,
-    .dropbtn {
-      display: inline-block;
-      color: rgb(0, 255, 213);
-      text-align: center;
-      /* padding: 14px 16px; */
-      text-decoration: none;
-      margin: 0;
-      padding: 0;
-    }
-
-
-
-
-  </style>
+  <link rel="stylesheet" href="/css/index1.css">
+ 
 </head>
 
 <body>
 
   <nav>
     <ul>
-      <li><a href="https://ida2021-staging.netlify.app/">Home</a></li>
-      <li><a href="../robotworld1.html">My Robot</a></li>
-      <li><a href="../song.html">My Song</a></li>
-
-
+      <button class="glow-on-hover"><li><a href="https://ida2021-staging.netlify.app/">Home</a></li></button>
+      <button class="glow-on-hover"><li><a href="../robotworld1.html">My Robot</a></li></button>
+      <button class="glow-on-hover"><li><a href="../song.html">My Song</a></li></button>
         </div>
       </li>
     </ul>
   </nav>
 
+
+
+
+
+
+
+
+
+  /*
 
   <div class="row">
 
@@ -223,33 +42,41 @@
       <ul class="process">
 
 
-
-        <ul>
-            <li><a href="../process/day1/day1.html">Day 1</a></li>
-            <li><a href="../process/day2/day2.html">Day 2</a></li>
-            <li><a href="../process/day3/day3.html">Day 3</a></li>
-            <li><a href="../process/day4/day4.html">Day 4</a></li>
-            <li><a href="../process/day5/day5.html">Day 5</a></li>
-            <li><a href="../process/day6/day6.html">Day 6</a></li>
-            <li><a href="../process/day7/day7.html">Day 7</a></li>
-            <li><a href="../process/day8/day8.html">Day 8</a></li>
-            <li><a href="../process/day9/day9.html">Day 9</a></li>
-            <li><a href="../process/day10/day10.html">Day 10</a></li>
-            <li><a href="../process/day11/day11.html">Day 11</a></li>
-            <li><a href="../process/day12/day12.html">Day 12</a></li>
-            <li><a href="../process/day13/day13.html">Day 13</a></li>
-            <li><a href="../process/day14/day14.html">Day 14</a></li>
-            <li><a href="../process/day15/day15.html">Day 15</a></li>
-            <li><a href="../process/day16/01-viewport.html">Day 16</a></li>
+            <li><a href="../process/day1/day1.html">FIRST TRY</a></li>
+            <li><a href="../process/day2/day2.html">HOVER!</a></li>
+            <li><a href="../process/day5/day5.html">GARDIENTS</a></li>
+            <li><a href="column.html">COLUMN</a></li>
+            <li><a href="rotate.html">ROTATE</a></li>
+            <li><a href="scale.html">SCALE</a></li>
+            <li><a href="skew.html">SKEW</a></li>
+            <li><a href="positions.html">POSITIONS</a></li>
+            <li><a href="svguebungen.html">SVG</a></li>
+            <li><a href="pictureposition.html">PICTURE POSITION</a></li>
+            <li><a href="parallax.html">PARALLAX</a></li>
+            <li><a href="parallax2.html">PARALLAX 2</a></li>
+            <li><a href="audio.html">AUDIO</a></li>
+            <li><a href="particles.html">PARTICLES</a></li>
+   
         
        
       </ul>
     </div>
   </div>
 
+
+  
   <!-- Footer -->
   <div class="footer">
   
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
