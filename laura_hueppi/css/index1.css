@@ -1,0 +1,245 @@
+
+body, html {
+    background-color: #000;
+  }
+
+
+ 
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    overflow: hidden;
+    /* bottom: 0; */
+    width: 100%;
+    /*
+    box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
+    z-index: 4;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+nav li:last-of-type {
+    margin-right: 50px;
+}
+
+
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;   
+}
+
+
+
+
+nav li a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+
+
+
+
+
+
+
+    .process li {
+      display: flex;
+      justify-content: left;
+    }
+
+    .process a {
+      font-size: 4vw;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* .pocess li:first-of-type {
+        border-top: solid 1px black;
+    } */
+
+    /* .process-2 a::before {
+    counter-increment: item;
+    content: counter(item, decimal-leading-zero);
+    font-size: calc(11px + .2vw);
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #0d0e0e;
+    position: absolute;
+    margin-top: calc(14px + .7vw);
+    margin-right: 10px;
+} */
+
+    ul.process {
+      margin: 0;
+      padding: 0;
+    }
+
+    .process {
+      margin-top: 80px;
+    }
+
+    /* style von w3 schools */
+
+
+
+    /* Column container */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      flex: 30%;
+      /* background-color: #f1f1f1; */
+      padding-left: 50px;
+      padding-top: 50px;
+      /* border-right: red solid 2px; */
+      display: flex;
+      justify-content: space-between;
+      /* align-items: center; */
+      margin-top: 70px;
+    }
+
+    /* Main column */
+    .main {
+      flex: 5%;
+      background-color: rgb(0, 0, 0);
+      padding: 500px;
+      margin-top: -490px;
+      
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: end;
+      background: rgb(0, 0, 0);
+      padding-right: 50px;
+      position: fixed;
+    }
+
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+
+      .row,
+      .navbar {
+        flex-direction: column;
+        background-color: black;
+      }
+
+    }
+
+
+    /* meine weiteren Styles */
+
+    .title {
+
+      margin-right: 10px;
+      color: #f8f8f8;
+      font-size: 30px;
+      line-height: 16px;
+      font-weight: 400;
+      
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+
+    .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #fff6fd, #f0adf7, #96ffe8, #00ffd5, #00e1ff, #00ffd5, #c2acff, #ffebfb);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+

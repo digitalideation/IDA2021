@@ -1,0 +1,250 @@
+/* magic gradients! */
+
+body {
+    background: rgb(0, 0, 0) radial-gradient(
+      circle farthest-side at
+        calc(var(--mouseX, 1) * 1px)
+        calc(var(--mouseY, 1) * 1px),
+      hsl(var(--mouseX, 5), 75%, 75%),
+      hsl(var(--mouseY, 45), 75%, 75%)
+    );
+  }
+  
+  /* the rest of the code here is
+     for making the demo look pretty */
+  
+  html {
+    height: 100%;
+    font: 1em/1.5 sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    margin: 0;
+  }
+  
+  body:after {
+    background: hsla(0, 0%, 0%, .3);
+    color: #fff;
+    padding: 10px;
+    align-self: center;
+    pointer-events: none;
+  }
+
+
+
+
+  
+  @import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+body{
+  font-family: 'Nunito', sans-serif;
+}
+
+.a{color: #E7484F}
+.b{color: #F68B1D}
+.c{color: #FCED00}
+.d{color: #009E4F}
+.e{color: #00AAC3}
+.f{color:  #732982}
+
+
+.container{
+  margin-top: 150px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rainbow{
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+  
+}
+
+.rainbow-1:hover{
+   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:slidebg 5s linear infinite;
+}
+
+.rainbow-2:hover{
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+  animation:slidebg 2s linear infinite;
+}
+
+.rainbow-3:hover{
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, red);
+  animation:slidebg 2s linear infinite;
+}
+
+.rainbow-4:hover{
+   background-image:     linear-gradient(
+      to right, 
+      #E7484F,
+      #F68B1D, 
+      #FCED00,
+      #009E4F,
+      #00AAC3,
+      #732982
+    );
+  animation:slidebg 2s linear infinite;
+}
+
+
+.rainbow-5:hover{
+   background-image:     linear-gradient(
+      to right, 
+      #E7484F,
+      #E7484F 16.65%,
+      #F68B1D 16.65%,
+      #F68B1D 33.3%,
+      #FCED00 33.3%,
+      #FCED00 49.95%,
+      #009E4F 49.95%,
+      #009E4F 66.6%,
+      #00AAC3 66.6%,
+      #00AAC3 83.25%,
+      #732982 83.25%,
+      #732982 100%,
+      #E7484F 100%
+     
+     
+     
+    );
+  animation:slidebg 2s linear infinite;
+}
+
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+.follow{
+  margin-top: 40px;
+}
+
+.follow a{
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+
+
+
+
+.container {
+  text-align: center;
+}
+h1 {
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+.button {
+  width: 170px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.button-1 {
+  background-color: transparent;
+  border: 3px solid #00d7c3;
+  border-radius: 50px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: #00d7c3;
+}
+.button-1:hover {
+  box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+  border: 3px solid #00d7c3;
+}
+
+.button-2 {
+  color: #fff;
+  border: 3px solid #c266d3;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.button-2:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+.button-3 {
+  border: 2px solid #3c73ff;
+  background-color: #3c73ff;
+  border-radius: 20px;
+  color: #fff;
+  transition: .3s;
+}
+.button-3:hover {
+  box-shadow: 8px 8px #99bdff;
+  transition: .3s;
+}
+
+.button-4 {
+  background-color: transparent;
+  border: 3px solid #ff0251;
+  color: #ff0251;
+  transition: .3s;
+}
+.button-4:hover {
+  animation: pulse 1s infinite;
+  transition: .3s;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(.9);
+  }
+    100% {
+    transform: scale(1);
+  }
+}
+
+.button-5 {
+  width: 200px;
+  border-radius: 5px;
+  background-color: #F4F200;
+  background-image: #F4F200;
+  background-image: -moz-linear-gradient(top, #fff 0%, #F4F200 100%); 
+  background-image: -webkit-linear-gradient(top, #fff 0%,#F4F200 100%); 
+  background-image: linear-gradient(to bottom, #fff 0%,#F4F200 100%); 
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+.button-5:hover {
+  background-position: -200%;
+  transition: background 300ms ease-in-out;
+}
+
+
+
+

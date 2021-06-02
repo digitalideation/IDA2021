@@ -1,0 +1,168 @@
+
+/*@font-face {
+    font-family: 'Work Sans', sans-serif;
+    src: url();
+}*/
+
+
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    overflow: hidden;
+    /* bottom: 0; */
+    width: 100%;
+    /*
+    box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
+    z-index: 4;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+nav li:last-of-type {
+    margin-right: 50px;
+}
+
+nav  {
+    display: inline;
+    padding: 15px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+
+
+
+
+
+body{
+    background-color: black;
+  }
+  
+  .kopf{
+      height: 35vh;
+      width: 99vw;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  h1{
+      color: white;
+      font-size: 70px;
+      font-weight: 600;
+      margin-bottom: 0px;
+      text-align: center;
+      transform: translateY(50%);
+  }
+  
+  p{
+      color: white;
+      font-size: 35px;
+      font-weight: 300;
+      text-align: center;
+      transform: translateY(50%);
+  }
+  
+  .container{
+      height: 10vh;
+      width: 99vw;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      align-items: center;
+      text-align: center;
+      transform: translateY(-20%);
+
+      margin: auto;
+      margin-right: 20px;
+      padding: 10px 30px;
+      display: inline-block;
+      background-color: rgb(102, 179, 179);
+      border: none;
+      border-radius: 25px;
+      text-align: center;
+      transform: translateY(-45px);
+  
+      color: white;
+      font-size: 28px;
+      text-decoration: none;
+  }
+  
+  
+  
+  /*PREMIUM BUILD :)*/
+  .container2{
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .Erde{
+      width: 15vw;
+      height: 15vw;
+      background-image: url(../img/Erde.png); 
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: rotateFull 8s ease infinite;
+      z-index: 1;
+    }
+  
+    .blur{
+      width: 32vw;
+      height: 32vw;
+      background-image: url(../img/blur.svg); 
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      position: absolute;
+      z-index: 0;
+      animation: pulsate 3s infinite;
+    }
+  
+  
+    @keyframes rotateFull {
+      0% {
+        transform: rotate( 0deg );
+      }
+      50% {
+        transform: rotate( 10deg );
+      }
+      100% {
+        transform: rotate( 0deg );
+      }
+      }
+  
+      @keyframes pulsate {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(1);
+          }
+          }
