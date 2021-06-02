@@ -26,12 +26,11 @@
 
 
 body {
-    background-color: seagreen;
+    background-color: var(--black);
 }
 
 main {
     margin: 10vh;
-    background-color: indianred;
 }
 
 main img {
