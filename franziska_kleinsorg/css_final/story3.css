@@ -3,6 +3,10 @@
 
 /* General Formatting */
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     font-family: 'Amiko', sans-serif; 
     /* font-family: 'Yatra One', cursive; */
@@ -26,6 +30,10 @@ a {
 a:hover {
     font-style: italic;
     cursor: pointer;
+}
+
+.container {
+    position: relative;
 }
 
 /* Story3 formatting */
@@ -61,6 +69,8 @@ div.dancer1 {
     position: relative;
 }
 
+    /* SVGs */
+
 .snake {
     position: fixed;
     top: 8px;
@@ -70,7 +80,6 @@ div.dancer1 {
 }
 
 #snakeID {
-
     stroke:#fff;
     stroke-linecap:round;
     stroke-linejoin:round;
@@ -79,6 +88,23 @@ div.dancer1 {
     transition: fill 250ms;
 }
 
+.tree {
+    position: absolute;
+    top: 14500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    height: 40rem;
+    }
+
+#treeID{
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:7px;
+    fill:transparent;
+    transition: fill 250ms;
+}
 
     /* Audio */ 
 
