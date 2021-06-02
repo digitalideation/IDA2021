@@ -111,6 +111,22 @@
             font-size: .8rem;
         }
 
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        article {
+            display: flex;
+        }
+
+        .text-wrapper {
+            padding-top: 16vh;
+        }
+
+        article:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+
     </style>
 </head>
 
@@ -142,7 +158,8 @@
 
     <main>
         <h1>A narrow guide through my process:</h1>
-        <section class="band">
+
+        <section>
             <article class="2d">
                 <div class="screen-wrapper left-wrap">
                     <div class="screen-hover left">
@@ -160,10 +177,17 @@
                         </figure>
                     </div>
                 </div>
+
+                <div class="text-wrapper">
+                    <h3>Repeating the basics is always a great idea!</h3>
+                    <p>We started off learning the basics and state of the art practices.</p>
+                </div>
+
             </article>
 
 
-            <article class="murdock">
+
+            <article>
                 <div class="screen-wrapper right-wrap">
                     <div class="screen-hover right">
 
@@ -181,9 +205,17 @@
                         </figure>
                     </div>
                 </div>
+                <div class=text-wrapper>
+                    <h3>Make a robot dance!</h3>
+                    <p>Our task was to visualize a song in a web project under the topic of «Dancing with Robots»
+                        I choose the song «Feel Good Inc.» as the music video inspired me every since I first saw it as a kid.
+                        The combination of animation (2D + 3D) and video footage I find fascinating. This I wanted to replicated on my website.
+                    </p>
+                </div>
             </article>
 
-            <article class="noodle">
+
+            <article>
                 <div class="screen-wrapper left-wrap">
                     <div class="screen-hover left">
                         <div class="glow"></div>
@@ -200,9 +232,16 @@
                         </figure>
                     </div>
                 </div>
+
+                <div class="text-wrapper">
+                    <h3>Getting Loud</h3>
+                    <p>The first step was getting the song to play. After watching a video by <a>Ruth John</a> on the WebAudio API 
+                        I implemented the technology as a boombox on my song page.</p>
+                </div>
+
             </article>
 
-            <article class="russle">
+            <article>
                 <div class="screen-wrapper right-wrap">
                     <div class="screen-hover right">
                         <div class="glow"></div>
@@ -213,21 +252,81 @@
 
                             </svg>
                             <figcaption>
-                                <h2>Breakthroughs in Styling</h2>
+                                <h2 style="font-size: 4.2vw;">Beakthroughs in Style</h2>
                                 <p>(click for demo)</p>
                             </figcaption>
                         </figure>
                     </div>
                 </div>
+
+                <div class="text-wrapper">
+                    <h3>New horizons</h3>
+                    <p>Learning new techniques from my teachers everyday, 
+                        I used my newly gained skills to create this VHS-style effect
+                        to replicate the mood form the video. </p>
+                </div>
+
             </article>
+        
+
+        <article>
+            <div class="screen-wrapper left-wrap">
+                <div class="screen-hover left">
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <a href="process/day23/sound-wave.html"></a>
+                        <div class="crt"></div>
+                        <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.92 416.38">
+
+                        </svg>
+                        <figcaption>
+                            <h2>Visualizing Sound</h2>
+                            <p>(click for demo)</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="text-wrapper">
+                <h3>Waves of Difficulty</h3>
+                <p>Visualizing and therefore analysing it, proofed to be more difficult than expected.
+                    I experimented with P5 and the Web Audio API costing me alot of time. 
+                    Nevertheless, it was an great milestone when I then managed to implement a waveform graphic
+                    via the WebAudio API.
+                </p>
+            </div>
+
+        </article>
+
+        <article>
+            <div class="screen-wrapper right-wrap">
+                <div class="screen-hover right">
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <a href="process/day14/index.html"></a>
+                        <div class="crt"></div>
+                        <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.21 416.38">
+        
+                        </svg>
+                        <figcaption>
+                            <h2 style="font-size: 4.2vw;">Beakthroughs in Style</h2>
+                            <p>(click for demo)</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        
+            <div class="text-wrapper">
+                <h3>Putting things together</h3>
+                <p>The next step was combining the different styles into one robot/page.
+                    I used 
+                </p>
+            </div>
+        
+        </article>
+
         </section>
-
-
-
-
-
     </main>
-
 </body>
 
 </html>
