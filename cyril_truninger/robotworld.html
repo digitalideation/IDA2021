@@ -11,11 +11,16 @@
     :root {
       /*************************** Page-wide variables ****************************/
       --scalesize: 1;
+      --basssize: 1;
       /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
     }
 
     nav {
-      background-color: rgba(calc(var(--scalesize)* 100), 100, 100, 0.8) !important;
+      /* background-color: rgba(calc(var(--scalesize)* 100), 100, 100, 0.8) !important; */
+      background: 
+        linear-gradient(90deg, var(--red), transparent calc(100% / var(--basssize))),
+        linear-gradient(-90deg, var(--blue) , transparent calc(100% / var(--basssize))) !important;
+       
     }
 
   </style>
@@ -54,6 +59,7 @@
       <div class="screen-wrapper center-wrap">
         <div class="screen-hover center">
           <div class="glow"></div>
+          <div class="audio-glow"></div>
           <div class="face-wrapper">
             <div class="face">
               <div class="left-eye"></div>
@@ -64,7 +70,7 @@
           <figure class="screen" id="screen">
             <div class="crt"></div>
             <div id="cvs-container">
-              <canvas></canvas>
+              <canvas id="cvs"></canvas>
             </div>
             <div id="video-container">
               <video autoplay="true" id="videoElement">
