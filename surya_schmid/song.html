@@ -5,346 +5,457 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDA Modul - Surya Schmid</title>
   <link rel="stylesheet" href="css/song.css">
-  <style>
-
-  /* ------------------------- MOVE ON MUSIC -------------------------*/
-      :root {
-        /*************************** Page-wide variables ****************************/
-        --scalesize: 1;
-        /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
-      }
-
-      h1{
-        transform: scale(var(--scalesize));
-
-      }
-
-        .audio{
-        position: absolute;
-        height: 4vh;
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        width: 5vw;
-        font-size: 1.5vw;
-        top: 1rem;
-        right: 1rem;
-        z-index: 3;
-      }
-      .audio:hover{
-        color: black;
-        background-color: white;
-      }
-
-
-      .button {
-        cursor: pointer;
-      
-      }
-/* ------------------------- MOVE ON MUSIC -------------------------*/
-  </style>
-<!-- ------------------------- MOVE ON MUSIC SCRIPT------------------------- -->
-  <script>
-    const minscale = 0.2; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
-    const maxscale = 1.8; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
-  </script>
-  <!-- ------------------------- MOVE ON MUSIC SCRIPT------------------------- -->
+  <title>Audio Example</title>
 </head>
 
-<body>
-<!--------------------- CURSOR ----------------------->
-<span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
-  <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-</span>
+<body class="paused"> 
 
-<div id="cursor"> </div>
-<div id="outerCursor"></div>
-<!-----------------------  CURSOR ----------------------->
+          <!-----------------------  MUSIC ----------------------->
+          <header class="head">
+          
+            <div>
+              <audio id="myAudio" src="../audio/head&heart.mp3"></audio>
+              <a onClick="togglePlay()" class="trigger">Music</a>
+            </div>
+          <!-----------------------  MUSIC ----------------------->
+
+        <!-----------------------  CURSOR ----------------------->
+        <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+          <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+        </span>
+
+        <div id="cursor"> </div>
+        <div id="outerCursor"></div>
+        <!-----------------------  CURSOR ----------------------->
+
+        <!---------------- The overlay ---------------->
+        <nav>
+          <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+              <svg viewBox="0 0 20 20">
+                <polygon
+                  points="20 8.5 11.5 8.5 11.5 0 8.5 0 8.5 8.5 0 8.5 0 11.5 8.5 11.5 8.5 20 11.5 20 11.5 11.5 20 11.5 20 8.5" />
+              </svg>
+            </div>
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+              <a class="menu home1" href="index.html">Home</a>
+              <a class="menu song1" href="song.html">My Song</a>
+              <a class="menu robot1" href="robotworld.html">My Robot</a>
+              <a class="menu process1" href="process/index.html">Process</a>
+            </div>
+
+          </div>
+
+          <!-- Use any element to open/show the overlay navigation menu -->
+          <div onclick="openNav()" class="openbutton">
+            <svg viewBox="0 0 20 20">
+              <polygon
+                points="20 8.5 11.5 8.5 11.5 0 8.5 0 8.5 8.5 0 8.5 0 11.5 8.5 11.5 8.5 20 11.5 20 11.5 11.5 20 11.5 20 8.5" />
+            </svg>
+          </div>
+          <!-- <span onclick="openNav()" class="openbutton">&times;</span> -->
+        </nav>
+</header>
+<!---------------- The overlay ---------------->
+
+<!------------------------- CONTENT ------------------------->
+<main class="parallax">
+<div class="radial-gradient"></div>
+
+  <article class="start">
+
+    <h1 class="h1">My head</h1>
+    <h1 class="h2">&</h1>
+    <h1 class="h3">my heart</h1>
+    <!-- <h1 class="red">My head & my heart</h1> -->
+
+  </article>
+
+  <section class="first">
+    <div class="s1 parallax__layer parallax__layer--base feeling">This Feeling's</div>
+    <div class="s2 parallax__layer parallax__layer--back begun">Just begun</div>
+    <figure class="one parallax__layer parallax__layer--ground"></figure>
+    <figure class="two parallax__layer parallax__layer--ground"></figure>
+
+    <div class="s1 parallax__layer parallax__layer--base saying">I'm saying things</div>
+    <div class="s2 parallax__layer parallax__layer--back said">I've never said</div>
+    <figure class="three parallax__layer parallax__layer--ground"></figure>
+    <figure class="four parallax__layer parallax__layer--ground"></figure>
+    <div class="s1 parallax__layer parallax__layer--base doing">Doing things</div>
+    <div class="s2 parallax__layer parallax__layer--back done">I've never done</div>
 
 
-<!----------------------- The overlay -------------------->
-<nav>
-  <div id="myNav" class="overlay">
+  </section>
 
-    <!-- Button to close the overlay navigation -->
-    <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-      <svg viewBox="0 0 20 20">
-        <polygon
-          points="20 8.5 11.5 8.5 11.5 0 8.5 0 8.5 8.5 0 8.5 0 11.5 8.5 11.5 8.5 20 11.5 20 11.5 11.5 20 11.5 20 8.5" />
-      </svg>
+  <section class="second">
+    <div class="text">
+
+      I'm saying things I've never said<br>
+      Doing things I've never done<br>
+
+      Oh my God, oh my God<br>
+      When I see you I should run<br>
+      But I'm frozen in motion<br>
+      And my head tells me to stop<br>
+      Tells me to stop<br>
+
+      Feeling feelings I feel about us<br>
+      Try to fight it but it's never enough<br>
+
+      My heart is certain<br>
+      It's more than a crush<br>
+      'Cause I'm frozen in motion<br>
+      And my head tells me to stop<br>
+
+      But my heart goes<br>
+      Bum bum bum da bum bum, bum bum bum da bum<br>
+      Bum bum bum da bum bum, bum bum bum da bum<br>
+      'Cause my heart goes<br>
+      Bum bum bum da bum bum, bum bum bum da bum<br>
+      Bum bum bum da bum bum, bum bum bum da bum<br>
+
+      Oh my God, oh my God<br>
+      Can't believe what I've become<br>
+      I'm thinking things I shouldn't think<br>
+      Singing songs I've never sung<br>
+
+      Oh my God, oh my God<br>
+      When I see you I should run<br>
+      But I'm frozen in motion<br>
+      And my head tells me to stop<br>
+      Tells me to stop<br>
+
+      Feeling feelings I feel about us<br>
+      Try to fight it but it's never enough<br>
+      ('Cause my heart)<br>
+      My heart is certain<br>
+      It's more than a crush<br>
+      'Cause I'm frozen in motion<br>
+      And my head tells me to stop<br>
+
+      But my heart goes<br>
+      Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+      Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+      'Cause my heart goes<br>
+      Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+      Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+
+      But my heart goes<br>
+      Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+      Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+      'Cause my heart goes<br>
+      Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
+      Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
+
+      My head and my heart<br>
+      My head and my heart<br>
+      I can't tell them apart<br>
+      My head tells me to run<br>
+      But I can't<br>
+
+
     </div>
-    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
 
-    <!-- Overlay content -->
-    <div class="overlay-content">
-      <a class="menu home1" href="index.html">Home</a>
-      <a class="menu song1" href="song.html">My Song</a>
-      <a class="menu robot1" href="robotworld.html">My Robot</a>
-      <a class="menu process1" href="robotworld.html">Process</a>
+  </section>
+
+  <section class="third">
+    <div class="s1 parallax__layer parallax__layer--base">When i see You</div>
+    <div class="s2 parallax__layer parallax__layer--back">I should run</div>
+    <figure class="head1 parallax__layer parallax__layer--ground"></figure>
+    <figure class="head2 parallax__layer parallax__layer--ground"></figure>
+
+    <div class="s1 parallax__layer parallax__layer--base saying">But I'm frozen</div>
+    <div class="s2 motion parallax__layer parallax__layer--back said">in motion</div>
+    <figure class="head3 parallax__layer parallax__layer--ground"></figure>
+    <figure class="head4 parallax__layer parallax__layer--ground"></figure>
+    <div class="s1 myHead parallax__layer parallax__layer--base doing">And my head</div>
+    <div class="s2 parallax__layer parallax__layer--back done">tells me to stop</div>
+    <div class="s3 parallax__layer parallax__layer--back done">tells me to stop</div>
+
+
+  </section>
+
+  <section class="fourth">
+    <div class="text2">
+
+      I'm saying things I've never said<br>
+      Doing things I've never done<br>
+
+      Oh my God, oh my God<br>
+      When I see you I should run<br>
+      But I'm frozen in motion<br>
+      And my head tells me to stop<br>
+      Tells me to stop<br>
+
+      Feeling feelings I feel about us<br>
+      Try to fight it but it's never enough<br>
+
+      My heart is certain<br>
+      It's more than a crush<br>
+      'Cause I'm frozen in motion<br>
+      And my head tells me to stop<br>
+
+      But my heart goes<br>
+      Bum bum bum da bum bum, bum bum bum da bum<br>
+      Bum bum bum da bum bum, bum bum bum da bum<br>
+      'Cause my heart goes<br>
+      Bum bum bum da bum bum, bum bum bum da bum<br>
+      Bum bum bum da bum bum, bum bum bum da bum<br>
+
+      Oh my God, oh my God<br>
+      Can't believe what I've become<br>
+      I'm thinking things I shouldn't think<br>
+      Singing songs I've never sung<br>
+
+      Oh my God, oh my God<br>
+      When I see you I should run<br>
+      But I'm frozen in motion<br>
+      And my head tells me to stop<br>
+      Tells me to stop<br>
+
+      Feeling feelings I feel about us<br>
+      Try to fight it but it's never enough<br>
+      ('Cause my heart)<br>
+      My heart is certain<br>
+      It's more than a crush<br>
+      'Cause I'm frozen in motion<br>
+      And my head tells me to stop<br>
+
+
     </div>
 
+  </section>
+
+  <!------------------------- SNOW ------------------------->
+  <div class="snow1">
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
+    <div class="snow"></div>
   </div>
+  <!------------------------- SNOW ------------------------->
 
-  <!-- Use any element to open/show the overlay navigation menu -->
-  <div onclick="openNav()" class="openbutton">
-    <svg viewBox="0 0 20 20">
-      <polygon
-        points="20 8.5 11.5 8.5 11.5 0 8.5 0 8.5 8.5 0 8.5 0 11.5 8.5 11.5 8.5 20 11.5 20 11.5 11.5 20 11.5 20 8.5" />
-    </svg>
-  </div>
-  <!-- <span onclick="openNav()" class="openbutton">&times;</span> -->
-</nav>
-<!------------------------ The overlay ----------------------->
+</main>
+<!------------------------- CONTENT ------------------------->
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+<script>
+  $(document).mousemove(function (event) {
+    windowWidth = $(window).width();
+    windowHeight = $(window).height();
 
-    <!------------------------- PLAYBUTTON ------------------------->
+    mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+    mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
 
-    <section class="audio">
-      <audio src="process/audio/head&heart.mp3">
-        Your browser does not support the
-        <code>audio</code> element.
-      </audio>
-    
-    
-      <a onclick="togglePlay()" class="button trigger">Play</a>
-    </section>
+    $('.radial-gradient').css('background', 'radial-gradient(200px at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #c5000000, #003cff)');
+  });
+</script>
 
-    <!------------------------- PLAYBUTTON ------------------------->
-    
-
-    
-    <!------------------------- CONTENT ------------------------->
-    <main class="parallax">
-    
-    
-      <article class="start">
-    
-        
-        <h1 class="red">My head & <br> my heart</h1>
-        <div></div>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-      </article>
-    
-      <section class="first">
-        <div class="s1 parallax__layer parallax__layer--base feeling">This Feeling's</div>
-        <div class="s2 parallax__layer parallax__layer--back begun">Just begun</div>
-        <figure class="one parallax__layer parallax__layer--ground"></figure>
-        <figure class="two parallax__layer parallax__layer--ground"></figure>
-    
-        <div class="s1 parallax__layer parallax__layer--base saying">I'm saying things</div>
-        <div class="s2 parallax__layer parallax__layer--back said">I've never said</div>
-        <figure class="three parallax__layer parallax__layer--ground"></figure>
-        <figure class="four parallax__layer parallax__layer--ground"></figure>
-        <div class="s1 parallax__layer parallax__layer--base doing">Doing things</div>
-        <div class="s2 parallax__layer parallax__layer--back done">I've never done</div>
-    
-    
-      </section>
-    
-      <section class="second">
-        <div class="text">
-    
-          I'm saying things I've never said<br>
-          Doing things I've never done<br>
-    
-          Oh my God, oh my God<br>
-          When I see you I should run<br>
-          But I'm frozen in motion<br>
-          And my head tells me to stop<br>
-          Tells me to stop<br>
-    
-          Feeling feelings I feel about us<br>
-          Try to fight it but it's never enough<br>
-    
-          My heart is certain<br>
-          It's more than a crush<br>
-          'Cause I'm frozen in motion<br>
-          And my head tells me to stop<br>
-    
-          But my heart goes<br>
-          Bum bum bum da bum bum, bum bum bum da bum<br>
-          Bum bum bum da bum bum, bum bum bum da bum<br>
-          'Cause my heart goes<br>
-          Bum bum bum da bum bum, bum bum bum da bum<br>
-          Bum bum bum da bum bum, bum bum bum da bum<br>
-    
-          Oh my God, oh my God<br>
-          Can't believe what I've become<br>
-          I'm thinking things I shouldn't think<br>
-          Singing songs I've never sung<br>
-    
-          Oh my God, oh my God<br>
-          When I see you I should run<br>
-          But I'm frozen in motion<br>
-          And my head tells me to stop<br>
-          Tells me to stop<br>
-    
-          Feeling feelings I feel about us<br>
-          Try to fight it but it's never enough<br>
-          ('Cause my heart)<br>
-          My heart is certain<br>
-          It's more than a crush<br>
-          'Cause I'm frozen in motion<br>
-          And my head tells me to stop<br>
-    
-          But my heart goes<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-          'Cause my heart goes<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-    
-          But my heart goes<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-          'Cause my heart goes<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-    
-          My head and my heart<br>
-          My head and my heart<br>
-          I can't tell them apart<br>
-          My head tells me to run<br>
-          But I can't<br>
-    
-    
-        </div>
-    
-      </section>
-    
-      <section class="third">
-        <div class="s1 parallax__layer parallax__layer--base">When i see You</div>
-        <div class="s2 parallax__layer parallax__layer--back">I should run</div>
-        <figure class="head1 parallax__layer parallax__layer--ground"></figure>
-        <figure class="head2 parallax__layer parallax__layer--ground"></figure>
-    
-        <div class="s1 parallax__layer parallax__layer--base saying">But I'm frozen</div>
-        <div class="s2 parallax__layer parallax__layer--back said">in motion</div>
-        <figure class="head3 parallax__layer parallax__layer--ground"></figure>
-        <figure class="head4 parallax__layer parallax__layer--ground"></figure>
-        <div class="s1 parallax__layer parallax__layer--base doing">And my head</div>
-        <div class="s2 parallax__layer parallax__layer--back done">tells me to stop</div>
-        <div class="s3 parallax__layer parallax__layer--back done">tells me to stop</div>
-    
-    
-      </section>
-    
-      <section class="fourth">
-        <div class="text">
-    
-          I'm saying things I've never said<br>
-          Doing things I've never done<br>
-    
-          Oh my God, oh my God<br>
-          When I see you I should run<br>
-          But I'm frozen in motion<br>
-          And my head tells me to stop<br>
-          Tells me to stop<br>
-    
-          Feeling feelings I feel about us<br>
-          Try to fight it but it's never enough<br>
-    
-          My heart is certain<br>
-          It's more than a crush<br>
-          'Cause I'm frozen in motion<br>
-          And my head tells me to stop<br>
-    
-          But my heart goes<br>
-          Bum bum bum da bum bum, bum bum bum da bum<br>
-          Bum bum bum da bum bum, bum bum bum da bum<br>
-          'Cause my heart goes<br>
-          Bum bum bum da bum bum, bum bum bum da bum<br>
-          Bum bum bum da bum bum, bum bum bum da bum<br>
-    
-          Oh my God, oh my God<br>
-          Can't believe what I've become<br>
-          I'm thinking things I shouldn't think<br>
-          Singing songs I've never sung<br>
-    
-          Oh my God, oh my God<br>
-          When I see you I should run<br>
-          But I'm frozen in motion<br>
-          And my head tells me to stop<br>
-          Tells me to stop<br>
-    
-          Feeling feelings I feel about us<br>
-          Try to fight it but it's never enough<br>
-          ('Cause my heart)<br>
-          My heart is certain<br>
-          It's more than a crush<br>
-          'Cause I'm frozen in motion<br>
-          And my head tells me to stop<br>
-    
-          But my heart goes<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-          'Cause my heart goes<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-    
-          But my heart goes<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-          'Cause my heart goes<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-          Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-    
-          My head and my heart<br>
-          My head and my heart<br>
-          I can't tell them apart<br>
-          My head tells me to run<br>
-          But I can't<br>
-    
-    
-        </div>
-    
-      </section>
-    
-    
-    </main>
-    <!------------------------- CONTENT ------------------------->
-    
-<!-- __________________________________________SCRIPT___________________________________________________ -->
-
-    <script src="css/song.js"> </script>
-    
-    
-    <script>
-      // -------------------------- OVERLAY ----------------------------->
-          /* Open when someone clicks on the span element */
-          function openNav() {
-            document.getElementById("myNav").style.width = "40%";
-          }
-
-          /* Close when someone clicks on the "x" symbol inside the overlay */
-          function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
-          }
-      // <------------------------- OVERLAY ------------------------------
-    
-
-      // <------------------------- CURSOR ------------------------------
-      var cursor = document.getElementById('cursor');
-      document.addEventListener('mousemove', function (e) {
-        var x = e.clientX;
-        var y = e.clientY;
-        cursor.style.left = x + "px";
-        cursor.style.top = y + "px";
-      });
-
-      var outerCursor = document.getElementById('outerCursor');
-      document.addEventListener('mousemove', function (e) {
-        var x = e.clientX;
-        var y = e.clientY;
-        outerCursor.style.left = x + "px";
-        outerCursor.style.top = y + "px";
-      });
-     // <------------------------- CURSOR ------------------------------
-    </script>
-    </script>
-    <script src="css/song.js"></script>
+  <script src="css/song.js"></script>
 </body>
+
 </html>
