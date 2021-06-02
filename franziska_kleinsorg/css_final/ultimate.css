@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Amiko', sans-serif; 
-    background: #dbc8f3;
+    background: #dbc8f3; 
     height: 100%;
     margin: 0;
 }
@@ -132,10 +132,6 @@ a:hover {
  visibility: visible;
  opacity: 1; 
 }
-
-
-
-
 
 /* About Song */
 
