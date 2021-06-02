@@ -2,6 +2,16 @@
 /* ----------------------- ALLGEMEIN -----------------------> */
 
 
+    :root{
+      --fontFamily:'simplonItalic';
+      --fontButton:'Skyline';
+      --fontMenu:'brr' ;
+      --fontSimplon:'simplonMedium';
+    }
+@font-face {
+  font-family: 'brr';
+  src: url(img/BRRREDU-Medium.otf);
+}
   
     @font-face {
       font-family: 'Skyline';
@@ -21,17 +31,20 @@
             width: 100vw;
             height: 100vh; 
             overflow: hidden;
+
+            background-image: url(https://static.y8.com/cloud/y8-thumbs/26108/video_thumbnail.jpg);
+            background-size: 110%;
+            background-position-x: center;
      }
 
 
-
+/* 
     body:after{
       content: '';
       display: block;
       position: absolute;
       width: 60vw;
       height: 70vh;
-      /* top: 110vh; */
       top: 10vh;
       left:20vw;
       background: linear-gradient(-45deg, #c20ac9, #33348b, #140169, #000000);
@@ -40,7 +53,7 @@
       border-radius: 2%;
       z-index: -1;
       box-shadow: 0px 0px 100px 10px #31155e;
-          }
+          } */
 
       
 
@@ -528,6 +541,7 @@
         display: flex;
         align-items: center;
         padding-left: 1rem;
+         width: 100%;
         }
 
         /* When you mouse over the navigation links, change their color */
@@ -582,7 +596,7 @@
             margin: 0;
             text-decoration: none;
             color: black;   
-            font-family: 'Skyline';
+            font-family: var(--fontMenu);
             font-size: 500px;
             background-color: white;
             
@@ -613,8 +627,11 @@
       :root {
         /*************************** Page-wide variables ****************************/
         --scalesize: 2;
+            --fontButton:'Skyline';
         /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
       }
+
+
 
       section {
         position: sticky;
@@ -622,21 +639,28 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    
+        top: 1rem;
         font-family: 'Montserrat', sans-serif;
         color: white;
-        font-size: 2vw;
+      font-family: var(--fontButton);
+      font-size: 1.5rem;
         margin: auto;
-        width: 10rem;
+        width: 18rem;
         height: 3rem;
       }
       section:hover{
-        color:#000000;
-        background-color: white;
+        transform: skewX(10deg);
+      font-weight: bold;
         /* box-shadow: 10px 0px 100px 100px #ff00f2; */
-       
       }
-
+     /* @keyframes button {
+        0%{
+          transform: translate(0, 0px);
+        }
+        50%{
+          transform: translate(0, -5px);
+        }
+      } */
 
       .head {
         transform: scale(var(--scalesize));
@@ -671,3 +695,5 @@
 
 
   /* ----------------------- MOVE ON MUSIC -----------------------> */
+
+  
