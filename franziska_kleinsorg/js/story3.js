@@ -1,18 +1,48 @@
-//SNAKE ANIMATION
-const SVGSNAKE = document.getElementById('snakeID')
+//Multiple Paths
 
-const SNAKELENGTH = SVGSNAKE.getTotalLength();
+const paths = new Array();
+paths[0] = 'snakeID';
+paths[1] = 'treeID';
+paths[2] = 'handleftID';
+paths[3] = 'handrightID';
 
-SVGSNAKE.style.strokeDasharray = SNAKELENGTH;
-SVGSNAKE.style.strokeDashoffset = SNAKELENGTH;
+
+
+//SVG ANIMATION
+var SVGElement;
+var SVGLength;
+
+for(let n=0;n<paths.length;n++){
+    SVGElement = document.getElementById(paths[n]);
+
+    SVGLength = SVGElement.getTotalLength();
+    SVGElement.style.strokeDasharray = SVGLength;
+    SVGElement.style.strokeDashoffset = SVGLength;
+}
+
+
 
 const drawWhenScroll = () => {
-    const DRAWSNAKE = SNAKELENGTH * calcScrollPercent();
-    SVGSNAKE.style.strokeDashoffset = (SNAKELENGTH - 10*DRAWSNAKE);
+
+    let scrollpercent = calcScrollPercent();
+
+    for(let n=0;n<paths.length;n++){
+        SVGElement = document.getElementById(paths[n]);
+        SVGLength = SVGElement.getTotalLength();
+        let draw = SVGLength * scrollpercent;
+        let factor = SVGElement.getAttribute('attr-factor');
+
+        if(SVGLength - 10*draw > 0 ){
+            SVGElement.style.strokeDashoffset = (SVGLength - factor*draw );
+        }
+    }
 }
 
 const calcScrollPercent = () => {
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    //console.log(document.documentElement.scrollTop / height);
+    //return (document.documentElement.scrollTop % sectionheight) ;
     return document.documentElement.scrollTop / height;
 }
     
