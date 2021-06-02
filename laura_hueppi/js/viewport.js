@@ -1,9 +1,12 @@
-// javascript event handlers https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
-// hier wird die scroll Funktion abgehört, immer wenn der User scrollt wird die gesamte Funktion ausgeführt
+var viewedElements = []
+var currentElement = ''
+var myName = ''
+
 window.onscroll = function() {
     //alle Elemente mit dem Tag article werden in die Variable articles geschrieben, diese ist ein Array mit allenfalls mehreren Einträgen
     let articles = document.getElementsByClassName("scrollelement");
-    console.log('articles', articles)
+    // console.log('articles', articles)
+
 
     //hier wird durch alle Einträge im Array durchgeloopt
     //
@@ -15,21 +18,15 @@ window.onscroll = function() {
         //falls die Distanz der oberen Ecke zum viewport kleiner ist als die Höhe des viewports
         // ist das Element entweder im viewport oder bereits oben wieder rausgerutscht 
         if (domRect.top < window.innerHeight) {
-            console.log("ich bin im viewport");
-            var myName = articles[i].getAttribute('data-name');
-            document.getElementsByClassName('kopf')[0].classList.toggle(myName);
-
-            // falls der untere Punkt im Minus liegt ist es oben rausgerutscht
-            // if (domRect.bottom < 0) {
-            //     console.log("ich bin oben rausgerutscht");
-            //     articles[i].classList.remove("myclass");
-            // }
-        } else {
-            console.log("ich bin noch nicht im viewport");
-            articles[i].classList.remove(myName);
+            viewedElements = []
+            viewedElements.push(articles[i])
+            myName = viewedElements[viewedElements.length - 1].getAttribute('data-name');
+            // console.log("ich bin im viewport", myName);
         }
-
-        // die console.log könnt ihr im live modus auskommentieren! Sind bloss zum Testen da.
-
+    }
+    if (currentElement !== myName) {
+        document.getElementsByClassName('kopf')[0].classList = 'kopf';
+        document.getElementsByClassName('kopf')[0].classList.add(myName);
+        currentElement = myName
     }
 };
