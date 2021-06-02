@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,324 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/globalstyles.css">
     <link rel="stylesheet" href="css/processstyles.css">
+    <link rel="stylesheet" href="css/screen-fx.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
+            href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+            rel="stylesheet">
     <!-- Libraries -->
     <script src="https://kit.fontawesome.com/abf77cb1ab.js" crossorigin="anonymous"></script>
 
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <span class="navdiv"></span>
-            <li><a href="robotworld.html">Robot</a></li>
-            <span class="navdiv"></span>
-            <li><a href="song.html">Song</a></li>
-            <span class="navdiv"></span>
-            <li><a href="process.html">Process</a></li>
-        </ul>
-    </nav>
+    <style>
+        :root {
+            --screen-widht: 40vw;
+            --screen-height: 30vw;
+            --max-height: 80vh;
+            --glow-width: 39vw;
+            --glow-height: 29vw;
+            --screen-radius: 2rem;
+            box-sizing: border-box;
+        }
 
-    <div>
-        <ul>
-            <li><a href="process/day01/index.html">Day 1: Starting with the Basics</a></li>
-            <li><a href="process/day02/index.html">Day 2: Basicly the Basics still...</a></li>
-            <li><a href="process/day03/12-grid-responsiv-model-v1.html">Day 3: Tryouts in responsivness</a></li>
-            <li><a href="process/day04/index.html">Day 4</a> </li>
-            <li><a href="process/day05/index.html">Day 5</a></li>
-            <li><a href="process/day06/06-position-test.html">Day 6: Practicing Positions</a></li>
-            <li><a href="process/day07/">Day 7: Perfect positioning</a></li>
-            <li><a href="process/day08/index.html">Day 8</a></li>
-        </ul>
-    </div>
-    
+        /* Wrapper Positioning */
+        .screen-wrapper {
+            margin: 30px;
+        }
+
+
+        /* Screen Definition */
+
+        .screen {
+            display: flex;
+            justify-content: center;
+            border: solid 3px var(--white);
+            background-color: var(--darkgrey);
+            position: relative;
+            filter: url(css/filters.svg#blur1);
+            animation: noise .6s ease 0s infinite forwards;
+            margin: 0;
+        }
+
+        .band-pic {
+            width: 45%;
+            fill: var(--white);
+        }
+
+
+        /* Text */
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 4.4vw;
+        }
+
+
+        /* Hover */
+
+        .screen-hover:hover .glow {
+            transition: 0.3s;
+            -webkit-transition: 0.8s;
+            box-shadow: 0 0 80px 5px var(--red);
+            animation: glowflicker 0.15s infinite;
+            mix-blend-mode: soft-light;
+        }
+
+        .screen {
+            transition: all 0.5s ease-in-out;
+        }
+
+        .screen-hover:hover .screen {
+            transition: 1.5s;
+            -webkit-transition: 1.5s;
+            background-color: var(--white);
+            filter: url(css/filters.svg#blur2);
+        }
+
+        .band-pic {
+            transition: all 0.8s ease-in-out;
+        }
+
+        .screen-hover:hover .screen .band-pic {
+            fill: var(--black);
+        }
+
+        .screen figcaption h2 {
+            transition: all 1.5s ease-in-out;
+        }
+
+
+        /* Screen 3D Transform */
+
+        .screen a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
+
+        figcaption p {
+            text-align: center;
+            font-size: .8rem;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        article {
+            display: flex;
+        }
+
+        .text-wrapper {
+            padding-top: 16vh;
+        }
+
+        article:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+
+    </style>
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <span class="navdiv"></span>
+        <li><a href="robotworld.html">Robot</a></li>
+        <span class="navdiv"></span>
+        <li><a href="song.html">Song</a></li>
+        <span class="navdiv"></span>
+        <li><a href="process.html">Process</a></li>
+    </ul>
+</nav>
+
+<!-- <div>
+    <ul>
+        <li><a href="process/day01/index.html">Day 1: Starting with the Basics</a></li>
+        <li><a href="process/day02/index.html">Day 2: Basicly the Basics still...</a></li>
+        <li><a href="process/day03/12-grid-responsiv-model-v1.html">Day 3: Tryouts in responsivness</a></li>
+        <li><a href="process/day04/index.html">Day 4</a> </li>
+        <li><a href="process/day05/index.html">Day 5</a></li>
+        <li><a href="process/day06/06-position-test.html">Day 6: Practicing Positions</a></li>
+        <li><a href="process/day07/">Day 7: Perfect positioning</a></li>
+        <li><a href="process/day08/index.html">Day 8</a></li>
+    </ul>
+</div> -->
+
+<main>
+    <h1>A narrow guide through my process:</h1>
+
+    <section>
+        <article class="2d">
+            <div class="screen-wrapper left-wrap">
+                <div class="screen-hover left">
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <a href="process/day01/basic-website-structure.html"></a>
+                        <div class="crt"></div>
+                        <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.29 414.67">
+
+                        </svg>
+                        <figcaption>
+                            <h2>Repeating the Basics</h2>
+                            <p>(click for demo)</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="text-wrapper">
+                <h3>Repeating the basics is always a great idea!</h3>
+                <p>We started off learning the basics and state of the art practices.</p>
+            </div>
+
+        </article>
+
+
+
+        <article>
+            <div class="screen-wrapper right-wrap">
+                <div class="screen-hover right">
+
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <a href="process/day05/robot-moodboard.html"></a>
+                        <div class="crt"></div>
+                        <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.39 416.17">
+
+                        </svg>
+                        <figcaption>
+                            <h2>Tryin' to get a Mood</h2>
+                            <p>(click for demo)</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class=text-wrapper>
+                <h3>Make a robot dance!</h3>
+                <p>Our task was to visualize a song in a web project under the topic of «Dancing with Robots»
+                    I choose the song «Feel Good Inc.» as the music video inspired me every since I first saw it as a kid.
+                    The combination of animation (2D + 3D) and video footage I find fascinating. This I wanted to replicated on my website.
+                </p>
+            </div>
+        </article>
+
+
+        <article>
+            <div class="screen-wrapper left-wrap">
+                <div class="screen-hover left">
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <a href="song.html"></a>
+                        <div class="crt"></div>
+                        <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.92 416.38">
+
+                        </svg>
+                        <figcaption>
+                            <h2>Implementing Audio</h2>
+                            <p>(click for demo)</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="text-wrapper">
+                <h3>Getting Loud</h3>
+                <p>The first step was getting the song to play. After watching a video by <a>Ruth John</a> on the WebAudio API
+                    I implemented the technology as a boombox on my song page.</p>
+            </div>
+
+        </article>
+
+        <article>
+            <div class="screen-wrapper right-wrap">
+                <div class="screen-hover right">
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <a href="process/day14/index.html"></a>
+                        <div class="crt"></div>
+                        <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.21 416.38">
+
+                        </svg>
+                        <figcaption>
+                            <h2 style="font-size: 4.2vw;">Beakthroughs in Style</h2>
+                            <p>(click for demo)</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="text-wrapper">
+                <h3>New horizons</h3>
+                <p>Learning new techniques from my teachers everyday,
+                    I used my newly gained skills to create this VHS-style effect
+                    to replicate the mood form the video. </p>
+            </div>
+
+        </article>
+
+
+        <article>
+            <div class="screen-wrapper left-wrap">
+                <div class="screen-hover left">
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <a href="process/day23/sound-wave.html"></a>
+                        <div class="crt"></div>
+                        <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.92 416.38">
+
+                        </svg>
+                        <figcaption>
+                            <h2>Visualizing Sound</h2>
+                            <p>(click for demo)</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="text-wrapper">
+                <h3>Waves of Difficulty</h3>
+                <p>Visualizing and therefore analysing it, proofed to be more difficult than expected.
+                    I experimented with P5 and the Web Audio API costing me alot of time.
+                    Nevertheless, it was an great milestone when I then managed to implement a waveform graphic
+                    via the WebAudio API.
+                </p>
+            </div>
+
+        </article>
+
+        <article>
+            <div class="screen-wrapper right-wrap">
+                <div class="screen-hover right">
+                    <div class="glow"></div>
+                    <figure class="screen">
+                        <a href="process/day14/index.html"></a>
+                        <div class="crt"></div>
+                        <svg class="band-pic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380.21 416.38">
+
+                        </svg>
+                        <figcaption>
+                            <h2 style="font-size: 4.2vw;">Beakthroughs in Style</h2>
+                            <p>(click for demo)</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="text-wrapper">
+                <h3>Putting things together</h3>
+                <p>The next step was combining the different styles into one robot/page.
+                    I used
+                </p>
+            </div>
+
+        </article>
+
+    </section>
+</main>
 </body>
-</html> 
+
+</html>

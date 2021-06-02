@@ -11,11 +11,16 @@
     :root {
       /*************************** Page-wide variables ****************************/
       --scalesize: 1;
+      --basssize: 1;
       /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
     }
 
     nav {
-      background-color: rgba(calc(var(--scalesize)* 100), 100, 100, 0.8) !important;
+      /* background-color: rgba(calc(var(--scalesize)* 100), 100, 100, 0.8) !important; */
+      background:
+              linear-gradient(90deg, var(--red), transparent calc(100% / var(--basssize))),
+              linear-gradient(-90deg, var(--blue) , transparent calc(100% / var(--basssize))) !important;
+
     }
 
   </style>
@@ -26,71 +31,71 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
-    rel="stylesheet">
+          href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
+          rel="stylesheet">
   <!-- Libraries -->
   <script src="https://kit.fontawesome.com/abf77cb1ab.js" crossorigin="anonymous"></script>
   <!-- P5 -->
   <!-- <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script> -->
   <!-- <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.sound.js"></script> -->
-  
+
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <span class="navdiv"></span>
-      <li><a href="robotworld.html">Robot</a></li>
-      <span class="navdiv"></span>
-      <li><a href="song.html">Song</a></li>
-      <span class="navdiv"></span>
-      <li><a href="process.html">Process</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <span class="navdiv"></span>
+    <li><a href="robotworld.html">Robot</a></li>
+    <span class="navdiv"></span>
+    <li><a href="song.html">Song</a></li>
+    <span class="navdiv"></span>
+    <li><a href="process.html">Process</a></li>
+  </ul>
+</nav>
 
-  <main><div class="robot">
-    <div class="head">
-      <div class="screen-wrapper center-wrap">
-        <div class="screen-hover center">
-          <div class="glow"></div>
-          <div class="face-wrapper">
-            <div class="face">
-              <div class="left-eye"></div>
-              <div class="right-eye"></div>
-              <div class="mouth"></div>
-            </div>
+<main><div class="robot">
+  <div class="head">
+    <div class="screen-wrapper center-wrap">
+      <div class="screen-hover center">
+        <div class="glow"></div>
+        <div class="audio-glow"></div>
+        <div class="face-wrapper">
+          <div class="face">
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="mouth"></div>
           </div>
-          <figure class="screen" id="screen">
-            <div class="crt"></div>
-            <div id="cvs-container">
-              <canvas></canvas>
-            </div>
-            <div id="video-container">
-              <video autoplay="true" id="videoElement">
-              </video>
-            </div>
-            <figcaption id=live>
-              Live
-            </figcaption>
-          </figure>
         </div>
-        
+        <figure class="screen" id="screen">
+          <div class="crt"></div>
+          <div id="cvs-container">
+            <canvas id="cvs"></canvas>
+          </div>
+          <div id="video-container">
+            <video autoplay="true" id="videoElement">
+            </video>
+          </div>
+          <figcaption id=live>
+            Live
+          </figcaption>
+        </figure>
       </div>
-      
-      <div id="button-wrapper" class="button-wrapper">
-        <button id="playButton" class="crt" data-playing="false" role="switch" aria-checked="false">Play</button>
-      </div>
-      
-      <audio id="song" src="sound/Feel-Good-Inc.mp3" crossorigin="anonymous"></audio>
+
+    </div>
+
+    <div id="button-wrapper" class="button-wrapper">
+      <button id="playButton" class="crt" data-playing="false" role="switch" aria-checked="false">Play</button>
+    </div>
+
+    <audio id="song" src="sound/Feel-Good-Inc.mp3" crossorigin="anonymous"></audio>
 
   </div>
 </main>
-  
-  
+
+
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/robot.js"></script>
-<script src="js/robotaudio.js"></script>
 </html>

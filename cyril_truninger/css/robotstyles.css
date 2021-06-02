@@ -1,8 +1,8 @@
 /* Screen Definition */
 
 :root {
-    --screen-widht: 80vh;
-    --screen-height: 60vh;
+    --screen-widht: calc(var(--basssize) + 80vh);
+    --screen-height: calc(var(--basssize) + 60vh);
     --max-height: 80vh;
     --glow-width: 79.5vh;
     --glow-height: 59.5vh;
@@ -34,7 +34,7 @@
 }
 
 #cvs-container {
-    width: var(--screen-widht);
+    width: 100%;
     max-height: var(--max-height);
     height: 100%;
     /* height: var(--screen-height); */
@@ -97,7 +97,6 @@ canvas {
         left: 50%;
         font-size: calc(var(--scalesize)*4*24px);
     }
-   
     100% {
         top: 8%;
         left: 10%;
@@ -140,4 +139,10 @@ canvas {
 .mouth {
     width: 24vw;
     height: 12vh;
+}
+
+/* Video Animation */
+
+.video-filter {
+    filter: url(../svg/filters.svg#video-color);
 }

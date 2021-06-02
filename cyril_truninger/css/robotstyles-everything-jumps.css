@@ -1,0 +1,148 @@
+/* Screen Definition */
+
+:root {
+    --screen-widht: calc(var(--basssize) / 5 * 80vh);
+    --screen-height: calc(var(--basssize) / 5 * 60vh);
+    --max-height: calc(var(--basssize) / 5 * 80vh);
+    --glow-width: calc(var(--basssize) / 5 * 79.5vh);
+    --glow-height: calc(var(--basssize) / 5 * 59.5vh);
+    --screen-radius: 2rem;
+    box-sizing: border-box;
+}
+
+/* "ROBOT STYLES" */
+
+/* Text */
+
+#videoElement {
+    width: 100%;
+    height: 100%;
+    background-color: #666;
+    border-radius: calc(var(--screen-radius)*0.92);
+    filter: url(../svg/filters.svg#video-bw);
+    transition: all 2s ease-in-out;
+}
+
+.screen-hover:hover #videoElement {
+    filter: url(../svg/filters.svg#video-color);
+}
+
+#video-container {
+    margin: 0px auto;
+    width: var(--screen-widht);
+    max-height: var(--max-height);
+}
+
+#cvs-container {
+    width: var(--screen-widht);
+    max-height: var(--max-height);
+    height: 100%;
+    /* height: var(--screen-height); */
+    margin: 0px auto;
+    z-index: 1;
+    border-radius: var(--screen-radius);
+    position: absolute;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--screen-radius);
+    z-index: 4;
+}
+
+#playButton, button {
+    position: relative;
+    border: solid var(--white) 1px;
+    background-color: var(--darkgrey);
+    min-width: 12vw;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: noise .6s ease 0s infinite forwards;
+    display: block;
+    margin-top: 45px;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 100px;
+}
+
+#playButton:hover {
+    background-color: var(--white);
+    mix-blend-mode: invert;
+    color: var(--black) !important;
+}
+
+#playButton:active {
+    background-color: var(--red);
+    transition: 0.2s;
+}
+
+.screen .crt::before, .crt::after {
+    border-radius: var(--screen-radius) !important;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Live Tag */
+
+@keyframes live-fx {
+    0% {
+        top: 50%;
+        left: 50%;
+        font-size: calc(var(--scalesize)*4*24px);
+    }
+    100% {
+        top: 8%;
+        left: 10%;
+        font-size: calc(var(--scalesize)*0.6*24px);
+        color: var(--red);
+    }
+}
+
+.live-fx {
+    animation: live-fx 4s ease-in-out 2.5s forwards !important;
+    animation-fill-mode: forwards;
+}
+
+/* .screen figcaption h2 {
+    font-size: calc(var(--scalesize)*4*24px);
+} */
+
+/* Robot Face */
+
+.face-wrapper {
+    width: var(--screen-width);
+    height: var(--screen-height);
+    border-radius: var(--screen-radius);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.face .left-eye, .right-eye, .mouth {
+    background-color: var(--white);
+    z-index: +2;
+}
+
+.left-eye, .right-eye {
+    width: 12vw;
+    height: 12vh;
+}
+
+.mouth {
+    width: 24vw;
+    height: 12vh;
+}
+
+/* Video Animation */
+
+.video-filter {
+    filter: url(../svg/filters.svg#video-color);
+}
