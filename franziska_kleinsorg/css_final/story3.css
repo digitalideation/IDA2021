@@ -198,7 +198,7 @@ div.dancer1 {
 
 .handright {
     position: absolute;
-    top: px;
+    top: 1100px;
     left: 75%;
     transform: translate(-50%, -50%);
     width: 45vw;
