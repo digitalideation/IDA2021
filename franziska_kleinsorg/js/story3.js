@@ -8,7 +8,7 @@ SVGSNAKE.style.strokeDashoffset = SNAKELENGTH;
 
 const drawWhenScroll = () => {
     const DRAWSNAKE = SNAKELENGTH * calcScrollPercent();
-    SVGSNAKE.style.strokeDashoffset = SNAKELENGTH - DRAWSNAKE;
+    SVGSNAKE.style.strokeDashoffset = (SNAKELENGTH - 10*DRAWSNAKE);
 }
 
 const calcScrollPercent = () => {
@@ -28,7 +28,7 @@ function pageScroll() {
 
 //JUMP TO TOP 
 function jumpScroll() {
-    window.scroll(0,0); // horizontal and vertical scroll targets
+    window.scroll(0,0); 
 }
 
 //STOP SCROLLING DOWN (ONLY)
