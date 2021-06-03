@@ -1,5 +1,16 @@
 /* ALLGEMEIN   */
 
+
+    :root{
+      --fontFamily:'simplonItalic';
+      --fontButton:'Skyline';
+      --fontMenu:'brr' ;
+      --fontSimplon:'simplonMedium';
+    }
+@font-face {
+  font-family: 'brr';
+  src: url(../../css/img/BRRREDU-Medium.otf);
+}
   @font-face {
       font-family: Skyline;
       src: url(../img/NewParisEDUSkyline-Regular.otf);
@@ -22,24 +33,11 @@
     
 
 
-    main{
-      position: absolute;
-      height: 97vh;
-      width: 90vw;
-      right: 0.7vw;
-     
-
-      background-color:rgb(190, 171, 255);
-    }
 
      a{
         text-decoration: none;
         color:var(--colorContent);
     }
-    a:hover{
-        color: white;
-    }
-
     section{
         width: 100vw;
         height: 100vh;
@@ -136,6 +134,7 @@
         display: flex;
         align-items: center;
         padding-left: 1rem;
+         width: 100%;
         }
 
         /* When you mouse over the navigation links, change their color */
@@ -191,7 +190,7 @@
             margin: 0;
             text-decoration: none;
             color: black;   
-            font-family: 'Skyline';
+            font-family: var(--fontMenu);
             font-size: 500px;
             background-color: white;
             
@@ -211,8 +210,19 @@
 /* ----------------PROCESS ----------------> */
 
         :root{
-            --colorContent: rgb(0, 0, 0);
+            --colorContent: rgb(255, 255, 255);
         }
+
+
+    main{
+      position: absolute;
+      height: 97vh;
+      width: 90vw;
+      right: 0.7vw;
+     
+
+      background-color:rgb(0, 0, 0);
+    }
     .process{
         /* background-color: blanchedalmond; */
         border-bottom: 2px solid var(--colorContent);
@@ -230,7 +240,7 @@
 
     .process2{
         height: 8rem;
-        width: 6rem;
+        width: 8rem;
       
 
     }
@@ -242,9 +252,12 @@
         letter-spacing: 3px;
         margin-bottom: 1.8rem;
         color: black;
+        font-weight: bold;
     }
 
-  
+  .process2:hover a{
+      color: black;
+  }
 
     li {
         padding-top: 2rem;
@@ -254,7 +267,7 @@
         font-family: 'Skyline';
         font-size: 1.5rem;
         height: 10rem;
-        width: 6rem;
+        width: 8rem;
         display: flex;
         justify-content: center;
     
