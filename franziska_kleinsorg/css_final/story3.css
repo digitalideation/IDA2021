@@ -374,26 +374,6 @@ div.dancer1 {
     stroke-width:6px;
 }
 
-.grapes{
-    position: absolute;
-    top: 12000px;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    width: 20rem;
-    height: 20rem;
-    }
-
-#grapesID{
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:7px;
-    fill:transparent;
-    transition: fill 250ms;
-}
-
-
-
     /* Audio */ 
 
 a.trigger {

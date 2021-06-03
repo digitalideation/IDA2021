@@ -1,25 +1,24 @@
 //Multiple Paths
 
 const paths = new Array();
-// paths[0] = 'handleftID';
-// paths[1] = 'handrightID';
-// paths[2] = 'angel1ID';
-// paths[3] = 'angel2ID';
-// paths[4] = 'angel3ID';
-// paths[5] = 'angel4ID';
-// paths[6] = 'lastsupperID';
-// paths[7] = 'treeID';
-// paths[8] = 'grapesID';
-// paths[9] = 'devilID';
-// paths[10] = 'snake1ID';
-// paths[11] = 'snake2ID';
-// paths[12] = 'angel5ID';
-// paths[13] = 'angel6ID';
-// paths[14] = 'lipsrightID';
-// paths[15] = 'applehalfID';
-// paths[16] = 'prayingID';
-// paths[16] = 'windowleftID';
-// paths[16] = 'windowrightID';
+paths[0] = 'handleftID';
+paths[1] = 'handrightID';
+paths[2] = 'angel1ID';
+paths[3] = 'angel2ID';
+paths[4] = 'angel3ID';
+paths[5] = 'angel4ID';
+paths[6] = 'angel5ID';
+paths[7] = 'angel6ID';
+paths[8] = 'snake1ID';
+paths[9] = 'snake2ID';
+paths[10] = 'lastsupperID';
+paths[11] = 'treeID';
+paths[12] = 'applehalfID';
+paths[13] = 'lipsrightID';
+paths[14] = 'devilID';
+paths[15] = 'prayingID';
+paths[16] = 'windowleftID';
+paths[17] = 'windowrightID';
 
 
 
@@ -46,8 +45,9 @@ const drawWhenScroll = () => {
         SVGLength = SVGElement.getTotalLength();
         let draw = SVGLength * scrollpercent;
         let factor = SVGElement.getAttribute('attr-factor');
+        let wait = SVGElement.getAttribute('attr-wait');
 
-        if(SVGLength - 10*draw > 0 ){
+        if(SVGLength - factor*draw > 0 && scrollpercent > wait){
             SVGElement.style.strokeDashoffset = (SVGLength - factor*draw );
         }
     }
@@ -81,22 +81,22 @@ function stopScroll() {
     clearTimeout(scrolldelay);
 }
 
-//AUDIO
-var myAudio = document.getElementById("myAudio");
-        var isPlaying = false;
+// //AUDIO
+// var myAudio = document.getElementById("myAudio");
+//         var isPlaying = false;
 
-        function togglePlay() {
-            isPlaying ? myAudio.pause() : myAudio.play();
-        };
+//         function togglePlay() {
+//             isPlaying ? myAudio.pause() : myAudio.play();
+//         };
 
-        myAudio.onplaying = function () {
-            isPlaying = true;
-            document.body.classList.remove('paused')
-            document.body.classList.add('playing')
-        };
+//         myAudio.onplaying = function () {
+//             isPlaying = true;
+//             document.body.classList.remove('paused')
+//             document.body.classList.add('playing')
+//         };
 
-        myAudio.onpause = function () {
-            isPlaying = false;
-            document.body.classList.remove('playing')
-            document.body.classList.add('paused')
-        };
+//         myAudio.onpause = function () {
+//             isPlaying = false;
+//             document.body.classList.remove('playing')
+//             document.body.classList.add('paused')
+//         };
