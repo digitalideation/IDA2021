@@ -67,6 +67,13 @@ transition: all 0.5s;
 	left: 300px;
 }
 
+
+
+
+
+
+
+
 @font-face {
 	font-family: 'euclid';
 	src: url(../font/EuclidFlexEDU-Medium-WebXL.woff);
@@ -78,18 +85,13 @@ transition: all 0.5s;
   }
 
 
-.allrectangles {
-position: absolute;
-left: 15px;
-top: 4px;
-z-index: -1;
-}
+
 
 
   .rectangle1 {
     position: absolute;
     top: 80px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -104,7 +106,7 @@ z-index: -1;
   .rectangle2 {
     position: absolute;
     top: 190px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -119,7 +121,7 @@ z-index: -1;
   .rectangle3 {
     position: absolute;
     top: 300px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -133,7 +135,7 @@ z-index: -1;
   .rectangle4 {
     position: absolute;
     top: 410px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -147,7 +149,7 @@ z-index: -1;
   .rectangle5 {
     position: absolute;
     top: 520px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -162,7 +164,7 @@ z-index: -1;
   .rectangle6 {
     position: absolute;
     top: 630px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -177,7 +179,7 @@ z-index: -1;
   .rectangle7 {
     position: absolute;
     top: 740px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -192,7 +194,7 @@ z-index: -1;
   .rectangle8 {
     position: absolute;
     top: 850px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -207,7 +209,7 @@ z-index: -1;
   .rectangle9 {
     position: absolute;
     top: 960px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -221,7 +223,7 @@ z-index: -1;
   .rectangle10 {
     position: absolute;
     top: 1070px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -236,7 +238,7 @@ z-index: -1;
   .rectangle11 {
     position: absolute;
     top: 1180px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -251,7 +253,7 @@ z-index: -1;
   .rectangle12 {
     position: absolute;
     top: 1290px;
-    width: 1750px;
+    width: 1765px;
     height: 100px;
     background: black;
     border-radius: 10%
@@ -266,7 +268,7 @@ z-index: -1;
 
   .day1 {
 	  position: absolute;
-	  top: 70px;
+	  top: -15px;
 	  left: 780px;
 	  color: white;
 	  font-size: 90px;
@@ -274,109 +276,106 @@ z-index: -1;
   }
 
 
+.day2 {
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+}
+ 
 
-  .day2 {
-	  position: absolute;
-	  top: 180px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
+.day3 {
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+}
 
+.day4 {
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+}
 
-  .day3 {
-	  position: absolute;
-	  top: 290px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
+.day5 {
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+}
 
-  .day4 {
-	  position: absolute;
-	  top: 400px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
-
-  .day5 {
-	  position: absolute;
-	  top: 510px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
-
-  .day6 {
-	  position: absolute;
-	  top: 620px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
+.day6 {
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+}
 
 
-  .day7 {
-	  position: absolute;
-	  top: 730px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
+.day7{
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+  white-space: nowrap;
+}
 
-  .day8 {
-	  position: absolute;
-	  top: 840px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
+.day8{
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+  white-space: nowrap;
+}
 
-  .day9 {
-	  position: absolute;
-	  top: 950px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
+.day9{
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+  white-space: nowrap;
+}
 
-  .day10 {
-	  position: absolute;
-	  top: 1060px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
-
-
-  .day11 {
-	  position: absolute;
-	  top: 1170px;
-	  left: 780px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
+.day10{
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+  white-space: nowrap;
+}
 
 
-  .day12 {
-	  position: absolute;
-	  left: 780px;
-	  top: 1280px;
-	  color: white;
-	  font-size: 90px;
-	  font-family: 'euclid';
-  }
+.day11{
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+  white-space: nowrap;
+}
+
+
+.day12{
+  position: absolute;
+  top: -15px;
+  left: 780px;
+  font-size: 90px;
+  color: white;
+  white-space: nowrap;
+}
+
+
+  
   
 
 

@@ -1,28 +1,28 @@
 // ----------------------------MOVE ON MUSIC ----------------------------
 
-let images = new Array();
-/* Pfade sind vom HTML File her gesehen! */
-images[0] = "../process/img/1_Random.svg";
-images[1] = "../process/img/2_Random.svg";
+// let images = new Array();
+// /* Pfade sind vom HTML File her gesehen! */
+// images[0] = "../process/img/1_Random.svg";
+// images[1] = "../process/img/2_Random.svg";
 
 
 
-function getRandImg() {
-    //get random number within 0 and amount of entries in array
-    let wuerfel = Math.floor(Math.random() * images.length);
-    let img = document.createElement('img');
-    img.src = images[wuerfel];
+// function getRandImg() {
+//     //get random number within 0 and amount of entries in array
+//     let wuerfel = Math.floor(Math.random() * images.length);
+//     let img = document.createElement('img');
+//     img.src = images[wuerfel];
 
-    // remove old image
-    let oldimages = document.getElementById("head").getElementsByTagName('img');
-    if (oldimages.length > 0) {
-        document.getElementById("head").removeChild(oldimages[0]);
-    }
-    // END remove old images
+//     // remove old image
+//     let oldimages = document.getElementById("head").getElementsByTagName('img');
+//     if (oldimages.length > 0) {
+//         document.getElementById("head").removeChild(oldimages[0]);
+//     }
+//     // END remove old images
 
-    //append new image to element with id platzhalter
-    document.getElementById("head").appendChild(img);
-}
+//     //append new image to element with id platzhalter
+//     document.getElementById("head").appendChild(img);
+// }
 
 
 const audioEle = document.querySelector('audio');
@@ -159,3 +159,4 @@ document.addEventListener('mousemove', function (e) {
 // document.getElementsByTagName('section')[0].addEventListener('click', scrollMe)
 
   // <--------------------- SCROLL TO ---------------------
+

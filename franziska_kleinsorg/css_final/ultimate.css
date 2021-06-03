@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Amiko', sans-serif; 
-    background: #dbc8f3;
+    background: #dbc8f3; 
     height: 100%;
     margin: 0;
 }
@@ -133,10 +133,6 @@ a:hover {
  opacity: 1; 
 }
 
-
-
-
-
 /* About Song */
 
 .button {
@@ -214,9 +210,14 @@ background: linear-gradient(104deg, rgba(255, 130, 224, 0) 0.9%, rgba(255, 130, 
       font-size: 18px;
       border: solid white 2px;    
       padding: 15px;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: #e0b5ea;
       display: inline;
       display: inline-block;
+  }
+
+  .playerCONTAINER {
+    position: sticky;
+    top: 20px;
   }
 
    /* Song Lyrics Annotations */
@@ -264,7 +265,6 @@ display: none;
 }
 
 .annotationCONTAINER {
-  position: -webkit-sticky;
   position: sticky;
   top: 20px;
 }

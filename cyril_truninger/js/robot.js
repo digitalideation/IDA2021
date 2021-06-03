@@ -153,6 +153,9 @@ function setBassSize() {
 setBassSize();
 
 
+function scaleFreq (freqIn) {
+    return(1 / 255 * freqIn);
+}
 
 function scaleFreq (freqIn) {
     return(1 / 255 * freqIn);

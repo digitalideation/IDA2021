@@ -13,9 +13,9 @@
 .col-12 {width: 100%;}
 
 [class*="col-"] {
-  float: left;
-  padding: 15px;
-  border: 1px solid red;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
 }
 
 * {

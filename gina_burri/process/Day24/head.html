@@ -13,6 +13,7 @@
             width: 100vw;
             height: 100vh;
             margin: 0px;
+            overflow: hidden;
             /* cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots, cursive' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>EYE</text></svg>") 16 0, auto; */
 
             
@@ -25,6 +26,7 @@
             overflow: hidden;
             position: relative;
             margin: 0px;
+            z-index: -2;
 
         }
         .video.z {
@@ -86,7 +88,6 @@
             position: absolute;
             top: 50vh;
             right: 0;
-            z-index: 3;
         }
 
         .video.g {
@@ -95,13 +96,13 @@
             position: absolute;
             right: 130px;
             top: 100px;
-            z-index: 0;
             /* border: 2px solid rgb(226, 214, 43); */
 
 
         }
         .video{
-            cursor: pointer;
+            cursor: url("../../images/soundon.svg") 64 64, auto;       
+            z-index: 2;
         }
 
        
@@ -128,54 +129,53 @@
 
      }
 
-     .pause {
-            width: 0; 
-        height: 0; 
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-left: 10px solid rgb(121, 187, 101);
-        cursor: pointer;
-        z-index: 8;
-        }
+        .pause {
+                width: 0; 
+            height: 0; 
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid rgb(121, 187, 101);
+            cursor: pointer;
+            z-index: 8;
+            }
 
         .left {
             position: absolute;
             left: 0px;
-            top: 0;
             width:33.3vw;
             height: 100vh;
-			z-index: -1;
-            border: 3px solid rgb(0, 255, 128);
-			background-color: teal;
-            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots, cursive' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>EYE</text></svg>") 16 0, auto;
+			z-index: 1;
+            /* border: 3px solid rgb(0, 255, 128); */
+			/* background-color: teal; */
+            cursor: url("../../images/heart.svg") 64 64, auto;
+
 		}
         
 
         .middle {
             position: absolute;
-            top: 0;
             left: 33.3vw;
             width:33.3vw;
             height: 100vh;
-            z-index: -1;
-			background-color: rgb(128, 0, 0);
+            z-index: 1;
+			/* background-color: rgb(128, 0, 0); */
             /* border: 3px solid rgb(0, 38, 255); */
-            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEART</text></svg>") 16 0, auto;}
-        
+            cursor: url("../../images/head.svg") 64 64, auto;}        
 
         .right {
             position: absolute;
-            top: 0;
             right: 0px;
             width:33.3vw;
             height: 100vh;
-            z-index: -1;
-			background-color: blueviolet;
+            z-index: 1;
+			/* background-color: blueviolet; */
 			/* opacity: 0; */
             /* border: 3px solid red; */
             /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='red'>Eye</text></svg>") 16 0, auto; */
-            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEAD</text></svg>") 16 0, auto;
-			}
+            /* cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEAD</text></svg>") 64 64, auto; */
+            cursor: url("../../images/mouth.svg") 64 64, auto;}        
+
+            
     </style>
 </head>
 <body>
@@ -187,39 +187,39 @@
     <video controls loop class="video b" width="560" height="315"><source src="../../images/110::143.mp4" type="video/mp4"></video> -->
     <!-- <video loop class="video c" width="1000" height="500" control="false"><source src="../../images/110::143.mp4" type="video/mp4"></video> -->
    
-    <div class="left"></div>
-    <div class="middle"></div>
-    <div class="right"></div> 
+    <div class="left" onclick='window.location="../../robot/three.modulecool/torusWithEqualizer.html"' ></div>
+    <div class="middle" onclick='window.location="#"'></div>
+    <div class="right" onclick='window.location="#"'></div> 
    
-    <div class="display">
-    <div style="text-align:center">
-        <video id="video1" onclick="playPause('video1')" class="video a" width="800" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
-    </div> 
+    <!-- <div class="display"> -->
+        <div style="text-align:center">
+            <video id="video1" onclick="playPause('video1')" class="video a" width="800" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+        </div> 
 
-    <div style="text-align:center"> 
-        <video id="video2" onclick="playPause('video2')" class="video b" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
-    </div>
+        <div style="text-align:center"> 
+            <video id="video2" onclick="playPause('video2')" class="video b" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+        </div>
 
-    <div style="text-align:center">
-        <video id="video3" onclick="playPause('video3')" class="video c" width="300" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
-    </div>
+        <div style="text-align:center">
+            <video id="video3" onclick="playPause('video3')" class="video c" width="300" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+        </div>
 
-    <div style="text-align:center">
-        <video id="video4" onclick="playPause('video4')" class="video d" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
-    </div>
+        <div style="text-align:center">
+            <video id="video4" onclick="playPause('video4')" class="video d" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+        </div>
 
-    <div style="text-align:center">
-        <video id="video5" onclick="playPause('video5')" class="video e" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
-    </div>
+        <div style="text-align:center">
+            <video id="video5" onclick="playPause('video5')" class="video e" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+        </div>
 
-    <div style="text-align:center">
-        <video id="video6" onclick="playPause('video6')" class="video f" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
-    </div>
+        <div style="text-align:center">
+            <video id="video6" onclick="playPause('video6')" class="video f" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+        </div>
 
-    <div style="text-align:center">
-        <video id="video7" onclick="playPause('video7')" class="video g" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
-    </div>
-</div>
+        <div style="text-align:center">
+            <video id="video7" onclick="playPause('video7')" class="video g" width="700" loop><source src="../../images/110::143.mp4" type="video/mp4"></video>
+        </div>
+    <!-- </div> -->
 
 <script> 
     function playPause(videoID) { 

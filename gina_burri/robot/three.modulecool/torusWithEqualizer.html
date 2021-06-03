@@ -50,8 +50,8 @@ div#player {
             /* border: 3px solid rgb(0, 255, 128);
 			background-color: teal; */
 			opacity: 0;
-            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family= 'Zen Dots, cursive' font-weight='normal' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>EYE</text></svg>") 16 0, auto;
-		}
+            cursor: url("../../images/eye.svg") 64 64, auto;}        
+		
         
 
         .middle {
@@ -64,9 +64,8 @@ div#player {
 			opacity: 0;
 			/* background-color: rgb(128, 0, 0); */
             /* border: 3px solid rgb(0, 38, 255); */
-			cursor: auto;
-			cursor: url('../../images/favicon.svg'), auto;	
-			/* cursor: url('../../images/favicon2.svg'), auto;	 */
+			cursor: url("../../images/heart.svg") 64 64, auto;
+
 			}      
 
         .right {
@@ -79,9 +78,10 @@ div#player {
 			/* background-color: blueviolet; */
 			opacity: 0;
             /* border: 3px solid red; */
-            /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='red'>Eye</text></svg>") 16 0, auto; */
-            cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEAD</text></svg>") 16 0, auto;
-			}
+			cursor: url("../../images/head.svg") 64 64, auto;}        
+
+		
+			
 
 		#threejs-canvas-container{
 			z-index: -1;
@@ -100,6 +100,8 @@ div#player {
 			/* background-color: transparent; */
 			/* background-color: blueviolet; */
 			z-index: 10;
+			cursor: url("../../images/soundon.svg") 64 64, auto;       
+
 
 		
 
@@ -117,6 +119,8 @@ div#player {
 			width: 200px;
   			height: 200px;
 			  opacity: 0;
+			  cursor: url("../../images/soundon.svg") 64 64, auto;       
+
             /* background-color: blueviolet; */
 			/* background-color: transparent; */
 
@@ -125,6 +129,8 @@ div#player {
 		#threejs-canvas-container {
 			z-index: 3;
 		}
+
+		.st0{fill:#FF0000;}
 
         
 	</style>
@@ -147,10 +153,17 @@ div#player {
         <canvas class="grafik" id="canvas" ></canvas>
     </div>
 
+
+
+
 <!-- mouse -->
 	<div class="left"></div>
     <div class="middle"></div>
     <div class="right"></div> 
+
+	<div class="left" onclick='window.location="../../process/Day24/eye2.html"' ></div>
+    <div class="middle" onclick='window.location="#"'></div>
+    <div class="right" onclick='window.location="../../process/Day24/head.html"'></div> 
 
 
 <!-- music -->
