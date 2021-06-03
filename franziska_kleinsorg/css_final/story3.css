@@ -74,7 +74,7 @@ div.dancer1 {
 
 .handleft {
     position: absolute;
-    top: 700px;
+    top: 500px;
     left: 25%;
     transform: translate(-50%, -50%);
     width: 45vw;
@@ -91,7 +91,7 @@ div.dancer1 {
 
 .handright {
     position: absolute;
-    top: 600px;
+    top: 400px;
     left: 75%;
     transform: translate(-50%, -50%);
     width: 45vw;
@@ -144,11 +144,11 @@ div.dancer1 {
 
 .angel3 {
     position: absolute;
-    top: 800px;
-    left: 10%;
+    top: 1325px;
+    left: 70%;
     width: 20vw;
     height: auto;
-    transform: rotate(-15deg);
+    transform: rotate(25deg);
 }
 
 #angel3ID {
@@ -162,11 +162,11 @@ div.dancer1 {
 
 .angel4 {
     position: absolute;
-    top: 1050px;
-    left: 20%;
+    top: 800px;
+    left: 10%;
     width: 20vw;
     height: auto;
-    transform: rotate(-25deg);
+    transform: rotate(-15deg) scaleX(-1);
 }
 
 #angel4ID {
@@ -178,13 +178,47 @@ div.dancer1 {
     transition: fill 250ms;
 }
 
+.angel5 {
+    position: absolute;
+    top: 1050px;
+    left: 20%;
+    width: 20vw;
+    height: auto;
+    transform: rotate(-25deg) scaleX(-1);
+}
+
+#angel5ID {
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:10px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+.angel6 {
+    position: absolute;
+    top: 1325px;
+    left: 10%;
+    width: 20vw;
+    height: auto;
+    transform: rotate(-15deg) scaleX(-1);
+}
+
+#angel6ID {
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:10px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+
 .snake1 {
     position: absolute;
-    top: 1650px;
+    top: 1800px;
     left: 20%;
-    width: 50vh;
+    width: 20vw;
     height: auto;
-    transform: rotate(90deg);
 }
 
 #snake1ID {
@@ -198,11 +232,11 @@ div.dancer1 {
 
 .snake2 {
     position: absolute;
-    top: 1650px;
-    left: 53%;
-    width: 50vh;
+    top: 1800px;
+    left: 60%;
+    width: 20vw;
     height: auto;
-    transform: rotate(90deg) scale(-1);
+    transform: scale(-1);
 }
 
 #snake2ID {
@@ -216,7 +250,7 @@ div.dancer1 {
 
 .lastsupper {
     position: absolute;
-    top: 2550px;
+    top: 2475px;
     left: 10%;
     width: 85vw;
     height: auto;
@@ -229,6 +263,115 @@ div.dancer1 {
     stroke-width:5px;
     fill:transparent;
     transition: fill 250ms;
+}
+
+.applehalf {
+    position: absolute;
+    top: 3295px;
+    left: 40%;
+    width: 20vw;
+    }
+
+#applehalfID{
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:7px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+
+.lipsright {
+    position: absolute;
+    top: 3250px;
+    left: 70%;
+    width: 20vw;
+    }
+
+#lipsrightID{
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:7px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+
+.tree {
+    position: absolute;
+    top: 3100px;
+    left: 5%;
+    width: 35vw;
+    }
+
+#treeID{
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:7px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+
+.devil {
+    position: absolute;
+    top: 4000px;
+    left: 10%;
+    width: 30vw;
+    }
+
+#devilID{
+    fill:transparent;
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:6px;
+}
+
+.praying {
+    position: absolute;
+    top: 4500px;
+    left: 65%;
+    width: 27vw;
+    }
+
+#prayingID{
+    fill:transparent;
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:6px;
+}
+
+.windowleft {
+    position: absolute;
+    top: 5300px;
+    left: 5%;
+    width: 30vw;
+    transform: scaleX(-1);
+    }
+
+#windowleftID{
+    fill:transparent;
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:6px;
+}
+
+.windowright {
+    position: absolute;
+    top: 5300px;
+    left: 65%;
+    width: 30vw;
+    }
+
+#windowrightID{
+    fill:transparent;
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:6px;
 }
 
 .grapes{
@@ -250,40 +393,6 @@ div.dancer1 {
 }
 
 
-.tree {
-    position: absolute;
-    top: 14000px;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 30rem;
-    height: 30rem;
-    }
-
-#treeID{
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:7px;
-    fill:transparent;
-    transition: fill 250ms;
-}
-
-.devil {
-    position: absolute;
-    top: 14000px;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    width: 30rem;
-    height: 30rem;
-    }
-
-#devilID{
-    fill:transparent;
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:6px;
-}
 
     /* Audio */ 
 
