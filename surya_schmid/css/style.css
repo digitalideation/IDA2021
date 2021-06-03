@@ -1,34 +1,142 @@
+ /* -----------------------  ALLGEMEIN -----------------------> */
 
-/* ----------------------- ALLGEMEIN ----------------------->*/
+        *{
+            box-sizing: border-box;
+            margin: 0;
+             padding: 0;
+        }
+        @font-face {
+            font-family:'brr' ;
+            src: url(img/BRRREDU-Medium.otf);
+        }
+        @font-face {
+            font-family: 'Skyline';
+            src: url(NewParisEDUSkyline-Regular.otf);
+        }
 
-    @font-face {
-      font-family: 'Skyline';
-      src: url(../process/img/NewParisEDUSkyline-Regular.otf);
-    }
+        body{
+            margin:0;
+            width: 100vw;
+            height: 200vh;
+            overflow-x: hidden;
+            display: block;
+            mix-blend-mode: difference;
+        }
 
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        html{
+        scroll-behavior: smooth;
+        }
 
-    body{
-      width: 100vw;
-      height: 100vh;
-      overflow-x: hidden;
-      display: block;
-      mix-blend-mode: difference;
-    }
-    div{
-      z-index: 1;
-    }
+       
+/* -----------------------  ALLGEMEIN -----------------------> */
 
+
+/* -----------------------  LANDING PAGE -----------------------> */
+    .landingPage{
+          width: 100vw;
+          height: 100vh;
+          background-color: rgb(255, 255, 255);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      h1{
+          font-family: 'Skyline';
+          font-size: 300px;
+          color: rgb(255, 255, 255);
+          letter-spacing: 5rem;
+          text-align: center;
+          width: 100vw;
+          background-color: rgb(0, 0, 0);
+          padding-left: 1.5rem;
+
+  
+      }
+
+      p{
+          position: absolute;
+          color: rgb(0, 0, 0);
+           font-family: 'Skyline';
+           font-size: 20px;
+           top: 85vh;
+      }
+/* -----------------------  LANDING PAGE -----------------------> */
+
+/* -----------------------  MENU - CONTENT -----------------------> */
+
+        a {
+        display: block;
+        text-decoration: none;
+        }
+
+        nav{
+           
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            margin: 0; padding: 0;
+            mix-blend-mode: normal;
+        }
+            .loop-holder {
+            width: 99.2vw;
+            height: 25vh;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            border: black solid 5px;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 2rem;
+                background-color: white;
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+            }
+
+            .loop-holder__text {
+                animation: textLoop 15s linear reverse infinite;
+                font-size: 8vw;
+                font-family: 'brr';
+                padding-right: .35em;
+            }
+
+            /* .loop-holder:hover  .loop-holder__text{
+                animation: freeze;
+                color: white;
+                border: 0px;
+
+                color: rgb(0, 0, 0);
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: rgb(0, 0, 0);
+            } */
+
+             .loop-holder:hover  .loop-holder__text{
+                animation: textLoop 15s linear infinite;
     
-    html{
-      scroll-behavior: smooth;
-    }
-/* <----------------------- ALLGEMEIN ----------------------*/
-    
+                color: rgb(0, 0, 0);
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: rgb(255, 255, 255);
+            }
+
+            .loop-holder:hover{
+                background-color: black;
+            }
+
+
+        @keyframes textLoop {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0)
+            }
+            100% {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0)
+            }
+        }
+
+/* -----------------------  MENU - CONTENT -----------------------> */
+
 /* ----------------------- CURSOR -----------------------> */
         #cursor{
             position: fixed;
@@ -81,155 +189,3 @@
             mix-blend-mode: difference;
         }
 /* <----------------------- CURSOR ----------------------- */
-
-/* <----------------------- LANDING PAGE ----------------------- */
-
-        .landingPage{
-          width: 100vw;
-          height: 100vh;
-          background-color: rgb(160, 196, 255);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-         
-      }
-
-      h1{
-          font-family: 'Skyline';
-          font-size: 300px;
-          color: rgb(255, 255, 255);
-  
-      }
-  
-/* <----------------------- LANDING PAGE ----------------------- */
-/*  ----------------------- NAVIGATION  ----------------------->*/
-
-  a{
-      text-decoration: none;
-      color: black;
-      font-family: 'Skyline';
-      font-size: 7rem;
-      z-index: 2;
-      
-    }
-
-      nav{
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-      }
-
-      .nav{
-        box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left:1rem;
-        background-color: white;
-      }
-
-      
-
-      .homeDiv{
-        position: absolute;
-        width: 60vw;
-        height: 30vh;
-        
-        border-bottom: black solid 5px;
-
-        z-index: 1;
-      }
-
-
-      /* .homeDiv:hover{
-        height: 50vh;
-        transition: ease-in-out 0.5s;
-      }
-     */
-
-      .songDiv{
-        position: absolute;
-        width: 60vw;
-        height: 70vh;
-        bottom: 0;
-        left: 0;
-        background: var(--backgroundStyle);
-      }
-
-    
-      .processDiv{
-        position: absolute;
-        width: 40vw;
-        height: 30vh;
-        top: 0;
-        right: 0;
-       z-index: 2;
-        border-bottom: black solid 5px;
-        border-left:black solid 5px ;
-      }
-/* 
-      .processDiv:hover{
-        width: 60vw;
-        transition: ease-in-out 0.5s;
-      } */
-      .robotDiv{
-        position: absolute;
-        width: 40vw;
-        height: 70vh;
-        right: 0;
-        bottom: 0;
-        border-left:black solid 5px ;
-      }
-/* 
-      .robotDiv:hover{
-         width: 60vw;
-        transition: ease-in-out 0.5s;
-        z-index:3;
-      } */
-
-  /*HOVER NAVIGATION */
-   .nav {
-    
-    padding: 15px 30px;
-    
-    background: white;
-    color: black;
-
-    mix-blend-mode: normal;
-    overflow:hidden;
-    
-  }
-
-  .nav:before {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 100%; height: 100%;
-    background: white;
-    mix-blend-mode: difference;
-    transform-origin:0 0 ;
-    transform:translateX(-100%);
-    transition: transform .5s;
-    z-index: 3;
-  }
-  .nav:hover:before {
-    transform: translateX(-0%);
-  }
-
-  .nav:after{
-    content: '';
-    display:block;
-    top: 0;
-    left:0;
-    bottom:0;
-    right:0;
-    position: absolute;
-    z-index: 100;
-    background: #000000;
-    mix-blend-mode: screen;
-  }
-
-  
-/*  <----------------------- NAVIGATION  -----------------------*/
