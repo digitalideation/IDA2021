@@ -215,18 +215,25 @@ function goLive() {
 
 function musicTimer() {
     let background = document.getElementById('body');
+    let videoElement = document.getElementById('videoElement');
 
     function chorusOn () {
         background.classList.add('sky');
+        videoElement.classList.add('sky-color');
         document.documentElement.style.setProperty('--barColorL', 'var(--orange)');
         document.documentElement.style.setProperty('--barColorR', 'var(--orange)');
     };
 
     function chorusOff () {
         background.classList.remove('sky');
+        videoElement.classList.remove('sky-color');
         document.documentElement.style.setProperty('--barColorL', 'var(--red)');
         document.documentElement.style.setProperty('--barColorR', 'var(--blue)')
     };
+
+    // Test Timeout
+    // setTimeout(chorusOn, 5000);
+    // setTimeout(chorusOff, 10000);
 
     setTimeout(chorusOn, 65000);
     setTimeout(chorusOff, 95000);

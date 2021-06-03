@@ -15,7 +15,7 @@
 /* Text */
 
 body {
-    transition: all 2s ease-in-out;
+    transition: all 3s ease-in-out;
 }
 
 #videoElement {
@@ -151,6 +151,8 @@ canvas {
     filter: url(../svg/filters.svg#video-color);
 }
 
+
+
 /* 
 .overlay {
     position: absolute;
@@ -162,4 +164,3 @@ canvas {
     z-index: 4;
     background-color: blue;
 } */
-
