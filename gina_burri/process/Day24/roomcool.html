@@ -63,6 +63,8 @@
   opacity: 1;
 	perspective: 800px;
 }
+  
+
 .room:after{
   /* z-index: -100;
   content: "";
@@ -84,7 +86,8 @@
 .roof {
     background-size: 100%;
     background: linear-gradient(rgb(234, 0, 255), rgb(4, 0, 255));
-    }
+    cursor: url("../../images/blau.svg") 64 64, auto;}        
+    
     .roof::after {
     content: '';
     position: fixed;
@@ -95,7 +98,8 @@
     background: linear-gradient(180deg, rgb(4, 0, 255), rgb(234, 0, 255));
     opacity: 0;
     animation: roof 30s infinite alternate;
-  }
+    cursor: url("../../images/blau.svg") 64 64, auto;}        
+  
   
   @keyframes roof {
       0% {
@@ -117,7 +121,8 @@
 	transform: rotateX(-90deg);
 	transform-origin: top;
   z-index: -1;
-}
+  cursor: url("../../images/blau.svg") 64 64, auto;}        
+
 
 /* floor */
 
@@ -126,8 +131,10 @@
 	top: 100%;
   background: linear-gradient(#ea00ff, #0400ff);
   animation: grad 3s;
+  cursor: url("../../images/blau.svg") 64 64, auto;}        
+
   
-}
+
 
 .floor::after {
   content: '';
@@ -139,7 +146,9 @@
   background: linear-gradient(180deg, rgb(4, 0, 255), rgb(234, 0, 255));
   opacity: 0;
   animation: floor 30s infinite alternate;
-}
+  cursor: url("../../images/blau.svg") 64 64, auto;}        
+
+
 
 @keyframes floor {
     0% {
@@ -157,9 +166,11 @@
 	width: 400px;
 	transform-origin: left;
   outline: 1px solid transparent;
+  cursor: url("../../images/blau.svg") 64 64, auto;}        
+
 
   
-}
+
 
 /* rigth */
 
@@ -169,7 +180,9 @@
 	left: 100%;
 	transform: rotateY(90deg);
   background: linear-gradient(90deg, rgb(234, 0, 255), rgb(4, 0, 255));
-}
+  cursor: url("../../images/blau.svg") 64 64, auto;}        
+
+
 
 .Right::after {
     content: '';
@@ -181,7 +194,9 @@
     background: linear-gradient(90deg, rgb(4, 0, 255), rgb(234, 0, 255));
     opacity: 0;
     animation: right 30s infinite alternate;
-  }
+    cursor: url("../../images/blau.svg") 64 64, auto;}        
+
+  
   
   @keyframes right {
       0% {
@@ -200,7 +215,9 @@
   left: 0%;
 	transform: rotateY(90deg);
   background: linear-gradient(90deg, rgb(234, 0, 255), rgb(4, 0, 255));
-}
+  cursor: url("../../images/blau.svg") 64 64, auto;}        
+
+
 
 .Left::after {
     
@@ -213,7 +230,9 @@
     background: linear-gradient(90deg, rgb(4, 0, 255), rgb(234, 0, 255));
     opacity: 0;
     animation: left 30s infinite alternate;
-  }
+    cursor: url("../../images/blau.svg") 64 64, auto;}        
+
+  
   
   @keyframes left {
       0% {
@@ -245,7 +264,9 @@
   z-index: -5;
 
   animation: gradientback 30s infinite alternate;
-}
+  cursor: url("../../images/blau.svg") 64 64, auto;}        
+
+
 
 @keyframes gradientback {
 0% {
@@ -271,12 +292,16 @@ background-color: blue;
         z-index: 0;
         color: rgb(234, 0, 255);
         text-shadow: 1px 1px 2px rgb(234, 0, 255), 0 0 25px rgb(234, 0, 255), 0 0 5px rgb(234, 0, 255);
-}
+        cursor: url("../../images/menue.svg") 64 64, auto;}        
+
+
 
 .einzeln {
     opacity: 0%;
+    cursor: url("../../images/menue.svg") 64 64, auto;}        
 
-}
+
+
 
 .einzeln:hover:after { 
     /* transition-duration: 100s; */
@@ -301,7 +326,7 @@ text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 25px rgb(255, 0, 0), 0 0 5px rgb(25
 }
 
 .typo:nth-of-type(7n) .einzeln {
-    color: rgb(251, 255, 0);
+    color: #fbff00;
     text-shadow: 1px 1px 2px rgb(251, 255, 0), 0 0 25px rgb(251, 255, 0), 0 0 5px rgb(251, 255, 0);
 }
 
@@ -311,8 +336,8 @@ text-shadow: 1px 1px 2px rgb(255, 0, 0), 0 0 25px rgb(255, 0, 0), 0 0 5px rgb(25
 }
 
 .typo:nth-of-type(10n) .einzeln {
-    color: rgb(0, 225, 255);
-    text-shadow: 1px 1px 2px rgb(0, 225, 255), 0 0 25px rgb(0, 225, 255), 0 0 5px rgb(255, 0, 0);
+      color: rgb(4, 0, 255);
+    text-shadow: 1px 1px 2px rgb(4, 0, 255), 0 0 25px rgb(4, 0, 255), 0 0 5px rgb(4, 0, 255);
 }
 a {
       font-family: 'Zen Dots', cursive;
@@ -349,9 +374,10 @@ a {
       padding: 6px;
       min-width: 15vw;
       line-height: 120%;
+    }
 
       /* The default line-height is about 110% to 120% for the majority of the browsers. The line-height property sets the leading of lines of a text. If the line-height value is greater than the font-size value of an element, the difference will be the leading of text.*/
-    }
+    
 
     .exp {
       margin: 0;
@@ -363,8 +389,10 @@ a {
       left: 0px;
       right: 0px;
       top: 0;
+      cursor: url("../../images/menue.svg") 64 64, auto;}        
 
-    }
+
+    
     </style>
 </head>
 <body>
@@ -404,86 +432,86 @@ a {
 
                 <div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>                
                 </div>
 
 
                 <div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>             
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                 </div>
 
                 <div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>               
                 </div>
 
 
                 <div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>                
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                 </div>
 
                 <div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="eye.html"> <span class="einzeln">Eye</span></a></div>
                 </div>
 
                 <div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Head</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
-                  <div class="typo"><a href="day1.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="head.html"> <span class="einzeln">Head</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
+                  <div class="typo"><a href="../../robot/three.modulecool/torusWithEqualizer.html"> <span class="einzeln">Heart</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Eye</span></a></div>
                   <div class="typo"><a href="day1.html"> <span class="einzeln">Mouth</span></a></div>
                 </div>
