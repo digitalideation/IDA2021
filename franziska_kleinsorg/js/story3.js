@@ -1,18 +1,25 @@
 //Multiple Paths
 
 const paths = new Array();
-paths[0] = 'handleftID';
-paths[1] = 'handrightID';
-paths[2] = 'angel1ID';
-paths[3] = 'angel2ID';
-paths[4] = 'angel3ID';
-paths[5] = 'angel4ID';
-paths[6] = 'lastsupperID';
-paths[7] = 'treeID';
-paths[8] = 'grapesID';
-paths[9] = 'devilID';
-paths[10] = 'snake1ID';
-paths[11] = 'snake2ID';
+// paths[0] = 'handleftID';
+// paths[1] = 'handrightID';
+// paths[2] = 'angel1ID';
+// paths[3] = 'angel2ID';
+// paths[4] = 'angel3ID';
+// paths[5] = 'angel4ID';
+// paths[6] = 'lastsupperID';
+// paths[7] = 'treeID';
+// paths[8] = 'grapesID';
+// paths[9] = 'devilID';
+// paths[10] = 'snake1ID';
+// paths[11] = 'snake2ID';
+// paths[12] = 'angel5ID';
+// paths[13] = 'angel6ID';
+// paths[14] = 'lipsrightID';
+// paths[15] = 'applehalfID';
+// paths[16] = 'prayingID';
+// paths[16] = 'windowleftID';
+// paths[16] = 'windowrightID';
 
 
 
