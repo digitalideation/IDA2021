@@ -1,10 +1,18 @@
 //Multiple Paths
 
 const paths = new Array();
-paths[0] = 'snakeID';
-paths[1] = 'treeID';
-paths[2] = 'handleftID';
-paths[3] = 'handrightID';
+paths[0] = 'handleftID';
+paths[1] = 'handrightID';
+paths[2] = 'angel1ID';
+paths[3] = 'angel2ID';
+paths[4] = 'angel3ID';
+paths[5] = 'angel4ID';
+paths[6] = 'lastsupperID';
+paths[7] = 'treeID';
+paths[8] = 'grapesID';
+paths[9] = 'devilID';
+paths[10] = 'snake1ID';
+paths[11] = 'snake2ID';
 
 
 
@@ -52,8 +60,8 @@ window.addEventListener('scroll', drawWhenScroll);
 
 //AUTOMATIC SCROLLING
 function pageScroll() {
-    window.scrollBy(0,50); 
-    scrolldelay = setTimeout('pageScroll()',200); 
+    window.scrollBy(0,5.725); 
+    scrolldelay = setTimeout('pageScroll()',50); 
 }
 
 //JUMP TO TOP 
