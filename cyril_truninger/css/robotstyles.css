@@ -1,11 +1,11 @@
 /* Screen Definition */
 
 :root {
-    --screen-widht: calc(var(--basssize) + 80vh);
-    --screen-height: calc(var(--basssize) + 60vh);
-    --max-height: 80vh;
-    --glow-width: 79.5vh;
-    --glow-height: 59.5vh;
+    --screen-widht: calc(var(--basssize) + 100vh);
+    --screen-height: calc(var(--basssize) + 75vh);
+    --max-height: 100vh;
+    --glow-width: calc(var(--basssize) + 99vh);
+    --glow-height: calc(var(--basssize) + 74.5vh);
     --screen-radius: 2rem;
     box-sizing: border-box;
 }
@@ -150,8 +150,6 @@ canvas {
 .video-filter {
     filter: url(../svg/filters.svg#video-color);
 }
-
-
 
 /* 
 .overlay {
