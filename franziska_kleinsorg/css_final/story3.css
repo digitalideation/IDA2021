@@ -72,12 +72,46 @@ div.dancer1 {
     position: relative;
 }
 
+.handleft {
+    position: absolute;
+    top: 700px;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 45vw;
+    height: auto;
+}
+
+#handleftID {
+    fill:transparent;
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:6px;
+}
+
+.handright {
+    position: absolute;
+    top: 600px;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 45vw;
+    height: auto;
+}
+
+#handrightID{
+    fill:transparent;
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:6px;
+}
+
 .angel1 {
-    position: fixed;
-    top: 200px;
+    position: absolute;
+    top: 1050px;
     left: 60%;
-    width: 18rem;
-    height: 18rem;
+    width: 20vw;
+    height: auto;
     transform: rotate(15deg);
 }
 
@@ -91,11 +125,11 @@ div.dancer1 {
 }
 
 .angel2 {
-    position: fixed;
-    top: 100px;
-    left: 80%;
-    width: 18rem;
-    height: 18rem;
+    position: absolute;
+    top: 800px;
+    left: 70%;
+    width: 20vw;
+    height: auto;
     transform: rotate(25deg);
 }
 
@@ -108,15 +142,16 @@ div.dancer1 {
     transition: fill 250ms;
 }
 
-.snake {
-    position: fixed;
-    top: 750px;
-    left: 60%;
-    width: 10rem;
-    height: 10rem;
+.angel3 {
+    position: absolute;
+    top: 800px;
+    left: 10%;
+    width: 20vw;
+    height: auto;
+    transform: rotate(-15deg);
 }
 
-#snakeID {
+#angel3ID {
     stroke:#fff;
     stroke-linecap:round;
     stroke-linejoin:round;
@@ -125,9 +160,80 @@ div.dancer1 {
     transition: fill 250ms;
 }
 
+.angel4 {
+    position: absolute;
+    top: 1050px;
+    left: 20%;
+    width: 20vw;
+    height: auto;
+    transform: rotate(-25deg);
+}
+
+#angel4ID {
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:10px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+
+.snake1 {
+    position: absolute;
+    top: 1650px;
+    left: 20%;
+    width: 50vh;
+    height: auto;
+    transform: rotate(90deg);
+}
+
+#snake1ID {
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:10px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+
+.snake2 {
+    position: absolute;
+    top: 1650px;
+    left: 53%;
+    width: 50vh;
+    height: auto;
+    transform: rotate(90deg) scale(-1);
+}
+
+#snake2ID {
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:10px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+
+.lastsupper {
+    position: absolute;
+    top: 2550px;
+    left: 10%;
+    width: 85vw;
+    height: auto;
+}
+
+#lastsupperID {
+    stroke:#fff;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-width:5px;
+    fill:transparent;
+    transition: fill 250ms;
+}
+
 .grapes{
-    position: fixed;
-    top: 800px;
+    position: absolute;
+    top: 12000px;
     left: 30%;
     transform: translate(-50%, -50%);
     width: 20rem;
@@ -145,8 +251,8 @@ div.dancer1 {
 
 
 .tree {
-    position: fixed;
-    top: 680px;
+    position: absolute;
+    top: 14000px;
     left: 75%;
     transform: translate(-50%, -50%);
     width: 30rem;
@@ -163,8 +269,8 @@ div.dancer1 {
 }
 
 .devil {
-    position: fixed;
-    top: 400px;
+    position: absolute;
+    top: 14000px;
     left: 20%;
     transform: translate(-50%, -50%);
     width: 30rem;
@@ -179,39 +285,6 @@ div.dancer1 {
     stroke-width:6px;
 }
 
-.handleft {
-    position: absolute;
-    top: 1200px;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    width: 45vw;
-    height: auto;
-}
-
-#handleftID {
-    fill:transparent;
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:6px;
-}
-
-.handright {
-    position: absolute;
-    top: 1100px;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 45vw;
-    height: auto;
-}
-
-#handrightID{
-    fill:transparent;
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:6px;
-}
     /* Audio */ 
 
 a.trigger {
