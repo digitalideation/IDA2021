@@ -53,3 +53,37 @@ div{
     background-color: yellow;
 }
 
+#MouseEvents { 
+    width: 200px; 
+    height: 200px;
+    position: absolute;
+    top: 350px;
+    right: 380px;
+    border: 1px solid #c2c2c2; 
+    margin: 10px; 
+    padding: 12px; 
+    font-size: 0.8em; 
+}
+
+.lyric{
+    
+    font-size: 50px;
+    
+}
+#lyric1, #lyric2, #lyric3, #lyric4, #lyric5, #lyric6, #lyric7, #lyric8{
+    color: black;
+}
+
+#log { 
+    position: absolute; 
+    right: 0px; 
+    top: 55px;
+    bottom: 2px; 
+    height: auto; 
+    width: 1000px;
+    height: 900px;
+    border: 1px solid blue; 
+    padding: 1px; 
+    font-size: 0.9em; 
+}
+
