@@ -1,40 +1,290 @@
-
-nav{
-    border-bottom: black solid 2px;
-    padding-bottom: 10px;
+/*background*/
+body{
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    background-image: url(../img/stars2.png);
+    overflow: hidden;
 }
-ul{
+.Stars{
+    height: 100vh;
+    width: 100vh;
+    background-image: url(../img/StarsRobot.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*border: solid white;*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: rotateStars 5s linear infinite;
+    z-index: -1;
+}
+/*Sun{
+    height: 50vh;
+    width: 25vw;
+    background-image: url(../img/RobotSun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0.7;
+    animation: shineSun 1s ease infinite;
+    z-index: -1;
+}*/
+
+.ring1{
+    /*border: solid white;*/
+    height: 80vh;
+    width: 80vh;
+    background-image: url(../img/ring1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: rotateFull 3s linear infinite;
+    z-index: -1;
+ }
+ .ring2{
+    /*border: solid white;*/
+    height:110vh;
+    width: 110vh;
+    background-image: url(../img/ring2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: rotateFull 5s linear infinite;
+    z-index: -1;
+ }
+ .ring3{
+    /*border: solid white;*/
+    height:150vh;
+    width: 150vh;
+    background-image: url(../img/ring3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: rotateFull 8s linear infinite;
+    z-index: -1;
+ }
+ .ring4{
+    /*border: solid white;*/
+    height:200vh;
+    width: 200vh;
+    background-image: url(../img/ring4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: rotateFull 15s linear infinite;
+    z-index: -1;
+ }
+/*.ring{
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+}
+
+.No1{
+width: 99vh;
+height: 99vh;
+background-image: url(../img/ring1.png);
+animation: rotateFull 3s linear infinite;
+}
+
+.No2{
+height: 99vh;
+width: 60vw;
+background-image: url(../img/ring2.png);
+animation: rotateFull 5s linear infinite;
+    }
+
+/*background*/
+/*Nav Bar*/
+nav{
+    height: 5vh;
+}
+.container{
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    align-items: center;
-    width: fit-content;
-    height: auto;
-    margin: auto;
-    background-color: white;
+    text-align: center;
+    }
+
+.tab{
+    background-color: black;
     padding: 10px 20px;
 }
 
-li {
-    color: black;
+.p {
+    color: white;
     text-decoration: none;
     font-size: 12px;
     margin: auto;
 }
-li.hover{
-    background-color: lightgrey;
+
+#gewaehlt{
+    font-size: 12px;
+    color:black;
+    background-color: white; 
+    padding: 10px 20px;
 }
 
-.head{
-    clip-path: polygon(46% 0%, 20% 22%, 19% 34%, 19% 50%, 12% 69%, 16% 82%, 36% 99%, 48% 99%, 73% 80%, 89% 58%, 84% 44%, 78% 29%, 77% 14%, 60% 2%);
-    background-color: coral;
- width: 200px;
- height: 200px;
+li{
+    display: inline-block;
+    margin: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(102, 179, 179);
+    border: none;
+    padding: 20px 35px;
+    border-radius: 35px;
+    font-size: 12px;
 }
 
-.eye--left{
-    clip-path: polygon(15% 36%, 54% 22%, 85% 53%, 46% 66%);
+a{
+    font-size: 18pt;
+    color: white;
+    text-decoration: none;
+}
+
+li:hover{
     background-color: black;
- width: 100px;
- height: 100px;
- transform:translate(25px,0px)
+}
+
+.tab:hover{
+    background-color: rgb(102, 179, 179);
+}
+/*Nav Bar*/
+/*Robot*/
+.robot{
+    height: 80vh;
+    width: auto;
+    align-items: center;
+    position: relative;
+    /*border: solid white;*/
+    display: flex;
+    justify-content: center;
+    }
+    
+.head{
+    width: 20vw;
+    height: 20vw;
+    background-image: url(../img/RobotHead.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: rotate 3s ease infinite;
+    }
+
+.armLeft{
+    width: 18vw;
+    height: 18vh;
+    background-image: url(../img/RobotArmLeft.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;    
+    margin-top: 22vh;
+    left: 35vw;
+    animation: rotateArm 3s ease infinite;
+}
+.armRight{
+    width: 18vw;
+    height: 18vh;
+    background-image: url(../img/RobotArmRight.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;    
+    margin-top: 12vh;
+    left: 53vw;
+    animation: rotateArmRight 3s ease infinite;
+}
+/*.hand{
+    width: 10vw;
+    height: 10vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;      
+}
+.left{
+    background-image: url(../img/RobotHandLeft.png); 
+    margin-top: 35vh;
+    left: 35vw; 
+}
+
+.right{
+    background-image: url(../img/RobotHandRight.png); 
+    margin-top: 28vh;
+    left: 59vw;
+}*/
+@keyframes rotate {
+    0% {
+     transform: rotate( 0deg );
+    }
+    25% {
+     transform: rotate( 6eg );
+  }
+    75% {
+     transform: rotate(-12deg );
+     }
+    100% {
+     transform: rotate( 0deg );
+}
+}
+
+@keyframes rotateArm {
+    0% {
+      transform: rotate( 0deg );
+    }
+    50% {
+      transform: rotate( 30deg );
+    }
+    100% {
+      transform: rotate( 0deg );
+    }
+    }
+
+    @keyframes rotateArmRight {
+        0% {
+          transform: rotate( 0deg );
+        }
+        50% {
+          transform: rotate( -25deg );
+        }
+        100% {
+          transform: rotate( 0deg );
+        }
+        }
+
+@keyframes shineSun {
+    0% {
+     transform:  scale(1);
+    }
+    50% {
+     transform: scale(1.3);
+     }
+    100% {
+     transform: scale(1);
+}
+}
+
+@keyframes rotateStars {
+    0% {
+     transform: rotate( 0deg ) scale(1);
+    }
+    100% {
+     transform: rotate( 360deg )scale(1);
+}
+}
+
+@keyframes rotateFull {
+    100%{
+        transform: rotate( 360deg ); 
+    }
 }

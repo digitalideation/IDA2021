@@ -2,6 +2,7 @@ body {
   background-color: black;
   --verticalOffset: 0px;
   --horizontalOffset: 0px;
+  overflow-x: hidden;
 }
 section {
   height: 100vh;
@@ -50,7 +51,6 @@ p{
   animation: gradient 11s ease infinite;
 }
 
-
 .stars {
   width: 100%;
   height: 100%;
@@ -82,8 +82,7 @@ p{
   animation: rotate 5s ease infinite;
   position: absolute;
   left: 60%;
-  
-}
+} 
 
 .clouds {
   width: 55vw;
@@ -204,10 +203,18 @@ p{
     text-align: center;  
   }
     
-
+  #youtube{
+    color: white;
+    font-size: 18pt;
+    /*font-family: 'Fjalla One', sans-serif;*/
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    display: block;
+    margin-top: 2%;
+    }
+  
   .buttons2{
     text-align: center;
-    display: block;
     justify-content: center;
     align-items: center;
     transform: translateY(-400px);
@@ -225,7 +232,7 @@ p{
     margin-bottom: 20px;
 }
 a {
-  color: white;
+  color: white; 
   text-decoration: none;
   font-size: 12px;
   margin: auto;
@@ -240,4 +247,8 @@ li:hover{
   color:black;
   background-color: white; 
   padding: 10px 20px;
+}
+
+button:hover{
+  cursor: pointer;
 }
