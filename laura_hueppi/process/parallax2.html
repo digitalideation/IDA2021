@@ -1,128 +1,131 @@
-<!DOCTYPE xml>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDA Modul - Laura Hüppi</title>
-
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/parallax.css">
+  <title>IDA Modul - Laura Hüppi</title>
 </head>
 
-<style>
-
-body {
-
-    background-color: rgb(79, 0, 153);
-    color: white;
-
-}
-
-nav {
-    color: thistle;
-}
-
-p {
-
-    font-size: 80px;
-    color: blanchedalmond;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-.parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 1px;
-    perspective: 1px;
-    font-size: 200%;
-    text-align: center;
-    background-color: black;
-  }
-  
-  .parallax__layer {
-    position: absolute;
-    top: 600;
-    left: 600;
-    right: 0;
-    padding: 100vh 0;
-   
-  }
-  
-  .parallax__layer--1 {
-    transform: translateZ(0);
-    top: 600;
-  }
-  
-  .parallax__layer--2_1 {
-    transform: translateZ(-1px) scale(2);
-    top: 500vw;
-
-  }
-  
-  .parallax__layer--2_2 {
-    transform: translateZ(-3px) scale(2);
-    top: 180vh;
-  }
-  
-  .parallax__layer--3 {
-    transform: translateZ(-2px) scale(3);
-    top: 100vw;
-  }
-  
-  .parallax__layer--4 {
-    transform: translateZ(-4px) scale(4);
-    top: 100vw;
-  }
-  
-  
 
 
-</style>
+
+<nav>
+  <ul>
+    <button class="glow-on-hover"><li><a href="https://ida2021-staging.netlify.app/">HOME</a></li></button>
+    <button class="glow-on-hover"><li><a href="robotworld1.html">ROBOT</a></li></button>
+    <button class="glow-on-hover"><li><a href="process/index1.html">PROCESS</a></li></button> 
+  </div>
+    </li>
+  </ul>
+</nav>
+
+
+
 
 
 <body>
-    
-    <nav>
-        <ul>
-          <li><a href="/process/index1.html">Back</a></li>
-        </ul>
-      </nav>
 
-     
-      <div class="parallax">
- <div>
-          <p>
-              Scroll down!
-          </p>
-      </div>
+  <li class="last">
+    <div>
+        <audio id="myAudio" src="/audio/Inzo - Overthinker.mp4"></audio>
+        <a onClick="togglePlay()" class="trigger">PLAY</a>
+    </div>
+</a></li>
+</ul>
+</nav>
+<div id="denver-parallax">
 
+<div id="parallax" class="parallax">
 
-            <div class="parallax__layer parallax__layer--1">
-                <img src="/img/giphy.gif" id="sky">
-            </div>  
+    <div class="group">
+        <div id="himmel" class="layer">
+            <img src="./img/Kopf1.png" id="sky">
+        </div>
 
-            <div class="parallax__layer parallax__layer--2_1">
-                <img src="/img/Kopf1.png" id="sky">
-            </div>  
+        <div id="berg" class="layer">
+            <img src="./img/Kopf1.png" id="mountain">
+        </div>
 
-            <div class="parallax__layer parallax__layer--2_2">
-                <img src="/img/Kopf1.png" id="sky">
-            </div>  
+        <div id="haus" class="layer">
+            <img src="./img/Kopf1.png" id="house">
+        </div>
 
-            <div class="parallax__layer parallax__layer--3">
-              
-              <img src="/img/Kopf1.png" id="sky">
-            </div>  
+        <div id="rasen" class="layer">
+            <img src="./img/Kopf1.png" id="wiese">
+        </div>
 
-            <div class="parallax__layer parallax__layer--4">
-              
-              <img src="/img/Kopf1.png" id="sky">
-          </div>
-      </div>
+        <div id="blume" class="layer">
+            <img src="./img/Kopf1.png" id="flower">
+        </div>
 
+        <div id="texts" class="layer">
+            <h2 id="text">REALITY?</h2>
+        </div>
+
+        <div id="untertitel" class="layer">
+            <h2 id="text">What's an overthinker?</h2>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="paused">
+<audio id="myAudio" src="/audio/Inzo - Overthinker.mp4"></audio>
+<a onClick="togglePlay()" class="trigger">REAL</a>
+</div>
+
+<section>
+<div data-aos="fade-in" class="box">
+    <p> in progress<br>
+    </p>
+</div>
+</section>
+<section>
+<div data-aos="fade-in" class="box"></div>
+</section>
+<section>
+<div data-aos="fade-in" class="box"></div>
+</section>
+<section>
+<div data-aos="flip-up" class="box"></div>
+</section>
+
+<div class="content">
+<p>
+    <!-- <span>1957</span> <br> -->
+  what is reality?
+</p>
+</div>
+<script>
+var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+
+function togglePlay() {
+    isPlaying ? myAudio.pause() : myAudio.play();
+};
+
+myAudio.onplaying = function () {
+    isPlaying = true;
+    document.body.classList.remove('paused')
+    document.body.classList.add('playing')
+};
+
+myAudio.onpause = function () {
+    isPlaying = false;
+    document.body.classList.remove('playing')
+    document.body.classList.add('paused')
+};
+</script>
+</body>
+
+</html>
 
 </body>
+
 </html>
+
+
 
