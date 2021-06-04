@@ -109,7 +109,7 @@
 
         .s2{
             top:10rem;
-            left: 30rem;
+            left: 25rem;
               color: rgb(0, 0, 0);
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: rgb(255, 255, 255);
@@ -239,8 +239,11 @@
         }
 
 /* -----------------------ERSTE SEKTION----------------------- */
-
-  figure{
+        div .s1,.s2,.s3{
+          width: 100vw;
+        }
+        
+        figure{
             width: 50rem;
             background-size: cover ;
             height: 50rem;
@@ -441,7 +444,6 @@
                 transform: translateZ(-1);
             }
 
-
 /* -----------------------DRITTE SEKTION----------------------- */
 
 /* ---------------- THE OVERLAY - MENU ---------------->  */
@@ -574,7 +576,7 @@
             border-radius: 50%;
             pointer-events: none;
             cursor: none;
-            z-index: 3;
+            z-index: 4;
 
             mix-blend-mode: difference;  
         }
@@ -590,7 +592,7 @@
             border-radius: 50%;
             pointer-events: none;
             cursor: none;
-            z-index: 3;
+            z-index: 4;
 
             mix-blend-mode: difference;  
         }
