@@ -1,223 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day14</title>
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+    <title>Scroll Animation</title>
 
     <style>
+        * {
+    font-family:'skyline';
+}
 
-            body{
-            margin: 0rem;
-            background: radial-gradient(circle at 50% 60%,rgba(149,176,249,1), rgba(149,176,249,0) 50%), radial-gradient(circle at 10% 10%,rgba(114,226,253,1), rgba(114,226,253,0) 50%), radial-gradient(circle at 90% 10%,rgba(184,150,255,1), rgba(184,150,255,0) 50%), radial-gradient(circle at 90% 90%,rgba(86,207,210,1), rgba(86,207,210,0) 50%), radial-gradient(circle at 10% 90%,rgba(168,112,253,1), rgba(168,112,253,0) 50%) ;
-            background-repeat: none;
-            height: 100vh;
-            width: 100%;
-             overflow-x: hidden;
-            
+body{
+        background-color: black;
+        padding-top: 2rem;
+}
 
-        }
+@font-face {
+    font-family: 'skyline';
+    src: url(../process/day16/css/NewParisEDUSkyline-Regular.otf);
+}
 
-      
+article {
+    position: relative;
+    background-color: lightskyblue;
+    top: 0px;
+    left: 0px;
+    min-height: 80vh;
+    border-radius: 5%;
+    margin: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* transition: all 3s ease-in-out 1s; */
+    padding: 2rem;
+    letter-spacing: 5px;
+    border: rgb(0, 0, 0) 0px dotted;
+}
 
-       
-
-        .mouse-cursor-gradient-tracking {
-        position: absolute;
-        top: 0;
-        border: 0px solid tomato;
-        cursor: pointer;
-        outline: none;
-        overflow: hidden;
-        width: 100%;
-        height: 115vh;
-
-        }
-
-        .mouse-cursor-gradient-tracking span {
-        position: relative;
-        }
-
-        .mouse-cursor-gradient-tracking:before {
-        --size: 0;
-        content: '';
-        position: absolute;
-        left: var(--x);
-        top: var(--y);
-        width: var(--size);
-        height: var(--size);
-        background: radial-gradient(circle closest-side, pink, transparent);
-        transform: translate(-50%, -50%);
-        transition: width 0.2s ease, height 0.2s ease;
-        }
-
-        .mouse-cursor-gradient-tracking:hover:before {
-        --size: 200px;
-        }
+article header {
+    font-size: 2rem;
+    transition: all 3s ease-in-out 1s;
+}
 
 
+/*
+Der Trick ist nun, dass was vorher über hover animiert wurde, über die neue Klasse auszulösen
+Statt:
+article:hover {
+    background-color: rgb(189, 202, 130);
+}
+*/
 
-         @font-face {
-            font-family: "Skyline";
-            src: url(img/NewParisEDUSkyline-Regular.otf);
-        }
+article.myclass {
 
-        h2{
-            font-size: 150px;
-            color:  #ffffff;
-            text-transform: uppercase;
-            font-family:"Skyline" ;
-            text-shadow: 10px 10px #000000;
-            padding-left: 5rem;
-            padding-right: 5rem;
+    color: white;
+    animation: letterSpace 5s ;  
+}
+
+@keyframes letterSpace{
+            0%{
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+                background-color: lightskyblue;
+            }
+
+            50%{
+                letter-spacing: 30px;
+                transform: skewX(30deg);
+                padding-left:10rem;
+                 background-color: teal;
+            }
+
+            100%{
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+                background-color: lightskyblue;
+            }
+
+}
+
+article.myclass header {
+    font-size: 3.5rem;
+    animation: letterSp 5s ; 
+}
+
+
+@keyframes letterSp{
+            0%{
+                letter-spacing: 5px;
+            }
+            30%{
+                letter-spacing: 25px;
+                transform: skewX(30deg);
+                padding-left:10rem;
+            }
+
+
+            100%{
+                letter-spacing: 5px;
+                transform: skewX(0deg);
+            }
+
+            }    
+            header{
+                position: absolute;
+                top: 1rem;
+                width: 100vw;
+                height: 1rem;
+                left: 3rem;
+               z-index: 1;
+           }
+
+           a{
+               text-decoration: none;
+               color: white;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+           }
            
-            width: 170vw;
-
-            text-transform: uppercase;
-            letter-spacing: .125em;
-            animation-name: animateText;
-            animation-timing-function: ease;
-            animation-duration: 10s;
-            position: relative;
-            left: -99em;
-            animation-iteration-count: infinite;
-
-      
-        }
-
-        p{
-            padding-left: 5rem;
-            padding-right: 5rem;
-            font-size: 50px;
-            color:  #ffffff;
-            text-transform: uppercase;
-            font-family:"Skyline" ;
-            /* text-shadow: 10px 10px #000000; */
-             -webkit-font-smoothing: antialiased;
-             -moz-osx-font-smoothing: grayscale;
-     
-        }
-
-        @keyframes animateText {
-        0% {left: 30em;opacity: 0}
-        25% {opacity:1}
-        50% {left: .2em;}
-        75% {left: -7.5em;}
-        100% {left: -20em;}
-
-
-        }
-
-        @keyframes animateColor {
-        from {color: white;}
-        to {color: red;}
-        }
-
-
-.btn-shine {
-  position: absolute;
-  top: 96%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 12px 48px;
-  color: #fff;
-  background: linear-gradient(to right, #000000 0, rgb(248, 208, 255) 10%, #000000 20%);
-  background-position: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 6s infinite linear;
-  animation-fill-mode: forwards;
-  -webkit-text-size-adjust: none;
-  font-weight: 600;
-  font-size: 30px;
-  text-decoration: none;
-  white-space: nowrap;
-
-  
-}
-@-moz-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 500px;
-  }
-  100% {
-    background-position: 1200px;
-  }
-}
-@-webkit-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 600px;
-  }
-  100% {
-    background-position: 1200px;
-  }
-}
-@-o-keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 600px;
-  }
-  100% {
-    background-position: 1200px;
-  }
-}
-@keyframes shine {
-  0% {
-    background-position: 0;
-  }
-  60% {
-    background-position: 600px;
-  }
-  100% {
-    background-position: 1200px;
-  }
-}
-
+    
+            a:hover{
+                color: lightblue;
+            }       
     </style>
 </head>
 
-<body> 
+<body>
+<header>
+    <a href="index.html">Back</a>
 
-    <header>
+</header>
+    <section>
+        <article class="seite1">
 
-    </header>
-
-    <main>
-    
-            <h2>I'm frozen &nbsp;&nbsp; in motion</h2>
-            <p>
-            <a href="https://usecheck.com/" class="btn-shine" target="_blank">
-                This feeling's just begun 
-            I'm saying things I've never said
-            Doing things I've never done</a>
-            </p>
-            <div class="mouse-cursor-gradient-tracking">
-
+            <div>
+                <header>Oh my God, oh my God</header>
+                <p>This feeling's just begun</p>
             </div>
-         
-    </main>
-    
+
+        </article>
+        <article class="seite2">
+            <div>
+                <header>I'm saying things I've never said</header>
+                <p>Doing things I've never done</p>
+            </div>
+        </article>
+        <article class="seite3">
+            <div>
+                <header>Oh my God, oh my God</header>
+                <p>When I see You I should run</p>
+            </div>
+        </article>
+        <article class="seite4">
+            <div>
+                <header>But I'm frozen in motion</header>
+                <p>And my head tells me to stop</p>
+            </div>
+        </article>
+    </section>
 </body>
-
-
 <script>
-    let btn = document.querySelector('.mouse-cursor-gradient-tracking');
-        btn.addEventListener('mousemove', e => {
-            let rect = e.target.getBoundingClientRect();
-            let x = e.clientX - rect.left;
-            let y = e.clientY - rect.top;
-            btn.style.setProperty('--x', x + 'px');
-            btn.style.setProperty('--y', y + 'px');
-        });
+    // javascript event handlers https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+    // hier wird die scroll Funktion abgehört, immer wenn der User scrollt wird die gesamte Funktion ausgeführt
+    window.onscroll = function () {
+        //alle Elemente mit dem Tag article werden in die Variable articles geschrieben, diese ist ein Array mit allenfalls mehreren Einträgen
+        let articles = document.getElementsByTagName("article");
 
+        //hier wird durch alle Einträge im Array durchgeloopt
+        //
+        for (let i = 0; i < articles.length; i++) {
+            // bei jedem einzelnen wird abgetragt, wo er sich im Moment in Bezug auf den Viewport befindet
+            let domRect = articles[i].getBoundingClientRect();
+            /* https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect*/
 
-</script>
+            //falls die Distanz der oberen Ecke zum viewport kleiner ist als die Höhe des viewports
+            // ist das Element entweder im viewport oder bereits oben wieder rausgerutscht 
+            if (domRect.top < window.innerHeight) {
+                console.log("ich bin im viewport");
+                articles[i].setAttribute("class", "myclass");
+
+                // falls der untere Punkt im Minus liegt ist es oben rausgerutscht
+                if (domRect.bottom < 0) {
+                    console.log("ich bin oben rausgerutscht");
+                    articles[i].classList.remove("myclass");
+                }
+            } else {
+                console.log("ich bin noch nicht im viewport");
+                articles[i].classList.remove("myclass");
+            }
+
+            // die console.log könnt ihr im live modus auskommentieren! Sind bloss zum Testen da.
+
+        }
+    };</script>
+
 </html>

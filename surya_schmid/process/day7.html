@@ -1,304 +1,240 @@
+<!-- day10 -->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDA Modul - Surya Schmid</title>
-  <style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics HTML</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
-    *{
-      box-sizing: border-box;
-    }
+            *{
+                margin: 0;
+            }
+            body{
+            background:yellow;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
 
-    nav{
-      position: absolute;
-      left: 2rem;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+        
+           
+            }
 
-    div{
-      background-color: white;
-    }
+            div{
+                border: solid 0px blue;
+                position: relative;
+                
+                padding: 10rem;
+                padding-left: 5rem;
+                height: 70vh;  
+            }
 
-  body{
-      display: flex;
-      justify-content: center;
-      width: 100vw;
-      height: 100vw;
-    }
-      
-  
-        .robot {
-            border: 1px solid #de9c9c;
-            padding: 1rem;
-   
-            position: absolute;
-            width: 300px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 40px;
+                
             
-        }
+            p{
+                border: solid 0px tomato;
+                font-size: 70px;
+                padding-left: 1rem;
+                width: 80vw;
+                display: block;
 
-         .head{
-          border: 0px solid #000000;
-          position: absolute;
-          width: 150px;
-          height: 100px;
-          top: 70px;
-          justify-content: center;
-          display: flex;
+               
+            }
 
-          transition-timing-function: ease-in-out;
-          transition-duration: 1s;
-        }
+            span{
+                border: 0px solid springgreen;
 
-        .head2{
-          border: 0px solid #000000;
-          position: absolute;
-          width: 200px;
-          height: 120px;
-          top: 50px;
-          justify-content: center;
-          align-items: center;
-          display: flex;
-          background-image: url(img/hearts_Zeichenfläche\ 1.svg);
-          background-size:80%;
-          background-position-x: center;
-          background-position-y: center;
-         
-          transition-timing-function: ease-in-out;
-          transition-duration: 1s;
-        }
+                
 
-        .tv{
-          border: 0px solid #000000;
-          position: absolute;
-          width: 80px;
-          height: 60px;
-          background-color: rgba(255, 255, 255, 0);
+            }
+
+            article{
+                padding: 0;
+                position: absolute;
+                border: solid 0px yellow;
+            }
+
+            .first{
+                margin-left:10rem;
+            }
+
+            .second{
+                padding-left: 30vw;
+                margin-left:80vw;
+                margin-top: 10vw;
+            }
+
+            .third{
+
+                margin-top: 30vw;
+            }
+
+            
+
+
+             .art1{
+                text-transform: uppercase;
+                margin-left: -2rem;
+               
+            transform: translate(-50%, -50%);
+            font-size:250px;
+                letter-spacing:0.1em;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: white;
+            text-shadow: 
+                                    8px 8px #777777,
+                                    20px 20px #000000;
+            }
+
+            .art2{
       
-        }
+                text-transform: uppercase;
+                margin-left: -2rem;
+               
+            transform: translate(-50%, -50%);
+            font-size:250px;
+                letter-spacing:0.1em;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: white;
+            text-shadow: 
+                                    8px 8px #ff1f8f,
+                                    20px 20px #000000;
+            }
 
-        img{
-          padding: 0px;
-          width: cover;
-        }
-       
-        .leg{
-          border: 3px solid #000000;
-          position: absolute;
-          width: 30px;
-          height: 120px;
-          bottom: 0;
-        }
+            .div1{
+                background-color: rgb(52, 52, 52);
+                color: white;
+            }
 
-        .leg--left{
-          left: 105px;
-        }
-        .leg--right{
-          right: 105px;
-        }
+            nav{
+                padding: 0.2rem;
+            }
 
-         .body{
-           border: 3px solid #000000;
-          position: absolute;
-           width: 120px;
-          height: 111px;
-          top: 170px;
-        }
+           .begun{
+               letter-spacing: 0.1em;
+               transition-property: all;
+            transform-origin: center;
+            transition-delay: 1s;
+            transition: ease-in-out;
+           }
 
-       
+            
 
-         .arm{
-           border: 3px solid #000000;
-          position: absolute;
-          width: 30px;
-          height: 130px;
-         
-        }
+           header{
+               display: flex;
+               justify-content: space-between;
+           }
 
-        .arm--left{
-          left: 62px;
-          top: 170px;
-
-          transition-timing-function: ease-in-out;
-          transition-duration: 1s;
-          transform-origin: top right;
-        }
-
-        .arm--right{
-          right: 62px;
-          top: 170px;
-
-          transition-timing-function: ease-in-out;
-          transition-duration: 1s;
-          transform-origin: top right;
-        }
-
-        .hand{
-          border: 3px solid #000000;
-          position:absolute;
-          width: 40px;
-          height: 20px;
-          bottom: 0;    
-          margin-bottom: -3px;    
-        }
-
-        .arm--left .hand{
-          right: 0;
-          margin-right: -3px;  
-        }
-         
-        .arm--right .hand{
-          left: 0;
-           margin-left: -3px;  
-        }
-
-
-        .foot{
-          border: 3px solid #000000;
-          position:absolute;
-          width: 50px;
-          height: 20px;
-          bottom: 0;  
-          margin-bottom: -3px;        
-        }
-
-        .leg--left .foot{
-          right: 0;
-          bottom: 0;
-           margin-right: -3px;  
-        }
-         
-        .leg--right .foot{
-          left: 0;
-          margin-left: -3px;  
-        }
-
-
-      
-
-        .head:hover{
-          top: 30px;
-          
-        }
-
-        .head2:hover{
-          top: 30px;
-        }
-
-        .robot:hover .arm--left{
-          transform: rotate(90deg);
-          transform-origin: top right;
-          top: 200px;
-        
-        }
-
-        .robot:hover .arm--right{
-          transform: rotate(-90deg);
-          transform-origin: top left;
-          top: 200px;
-        
-
-        }
-
-
-        a{
-        
-            text-decoration: none;
-            color: black;
-            padding: 0.8rem;
-            margin-right: 5.5rem;
-            padding-bottom: 0.3rem;
-            margin-top: 0; 
-            padding-top: 1rem;
-        }
-
-        a:hover{
-            background-color: rgb(0, 0, 0);
-            color: white;
-        }
-
-
+           
+            a{
+                padding: 0.2rem;
+                text-decoration: none;
+                color: black;
+            }
+    
+            a:hover{
+                color: magenta;
+            }
+    
     </style>
 </head>
-
 <body>
-  <nav>
-  <a href="index.html">Back</a>
-  </nav>
+   
+    <header>
+        <nav>.head&heart</nav>
+        <a href="index.html">Back</a>
+    
+    </header>
 
-  <!-- <main> -->
-      <div class="robot">
-        <div class="leg leg--left">
-          <div class="foot"></div>
-        </div>
-        <div class="leg leg--right">
-          <div class="foot"></div>
-        </div>
-        <div class="body"></div>
-        <div class="head">
-          <img src="img/tv_head_Zeichenfläche 1.svg" alt="">
-          <div class="eye eye--left"></div>
-          <div class="eye eye--right"></div>
-          <div class="nose"></div>
-          <div class="mouth"></div>
-        </div>
-        <div class="arm arm--left">
-          <div class="hand"></div>
-        </div>
-        <div class="arm arm--right">
-          <div class="hand"></div>
-        </div>
-      </div>
+    <!-- <div>
+    <span (class="typo" contenteditable='true' spellcheck='false') >
+    FROZEN IN MOTION 
+    </span>
+    </div> -->
 
-      <!-- <div class="robot">
-        <div class="leg leg--left">
-          <div class="foot"></div>
-        </div>
-        <div class="leg leg--right">
-          <div class="foot"></div>
-        </div>
-        <div class="body"></div>
-        <div class="head">
-          <img src="img/TV_HEART_Zeichenfläche 1.svg" alt="">
-          <div class="eye eye--left"></div>
-          <div class="eye eye--right"></div>
-          <div class="nose"></div>
-          <div class="mouth"></div>
-        </div>
-        <div class="arm arm--left">
-          <div class="hand"></div>
-        </div>
-        <div class="arm arm--right">
-          <div class="hand"></div>
-        </div>
-      </div>
 
-      <div class="robot">
-        <div class="leg leg--left">
-          <div class="foot"></div>
-        </div>
-        <div class="leg leg--right">
-          <div class="foot"></div>
-        </div>
-        <div class="body"></div>
-        <div class="head2">
-          <div class="tv"></div>
-        </div>
-        <div class="arm arm--left">
-          <div class="hand"></div>
-        </div>
-        <div class="arm arm--right">
-          <div class="hand"></div>
-        </div>
-      </div> -->
-  <!-- </main> -->
+    <!-- <div class="div1">
+        <article class=" inside first">
+            Oh my
+        </article>
+        <article class="inside second art1 god">
+            God
+        </article>
+        <article class="inside third">
+            oh my God
+        </article>
+    </div> -->
+
+
+    <div class="div1">
+        <p>
+            Oh my
+        </p>
+        <p>
+
+            <span class="art1 god">God</span>
+        </p>
+        <p>
+            oh my God
+        </p>
+    </div>
+    
+    <div class="div2">
+        <p>
+            This feeling's just <br>
+            <span class="art2 begun">begun</span>
+        </p>
+    </div>
+    
+    <div class="div2">
+        <p>
+            I'm saying things I've <br>
+            <span class="art2">never</span> <br>
+            said
+    
+        </p>
+    </div>
+    
+    <div class="div2">
+        <p>
+            Doing things I've <br>
+             <span class="art2">never</span> <br>
+             done
+        </p>
+    </div>
+    
+    <div class="div1">
+        <p>
+            Oh my <br>
+            <span class="art1">God</span><br>
+             oh my God
+        </p>
+    </div>
+    
+    <div class="div1">
+        <p>
+            When I see you i should <br>
+            <span class="art1">run</span>
+        </p>
+    </div>
+    
+    <div class="div2">
+        <p>
+            But I'm <br>
+            <span class="art2">frozen</span> <br>
+            in motion
+        </p>
+    </div>
+    
+    <div class="div1">
+        <p>
+            And my head tells me to <br>
+            <span class="art1">stop</span>
+        </p>
+    </div>
 </body>
-
 </html>
