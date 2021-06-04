@@ -422,16 +422,25 @@ button {
     cursor: url(../img/pointer-small.png) 10 0,pointer;
 }
 
-.moodboard-img {
+.process-img {
     width: 100%;
     height: auto;
 }
 
+
+.mockup-title{
+    text-decoration: underline;
+}
+
 .explain {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     margin-top: 5px;
 }
 
 .process-info {
     font-size: 20px;
+}
+
+.why {
+    margin-bottom: 20px;
 }
