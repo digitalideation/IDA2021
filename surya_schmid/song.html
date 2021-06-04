@@ -11,23 +11,24 @@
 
 <body class="paused"> 
 
+
+
+          <!-----------------------  CURSOR ----------------------->
+          <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+            <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+          </span>
+          
+          <div id="cursor"> </div>
+          <div id="outerCursor"></div>
+          <!-----------------------  CURSOR ----------------------->
+
           <!-----------------------  MUSIC ----------------------->
           <header class="head">
-          
             <div>
               <audio id="myAudio" src="process/audio/head&heart.mp3"></audio>
               <a onClick="togglePlay()" class="trigger">Music</a>
             </div>
           <!-----------------------  MUSIC ----------------------->
-
-        <!-----------------------  CURSOR ----------------------->
-        <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
-          <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-        </span>
-
-        <div id="cursor"> </div>
-        <div id="outerCursor"></div>
-        <!-----------------------  CURSOR ----------------------->
 
         <!---------------- The overlay ---------------->
         <nav>
@@ -175,7 +176,7 @@
     <figure class="head3 parallax__layer parallax__layer--ground"></figure>
     <figure class="head4 parallax__layer parallax__layer--ground"></figure>
     <div class="s1 myHead parallax__layer parallax__layer--base doing">And my head</div>
-    <div class="s2 parallax__layer parallax__layer--back done">tells me to stop</div>
+    <div class="s2 stop parallax__layer parallax__layer--back done">tells me to stop</div>
     <div class="s3 parallax__layer parallax__layer--back done">tells me to stop</div>
 
 
