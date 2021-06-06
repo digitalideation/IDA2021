@@ -1,0 +1,84 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+
+.rhythm {
+  position: relative;
+  color: white;
+  animation-name: text;
+  animation-duration:10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-family: 'Audiowide';
+  font-size: 200%;
+}
+
+  
+@keyframes text {
+  0%   {left:100%; top:300px;}
+  100% {left:-1100px; top:300px;}
+}
+
+
+
+.firstp {
+  background-image: url(https://source.unsplash.com/random/?rhythm); 
+  width: 600px;
+  height: 600px;
+  border: solid 1px;
+  position: absolute;
+
+}  
+
+
+.secondp {
+  background-image: url(https://source.unsplash.com/random/?soul);
+  height: 600px;
+  width: 600px;
+  opacity: 40%;
+  position: absolute;
+}
+
+.thirdp {
+  background-image: url(https://source.unsplash.com/random/?dancer); 
+  height: 600px;
+  width: 600px;
+  opacity: 40%;
+  position: absolute;
+}
+
+.fourthp {
+  background-image: url(https://source.unsplash.com/random/?mind); 
+  height: 600px;
+  width: 600px;
+  opacity: 40%;
+  position: absolute;
+}
+
+.fiftp{
+  background-image: url(https://source.unsplash.com/random/?voice); 
+  height: 600px;
+  width: 600px;
+  opacity: 40%;
+  position: absolute;
+}
+
+.sixthp {
+  background-image: url(https://source.unsplash.com/random/?air); 
+  height: 600px;
+  width: 600px;
+  opacity: 40%;
+  position: absolute;
+}
+
+.seventhp {
+  background-image: url(https://source.unsplash.com/random/?feelings);
+  height: 600px;
+  width: 600px;
+  opacity: 40%;
+  position: absolute;
+} 
+

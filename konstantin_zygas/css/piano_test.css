@@ -4,6 +4,8 @@ body {
     width: 100vw;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Audiowide';
+    font-size: 100%;
 }
 
 .pianoF {
@@ -15,6 +17,7 @@ body {
     /* border-radius: 100px; */
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    text-align: center;
 }
 
 .pianoG {
@@ -28,6 +31,7 @@ body {
     animation-timing-function: ease-in-out;
     animation-delay: 0.6s;
     animation-direction: alternate;
+    text-align: center;
 
 }
 
@@ -41,6 +45,7 @@ body {
     animation-iteration-count: infinite;
     animation-delay: 0.9s;
     animation-direction: alternate;
+    text-align: center;
     
 }
 
@@ -54,6 +59,7 @@ body {
     animation-iteration-count: infinite;
     animation-delay: 1.2s;
     animation-direction: alternate;
+    text-align: center;
     
    
 }
@@ -68,6 +74,7 @@ body {
     animation-iteration-count: infinite;
     animation-delay: 1.5s;
     animation-direction: alternate;
+    text-align: center;
     
 }
 
@@ -81,6 +88,7 @@ body {
     animation-iteration-count: infinite;
     animation-delay: 1.8s;
     animation-direction: alternate;
+    text-align: center;
     
 }
 
@@ -94,10 +102,11 @@ body {
     animation-iteration-count: infinite;
     animation-delay: 2.1s;
     animation-direction: alternate;
+    text-align: center;
   
 }
 
-@keyframes pianoF {
+/* @keyframes pianoF {
     0%   {background-color: white;}
     100% {background-color: rgb(0, 0, 255); border-radius: 100px;height: 300px;}
     
@@ -137,7 +146,7 @@ body {
     0%   {background-color: white;}
     100% {background-color: rgb(0, 0, 255);border-radius: 100px;height: 300px;}
     
-  }
+  } */
 
 
 
@@ -161,3 +170,37 @@ li a.link:hover {
     padding: 40px;
 }
 
+.pianoF:hover {
+    background-image: url(https://source.unsplash.com/random/?rhythm); 
+    width: 100%;
+}
+
+.pianoG:hover {
+    background-image: url(https://source.unsplash.com/random/?soul);
+    width: 100%; 
+}
+
+.pianoA:hover {
+    background-image: url(https://source.unsplash.com/random/?dancer); 
+    width: 100%;
+}
+
+.pianoB:hover {
+    background-image: url(https://source.unsplash.com/random/?mind); 
+    width: 100%;
+}
+
+.pianoC:hover {
+    background-image: url(https://source.unsplash.com/random/?voice); 
+    width: 100%;
+}
+
+.pianoD:hover {
+    background-image: url(https://source.unsplash.com/random/?air); 
+    width: 100%; 
+}
+
+.pianoE:hover {
+    background-image: url(https://source.unsplash.com/random/?feelings);
+    width: 100%;
+}
