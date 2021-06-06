@@ -1,9 +1,9 @@
 /* piano */
 
-.soul {
+.pianopiano {
   display:flex;
-  height: 100vh;
-  width: 100vw;
+  height: 50vh;
+  width: 90vw;
   justify-content: space-around;
   align-items: center;
 }
@@ -101,19 +101,19 @@
 
 @keyframes pianoF {
   0%   {background-color: white;}
-  100% {background-color: rgb(0, 0, 255);height: 300px;}
+  100% {background-color: rgb(33, 50, 116);height: 300px;}
   
 }
 
 @keyframes pianoG {
   0%   {background-color: white;}
-  100% {background-color: rgb(0, 0, 255);border-radius: 100px;height: 300px;}
+  100% {background-color: rgb(27, 99, 206);border-radius: 100px;height: 300px;}
   
 }
 
 @keyframes pianoA {
   0%   {background-color: white;}
-  100% {background-color: rgb(0, 0, 255);border-radius: 100px;height: 300px;}
+  100% {background-color: rgb(33, 50, 116);border-radius: 100px;height: 300px;}
   
 }
 
@@ -125,18 +125,18 @@
 
 @keyframes pianoC {
   0%   {background-color: white;}
-  100% {background-color: rgb(0, 0, 255);border-radius: 100px;height: 300px;}
+  100% {background-color: rgb(33, 50, 116);border-radius: 100px;height: 300px;}
   
 }
 
 @keyframes pianoD {
   0%   {background-color: white;}
-  100% {background-color: rgb(0, 0, 255);border-radius: 100px;height: 300px;}
+  100% {background-color: rgb(27, 99, 206);border-radius: 100px;height: 300px;}
   
 }
 
 @keyframes pianoE {
   0%   {background-color: white;}
-  100% {background-color: rgb(0, 0, 255);border-radius: 100px;height: 300px;}
+  100% {background-color: rgb(33, 50, 116);border-radius: 100px;height: 300px;}
   
 }

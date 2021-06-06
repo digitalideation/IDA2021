@@ -1,0 +1,136 @@
+.bubble1{
+    position:absolute;
+    /* top:-400px; */
+    border: solid 1px;
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+    /* padding:2em; */
+    background-color:rgba(255, 238, 46, 0.495);
+    animation: bubble1 8s ease-in-out;
+    animation-iteration-count:infinite;
+    transition: all 1s ease-in-out;
+  }
+  
+  @keyframes bubble1 {
+    0%   {left: 20px; top:5500px;}
+    50% {left:90%; top:5500px;}
+    100% {left: 20px;; top:5500px;}
+  }
+  
+  .bubble1:hover {
+    transform: scale(2);
+    animation-play-state: paused;
+    background-image: url('https://cdn.costumewall.com/wp-content/uploads/2015/09/joy.jpg');
+    background-size: cover;
+  } 
+
+  .bubble2{
+    position:absolute;
+    /* top:-400px; */
+    border: solid 1px;
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+    /* padding:2em; */
+    background-color:rgba(50, 91, 255, 0.495);
+    animation: bubble2 8s ease-in-out;
+    animation-iteration-count:infinite;
+    transition: all 1s ease-in-out;
+  }
+  
+  @keyframes bubble2 {
+    0%   {left: 20px; top:5700px;}
+    50% {left:90%; top:5700px;}
+    100% {left: 20px;; top:5700px;}
+  }
+  
+  .bubble2:hover {
+    transform: scale(2);
+    animation-play-state: paused;
+    background-image: url('https://lumiere-a.akamaihd.net/v1/images/au_character_insideout_bio_sadness_46e220fd.jpeg?region=0,0,600,600');
+    background-size: cover;
+  } 
+
+
+  .bubble3{
+    position:absolute;
+    /* top:-400px; */
+    border: solid 1px;
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+    /* padding:2em; */
+    background-color:rgba(250, 56, 56, 0.502);
+    animation: bubble3 8s ease-in-out;
+    animation-iteration-count:infinite;
+    transition: all 1s ease-in-out;
+  }
+  
+  @keyframes bubble3 {
+    0%   {left: 20px; top:5900px;}
+    50% {left:90%; top:5900px;}
+    100% {left: 20px;; top:5900px;}
+  }
+  
+  .bubble3:hover {
+    transform: scale(2);
+    animation-play-state: paused;
+    background-image: url('https://lumiere-a.akamaihd.net/v1/images/au_character_insideout_bio_anger_8cabbb2b.jpeg?region=0,0,600,600');
+    background-size: cover;
+  } 
+
+
+  .bubble4{
+    position:absolute;
+    /* top:-400px; */
+    border: solid 1px;
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+    /* padding:2em; */
+    background-color:rgba(52, 250, 59, 0.488);
+    animation: bubble4 8s ease-in-out;
+    animation-iteration-count:infinite;
+    transition: all 1s ease-in-out;
+  }
+  
+  @keyframes bubble4 {
+    0%   {left: 20px; top:6100px;}
+    50% {left:90%; top:6100px;}
+    100% {left: 20px;; top:6100px;}
+  }
+  
+  .bubble4:hover {
+    transform: scale(2);
+    animation-play-state: paused;
+    background-image: url('https://i.pinimg.com/originals/98/5c/c9/985cc94b81f9f29d992970876de244c2.jpg');
+    background-size: cover;
+  } 
+
+  .bubble5{
+    position:absolute;
+    /* top:-400px; */
+    border: solid 1px;
+    border-radius: 50%;
+    width:100px;
+    height:100px;
+    /* padding:2em; */
+    background-color:rgba(255, 37, 255, 0.509);
+    animation: bubble5 8s ease-in-out;
+    animation-iteration-count:infinite;
+    transition: all 1s ease-in-out;
+  }
+  
+  @keyframes bubble5 {
+    0%   {left: 20px; top:6300px;}
+    50% {left:90%; top:6300px;}
+    100% {left: 20px;; top:6300px;}
+  }
+  
+  .bubble5:hover {
+    transform: scale(2);
+    animation-play-state: paused;
+    background-image: url('https://suicideprevention.wayne.edu/images/hqdefault.jpg');
+    background-size: cover;
+  } 
