@@ -183,10 +183,12 @@ body {
 }
 
 #group61 {
-    height: 200px;
+    height: 25px;
     width: 100vw;
     background-color: black;
-    /* background-image: linear-gradient( grey, rgb(48, 48, 48),black); */
+    display: flex;
+   
+    justify-content: center;
 } 
 
  
@@ -198,7 +200,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     width: 100vw;
-    height: 1200px;
+    height: 1300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,6 +241,14 @@ body {
     margin-top: 5%;
 } */
 
+
+.letit {
+  position: absolute;
+  font-family: 'Audiowide';
+  font-size: 80px;
+  
+  
+}
 
 .catch {
   font-family: 'Audiowide';
