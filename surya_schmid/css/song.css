@@ -3,20 +3,20 @@
       src: url(NewParisEDUSkyline-Regular.otf);
     }
 
-@font-face {
-  font-family: 'brr';
-  src: url(img/BRRREDU-Medium.otf);
-}
+  @font-face {
+    font-family: 'brr';
+    src: url(img/BRRREDU-Medium.otf);
+  }
 
-@font-face {
-  font-family: 'simplonItalic';
-  src: url(img/SimplonEDUNorm-LightItalic.otf);
-}
+  @font-face {
+    font-family: 'simplonItalic';
+    src: url(img/SimplonEDUNorm-LightItalic.otf);
+  }
 
-@font-face {
-  font-family: 'simplonMedium';
-  src: url(img/SimplonEDUNorm-Medium.otf);
-}
+  @font-face {
+    font-family: 'simplonMedium';
+    src: url(img/SimplonEDUNorm-Medium.otf);
+  }
 
 
     :root{
@@ -34,8 +34,7 @@
       padding: 0;
       margin: 0;
       width: 100vw;
-      height: 100vmin;
-      overflow-x: hidden;
+      overflow: hidden;
       /* min-height: 100vh; */
       transition: background-color .5s ease;
 
@@ -67,8 +66,45 @@
              perspective: 100px;
             overflow-y: auto;
             position: absolute;
-            height: 100vh;
+            height: 400vh;
             color: white;
+
+         
+  
+        }
+        
+        .back{
+          width: 100vw;
+          height: 120vh;
+          position: absolute;
+          background-position-x: center;
+          top: 0;
+          z-index: 2;
+        }
+
+        .back2{
+          width: 100vw;
+          height: 100vh;
+          position: absolute;
+          background-position-x: center;
+          bottom: -524rem;
+          z-index: 2;
+        }
+      
+        .playing .back{
+          animation: ease-in-out 1s hinter infinite;
+        }
+
+     
+        @keyframes hinter {
+          0%,100%{
+            background-image: url(../process/img/head_Zeichenfläche\ 1.png);
+            background-size: 20rem;  
+          }
+           50%{
+            background-image: url(../process/img/heart_Zeichenfläche\ 1.png);
+            background-size: 20rem;
+          }
         }
         
         article{
@@ -104,25 +140,40 @@
             top: 8rem;
             left: 4rem;
             transform: translateZ(1);
-
+            
         }
 
         .s2{
             top:10rem;
-            left: 25rem;
+            left:60rem;
               color: rgb(0, 0, 0);
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: rgb(255, 255, 255);
             transform: translateZ(-1);
+
         }
 
         .s3{
             top: 13rem;
-            right: 4rem;
+            right: 10rem;
+
         }
 
+        .bottom{
+          position: relative;
+          bottom: -10rem;
+          left: 48vw;
+          color: white;
+          font-size: 3rem;
 
+          width: 2.3rem;
+          height: 3rem;
+        }
       
+        .bottom:hover{
+           transform: rotate(360deg);
+           transition: ease-in-out 0.3s center;
+        }
 
 
 /* -----------------------STARTSEITE----------------------- */
@@ -218,6 +269,8 @@
            color: rgb(0, 0, 0);
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: rgb(255, 255, 255);
+            top: 5rem;
+           
         }
 
          @keyframes h3 {
@@ -238,20 +291,42 @@
             }
         }
 
+       
+/* -----------------------MOVE ON MUSIC----------------------- */
+
+ .playing .s1{
+  animation: moving 0.5s ease-in-out infinite;
+}
+
+@keyframes moving {
+  0%, 100%{
+   letter-spacing: 1rem;
+  
+  }
+  50%{
+   letter-spacing: 1.5rem;
+
+   
+  }
+}
+
+/* -----------------------MOVE ON MUSIC----------------------- */
+
+
 /* -----------------------ERSTE SEKTION----------------------- */
         div .s1,.s2,.s3{
           width: 100vw;
         }
         
         figure{
-            width: 50rem;
+            width: 40rem;
             background-size: cover ;
-            height: 50rem;
+            height:40rem;
           /* filter: drop-shadow(16px 16px 20px red) ; */
           
         }
 
-
+       
             .first{
                 margin-top: 40rem;
             }
@@ -261,11 +336,8 @@
                 background-blend-mode: overlay;
                 position: absolute;
                 left: 0;
-
-                animation: bild infinite 0.5s ease-in-out;
-               
+                
             }
-            
             .two {
                 background-image: url(https://i.pinimg.com/564x/3c/50/1a/3c501a67f0e72fcb3f64177de1c0c620.jpg), url(https://i.pinimg.com/564x/96/da/ac/96daac8ba53ec8b030d0fcba273203ad.jpg) ;
                 background-blend-mode: overlay;
@@ -340,7 +412,8 @@
  /* -----------------------ZWEITE SEKTION----------------------- */
 
             .second{
-                height: 150vh;
+                height: 110vh;
+                margin-top: .10rem;
             }
 
 
@@ -376,45 +449,7 @@
                 }
             }
 
-            .text2{
-                font-family: 'Skyline';
-                position: relative;
-                text-align: center;
-                letter-spacing: 4rem;
-                line-height: 2rem;
-                margin-left: -5rem;
-                margin-top: -30rem;
-                border: 0px solid tomato;
-                color: white ;
-                overflow: hidden;
-                white-space: nowrap;
-                width: 100%;
-                animation: text2 ease-in-out 4s infinite;
-
-
-            }
-
-
-            @keyframes text2 {
-                0%{
-                font-size: 0.3rem;
-                letter-spacing: 4rem;
-                color: rgb(255, 255, 255);
-                }
-
-                50%{
-                font-size: 0.1rem;
-                letter-spacing: 4rem;
-                color: rgb(204, 204, 204);
-                }
-
-                100%{
-                font-size: 0.3rem;
-                letter-spacing: 4rem;
-                color: rgb(255, 255, 255);
-                }
-            }
-
+            
    /* -----------------------DRITTE SEKTION----------------------- */
             .three{
                 background-image: url(https://i.pinimg.com/564x/89/4f/bf/894fbf78c79faccabd6ab21d48546408.jpg), 
@@ -436,7 +471,7 @@
 
             .s3{
                 top:120rem;
-                left:0rem;
+                left:-10rem;
                 width: 100rem;
                 color: rgb(0, 0, 0);
                 -webkit-text-stroke-width: 1px;
@@ -444,6 +479,11 @@
                 transform: translateZ(-1);
             }
 
+
+            .fourth{
+              height: 100vh;
+              
+            }
 /* -----------------------DRITTE SEKTION----------------------- */
 
 /* ---------------- THE OVERLAY - MENU ---------------->  */
@@ -624,6 +664,7 @@
 
     body.paused {
       background-color: rgb(0, 0, 0);
+
     }
 
     .playing .trigger::before {
@@ -656,11 +697,23 @@
 
 .snow1{
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
     position: absolute;
-    top: 640vh;
+    top: 580vh;
 }
 
+.snow2{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 680vh;
+}
+.snow3{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 780vh;
+}
 .snow {
   position: absolute;
   width: 10px;

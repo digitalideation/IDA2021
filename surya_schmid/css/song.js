@@ -55,3 +55,14 @@ myAudio.onpause = function () {
     document.body.classList.add('paused')
 };
 // ------------------------ MUSIC ------------------------------->
+
+// <--------------------- SCROLL TO ---------------------  
+function scrollMe() {
+    document.querySelector('.start').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+document.getElementsByClassName('bottom')[0].addEventListener('click', scrollMe)
+
+// <--------------------- SCROLL TO ---------------------
