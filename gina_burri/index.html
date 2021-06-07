@@ -5,26 +5,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IDA Modul 2021 - My Process</title>
+  <title>IDA Modul - Firstname Lastname</title>
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> 
+  <style>
+        /* .robot * {
+            border: 1px solid var(--blue);
+            padding: 1rem;
+            margin: .25rem;
+        } */
 
-  <style>  
-  
-  :root {
-            --gradient: linear-gradient(
-                45deg,
-                #6200ff,
-                #6c4bfd,
-                #fd4b4b
-            );
+        :root {
+            --pink: #ea00ff;
+            --blue: #0400ff;
+            --purple: #9900ff;
         }
-        
+
+
+
+        .night {
+          --pink: #ff0000;
+          --blue: #FFFF00;
+          --purple: #FFFF00;
+        }
   
   body {
   margin: 0px;
   padding: 0px;
   font-family: 'Zen Dots', cursive;
-  color: rgb(0, 0, 0);
   font-family: basic-sans, sans-serif;
   min-height: 100vh;
   /* display: flex; */
@@ -32,14 +40,14 @@
   align-items: center;
   font-size: 1.125em;
   line-height: 1.6;
-  background: #ddd;
   background-size: 300%;
   background-image: var(--gradient);
+  background-image:linear-gradient(45deg, var(--blue),var(--purple),var(--pink));
   background-size: 400%;
   animation: bg-animation 15s infinite alternate;
     }
 
-@keyframes bg-animation {
+    @keyframes bg-animation {
             0% 
             {background-position: left; 
             }
@@ -54,22 +62,10 @@ h1 {
   font-family: 'Zen Dots', cursive;
 }
 
-h1 {
-  font-family: 'Zen Dots', cursive;
-  font-size: 15vw;
-  display: inline;
-  justify-self: center;
-  text-align: center;
-  letter-spacing: 0.6rem;
-  position:absolute ;
-  left:5px;
-  color: #6200ff;
-  opacity: 0.5;
-}
 
 a:visited {
   font-family: 'Zen Dots', cursive;
-  color: #6200ff;
+  color: var(--blue);
   text-decoration: none!important;
 }
 
@@ -91,7 +87,7 @@ a:visited {
 
 .box div {
     font-weight: 700;
-    border: 1px solid #6200ff;
+    border: 1px solid var(--blue);
     padding: 6px;
     min-width: 15vw;
     line-height: 120%;
@@ -112,7 +108,8 @@ a:visited {
 
 
 .gina {
-  background-color: #fd4b4b;
+  background-color: var(--pink);
+;
   opacity: 0.5;
 }
 
@@ -120,36 +117,186 @@ a:visited {
   opacity: 0;
 }
 .nav {
-  background-color: #6200ff;
+  background-color: var(--blue);
 }
 
 .col {
-  color:#fd4b4b;
+  color:var(--pink);
   font-family: 'Zen Dots', cursive;
 }
 
 .day {
   font-family: 'Zen Dots', cursive;
-  color: #6200ff;
+  color: var(--blue);
   text-decoration: none!important;
 }
-</style>
 
+input {
+  display: none;
+}
+
+button {
+  background-color: var(--blue);
+  text-decoration: none;
+  border: none;
+  font-family: 'Zen Dots', cursive;
+  color:var(--pink);
+  font-size: 1.125em;
+  line-height: 120%;
+  min-width: 15vw;
+  margin: 0;
+  padding: 0;
+  
+
+  
+}
+
+.robot {
+  background-color: var(--pink);
+  opacity: 0.5;
+  padding: 30vh;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  top: 20%;
+
+}
+
+.air {
+  font-family: 'Zen Dots', cursive;
+  color: var(--blue);
+  text-decoration: none!important;
+  font-size: 200px;
+  text-align: center;
+
+
+}
+
+a{
+  font-family: 'Zen Dots', cursive;
+  color: var(--blue);
+  text-decoration: none!important;
+}
+
+
+
+    </style>
 </head>
 
 <body>
- 
-  <h1>Gina Burri</h1>
+
+
+  <!-- daynight -->
   
+
+  <!-- <h1>Gina Burri</h1> -->
+  
+  <div class="exp">
+    <div class="box mainrow wrap">
+      <div class="noborder"></div>
+      <div class="nav">
+      <input><button id="nightbutton">Click me!</button>
+    </div>
+    <div class="noborder"></div>
+    </div>
+  <div>
+
+  <div class="exp">
+    <div class="box mainrow wrap">
+      <div class="nav"><a href="../index.html"><span class="col">Home</span></a></div>
+      <div class="nav"><a href="process/Day24/roomcool.html"> <span class="col">My Robot</span></a></div>
+      <div class="nav"><a href="song.html"> <span class="col">My Song</span></a></div>
+      <div class="nav"><a href="process/index.html"> <span class="col">Process</span></a></div>
+    </div>
+  <div>
+
     <div class="exp">
       <div class="box mainrow wrap">
-        <div class="nav"><a href="../index.html"><span class="col">Home</span></a></div>
-        <div class="nav"><a href="robotworld.html"> <span class="col">My Robot</span></a></div>
-        <div class="nav"><a href="song.html"> <span class="col">My Song</span></a></div>
-        <div class="nav"><a href="process/index.html"> <span class="col">Process</span></a></div>
-      </div>
-    <div>
+  
+        <!-- <div class="gina"><a href="robot/robot.html"> <span class="day">Maria</span></a></div> -->
+  
+        <!-- <div class="gina"><a href="robot/man.html"><span class="day">Mann</span></a></div> -->
+  
+        <!-- <div class="gina"><a href="robot/three.module/index.html"><span class="day">Torus</span></a></div> -->
 
+        <!-- <div class="gina"><a href="process/Day13/video.html"><span class="day">Videoskew</span></a></div> -->
+
+        <!-- <div class="gina"><a href="process/Day17/animation.html"><span class="day">Wirrwarr</span></a></div> -->
+
+        <!-- <div class="gina"><a href="process/Day18/typomoving.html"><span class="day">Moovingtypo</span></a></div> -->
+
+        <!-- <div class="gina"><a href="process/Day18/audio.html"><span class="day">Audiopause/play</span></a></div> -->
+
+        <!-- <div class="gina"><a href="process/Day16/scrollzoom2.html"><span class="day">1Room</span></a></div> -->
+
+        <!-- <div class="gina"><a href="process/Day16/scrollamak.html"><span class="day">2Room</span></a></div> -->
+
+        <!-- <div class="gina"><a href="process/Day20/roomcool.html"><span class="day">3Room</span></a></div> -->
+
+        <!-- <div class="gina"><a href="robot/three.modulecool/index.html"><span class="day">scond Torus</span></a></div> -->
+
+        <!-- <div class="gina"><a href="process/Day22/taschenlampe.html"><span class="day">Taschenlampe</span></a></div> -->
+
+        <!-- <div class="gina"><a href="process/Day22/animation.html"><span class="day">Taschenlampe2</span></a></div> -->
+
+
+<!--         
+        <div class="gina"><a href="process/Day24/roomcool.html"><span class="day">Menue</span></a></div>
+
+        <div class="gina"><a href="process/Day24/head.html"><span class="day">Head</span></a></div>
+
+        <div class="gina"><a href="robot/three.modulecool/torusWithEqualizer.html"><span class="day">Heart</span></a></div>
+
+        <div class="gina"><a href="process/Day24/eye2.html"><span class="day">Eye</span></a></div> -->
+
+      </div>
+    </div>
+
+    <!-- <div class="robot"><a href="process/Day24/roomcool.html"><span class="air">Robot</span></a></div> -->
+
+  
+  <!-- <div class="robot">
+
+    <div class="leg leg--left">
+    <div class="foot"></div>
+    </div>
+
+    <div class="leg leg--right">
+      <div class="foot"></div>
+    </div>
+
+    <div class="body"></div>
+    <div class="head">
+      <div class="eye eye--left"></div>
+      <div class="eye eye--right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+
+    <div class="arm arm--left">
+      <div class="hand"></div>
+    </div>
+    
+    <div class="arm arm--right">
+      <div class="hand"></div>
+    </div> -->
+
+  </div>
+  <script>
+    function handleNight(thing) {
+}
+
+// This is another way to listen for the event
+// and toggle the class:
+var nightButton = document.getElementById('nightbutton');
+
+nightButton.addEventListener('click', function() {
+console.log('just toggling')
+console.log(this)
+document.body.classList.toggle('night')
+});
+</script>
 </body>
 
 </html>
