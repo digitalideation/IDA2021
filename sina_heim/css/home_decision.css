@@ -1,11 +1,14 @@
 .rectangle {
     position: absolute;
     left: 350px;
-    top: 300px;
+    top: 200px;
     width: 1000px;
     height: 150px;
     background: black;
-    border-radius: 50%
+    border-radius: 50%;
+    font-size: 50px;
+    color: white;
+
   
   }
 
@@ -29,15 +32,15 @@
 
 
   .rectangle2:hover {
-      background-color:tomato;
+    background-color: tomato;
   }
 
 
 
   .calm {
     position: absolute;
-    left: 790px;
-    top: 345px;
+    left: 460px;
+    top: 45px;
     font-size: 50px;
     color: white;
   }
@@ -45,8 +48,8 @@
 
   .nervous {
     position: absolute;
-    left: 755px;
-    top: 500px;
+    left: 425px;
+    top: 45px;
     font-size: 50px;
     color: white;
   }
@@ -55,6 +58,7 @@
 	text-decoration: none;
 	color: white;
 	list-style-type: none;  
+  text-align: center;
   } 
 
   body { 	font-family: 'euclid';
@@ -65,3 +69,13 @@
     src: url(../font/EuclidFlexEDU-Medium-WebXL.woff);
     format:('woff')
   }
+
+
+  .position {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  
