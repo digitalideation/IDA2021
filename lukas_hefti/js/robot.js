@@ -12,7 +12,9 @@ window.onload = function () {
     document.getElementsByClassName('svg_head'),
     document.getElementsByClassName('svg_body'),
     document.getElementsByClassName('svg_arm_right'),
-    document.getElementsByClassName('svg_arm_left')
+    document.getElementsByClassName('svg_arm_left'),
+    document.getElementsByClassName('svg_leg_right'),
+    document.getElementsByClassName('svg_leg_left')
     
   ]
 

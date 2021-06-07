@@ -1,26 +1,58 @@
 /* Import NavBar CSS*/
 @import "styleNavBar.css";
-@import "audioStyle.css";
+/* @import "audioStyle.css"; */
 
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); /* font-family: 'Bangers', cursive; */
+
+
+:root {
+    /*************************** Page-wide variables ****************************/
+    --colorLineScale: 0;
+    --colorLine: rgba(calc(var(--colorLineScale)*60), calc(var(--colorLineScale)*var(--colorLineScale)*2),0, calc(var(--colorLineScale)*0.1));
+    /* --colorLine: white; */
+    --colorBG: rgba(calc(var(--colorLineScale)*10),0,0,1);
+    --BgGradient: linear-gradient(
+        0deg,
+        var(--colorBG),
+        #000,
+        #000
+    );
+    --move: 1;
+}
 
 /* attribute */
 
 body {
     margin: 0px;
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: white;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+
 }
 
+#player {
+font-family: 'Bangers', cursive;
+font-size: 2em;
+ color: white;
+}
 
 main {
-    max-width: 900px;
+    min-width: 900px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     
+}
+
+#BG {
+    width: 100vw;
+    height: 110vh;
+    margin-top: -10%;
+    background-image: var(--BgGradient);
+    background-size: 110%, 130%;
+    background-repeat: bo-repeat;
 }
 
     main article {
@@ -31,12 +63,17 @@ main {
 
 .robot {
     display:inline;
+    position: absolute;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    top: 10%;
+    left: 30%;
     width: 100px;
     height: 100px;
     max-width: 1200px;
+    animation: bodyMove 1s linear infinite;
+    animation-direction: alternate-reverse;
     
 }
 
@@ -171,7 +208,7 @@ main {
     }
     .svg_head {
         fill: none;
-        stroke: #1d1d1b;
+        stroke: var(--colorLine);
         stroke-miterlimit: 10;
       }
 
@@ -185,7 +222,7 @@ main {
   }
   .svg_body {
       fill: none;
-      stroke: #1d1d1b;
+      stroke: var(--colorLine);
       stroke-miterlimit: 10;
     }
 
@@ -194,11 +231,14 @@ main {
         width:200px;
         height: 300px;
         transform: scale(1.4) translate(-120px,-30px);
+        transform-origin: top left;
+        animation: armMoveR 0.4s linear infinite;
+        animation-direction: alternate-reverse;
     }
 
     .svg_arm_right {
         fill: none;
-        stroke: #1d1d1b;
+        stroke: var(--colorLine);
         stroke-miterlimit: 10;
       }
 
@@ -207,9 +247,74 @@ main {
         width:200px;
         height: 300px;
         transform:translate(20px,-40px) scale(-1,1) scale(1.4) ;
+        transform-origin: top right;
+        animation: armMoveL 0.2s linear infinite;
+        animation-direction: alternate-reverse;
     }
     .svg_arm_left {
         fill: none;
-        stroke: #1d1d1b;
+        stroke: var(--colorLine);
         stroke-miterlimit: 10;
+      }
+
+      #leg_right {
+        width:200px;
+        height: 300px;
+        transform: scale(1.4) translate(-30px,-30px);
+    }
+    .svg_leg_right {
+        fill: none;
+        stroke: var(--colorLine);
+        stroke-miterlimit: 10;
+      }
+
+      #leg_left {
+        width:200px;
+        height: 300px;
+        transform: scale(1.4) scale(-1,1) translate(-300px,-30px) rotate(0deg,0deg);
+        transform-origin: top right;
+        animation: legMoveL 0.2s linear infinite;
+        animation-direction: alternate-reverse;
+        
+    }
+    .svg_leg_left {
+        fill: none;
+        stroke: var(--colorLine);
+        stroke-miterlimit: 10;
+      }
+
+    @keyframes bodyMove {
+        from {
+            transform: translate(-10%,calc(var(--move)*2%));
+        }
+        to {
+            transform: translate(10%,calc(var(--move)*2%));
+        }
+      }
+
+    @keyframes legMoveL {
+        0% {
+            transform: rotateZ(0deg) scale(1.4) scale(-1,1) translate(250px,-50px);
+        }
+        100% {
+            transform: rotateZ(calc(var(--move)*2deg)) scale(1.4) scale(-1,1) translate(250px,-50px);
+        }
+      }
+
+      @keyframes armMoveL {
+        0% {
+            transform: rotateZ(0deg) translate(-230px,-100px) scale(-1,1) scale(1.4) ;
+        }
+        100% {
+            transform: rotateZ(calc(var(--move)*0.5deg)) translate(-230px,-100px) scale(-1,1) scale(1.4) ;
+        }
+      }
+
+      @keyframes armMoveR {
+        0% {
+            transform: rotateZ(0deg) scale(1.4) translate(-140px,-70px);
+        }
+        100% {
+            transform: rotateZ(calc(var(--move)*-0.5deg)) scale(1.4) translate(-140px,-70px);
+        }
       }
