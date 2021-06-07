@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="paused">
 <!-----------------------  CURSOR ----------------------->
 <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
   <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
@@ -57,13 +57,10 @@
 
 <!----------------------- AUDIO ----------------------->
   <section >
-    <audio src="process/audio/head&heart.mp3">
-      Your browser does not support the
-      <code>audio</code> element.
-    </audio>
+    <audio id="myAudio" src="process/audio/head&heart.mp3"></audio>
     
     
-    <a onclick="togglePlay()" class="button trigger animating start" style="display: flex;">Make me Dance!</a>
+    <a onclick="togglePlay()" class="button trigger animating start" style="display: flex;">Make me </a>
   </section>
 
 
