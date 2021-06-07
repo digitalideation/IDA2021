@@ -13,9 +13,9 @@
   }
   
   @keyframes bubble1 {
-    0%   {left: 20px; top:5500px;}
-    50% {left:90%; top:5500px;}
-    100% {left: 20px;; top:5500px;}
+    0%   {left: 20px; top:880%;}
+    50% {left:90%; top:880%;}
+    100% {left: 20px;; top:880%;}
   }
   
   .bubble1:hover {
@@ -40,9 +40,9 @@
   }
   
   @keyframes bubble2 {
-    0%   {left: 20px; top:5700px;}
-    50% {left:90%; top:5700px;}
-    100% {left: 20px;; top:5700px;}
+    0%   {left: 20px; top:910%;}
+    50% {left:90%; top:910%;}
+    100% {left: 20px;; top:910%;}
   }
   
   .bubble2:hover {
@@ -68,9 +68,9 @@
   }
   
   @keyframes bubble3 {
-    0%   {left: 20px; top:5900px;}
-    50% {left:90%; top:5900px;}
-    100% {left: 20px;; top:5900px;}
+    0%   {left: 20px; top:940%;}
+    50% {left:90%; top:940%;}
+    100% {left: 20px;; top:940%;}
   }
   
   .bubble3:hover {
@@ -96,9 +96,9 @@
   }
   
   @keyframes bubble4 {
-    0%   {left: 20px; top:6100px;}
-    50% {left:90%; top:6100px;}
-    100% {left: 20px;; top:6100px;}
+    0%   {left: 20px; top:970%;}
+    50% {left:90%; top:970%;}
+    100% {left: 20px;; top:970%;}
   }
   
   .bubble4:hover {
@@ -123,9 +123,9 @@
   }
   
   @keyframes bubble5 {
-    0%   {left: 20px; top:6300px;}
-    50% {left:90%; top:6300px;}
-    100% {left: 20px;; top:6300px;}
+    0%   {left: 20px; top:1000%;}
+    50% {left:90%; top:1000%;}
+    100% {left: 20px;; top:1000%;}
   }
   
   .bubble5:hover {
