@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiko&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 /* General Formatting */
+
+:root {
+    --lineLength: 0;
+}
 
 html {
     scroll-behavior: smooth;
@@ -20,6 +25,16 @@ h1 {
     font-size: 60px;
 }
 
+h2 {
+    color: rgba(255, 0, 0, 0.2);
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+    font-size: 38vw;
+    position: absolute;
+    top: 13500px;
+    left: 14%;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -36,10 +51,12 @@ a:hover {
 /* Story3 formatting */
 
 .body_gradient {
-    height: 15000px;
+    height: 14000px;
     background: rgb(219,200,243);
     background: linear-gradient(180deg, rgba(219,200,243,1) 0%, rgba(163,95,134,1) 10%, rgba(143,86,122,1) 16%, rgba(92,63,92,1) 17%, rgba(43,28,46,1) 24%, rgba(29,11,13,1) 31%, rgba(43,15,16,1) 38%, rgba(84,27,23,1) 39%, rgba(124,39,34,1) 48%, rgba(150,46,40,1) 57%, rgba(212,48,30,1) 70%, rgba(255,47,0,1) 91%, rgba(255,158,0,1) 100%);
 }
+
+    /* Pole */
 
 div.pole {
     position: fixed;
@@ -59,11 +76,78 @@ span {
     background-color:rgb(80, 80, 80);
   }
 
+    /* Dancer */
+@keyframes dancer {
+    0% {top: -900px;}
+    50% {top: -800px;}
+    100% {top: -900px;}
+  }
+
+@keyframes rotatedancer  {
+    0% {transform: scaleX(1);left: -300px;}
+    45% {transform: scaleX(1);left: -300px;}
+    50% {transform: scaleX(-1); left: -135px;} 
+    95% {transform: scaleX(-1);left: -135px;}
+    100% {transform: scaleX(1);left: -300px;}
+  }
+
+      /* LEG! */
+@keyframes dancerleg {
+    0% {top: -1500px;}
+    50% {top: -1400px;}
+    100% {top: -1500px;}
+  }
+
+@keyframes rotateleg{
+    0% {transform: scaleX(1) rotate(-6deg); left: -235px;}
+    45% {transform: scaleX(1) rotate(0deg); left: -235px;}
+    50% {transform: scaleX(-1) rotate(-6deg); left: 50px;} 
+    95% {transform: scaleX(-1)rotate(0deg); left: 50px;}
+    100% {transform: scaleX(1) rotate(-6deg); left: -235px;}
+  }
+  
+
+      /* Dancer's Hair */
+@keyframes hairdance {
+    0% {top: -1350px;}
+    50% {top: -1250px;}
+    100% {top: -1350px;}
+  }
+
+  @keyframes rotatehair {
+    0% {transform: scaleX(1) skewY(0deg);left: 80px;}
+    45% {transform: scaleX(1)skewY(50deg);left: 80px;}
+    50% {transform: scaleX(-1)skewY(50deg); left: -135px;} 
+    95% {transform: scaleX(-1)skewY(0deg);left: -135px;}
+    100% {transform: scaleX(1)skewY(00deg);left: 80px;}
+  }
+
 div.dancer1 {
     width: 450px;
     height: auto;
     z-index: 3;
     position: relative;
+    animation-name: dancer, rotatedancer;
+    animation-duration: 6s, 10s;
+    animation-iteration-count: infinite;
+}
+div.leg1 {
+    width: 200px;
+    height: auto;
+    z-index: 3;
+    position: relative;
+    animation-name: dancerleg, rotateleg;
+    animation-duration: 6s, 10s;
+    animation-iteration-count: infinite;
+}
+div.dancerhair1{
+    width: 100px;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    animation-name: hairdance, rotatehair;
+    animation-duration: 6s, 10s;
+    animation-iteration-count: infinite;
 }
 
     /* SVGs + their Positioning */
@@ -106,10 +190,45 @@ div.dancer1 {
     stroke-width:6px;
 }
 
+/* animation hand left 2 */
+@keyframes handleft2 {
+    0% {top: 12770px;}
+    50% {top: 12700px;}
+    100% {top: 12770px;}
+    }
+
+.handleft2 {
+    position: absolute;
+    left: 1%;
+    width: 45vw;
+    height: auto;
+    animation-name: handleft2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* animation hand right 2 */
+@keyframes handright2 {
+    0% {top: 12700px;}
+    50% {top: 12770px;}
+    100% {top: 12700px;}
+    }
+
+.handright2 {
+    position: absolute;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 45vw;
+    height: auto;
+    animation-name: handright2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
 .angel1 {
     position: absolute;
-    top: 1050px;
-    left: 60%;
+    top: 800px;
+    left: 70%;
     width: 20vw;
     height: auto;
     transform: rotate(15deg);
@@ -126,8 +245,8 @@ div.dancer1 {
 
 .angel2 {
     position: absolute;
-    top: 800px;
-    left: 70%;
+    top: 1050px;
+    left: 60%;
     width: 20vw;
     height: auto;
     transform: rotate(25deg);
@@ -215,7 +334,7 @@ div.dancer1 {
 
 .snake1 {
     position: absolute;
-    top: 1800px;
+    top: 1700px;
     left: 20%;
     width: 20vw;
     height: auto;
@@ -232,7 +351,7 @@ div.dancer1 {
 
 .snake2 {
     position: absolute;
-    top: 1800px;
+    top: 1700px;
     left: 60%;
     width: 20vw;
     height: auto;
@@ -256,14 +375,6 @@ div.dancer1 {
     height: auto;
 }
 
-#lastsupperID {
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:5px;
-    fill:transparent;
-    transition: fill 250ms;
-}
 
 .applehalf {
     position: absolute;
@@ -273,7 +384,7 @@ div.dancer1 {
     }
 
 #applehalfID{
-    stroke:#fff;
+    stroke:white;
     stroke-linecap:round;
     stroke-linejoin:round;
     stroke-width:7px;
@@ -288,30 +399,12 @@ div.dancer1 {
     width: 20vw;
     }
 
-#lipsrightID{
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:7px;
-    fill:transparent;
-    transition: fill 250ms;
-}
-
 .tree {
     position: absolute;
     top: 3100px;
-    left: 5%;
-    width: 35vw;
+    left: 0%;
+    width: 45vw;
     }
-
-#treeID{
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:7px;
-    fill:transparent;
-    transition: fill 250ms;
-}
 
 .devil {
     position: absolute;
@@ -320,28 +413,29 @@ div.dancer1 {
     width: 30vw;
     }
 
-#devilID{
-    fill:transparent;
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:6px;
-}
+.devil2 {
+    position: absolute;
+    top: 9200px;
+    left: 60%;
+    width: 30vw;
+    transform: scaleX(-1);
+    }
+
 
 .praying {
     position: absolute;
-    top: 4500px;
+    top: 4400px;
     left: 65%;
-    width: 27vw;
+    width: 30vw;
     }
 
-#prayingID{
-    fill:transparent;
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:6px;
-}
+.praying2 {
+    position: absolute;
+    top: 9400px;
+    left: 10%;
+    width: 30vw;
+    transform: scaleX(-1);
+    }
 
 .windowleft {
     position: absolute;
@@ -351,13 +445,6 @@ div.dancer1 {
     transform: scaleX(-1);
     }
 
-#windowleftID{
-    fill:transparent;
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:6px;
-}
 
 .windowright {
     position: absolute;
@@ -366,13 +453,91 @@ div.dancer1 {
     width: 30vw;
     }
 
-#windowrightID{
-    fill:transparent;
-    stroke:#fff;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-width:6px;
-}
+.windowmiddle {
+    position: absolute;
+    top: 5400px;
+    left: 40.25%;
+    width: 20vw;
+    }
+
+.windowleft2 {
+    position: absolute;
+    top: 10300px;
+    left: 5%;
+    width: 30vw;
+    transform: scaleX(-1);
+    }
+
+
+.windowright2 {
+    position: absolute;
+    top: 10300px;
+    left: 65%;
+    width: 30vw;
+    }
+
+.windowmiddle2 {
+    position: absolute;
+    top: 10400px;
+    left: 40.25%;
+    width: 20vw;
+    }
+
+.amphitheatre {
+    position: absolute;
+    top: 6300px;
+    left: 32%;
+    width: 35vw;
+    }
+
+.headleft {
+    position: absolute;
+    top: 7100px;
+    left: 5%;
+    width: 40vw;
+    }
+
+.headright {
+    position: absolute;
+    top: 6800px;
+    left: 65%;
+    width: 30vw;
+    }
+
+.handshake {
+    position: absolute;
+    top: 8200px;
+    left: 15%;
+    width: 70vw;
+    }
+
+.inprivate {
+    position: absolute;
+    top: 11500px;
+    left: 15%;
+    width: 70vw;
+    }
+    
+
+.lildevilleft{
+    position: absolute;
+    top: 13500px;
+    left: 2%;
+    width: 45vw;
+    }
+
+.lildevilright{
+    position: absolute;
+    top: 13500px;
+    left: 52%;
+    width: 45vw;
+    transform: scaleX(-1);
+    }
+    
+
+    /* Parallax Effects */ 
+
+
 
     /* Audio */ 
 
@@ -411,19 +576,22 @@ content: '▶';
 
     /* Navigation */ 
 .menue {
-    position: absolute;
-    top: 14920px;
-    left: calc(50% + 20px);
+    position: fixed;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+    text-align: right;
 }
 
 a.navi {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
     text-transform: none;
 }
 
 a.navi:hover {
     font-style: italic;
     cursor: pointer;
+    color: white;
 }
