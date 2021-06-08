@@ -3,6 +3,10 @@
          url('../fonts/Brand.woff') format('woff');
 }
 
+button{
+    font-family: brand, Arial, Helvetica, sans-serif;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -208,6 +212,7 @@ nav ul li a{
     
 }
 #section_2 p{
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
