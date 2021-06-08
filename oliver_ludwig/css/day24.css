@@ -731,3 +731,57 @@ nav ul li a{
     text-decoration: none;
 
 }
+
+
+/*Songpage*/
+#section_1_song{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-direction:column;
+    height: 100vh;
+    width: 100%;
+
+    background-image: url("../img/aperture-vintage-Z6EpCdMcoUU-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section_1_song nav{
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+}
+
+#section_1_song h2{
+    color: white;
+    font-size: 3rem;
+}
+
+#section_1_song button{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width: 40%;
+    padding: 30px;
+}
+
+#section_1_song img{
+    width: 10%;
+    
+}
+
+#section_2_song{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-direction:column;
+    height: 100vh;
+    width: 100%;
+
+    background-image: url("../img/aperture-vintage-Z6EpCdMcoUU-unsplash_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
