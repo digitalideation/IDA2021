@@ -3,7 +3,7 @@
          url('../fonts/Brand.woff') format('woff');
 }
 
-button{
+button, label{
     font-family: brand, Arial, Helvetica, sans-serif;
 }
 
