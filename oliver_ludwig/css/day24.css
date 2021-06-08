@@ -15,7 +15,7 @@ body{
     margin-inline-end: 0;
     margin-inline-start: 0;
     font-family: 'brand' ,Arial, Helvetica, sans-serif;
-
+    background-color:#191919;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -670,3 +670,64 @@ nav ul li a{
     text-align: center;
 }
 
+/*Process Site*/
+
+.process_button{
+    width: 60%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.process_button ul{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction:column;
+    padding-inline-start: 0;
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.process_button ul li{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    margin-top: 10px;
+    width: 40%;
+    color: white;
+    border: none;
+    background-color: #191919;
+    border-radius: 3vh;
+    padding: 5px 10px ;
+    
+
+    box-shadow: 
+    4px 4px 6px 0 #070707 ,
+    -2px -2px 3px 0 rgba(209, 250, 253, 0.3);
+
+}
+
+.process_button ul li:hover{
+    background-color:  #353434 ;
+    box-shadow: 
+    -4px -4px 6px 0 #070707 ,
+    2px 2px 3px 0 rgba(209, 250, 253, 0.3);
+}
+
+.process_button ul li a{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-direction:column;
+    color: white;
+    text-decoration: none;
+
+}
