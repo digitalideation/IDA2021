@@ -1,5 +1,5 @@
 // --------------------- LANDING PAGE --------------------->
-
+ //-> This Code is based on the Project Vanilla 2021 (https://codepen.io/pinglu/pen/rNeVyXO). Thanks Ping Lu for your hard work.
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -122,6 +122,7 @@ function connect() {
         }
     }
 }
+ // <- This Code is based on the Project Vanilla 2021 (https://codepen.io/pinglu/pen/rNeVyXO). Thanks Ping Lu for your hard work.
 
 // --------------------- LANDING PAGE --------------------->
 
