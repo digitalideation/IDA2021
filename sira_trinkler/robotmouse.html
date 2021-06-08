@@ -38,13 +38,6 @@
                     <a href="moodboard.html">Moodboard</a>
                 </div>
             </li>
-            <li class="last">
-                <div>
-                    <audio id="myAudio" src="assets/audio/1957-audio.mp3"></audio>
-                    <a onClick="togglePlay()" class="trigger">♪ 1957</a>
-                </div>
-                </a>
-            </li>
         </ul>
     </nav>
 </div>
@@ -55,10 +48,22 @@
         <span class="bar-bottom"></span>
     </div>
 </section>
+    <li class="last">
+        <div>
+            <audio id="myAudio" src="assets/audio/1957-audio.mp3"></audio>
+            <a onClick="togglePlay()" class="trigger">♪ 1957</a>
+        </div>
+    </li>
+    <div class="arrow">
+        <a href="song.html">
+            <img src="assets/svg/arrownewwhite-01.svg" alt="">
+        </a>
+    </div>
     <canvas id="canvas">
     </canvas>
 
-    <!-- JS für BACKGROUND -->
+    <!-- The code from the particles is based on "Background with Mouse Interaction from MinzCode" I found on Youtube (https://www.youtube.com/watch?v=p4a0WGMTQaU).-->
+    <!-- JS für mouse-interaction -->
     <script>
 
         const canvas = document.querySelector("#canvas");
