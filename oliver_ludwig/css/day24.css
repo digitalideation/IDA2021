@@ -44,7 +44,7 @@ nav ul{
     align-items:center;
     flex-direction:row;
     padding-inline-start: 0;
-    width: 40%;
+    width: 50%;
     margin-right: 30px;
 }
 
@@ -129,7 +129,7 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 50%;
+    width: 60%;
 }
 
 #section_1 .sub_nav ul{
