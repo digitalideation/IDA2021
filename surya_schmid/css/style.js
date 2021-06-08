@@ -153,9 +153,9 @@ function scrollMe() {
 
 document.getElementsByTagName('canvas')[0].addEventListener('click', scrollMe)
 
-setTimeout(() => {
-    scrollMe()
-}, 10000);
+// setTimeout(() => {
+//     scrollMe()
+// }, 10000);
 // <--------------------- SCROLL TO ---------------------
 
 // --------------------- MOVING MENU --------------------->
