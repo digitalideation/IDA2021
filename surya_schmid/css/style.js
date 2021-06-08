@@ -21,9 +21,9 @@ window.addEventListener("mousemove", function (event) {
 });
 
 ctx.fillStyle = "white";
-ctx.font = "2rem Verdana";
-ctx.fillText("IDA -", 3, 32);
-ctx.fillText("2021", 25, 54);
+ctx.font = "1.7rem Verdana";
+ctx.fillText("IDA -", 7, 32);
+ctx.fillText("2021", 28, 51);
 // Scan the underlying pixel data of the text area
 const textCoordinates = ctx.getImageData(0, 0, 100, 100);
 
