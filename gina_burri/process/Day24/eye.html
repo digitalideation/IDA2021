@@ -507,7 +507,22 @@
             /* border: 3px solid red; */
             /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='red'>Eye</text></svg>") 16 0, auto; */
             /* cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEAD</text></svg>") 64 64, auto; */
-            cursor: url("../../images/heart.svg") 64 64, auto;}        
+            cursor: url("../../images/heart.svg") 64 64, auto;}  
+
+            .bottom {
+            position: absolute;
+			top: 80vh;
+            right: 0px;
+            width:100vw;
+            height: 20vh;
+            z-index: 9;
+			/* background-color: blueviolet; */
+			/* opacity: 0; */
+			background-color: chocolate;
+            /* border: 3px solid red; */
+			cursor: url("../../images/backtomenue.svg") 64 64, auto;
+            opacity: 0; 
+}    
 
        
 
@@ -549,6 +564,8 @@
     <div class="left" onclick='window.location="mouth.html"' ></div>
     <div class="middle" onclick='window.location="#"'></div>
     <div class="right" onclick='window.location="../../robot/three.modulecool/torusWithEqualizer.html"'></div> 
+    <div class="bottom" onclick='window.location="roomcool.html"'></div> 
+
 
 
     <div class="radial-gradient"></div>
@@ -606,7 +623,7 @@
     <div class="uunten qq"></div>
     <div class="uunten rr"></div>
 
-    <audio src="air-electronic-performers-10000-hz-legend Kopie.mp3">
+    <audio src="eye.mp3" loop>
         Your browser does not support the
         <code>audio</code> element.
 </audio>
@@ -629,7 +646,6 @@
         
         mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
         mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
-        console.log("mood")
         $('.radial-gradient').css('background', 'radial-gradient(300px at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #c5000000, #003cff)');
 });
 </script>

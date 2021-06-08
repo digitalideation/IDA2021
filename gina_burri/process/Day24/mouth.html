@@ -17,6 +17,7 @@
 
     body {
         background-color:rgb(calc(244 - (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+        /* opacity: calc((var(--scalesize) - 1)/7); */
     }
 
         #s {
@@ -171,7 +172,7 @@
     font-size: 180px;
     position: fixed;
     font-family: 'Zen Dots', cursive;
-    border: 0.3px solid rgb(4, 0, 255);
+    border: 0.3px solid rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
     text-shadow: 1px 1px 2px rgb(4, 0, 255), 0 0 25px rgb(4, 0, 255), 0 0 5px rgb(4, 0, 255);
    
     /* z-index: 9; */
@@ -189,7 +190,7 @@
     font-size: 180px;
     position: fixed;
     font-family: 'Zen Dots', cursive;
-    border: 0.3px solid rgb(4, 0, 255);
+    border: 0.3px solid rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
     text-shadow: 1px 1px 2px rgb(4, 0, 255), 0 0 25px rgb(4, 0, 255), 0 0 5px rgb(4, 0, 255);
 
     /* z-index: 9; */
@@ -208,7 +209,7 @@
     font-size: 180px;
     position: fixed;
     font-family: 'Zen Dots', cursive;
-    border: 0.3px solid rgb(4, 0, 255);
+    border: 0.3px solid rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
     text-shadow: 1px 1px 2px rgb(4, 0, 255), 0 0 25px rgb(4, 0, 255), 0 0 5px rgb(4, 0, 255);
 
     /* z-index: 9; */
@@ -284,55 +285,77 @@
 
 }
 
+@keyframes acolor {
+0% {
+    color: rgb(4, 0, 255);
+    border-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);;
+}
+
+50% {
+    color: rgb(calc(244 - (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+    border-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);;
+
+}
+100% {
+    color: rgb(4, 0, 255);
+    border-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);;
+
+}
+}
 
 
 @keyframes move2 {
 0% {
     transform: translate(-18px, 27px, 30px) scale(1.0);
-    /* opacity: 0; */
+    opacity: calc((var(--scalesize) - 1)/7);
+    /* opacity: 1; */
 }
 10% {
     transform: translate(-61px, -59px) scale(1.3);
-    /* opacity: 1; */
+    opacity: 1;
 }
 20% {
     transform: translate(-24px, -90px) scale(1.0);
-    /* opacity: 1; */
+    opacity: 1;
 }
 30% {
     transform: translate(-16px, 54px) scale(0.8);
-    /* opacity: 0; */
+    opacity: calc((var(--scalesize) - 1)/7);
+    /* opacity: 1; */
 }
 40% {
     transform: translate(-27px, -58px) scale(8);
-    /* opacity: 1; */
+    opacity: 1;
 }
 50% {
     transform: translate(-37px, -94px) scale(0.8);
-    /* opacity: 0; */
+    opacity: 1;    
 }
 60% {
     transform: translate(-41px, -38px) scale(0.5);
-    /* opacity: 1; */
+    opacity: 1;
 }
 70% {
     transform: translate(-32px, -73px) scale(3);
-    /* opacity: 0; */
+    opacity: calc((var(--scalesize) - 1)/7);
+    /* opacity: 1; */
 }
 80% {
     transform: translate(-47px, -93px) scale(0.5);
-    /* opacity: 1; */
+    opacity: 1;
 }
 90% {
     transform: translate(-88px, -19px) scale(5);
-    /* opacity: 0; */
+    opacity: calc((var(--scalesize) - 1)/7);
+    /* opacity: 1; */
 }
 }
 
 @keyframes move3 {
     0% {
     transform: translate(-18px, 27px) scale(1.0);
-    opacity: scale(var(--scalesize)/10);
+    opacity: calc((var(--scalesize) - 1)/7);
+    /* opacity: 1; */
 }
 10% {
     transform: translate(-24px, -90px) scale(1.0);
@@ -340,48 +363,37 @@
 }
 20% {
     transform: translate(-24px, -90px) scale(1.0);
-    /* opacity: 1; */
+    opacity: 1;
 }
 30% {
     transform: translate(-16px, 54px) scale(0.8);
-    opacity: scale(var(--scalesize)/10);
+    opacity: 1;  
 }
 40% {
     transform: translate(-3000px, -1000px) scale(8);
-    /* opacity: 1; */
+    opacity: 1;
 }
 50% {
     transform: translate(-37px, -500px) scale(0.8);
-    opacity: scale(var(--scalesize)/10);
+    opacity: calc((var(--scalesize) - 1)/7);
+    /* opacity: 1; */
 }
 60% {
     transform: translate(-41px, -38px) scale(0.5);
-    /* opacity: 1; */
+    opacity: 1;
 }
 70% {
     transform: translate(-1800px, -1000px) scale(3);
-    opacity: scale(var(--scalesize)/10);
+    opacity: calc((var(--scalesize) - 1)/7);
+    /* opacity: 1; */
 }
 80% {
     transform: translate(-47px, -93px) scale(0.5);
-    /* opacity: 1; */
+    opacity: 1;
 }
 90% {
     transform: translate(-1800px, -1000px) scale(5);
-    opacity: scale(var(--scalesize)/10);
-}
-}
-
-@keyframes acolor {
-0% {
-    color: rgb(4, 0, 255);
-}
-
-50% {
-    color: rgb(calc(244 - (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
-}
-100% {
-    color: rgb(4, 0, 255);
+    opacity: 1;      
 }
 }
 
@@ -429,6 +441,21 @@
             /* border: 3px solid red; */
 			cursor: url("../../images/eye.svg") 64 64, auto;}  
 
+            .bottom {
+            position: absolute;
+			top: 80vh;
+            right: 0px;
+            width:100vw;
+            height: 20vh;
+            z-index: 9;
+			/* background-color: blueviolet; */
+			/* opacity: 0; */
+			background-color: chocolate;
+            /* border: 3px solid red; */
+			cursor: url("../../images/backtomenue.svg") 64 64, auto;
+            opacity: 0; 
+} 
+
             
         .button {
             z-index: 5;
@@ -440,6 +467,7 @@
             left: 35vw;
             /* background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255); */
             /* transform: scale(var(--scalesize)); */
+            /* opacity: calc((var(--scalesize) - 1)/7); */
             opacity: 0;
             cursor: url("../../images/soundon.svg") 64 64, auto;  
             background-color: blue;
@@ -452,7 +480,7 @@
     </style>
      <script>
         const minscale = 1; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
-        const maxscale = 8; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
+        const maxscale = 15; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
     </script>
 </head>
 <body>
@@ -461,6 +489,8 @@
     <div class="left" onclick='window.location="head.html"' ></div>
     <div class="middle" onclick='window.location="#"'></div>
     <div class="right" onclick='window.location="eye.html"'></div> 
+    <div class="bottom" onclick='window.location="roomcool.html"'></div> 
+
 
     <div id="s" class="s">S</div>
     <div id="y" class="y">Y</div>
@@ -476,7 +506,7 @@
     <div id="rr" class="rr">R</div>
     <div id="ss" class="ss">S</div>
 
-    <audio src="air-electronic-performers-10000-hz-legend Kopie.mp3">
+    <audio src="mouth.mp3" loop>
         Your browser does not support the
         <code>audio</code> element.
 </audio>
@@ -488,18 +518,7 @@ integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous">
 </script>
 <script src="audio.js"></script>
-<script>
 
-$(document).mousemove(function(event) {
-    windowWidth = $(window).width();
-    windowHeight = $(window).height();
-    
-    mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
-    mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
-    console.log("mood")
-    $('.radial-gradient').css('background', 'radial-gradient(300px at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #c5000000, #003cff)');
-});
-</script>
 
 
 </body>
