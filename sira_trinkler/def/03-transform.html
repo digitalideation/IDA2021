@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .quadrat {
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            margin-left: 10px;
+            display: inline-block;
+            padding: 20px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .rotate {
+            background-color: #C16F5A;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        .rotate:hover {
+            transform: rotate(90deg);
+        }
+
+        .scale {
+            background-color: #651F15;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        .scale:hover {
+            transform: scale(2);
+        }
+
+        .skew {
+            background-color: #1C2A3B;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        .skew:hover {
+            transform: skew(20deg, 40deg);
+        }
+
+        .translate {
+            background-color: #4A5C63;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        .translate:hover {
+            transform: translateX(100px) translateY(50px);
+        }
+
+        .perspective {
+            background-color: #4D4725;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .perspective:hover {
+            transform: rotate(720deg) scale(0.1) translateX(100px);
+        }
+
+.button {
+    background-color: #651F15;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.button-2 {
+    background-color: #1C2A3B;
+    padding: 15px;
+    border-radius: 30px;
+    /* margin-bottom: 50px; */
+    position: absolute;
+    left: 210px;
+    top: 40px;
+}
+
+.button:hover {
+    background-color: #94493e;
+}
+
+.button-2:hover {
+    background-color: #576980;
+}
+
+a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+
+    </style>
+</head>
+<body>
+    <div class="quadrat rotate">rotate</div>
+    <div class="quadrat scale">scale</div>
+    <div class="quadrat skew">skew</div>
+    <div class="quadrat translate">translate</div>
+    <div class="quadrat perspective">mix</div>
+
+    <div class="button">
+        <a href="../myprocess.html">zur übersicht</a>
+    </div>
+    <div class="button-2">
+        <a href="03-transitions.html">weitere Aufgabe</a>
+    </div>
+</body>
+</html>

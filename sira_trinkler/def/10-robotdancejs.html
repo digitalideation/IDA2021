@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+
+    <title>Test Audio</title>
+    <style>
+         :root {
+            /*************************** Page-wide variables ****************************/
+            --scalesize: 1;
+            /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 3vw;
+        }
+        
+        .head {
+            margin-top: 100px;
+            transform: scale(var(--scalesize));
+            width: 400px;
+            height: 400px;
+            transform-origin: bottom center;
+            border-radius: 50%;
+            /* CSS Variablen können auch für Farben im RGB Modus benutzt werden */
+            background-color: rgba(calc(var(--scalesize)* 100), 100, 100, 0.8);
+            box-shadow: 0px 0px 100px 10px rgb(100, calc(var(--scalesize) * 100), 100);
+        }
+        /* some fun with pseudo elements */
+        
+        .head:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: -30px;
+            top: -30px;
+            border-radius: 120px;
+            box-shadow: 0px 0px 100px 10px #ff4a46;
+        }
+        
+        .button {
+            cursor: pointer;
+        }
+
+        .button-1 {
+    background-color: black;
+    padding: 15px;
+    border-radius: 40px;
+    margin-bottom: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    transform: scale(0.5);
+}
+
+.button-2 {
+    background-color: #000000;
+    padding: 15px;
+    border-radius: 40px;
+    /* margin-bottom: 50px; */
+    display: inline;
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    transform: scale(0.5);
+}
+
+.button-1:hover {
+    background-color: #bbbbbb;
+}
+
+.button-2:hover {
+    background-color: #9e9e9e;
+}
+
+a {
+    text-transform: uppercase;
+    color: #BDB288;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+    </style>
+
+
+    <script>
+        const minscale = 0.3 //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
+        const maxscale = 4; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
+    </script>
+</head>
+
+<body>
+
+    <audio src="assets/1957-audio.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+    <div class="head">
+    </div>
+
+    <a onclick="togglePlay()" class="button trigger">Dance</a>
+
+    <div class="button-1">
+        <a href="10-variablescroll.html">zurück</a>
+    </div>
+    <div class="button-2">
+        <a href="../myprocess.html">zurück zur übersicht</a>
+    </div>
+</body>
+<script>
+    const audioEle = document.querySelector('audio');
+
+        var dataArray;
+        var bufferLength;
+        var analyser;
+
+        const fps = 30;
+
+
+        var isPlaying = false;
+
+
+        audioEle.addEventListener('play', () => {
+            startPlay();
+        });
+
+        function startPlay() {
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            const audioSourceNode = audioCtx.createMediaElementSource(audioEle);
+
+            let gainNode = audioCtx.createGain();
+            audioSourceNode.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            analyser = audioCtx.createAnalyser();
+            audioSourceNode.connect(analyser);
+
+            analyser.fftSize = 128;
+            bufferLength = analyser.frequencyBinCount;
+            dataArray = new Uint8Array(bufferLength);
+
+
+            draw();
+        }
+
+        function togglePlay() {
+            isPlaying ? audioEle.pause() : audioEle.play();
+        };
+
+        audioEle.onplaying = function () {
+            isPlaying = true;
+            document.body.classList.remove('paused');
+            document.body.classList.add('playing');
+        };
+
+        audioEle.onpause = function () {
+            isPlaying = false;
+            document.body.classList.remove('playing');
+            document.body.classList.add('paused');
+
+        };
+
+        function draw() {
+
+            setTimeout(function () {
+                requestAnimationFrame(draw);
+
+                analyser.getByteFrequencyData(dataArray); //werte von 0-255
+
+                let sum = 0;
+
+                //mittelwert rechnen
+                for (let i = 0; i < bufferLength; i++) {
+                    sum += map(dataArray[i], 0, 255, minscale, maxscale);
+
+                }
+
+                document.documentElement.style.setProperty('--scalesize', sum / bufferLength);
+
+
+            }, 1000 / fps);
+
+
+
+        }
+
+
+        function map(val, in_min, in_max, out_min, out_max) {
+            return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+        }
+</script>
+
+</html>

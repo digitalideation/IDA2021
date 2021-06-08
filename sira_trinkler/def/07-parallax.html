@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_para-2.css">
+    <title>Document</title>
+    <style>
+
+ @font-face {
+    font-family: Walsheim Regular;
+    src: url(fonts/GT-Walsheim-Regular.woff);
+}
+
+@font-face {
+    font-family: Walsheim Bold;
+    src: url(fonts/GT-Walsheim-Pro-Bold.woff);
+}
+
+@font-face {
+    font-family: Walsheim Medium;
+    src: url(fonts/GT-Walsheim-Medium.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Walsheim Regular;
+}
+
+body {
+    background: #0a2a43;
+    min-height: 1500px;
+    text-align: center;
+}
+
+.parallax {
+  perspective: 1px;
+  perspective-origin: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 0;
+  height: 100vh;
+}
+
+.parallax .group {
+  position: relative;
+	height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax .layer {
+  position: absolute;
+  overflow: hidden;
+}
+
+#texts {
+  transform: translateZ(-3.5px) translateY(80vh) translateX(120px) scale(30);
+  color: white;
+}
+
+#blume {
+    transform: translateZ(-2px) translateY(-1vh) translateX(-300px) scale(2.2);
+}
+
+#rasen {
+    transform: translateZ(-3px) translateY(-1vh) translateX(-300px) scale(2.9);
+}
+
+#haus {
+    transform: translateZ(-3px) translateY(14vh) scale(2);
+}
+
+#berg {
+    transform: translateZ(-5px) translateY(-20vh) translateX(-325px) scale(4.3);
+}
+
+#himmel {
+    transform: translateZ(-6px) translateY(-25vh) translateX(-300px) scale(5);
+}
+
+h2 {
+    text-align: center;
+}
+
+.more {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    overflow: hidden;
+    /* bottom: 0; */
+    width: 100%;
+    z-index: 4;
+    border-radius: 30px;
+}
+
+.more a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+.more li {
+      list-style-type: none;
+      margin-right: 10px;
+      border: solid white 1px;
+      /* border-radius: 50px; */
+      margin-top: 40px;
+      background-color: transparent;
+      border-radius: 30px;
+    }
+
+.more li:last-of-type {
+    margin-right: 50px;
+}
+
+.more li a {
+      display: inline;
+      padding: 10px;
+      display: inline-block;
+    }
+
+.more li:hover {
+    background-color: rgb(240, 131, 112);
+    border: solid 1px black;
+    color: black;
+}
+
+.more a:hover {
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <div class="more">
+        <li><a href="../myprocess.html">zurück zur übersicht</a></li>
+        <li><a href="07-svg2.html">zurück</a></li>
+    </div>
+        <!-- von codepen -->
+        <div id="denver-parallax">
+        
+            <div id="parallax" class="parallax">
+        
+                <div class="group">
+                    <div id="himmel" class="layer">
+                        <img src="bilder/sky.jpg" id="sky">
+                    </div>
+        
+                    <div id="berg" class="layer">
+                        <img src="bilder/mountain.png" id="mountain">
+                    </div>
+        
+                    <div id="haus" class="layer">
+                        <img src="bilder/house.png" id="house">
+                    </div>
+        
+                    <div id="rasen" class="layer">
+                        <img src="bilder/wiese.png" id="wiese">
+                    </div>
+        
+                    <div id="blume" class="layer">
+                        <img src="bilder/flower.png" id="flower">
+                    </div>
+        
+                    <div id="texts" class="layer">
+                        <h2 id="text">1957</h2>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+</body>
+</html>

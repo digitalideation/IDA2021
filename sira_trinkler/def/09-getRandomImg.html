@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <title>Get Random Image from API</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 4em;
+            font-weight: 200;
+        }
+        
+        .songtext {
+            z-index: 5;
+            position: relative;
+        }
+        
+        a {
+            font-weight: 400;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            color: black;
+        }
+        
+        a div {
+            position: absolute;
+            top: -5vw;
+            left: 0px;
+            width: 15vw;
+            height: 15vw;
+            z-index: 1;
+            mix-blend-mode: multiply;
+            border-radius: 50%;
+        }
+        
+        a div img {
+            width: 100%;
+            display: block;
+            ;
+        }
+        
+        a.white {
+            color: white;
+        }
+
+        /* NAVIGATION */
+nav {
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
+      position: fixed;
+      /* overflow: hidden; */
+      /* bottom: 0; */
+      width: 100%;
+      /* box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.15); */
+      z-index: 4;
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+
+    nav li {
+      list-style-type: none;
+      margin-right: 5px;
+      border: solid black 1px;
+      /* border-radius: 50px; */
+      background-color: #BDB288;
+    }
+
+    /* nav li:last-of-type {
+      margin-right: 50px;
+    } */
+
+    li.last {
+        position: absolute;
+        left: 87%;
+        top: 12%;
+    }
+
+
+    nav ul li {
+      display: inline;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      /* padding: 10px; */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.3em;
+      padding-top: 0;
+    }
+
+    nav li:hover {
+      background-color: #dbd2aa;
+    }
+
+    nav li a,
+    .dropbtn {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    
+    <a class="getImg" href="#">Love</a>, love is a <a class="getImg" href="#">verb</a>. <a class="getImg" href="#">Love</a> is a doing <a class="getImg" href="#">word</a>. <a class="getImg" href="#">Feathers</a> on my breath. Gentle impulsion. Shakes
+    me, makes me lighter. Feathers on my breath. Teardrop on the fire. Feathers on my breath.
+    <a class="getImg">Night</a>, night of matter. Black flowers <a class="getImg" href="#">blossom</a>. Feathers on my breath. Black <a class="getImg" href="#">flowers</a> blossom. Feathers on my breath. <a class="getImg" href="#">Water</a> is my eye.
+    Most faithful mirror. Feathers on my breath. Teardrop on the <a class="getImg" href="#">fire</a>. Of a confession. Feathers on my breath. Most faithful <a class="getImg" href="#">mirror</a>. Feathers on my breath.
+
+    <nav>
+        <ul>
+            <li><a href="09-getRandomImg-2.html">zurück</a></li>
+            <li><a href="../myprocess.html">zurück zur übersicht</a></li>
+        </ul>
+    </nav>
+<script>
+    let els = document.getElementsByTagName("a");
+    for (i in els) {
+        els[i].addEventListener("mouseover", function(event) { //hier wird auf alle a Elemente ein Event listener auf das Event mouseover gelegt
+            if (event.target.className === 'getImg') { // hier wird gefragt ob sie die Klasse getImg besitzen
+
+                let div = document.createElement('div'); //hier wird ein Div kreiiert
+                //hier wird dem div zwei background images zugewiesen. Der Trick ist, den Inhalt vom a über event.target.innerHTML abzufragen und der URL mitzugeben
+                div.style.backgroundImage = 'url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=1), url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=2), radial-gradient(rgb(201, 192, 192), rgb(0, 140, 255))';
+                //hier wird das CSS konstruiert
+                div.style.backgroundPosition = '0 0, 0 50px, 0 0';
+                div.style.backgroundBlendMode = 'overlay, screen';
+                div.style.backgroundSize = 'cover, cover';
+                //hier wird das kreierte div dem a angehängt
+                event.target.appendChild(div);
+                //hier wird die Klasse getImg entfernt -- sonst würden bei jedem mouseover event immer neue Bilder hinzugefügt
+                event.target.classList.remove("getImg");
+                // hier wird der Textstil auf weiss gesetzt 
+                event.target.setAttribute("class", "white");
+            }
+
+        }, false);
+    }
+</script>
+</body>
+
+</html>

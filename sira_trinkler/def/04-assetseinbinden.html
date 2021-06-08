@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google Fonts einbinden im HTML-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>Assets</title>
+    <style>
+        @font-face {
+            font-family: "Suisse Edu Intl Book";
+            src: url(fonts/SuisseEDUIntl-Book-WebS.woff2);
+        }
+
+        /* Google Fonts einbinden im CSS */
+        @import url('https://fonts.googleapis.com/css?family=Butterfly+Kids|Roboto');
+
+        body {
+            background-color: #BDB288;
+        }
+
+        p {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1em;
+            text-transform: uppercase;
+            color: white;
+            margin-left: 250px;
+            letter-spacing: 1px;
+        }
+
+        p.book {
+            font-family: Suisse Edu Intl Book;
+            font-size: 1em;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        img {
+            margin-left: 10px;
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+
+        .fonts {
+            background-color: #4D4725;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+    .scroll {
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        fill: #651F15;
+    }
+
+    video {
+        width: 50%;
+        margin-right: 10px;
+    }
+
+    audio {
+        margin: 10px;
+    }
+
+    .audio {
+        background-color: #C16F5A;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100px;
+    }
+
+    /* NAVIGATION AUDIO */
+a.trigger {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  top: 9px;
+  font-family: Suisse Edu Intl Book;
+  background-color: #1C2A3B;
+  padding: 10px;
+}
+
+.trigger::before {
+    content: 'PLAY ';
+}
+
+.playing .trigger::before {
+  content: 'PAUSE ';
+}
+ 
+.paused .trigger::before {
+  content: 'PLAY ';
+}
+
+.button {
+    background-color: #651F15;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+
+.button:hover {
+    background-color: #94493e;
+}
+
+a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+
+    </style>
+</head>
+<body>
+    <div class="fonts">
+    <p>hallo ich bin eine Fredoka One. Ich wurde über das Web eingebettet (Google Fonts).</p> 
+    <p class="book">hallo ich bin eine Suisse Edu Intl Book. Ich befinde mich auf dem Computer.</p>
+    </div>
+    <img src="bilder/flower vintage.jpeg" width="300" alt="jpg">
+    <img src="bilder/mountain.png" width="400" alt="png">
+    <img src="bilder/blubblack.gif" width="380" alt="gif">
+    <img src="bilder/arrownew.svg" width="300" alt="svg">
+
+    <svg class="scroll" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+        <g>
+            <path d="M18.5,27.6l0.6-1.1c1.3,0.8,2.7,0.6,3.8-0.6c1.1-1.3,1-2.5,0.1-3.3C22,21.9,21.1,22,19.1,23c-2.2,1.2-3.4,1.2-4.5,0.2
+    		c-1.3-1.2-1.3-2.9,0-4.4c1-1.1,2.2-1.5,3.6-1.2L18,18.8c-1-0.2-2,0.1-2.6,0.8c-0.8,0.9-0.8,2.1,0,2.8c0.8,0.7,1.8,0.5,3.5-0.4
+    		c2.4-1.3,3.6-1.2,4.9-0.2c1.5,1.3,1.5,3.1-0.1,4.9C22.2,28.3,20.2,28.7,18.5,27.6z" />
+            <path d="M22.7,18.8c-2.1-3.1-1.7-6.1,1.1-8c1.9-1.3,3.9-1.4,5.8-0.1l-0.7,1c-1.5-1-2.9-1-4.4,0c-2.2,1.5-2.5,3.8-0.7,6.4
+    		c1.8,2.6,4,3.2,6.1,1.7c1.5-1,2.1-2.5,1.7-4.2l1.2-0.3c0.5,2.2-0.3,4.1-2.2,5.4C27.7,22.6,24.8,21.9,22.7,18.8z" />
+            <path d="M41.4,15.5l-4.5-3.9l-0.7,0.3l-1.5,0.5l1.7,4.9l-1.1,0.4l-3.8-11l3.1-1.1c2.4-0.8,4-0.2,4.7,1.8c0.5,1.5,0.1,2.8-1.2,3.7
+    		l4.7,4L41.4,15.5z M36.2,10.7c1.7-0.6,2.4-1.6,1.9-2.9c-0.5-1.3-1.6-1.7-3.3-1.1l-1.9,0.7l1.4,4L36.2,10.7z" />
+            <path d="M42.2,9.2c-0.2-3.6,1.8-6.1,5-6.3c3.2-0.2,5.5,2.1,5.7,5.7c0.2,3.6-1.8,6.1-4.9,6.3C44.7,15.1,42.4,12.8,42.2,9.2z
+    		 M51.6,8.7c-0.2-3-1.9-4.8-4.4-4.6c-2.5,0.2-4,2.1-3.8,5.1c0.2,3,1.9,4.7,4.4,4.6C50.3,13.6,51.8,11.6,51.6,8.7z" />
+            <path d="M56.5,3.4l1.2,0.2l-2,10.3l5.2,1L60.6,16l-6.4-1.2L56.5,3.4z" />
+            <path d="M65.7,5.6l1.1,0.5l-4.1,9.7l4.9,2l-0.4,1l-6-2.5L65.7,5.6z" />
+            <path d="M78.1,12.1l2.4,2.1c2.8,2.5,3,5.6,0.5,8.4c-2.5,2.8-5.4,2.9-8.3,0.3l-2.3-2.1L78.1,12.1z M73.4,22c2.4,2.2,4.7,2.1,6.7-0.3
+    		c2.1-2.4,2-4.6-0.4-6.7l-1.5-1.3L72,20.8L73.4,22z" />
+            <path d="M82.3,24c3.1-1.9,6.2-1.3,7.9,1.4c1.7,2.7,0.8,5.8-2.3,7.7c-3.1,1.9-6.2,1.3-7.9-1.4C78.4,28.9,79.3,25.8,82.3,24z
+    		 M87.3,32c2.5-1.6,3.3-3.9,2-6.1c-1.3-2.1-3.8-2.5-6.3-1c-2.5,1.5-3.3,3.9-2,6.1S84.8,33.6,87.3,32z" />
+            <path
+                d="M94.5,33l0.2,1.2L85.6,39l9.7,1l0.2,1l-8.4,4.8l10.2,0.7l0.3,1.2l-12.1-0.9l-0.2-1.2l8.3-4.8L84,39.9l-0.2-1.2L94.5,33z" />
+            <path d="M96,60.4l-11.5-1.6l0.2-1.3L95,53.2l-9.5-1.3l0.2-1.2l11.5,1.6l-0.2,1.3L86.7,58l9.5,1.3L96,60.4z" />
+            <path d="M88.3,64.8l-2.6,5.4l-0.8-0.4l2.6-5.4L88.3,64.8z" />
+            <path d="M81.6,72.2L81,73.3c-1.3-0.8-2.7-0.6-3.8,0.6c-1.1,1.3-1,2.5-0.1,3.3c0.9,0.8,1.9,0.7,3.8-0.3c2.2-1.2,3.4-1.3,4.5-0.3
+    		c1.3,1.2,1.3,2.9,0,4.4c-1,1.1-2.2,1.5-3.6,1.3l0.2-1.2c1,0.2,2-0.1,2.6-0.8c0.8-0.9,0.7-2.1,0-2.8C84,76.8,83,77,81.3,77.9
+    		c-2.4,1.3-3.6,1.2-4.9,0.2c-1.5-1.3-1.5-3.1,0.1-4.9C77.9,71.6,79.9,71.2,81.6,72.2z" />
+            <path d="M77.5,81.1c2.1,3.1,1.7,6.1-1,8c-1.9,1.3-3.9,1.4-5.8,0.1l0.7-1c1.5,1,2.9,1,4.4-0.1c2.2-1.5,2.5-3.8,0.7-6.4
+    		c-1.8-2.6-4-3.2-6.2-1.7c-1.5,1-2.1,2.5-1.7,4.2l-1.2,0.3c-0.5-2.2,0.3-4.1,2.2-5.5C72.4,77.3,75.4,78,77.5,81.1z" />
+            <path d="M58.8,84.4l4.5,3.9L64,88l1.5-0.5l-1.7-4.9l1.1-0.4l3.9,11l-3.1,1.1c-2.4,0.8-4,0.2-4.7-1.8c-0.5-1.5-0.1-2.8,1.2-3.7
+    		l-4.8-4L58.8,84.4z M64,89.2c-1.7,0.6-2.4,1.6-1.9,2.9c0.5,1.3,1.6,1.7,3.3,1.1l1.9-0.7l-1.4-4L64,89.2z" />
+            <path d="M58,90.7c0.2,3.6-1.7,6.1-4.9,6.3c-3.2,0.2-5.5-2-5.7-5.6c-0.2-3.6,1.7-6.1,4.9-6.3C55.5,84.9,57.8,87.1,58,90.7z
+    		 M48.6,91.4c0.2,3,1.9,4.7,4.5,4.6c2.5-0.2,4-2.2,3.8-5.1c-0.2-2.9-1.9-4.7-4.5-4.6C49.9,86.4,48.4,88.4,48.6,91.4z" />
+            <path d="M43.8,96.7l-1.2-0.2l2-10.4l-5.2-1l0.2-1.1l6.4,1.2L43.8,96.7z" />
+            <path d="M34.5,94.5L33.4,94l4-9.7l-4.9-2l0.4-1l6,2.5L34.5,94.5z" />
+            <path d="M22.1,88l-2.4-2.1c-2.8-2.5-3-5.5-0.6-8.4c2.5-2.8,5.4-2.9,8.3-0.4l2.4,2.1L22.1,88z M26.8,78.1c-2.4-2.2-4.7-2.1-6.7,0.3
+    		c-2.1,2.4-1.9,4.6,0.4,6.7l1.5,1.3l6.2-7.1L26.8,78.1z" />
+            <path d="M17.8,76.2c-3.1,1.9-6.2,1.3-7.9-1.4c-1.7-2.7-0.8-5.8,2.3-7.7c3.1-1.9,6.2-1.3,7.9,1.4C21.8,71.2,20.9,74.3,17.8,76.2z
+    		 M12.8,68.2c-2.5,1.6-3.3,3.9-1.9,6.1s3.8,2.5,6.3,1c2.5-1.6,3.3-3.9,1.9-6.1S15.3,66.6,12.8,68.2z" />
+            <path
+                d="M5.6,67.2L5.4,66l9.1-4.8l-9.7-1l-0.2-1l8.4-4.8L2.7,53.7l-0.3-1.2l12.1,0.9l0.2,1.2l-8.3,4.8l9.6,1l0.2,1.2L5.6,67.2z" />
+            <path d="M3.9,39.8l11.5,1.5l-0.2,1.3L5,47l9.5,1.2l-0.2,1.2L2.9,48L3,46.7l10.2-4.5L3.8,41L3.9,39.8z" />
+            <path d="M11.6,35.4l2.5-5.4l0.8,0.4l-2.5,5.4L11.6,35.4z" />
+        </g>
+    </svg>
+
+
+
+<div class="audio">
+    <audio src="assets/1957-audio.mp3" controls></audio>
+
+    <audio class="js" id="myAudio" src="assets/1957-audio.mp3"></audio>
+    <a onClick="togglePlay()" class="trigger">♪ 1957</a>
+</div>
+
+<video src="assets/1957.mp4" controls></video>
+
+<iframe width="660" height="415" src="https://www.youtube-nocookie.com/embed/k8Mc8YRigmw"></iframe>
+
+<div class="button">
+    <a href="../myprocess.html">zur übersicht</a>
+</div>
+
+    <!-- JS für Audio -->
+    <script>
+        var myAudio = document.getElementById("myAudio");
+        var isPlaying = false;
+
+        function togglePlay() {
+            isPlaying ? myAudio.pause() : myAudio.play();
+        };
+
+        myAudio.onplaying = function () {
+            isPlaying = true;
+            document.body.classList.remove('paused')
+            document.body.classList.add('playing')
+        };
+
+        myAudio.onpause = function () {
+            isPlaying = false;
+            document.body.classList.remove('playing')
+            document.body.classList.add('paused')
+        };
+    </script>
+</body>
+</html>

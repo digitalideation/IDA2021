@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+ @font-face {
+    font-family: Walsheim Regular;
+    src: url(fonts/GT-Walsheim-Regular.woff);
+}
+
+@font-face {
+    font-family: Walsheim Bold;
+    src: url(fonts/GT-Walsheim-Pro-Bold.woff);
+}
+
+@font-face {
+    font-family: Walsheim Medium;
+    src: url(fonts/GT-Walsheim-Medium.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Walsheim Regular;
+}
+
+html, body {
+  background: #111;
+}
+
+#container {
+  background: #111;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#stats {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* NAVIGATION */
+nav {
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
+      position: fixed;
+      /* overflow: hidden; */
+      /* bottom: 0; */
+      width: 100%;
+      /* box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.15); */
+      z-index: 4;
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+
+    nav li {
+      list-style-type: none;
+      margin-right: 5px;
+      border: solid black 1px;
+      /* border-radius: 50px; */
+      background-color: #BDB288;
+    }
+
+    /* nav li:last-of-type {
+      margin-right: 50px;
+    } */
+
+    li.last {
+        position: absolute;
+        left: 87%;
+        top: 12%;
+    }
+
+
+    nav ul li {
+      display: inline;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav li:hover {
+      background-color: #dbd2aa;
+    }
+
+    nav li a,
+    .dropbtn {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 5;
+    }
+
+    .dropdown-content a {
+      color: black;
+      /* padding: 12px 16px; */
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .active {
+        background-color: white;
+        color: black;
+    }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="08-viewport.html">zurück</a></li>
+            <li><a href="../myprocess.html">zurück zur übersicht</a></li>
+            <li><a href="08-smoothscroll.html">weitere Aufgabe</a></li>
+        </ul>
+    </nav>
+    <div id='container'></div>
+
+    <script>
+
+    var NUM_PARTICLES = ((ROWS = 100) * (COLS = 300)),
+        THICKNESS = Math.pow(80, 2),
+        SPACING = 3,
+        MARGIN = 100,
+        COLOR = 220,
+        DRAG = 0.95,
+        EASE = 0.25,
+
+        /*
+        
+        used for sine approximation, but Math.sin in Chrome is still fast enough :)http://jsperf.com/math-sin-vs-sine-approximation
+    
+        B = 4 / Math.PI,
+        C = -4 / Math.pow( Math.PI, 2 ),
+        P = 0.225,
+    
+        */
+
+        container,
+        particle,
+        canvas,
+        mouse,
+        stats,
+        list,
+        ctx,
+        tog,
+        man,
+        dx, dy,
+        mx, my,
+        d, t, f,
+        a, b,
+        i, n,
+        w, h,
+        p, s,
+        r, c
+        ;
+
+    particle = {
+        vx: 0,
+        vy: 0,
+        x: 0,
+        y: 0
+    };
+
+    function init() {
+
+        container = document.getElementById('container');
+        canvas = document.createElement('canvas');
+
+        ctx = canvas.getContext('2d');
+        man = false;
+        tog = true;
+
+        list = [];
+
+        w = canvas.width = COLS * SPACING + MARGIN * 2;
+        h = canvas.height = ROWS * SPACING + MARGIN * 2;
+
+        container.style.marginLeft = Math.round(w * -0.5) + 'px';
+        container.style.marginTop = Math.round(h * -0.5) + 'px';
+
+        for (i = 0; i < NUM_PARTICLES; i++) {
+
+            p = Object.create(particle);
+            p.x = p.ox = MARGIN + SPACING * (i % COLS);
+            p.y = p.oy = MARGIN + SPACING * Math.floor(i / COLS);
+
+            list[i] = p;
+        }
+
+        container.addEventListener('mousemove', function (e) {
+
+            bounds = container.getBoundingClientRect();
+            mx = e.clientX - bounds.left;
+            my = e.clientY - bounds.top;
+            man = true;
+
+        });
+
+        if (typeof Stats === 'function') {
+            document.body.appendChild((stats = new Stats()).domElement);
+        }
+
+        container.appendChild(canvas);
+    }
+
+    function step() {
+
+        if (stats) stats.begin();
+
+        if (tog = !tog) {
+
+            if (!man) {
+
+                t = +new Date() * 0.001;
+                mx = w * 0.5 + (Math.cos(t * 2.1) * Math.cos(t * 0.9) * w * 0.45);
+                my = h * 0.5 + (Math.sin(t * 3.2) * Math.tan(Math.sin(t * 0.8)) * h * 0.45);
+            }
+
+            for (i = 0; i < NUM_PARTICLES; i++) {
+
+                p = list[i];
+
+                d = (dx = mx - p.x) * dx + (dy = my - p.y) * dy;
+                f = -THICKNESS / d;
+
+                if (d < THICKNESS) {
+                    t = Math.atan2(dy, dx);
+                    p.vx += f * Math.cos(t);
+                    p.vy += f * Math.sin(t);
+                }
+
+                p.x += (p.vx *= DRAG) + (p.ox - p.x) * EASE;
+                p.y += (p.vy *= DRAG) + (p.oy - p.y) * EASE;
+
+            }
+
+        } else {
+
+            b = (a = ctx.createImageData(w, h)).data;
+
+            for (i = 0; i < NUM_PARTICLES; i++) {
+
+                p = list[i];
+                b[n = (~~p.x + (~~p.y * w)) * 4] = b[n + 1] = b[n + 2] = COLOR, b[n + 3] = 255;
+            }
+
+            ctx.putImageData(a, 0, 0);
+        }
+
+        if (stats) stats.end();
+
+        requestAnimationFrame(step);
+    }
+
+    init();
+    step();
+    </script>
+</body>
+</html>

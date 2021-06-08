@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+    <title>Change Attributes</title>
+    <style>
+        * {
+    font-family: 'Raleway', sans-serif;
+}
+
+article {
+    position: relative;
+    background-color: lightskyblue;
+    top: 0px;
+    left: 0px;
+    min-height: 80vh;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 3s ease-in-out 1s;
+}
+
+article header {
+    font-size: 1rem;
+    transition: all 3s ease-in-out 1s;
+}
+
+
+/*
+Der Trick ist nun, dass was vorher über hover animiert wurde, über die neue Klasse auszulösen
+Statt:
+article:hover {
+    background-color: rgb(189, 202, 130);
+}
+*/
+
+article.myclass {
+    background-color: rgb(189, 202, 130);
+}
+
+article.myclass header {
+    font-size: 2rem;
+}
+
+    /* NAVIGATION */
+nav {
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
+      position: fixed;
+      /* overflow: hidden; */
+      /* bottom: 0; */
+      width: 100%;
+      /* box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.15); */
+      z-index: 4;
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+
+    nav li {
+      list-style-type: none;
+      margin-right: 5px;
+      border: solid black 1px;
+      /* border-radius: 50px; */
+      background-color: #C16F5A;
+    }
+
+    /* nav li:last-of-type {
+      margin-right: 50px;
+    } */
+
+    li.last {
+        position: absolute;
+        left: 87%;
+        top: 12%;
+    }
+
+
+    nav ul li {
+      display: inline;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav li:hover {
+      background-color: #d69584;
+    }
+
+    nav li a,
+    .dropbtn {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 5;
+    }
+
+    .dropdown-content a {
+      color: black;
+      /* padding: 12px 16px; */
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .active {
+        background-color: white;
+        color: black;
+    }
+    </style>
+</head>
+
+<body>
+<nav>
+    <ul>
+        <li><a href="08-jsmouse.html">zurück</a></li>
+        <li><a href="../myprocess.html">zurück zur übersicht</a></li>
+        <li><a href="08-particles.html">weitere Aufgabe</a></li>
+    </ul>
+</nav>
+    <section>
+        <article>
+
+            <div>
+                <header>Ich bin eine Titelbeschriftung</header>
+                <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit</p>
+            </div>
+
+        </article>
+        <article>
+            <div>
+                <header>Ich bin eine Titelbeschriftung</header>
+                <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <header>Ich bin eine Titelbeschriftung</header>
+                <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <header>Ich bin eine Titelbeschriftung</header>
+                <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit</p>
+            </div>
+        </article>
+    </section>
+</body>
+<script>
+    // javascript event handlers https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+        // hier wird die scroll Funktion abgehört, immer wenn der User scrollt wird die gesamte Funktion ausgeführt
+        window.onscroll = function () {
+            //alle Elemente mit dem Tag article werden in die Variable articles geschrieben, diese ist ein Array mit allenfalls mehreren Einträgen
+            let articles = document.getElementsByTagName("article");
+
+            //hier wird durch alle Einträge im Array durchgeloopt
+            //
+            for (let i = 0; i < articles.length; i++) {
+                // bei jedem einzelnen wird abgetragt, wo er sich im Moment in Bezug auf den Viewport befindet
+                let domRect = articles[i].getBoundingClientRect();
+                /* https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect*/
+
+                //falls die Distanz der oberen Ecke zum viewport kleiner ist als die Höhe des viewports
+                // ist das Element entweder im viewport oder bereits oben wieder rausgerutscht 
+                if (domRect.top < window.innerHeight) {
+                    console.log("ich bin im viewport");
+                    articles[i].setAttribute("class", "myclass");
+
+                    // falls der untere Punkt im Minus liegt ist es oben rausgerutscht
+                    if (domRect.bottom < 0) {
+                        console.log("ich bin oben rausgerutscht");
+                        articles[i].classList.remove("myclass");
+                    }
+                } else {
+                    console.log("ich bin noch nicht im viewport");
+                    articles[i].classList.remove("myclass");
+                }
+
+                // die console.log könnt ihr im live modus auskommentieren! Sind bloss zum Testen da.
+
+            }
+        };
+</script>
+
+</html>

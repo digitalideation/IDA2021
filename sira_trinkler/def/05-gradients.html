@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 20px;
+        }
+
+        .radialgradient {
+            height: 200px;
+            width: 600px;
+            background-image: radial-gradient(#C16F5A, #1C2A3B);
+            margin-bottom: 10px;
+        }
+
+        .lineargradient {
+            height: 200px;
+            width: 600px;
+            background-image: linear-gradient(to bottom right, #BDB288, #4D4725, #651F15);
+            margin-bottom: 10px;
+        }
+
+        .link {
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.2em;
+            padding-left: 10px;
+        }
+
+        .btn {
+            background-color: #C16F5A;
+            padding: 10px;
+            width: 250px;
+            margin-bottom: 200px;
+            border-radius: 50px;
+        }
+
+        .btn:hover {
+            background-color: #651F15;
+            padding: 10px;
+            width: 250px;
+        }
+
+        .btn-2 {
+            background-color: #1C2A3B;
+            padding: 10px;
+            width: 250px;
+            position: absolute;
+            top: 320px;
+            left: 1080px;
+            border-radius: 50px;
+        }
+
+        .btn-2:hover {
+            background-color: #4A5C63;
+            padding: 10px;
+            width: 250px;
+        }
+
+
+        img {
+    width: 100%;
+    max-width: 120px;
+}
+
+.gradient section {
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+.gradient {
+    background-image: repeating-radial-gradient(circle, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%),
+                      repeating-radial-gradient(circle at top left, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%),
+                      repeating-radial-gradient(circle at bottom left, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%),
+                      repeating-radial-gradient(circle at bottom right, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%),
+                      repeating-radial-gradient(circle at top right, rgba(250, 128, 114, .5), rgba(255, 165, 0, .5) 20%);
+
+}
+
+.gradient img.eins {
+    mix-blend-mode: soft-light;
+}
+
+.gradient img.zwei {
+    mix-blend-mode: multiply;
+}
+
+.gradient img.drei {
+    mix-blend-mode: color-burn;
+}
+
+.gradient img.vier {
+    mix-blend-mode:color-dodge;
+}
+
+.gradient img.fuenf {
+    mix-blend-mode: darken;
+}
+
+.gradient img.sechs {
+    mix-blend-mode: overlay;
+}
+
+.gradient img.sieben {
+    mix-blend-mode: hue;
+}
+
+.gradient img.acht {
+    mix-blend-mode: saturation;
+}
+p {
+    display: inline;
+    position: relative;
+    left: -120px;
+    top: 10px;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: sans-serif;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding-top: 50px;
+    height: 100px;
+    color: white;
+}
+
+.pattern {
+    background: url(bilder/farbmood.jpeg);
+    background-size: 100px;
+    height: 1000px;
+    width: 100%;
+}
+
+.button {
+    background-color: #651F15;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.button:hover {
+    background-color: #94493e;
+}
+
+
+a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+
+.path {
+    clip-path: circle(50px at 0 100px);
+    background-color: #4D4725;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 800px;
+}
+
+.path-2 {
+    clip-path: circle(35px at 40px 40px);
+    background-color: #C16F5A;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50px;
+    left: 900px;
+}
+
+.path-3 {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color: #BDB288;
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    top: 150px;
+    left: 800px;
+}
+
+li {
+    color: white;
+}
+
+li a:hover {
+    color: #BDB288;
+}
+
+h2 {
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+    </style>
+</head>
+<body>
+
+    <div class="radialgradient"></div>
+    <div class="lineargradient"></div>
+<div class="btn">
+    <a class="link" href="https://cssgradient.io/">good link for gradients</a>
+</div>
+<h2>GUTE LINKS</h2>
+<ul>
+    <li>
+        <a href="https://doodad.dev/pattern-generator/">Doodad - Pattern Generator</a>
+    </li>
+    <li>
+        <a href="https://app.haikei.app/">Haikei - Pattern / SVG-Maker</a>
+    </li>
+    <li>
+        <a href="https://www.w3schools.com/cssref/func_repeating-radial-gradient.asp">W3Schools - Radial Gradient</a>
+    </li>
+</ul>
+<div class="path"></div>
+<div class="path-2"></div>
+<div class="path-3"></div>
+<div class="pattern"></div>
+<div class="btn-2">
+    <a class="link" href="https://bennettfeely.com/clippy/">good link for clip paths</a>
+</div>
+
+<div class="gradient">
+    <H1>VERSCHIEDENE BLENDMODES</H1>
+    <section>
+        <img class="eins" src="bilder/face.png" alt="">
+        <p>soft light</p>
+        <img class="zwei" src="bilder/face.png" alt="">
+        <p>multiply</p>
+        <img class="drei" src="bilder/face.png" alt="">
+        <p>color burn</p>
+        <img class="vier" src="bilder/face.png" alt="">
+        <p>color dodge</p>
+        <img class="fuenf" src="bilder/face.png" alt="">
+        <p>darken</p>
+        <img class="sechs" src="bilder/face.png" alt="">
+        <p>overlay</p>
+        <img class="sieben" src="bilder/face.png" alt="">
+        <p>hue</p>
+        <img class="acht" src="bilder/face.png" alt="">
+        <p>saturation</p>
+    </section>
+</div>
+<div class="button">
+    <a href="../myprocess.html">zur übersicht</a>
+</div>
+</body>
+</html>
+

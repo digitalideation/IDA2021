@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<style>
+    body {
+        padding: 50px;
+    }
+
+    .trigger {
+        width: 200px;
+        height: 200px;
+        border: 20px solid #999;
+        background: #ddd;
+        margin-bottom: 20px;
+    }
+
+    .box {
+        display: inline-block;
+        background: #BDB288;
+        width: 200px;
+        height: 200px;
+        transition: transform 300ms ease-in-out;
+        pointer-events: none;
+    }
+
+    .trigger.clicked .box {
+        transform: translate(200px, 150px) rotate(20deg);
+    }
+
+    .box-2 {
+        display: inline-block;
+        background: #C16F5A;
+        width: 200px;
+        height: 200px;
+        transition: transform 300ms ease-in-out;
+        pointer-events: none;
+    }
+
+    .trigger:hover .box-2 {
+        transform: translate(200px, 150px) rotate(20deg);
+    }
+    
+    p {
+        font-size: 30px;
+        font-family: sans-serif;
+        margin-left: 35px;
+        margin-top: 80px;
+    }
+
+    .button {
+    background-color: #651F15;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.button-2 {
+    background-color: #1C2A3B;
+    padding: 15px;
+    border-radius: 30px;
+    /* margin-bottom: 50px; */
+    display: inline;
+}
+
+.button:hover {
+    background-color: #94493e;
+}
+
+.button-2:hover {
+    background-color: #576980;
+}
+
+a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+        font-size: 0.8em;
+}
+</style>
+<body>
+    <div class="trigger">
+        <div class="box">
+            <p>click me</p>
+        </div>
+    </div>
+    <div class="trigger">
+        <div class="box-2">
+            <p>hover me</p>
+        </div>
+    </div>
+</body>
+
+<div class="button">
+    <a href="03-transform.html">zurück</a>
+</div>
+<div class="button-2">
+    <a href="03-animations.html">weitere Aufgabe</a>
+</div>
+
+<!-- ACHTUNG: Das ist jQuery! Dafür braucht es den script-Link oben, sonst geht es nicht -->
+<script>
+    $('.trigger').on('click', function () {
+        $(this).toggleClass('clicked');
+    });
+</script>
+</html>
