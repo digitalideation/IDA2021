@@ -54,7 +54,7 @@ nav ul li{
     align-items:center;
     flex-direction:row;
 
-    width: 15%;
+   
     color: white;
     border: none;
     background-color: #191919;
@@ -129,7 +129,7 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 60%;
+    width: 50%;
 }
 
 #section_1 .sub_nav ul{
@@ -154,7 +154,7 @@ nav ul li a{
     background-color: #191919;
     border-radius: 3vh;
     padding: 5px 10px ;
-    width: 20%;
+    
 
     box-shadow: 
     4px 4px 6px 0 #070707 ,
