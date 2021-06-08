@@ -1,4 +1,6 @@
 // Codesnipets from www.jasondavies.com/wordcloud/
+//Quelle:https://stackoverflow.com/questions/1901966/how-to-create-a-cloud-chart
+
 
 var gedankenSong = [
 	
