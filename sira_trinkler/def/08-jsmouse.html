@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+     @font-face {
+    font-family: Walsheim Regular;
+    src: url(fonts/GT-Walsheim-Regular.woff);
+}
+
+@font-face {
+    font-family: Walsheim Bold;
+    src: url(fonts/GT-Walsheim-Pro-Bold.woff);
+}
+
+@font-face {
+    font-family: Walsheim Medium;
+    src: url(fonts/GT-Walsheim-Medium.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Walsheim Regular;
+}
+    /* NAVIGATION */
+nav {
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
+      position: fixed;
+      /* overflow: hidden; */
+      /* bottom: 0; */
+      width: 100%;
+      /* box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.15); */
+      z-index: 4;
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+
+    nav li {
+      list-style-type: none;
+      margin-right: 5px;
+      border: solid black 1px;
+      /* border-radius: 50px; */
+      background-color: #BDB288;
+    }
+
+    /* nav li:last-of-type {
+      margin-right: 50px;
+    } */
+
+    li.last {
+        position: absolute;
+        left: 87%;
+        top: 12%;
+    }
+
+
+    nav ul li {
+      display: inline;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav li:hover {
+      background-color: #dbd2aa;
+    }
+
+    nav li a,
+    .dropbtn {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 5;
+    }
+
+    .dropdown-content a {
+      color: black;
+      /* padding: 12px 16px; */
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .active {
+        background-color: white;
+        color: black;
+    }
+  </style>
+</head>
+<style>
+  html, body {
+    height :100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+#canvas {
+  background-color: black;
+  position: fixed;
+}
+
+</style>
+<body>
+  <nav>
+    <ul>
+      <li><a href="08-robotausprobieren.html">zurück</a></li>
+      <li><a href="../myprocess.html">zurück zur übersicht</a></li>
+      <li><a href="08-viewport.html">weitere Aufgabe</a></li>
+    </ul>
+  </nav>
+    <canvas id="canvas">
+    </canvas>
+
+    <script>
+      const canvas = document.querySelector('canvas')
+        const c = canvas.getContext('2d')
+
+        const mouse = {
+          x: window.innerWidth / 8,
+          y: window.innerHeight / 20
+        }
+
+        const colours = [
+          '#2185C5',
+          '#7ECEFD',
+          '#FFF6E5',
+          '#FF7F66'
+        ]
+
+        const limit = 70
+
+        // Event listeners
+        window.addEventListener('mousemove', function (event) {
+          mouse.x = event.clientX
+          mouse.y = event.clientY
+        })
+
+        window.addEventListener('resize', setCanvasDimensions)
+
+        window.addEventListener('click', function () {
+          // explode?
+        })
+
+        // Utility functions
+        function setCanvasDimensions() {
+          canvas.height = window.innerHeight
+          canvas.width = window.innerWidth
+        }
+
+        function randomIntFromRange(min, max) {
+          return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        function randomColour() {
+          return colours[randomIntFromRange(0, colours.length)]
+        }
+
+        function Particle({ x, y, velocity, radius, colour } = {}) {
+          this.x = x
+          this.y = y
+          this.velocity = velocity || 0.05
+          this.radius = radius
+          this.colour = randomColour()
+          this.radians = Math.random() * Math.PI * 2
+          this.distanceFromCenter = randomIntFromRange(50, 120)
+          this.lastMouse = { x: x, y: y }
+
+          this.update = () => {
+            const lastPoint = {
+              x: this.x,
+              y: this.y
+            }
+            // Move points over time
+            this.radians += this.velocity
+
+            // Drag effect
+            this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.05
+            this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.05
+
+            // Circular motion
+            this.x = this.lastMouse.x + Math.cos(this.radians) * this.distanceFromCenter
+            this.y = this.lastMouse.y + Math.sin(this.radians) * this.distanceFromCenter
+            this.draw(lastPoint)
+          }
+
+          this.draw = (lastPoint) => {
+            c.beginPath()
+            c.strokeStyle = this.colour
+            c.lineWidth = this.radius
+            c.moveTo(lastPoint.x, lastPoint.y)
+            c.lineTo(this.x, this.y)
+            c.stroke()
+            c.closePath()
+          }
+        }
+
+        // Animation loop
+        let particles = []
+
+        function animate() {
+          requestAnimationFrame(animate)
+          c.fillStyle = 'rgba(255, 255, 255, 0.05)'
+          c.fillRect(0, 0, canvas.width, canvas.height)
+          particles.forEach(particle => {
+            particle.update()
+          })
+        }
+
+        // Implementation
+        function init() {
+          setCanvasDimensions()
+
+          particles = []
+
+          for (let i = 0; i < limit; i++) {
+            const particle = new Particle({
+              x: canvas.width / 2,
+              y: canvas.height / 2,
+              radius: (Math.random() * 2) + 1
+            })
+
+            particles.push(particle)
+          }
+
+          animate()
+        }
+
+        init()
+    </script>
+</body>
+</html>

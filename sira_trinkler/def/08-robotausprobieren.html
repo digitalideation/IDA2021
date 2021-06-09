@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ALLGEMEIN */
+ @font-face {
+    font-family: Walsheim Regular;
+    src: url(fonts/GT-Walsheim-Regular.woff);
+}
+
+@font-face {
+    font-family: Walsheim Bold;
+    src: url(fonts/GT-Walsheim-Pro-Bold.woff);
+}
+
+@font-face {
+    font-family: Walsheim Medium;
+    src: url(fonts/GT-Walsheim-Medium.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Walsheim Regular;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+#canvas {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/* background-image: radial-gradient(#ff3cac 0%, #784ba0 40%, #2b86c5 100%); */
+    /* background: black; */
+    /* background-image: radial-gradient(#626262 0%, #3b3b3b 40%, #000000 100%); */
+    /* background-image: url(/sira_trinkler/day16/Song_Scrolly/image/mountain.png); */
+    background-color: black;
+    /* margin-top: 100px; */
+}
+
+/* NAVIGATION */
+nav {
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
+      position: fixed;
+      /* overflow: hidden; */
+      /* bottom: 0; */
+      width: 100%;
+      /* box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.15); */
+      z-index: 4;
+      margin-top: 2%;
+      margin-left: 2%;
+    }
+
+    nav li {
+      list-style-type: none;
+      margin-right: 5px;
+      border: solid black 1px;
+      /* border-radius: 50px; */
+      background-color: #BDB288;
+    }
+
+    /* nav li:last-of-type {
+      margin-right: 50px;
+    } */
+
+    li.last {
+        position: absolute;
+        left: 87%;
+        top: 12%;
+    }
+
+
+    nav ul li {
+      display: inline;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav li:hover {
+      background-color: #dbd2aa;
+    }
+
+    nav li a,
+    .dropbtn {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 5;
+    }
+
+    .dropdown-content a {
+      color: black;
+      /* padding: 12px 16px; */
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .active {
+        background-color: white;
+        color: black;
+    }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="08-textfun.html">zurück</a></li>
+            <li><a href="../myprocess.html">zurück zur übersicht</a></li>
+            <li><a href="08-jsmouse.html">weitere Aufgabe</a></li>
+        </ul>
+    </nav>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvaszwei"></canvas>
+
+    <!-- JS für BACKGROUND -->
+    <script>
+
+        const canvas = document.querySelector("#canvas");
+        const ctx = canvas.getContext("2d");
+
+        let w, h, particles;
+        let particleDistance = 40;
+        let mouse = {
+            x: undefined,
+            y: undefined,
+            radius: 100
+        }
+
+        function init() {
+            resizeReset();
+            animationLoop();
+        }
+
+        function resizeReset() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+
+            particles = [];
+            for (let y = (((h - particleDistance) % particleDistance) + particleDistance) / 2; y < h; y += particleDistance) {
+                for (let x = (((w - particleDistance) % particleDistance) + particleDistance) / 2; x < w; x += particleDistance) {
+                    particles.push(new Particle(x, y));
+                }
+            }
+        }
+
+        function animationLoop() {
+            ctx.clearRect(-5, -5, 1, 1, w, h);
+            drawScene();
+            requestAnimationFrame(animationLoop);
+        }
+
+        function drawScene() {
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            drawLine();
+        }
+
+        function drawLine() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let dx = particles[a].x - particles[b].x;
+                    let dy = particles[a].y - particles[b].y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < particleDistance * 1) {
+                        opacity = 1 - (distance / (particleDistance * 2));
+                        ctx.strokeStyle = "rgba(254,100,100,0.3" + opacity + ")";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function mousemove(e) {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        }
+
+        function mouseout() {
+            mouse.x = undefined;
+            mouse.y = undefined;
+        }
+
+        class Particle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.size = 4;
+                this.baseX = this.x;
+                this.baseY = this.y;
+                this.speed = (Math.random() * 80) + 5;
+            }
+            draw() {
+                ctx.fillStyle = "rgba(100,165,255,0.5)";
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+            update() {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                let maxDistance = mouse.radius;
+                let force = (maxDistance - distance) / maxDistance; // 0 ~ 1
+                let forceDirectionX = dx / distance;
+                let forceDirectionY = dy / distance;
+                let directionX = forceDirectionX * force * this.speed;
+                let directionY = forceDirectionY * force * this.speed;
+
+                if (distance < mouse.radius) {
+                    this.x -= directionX;
+                    this.y -= directionY;
+                } else {
+                    if (this.x !== this.baseX) {
+                        let dx = this.x - this.baseX;
+                        this.x -= dx / 10;
+                    }
+                    if (this.y !== this.baseY) {
+                        let dy = this.y - this.baseY;
+                        this.y -= dy / 10;
+                    }
+                }
+            }
+        }
+
+        init();
+        window.addEventListener("resize", resizeReset);
+        window.addEventListener("mousemove", mousemove);
+        window.addEventListener("mouseout", mouseout);
+    </script>
+
+    <!-- JS für AUDIO -->
+    <script>
+        var myAudio = document.getElementById("myAudio");
+        var isPlaying = false;
+
+        function togglePlay() {
+            isPlaying ? myAudio.pause() : myAudio.play();
+        };
+
+        myAudio.onplaying = function () {
+            isPlaying = true;
+            document.body.classList.remove('paused')
+            document.body.classList.add('playing')
+        };
+
+        myAudio.onpause = function () {
+            isPlaying = false;
+            document.body.classList.remove('playing')
+            document.body.classList.add('paused')
+        };
+    </script>
+</body>
+
+</html>

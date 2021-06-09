@@ -1,12 +1,12 @@
-
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: rgb(0, 0, 0);
   position: fixed;
   overflow: hidden;
   /* bottom: 0; */
   width: 100%;
+  height: 8.5vh;
   /*
   box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
   z-index: 4;
@@ -14,47 +14,114 @@ nav {
 
 nav li {
   list-style-type: none;
-  margin-right: 5px;
+  margin-right: 0px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  /* border-radius: 50px; */
+  
 }
 
 nav li:last-of-type {
   margin-right: 50px;
 }
 
-nav ul li {
-  display: inline;
-  padding: 10px;
-  display: inline-block;
-}
+
 
 nav a {
-  color: black;
+  color: rgb(28, 173, 137);
   text-decoration: none;
   padding: 10px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-nav li:hover {
-  background-color: rgb(86, 0, 245);
+  letter-spacing: 1px;   
 }
 
 
-/* von w3schools */
 
-nav li a,
-.dropbtn {
-  display: inline-block;
-  color: rgb(0, 255, 213);
-  text-align: center;
+
+nav li a {
+  display: inline-box;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  
   /* padding: 14px 16px; */
   text-decoration: none;
-  margin: 0;
+  
+  margin: 6;
   padding: 0;
+
 }
+
+
+
+.glow-on-hover {
+  width: 170px;
+  height: 55px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #fff6fd, #f0adf7, #96ffe8, #00ffd5, #00e1ff, #00ffd5, #c2acff, #ffebfb);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +133,7 @@ nav li a,
 }
 
 body {
-    background: black;
+   background-color: rgb(0, 0, 0);
     min-height: 1500px;
     text-align: center;
     transition: background-color .5s ease;
@@ -95,53 +162,79 @@ body {
 }
 
 #texts {
-  transform: translateZ(-4.9px) translateY(40vh) translateX(120px) scale(10);
+  transform: translateZ(-4.9px) translateY(40vh) translateX(400px) scale(10);
   color: white;
   font-size: 100px;
 }
 
 #untertitel {
-    transform: translateZ(-4.9px) translateY(107vh) translateX(3450px) scale(7);
+    transform: translateZ(-4.9px) translateY(-50vh) translateX(-2500px) scale(7);
     color: white;
     text-transform: uppercase;
     justify-content: end;
 }
 
-#blume {
-    transform: translateZ(-1px) translateY(200px) scale(2.3);
+#para1 {
+    transform: translateZ(-9.2px) scale(11.6) translateY(190px) translateX(280px);
+    background-attachment: fixed;
+    /* filter: blur(1px); */
 }
 
-#rasen {
-    transform: translateZ(-3px) translateY(700px) scale(4.3);
-    
-      animation: rotation 2s infinite linear;
-  }
-  
-
-  @keyframes rotation {
-      from {
-        transform: rotate(359deg);
-      }
-      to {
-        transform: rotate(0deg);
-      }
-    }
-
-
-
-#haus {
-    transform: translateZ(-3px) translateY(920px) translateX(300px) scale(2.1);
-}
-
-#berg {
-    transform: translateZ(-5px) translateY(-500px) translateX(1000px) scale(5);
+#para2 {
+    transform: translateZ(-5px) translateY(-10px) translateX(90px) scale(7);
     /* filter: blur(0.5px); */
 }
 
-#himmel {
-    transform: translateZ(-5.2px) scale(6.6) translateY(-130px);
-    background-attachment: fixed;
-    /* filter: blur(1px); */
+
+#para3 {
+    transform: translateZ(-3px) translateY(1710px) translateX(-501px) scale(7.1);
+}
+
+#para4 {
+  transform: translateZ(-6.2px) scale(6.9) translateY(400px) translateX(-490px);
+    
+    /* animation: rotation 2s infinite linear;*/
+  }
+  
+#para5 {
+    transform: translateZ(-1px) translateY(820px) translateX(-620px) scale(3.3);
+}
+   
+
+#para6 {
+  transform: translateZ(-1px) translateY(8000px) translateX(240px) scale(0.3);
+
+}
+
+#para7 {
+  transform: translateZ(-8.2px) scale(12.9) translateY(590px) translateX(10px);
+  
+   /* animation: rotation 2s infinite linear;*/
+}
+
+#para8 {
+  transform: translateZ(-3px) translateY(920px) translateX(300px) scale(2.1);
+}
+
+#para9 {
+  transform: translateZ(-5px) translateY(-500px) translateX(3600px) scale(10);
+  /* filter: blur(0.5px); */
+}
+
+#para10 {
+  transform: translateZ(-9.2px) scale(10.6) translateX(90px) translateY(390px);
+  background-attachment: fixed;
+  /* filter: blur(1px); */
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 h2 {
@@ -197,3 +290,77 @@ a.trigger {
   .paused .trigger::before {
     content: 'PLAY ';
   }
+
+
+
+
+#rotating-background {
+  position: fixed;
+  background-color: black;
+  margin: 0;
+  background-image: url(../img/backgrounds/Hintergrund.svg);
+  background-size: contain;
+  width: 100vw;
+  height: 100vw;
+  animation-name: rotate;
+  animation-duration: 500s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+ /*
+#sharkr {
+  
+  animation: sharkr 10s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes sharkr {
+  0% {
+      transform: translate(0px,0px);
+  }
+
+  50% {
+      transform: translate(1000px,100px);
+  }
+
+  100% {
+      transform: translate(-700px,-00px);
+  }
+}
+*/
+
+#sharkl {
+  
+  
+  width: 90%; height: auto; animation: sharkl 12s infinite reverse linear; 
+
+}
+
+@keyframes sharkl {
+  from { transform: translate(-60%) scale(0.7)}
+  to { transform: translate(300%)}
+}
+
+
+#sharkr {
+  
+  
+  width: 100%; height: auto; animation: sharkr 15s infinite reverse linear; 
+
+}
+
+@keyframes sharkr {
+  from { transform: translate(300%)}
+  to { transform: translate(-60%) scale(0.9)}
+}

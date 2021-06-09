@@ -265,14 +265,19 @@
         color: var(--colorContent);
         list-style: none;
         font-family: 'Skyline';
-        font-size: 1.5rem;
+        font-size: 3rem;
         height: 10rem;
-        width: 8rem;
+        width: 10rem;
         display: flex;
         justify-content: center;
+        text-align: center;
     
     }
 
+    p{
+        margin: 0;
+        font-size: 1.3rem;
+    }
 
 /*  <----------------PROCESS ---------------- */
 

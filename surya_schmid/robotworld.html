@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/robotworld.css" />
-  <title>IDA Modul - Surya Schmid</title>
+  <title>IDA Modul 2021 - My Robot</title>
 
 
 </head>
 
-<body>
+<body class="paused">
 <!-----------------------  CURSOR ----------------------->
 <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
   <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
@@ -57,14 +57,12 @@
 
 <!----------------------- AUDIO ----------------------->
   <section >
-    <audio src="process/audio/head&heart.mp3">
-      Your browser does not support the
-      <code>audio</code> element.
-    </audio>
+    <audio id="myAudio" src="process/audio/head&heart.mp3"></audio>
     
     
-    <a onclick="togglePlay()" class="button trigger animating">Dance</a>
+    <a onclick="togglePlay()" class="button trigger animating start" style="display: flex;">Make me </a>
   </section>
+
 
 <!-----------------------  AUDIO ----------------------->
 

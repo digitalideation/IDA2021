@@ -1,53 +1,150 @@
-
-
 nav {
-    display: flex;
-    justify-content: flex-end;
-    background-color: rgb(0, 0, 0);
-    position: fixed;
-    overflow: hidden;
-    /* bottom: 0; */
-    width: 100%;
-    /*
-    box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
-    z-index: 4;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  overflow: hidden;
+  /* bottom: 0; */
+  width: 100%;
+  height: 8.5vh;
+  /*
+  box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
+  z-index: 4;
 }
 
 nav li {
-    list-style-type: none;
-    margin-right: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    border-radius: 50px;
+  list-style-type: none;
+  margin-right: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  
 }
 
 nav li:last-of-type {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 
 
 nav a {
-    color: black;
-    text-decoration: none;
-    padding: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;   
+  color: rgb(28, 173, 137);
+  text-decoration: none;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;   
 }
 
 
 
 
 nav li a {
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    /* padding: 14px 16px; */
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
+  display: inline-box;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  
+  /* padding: 14px 16px; */
+  text-decoration: none;
+  
+  margin: 6;
+  padding: 0;
 
 }
+
+
+
+.glow-on-hover {
+  width: 170px;
+  height: 55px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #fff6fd, #f0adf7, #96ffe8, #00ffd5, #00e1ff, #00ffd5, #c2acff, #ffebfb);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
+
+
+#buttons {
+  width: 140px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#button-1 {
+  background-color: transparent;
+  border: 3px solid #000000;
+  border-radius: 50px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: #ffffff;
+}
+#button-1:hover {
+  box-shadow: 0 0 10px 0 #933ce4 inset, 0 0 20px 2px #6f00d7;
+  border: 3px solid #783cb1;
+}
+
+
 
 
 
@@ -63,15 +160,25 @@ nav li a {
 }
 
 body {
-    background: black;
-    min-height: 1500px;
+   background-color: rgb(0, 0, 0);
+    min-height: 80px;
     text-align: center;
     transition: background-color .5s ease;
 }
 
+h1 {
+font-size: 2vw;
+font-family: monospace;
+position: absolute;
+top: 45vw;
+left: 30vw;
+color: rgb(255, 255, 255);
+  z-index: -1000;
+font-weight: 100;
+}
 
 /* BILDER PARALLAX */
-.parallax {
+#parallax {
   perspective: 1px;
   perspective-origin: center;
   overflow-y: auto;
@@ -80,66 +187,49 @@ body {
   height: 100vh;
 }
 
-.parallax .group {
-  position: relative;
-	height: 100vh;
-  transform-style: preserve-3d;
+
+
+#brain {
+  transform: translateZ(-8.2px) scale(6.9) translateY(0px) translateX(10px);
+  position: fixed;
+   /* animation: rotation 2s infinite linear;*/
 }
 
-.parallax .layer {
-  position: absolute;
-  overflow: hidden;
+
+
+#kopfleer1 {
+  transform: translateZ(-8.2px) scale(12.9) translateY(0px) translateX(11px);
+  position: fixed;
+   /* animation: rotation 2s infinite linear;*/
 }
 
-#texts {
-  transform: translateZ(-4.9px) translateY(40vh) translateX(120px) scale(10);
-  color: white;
-  font-size: 100px;
-}
 
-#untertitel {
-    transform: translateZ(-4.9px) translateY(107vh) translateX(3450px) scale(7);
-    color: white;
-    text-transform: uppercase;
-    justify-content: end;
-}
-
-#blume {
-    transform: translateZ(-1px) translateY(200px) scale(2.3);
-}
-
-#rasen {
-    transform: translateZ(-3px) translateY(700px) scale(4.3);
-    
-      animation: rotation 2s infinite linear;
-  }
+#kopfgesicht1 {
   
-
-  @keyframes rotation {
-      from {
-        transform: rotate(359deg);
-      }
-      to {
-        transform: rotate(0deg);
-      }
-    }
-
-
-
-#haus {
-    transform: translateZ(-3px) translateY(920px) translateX(300px) scale(2.1);
+  
+  width: 450px;
+  height: 450px;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 26%;
+  left: 33%;
+   /* animation: rotation 2s infinite linear;*/
 }
 
-#berg {
-    transform: translateZ(-5px) translateY(-500px) translateX(1000px) scale(5);
-    /* filter: blur(0.5px); */
-}
 
-#himmel {
-    transform: translateZ(-5.2px) scale(6.6) translateY(-130px);
-    background-attachment: fixed;
-    /* filter: blur(1px); */
-}
+  #kopfgesicht1:hover {
+      
+      animation: bouncingballs 4.3s linear infinite; 
+      
+  }
+   
+  
+  @keyframes bouncingballs { 
+      0%   {transform: translateX(10px);} 
+      50%  {transform: translateX(180px);} 
+      100% {transform: translateX(2px);} 
+    } 
+
 
 h2 {
     text-align: center;
@@ -169,7 +259,7 @@ p {
 
 /* NAVIGATION AUDIO */
 a.trigger {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -177,7 +267,7 @@ a.trigger {
   }
   
   .trigger::before {
-      content: 'PLAY ';
+      content: 'SONG ';
   }
   
   /* body.playing {
@@ -192,66 +282,115 @@ a.trigger {
   }
    
   .paused .trigger::before {
-    content: 'PLAY ';
+    content: 'PLAY';
   }
 
 
-  .glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: rgb(0, 0, 0);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
+
+
+#rotating-background {
+  position: fixed;
+  background-color: black;
+  margin: 0;
+  background-image: url(../img/backgrounds/Hintergrund.svg);
+  background-size: contain;
+  top: -190px;
+  left: -30px;
+  width: 100vw;
+  height: 100vw;
+  animation-name: rotate;
+  animation-duration: 500s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #fff6fd, #f0adf7, #96ffe8, #00ffd5, #00e1ff, #00ffd5, #c2acff, #ffebfb);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
 
-.glow-on-hover:active {
-    color: #000
+
+
+
+
+
+.cont {
+  width: 140px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.glow-on-hover:active:after {
-    background: transparent;
+.button-1 {
+  background-color: transparent;
+  border: 3px solid #000000;
+  border-radius: 50px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: #ffffff;
+}
+.button-1:hover {
+  box-shadow: 0 0 10px 0 #933ce4 inset, 0 0 20px 2px #6f00d7;
+  border: 3px solid #783cb1;
 }
 
-.glow-on-hover:hover:before {
-    opacity: 1;
+
+
+
+
+
+
+.question1 {
+text-decoration: none;
+color: rgb(255, 255, 255);
+list-style-type: none;
+  width: 23ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: sans-serif;
+  font-size: 4em;
+  
 }
 
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 0);
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+a{
+text-decoration: none;
+color: rgb(255, 255, 255);
+list-style-type: none;  
 }
 
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+
+a:hover {
+color: rgb(204, 0, 255);
 }
+
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+
+
+
+

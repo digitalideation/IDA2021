@@ -9,7 +9,7 @@
 :root {
     /*************************** Page-wide variables ****************************/
     --scalesize: 1;
-    /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
+    /* diese Variable wird ï¿½ber JavaScript abhï¿½ngig von der Lautstï¿½rke gesetzt*/
 }
 
 /* All */
@@ -131,7 +131,7 @@ p {
     color: white;
     margin-top: 20%;
     display: block;
-    font-size: 13em;
+    font-size: 10vw;
     filter: blur(30px);
     transition: filter ease-out 2s;
 }
@@ -164,17 +164,18 @@ p {
 
 #text_but {
     box-sizing: border-box;
-    color: red;
+    color: transparent;
     margin-top: -35%;
     display: block;
     font-size: 30vw;
     transform: scale(5,1);
-    transition: transform ease-out 1s, box-shadow ease-out 1s;
+    transition: transform ease-out 0.5s, color ease-out 0.2s;
     z-index: -100;
 }
 
     #text_but.visible {
         transform: translate(0px,30%) scale(1,1);
+        color: red;
     }
 
 #site4 .anim_blinder {
@@ -221,7 +222,7 @@ p {
     margin-top: 0%;
     margin-bottom: 0%;
     display: block;
-    font-size: 30em;
+    font-size: 10vw;
     z-index: -100;
     transform: translate(0px,-230%);
     transition: transform ease-out 1s, color ease-out 1s;
@@ -238,7 +239,7 @@ p {
     margin-top: 50px;
     margin-bottom: 0%;
     display: block;
-    font-size: 40em;
+    font-size: 30vw;
     z-index: -100;
     line-height: 0.8em;
 
@@ -251,7 +252,7 @@ p {
     margin-top: 0%;
     margin-bottom: 0%;
     display: block;
-    font-size: 15em;
+    font-size: 10vw;
     z-index: -100;
     transform: translate(0px,0%);
     transition: letter-spacing ease-out 2s, transform ease-out 2s;
@@ -382,9 +383,9 @@ p {
     color: black;
     display: block;
     position: relative;
-    font-size: 8em;
+    font-size: 8vw;
     top: 50%;
-    left: 20%;
+    left: 10%;
     margin: 0%;
     transition: color ease 4s;
 }
@@ -517,4 +518,12 @@ p {
     background-color: white;
     text-align: center;
     transition: background-color ease 1s;
+}
+
+#text_last {
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 8em;
+    margin: 0px;
+    margin-top: 0%;
 }

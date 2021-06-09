@@ -1,0 +1,189 @@
+body {
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    -webkit-perspective-origin: center;
+    perspective-origin: center;
+    overflow: hidden;
+    background-color: #222222;
+    width: 100vw;
+    height: 100vh;
+}
+
+body nav {
+    background: none;
+    position: relative;
+}
+
+body nav .button {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+body nav .button:nth-child(2) {
+    margin-left: 30px;
+}
+
+body nav #buttons .buttons-navi {
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    margin-left: 10px;
+}
+
+body nav #buttons .buttons-navi .button {
+    width: 40px;
+    height: 40px;
+}
+
+body nav #buttons .buttons-navi .button span {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    position: absolute;
+}
+
+body nav #buttons .buttons-navi .button .button-next {
+    top: 8px;
+    left: 83px;
+}
+
+body nav #buttons .buttons-navi .button .button-prev {
+    top: 8px;
+    left: 8px;
+}
+
+body nav #buttons .buttons-menu {
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+body nav #buttons .buttons-menu .button-wrapper {
+    position: relative;
+    right: -10px;
+    top: 15px;
+}
+
+body nav #buttons .buttons-menu .button-wrapper span {
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+}
+
+body nav #buttons .buttons-menu .button-wrapper span:nth-child(1) {
+    top: 0px;
+}
+
+body nav #buttons .buttons-menu .button-wrapper span:nth-child(2) {
+    top: 12px;
+}
+
+body nav #buttons .buttons-menu .button-wrapper span:nth-child(3) {
+    top: 24px;
+}
+
+body nav #menu {
+    display: none;
+    background-color: black;
+    color: white;
+    -webkit-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    position: absolute;
+    z-index: 99;
+}
+
+body nav #menu ul {
+    list-style: none;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: translateY(25vh);
+    -o-transform: translateY(25vh);
+    transform: translateY(25vh);
+    padding-left: 0;
+}
+
+body nav #menu ul li {
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transform-origin: left;
+    -o-transform-origin: left;
+    transform-origin: left;
+    margin: 0 auto;
+    font-size: 40px;
+    -webkit-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+    cursor: pointer;
+}
+
+#pages {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50% -50vw;
+    -o-transform-origin: 50% 50% -50vw;
+    transform-origin: 50% 50% -50vw;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#pages section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    font-size: 50px;
+    margin: auto 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+#pages #main {
+    background-color: rgba(255, 217, 0, 0.8);
+}
+
+#pages #about {
+    background-color: rgba(255, 69, 0, 0.8);
+    -webkit-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: translateZ(-100vw) rotateY(-180deg);
+    transform: translateZ(-100vw) rotateY(-180deg);
+}
+
+#pages #work {
+    -webkit-transform: translateX(50vw) translateZ(-50vw) rotateY(90deg);
+    transform: translateX(50vw) translateZ(-50vw) rotateY(90deg);
+    background-color: rgba(212, 255, 0, 0.8);
+}
+
+#pages #contact {
+    -webkit-transform: translateX(-50vw) translateZ(-50vw) rotateY(-90deg);
+    transform: translateX(-50vw) translateZ(-50vw) rotateY(-90deg);
+    background-color: rgba(170, 179, 179, 0.8);
+}

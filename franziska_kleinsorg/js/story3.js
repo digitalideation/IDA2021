@@ -7,12 +7,11 @@ paths[2] = 'angel1ID';
 paths[3] = 'angel2ID';
 paths[4] = 'angel3ID';
 paths[5] = 'angel4ID';
-paths[6] = 'lastsupperID';
-paths[7] = 'treeID';
-paths[8] = 'grapesID';
-paths[9] = 'devilID';
-paths[10] = 'snake1ID';
-paths[11] = 'snake2ID';
+paths[6] = 'angel5ID';
+paths[7] = 'angel6ID';
+paths[8] = 'snake1ID';
+paths[9] = 'snake2ID';
+paths[10] = 'applehalfID';
 
 
 
@@ -23,7 +22,7 @@ var SVGLength;
 for(let n=0;n<paths.length;n++){
     SVGElement = document.getElementById(paths[n]);
 
-    SVGLength = SVGElement.getTotalLength();
+    SVGLength = SVGElement.getTotalLength(paths[n]);
     SVGElement.style.strokeDasharray = SVGLength;
     SVGElement.style.strokeDashoffset = SVGLength;
 }
@@ -36,11 +35,12 @@ const drawWhenScroll = () => {
 
     for(let n=0;n<paths.length;n++){
         SVGElement = document.getElementById(paths[n]);
-        SVGLength = SVGElement.getTotalLength();
+        SVGLength = SVGElement.getTotalLength(paths[n]);
         let draw = SVGLength * scrollpercent;
         let factor = SVGElement.getAttribute('attr-factor');
+        let wait = SVGElement.getAttribute('attr-wait');
 
-        if(SVGLength - 10*draw > 0 ){
+        if(SVGLength - factor*draw > 0 && scrollpercent > wait){
             SVGElement.style.strokeDashoffset = (SVGLength - factor*draw );
         }
     }
@@ -60,7 +60,7 @@ window.addEventListener('scroll', drawWhenScroll);
 
 //AUTOMATIC SCROLLING
 function pageScroll() {
-    window.scrollBy(0,5.725); 
+    window.scrollBy(0,7.5); 
     scrolldelay = setTimeout('pageScroll()',50); 
 }
 

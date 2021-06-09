@@ -1,7 +1,88 @@
 .grid{
     display: flex;
     flex-wrap: wrap;
-    width: 1000px;
-    height: 1000px;
-    border: solid black;
+    width: 1280px;
+    height: 880px;
+    border: 2px solid black;
 }
+
+.grid div{
+    width: 40px;
+    height: 40px;
+
+}
+
+h3{
+    position: absolute;
+    top: 900px;
+}
+
+.path{
+    background-color:white;
+    
+}
+
+
+.wall{
+    background-color: black;
+    
+
+}
+
+.casco {
+    
+    background-image: url("../images/cmp_cascoblack.png");
+    background-repeat: no-repeat;
+    width:30px;
+    height:30px;
+    /* background-position: right top; */
+    background-size: cover;
+}
+
+.frog{
+    background-color: green;
+}
+
+
+#thiscasco{
+    position: absolute;
+    top:90px;
+    right:100px;
+    width:300px;
+}
+
+#gameover{
+    position: absolute;
+    top: 500px;
+    right: 60px;
+    opacity: 0;
+    
+}
+#twoplayers{
+    font-size: 30px;
+    border: 3px solid black;
+    position: absolute;
+    right: 100px;
+    top: 400px;
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 300px;
+    height: 74px;
+    
+ }
+
+ #backtoindex{
+    font-size: 15px;
+    border: 2px solid black;
+    position: absolute;
+    left: 5px;
+    top: 950px;
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 100px;
+    height: 50px;
+ }

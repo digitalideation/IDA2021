@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <title>Get Random Image from Folder</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 3vw;
+            text-align: center;
+        }
+        
+        button {
+            margin-top: 10px;
+            background: #BDB288;
+            background-image: -webkit-gradient(to bottom, #BDB288, #06544A);
+            border-radius: 20px;
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 100;
+            padding: 20px;
+            box-shadow: 1px 1px 20px 0 #000000;
+            text-shadow: 1px 1px 20px #000000;
+            border: solid #BDB288 1px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        #platzhalter {
+            margin-top: 100px;
+            padding: 20px;
+            box-shadow: 1px 1px 20px 0 #000000;
+            min-width: 500px;
+            min-height: 600px;
+        }
+    /* NAVIGATION */
+nav {
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
+      position: fixed;
+      /* overflow: hidden; */
+      /* bottom: 0; */
+      width: 100%;
+      /* box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.15); */
+      z-index: 4;
+      margin-top: 2%;
+      margin-left: 2%;
+      transform: scale(0.4);
+    }
+
+    nav li {
+      list-style-type: none;
+      margin-right: 5px;
+      border: solid black 1px;
+      border-radius: 50px;
+      background-color: #C16F5A;
+    }
+
+    /* nav li:last-of-type {
+      margin-right: 50px;
+    } */
+
+    li.last {
+        position: absolute;
+        left: 87%;
+        top: 12%;
+    }
+
+
+    nav ul li {
+      display: inline;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8em;
+    }
+
+    nav li:hover {
+      background-color: #d69584;
+    }
+
+    nav li a,
+    .dropbtn {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 5;
+    }
+
+    .dropdown-content a {
+      color: black;
+      /* padding: 12px 16px; */
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .active {
+        background-color: white;
+        color: black;
+    }
+
+    </style>
+</head>
+
+<body>
+<nav>
+<ul>
+    <li><a href="09-randomnessjs_links.html">zurück</a></li>
+    <li><a href="../myprocess.html">zurück zur übersicht</a></li>
+    <li><a href="09-getRandomImg-2.html">weitere Aufgabe</a></li>
+</ul>
+</nav>
+    <button onclick="getRandImg()" id="btn">Get Random Image from Folder</button>
+    <div id="platzhalter"></div>
+</body>
+<script>
+    let images = new Array();
+        /* Pfade sind vom HTML File her gesehen! */
+        images[0] = "bilder/53-400X600.jpeg";
+        images[1] = "bilder/107-400X600.jpeg";
+        images[2] = "bilder/698-400X600.jpeg";
+        images[3] = "bilder/901-400X600.jpeg";
+        images[4] = "bilder/1067-400X600.jpeg";
+
+
+
+        function getRandImg() {
+            //get random number within 0 and amount of entries in array
+            let wuerfel = Math.floor(Math.random() * images.length);
+            let img = document.createElement('img');
+            img.src = images[wuerfel];
+
+            // remove old image
+            let oldimages = document.getElementById("platzhalter").getElementsByTagName('img');
+            if (oldimages.length > 0) {
+                document.getElementById("platzhalter").removeChild(oldimages[0]);
+            }
+            // END remove old images
+
+            //append new image to element with id platzhalter
+            document.getElementById("platzhalter").appendChild(img);
+        }
+
+        function getRandImgAPI() {
+
+            let img = document.createElement('img');
+            //get image from unsplash with the value from the form
+            //simple: <img src="https://source.unsplash.com/random/?city,night" />
+            //
+            img.src = "https://source.unsplash.com/random/?" + document.getElementById("topic").value;
+
+            // remove old image
+            let oldimages = document.getElementById("platzhalter").getElementsByTagName('img');
+            if (oldimages.length > 0) {
+                document.getElementById("platzhalter").removeChild(oldimages[0]);
+            }
+            // END remove old images
+
+            //append new image to element with id platzhalter
+            document.getElementById("platzhalter").appendChild(img);
+        }
+</script>
+
+</html>

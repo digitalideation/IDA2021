@@ -487,19 +487,20 @@ body {
   font-size: 100px;
 }
 
+
 #untertitel {
-    transform: translateZ(-4.9px) translateY(81vh) translateX(3440px) scale(7);
+    transform: translateZ(-4.9px) translateY(78vh) translateX(3360px) scale(7);
     color: white;
     text-transform: uppercase;
     justify-content: end;
 }
 
 #blume {
-    transform: translateZ(-1px) translateY(750px) scale(2.3);
+    transform: translateZ(-1px) translateY(880px) scale(2.6);
 }
 
 #rasen {
-    transform: translateZ(-3px) translateY(850px) scale(4.3);
+    transform: translateZ(-3px) translateY(1100px) scale(4.3);
 }
 
 #haus {
@@ -507,12 +508,12 @@ body {
 }
 
 #berg {
-    transform: translateZ(-5px) translateY(-500px) translateX(1000px) scale(5);
+    transform: translateZ(-5px) translateY(-500px) translateX(1000px) scale(6.5);
     /* filter: blur(0.5px); */
 }
 
 #himmel {
-    transform: translateZ(-5.2px) scale(6.6) translateY(-130px);
+    transform: translateZ(-5.2px) scale(8) translateY(-130px);
     background-attachment: fixed;
     /* filter: blur(1px); */
 }
@@ -575,20 +576,21 @@ body.paused {
 }
 
 .blackbox-2 {
-  height: 100px;
+  height: 245px;
   width: 100%;
   background-color: black;
+  top: -150px;
 }
 
 .blackbox {
   width: 100%;
-  height: 100%;
+  height: 500px;
   background: black;
   display: flex;
   justify-content: center;
   position: relative;
   margin-bottom: 700px;
-  top: -100px;
+  top: -50px;
 }
 
 
@@ -700,13 +702,13 @@ div.gif {
 .trigger.clicked .ani-2 {
   height: 70px;
   width: 70px;
-  transform: translateY(220px) translateX(500px) rotate(120deg) scale(8);
+  transform: translateY(220px) translateX(100px) rotate(120deg) scale(8);
 }
 
 .trigger.clicked .ani-3 {
   height: 150px;
   width: 150px;
-  transform: translateY(500px) translateX(20px) rotate(90deg) scale(4);
+  transform: translateY(500px) translateX(320px) rotate(90deg) scale(4);
 }
 
 .trigger.clicked .ani-4 {
@@ -740,10 +742,10 @@ div.gif {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
-    font-size: 8px;
+    font-size: 10px;
     color: white;
     margin-right: 10px;
-    transform: translateX(-450px) translateY(360px);
+    transform: translateX(-450px) translateY(660px);
   }
 
   .wrapper {
@@ -778,24 +780,30 @@ div.gif {
     fill: black;
   }
   svg.robotwhite {
-    transform: translateX(620px) translateY(700px);
+    transform: translateX(710px) translateY(620px) scale(0.8);
     transition: ease-in-out 3s;
     fill: black;
     stroke: black; 
   }
 
   svg.robotwhite:hover {
-    transform: translateX(620px) translateY(700px) scale(5) rotate(720deg);
+    transform: translateX(670px) translateY(600px) scale(2.5) rotate(720deg);
     fill: white;
     stroke: white;
   }
+
+
 
   .st0 {
     fill: transparent;
   }
   
   .st0:hover {
-    fill: tomato;
+    fill: #4A5C63;
+  }
+
+    .svglink:hover {
+    fill: #C16F5A;
   }
   
 
@@ -832,3 +840,4 @@ a.footer {
   left: 25px;
   bottom: 5px;
 }
+

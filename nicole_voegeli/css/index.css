@@ -4,14 +4,79 @@
     src: url();
 }*/
 
+  /*BACKGROUND START*/
 body{
   background-color: black;
+  overflow: hidden;
 }
 
+/*.background{
+  border: solid white;
+  width: 100vw;
+  height: 20vh;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  bottom: 20%;
+}
+
+.satellite{
+  width: 10vw;
+  height: 10vw;
+  background-image: url(../img/orbit.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: rotateFull 8s ease infinite;
+  z-index: 0;
+}
+.blur{
+  width: 400px;
+  height:400px ;
+  background-image: url(../img/blurBlue.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;}
+  /*animation: pulsate 3s none infinite;*/
+
+
+.background2{
+  /*border: solid white;*/
+  width: 100vw;
+  height: 40vh;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  bottom: 0px;
+
+}
+
+  .ErdeIndex{
+    /*border: solid white;*/
+    width: 50vw;
+    height: 40vh;
+    background-image: url(../img/ErdeIndex.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: pulsate 8s linear infinite;
+  }
+
+  /*BACKGROUND FINISH*/
+
 .kopf{
-    height: 35vh;
+    height: 25vh;
     width: 99vw;
     font-family: 'Work Sans', sans-serif;
+    z-index: 1;
 }
 
 h1{
@@ -31,28 +96,23 @@ p{
     transform: translateY(50%);
 }
 
-.container{
+ul{
     height: 10vh;
     width: 99vw;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     align-items: center;
     text-align: center;
-    transform: translateY(-20%);
-}
-nav{
-    height: 10vh;
+    padding-left: 0px;
+    z-index: 1;
 }
 li{
-    margin: auto;
     margin-right: 20px;
     padding: 10px 30px;
     display: inline-block;
     background-color: rgb(102, 179, 179);
     border: none;
     border-radius: 25px;
-    text-align: center;
-    transform: translateY(-45px);
 }
 
 a{
@@ -65,34 +125,79 @@ li:hover{
     background-color:black;
 }
 
-/*PREMIUM BUILD :)*/
+/*PREMIUM BUILD NEU :)*/
+/*border: solid white;*/
+
+/*.container2{
+  width: 99vw;
+  height: 20vh;
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  transform: translateX();
+  bottom: 0px;
+}
+.Erde{
+  width: 99vw;
+  height: 20vh;
+  background-image: url(../img/ErdeHalb.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0;
+}*/
 .container2{
-height: 40vh;
-display: flex;
-justify-content: center;
-align-items: center;
+  width: 99vw;
+  height: 20vw;
+  align-items: center;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
 }
 
-.Erde{
-    width: 15vw;
-    height: 15vw;
-    background-image: url(../img/Erde.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: rotateFull 8s ease infinite;
-    z-index: 1;
-  }
+/*PREMIUM BUILD NEU :)*/
 
-  .blur{
-    width: 32vw;
-    height: 32vw;
-    background-image: url(../img/blur.svg); 
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    position: absolute;
-    z-index: 0;
-    animation: pulsate 3s infinite;
-  }
+.spaceship{
+  width: 5vw;
+  height: 10vh;
+  background-image: url(../img/spaceship.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: fly 4s ease-in infinite;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  z-index: 1;
+}
+
+.No2{
+  animation: fly 3s ease-in infinite;
+  animation-delay: 0s;
+  margin-top: -15%;
+}
+.No3{
+  animation: fly 2s ease-in infinite;
+  animation-delay: 1s;
+  margin-top: -22%;
+}
+.No4{
+  animation: fly 5s ease-in infinite;
+  animation-delay: 1.5s;
+  margin-top: -58%;
+}
+.No5{
+  animation: fly 1s ease-in infinite;
+  animation-delay: 2s;
+  margin-top: -10%;
+}
+.No6{
+  animation: fly 4s ease-in infinite;
+  animation-delay: 3s;
+  margin-top: -5%;
+}
 
 
   @keyframes rotateFull {
@@ -106,15 +211,25 @@ align-items: center;
       transform: rotate( 0deg );
     }
     }
-
-    @keyframes pulsate {
+ @keyframes pulsate {
         0% {
           transform: scale(1);
         }
         50% {
-          transform: scale(1.1);
+          transform: scale(1.05);
         }
         100% {
           transform: scale(1);
         }
         }
+ @keyframes fly {
+          0%{
+            opacity: 1;
+            transform: translateX(-100vw);
+          }
+      
+          100%{
+            opacity: 1;
+            transform: translateX(110vw);
+          }
+      }

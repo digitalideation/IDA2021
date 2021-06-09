@@ -1,98 +1,108 @@
+<!-- day15 -->
 
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
-    <title>Get Random Image from API</title>
+    <link rel="stylesheet" href="/css/sundae.css">
+    <title>Animation CSS</title>
+
     <style>
+
         body {
-            margin: 0px;
-            padding: 0px;
-            font-family: 'Montserrat', sans-serif;
-            background-color: white;
-            font-size: 4vw;
-            font-weight: 200;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vw;
+
         }
-
-        .songtext {
-            z-index: 5;
-            position: relative;
-        }
-
-        a {
-            font-weight: 400;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            color: black;
-        }
-
-        a div {
-            position: absolute;
-            top: -5vw;
-            left: 0px;
-            width: 15vw;
-            height: 15vw;
-            z-index: 1;
-            mix-blend-mode: multiply;
-            border-radius: 50%;
-        }
-
-        a div img {
-            width: 100%;
-            display: block;
-            ;
-        }
-
-        a.white {
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-
-
-    Oh my God, oh my God<br>
-    This <a class="getImg" href="#">feeling</a>'s just begun<br>
-    I'm saying <a class="getImg" href="#">things</a> I've never said<br>
-    Doing <a class="getImg" href="#">things</a> I've never done<br>
     
-    Oh my God, oh my God<br>
-    When I see you I should <a class="getImg" href="#">run</a><br>
-    But I'm <a class="getImg" href="#">frozen</a>in motion<br>
-    And my <a class="getImg" href="#"></a>head </a>tells me to <a class="getImg" href="#">stop</a><br>
-    Tells me to stop
+    div {
 
-</body>
-<script>
-    let els = document.getElementsByTagName("a");
-    for (i in els) {
-        els[i].addEventListener("mouseover", function (event) { //hier wird auf alle a Elemente ein Event listener auf das Event mouseover gelegt
-            if (event.target.className === 'getImg') { // hier wird gefragt ob sie die Klasse getImg besitzen
-
-                let div = document.createElement('div'); //hier wird ein Div kreiiert
-                //hier wird dem div zwei background images zugewiesen. Der Trick ist, den Inhalt vom a über event.target.innerHTML abzufragen und der URL mitzugeben
-                div.style.backgroundImage = 'url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=1), url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=2), radial-gradient(#010c55, #093979, #ff0072 ';
-                //hier wird das CSS konstruiert
-                div.style.backgroundPosition = '0 0, 0 50px, 0 0';
-                div.style.backgroundBlendMode = 'overlay, screen';
-                div.style.backgroundSize = 'cover, cover';
-                //hier wird das kreierte div dem a angehängt
-                event.target.appendChild(div);
-                //hier wird die Klasse getImg entfernt -- sonst würden bei jedem mouseover event immer neue Bilder hinzugefügt
-                event.target.classList.remove("getImg");
-                // hier wird der Textstil auf weiss gesetzt 
-                event.target.setAttribute("class", "white");
-            }
-
-        }, false);
+        width: 200px;
+        height: 200px;
     }
-</script>>
+        
 
-</html>
-</script>
+
+.top_surya{
+    margin-top: 4rem;
+    
+    background-color: rgb(207, 0, 179);
+    background-image: url(../process/img/patternKreis_Zeichenfläche\ 1.svg);
+    background-repeat: none;
+    background-size: 150%;
+    
+    width: 210px;
+    height: 100px;
+    margin-bottom: 1rem;
+
+    border-radius: 100% 100% 0 0 / 170% 170% 0 0;
+}
+  
+.middle_surya{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,57,121,1) 35%, rgba(0,212,255,1) 100%);
+    
+    border: pink dotted 5px;
+    margin-bottom: 1rem;
+   
+}
+
+
+
+.bottom_surya{
+    background-color: blue;
+    background-image: url(https://i.pinimg.com/564x/ff/c4/9f/ffc49fe77281ba0a4662e6f2eea9bf47.jpg);
+    transform: rotate(30deg);
+
+    border: 1px solid rgb(144, 142, 112) ;
+    border-radius: 35%;
+
+    animation: rotate 40s linear infinite;
+    transition-property: all;
+
+}
+
+
+@keyframes rotate {
+0%{
+    transform: rotate(0deg);
+}
+
+100%{
+    transform: rotate(360deg);
+}
+}
+
+header{
+               display: flex;
+               justify-content: space-between;
+           }
+
+           a{
+               text-decoration: none;
+               color: black;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+           }
+           
+    
+            a:hover{
+                color: magenta;
+            }
+    </style>
+
+</head>
+<body>
+    <header>
+        <a href="index.html">Back</a>
+    
+    </header>
+    
+    <div class="top_surya"></div>
+    <div class="middle_surya"></div>
+    <div class="bottom_surya"></div>
+</body>
 </html>

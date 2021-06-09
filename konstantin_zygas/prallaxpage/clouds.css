@@ -2,9 +2,9 @@
   
 .wolke {
     width: 400px;
-    position: absolute;
+    position: relative;
     animation-name: example;
-    animation-duration: 5s;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transition: all 1s ease-in-out;
@@ -17,9 +17,9 @@
   
   .wolke2 {
     width: 400px;
-    position: absolute;
+    position: relative;
     animation-name: example2;
-    animation-duration:6s;
+    animation-duration:10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transition: all 1s ease-in-out;
@@ -32,9 +32,9 @@
   
   .wolke3 {
     width: 400px;
-    position: absolute;
+    position: relative;
     animation-name: example3;
-    animation-duration:6s;
+    animation-duration:9s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transition: all 1s ease-in-out;
@@ -51,13 +51,13 @@
   }
   
   @keyframes example2 {
-    0%   {left:-600px; top:300px;}
-    100% {left:100%; top:300px;}
+    0%   {left:-600px; top:310px;}
+    100% {left:100%; top:310px;}
   }
 
   @keyframes example3 {
-    0%   {left:-400px; top:350px;}
-    100% {left:100%; top:350px;}
+    0%   {left: 0px; top:430px;}
+    100% {left:100vw; top:430px;}
   }
   
   .kreis1 {

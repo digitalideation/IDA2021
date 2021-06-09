@@ -1,319 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-html,
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <style>
+     /* -----------------------  ALLGEMEIN -----------------------> */
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+             padding: 0;
+        }
+        @font-face {
+            font-family:'brr' ;
+            src: url(img/BRRREDU-Medium.otf);
+        }
+        @font-face {
+            font-family: 'Skyline';
+            src: url(NewParisEDUSkyline-Regular.otf);
+        }
+
+        body{
+            margin:0;
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            display: block;
+            mix-blend-mode: difference;
+        }
+
+        html{
+        scroll-behavior: smooth;
+        }
+
+       
+/* -----------------------  ALLGEMEIN -----------------------> */
+
+
+/* -----------------------  LANDING PAGE -----------------------> */
+    .landingPage{
+          width: 100vw;
+          height: 100vh;
+          background-color: rgb(255, 255, 255);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      h1{
+          font-family: 'Skyline';
+          font-size: 300px;
+          color: rgb(255, 255, 255);
+          letter-spacing: 5rem;
+          text-align: center;
+          width: 100vw;
+          background-color: rgb(0, 0, 0);
+          padding-left: 1.5rem;
+
+  
+      }
+
+   
+/* -----------------------  LANDING PAGE -----------------------> */
+
+
+
+/* ----------------------- CURSOR -----------------------> */
+        #cursor{
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            /* background-color: rgb(255, 255, 255); */
+            border: 1px solid white;
+            box-sizing: border-box;
+            transition: 0.2s;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            cursor: none;
+            z-index: 3;
+
+            mix-blend-mode: difference;  
+        }
+
+        #outerCursor{
+           position: fixed;
+            width: 30px;
+            height: 30px;
+            /* border: 1px solid white; */
+            background-color: white;
+            box-sizing: border-box;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            cursor: none;
+            z-index: 3;
+
+            mix-blend-mode: difference;  
+        }
+
+        .element.style{
+            opacity: 0;
+            transform: matrix(0, 0, 0, 0, 1062, 896);
+        }
+
+        
+        #cursor-follower{
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            pointer-events: none;
+
+        }
+
+        #cursor-follower{
+            mix-blend-mode: difference;
+        }
+/* <----------------------- CURSOR ----------------------- */
+
 body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
+	background-color: #fff;
 	margin: 0;
-	background: #10171c;
-	color: white;
+	overflow-X: hidden;
+	background-repeat: no-repeat;
 }
-#visbox {
-	height: 300px;
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	position: fixed;
-	padding: 0;
-	margin: 0;
-}
-#music {
+.label {
 	position: absolute;
-	top: 10px;
-	left: 50%;
-	margin-left: -150px;
-	z-index: 1000;
+	top: 0;
+	left: 0;
+	padding: 5px 15px;
+	color: #eee;
+	font-size: 13px;
+	background-color: rgba(0, 0, 0, 0.5);
 }
-    </style>
+.instructions {
+	position: absolute;
+	bottom: 0%;
+	left: 0;
+	padding: 5px 15px;
+	color: #eee;
+	font-size: 13px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+canvas {
+	display: block;
+
+}
+canvas_2 {
+	display: block;
+   
+}
+  </style>
+
 </head>
+
 <body>
-  <audio id="music" controls crossorigin="anonymous"></audio>
-  <div id="visbox">
-    <canvas id="visCanvas"></canvas>
-  </div>
+  <!--------------------- CURSOR ----------------------->
+    <span id="cursor-follower" class="" style="opacity: 0; transform: matrix(0, 0, 0, 0, 861, 908);">
+      <span style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
+    </span>
+
+    <div id="cursor"> </div>
+    <div id="outerCursor"></div>
+  <!-----------------------  CURSOR ----------------------->
+
+
+  <!-----------------------  CONTENT ----------------------->
+  
+    <!-- <div class="landingPage">
+        <h1>Welcome</h1>
+    </div> -->
+    <canvas id="canvas_1"></canvas>
+    <canvas id="canvas_2"></canvas>
+
+  <!-----------------------  CONTENT ----------------------->
+
+
+
+
+  <script>
+  
+    // --------------------- LANDING PAGE --------------------->
+
+
+    //Main display canvas
+    var ctx = canvas_1.getContext("2d");
+    //Hidden canvas
+    var ctx_2 = canvas_2.getContext("2d");
+
+    canvas_1.width = window.innerWidth;
+    canvas_1.height = window.innerHeight;
+
+    canvas_2.width = window.innerWidth;
+    canvas_2.height = window.innerHeight;
+
+    var particles = [];
+    var discs = [];
+    var TWO_PI = 2 * Math.PI;
+
+    var particleCount = 0;
+    var discCount = 5;
+    var radius = 130;
+    var animate = true;
+
+    for (i = 0; i < discCount; i++) {
+      var disc = {
+        x: Math.random() * canvas_1.width,
+        y: Math.random() * canvas_1.height,
+        radius: radius / 2 + Math.random() * radius / 2,
+        x_vel: 1 - Math.random() * 0.5,
+        y_vel: 1 - Math.random() * 0.5
+      };
+      discs.push(disc);
+    }
+
+    ctx_2.fillStyle = "#000";
+    var fontSize = 50;
+    ctx_2.font = "" + fontSize + "px Helvetica";
+    ctx_2.textBaseline = 'middle';
+    var sentence = "Welcome";
+    var words = sentence.split(" ");
+    var density = 1;
+    var delta = 3.5;
+    var length = 0;
+    var l_;
+    for (i = 0; i < words.length; i++) {
+      l_ = ctx_2.measureText(words[i]).width * delta;
+      if (length < l_) {
+        length = l_;
+      }
+    }
+    for (i = 0; i < words.length; i++) {
+      l_ = ctx_2.measureText(words[i]).width * delta;
+      ctx_2.fillText(words[i], length / delta / 2 - l_ / delta / 2, (i + 1) * fontSize);
+    }
+
+    var textImageData = ctx_2.getImageData(0, 0, length, fontSize + fontSize * words.length);
+    var xOffset = canvas_2.width / 2 - length / 2;
+    var yOffset = canvas_2.height / 2.5 - fontSize * delta * words.length / 2;
+
+    for (i = 0; i < textImageData.width; i += density) {
+      for (j = 0; j < textImageData.height; j += density) {
+
+        var alpha = textImageData.data[(j * (textImageData.width * 4) + (i * 4) + 3)];
+        if (alpha > 0) {
+          var particle = {
+            x: xOffset + i * delta,
+            y: yOffset + j * delta,
+            x_target: xOffset + i * delta,
+            y_target: yOffset + j * delta,
+            radius: alpha / 255 * (delta),
+            x_vel: 0,
+            y_vel: 0,
+            offset: 0
+          };
+          particles.push(particle);
+          particleCount++;
+        }
+      }
+    }
+
+    canvas_1.addEventListener("mousemove", mouse_move);
+    canvas_1.addEventListener('mouseleave', mouse_leave);
+    canvas_1.addEventListener('mouseenter', mouse_enter);
+
+    var mouse_pos_x;
+    var mouse_pos_y;
+
+    function dist(dx, dy) {
+      return Math.sqrt(dx * dx + dy * dy);
+    }
+    var scale = canvas_1.width / canvas_1.scrollWidth;
+    function mouse_move(event) {
+      mouse_pos_x = event.offsetX * scale;
+      mouse_pos_y = event.offsetY * scale;
+    }
+
+    function mouse_leave() {
+      mouse_pos_x = -100;
+      mouse_pos_y = -100;
+      animate = true;
+    }
+
+    function mouse_enter() {
+      animate = false;
+    }
+
+    function move() {
+      for (i = 0; i < discCount; i++) {
+        if (discs[i].x < discs[i].radius) {
+          discs[i].x = discs[i].radius;
+          discs[i].x_vel = -discs[i].x_vel;
+        }
+        if (discs[i].y < discs[i].radius) {
+          discs[i].y = discs[i].radius;
+          discs[i].y_vel = -discs[i].y_vel;
+        }
+        if (discs[i].x > canvas_1.width - discs[i].radius) {
+          discs[i].x = canvas_1.width - discs[i].radius;
+          discs[i].x_vel = -discs[i].x_vel;
+        }
+        if (discs[i].y > canvas_1.height - discs[i].radius) {
+          discs[i].y = canvas_1.height - discs[i].radius;
+          discs[i].y_vel = -discs[i].y_vel;
+        }
+
+        discs[i].x += discs[i].x_vel;
+        discs[i].y += discs[i].y_vel;
+      }
+
+      var d;
+      for (i = 0; i < particleCount; i++) {
+        d = dist(particles[i].x_target - particles[i].x, particles[i].y_target - particles[i].y);
+        if (d > 8) {
+          particles[i].offset = d;
+        } else {
+          particles[i].offset = 0;
+        }
+        particles[i].x_vel = (particles[i].x_target - particles[i].x) / 20;
+        particles[i].y_vel = (particles[i].y_target - particles[i].y) / 20;
+        if (animate) {
+          for (j = 0; j < discCount; j++) {
+            d = dist(discs[j].x - particles[i].x_target, discs[j].y - particles[i].y_target);
+            if (d < discs[j].radius) {
+              particles[i].x = discs[j].x - ((discs[j].x - particles[i].x_target) / d) * (2 * d - discs[j].radius);
+              particles[i].y = discs[j].y - ((discs[j].y - particles[i].y_target) / d) * (2 * d - discs[j].radius);
+            }
+          }
+        } else {
+
+          d = dist(mouse_pos_x - particles[i].x_target, mouse_pos_y - particles[i].y_target);
+
+          if (d < radius) {
+            particles[i].x = mouse_pos_x - ((mouse_pos_x - particles[i].x_target) / d) * (2 * d - radius);
+            particles[i].y = mouse_pos_y - ((mouse_pos_y - particles[i].y_target) / d) * (2 * d - radius);
+          }
+        }
+        particles[i].x += particles[i].x_vel;
+        particles[i].y += particles[i].y_vel;
+      }
+    }
+
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas_1.width, canvas_1.height);
+
+    function draw() {
+      canvas_1.width = window.innerWidth;
+      canvas_1.height = window.innerHeight;
+      scale = canvas_1.width / canvas_1.scrollWidth;
+
+      ctx.fillStyle = "rgba(255,255,255,1)";
+      ctx.fillRect(0, 0, canvas_1.width, canvas_1.height);
+      move();
+
+      var grd;
+      var offset;
+
+      ctx.fillStyle = 'black';
+      for (i = 0; i < particleCount; i++) {
+        ctx.beginPath();
+        ctx.arc(particles[i].x, particles[i].y, particles[i].radius, 0, TWO_PI);
+        ctx.fill();
+      }
+
+      window.requestAnimationFrame(draw);
+    }
+    draw();
+    // --------------------- LANDING PAGE --------------------->
+
+
+    // --------------------- CURSOR --------------------->
+    var cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', function (e) {
+      var x = e.clientX;
+      var y = e.clientY;
+      cursor.style.left = x + "px";
+      cursor.style.top = y + "px";
+    });
+
+    var outerCursor = document.getElementById('outerCursor');
+    document.addEventListener('mousemove', function (e) {
+      var x = e.clientX;
+      var y = e.clientY;
+      outerCursor.style.left = x + "px";
+      outerCursor.style.top = y + "px";
+    });
+    // <--------------------- CURSOR ---------------------  
+
+    // <--------------------- SCROLL TO ---------------------  
+    function scrollMe() {
+      document.querySelector('.menu').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    document.getElementsByTagName('canvas')[0].addEventListener('click', scrollMe)
+
+    setTimeout(() => {
+      scrollMe()
+    }, 5000);
+    // <--------------------- SCROLL TO ---------------------
+
+    // --------------------- MOVING MENU --------------------->
+    let $text = $(".rolling-text .rolling-text__text");
+    let $wrap = $(".rolling-text");
+
+    $text.clone().appendTo($wrap);
+
+    TweenMax.to($wrap, 10, {
+      x: -$text.width(),
+      ease: Linear.easeNone,
+      repeat: -1
+    });
+// --------------------- MOVING MENU ---------------------></script>
 </body>
 
-<script>
- /*
-   Music is by The XX
-   http://thexx.info
-   
-   options and constructor are at bottom of file
- */
-
-  var Vis = function (opt) {
-    function extend(a, b) {
-      for (var key in b)
-        if (b.hasOwnProperty(key))
-          a[key] = b[key];
-      return a;
-    }
-    var opts = {
-      preferredBarWidth: 16,
-      forcePreferredBarWidth: false,
-      barSpacing: 1,
-      color: 'rainbow',
-      rainbowOpacity: 1,
-      element: 'canvas#visCanvas',
-      sourceElement: 'audio#visSource',
-      height: null,
-      width: null, // if set, will use, else will use parent width
-      numBars: null, // if set, will use, else will calculate from bar width
-      hideIfZero: true,
-      loop: false,
-      autoplay: true,
-      volume: 1,
-      sources: [],
-      consecutiveZeroesLimit: 50,
-      onPlay: function (name) {
-        console.log('now playing ' + name);
-      },
-      onPause: function () {
-
-      },
-      onEnd: function () {
-
-      },
-      onDragStart: function () {
-
-      },
-      onDragEnd: function () {
-
-      },
-      onVolumeChange: function () {
-
-      }
-    };
-
-    if (opt) extend(opts, opt);
-
-    var _this = this;
-    var seeking = false;
-    var cv = document.querySelector(opts.element);
-
-    if (!opts.width) {
-      opts.width = cv.parentElement.clientWidth;
-    }
-    if (!opts.height) {
-      opts.height = cv.parentElement.clientHeight;
-    }
-
-    var barColors = [];
-    cv.setAttribute('height', opts.height);
-    cv.setAttribute('width', opts.width);
-
-    var numBars = (opts.numBars ? opts.numBars : Math.floor(opts.width / (opts.preferredBarWidth + opts.barSpacing)));
-    var barWidth = opts.width / numBars - opts.barSpacing;
-
-    if (opts.forcePreferredWidth) {
-      barWidth = opts.preferredBarWidth;
-    }
-    if (barWidth < 4) barWidth = 4;
-
-    for (var i = 0; i < numBars; i++) {
-      var frequency = 5 / numBars;
-      if (opts.color == 'rainbow2') {
-        g = Math.floor(Math.sin(frequency * i + 0) * (127) + 128); //actual rainbow
-        r = Math.floor(Math.sin(frequency * i + 2) * (127) + 128);
-        b = Math.floor(Math.sin(frequency * i + 4) * (127) + 128);
-        barColors[i] = 'rgba(' + r + ',' + g + ',' + b + ',' + opts.rainbowOpacity + ')';
-      } else if (opts.color == 'rainbow') {
-        b = Math.floor(Math.sin(frequency * i + 0) * (127) + 128);
-        g = Math.floor(Math.sin(frequency * i + 1) * (127) + 128);
-        r = Math.floor(Math.sin(frequency * i + 3) * (127) + 128);
-        barColors[i] = 'rgba(' + r + ',' + g + ',' + b + ',' + opts.rainbowOpacity + ')';
-      } else if (opts.color == 'random') {
-        barColors[i] = '#' + Math.floor(Math.random() * 16777215).toString(16);
-      } else {
-        barColors[i] = opts.color;
-      }
-    }
-
-    var c = cv.getContext('2d');
-
-    var cInd = 0;
-    var ind = 0;
-    for (var i = 0; i < cv.getAttribute('width'); i += (barWidth + opts.barSpacing)) {
-      c.save();
-      c.fillStyle = barColors[cInd++];
-      c.translate(i, 0);
-      c.fillRect(0, opts.height - opts.height * Math.random(), barWidth, opts.height);
-      c.restore();
-      ind += Math.floor(usableLength / numBars);
-    }
-
-
-    var ctx = new AudioContext();
-    var audio = document.querySelector(opts.sourceElement);
-
-    audio.src = opts.sources[0];
-
-    var audioSrc = ctx.createMediaElementSource(audio);
-    var analyser = ctx.createAnalyser();
-    audioSrc.connect(analyser);
-    analyser.connect(ctx.destination);
-
-    var frequencyData = new Uint8Array(analyser.frequencyBinCount);
-    var usableLength = 250;
-    var consZ = 0;
-    var consZLim = opts.consecutiveZeroesLimit || 50;
-
-    function setUsableLength(len) {
-      if (len < usableLength) return;
-      //console.log('Increased usable length to '+usableLength);
-      usableLength = len;
-    }
-    function renderFrame() {
-      requestAnimationFrame(renderFrame);
-      analyser.getByteFrequencyData(frequencyData);
-
-      for (var i = 0; i < frequencyData.length; i++) {
-        if (frequencyData[i] == 0) {
-          consZ++;
-        } else {
-          consZ = 0;
-        }
-        if (consZ >= consZLim) {
-          setUsableLength(i - consZLim + 1);
-          break;
-        }
-      }
-      c.clearRect(0, 0, opts.width, opts.height);
-      var ind = 0;
-      var cInd = 0;
-      for (var i = 0; i < cv.getAttribute('width'); i += (barWidth + opts.barSpacing)) {
-        c.save();
-        c.fillStyle = barColors[cInd++];
-        c.translate(i, 0);
-        if (!opts.hideIfZero)
-          c.fillRect(0, opts.height - opts.height * (frequencyData[Math.floor(ind)] / 255) - 1, barWidth, opts.height);
-        else
-          c.fillRect(0, opts.height - opts.height * (frequencyData[Math.floor(ind)] / 255), barWidth, opts.height);
-
-        c.restore();
-        ind += Math.floor(usableLength / numBars);
-      }
-      if (audio.ended) {
-        opts.onEnd();
-        _this.next();
-      }
-    }
-
-    audio.volume = opts.volume;
-    this.loop = opts.loop;
-    // this is just here so codepen can make a nice preview
-    setTimeout(function () {
-      renderFrame(this);
-      if (opts.autoplay) {
-        audio.play();
-      }
-    }, 1);
-
-    audio.addEventListener('play', function () {
-      opts.onPlay(opts.sources[playlistIndex].match(/([\w|.|-|%]+)$/g)[0]);
-    });
-    audio.addEventListener('pause', function () {
-      opts.onPause();
-    });
-    audio.addEventListener('seeking', function () {
-      seeking = true;
-      opts.onDragStart();
-    });
-    audio.addEventListener('seeked', function () {
-      seeking = false;
-      if (audio.currentTime == audio.duration) {
-        _this.next();
-      }
-      opts.onDragEnd();
-    });
-    audio.addEventListener('volumechange', function () {
-      opts.onVolumeChange();
-    });
-
-    var playlistIndex = 0;
-
-    this.play = function (newSource) {
-      if (newSource) audio.src = newSource;
-      audio.pause();
-      audio.play();
-      return this;
-    }
-    this.pause = function () {
-      audio.pause();
-      return this;
-    }
-    this.volume = function (vol) {
-      audio.volume = vol;
-      return this;
-    }
-    this.loop = function (loop) {
-      this.loop = loop;
-      return this;
-    }
-    this.mute = function (muted) {
-      audio.muted = muted;
-      return this;
-    }
-    this.duration = function () {
-      return audio.duration;
-    }
-    this.seek = function (seconds) {
-      if (seconds != null) {
-        audio.currentTime = seconds;
-        return this;
-      } else {
-        return audio.currentTime;
-      }
-    }
-    this.next = function () {
-      playlistIndex++;
-      if (playlistIndex == opts.sources.length) {
-        playlistIndex = 0;
-        if (this.loop) {
-          /*if (opts.sources.length == 1) {
-            this.seek(0);
-            return this.play();
-          } else if (audio.paused) return this;
-          else*/
-          return this.play(opts.sources[playlistIndex]);
-        } else {
-          return this.pause();
-        }
-      } else {
-        /*if (audio.paused) return this;
-        else*/
-        return this.play(opts.sources[playlistIndex]);
-      }
-    }
-    this.prev = function () {
-      playlistIndex--;
-      if (playlistIndex < 0)
-        playlistIndex = opts.sources.length - 1;
-      /*if (audio.paused) return this;
-      else */
-      return this.play(opts.sources[playlistIndex]);
-    }
-
-  };
-
-  var vis = new Vis({
-    sourceElement: '#music',
-    preferredBarWidth: 30,
-    sources: ['../process/audio/head&heart.mp3'],
-    volume: 0.15,
-    loop: true
-    //hideIfZero: false,
-    //numBars: 10,
-    //color: 'rgba(255,255,255,.1)'
-    //rainbowOpacity: 0.2
-  });
-</script>
 </html>

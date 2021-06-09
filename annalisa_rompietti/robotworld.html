@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Farro:wght@500&display=swap" rel="stylesheet">
   <style>
 
 
@@ -18,8 +20,38 @@ body{
         width: 200px;
       }
 
+pre{
+  color: white;
+  float: right;
+  font-size: 50px;
+  margin-top: 90px;
+  margin-right: 50px;
+  font-family: Farro;
+  font-style: italic;
+}
 
+#zuruckbutton{
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  width: 80px;
+  height: 30px;
+  background-color: white;
+}
 
+a{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  font-family: Farro;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+  
+  
+
+}
   </style>
 </head>
 
@@ -32,7 +64,10 @@ body{
 	
 
 	<body onkeydown='getKeyAndMove(event)'>
-
+  <pre> navigate
+    through arrowKeys. 
+  </pre>
+  <div id=zuruckbutton> <a href="./process.html"> Zurück </a> </div>
 		<img id="image1" src="images/cmp_casco.png" alt="robot"/>
 	</body>
 

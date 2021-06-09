@@ -9,16 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --gradient: linear-gradient(45deg,
-          #6200ff,
-          /* #d65db1,
-                #ff6f91,
-                #ff9671,
-                #ffc75f, */
-          #6c4bfd,
-          #fd4b4b);
-    }
+  :root {
+            --gradient: linear-gradient(
+                45deg,
+                #0400ff,
+                #9900ff,
+                #ea00ff
+            );
+        }
 
     body {
       background: rgb(238, 174, 202);
@@ -39,7 +37,10 @@
       background-image: var(--gradient);
       background-size: 400%;
       animation: bg-animation 15s infinite alternate;
-    }
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="25"><circle cx="12.5" cy="12.5" r="12.5" style="fill: blue; "/></svg>'), auto;}
+
+
+    
 
     @keyframes bg-animation {
       0% {
@@ -66,19 +67,21 @@
       letter-spacing: 0.6rem;
       position: absolute;
       left: 5px;
-      color: #6200ff;
+      color: rgb(4, 0, 255);
       opacity: 0.5;
       z-index: -1;
     }
 
     a {
       font-family: 'Zen Dots', cursive;
-      color: #6200ff;
+      color: rgb(4, 0, 255);
       text-decoration: none !important;
-    }
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="25" height="25"><circle cx="12.5" cy="12.5" r="12.5" style="fill: red; "/></svg>'), auto;}
+
+    
     a:visited {
       font-family: 'Zen Dots', cursive;
-      color: #6200ff;
+      color: rgb(4, 0, 255);
       /* text-decoration: none !important; */
       text-decoration: underline;
      
@@ -86,7 +89,7 @@
 
     a:hover {
       font-family: 'Zen Dots', cursive;
-      color: #fd4b4b;
+      color: rgb(234, 0, 255);
       text-decoration: none !important;
     }
 
@@ -108,7 +111,7 @@
 
     .box div {
       font-weight: 700;
-      border: 1px solid #6200ff;
+      border: 1px solid rgb(4, 0, 255);
       padding: 6px;
       min-width: 15vw;
       line-height: 120%;
@@ -129,7 +132,7 @@
 
 
     .gina {
-      background-color: #fd4b4b;
+      background-color: rgb(234, 0, 255);
       opacity: 0.5;
     }
 
@@ -138,17 +141,17 @@
     }
 
     .nav {
-      background-color: #6200ff;
+      background-color: rgb(4, 0, 255);
     }
 
     .col {
-      color: #fd4b4b;
+      color: #ea00ff;
       font-family: 'Zen Dots', cursive;
     }
 
     .day {
       font-family: 'Zen Dots', cursive;
-      color: #6200ff;
+      color: rgb(4, 0, 255);
       text-decoration: none !important;
     }
   </style>
@@ -162,9 +165,9 @@
   <div class="exp"></div>
   <div class="box mainrow wrap">
     <div class="nav"><a href="../index.html"><span class="col">Home</span></a></div>
-    <div class="nav"><a href="../robotworld.html"> <span class="col">My Robot</span></a></div>
+    <div class="nav"><a href="../process/Day24/roomcool.html"> <span class="col">My Robot</span></a></div>
     <div class="nav"><a href="../song.html"> <span class="col">My Song</span></a></div>
-    <div class="nav"><span class="col">Process</span></div>
+    <div class="nav"><a href="index.html"> <span class="col">Process</span></a></div>
   </div>
   </div>
 
@@ -257,6 +260,9 @@
         <a href="Day15/index.html">Day15 uebersicht</a>
         <div><a href="Day15/02-getRandomImg.html">Day15 random img by topc example</a></div>
         <div><a href="Day15/01-getRandomImg.html">Day15 random img example</a></div>
+        <div class="gina"><a href="../robot/three.module/index.html"><span class="day">Torus1</span></a></div>
+        <div class="gina"><a href="../robot/three.modulecool/index.html"><span class="day">Torus2</span></a></div>
+
         <!-- <div><a href="Day15/robotrandom.html">Day15 randomrobot</a></div> noch fertig machen-->
       </div>
 
@@ -267,14 +273,15 @@
         <div><a href="Day16/scroll.html">Day16 scroll</a></div>
         <div><a href="Day16/scroll2.html">Day16 scroll</a></div>
         <div class="gina"><a href="Day16/scroll3.html">Day16 scrollparallax</a></div>
-        <div class="gina"><a href="Day16/scrollzoom2.html">Day16 scrollzoom first try</a></div>
-        <div class="gina"><a href="Day16/scrollamak.html">Day16 scrollzoom</a></div>
+        <!-- <div class="gina"><a href="Day16/scrollzoom2.html">Day16 scrollzoom first try</a></div>
+        <div class="gina"><a href="Day16/scrollamak.html">Day16 scrollzoom</a></div> -->
       </div>
 
       <div>
         <div><a href="Day17/animation2.html">Day17 animation zwei elemente</a></div>
         <div><a href="Day17/keyframe.html">Day17 animation verformen</a></div>
         <div class="gina"><a href="Day17/animation.html">Day17 animation muster</a></div> 
+        <div class="gina"><a href="Day20/gradientlinear.html">Day17 linear-gradient</a></div> 
       </div>
         
     <div> 
@@ -285,23 +292,34 @@
        
     <div> 
         <div class="gina"><a href="Day20/sound.html">Day20 audiografik</a></div>
-        <div class="gina"><a href="Day20/roomcool.html">Day20 room</a></div>
+        <!-- <div class="gina"><a href="Day20/roomcool.html">Day20 room</a></div> -->
         <div class="gina"><a href="Day20/cursor.html">Day20 cursor</a></div>
         <div class="gina"><a href="Day20/hoverstay.html">Day20 hoverstay</a></div>
     </div>
 
     <div>
-        <div class="gina"><a href="Day22/taschenlampe.html">Day21 taschenlampe</a></div>
+        <div class="gina"><a href="Day22/taschenlampe.html">Day21 Taschenlampe1</a></div>
+        <div class="gina"><a href="Day22/animation.html"><span>Day21 Taschenlampe2</span></a></div>
+        <div class="gina"><a href="Day16/scrollzoom2.html"><span>1Room</span></a></div>
+        <div class="gina"><a href="Day16/scrollamak.html"><span>2Room</span></a></div>
+        <div class="gina"><a href="Day20/roomcool.html"><span>3Room</span></a></div>
+
       </div>
 
       <div>
-        <div class="gina"><a href="../robotworld.html">Day22 daynight (clickme)</a></div>
+        <div class="gina"><a href="../index.html">Day22 daynight (clickme)</a></div>
         <div><a href="Day22/scroll/index.html">Day22 scrollexample</a></div>
         <div><a href="Day22/random/index.html">Day22 randomexample</a></div>
       </div>
 
       <div>
         <div><a href="Day23/audio.html">Day23 audio(var)example</a></div>
+
+      </div>
+
+      <div>
+        <div class="gina"><a href="Day23/3d-cube-page-transition/dist/index.html">Day24 cubetransition-try</a></div>
+
       </div>
       
 

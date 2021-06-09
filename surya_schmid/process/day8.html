@@ -1,180 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&amp;display=swap" rel="stylesheet">
+    <title>Get Random Image from API</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        body {
+            margin: 0px;
+            padding: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            font-size: 4vw;
+            font-weight: 200;
 
         }
 
-        body{
-            padding-bottom: 5rem;
-    
-            
-        }
-
-        img{
-            width: auto;
-            height: 500px;
-
-            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            
-         
-        }
-
-        header{
-            background-image: linear-gradient(to right, rgb(152, 229, 254), rgb(234, 214, 198));
-            height: 2rem;
-            
-
-            padding: 0.6rem;
-            padding-bottom: 0.2rem;
-            
-            font-size: 18px;
-            text-align: center;
-
-        }
-
-
-        main{
-            display: flex;
-            justify-content: center;
-            padding: 5vw;
+        .songtext {
+            z-index: 5;
             position: relative;
- 
         }
 
-        div{
-            position: relative;
-            margin-top: 5rem;
-           
-        }
-
-        figure{
-            position:absolute;
-            filter: opacity(0.7);
-            background-attachment: fixed;
-    
-        }
-
-        figcaption{
-            display: block;
-            background-color: rgb(231, 216, 186);
-            margin: 0;
-            padding: 0.2rem;
-            text-align: center;
-            margin-bottom: 10rem;
-            opacity: 0;
-
-
-        }
-
-        figure:hover figcaption{
-           opacity: 100;
-        }
-
-        figure:hover{
-            filter: opacity(1);
-        }
-
-        .one{
-            left: 3rem;
-        }
-        .two{
-            top: 35vw;
-        }
-
-        .three{
-            right: 3rem;
-
-        }
-        
-        
-
-
-        .gradiant{
-            margin-top: 80vw;
-            width: 100%;
-            height: 100px;
-            background-color: lightblue;
-             background-image: linear-gradient(to right, rgb(152, 229, 254), rgb(234, 214, 198));
-        }
-
-       div img:nth-child(2n){
-            filter: sepia(5);
-        }
-
-        .galer{
-            height: 200px;
-            overflow: scroll;
-        }
-
-       
-        a{
-            position: absolute;
+        a {
+            font-weight: 400;
             text-decoration: none;
-            color: rgb(255, 255, 255);
-            padding: 0.8rem;
-            top: 0;
+            display: inline-block;
+            position: relative;
+            color: black;
         }
 
-        a:hover{
-            background-color: rgb(255, 255, 255);
-            color: rgb(152, 229, 254);
+        a div {
+            position: absolute;
+            top: -5vw;
+            left: 0px;
+            width: 15vw;
+            height: 15vw;
+            z-index: 1;
+            mix-blend-mode: multiply;
+            border-radius: 50%;
         }
+
+        a div img {
+            width: 100%;
+            display: block;
+            ;
+        }
+
+        a.white {
+            color: white;
+        }
+
+         header{
+               display: flex;
+               justify-content: space-between;
+           }
+
+           
+           
+    
+            a:hover{
+                color: magenta;
+            }
     </style>
-
-
 </head>
+
 <body>
+        <header>
+            <a href="index.html">Back</a>
+        
+        </header>
+
+
+    Oh my God, oh my God<br>
+    This <a class="getImg" href="#">feeling</a>'s just begun<br>
+    I'm saying <a class="getImg" href="#">things</a> I've never said<br>
+    Doing <a class="getImg" href="#">things</a> I've never done<br>
     
-
-    <header>
-        Summer Vibes
-    </header>
-
-    <a href="index.html">Back</a>
- 
-
-    
-
-    <main>
-        <figure class="one">
-            <img src="https://i.pinimg.com/564x/42/d1/7c/42d17c806fdbd304895b6f51e07f02bd.jpg" alt="palmen">
-            <figcaption>Sunshine</figcaption>
-        </figure>
-
-        <figure class="two">
-            <img src="https://i.pinimg.com/564x/68/26/0b/68260b61d2c756b5dcdf99048f75d998.jpg" alt="schatten">
-            <figcaption>Shadow</figcaption>
-        </figure>
-
-        <figure class="three">
-            <img src="https://i.pinimg.com/564x/42/27/a2/4227a2d158feb3345bad757877045ff0.jpg" alt="meer">
-            <figcaption>Beach</figcaption>
-        </figure>
-    </main>
-
-    <div class="gradiant"></div>
-    <div>
-   
-
-    <div class="galer">
-        <img class="glarie" src="https://i.pinimg.com/564x/42/d1/7c/42d17c806fdbd304895b6f51e07f02bd.jpg" alt="palmen">
-        <img class="glarie" src="https://i.pinimg.com/564x/42/d1/7c/42d17c806fdbd304895b6f51e07f02bd.jpg" alt="palmen">
-        <img class="glarie" src="https://i.pinimg.com/564x/42/d1/7c/42d17c806fdbd304895b6f51e07f02bd.jpg" alt="palmen">
-       
-    </div>
-    
-
+    Oh my God, oh my God<br>
+    When I see you I should <a class="getImg" href="#">run</a><br>
+    But I'm <a class="getImg" href="#">frozen</a>in motion<br>
+    And my <a class="getImg" href="#"></a>head </a>tells me to <a class="getImg" href="#">stop</a><br>
+    Tells me to stop
 
 </body>
+<script>
+    let els = document.getElementsByTagName("a");
+    for (i in els) {
+        els[i].addEventListener("mouseover", function (event) { //hier wird auf alle a Elemente ein Event listener auf das Event mouseover gelegt
+            if (event.target.className === 'getImg') { // hier wird gefragt ob sie die Klasse getImg besitzen
+
+                let div = document.createElement('div'); //hier wird ein Div kreiiert
+                //hier wird dem div zwei background images zugewiesen. Der Trick ist, den Inhalt vom a über event.target.innerHTML abzufragen und der URL mitzugeben
+                div.style.backgroundImage = 'url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=1), url(https://source.unsplash.com/random/300×300?' + event.target.innerHTML + '&sig=2), radial-gradient(#010c55, #093979, #ff0072 ';
+                //hier wird das CSS konstruiert
+                div.style.backgroundPosition = '0 0, 0 50px, 0 0';
+                div.style.backgroundBlendMode = 'overlay, screen';
+                div.style.backgroundSize = 'cover, cover';
+                //hier wird das kreierte div dem a angehängt
+                event.target.appendChild(div);
+                //hier wird die Klasse getImg entfernt -- sonst würden bei jedem mouseover event immer neue Bilder hinzugefügt
+                event.target.classList.remove("getImg");
+                // hier wird der Textstil auf weiss gesetzt 
+                event.target.setAttribute("class", "white");
+            }
+
+        }, false);
+    }
+</script>>
+
+</html>
+</script>
 </html>

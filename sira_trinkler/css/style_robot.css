@@ -1,4 +1,4 @@
-/* COOLE VERSION */
+
 /* ALLGEMEIN */
  @font-face {
     font-family: Walsheim Regular;
@@ -45,12 +45,13 @@
 body {
 	margin: 0;
 	padding: 0;
-  background-image: url(../assets/image/backgroundnew.jpg);
+  background-image: url(../assets/image/background_sky.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   min-height: 100vh;
 }
+
 #canvas {
 	position: fixed;
 	left: 0;
@@ -429,24 +430,60 @@ Animation keyframes
   }
 }
 
-/* NAVIGATION AUDIO */
-a.trigger {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  top: 9px;
+
+        /* NAVIGATION AUDIO */
+        li.last a.trigger {
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            /* top: 9px; */
+            text-align: center;
+        }
+
+        .trigger::before {
+            content: 'PLAY ';
+        }
+
+        .playing .trigger::before {
+            content: 'PAUSE ';
+        }
+
+        .paused .trigger::before {
+            content: 'PLAY ';
+        }
+
+
+li.last a {
+    padding: 10px;
+    margin: 0 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    z-index: 10000;
+    color: rgba(255, 255, 255, 0.2);
 }
 
-.trigger::before {
-    content: 'PLAY ';
+li.last a:hover {
+    background-color: rgba(255, 255, 255, 0.651);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.63);
+    color: black;
+    font-family: HKGrotesk Medium;
 }
 
-.playing .trigger::before {
-  content: 'PAUSE ';
-}
- 
-.paused .trigger::before {
-  content: 'PLAY ';
-}
+.arrow {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            right: -770px;
+            bottom: -440px;
+            z-index: 1000;
+            transform: scale(0.025) rotate(-90deg);
+            opacity: 0;
+            transition: 0.5s;
+        }
 
+.arrow:hover {
+            opacity: 1;
+        }

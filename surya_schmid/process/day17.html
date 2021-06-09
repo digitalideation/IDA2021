@@ -1,326 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDA Modul - Surya Schmid</title>
-    <link rel="stylesheet" href="css/song.css">
-
+    <title>Visualize Music</title>
     <style>
-    
-    @font-face {
-      font-family: Skyline;
-      src: url(../process/img/NewParisEDUSkyline-Regular.otf);
-    }
-
-    body{
-        font-family: "Skyline";
-    }
-    
-
-    nav{
-        border-bottom: 1px solid rgb(0, 0, 0);
-        position: relative;
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        justify-content: space-between;
-        padding: 0rem;
-        margin: 0rem;
-    }
-
-    ul{
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin: 0rem;
-      padding: 0rem
-    }
-
-    li{
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
-        text-decoration: none;
-        font-family: "Skyline";
-        color: black;
-       
-    }
-
-    a{
-       text-decoration: none;
-       color: black;
-          }
-
-    li:hover a{
-      color: white;
-    }
-   
-
-
-    li:hover  {
-      background-color: rgb(0, 0, 0);
-      color: white;
-      opacity: 100%;
-    }
-
-
-
-     h1{
-        font-family: "Skyline";
-        font-size: 80px;
-        text-align: center;
-    } 
-    p{
-        font-family: "Skyline";
-        font-size: 40px;
-        text-align: center;
-        border-bottom: 1px solid rgb(0, 0, 0);
-        padding-bottom: 3rem;
-        margin-bottom: 6rem;
-    }
-
-
-.text{
-    position: relative;
-    text-align: center;
-    letter-spacing: 4rem;
-    line-height: 2rem;
-    border: 0px solid tomato;
-    color: white ;
-
-    background: black;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    height: 100vh;
-
-    animation: text ease-in-out 7s infinite;
-
-
-  }
-
-  .text2{
-    position: relative;
-    text-align: center;
-    letter-spacing: 4rem;
-    line-height: 2rem;
-    border: 0px solid tomato;
-    background: radial-gradient(circle at 50% 60%,rgba(149,176,249,1), rgba(149,176,249,0) 50%), radial-gradient(circle at 10% 10%,rgba(114,226,253,1), rgba(114,226,253,0) 50%), radial-gradient(circle at 90% 10%,rgba(184,150,255,1), rgba(184,150,255,0) 50%), radial-gradient(circle at 90% 90%,rgba(86,207,210,1), rgba(86,207,210,0) 50%), radial-gradient(circle at 10% 90%,rgba(168,112,253,1), rgba(168,112,253,0) 50%) ;;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-    height: 100vh;
-
-    animation: text2 ease-in-out 7s ;
-
-
-  }
-
-  @keyframes text {
-    0%{
-      font-size: 1rem;
-    }
-
-    50%{
-      font-size: 0.3rem;
-    }
-
-    100%{
-      font-size: 1rem;
-    }
-  }
-  
-   @keyframes text2 {
-    0%{
-      letter-spacing: 3px;
-    }
-
-    50%{
-      font-size: 0.3rem;
-    }
-
-    100%{
-      font-size: 1rem;
-    }
-  }
-
-   h2{
-            font-size: 150px;
-            color:  #ffffff;
-            text-transform: uppercase;
-            font-family:"Skyline" ;
-            text-shadow: 10px 10px #000000;
-            padding-left: 5rem;
-            padding-right: 5rem;
-            width: 170vw;
-
-            text-transform: uppercase;
-            letter-spacing: .125em;
-            animation-name: animateText;
-            animation-timing-function: ease;
-            animation-duration: 10s;
-            position: absolute;
-            left: -99em;
-            animation-iteration-count: infinite;
-            top: 80vw;
-
-
-      
-        }
-
-  
-        @keyframes animateText {
-        0% {left: 30em;opacity: 0}
-        25% {opacity:1}
-        50% {left: .2em;}
-        75% {left: -7.5em;}
-        100% {left: -20em;}
-        }
-
-
-        </style>
-    
-
+html,
+body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #10171c;
+	color: white;
+}
+#visbox {
+	height: 300px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	padding: 0;
+	margin: 0;
+}
+#music {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -150px;
+	z-index: 1000;
+}
+    </style>
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li> <a href="https://ida2021-staging.netlify.app/"> Home </a></li>
-            <li><a href="robotworld.html">My Robot</a></li>
-            <li><a href="song.html">My Song</a></li>
-            <li><a href="process/index.html">Process</a></li>
-        </ul>
-    </nav>
-    
-    </div>
-
-
-    <div class="text">
-
-
-        Oh my God, oh my God<br>
-        This feeling's just begun<br>
-        I'm saying things I've never said<br>
-        Doing things I've never done<br>
-
-        Oh my God, oh my God<br>
-        When I see you I should run<br>
-        But I'm frozen in motion<br>
-        And my head tells me to stop<br>
-        Tells me to stop<br>
-
-        Feeling feelings I feel about us<br>
-        Try to fight it but it's never enough<br>
-
-        My heart is certain<br>
-        It's more than a crush<br>
-        'Cause I'm frozen in motion<br>
-        And my head tells me to stop<br>
-
-        But my heart goes<br>
-        Bum bum bum da bum bum, bum bum bum da bum<br>
-        Bum bum bum da bum bum, bum bum bum da bum<br>
-        'Cause my heart goes<br>
-        Bum bum bum da bum bum, bum bum bum da bum<br>
-        Bum bum bum da bum bum, bum bum bum da bum<br>
-
-        Oh my God, oh my God<br>
-        Can't believe what I've become<br>
-        I'm thinking things I shouldn't think<br>
-        Singing songs I've never sung<br>
-</div>
-<div class="text2">
-        Oh my God, oh my God<br>
-        When I see you I should run<br><br>
-        But I'm frozen in motion<br>
-        And my head tells me to stop<br>
-        Tells me to stop<br>
-
-        Feeling feelings I feel about us<br>
-        Try to fight it but it's never enough<br>
-        ('Cause my heart)<br>
-        My heart is certain<br>
-        It's more than a crush<br>
-        'Cause I'm frozen in motion<br>
-        And my head tells me to stop<br>
-
-        But my heart goes<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-        'Cause my heart goes<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-
-        But my heart goes<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-        'Cause my heart goes<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-
-        My head and my heart<br>
-        My head and my heart<br>
-        I can't tell them apart<br>
-        My head tells me to run<br>
-        But I can't<br>
-</div>
-        'Cause my heart goes<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-        'Cause my heart goes<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-dum<br>
-        Ba-ba-ba-dum ba-ba-dum ba-ba-da-dum<br>
-
-        Oh my God, oh my God<br>
-        This feeling's just begun<br>
-        I'm saying things I've never said<br>
-        Doing things I've never done<br>
-
-        Oh my God, oh my God<br>
-        When I see you I should run<br>
-        But I'm frozen in motion<br>
-        And my head tells me to stop<br>
-
-        But my heart goes<br>
-
-    </div>
-
-    <h2>I'm frozen &nbsp;&nbsp; in motion</h2>
-
-
-    <script>
-        document.body.addEventListener("click", createNewImg, false);
-
-            function createNewImg(event) {
-                let div = document.createElement('div'); //hier wird ein Div kreiiert
-                //hier wird dem div zwei background images zugewiesen. Der Trick ist, den Inhalt vom a über event.target.innerHTML abzufragen und der URL mitzugeben
-                div.style.backgroundImage = 'url(https://source.unsplash.com/random/300×300?Gold), url(https://source.unsplash.com/random/300×300?Blume), radial-gradient(rgb(201, 192, 192), rgb(0, 140, 255))';
-
-                //div.style.backgroundImage = 'url(' + event.target.getAttribute('myimg') + ')';
-
-                //hier wird das CSS konstruiert
-                div.style.backgroundPosition = '0 0, 0 50px, 0 0';
-                div.style.backgroundBlendMode = 'overlay';
-                div.style.backgroundSize = 'cover, cover';
-                div.style.top = event.pageY + "px"; //Math.random() * window.innerWidth;
-                div.style.left = event.pageX + "px"; //Math.random() * window.innerHeight;
-                div.style.border = '0px solid red';
-                div.style.position = "absolute";
-                div.style.width = "200px";
-                div.style.height = "200px";
-                div.style.borderRadius = "50%";
-
-                //hier wird das kreierte div dem a angehängt
-                document.body.appendChild(div);
-            }
-     </script>
+  <audio id="music" controls crossorigin="anonymous"></audio>
+  <div id="visbox">
+    <canvas id="visCanvas"></canvas>
+  </div>
 </body>
 
+<script>
+ /*
+   Music is by The XX
+   http://thexx.info
+   
+   options and constructor are at bottom of file
+ */
+
+  var Vis = function (opt) {
+    function extend(a, b) {
+      for (var key in b)
+        if (b.hasOwnProperty(key))
+          a[key] = b[key];
+      return a;
+    }
+    var opts = {
+      preferredBarWidth: 16,
+      forcePreferredBarWidth: false,
+      barSpacing: 1,
+      color: 'rainbow',
+      rainbowOpacity: 1,
+      element: 'canvas#visCanvas',
+      sourceElement: 'audio#visSource',
+      height: null,
+      width: null, // if set, will use, else will use parent width
+      numBars: null, // if set, will use, else will calculate from bar width
+      hideIfZero: true,
+      loop: false,
+      autoplay: true,
+      volume: 1,
+      sources: [],
+      consecutiveZeroesLimit: 50,
+      onPlay: function (name) {
+        console.log('now playing ' + name);
+      },
+      onPause: function () {
+
+      },
+      onEnd: function () {
+
+      },
+      onDragStart: function () {
+
+      },
+      onDragEnd: function () {
+
+      },
+      onVolumeChange: function () {
+
+      }
+    };
+
+    if (opt) extend(opts, opt);
+
+    var _this = this;
+    var seeking = false;
+    var cv = document.querySelector(opts.element);
+
+    if (!opts.width) {
+      opts.width = cv.parentElement.clientWidth;
+    }
+    if (!opts.height) {
+      opts.height = cv.parentElement.clientHeight;
+    }
+
+    var barColors = [];
+    cv.setAttribute('height', opts.height);
+    cv.setAttribute('width', opts.width);
+
+    var numBars = (opts.numBars ? opts.numBars : Math.floor(opts.width / (opts.preferredBarWidth + opts.barSpacing)));
+    var barWidth = opts.width / numBars - opts.barSpacing;
+
+    if (opts.forcePreferredWidth) {
+      barWidth = opts.preferredBarWidth;
+    }
+    if (barWidth < 4) barWidth = 4;
+
+    for (var i = 0; i < numBars; i++) {
+      var frequency = 5 / numBars;
+      if (opts.color == 'rainbow2') {
+        g = Math.floor(Math.sin(frequency * i + 0) * (127) + 128); //actual rainbow
+        r = Math.floor(Math.sin(frequency * i + 2) * (127) + 128);
+        b = Math.floor(Math.sin(frequency * i + 4) * (127) + 128);
+        barColors[i] = 'rgba(' + r + ',' + g + ',' + b + ',' + opts.rainbowOpacity + ')';
+      } else if (opts.color == 'rainbow') {
+        b = Math.floor(Math.sin(frequency * i + 0) * (127) + 128);
+        g = Math.floor(Math.sin(frequency * i + 1) * (127) + 128);
+        r = Math.floor(Math.sin(frequency * i + 3) * (127) + 128);
+        barColors[i] = 'rgba(' + r + ',' + g + ',' + b + ',' + opts.rainbowOpacity + ')';
+      } else if (opts.color == 'random') {
+        barColors[i] = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      } else {
+        barColors[i] = opts.color;
+      }
+    }
+
+    var c = cv.getContext('2d');
+
+    var cInd = 0;
+    var ind = 0;
+    for (var i = 0; i < cv.getAttribute('width'); i += (barWidth + opts.barSpacing)) {
+      c.save();
+      c.fillStyle = barColors[cInd++];
+      c.translate(i, 0);
+      c.fillRect(0, opts.height - opts.height * Math.random(), barWidth, opts.height);
+      c.restore();
+      ind += Math.floor(usableLength / numBars);
+    }
+
+
+    var ctx = new AudioContext();
+    var audio = document.querySelector(opts.sourceElement);
+
+    audio.src = opts.sources[0];
+
+    var audioSrc = ctx.createMediaElementSource(audio);
+    var analyser = ctx.createAnalyser();
+    audioSrc.connect(analyser);
+    analyser.connect(ctx.destination);
+
+    var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+    var usableLength = 250;
+    var consZ = 0;
+    var consZLim = opts.consecutiveZeroesLimit || 50;
+
+    function setUsableLength(len) {
+      if (len < usableLength) return;
+      //console.log('Increased usable length to '+usableLength);
+      usableLength = len;
+    }
+    function renderFrame() {
+      requestAnimationFrame(renderFrame);
+      analyser.getByteFrequencyData(frequencyData);
+
+      for (var i = 0; i < frequencyData.length; i++) {
+        if (frequencyData[i] == 0) {
+          consZ++;
+        } else {
+          consZ = 0;
+        }
+        if (consZ >= consZLim) {
+          setUsableLength(i - consZLim + 1);
+          break;
+        }
+      }
+      c.clearRect(0, 0, opts.width, opts.height);
+      var ind = 0;
+      var cInd = 0;
+      for (var i = 0; i < cv.getAttribute('width'); i += (barWidth + opts.barSpacing)) {
+        c.save();
+        c.fillStyle = barColors[cInd++];
+        c.translate(i, 0);
+        if (!opts.hideIfZero)
+          c.fillRect(0, opts.height - opts.height * (frequencyData[Math.floor(ind)] / 255) - 1, barWidth, opts.height);
+        else
+          c.fillRect(0, opts.height - opts.height * (frequencyData[Math.floor(ind)] / 255), barWidth, opts.height);
+
+        c.restore();
+        ind += Math.floor(usableLength / numBars);
+      }
+      if (audio.ended) {
+        opts.onEnd();
+        _this.next();
+      }
+    }
+
+    audio.volume = opts.volume;
+    this.loop = opts.loop;
+    // this is just here so codepen can make a nice preview
+    setTimeout(function () {
+      renderFrame(this);
+      if (opts.autoplay) {
+        audio.play();
+      }
+    }, 1);
+
+    audio.addEventListener('play', function () {
+      opts.onPlay(opts.sources[playlistIndex].match(/([\w|.|-|%]+)$/g)[0]);
+    });
+    audio.addEventListener('pause', function () {
+      opts.onPause();
+    });
+    audio.addEventListener('seeking', function () {
+      seeking = true;
+      opts.onDragStart();
+    });
+    audio.addEventListener('seeked', function () {
+      seeking = false;
+      if (audio.currentTime == audio.duration) {
+        _this.next();
+      }
+      opts.onDragEnd();
+    });
+    audio.addEventListener('volumechange', function () {
+      opts.onVolumeChange();
+    });
+
+    var playlistIndex = 0;
+
+    this.play = function (newSource) {
+      if (newSource) audio.src = newSource;
+      audio.pause();
+      audio.play();
+      return this;
+    }
+    this.pause = function () {
+      audio.pause();
+      return this;
+    }
+    this.volume = function (vol) {
+      audio.volume = vol;
+      return this;
+    }
+    this.loop = function (loop) {
+      this.loop = loop;
+      return this;
+    }
+    this.mute = function (muted) {
+      audio.muted = muted;
+      return this;
+    }
+    this.duration = function () {
+      return audio.duration;
+    }
+    this.seek = function (seconds) {
+      if (seconds != null) {
+        audio.currentTime = seconds;
+        return this;
+      } else {
+        return audio.currentTime;
+      }
+    }
+    this.next = function () {
+      playlistIndex++;
+      if (playlistIndex == opts.sources.length) {
+        playlistIndex = 0;
+        if (this.loop) {
+          /*if (opts.sources.length == 1) {
+            this.seek(0);
+            return this.play();
+          } else if (audio.paused) return this;
+          else*/
+          return this.play(opts.sources[playlistIndex]);
+        } else {
+          return this.pause();
+        }
+      } else {
+        /*if (audio.paused) return this;
+        else*/
+        return this.play(opts.sources[playlistIndex]);
+      }
+    }
+    this.prev = function () {
+      playlistIndex--;
+      if (playlistIndex < 0)
+        playlistIndex = opts.sources.length - 1;
+      /*if (audio.paused) return this;
+      else */
+      return this.play(opts.sources[playlistIndex]);
+    }
+
+  };
+
+  var vis = new Vis({
+    sourceElement: '#music',
+    preferredBarWidth: 30,
+    sources: ['../process/audio/head&heart.mp3'],
+    volume: 0.15,
+    loop: true
+    //hideIfZero: false,
+    //numBars: 10,
+    //color: 'rgba(255,255,255,.1)'
+    //rainbowOpacity: 0.2
+  });
+</script>
 </html>

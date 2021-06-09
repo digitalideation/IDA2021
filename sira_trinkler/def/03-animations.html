@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<style>
+    body {
+        padding: 50px;
+    }
+
+    .box {
+        display: inline-block;
+        background: #C16F5A;
+        width: 200px;
+        height: 200px;
+        /* position: relative; */
+        left: 60%;
+        animation-name: myframes-2;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        /* animation-direction alternate --> forward, backward, forward, backward */
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        margin-top: 40px;
+        text-transform: uppercase;
+        color: white;
+        padding: 30px;
+        font-family: sans-serif;
+    }
+
+        .box-2 {
+        display: inline-block;
+        background: #BDB288;
+        width: 200px;
+        height: 200px;
+        animation-name: myframes-2;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        /* animation-direction alternate --> forward, backward, forward, backward */
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        margin: 20px;
+    }
+
+    @keyframes myframes-2 {
+        0% {
+            transform: scale(0) rotate(30deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+        }
+    }
+
+    p {
+        font-family: sans-serif;
+        margin: 30px;
+        color: white;
+    }
+
+.button {
+    background-color: #651F15;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.button-2 {
+    background-color: #1C2A3B;
+    padding: 15px;
+    border-radius: 30px;
+    /* margin-bottom: 50px; */
+    display: inline;
+    position: absolute;
+    top: 30px;
+    left: 150px;
+}
+
+.button:hover {
+    background-color: #94493e;
+}
+
+.button-2:hover {
+    background-color: #576980;
+}
+
+a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+        font-size: 0.8em;
+}
+
+</style>
+
+<body>
+    <div class="box">click me
+    </div>
+    <div class="button">
+        <a href="03-transitions.html">zurück</a>
+    </div>
+    <div class="button-2">
+        <a href="03-keyframes.html">weitere Aufgabe</a>
+    </div>
+
+    <!-- Klick auf die erste Box, dann bleibt es stehen -->
+
+    <script>
+        $('html').on('click', function () {
+            $(this).find('body').append('<div class="box-2"><p>HELLO!</p></div>');
+        });
+    </script>
+</body>
+
+</html>

@@ -68,6 +68,7 @@ function draw() {
         document.documentElement.style.setProperty('--scalesize', sum / bufferLength);
 
 
+
     }, 1000 / fps);
 
 

@@ -1,304 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Moodboard</title>
     <style>
-        @font-face {
-            font-family: "EuclidLight";
-            src: url("img/EuclidCircularBEDU-Light.otf");
+        
+/* * {
+    border: 1px solid black;
+} */
+
+        body {  
+            display: flex;
+            margin: 0;
+            position: relative;
+            background-image: linear-gradient(pink, rgb(169, 224, 255) );
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+          
         }
 
-        @font-face {
-            font-family: "EuclidMedium";
-            src: url("img/EuclidCircularBEDU-Medium.otf");
+        section{
+            position: relative;;
+            width: 50%;
+           
+        }   
+
+        img{
+        /*padding-bottom: 50px;
+        padding-left: 50px;*/
+        display: block;
+        size: cover;
+        width: 100%;
+        margin: 0.5rem;
+ 
+    }
+
+        
+
+    
+        .left{
+            position: fixed;
+            width:50%;
+            margin: -0.5rem;
+            height: 100%;
+            z-index: 2;
         }
 
-        @font-face {
-            font-family: "SuisseSerif";
-            src: url("img/SuisseEDUNeue-Medium.otf");
-        }
-
-
-        * {
-            border: 0px solid black;
-        }
-
-
-        body {
-            border: 0px solid seagreen;
-            color: black;
-            padding: 1rem;
-            background-image: linear-gradient(to bottom right, navy, deepskyblue);
-            
-
-        }
+        .right{
+            position: relative;
+            /*float: right;*/
+            left: 50%;
+            box-sizing: inherit;
+            width:45%;
+            padding:1rem;
          
-        .footer {
-            font-size: 0.8rem;
-            font-family: 'EuclidLight';
-            width: 100vw;
-            height: 1vw;
-            background-color: rgb(169, 231, 224);
-            padding-top: 1vh;
-            padding-left: 1vh;
-            position: fixed bottom;
-            
+        }
+
+        section.r1{
+            position: relative;
+            /*float: right;*/
+            top: 0px;
+            box-sizing: inherit;
+            width:47%;
+            float:left;
+            margin: 0.5rem;
+        }
+
+        section.r2{
+            float:left;
+            left: 0%;
+            top: 0px;
+            margin: 0.5rem;
+            width: 47%;
+
+        }
+    
+
+        figcaption {
+            position:absolute;
+            color: white;
+            background-color: rgb(0,0,0,0.6);
+            bottom:0rem;
+            left: 0rem;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        span{
+            width: 100%;
+            padding: 1rem;
+            padding-bottom: 1rem;
         }
 
         header{
-            border: 0px solid red;
-            position: relative;
-            margin-bottom: 4rem;
-            background-color: rgb(169, 231, 224);
-            padding-top: 1vh;
-            padding-bottom: 1vh;
-        }
-
-        main{
-            color: white;
-            border: 0px solid blue;
-            position: relative;
-            height: 70vw;
-            padding: 0;
-        }
-      
-        li {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-
-        }
-
-        h1,
-        h3{
-            width: 50%;
-            display: inline;
-            font-family:"SuisseSerif";
-        }
-
-          h1 {
-              border: 0px solid green;
-            font-size: 15vw;
-        }
-
-        h3 {
-            position: absolute;
-            font-size: 7.4vw;
-            writing-mode: vertical-rl;
-            width: 20vw;
-            padding-top: 2rem;
-            right: 2vw;
-            margin: 0;
-        }
-
-        p {
-            font-family: "EuclidLight";
-            float: left;
-            padding: 3vw;
-            width: 48vw;
-            height: 20vw;
-            line-height: 3;
-            margin: 0;
-        }
-
-
-      div{
-        border: 0px solid pink;
-        margin-top: 4rem;
-        padding: 0;
-        margin-left: 5vw;
-      }
-
-      span{
-          padding: 0ex;
-          margin: 0;
-      }
-    
+            
+            position: fixed;    
+            background-color: pink;
+            padding: 1rem;
         
-      .p1{
-          border: 0px solid lightseagreen;
-          margin: 0;
-
-      }
-
-      .p2{
-          position: relative;
-          float: right;
-          margin-top: 0vw;
-          margin-right: 10vw;
-          line-height: 1.4;
-          height: 5vh;
-      }
-
-      .p3, .p4, .p5, .p6 {
-          width: 30vw;
-      }
-
-        a {
-            font-family: "EuclidLight";
-            color: black;
-            font-size: 0.8rem;
-            padding: 0.5rem;
-        }
-
-        .youtube {
-            align-items: flex-end;
-            position: absolute;
-            right: 0rem;
-        }
-
-        .locationText {
-            font-size: 3rem;
-            position: absolute;
-            line-height: 0.6;
-            padding-left: 0.5rem;
-        }
-        .focus{
-            font-size: 3rem;
-            position: relative;
-            line-height: 0;
-            padding-left: 0.5rem;
-        }
-
-     
-
-        .eins{
-            font-size: 2rem;
-        }
-
-        .zwei{
-            font-size: 4rem;
-        }
-       
-       .drei{
-           font-size: 6rem;
-       }
-
-        a:visited {
-            color: black;
-        }
-
-
-        a:hover {
-            background-color: teal;
-            color: white;
-            font-family: "EuclidMedium";
-
-        }
-
-
-
-        a:focus {
-            border: green;
-        }
-
-        a:active {
-            color: indianred;
+            padding-left: 3rem;
+            opacity: 1;
+            height: 0.5rem;
+            width: 100%;
+            z-index: 1;
+            text-align: right;
+            align-items: center;
+            
         }
 
         a{
+        
             text-decoration: none;
             color: black;
-            padding: 1rem;
+            padding: 0.8rem;
+            margin-right: 5.5rem;
+            padding-bottom: 0.3rem;
+            margin-top: 0; 
+            padding-top: 1rem;
         }
 
         a:hover{
-            background-color:rgb(0, 3, 170);
+            background-color: pink;
             color: white;
         }
 
-     
-      
+    
+        
     </style>
-</head>
 
+
+    <title>Document</title>
+
+</head> 
 <body>
 
     <header>
-
-        <li><a href="index.html">Back</a></li>
-        <li class="youtube"><a href="https://www.youtube.com/watch?v=CRuOOxF-ENQ&list=RDCRuOOxF-ENQ&start_radio=1">Youtube - Joel Corry x MNEK</a></li>
-
-
+    <a href="index.html">Back</a>
+       
     </header>
-
-
-    <main>
-
-        <h1> Joel Corry x MNEK </h1>
-        <h3 class="location"> Head & Heart </h3>
-
-        <div class="songtext">
-            <p class="p1">     
-
-                <span>Bum</span>
-                <span class="eins">bum</span>
-                <span class="zwei">bum</span>
-                <span class="drei">da</span>
-                 <span class="zwei">bum</span>
-                <span class="eins">bum</span>
-                <span>bum</span>
-
-            </p>
-
-
-            <p class="p2">
-                Bum bum bum da bum bum, bum bum bum da bum<br>
-                Bum bum bum da bum bum, bum bum bum da bum<br>
-            </p>
-        
-            <p class="p3">
-                Oh my God, oh my God<br>
-                This feeling's just begun<br>
-                I'm saying things I've never said<br>
-                Doing things I've never done
-            </p>
-
-            <p class="p4">
-                Oh my God, oh my God<br>
-                When I see you I should run<br>
-                But I'm frozen in motion<br>
-                And my head tells me to stop<br>
-                Tells me to stop
-            </p>
     
-            <p class="p5">
-                Feeling feelings I feel about us<br>
-                Try to fight it but it's never enough
+    <section class="left">
+        
+       
+           <img src="https://i.pinimg.com/564x/e8/6a/42/e86a42b7445aadd6e022e1f1297f67d6.jpg" alt="" class=" bild1">
+            <figcaption> <span>
+                Head & Heart – Joel Corry x MNEK
+            </span></figcaption>
+       
+
+        
+    </section>
+
+    <section class="right">
+        
+      
+
+        <section class="r1">           
+          
                 
-                My heart is certain<br>
-                It's more than a crush<br>
-                'Cause I'm frozen in motion<br>
-                And my head tells me to stop
-            </p>
-            
-            <p class="p6">
-                But my heart goes<br>
-                Bum bum bum da bum bum, bum bum bum da bum<br>
-                Bum bum bum da bum bum, bum bum bum da bum<br>
-                'Cause my heart goes<br>
-                Bum bum bum da bum bum, bum bum bum da bum<br>
-                Bum bum bum da bum bum, bum bum bum da bum
-
-                <span class="locationText"></span>
-        
-            </p>
-
-        </div>
-
-    
+                <img src="https://i.pinimg.com/564x/d8/fc/f6/d8fcf6b71e26f5967c5a9cf53c993402.jpg" alt="">
+                <img src="https://i.pinimg.com/564x/c5/91/14/c59114fca2439f950d44f9f3e0c6026c.jpg" alt="" class="bild2">
+                <img src="img/ac611814328e6d2d7c6f643cf6f88836.jpeg">
+                <img src="https://i.pinimg.com/564x/f7/ab/05/f7ab0500d046b3ada8fd827933f494c3.jpg" alt="">
+                <img src="img/d645643d67d08dd488b4d680446e7671.jpeg" alt="">
+        </section>
 
 
-    </main>
+        <section class="r2">
+                
+                
+                <img src="img/74f25a29e7cd69a7020e389dea4f6ce9.jpeg">
+                <img src="img/582d46f58f754c38595ba6c19519b0b9.jpeg" alt="">
+                <img src="https://i.pinimg.com/564x/11/50/2e/11502e04a1f4f37ac2af30bcb646bf2c.jpg" alt="">
+                <img src="https://i.pinimg.com/564x/90/57/c5/9057c50a07f705a775c1f062883b9d0b.jpg" alt="">
+                <img src="img/b4f60dc625d07693173490673a1217e9.jpeg">
+        </section>
+
+    </section>
 
 
-    <footer>
-        <p class="footer">&copy; 2021 Surya Schmid</p>
-    </footer>
+
 
 
 

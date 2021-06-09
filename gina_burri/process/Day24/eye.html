@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+:root {
+            /*************************** Page-wide variables ****************************/
+            --scalesize: 1;
+            /* diese Variable wird über JavaScript abhängig von der Lautstärke gesetzt*/
+        }
+        body {
+            height: 100vmin;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(4, 0, 255);
+            animation-name: body;
+            animation-duration: 6s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            z-index: 0;
+
+    
+            
+
+        }
+      
+
+        .oben {
+            width: 200px;
+            height: 25vh;
+            background-color: rgb(4, 0, 255);
+            animation-name: spin;
+            animation-delay: 0s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+            /* animation-fill-mode: backwards;  */
+            /* animation: spin 5s linear  1 noraml forwards; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-delay: 0s;
+            animation-duration: 6s;
+            z-index: 4;
+            transform: scale(var(--scalesize));
+
+
+
+        }
+
+        .b {
+            left: 200px;
+        }
+
+        .c {
+            left: 400px;
+        }
+
+        .d {
+            left: 600px;
+        }
+
+        .e {
+            left: 800px;
+        }
+
+        .f {
+            left: 1000px;
+        }
+
+        .g {
+            left: 1200px;
+        }
+
+        .h {
+            left: 1400px;
+        }
+
+        .j {
+            left: 1600px;
+        }
+
+       
+
+        .omitte {
+            width: 200px;
+            height: 25vh;
+            background-color: rgb(4, 0, 255);
+            animation-name: spin30;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+            /* animation-fill-mode: backwards;  */
+            /* animation: spin 5s linear  1 noraml forwards; */
+            position: absolute;
+            top: 25vh;
+            left: 0;
+            /* animation-delay: 0.5s; */
+            animation-duration: 6s;
+            z-index: 3;
+            transform: scale(var(--scalesize));
+
+
+
+        }
+
+        .ss {
+            left: 0px;
+        }
+        .s {
+            left: 200px;
+        }
+
+        .t {
+            left: 400px;
+        }
+
+        .u {
+            left: 600px;
+        }
+
+        .v {
+            left: 800px;
+        }
+
+        .w {
+            left: 1000px;
+        }
+
+        .x {
+            left: 1200px;
+        }
+
+        .y {
+            left: 1400px;
+        }
+
+        .z {
+            left: 1600px;
+        }
+        .box {
+            width: 200px;
+            height: 25vh;
+            background-color: rgb(4, 0, 255);
+            animation-name: spin35;
+            animation-delay: 0s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+            /* animation-fill-mode: backwards;  */
+            /* animation: spin 3s linear .5s 1 noraml forwards; */
+            position: absolute;
+            top: 50vh;
+            /* animation-delay: 1s; */
+            animation-duration: 6s;
+            z-index: 2;
+            transform: scale(var(--scalesize));
+
+        }
+
+        .aa {
+            left: 0px;
+        }
+        .bb {
+            left: 200px;
+        }
+
+        .cc {
+            left: 400px;
+        }
+
+        .dd {
+            left: 600px;
+        }
+
+        .ee {
+            left: 800px;
+        }
+
+        .ff {
+            left: 1000px;
+        }
+
+        .gg {
+            left: 1200px;
+        }
+
+        .hh {
+            left: 1400px;
+        }
+
+        .ii {
+            left: 1600px;
+        }
+
+        .unten {
+            width: 200px;
+            height: 25vh;
+            background-color: rgb(4, 0, 255);
+            animation-name: spin40;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+            /* animation-fill-mode: backwards;  */
+            /* animation: spin 5s linear  1 noraml forwards; */
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            /* animation-delay: 1.5s; */
+            animation-duration: 6s;
+            z-index: 1;
+            transform: scale(var(--scalesize));
+
+
+
+        }
+
+        .kk {
+            left: 0px;
+        }
+        .k {
+            left: 200px;
+        }
+
+        .l {
+            left: 400px;
+        }
+
+        .m {
+            left: 600px;
+        }
+
+        .n {
+            left: 800px;
+        }
+
+        .o {
+            left: 1000px;
+        }
+
+        .p {
+            left: 1200px;
+        }
+
+        .q {
+            left: 1400px;
+        }
+
+        .r {
+            left: 1600px;
+        }
+
+        .uunten {
+            width: 200px;
+            height: 25vh;
+            background-color: rgb(4, 0, 255);
+            animation-name: spin45;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+            /* animation-fill-mode: backwards;  */
+            /* animation: spin 5s linear  1 noraml forwards; */
+            position: absolute;
+            bottom: -25vh;
+            left: 0;
+            /* animation-delay: 1.5s; */
+            animation-duration: 6s;
+            z-index: 1;
+            transform: scale(var(--scalesize));
+
+
+
+        }
+
+        .kkk {
+            left: 0px;
+        }
+        .kkkk {
+            left: 200px;
+        }
+
+        .ll {
+            left: 400px;
+        }
+
+        .mm {
+            left: 600px;
+        }
+
+        .nn {
+            left: 800px;
+        }
+
+        .oo {
+            left: 1000px;
+        }
+
+        .pp {
+            left: 1200px;
+        }
+
+        .qq {
+            left: 1400px;
+        }
+
+        .rr {
+            left: 1600px;
+        }
+        
+
+
+
+
+
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0);
+                
+            }
+
+            25% {
+                transform: rotateY(180deg);
+            }
+
+            55% {
+                transform: translateY(-100%) rotateZ(180deg);
+
+            }
+            95% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+
+            100% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+            
+        }
+        @keyframes spin30 {
+            0% {
+                transform: rotate(0);
+            }
+
+            30% {
+                transform: rotateY(180deg);
+            }
+
+            55% {
+                transform: translateY(-100%) rotateZ(180deg);
+
+            }
+            95% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+
+            100% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+            
+        }
+
+        @keyframes spin35 {
+            0% {
+                transform: rotate(0);
+            }
+
+            35% {
+                transform: rotateY(180deg);
+            }
+
+            55% {
+                transform: translateY(-100%) rotateZ(180deg);
+
+            }
+            95% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+
+            100% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+            
+        }
+
+        @keyframes spin40 {
+            0% {
+                transform: rotate(0);
+            }
+
+            40% {
+                transform: rotateY(180deg);
+            }
+
+            55% {
+                transform: translateY(-100%) rotateZ(180deg);
+
+            }
+            95% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+
+            100% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+            
+        }
+
+        @keyframes spin45 {
+            0% {
+                transform: rotate(0);
+            }
+
+            45% {
+                transform: rotateY(180deg);
+            }
+
+            55% {
+                transform: translateY(-100%) rotateZ(180deg);
+
+            }
+
+            95% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+            100% {
+                transform: translateY(0) rotate(360deg) rotateY(360deg);
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            } 
+            
+        }
+
+        @keyframes body {
+            0% {
+                background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);  
+              }
+
+    
+
+            100% {
+                background-color: rgb(4, 0, 255)        
+            } 
+            
+        }
+
+.radial-gradient {
+  
+    
+    background: radial-gradient(300px at center, #c5000000, rgb(0, calc(var(--scalesize) * 100), 255));
+     z-index: 5;
+     position:fixed;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+  z-index: 5;
+
+}
+
+        
+.left {
+            position: absolute;
+            left: 0px;
+            width:33.3vw;
+            height: 100vh;
+			z-index: 6;
+            /* border: 3px solid rgb(0, 255, 128); */
+			/* background-color: teal; */
+            cursor: url("../../images/mouth.svg") 64 64, auto;
+
+		}
+        
+
+        .middle {
+            position: absolute;
+            left: 33.3vw;
+            width:33.3vw;
+            height: 100vh;
+            z-index: 6;
+			/* background-color: rgb(128, 0, 0); */
+            /* border: 3px solid rgb(0, 38, 255); */
+            cursor: url("../../images/eye.svg") 64 64, auto;}        
+
+        .right {
+            position: absolute;
+            right: 0px;
+            width:33.3vw;
+            height: 100vh;
+            z-index: 6;
+			/* background-color: blueviolet; */
+			/* opacity: 0; */
+            /* border: 3px solid red; */
+            /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='14' dominant-baseline='middle' text-anchor='middle' fill='red'>Eye</text></svg>") 16 0, auto; */
+            /* cursor: url("data:image/svg+xml;utf8,<svg style='text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;' xmlns='http://www.w3.org/2000/svg' width='120' height='120'> <text x='50%' y='50%' font-family='sans-serif' font-weight='bold' font-size='20' dominant-baseline='middle' text-anchor='middle' fill='red'>HEAD</text></svg>") 64 64, auto; */
+            cursor: url("../../images/heart.svg") 64 64, auto;}  
+
+            .bottom {
+            position: absolute;
+			top: 80vh;
+            right: 0px;
+            width:100vw;
+            height: 20vh;
+            z-index: 9;
+			/* background-color: blueviolet; */
+			/* opacity: 0; */
+			background-color: chocolate;
+            /* border: 3px solid red; */
+			cursor: url("../../images/backtomenue.svg") 64 64, auto;
+            opacity: 0; 
+}    
+
+       
+
+        .button {
+            cursor: pointer;
+            z-index: 8;
+            width: 10vw;
+            height: 100vh;
+            /* background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255); */
+            /* transform: scale(var(--scalesize)); */
+            opacity: 0;
+            cursor: url("../../images/soundon.svg") 64 64, auto;  
+
+
+        }
+
+        .head {
+            margin-top: 100px;
+            transform: scale(var(--scalesize));
+            width: 400px;
+            height: 400px;
+            transform-origin: bottom center;
+            border-radius: 50%;
+            /* CSS Variablen können auch für Farben im RGB Modus benutzt werden */
+            background-color: rgb(calc(4 + (var(--scalesize) - 1)/2*(234 - 4)), 0, 255);
+            box-shadow: 0px 0px 100px 10px rgb(100, calc(var(--scalesize) * 100), 100);
+            z-index: 10s;
+        }
+    </style>
+      <script>
+        const minscale = 1; //dies ist das Minimum der Skalierung - diesen Wert kannst du ändern
+        const maxscale = 8; //dies ist das Maximum der Skalierung - diesen Wert kannst du ändern
+    </script>
+</head>
+<body>
+
+    <!-- <div class="head"></div> -->
+
+    <div class="left" onclick='window.location="mouth.html"' ></div>
+    <div class="middle" onclick='window.location="#"'></div>
+    <div class="right" onclick='window.location="../../robot/three.modulecool/torusWithEqualizer.html"'></div> 
+    <div class="bottom" onclick='window.location="roomcool.html"'></div> 
+
+
+
+    <div class="radial-gradient"></div>
+
+    
+    <div class="box aa"></div>
+    <div class="box bb "></div>
+    <div class="box cc "></div>
+    <div class="box dd "></div>
+    <div class="box ee"></div>
+    <div class="box ff"></div>
+    <div class="box gg"></div>
+    <div class="box hh"></div>
+    <div class="box ii "></div>
+
+    <div class="oben a"></div>
+    <div class="oben b"></div>
+    <div class="oben c"></div>
+    <div class="oben d"></div>
+    <div class="oben e "></div>
+    <div class="oben f"></div>
+    <div class="oben g"></div>
+    <div class="oben h"></div>
+    <div class="oben i"></div>
+    <div class="oben j"></div>
+
+    <div class="unten kk"></div>
+    <div class="unten k"></div>
+    <div class="unten l"></div>
+    <div class="unten m"></div>
+    <div class="unten n"></div>
+    <div class="unten o"></div>
+    <div class="unten p"></div>
+    <div class="unten q"></div>
+    <div class="unten r"></div>
+    
+
+    <div class="omitte ss"></div>
+    <div class="omitte s"></div>
+    <div class="omitte t"></div>
+    <div class="omitte u"></div>
+    <div class="omitte v"></div>
+    <div class="omitte w"></div>
+    <div class="omitte x"></div>
+    <div class="omitte y"></div>
+    <div class="omitte z"></div>
+
+    <div class="uunten kkk"></div>
+    <div class="uunten kkkk"></div>
+    <div class="uunten ll"></div>
+    <div class="uunten mm"></div>
+    <div class="uunten nn"></div>
+    <div class="uunten oo"></div>
+    <div class="uunten pp"></div>
+    <div class="uunten qq"></div>
+    <div class="uunten rr"></div>
+
+    <audio src="eye.mp3" loop>
+        Your browser does not support the
+        <code>audio</code> element.
+</audio>
+
+
+<a onclick="togglePlay()" class="button trigger">Dance</a>
+    
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+</script>
+<script src="audio.js"></script>
+<script>
+
+    $(document).mousemove(function(event) {
+        windowWidth = $(window).width();
+        windowHeight = $(window).height();
+        
+        mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+        mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+        $('.radial-gradient').css('background', 'radial-gradient(300px at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #c5000000, #003cff)');
+});
+</script>
+
+</body>
+</html>

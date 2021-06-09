@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moodboard</title>
     <link rel="stylesheet" href="css/style_moodboard.css">
 </head>
 <body>
@@ -48,7 +48,7 @@
 <div class="scrolly">
     <a class="smoothScroll" href="#bottom" id="top">scroll down</a>
 </div>
-
+<div class="pfeil">
         <svg class="arrow" version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
             y="0px" viewBox="0 0 62.2 80" style="enable-background:new 0 0 62.2 80;" xml:space="preserve">
             <g>
@@ -62,7 +62,7 @@
                 </g>
             </g>
         </svg>
-
+</div>
         <figure>
             <img src="assets/image-sticky/black.jpg" class="black">
         </figure>
@@ -220,7 +220,7 @@
     </figure>
 
     <div class="scrolly">
-        <a class="smoothScroll" href="#top" id="bottom">top</a>
+        <a class="smoothScroll" href="#top" id="bottom">back to top</a>
     </div>
 
 <!-- Audio abspielen und Pausieren -->
@@ -257,6 +257,7 @@
             }
     </script>
 
+    <!-- The code from the "scroll-down" is based on Project X I found somewhere on Google, but I can't remember where, sorry! Beim Process findet man bei Nr.8 "Smoothscroll" das Original. -->
     <!-- Scrolldown / ScrollToTop -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
@@ -268,7 +269,7 @@
                     if (target.length) {
                         $('html,body').animate({
                             scrollTop: target.offset().top
-                        }, 4000); // Scrolltime in Millisekunden
+                        }, 5500); // Scrolltime in Millisekunden
                         return false;
                     }
                 }

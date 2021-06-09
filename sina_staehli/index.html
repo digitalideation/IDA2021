@@ -3,17 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>YOU'RE THE ONE</title>
 </head>
 <style>
+
+@font-face {
+        font-family: 'simplonmonobold';
+        src: url('img/Mono/Web Complete/WOFF2/SimplonEDUMono-Bold-WebXL.woff2') format('woff2'),
+        url('img/Mono/Web Complete/WOFF/SimplonEDUMono-Bold-WebXL.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
     body{
         background-color: rgb(255, 72, 0);
     }
-    img{
-       mix-blend-mode: multiply;
-       position: absolute;
-       right: 25%;
+    
+    .bildwechsel {
+        width: 1000px; 
+        height:1000px; 
+        background:url("img/facesw2.gif");
+        background-repeat: no-repeat;
+        mix-blend-mode: multiply;
+        left: 24%;
        top: 5%;
+       position: absolute;
+        }
+
+    .bildwechsel:hover {
+        background:url("img/facelila.gif");
+        mix-blend-mode: normal;
+        width: 1000px; 
+        height:1000px;
+        background-repeat: no-repeat;
+        position: absolute;
+        }
+
+
+
+    img:hover {
+        animation: strobo 0.2s infinite;
+        background-image: url(img/facelila.gif);
+        background-repeat: repeat-x;
+
     }
 
     li{
@@ -22,12 +54,16 @@
         left: 27%;
         list-style: none;
     }
-</style>
-<body>
-    <div>
-        <a href="thrill.html"><img src="img/facesw2.gif" alt="Gif"/></a>
-    </div>
+
     
 
+</style>
+<body>
+
+    <a href="thrill.html"><div class="bildwechsel"></div></a>
+
+
+
 </body>
+
 </html>

@@ -105,7 +105,28 @@ function draw() {
 function map(val, in_min, in_max, out_min, out_max) {
     return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
+
 // ---------------------------- MOVE ON MUSIC ----------------------------
+// ---------------------------- BUTTON ON OFF----------------------------
+    var myAudio = document.getElementById("myAudio");
+    var isPlaying = false;
+
+    function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play();
+    };
+
+    myAudio.onplaying = function () {
+        isPlaying = true;
+        document.body.classList.remove('paused')
+        document.body.classList.add('playing')
+    };
+
+    myAudio.onpause = function () {
+        isPlaying = false;
+        document.body.classList.remove('playing')
+        document.body.classList.add('paused')
+    };
+// ---------------------------- BUTTON ON OFF ----------------------------
 
 //---------------------- MOVE ON MUSIC SCRIPT----------------------->
 

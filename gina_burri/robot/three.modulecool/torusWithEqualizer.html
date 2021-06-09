@@ -78,7 +78,22 @@ div#player {
 			/* background-color: blueviolet; */
 			opacity: 0;
             /* border: 3px solid red; */
-			cursor: url("../../images/head.svg") 64 64, auto;}        
+			cursor: url("../../images/head.svg") 64 64, auto;}  
+
+			.bottom {
+            position: absolute;
+			top: 80vh;
+            right: 0px;
+            width:100vw;
+            height: 20vh;
+            z-index: 9;
+			/* background-color: blueviolet; */
+			/* opacity: 0; */
+			background-color: chocolate;
+            /* border: 3px solid red; */
+			cursor: url("../../images/backtomenue.svg") 64 64, auto;
+			opacity: 0; }     
+			    
 
 		
 			
@@ -100,7 +115,8 @@ div#player {
 			/* background-color: transparent; */
 			/* background-color: blueviolet; */
 			z-index: 10;
-			cursor: url("../../images/soundon.svg") 64 64, auto;       
+			cursor: url("../../images/soundon.svg") 64 64, auto;      
+			
 
 
 		
@@ -145,7 +161,7 @@ div#player {
     <a onclick="togglePlay()" class="button triangle" id="togglebutton"></a>
     <div id="player">
         <div id="audio" style="z-index:-5; position:relatiive;">
-            <audio hidden=true id="electronic-performers-audio" src="../../process/Day20/heart.mp3" controls=false loop=true>
+            <audio hidden=true id="electronic-performers-audio" src="../../process/Day24/heart.mp3" controls=false loop=true>
             Your browser does not support the
             <code>audio</code> element.
             </audio>
@@ -161,9 +177,12 @@ div#player {
     <div class="middle"></div>
     <div class="right"></div> 
 
-	<div class="left" onclick='window.location="../../process/Day24/eye2.html"' ></div>
+
+	<div class="left" onclick='window.location="../../process/Day24/eye.html"' ></div>
     <div class="middle" onclick='window.location="#"'></div>
     <div class="right" onclick='window.location="../../process/Day24/head.html"'></div> 
+	<div class="bottom" onclick='window.location="../../process/Day24/roomcool.html"'></div> 
+
 
 
 <!-- music -->
@@ -514,3 +533,7 @@ div#player {
 </body>
 
 </html>
+
+<!-- https://threejs.org/examples/#webxr_vr_sandbox -->
+
+<!-- This code is based on Project X (https://threejs.org/examples/#webxr_vr_sandbox). Thanks @developer for your hard work. -->

@@ -1,0 +1,411 @@
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  overflow: hidden;
+  /* bottom: 0; */
+  width: 100%;
+  height: 8.5vh;
+  /*
+  box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
+  z-index: 4;
+}
+
+nav li {
+  list-style-type: none;
+  margin-right: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  
+}
+
+nav li:last-of-type {
+  margin-right: 50px;
+}
+
+
+
+nav a {
+  color: rgb(28, 173, 137);
+  text-decoration: none;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;   
+}
+
+
+
+
+nav li a {
+  display: inline-box;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  
+  /* padding: 14px 16px; */
+  text-decoration: none;
+  
+  margin: 6;
+  padding: 0;
+
+}
+
+
+
+.glow-on-hover {
+  width: 170px;
+  height: 55px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #fff6fd, #f0adf7, #96ffe8, #00ffd5, #00e1ff, #00ffd5, #c2acff, #ffebfb);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+   background-color: rgb(0, 0, 0);
+    min-height: 1500px;
+    text-align: center;
+    transition: background-color .5s ease;
+}
+
+
+/* BILDER PARALLAX */
+.parallax {
+  perspective: 1px;
+  perspective-origin: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: 0;
+  height: 100vh;
+}
+
+.parallax .group {
+  position: relative;
+	height: 100vh;
+  transform-style: preserve-3d;
+}
+
+.parallax .layer {
+  position: absolute;
+  overflow: hidden;
+}
+
+#texts {
+  transform: translateZ(-4.9px) translateY(40vh) translateX(400px) scale(10);
+  color: white;
+  font-size: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#untertitel {
+    transform: translateZ(-4.9px) translateY(-50vh) translateX(-2500px) scale(7);
+    color: white;
+    text-transform: uppercase;
+    justify-content: end;
+}
+
+
+
+
+#para1 {
+    transform: translateZ(-9.2px) scale(11.6) translateY(190px) translateX(280px);
+    background-attachment: fixed;
+    /* filter: blur(1px); */
+}
+
+#para2 {
+    transform: translateZ(-5px) translateY(-10px) translateX(90px) scale(7);
+    /* filter: blur(0.5px); */
+}
+
+
+#para3 {
+    transform: translateZ(-3px) translateY(6710px) translateX(-1051px) scale(1);
+}
+
+
+
+
+#para33 {
+  transform: translateZ(-4px) translateY(1800px) translateX(-1991px) scale(1);
+  
+}
+
+
+
+#para4 {
+  transform: translateZ(-6.2px) scale(6.9) translateY(400px) translateX(-490px);
+    
+    /* animation: rotation 2s infinite linear;*/
+  }
+  
+#para5 {
+    transform: translateZ(-1px) translateY(820px) translateX(-620px) scale(3.3);
+}
+   
+
+#para6 {
+  transform: translateZ(-1px) translateY(8000px) translateX(240px) scale(0.3);
+}
+
+#para7 {
+  transform: translateZ(-8.2px) scale(12.9) translateY(590px) translateX(10px);
+  
+   /* animation: rotation 2s infinite linear;*/
+}
+
+
+#para77 {
+  
+  transform: translateZ(-1px) translateY(9000px) translateX(240px) scale(7.4);
+}
+
+#para8 {
+  transform: translateZ(-3px) translateY(920px) translateX(300px) scale(2.1);
+}
+
+#para9 {
+  transform: translateZ(-8px) translateY(-500px) translateX(3600px) scale(10);
+  /* filter: blur(0.5px); */
+}
+
+#para10 {
+  transform: translateZ(-9.2px) scale(10.6) translateX(90px) translateY(390px);
+  background-attachment: fixed;
+  /* filter: blur(1px); */
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+h1 {
+  font-size: 2vw;
+  font-family: monospace;
+  position: absolute;
+  top: 40vw;
+  left: 30vw;
+  color: rgb(255, 255, 255);
+    z-index: -1000;
+  font-weight: 100;
+  }
+
+h2 {
+    text-align: center;
+}
+
+.denver-parallax {
+    height: 1000px;
+}
+
+/* TEXT */
+
+div p {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: white;
+    text-align: center;
+    /* margin-top: 10%; */
+    margin-bottom: 10%;
+    font-size: 3vw;
+}
+
+
+/* NAVIGATION AUDIO */
+a.trigger {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 0px;
+  }
+  
+  .trigger::before {
+      content: 'SONG ';
+  }
+  
+  /* body.playing {
+    background-color: seagreen;
+  }
+  body.paused {
+    background-color: darkred;
+  } */
+  
+  .playing .trigger::before {
+    content: 'PAUSE ';
+  }
+   
+  .paused .trigger::before {
+    content: 'PLAY';
+  }
+
+
+
+
+#rotating-background {
+  position: fixed;
+  background-color: black;
+  margin: 0;
+  background-image: url(../img/backgrounds/Hintergrund.svg);
+  background-size: contain;
+  width: 100vw;
+  height: 100vw;
+  top: -20px;
+  left: 20px;
+  animation-name: rotate;
+  animation-duration: 500s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: -10000;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+#sharkl {
+  
+  
+  width: 90%; height: auto; animation: sharkl 12s infinite reverse linear; 
+
+}
+
+@keyframes sharkl {
+  from { transform: translate(-60%) scale(0.7)}
+  to { transform: translate(300%)}
+}
+
+
+#sharkr {
+  
+  
+  width: 100%; height: auto; animation: sharkr 15s infinite reverse linear; 
+
+}
+
+@keyframes sharkr {
+  from { transform: translate(300%)}
+  to { transform: translate(-60%) scale(0.9)}
+}
+
+
+
+#qualle {
+  
+  
+  width: 80%; height: auto; animation: qualle 20s infinite reverse linear; 
+
+}
+
+@keyframes qualle {
+  from { transform: translate(300%)}
+  to { transform: translate(-60%) scale(1)}
+}
+
+

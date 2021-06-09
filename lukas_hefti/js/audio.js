@@ -26,7 +26,7 @@ function startPlay() {
   analyser = audioCtx.createAnalyser();
   audioSourceNode.connect(analyser);
 
-  analyser.fftSize = 128;
+  analyser.fftSize = 32;
   bufferLength = analyser.frequencyBinCount;
   dataArray = new Uint8Array(bufferLength);
 
@@ -67,7 +67,8 @@ function draw() {
     }
 
     document.documentElement.style.setProperty('--scalesize', sum / bufferLength);
-
+    document.documentElement.style.setProperty('--colorLineScale', sum / bufferLength);
+    document.documentElement.style.setProperty('--move', sum / bufferLength);
 
   }, 1000 / fps);
 

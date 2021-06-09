@@ -10,8 +10,10 @@ body{
 } */
 
 
-h1{
-    font-family: 'Farro', sans-serif;
+#h3{
+  font-size: 40px;
+   font-style: normal;
+   
     color: white;
 }
 
@@ -51,5 +53,52 @@ div{
 #text{
     color: yellow;
     background-color: yellow;
+}
+
+#MouseEvents { 
+    width: 100px; 
+    height: 70px;
+    position: absolute;
+    top: 300px;
+    right: 380px;
+    /* border: 1px solid #c2c2c2;  */
+    margin: 10px; 
+    padding: 12px; 
+    font-size: 0.8em; 
+}
+#frogmouse{
+    position: relative;
+    right: 49px;
+    bottom: 55px;
+   
+    width: 200px;
+}
+.mouse{
+    font-size: 30px;
+}
+.lyric{
+    
+    font-size: 50px;
+    
+}
+#lyric1, #lyric2, #lyric3, #lyric4, #lyric5, 
+#lyric6, #lyric7, #lyric8, #lyric9, #lyric10, 
+#lyric11, #lyric12, #lyric13, #lyric14, #lyric15, 
+#lyric16, #lyric17, #lyric18, #lyric19  {
+    color: white;
+    display: none;
+}
+
+#log { 
+    position: absolute; 
+    right: 0px; 
+    top: 55px;
+    bottom: 2px; 
+    height: auto; 
+    width: 1000px;
+    height: 900px;
+    /* border: 1px solid blue;  */
+    padding: 1px; 
+    font-size: 0.9em; 
 }
 

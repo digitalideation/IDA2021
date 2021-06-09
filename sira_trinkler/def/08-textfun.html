@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Character Size and Color</title>
+
+<style>
+:root {
+    --letterRotation: 0deg;
+    --letterSize: 1;
+    --hue: 0;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+html {
+    background-color: #A3A09D;
+}
+
+#content {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.letter {
+    display: inline-block;
+    font-size: clamp(12px, calc(14px * var(--letterSize)), 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .5;
+    width: calc(10px * var(--letterSize));
+    height: calc(10px * var(--letterSize));
+    background-color: hsl(var(--hue), 100%, 50%);
+    transform: rotate(var(--letterRotation));
+    border-radius: 50%;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+}
+
+    .button {
+    background-color: #BDB288;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    display: inline-block;
+    margin-top: 100px;
+}
+
+.button-2 {
+    background-color: #4D4725;
+    padding: 15px;
+    border-radius: 30px;
+    /* margin-bottom: 50px; */
+    display: inline;
+    margin-top: 100px;
+}
+
+.button-3 {
+    background-color: #C16F5A;
+    padding: 15px;
+    border-radius: 30px;
+    /* margin-bottom: 50px; */
+    display: inline;
+    margin-top: 100px;
+}
+
+.button:hover {
+    background-color: #d4caa2;
+}
+
+.button-2:hover {
+    background-color: #70693e;
+}
+
+.button-3:hover {
+    background-color: #cf8f7f;
+}
+
+.button a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+
+.button-2 a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+
+.button-3 a {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+    </style>
+</head>
+
+<body>
+    <div id="toggle">
+        <input type="checkbox" name="toggle" id="toggleCheck" onclick="handleFun()">
+        <label for="toggleCheck">Fun!</label>
+    </div>
+
+    <p id="content">
+        Once upon a time there lived in a certain village a little country girl, the prettiest creature who was ever seen. Her mother was excessively fond of her; and her grandmother doted on her still more. This good woman had a little red riding hood made for
+        her. It suited the girl so extremely well that everybody called her Little Red Riding Hood. One day her mother, having made some cakes, said to her, "Go, my dear, and see how your grandmother is doing, for I hear she has been very ill. Take her
+        a cake, and this little pot of butter." Little Red Riding Hood set out immediately to go to her grandmother, who lived in another village. As she was going through the wood, she met with a wolf, who had a very great mind to eat her up, but he
+        dared not, because of some woodcutters working nearby in the forest. He asked her where she was going. The poor child, who did not know that it was dangerous to stay and talk to a wolf, said to him, "I am going to see my grandmother and carry
+        her a cake and a little pot of butter from my mother."
+    </p>
+<div class="button-3">
+        <a href="08-einfuehrungjs.html">zurück</a>
+    </div>
+    <div class="button">
+        <a href="../myprocess.html">zur übersicht</a>
+    </div>
+    <div class="button-2">
+        <a href="08-robotausprobieren.html">weitere Aufgabe</a>
+    </div>
+
+    <script>
+        // Create a placeholder in memory for my original, untouched content
+            var originalContent;
+
+            // Define my function that will do something to each letter
+            function haveFun() {
+                // Store the content in a variable
+                const ALL_CONTENT = document.getElementById('content').innerHTML
+                // Store the number of letters in a variable
+                const CHAR_COUNT = ALL_CONTENT.length
+                // Save a place in memory for my new markup
+                let newContent = ""
+                // Cycle through all the letters and do stuff
+                for (let i = 0; i < CHAR_COUNT; i++) {
+                    // get the current character and create a bunch of random numbers
+                    const CURRENT_CHARACTER = ALL_CONTENT[i]
+                    const RANDOM_SIZE = parseInt(Math.random() * 10)
+                    const RANDOM_ROTATION = parseInt(Math.random() * 30)
+                    const RANDOM_HUE = parseInt(Math.random() * 255)
+                    const PLUS_MINUS = Math.random() < 0.5 ? -1 : 1;
+                    // Wrap the current character in a span and use the random numbers
+                    const NEW_MARKUP = `<span class="letter" style="--letterSize: ${RANDOM_SIZE};--hue: ${RANDOM_HUE}; --letterRotation: ${RANDOM_ROTATION * PLUS_MINUS}deg;">${CURRENT_CHARACTER}</span>`
+                    // Add that new markup to the placeholder "newContent"
+                    newContent += NEW_MARKUP
+                }
+                // Once I'm done looping through all the letters, add all that new markup into the "content" div
+                document.getElementById('content').innerHTML = newContent
+            }
+
+            // when the document is loaded store the current content in the variable above
+            window.addEventListener('load', function () {
+                originalContent = document.getElementById('content').innerHTML
+            })
+
+            function handleFun() {
+                // Get the checkbox
+                var checkBox = document.getElementById("toggleCheck");
+
+                // If the checkbox is checked, display the output text
+                if (checkBox.checked == true) {
+                    haveFun()
+                } else {
+                    document.getElementById('content').innerHTML = originalContent
+                }
+            }
+    </script>
+</body>
+
+</html>

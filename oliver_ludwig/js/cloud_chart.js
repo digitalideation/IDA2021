@@ -14,30 +14,6 @@ var skillsToDraw = [
 	{ text: 'abdrehen', size: 20 },
 	{ text: 'Mischung', size: 25 },
 	{ text: 'Legende', size: 38 },
-	// { text: 'javascript', size: 40 },
-	// { text: 'D3.js', size: 15 },
-	// { text: 'coffeescript', size: 25 },
-	// { text: 'shaving sheep', size: 25 },
-	// { text: 'AngularJS', size: 30 },
-	// { text: 'Ruby', size: 30 },
-	// { text: 'ECMAScript', size: 15 },
-	// { text: 'Actionscript', size: 10 },
-	// { text: 'Linux', size: 20 },
-	// { text: 'C++', size: 20 },
-	// { text: 'C#', size: 25 },
-	// { text: 'JAVA', size: 38 },
-	// { text: 'javascript', size: 40 },
-	// { text: 'D3.js', size: 15 },
-	// { text: 'coffeescript', size: 25 },
-	// { text: 'shaving sheep', size: 25 },
-	// { text: 'AngularJS', size: 30 },
-	// { text: 'Ruby', size: 30 },
-	// { text: 'ECMAScript', size: 15 },
-	// { text: 'Actionscript', size: 10 },
-	// { text: 'Linux', size: 20 },
-	// { text: 'C++', size: 20 },
-	// { text: 'C#', size: 25 },
-	// { text: 'JAVA', size: 38 }
 ];
 
 // Next you need to use the layout script to calculate the placement, rotation and size of each word:
@@ -101,14 +77,19 @@ var skillsToDraw = [
     var viewBox = [bbox.x, bbox.y, bbox.width, bbox.height].join(" ");
     svg.setAttribute("viewBox", viewBox);
 
-    const addSongtitel = (ev)=>{
+    const addSongtitel2 = (ev)=>{
         ev.preventDefault();  //to stop the form submitting
-        let movie = {
+        let songtitel = {
             text: document.getElementById('title').value,
-            size: 45
+            size: getRandomIntInclusive()
         }
-        skillsToDraw.push(movie);
+        skillsToDraw.push(songtitel);
         document.querySelector('form').reset();
+
+		var element = document.getElementById("cloud");
+		while (element.firstChild) {
+  		element.removeChild(element.firstChild);
+		}
 
 // Neue grafik erstellen
         d3.layout.cloud()
@@ -130,3 +111,9 @@ var skillsToDraw = [
     document.addEventListener('DOMContentLoaded', ()=>{
         document.getElementById('btn').addEventListener('click', addSongtitel);
     });
+
+	function getRandomIntInclusive() {
+		min = Math.ceil(1);
+		max = Math.floor(40);
+		return Math.floor(Math.random() * (max - min +1)) + min;
+	  }

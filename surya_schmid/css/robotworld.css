@@ -8,10 +8,10 @@
       --fontMenu:'brr' ;
       --fontSimplon:'simplonMedium';
     }
-@font-face {
-  font-family: 'brr';
-  src: url(img/BRRREDU-Medium.otf);
-}
+    @font-face {
+      font-family: 'brr';
+      src: url(img/BRRREDU-Medium.otf);
+    }
   
     @font-face {
       font-family: 'Skyline';
@@ -31,9 +31,19 @@
             width: 100vw;
             height: 100vh; 
             overflow: hidden;
+            
+            /* background-image: url(https://image.freepik.com/fotos-kostenlos/raum-mit-konkretem-boden-und-rauch-mit-licht-von-den-scheinwerfern-hintergrund_9083-2993.jpg); */
+          
+            background-size:100%;
+            background-position-x: center;
+            background-position-y: center;
 
-            background-image: url(https://static.y8.com/cloud/y8-thumbs/26108/video_thumbnail.jpg);
-            background-size: 110%;
+           
+     }
+
+     body.playing{
+        background-image: url(https://static.y8.com/cloud/y8-thumbs/26108/video_thumbnail.jpg);
+            background-size:100%;
             background-position-x: center;
      }
 
@@ -623,7 +633,7 @@
 /* <----------------THE OVERLAY - MENU----------------*/
 
 
-         /* ----------------------- MOVE ON MUSIC -----------------------> */
+/* ----------------------- MOVE ON MUSIC -----------------------> */
       :root {
         /*************************** Page-wide variables ****************************/
         --scalesize: 2;
@@ -690,6 +700,17 @@
         top: 10rem;
         left: 10rem;
       }
+
+         .playing .trigger::after {
+      content: 'Stop! ';
+       margin-left: 0.3rem;
+    }
+    
+    .paused .trigger::after {
+      content: 'Dance! ';
+       margin-left: 0.3rem;
+
+    }
 
 
 
