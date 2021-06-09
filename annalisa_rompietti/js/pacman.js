@@ -102,7 +102,7 @@ function moveCasco(e) {
     checkGameOver()
      
 }
-document.addEventListener('keyup', moveCasco)
+document.addEventListener('keydown', moveCasco)
 
 //score when casco has arrived to frog
 
@@ -132,3 +132,5 @@ function checkGameOver(){
 }
 
 })
+
+// this code is inspired by Ania Kubów and her Pacman Project. She did a youtube video out of it

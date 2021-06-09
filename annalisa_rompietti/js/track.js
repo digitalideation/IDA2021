@@ -10,12 +10,29 @@
 
 
 
+// function mouseOver() {
+//     document.getElementById("lyric1").style.color = "white";
+//   }
+    
+// function mouseOut() {
+//     document.getElementById("lyric2").style.color = "white";
+// }
+
+
+var z=1;
+
 function mouseOver() {
-    document.getElementById("lyric1").style.color = "white";
+    if(z < 19){
+        //lyric[z].style.color = "white";
+        document.getElementById("lyric"+z).style.display = "inline";
+        z = z+1;
+    }
+
   }
     
 function mouseOut() {
-    document.getElementById("lyric2").style.color = "white";
+    if(z < 19){
+        document.getElementById("lyric"+z).style.display= "inline";
+        z = z+1;
+    }
 }
-
-
