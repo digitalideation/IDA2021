@@ -1,0 +1,185 @@
+#blurrybeforestart{
+    filter: blur(4px)
+}
+
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1280px;
+    height: 880px;
+    border: 2px solid black;
+}
+
+.grid div{
+    width: 40px;
+    height: 40px;
+
+}
+
+h1{
+    position: absolute;
+    top: 900px;
+}
+
+.path{
+    background-color:white;
+    
+}
+
+
+.wall{
+    background-color: black;
+    
+
+}
+
+.casco {
+    
+    background-image: url("../images/cmp_cascoblack.png");
+    background-repeat: no-repeat;
+    width:30px;
+    height:30px;
+    /* background-position: right top; */
+    background-size: cover;
+
+}
+
+
+.green{
+    background-color: green;
+}
+.white{
+    background-color: white;
+}
+.frog{
+    background-color: green;
+}
+
+
+#thiscasco{
+    position: absolute;
+    top:90px;
+    right:100px;
+    width:300px;
+}
+
+#gameover{
+    position: absolute;
+
+    top: 50px;
+    right: 500px;
+    /* opacity: 0; */
+    width: 1000px;
+    height: 1000px;
+    
+}
+
+#frogcaught{
+    display: none;
+    margin-top: 90px;
+    color: green;
+    font-size: 300px;
+    position: absolute;
+    top: 0px;
+    /* filter: blur(4px) */
+}
+
+#frogwins{
+    display: none;
+    margin-top: 90px;
+    color: green;
+    font-size: 300px;
+    position: absolute;
+    top: 0px;
+    /* filter: blur(4px) */
+}
+
+#buttonplay{
+    font-size: 30px;
+    
+    border: 3px solid black;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 300px;
+    height: 74px;
+
+
+}   
+ #secondsleft{
+    font-size: 30px;
+    border: 3px solid transparent;
+    position: absolute;
+    right: 100px;
+    top: 200px;
+   
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 300px;
+    height: 74px;
+ } 
+
+ #start-button{
+    font-size: 30px;
+    border: 3px solid black;
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 300px;
+    height: 74px;
+    
+ }
+ #oneplayers{
+    display: inline;
+    font-size: 30px;
+    border: 3px solid black;
+    position: absolute;
+    right: 100px;
+    top: 400px;
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 300px;
+    height: 74px;
+    
+ }
+#again{
+    font-size: 30px;
+    display: none;
+    border: 3px solid black;
+    position: absolute;
+    right: 100px;
+    top: 400px;
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 300px;
+    height: 74px;
+    
+  
+} 
+#backtoindex{
+    font-size: 15px;
+    border: 2px solid black;
+    position: absolute;
+    left: 5px;
+    top: 950px;
+    cursor: pointer;
+    background: none;
+    box-sizing: border-box;
+    padding:0;
+    width: 100px;
+    height: 50px;
+ }
