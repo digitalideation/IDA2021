@@ -38,10 +38,11 @@ dataArray = new Uint8Array(bufferLength);
 const song = document.getElementById('song');
 // Create Media Element
 const source = audioCtx.createMediaElementSource(song);
-// Target Play Button
-const playButton = document.querySelector('button');
 // Audio Nodes
 const gainNode = audioCtx.createGain();
+
+// Target Play Button
+const playButton = document.querySelector('button');
 
 // Audio Routing, Connect Audio to source
 source.connect(gainNode);
@@ -65,7 +66,6 @@ function drawWave() {
 
     analyser.fftSize = 64;
     
-    ctx.fillStyle = "rgb(200, 200, 200, 0.1)";
     ctx.clearRect(0, 0, canvas.width, canvas.height, 0.5);
 
     ctx.lineWidth = 2;
@@ -78,7 +78,7 @@ function drawWave() {
 
     for (var i = 0; i < bufferLength; i++) {
 
-        var v = dataArray[i] / 128.0;
+        var v = dataArray[i] / (analyser.fftSize * 2);
         var y = v * canvas.height / 2;
 
         if (i === 0) {
