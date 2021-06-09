@@ -1,0 +1,313 @@
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    overflow: hidden;
+    /* bottom: 0; */
+    width: 100%;
+    height: 8.5vh;
+    /*
+    box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
+    z-index: 4;
+  }
+  
+  nav li {
+    list-style-type: none;
+    margin-right: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+  }
+  
+  nav li:last-of-type {
+    margin-right: 50px;
+  }
+  
+  
+  
+  nav a {
+    color: rgb(28, 173, 137);
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;   
+  }
+  
+  
+  nav li a {
+    display: inline-box;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    
+    margin: 6;
+    padding: 0;
+  
+  }
+  
+  
+  .glow-on-hover {
+    width: 170px;
+    height: 55px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #fff6fd, #f0adf7, #96ffe8, #00ffd5, #00e1ff, #00ffd5, #c2acff, #ffebfb);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+    color: #000
+  }
+  
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  
+  .glow-on-hover:hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+
+  
+
+
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.robot {
+    
+    height: 500px;
+}
+
+
+.kopfleer {
+    background-image: url(../img/Kopf/Kopfleer.png);
+    width: 650px;
+    height: 650px;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 25%;
+    left: 40%;
+    scrollbar-shadow-color: black;
+}
+
+.kopfgesicht {
+    background-image: url(../img/Kopf/Kopfgesicht.png);
+    width: 450px;
+    height: 450px;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 28.1%;
+    left: 39.45%;
+    
+}
+
+.kopfgesicht:hover {
+
+    animation: bouncingball 4.3s linear infinite; 
+}
+ 
+
+@keyframes bouncingball { 
+    0%   {transform: translateX(10px);} 
+    50%  {transform: translateX(150px);} 
+    100% {transform: translateX(2px);} 
+  } 
+
+.kopf {
+    background-image: url(../img/Kopf/Kopf.png);
+    width: 450px;
+    height: 450px;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 24%;
+    left: 80%;
+    display: block;
+  
+}
+
+.hide {
+    display: none;
+}
+
+.kopf:hover + .hide {
+display: block;
+
+
+}
+
+
+
+/*    SONG - TEXT-Animation by https://tobiasahlin.com/moving-letters/#13   */
+
+
+
+
+
+
+
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: rgb(1, 255, 56);
+}
+
+
+
+/* BILDER PARALLAX */
+.parallax {
+    perspective: 1px;
+    perspective-origin: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 0;
+    height: 100vh;
+  }
+  
+  .parallax .group {
+    position: relative;
+      height: 100vh;
+    transform-style: preserve-3d;
+  }
+  
+  .parallax .layer {
+    position: absolute;
+    overflow: hidden;
+  }
+
+
+
+#rotating-background {
+    position: fixed;
+    background-color: black;
+    margin: 0;
+   
+    background-size: contain;
+    width: 100vw;
+    height: 100vw;
+    animation-name: rotate;
+    animation-duration: 500s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+
+
+  #brain {
+  
+    width: 10%; 
+    height: auto; 
+    top: 50vh;
+  
+  }
+
+  
+
+
+  .inside {
+   
+    width: 100vw;
+    height: 100vw;
+
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 29%;
+    left: 35%;
+    transform: translateZ(-8.2px) scale(2.9) translateY(590px) translateX(10px);
+    
+    
+  }
+
+
+
+
+/*    BUTTON  zu Index  */
+
+  .buttons {
+    width: 140px;
+    padding-top: 500px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    display: inline-block;
+
+  }
+  
+  .button-1 {
+    background-color: transparent;
+    border: 3px solid #000000;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #ffffff;
+  }
+  .button-1:hover {
+    box-shadow: 0 0 10px 0 #933ce4 inset, 0 0 20px 2px #6f00d7;
+    border: 3px solid #783cb1;
+  }
+  

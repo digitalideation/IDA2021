@@ -1,143 +1,167 @@
 
 
-      
-
-        nav {
-          display: flex;
-          justify-content: center;
-          background-color: rgb(0, 0, 0);
-          position: fixed;
-          overflow: hidden;
-          /* bottom: 0; */
-          width: 100%;
-          height: 8.5vh;
-          /*
-          box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
-          z-index: 4;
+      nav {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(0, 0, 0);
+        position: fixed;
+        overflow: hidden;
+        /* bottom: 0; */
+        width: 100%;
+        height: 8.5vh;
+        /*
+        box-shadow: 0px 0px 8px 5px rgb(0, 0, 0);*/
+        z-index: 4;
       }
       
-      nav lis {
-          list-style-type: none;
-          margin-right: 0px;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 20px;
-          
+      nav li {
+        list-style-type: none;
+        margin-right: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        
       }
       
-      nav lis:last-of-type {
-          margin-right: 50px;
-      }
-      
-      
-      
-      nav ar {
-          color: rgb(28, 173, 137);
-          text-decoration: none;
-          padding: 10px;
-          text-transform: uppercase;
-          letter-spacing: 1px;   
+      nav li:last-of-type {
+        margin-right: 50px;
       }
       
       
       
+      nav a {
+        color: rgb(28, 173, 137);
+        text-decoration: none;
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;   
+      }
       
-      nav lis ar {
-          display: inline-box;
-          color: rgb(255, 255, 255);
-          text-align: left;
-          
-          /* padding: 14px 16px; */
-          text-decoration: none;
-          
-          margin: 6;
-          padding: 0;
+      
+      
+      
+      nav li a {
+        display: inline-box;
+        color: rgb(255, 255, 255);
+        text-align: left;
+        
+        /* padding: 14px 16px; */
+        text-decoration: none;
+        
+        margin: 6;
+        padding: 0;
       
       }
       
       
       
-          .glow-on-hover {
-          width: 170px;
-          height: 55px;
-          border: none;
-          outline: none;
-          color: #fff;
-          background: rgb(0, 0, 0);
-          cursor: pointer;
-          position: relative;
-          top: 5px;
-          z-index: 0;
-          border-radius: 10px;
+      .glow-on-hover {
+        width: 170px;
+        height: 55px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: rgb(0, 0, 0);
+        cursor: pointer;
+        position: relative;
+        top: 5px;
+        z-index: 0;
+        border-radius: 10px;
       }
       
       .glow-on-hover:before {
-          content: '';
-          background: linear-gradient(45deg, #fff6fd, #f0adf7, #96ffe8, #00ffd5, #00e1ff, #00ffd5, #c2acff, #ffebfb);
-          position: absolute;
-          top: -2px;
-          left:-2px;
-          background-size: 400%;
-          z-index: -1;
-          filter: blur(5px);
-          width: calc(100% + 4px);
-          height: calc(100% + 4px);
-          animation: glowing 20s linear infinite;
-          opacity: 0;
-          transition: opacity .3s ease-in-out;
-          border-radius: 10px;
+        content: '';
+        background: linear-gradient(45deg, #fff6fd, #f0adf7, #96ffe8, #00ffd5, #00e1ff, #00ffd5, #c2acff, #ffebfb);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
       }
       
       .glow-on-hover:active {
-          color: #000
+        color: #000
       }
       
       .glow-on-hover:active:after {
-          background: transparent;
+        background: transparent;
       }
       
       .glow-on-hover:hover:before {
-          opacity: 1;
+        opacity: 1;
       }
       
       .glow-on-hover:after {
-          z-index: -1;
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background: rgb(0, 0, 0);
-          left: 0;
-          top: 0;
-          border-radius: 10px;
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
       }
       
       @keyframes glowing {
-          0% { background-position: 0 0; }
-          50% { background-position: 400% 0; }
-          100% { background-position: 0 0; }
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
       }
+      
+      
+    body {
+
+      background-color: black;
+    }
       
 
 
 
 
-    body {
+    .back {
       margin: 0px;
+      top: -10vw;
+      left: -0vw;
       padding: 0px;
       font-family: Arial, Helvetica, sans-serif;
-      background-image: url(/img/backgrounds/Hintergrund.jpg);
+      background-image: url(/img/backgrounds/alexander-andrews-eNoeWZkO7Zc-unsplash.jpg);
       background-image:no-repeat;
       background-size:1500px;
       width: 100vw;
       height: 100vw;
       background-color: black;
+      position: fixed;
+      animation-name: rotate;
+    animation-duration: 500s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     }
 
-    
+
+      
+  
+  
+  @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
     
 
     li{
     list-style: none;
+    display: inline;
+    
     }
 
     a {
@@ -151,64 +175,74 @@
 
       .box2 {
         
-        padding:100px;
-        padding-top: 180px;
+        padding:400px;
+      
         font-size: 22px;
         font-family: Arial, Helvetica, sans-serif;
        
        
       }
 
-      .day1 {
-        position: relative;
+      .day2 {
+        position: fixed;
         left: 5vw;
-        width: 99.7%;
-        left: 30px;
+        width: 5vw;
+        top: 20vw;
+        left: 30vw;
         border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day1:hover {
       
       font-style: oblique;
 
   }
-      .day2 {
-        position: relative;
-        left: 7vw;
-        width: 99.7%;
-        left: 20px;
-        border: 3px solid black;
+      .day1 {
+        position: fixed;
+        left: 5vw;
+        width: 5vw;
+        top: 10vw;
+        left: 37vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day2:hover {
       
       font-style: oblique;
       }
       .day3 {
-        position: relative;
-        left: 70vw;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        
+        width: 5vw;
+        top: 15vw;
+        left: 59vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day3:hover {
       
       font-style: oblique;
       }
       .day4 {
-        position: relative;
-        left: 80vw;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        
+        width: 5vw;
+        top: 19vw;
+        left: 69vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       
       .day4:hover {
@@ -217,41 +251,46 @@
       }
 
       .day5 {
-        position: relative;
-        left: 40vw;
+        position: fixed;
         
-        width: 99.7%;
-        border: 3px solid black;
+        width: 5vw;
+        top: 12vw;
+        left: 89vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day5:hover {
       
       font-style: oblique;
       }
       .day6 {
-        position: relative;
-        left: 5.3vw;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 4vw;
+        top: 22vw;
+        left: 89vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day6:hover {
       
       font-style: oblique;
       }
       .day7 {
-        position: relative;
-        left: 50vw;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 4vw;
+        top: 15vw;
+        left: 4vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
-        background-image: url(https://media.giphy.com/media/Go57SpuwwsF0Y/giphy.gif);
+        text-align: center;
       }
 
       .day7:hover {
@@ -260,103 +299,122 @@
       }
 
       .day8 {
-        position: relative;
-        left: 64vw;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 4vw;
+        top: 30vw;
+        left: 6vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day8:hover {
       
       font-style: oblique;
       }
       .day9 {
-        position: relative;
-        left: 400px;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 4vw;
+        top: 23vw;
+        left: 12vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
+      
       .day9:hover {
       
       font-style: oblique;
       }
       .day10 {
-        position: relative;
-        left: 100px;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 8vw;
+        top: 35vw;
+        left: 30vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
+      
       .day10:hover {
       
       font-style: oblique;
       }
       .day11 {
-        position: relative;
-        left: 750px;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 5vw;
+        top: 37vw;
+        left: 45vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
+      
       }
       .day11:hover {
       
       font-style: oblique;
       }
       .day12 {
-        position: relative;
-        left: 150px;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 5vw;
+        top: 30vw;
+        left: 65vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day12:hover {
       
       font-style: oblique;
       }
       .day13 {
-        position: relative;
-        left: 650px;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 6vw;
+        top: 40vw;
+        left: 55vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day13:hover {
       
       font-style: oblique;
       }
       .day14 {
-        position: relative;
-        left: 50px;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 5vw;
+        top: 45vw;
+        left: 75vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day14:hover {
       font-style: oblique;
       }
       .day15 {
-        position: relative;
-        left: 500px;
-        width: 99.7%;
-        border: 3px solid black;
+        position: fixed;
+        width: 5vw;
+        top: 35vw;
+        left: 89vw;
+        border: 3px hidde;
         border-top: none;
-        line-height: 300%;
+        line-height: 250%;
         font-weight: 500;
+        text-align: center;
       }
       .day15:hover {
       font-style: oblique;

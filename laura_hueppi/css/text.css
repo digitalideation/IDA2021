@@ -1,0 +1,13 @@
+.openingcrawl {
+    background: black;
+    color: gold;
+    transform: perspective(333px) rotate3d(1,0,0,20deg);
+  }
+  .text {	
+    animation: crawl 12s linear infinite;
+  }
+  
+  @keyframes crawl {
+      0% {transform: translate3d(0,0,0);	}
+    100% {transform: translate3d(0,-40em,0);	}
+  }

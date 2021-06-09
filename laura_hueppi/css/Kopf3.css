@@ -1,3 +1,5 @@
+
+
 nav {
   display: flex;
   justify-content: center;
@@ -167,12 +169,32 @@ body {
   font-size: 100px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #untertitel {
     transform: translateZ(-4.9px) translateY(-50vh) translateX(-2500px) scale(7);
     color: white;
     text-transform: uppercase;
     justify-content: end;
 }
+
+
+
 
 #para1 {
     transform: translateZ(-9.2px) scale(11.6) translateY(190px) translateX(280px);
@@ -187,8 +209,18 @@ body {
 
 
 #para3 {
-    transform: translateZ(-3px) translateY(1710px) translateX(-501px) scale(7.1);
+    transform: translateZ(-3px) translateY(6710px) translateX(-1051px) scale(1);
 }
+
+
+
+
+#para33 {
+  transform: translateZ(-4px) translateY(1800px) translateX(-1991px) scale(1);
+  
+}
+
+
 
 #para4 {
   transform: translateZ(-6.2px) scale(6.9) translateY(400px) translateX(-490px);
@@ -203,7 +235,6 @@ body {
 
 #para6 {
   transform: translateZ(-1px) translateY(8000px) translateX(240px) scale(0.3);
-
 }
 
 #para7 {
@@ -212,12 +243,18 @@ body {
    /* animation: rotation 2s infinite linear;*/
 }
 
+
+#para77 {
+  
+  transform: translateZ(-1px) translateY(9000px) translateX(240px) scale(7.4);
+}
+
 #para8 {
   transform: translateZ(-3px) translateY(920px) translateX(300px) scale(2.1);
 }
 
 #para9 {
-  transform: translateZ(-5px) translateY(-500px) translateX(3600px) scale(10);
+  transform: translateZ(-8px) translateY(-500px) translateX(3600px) scale(10);
   /* filter: blur(0.5px); */
 }
 
@@ -236,6 +273,17 @@ body {
     transform: rotate(0deg);
   }
 }
+
+h1 {
+  font-size: 2vw;
+  font-family: monospace;
+  position: absolute;
+  top: 40vw;
+  left: 30vw;
+  color: rgb(255, 255, 255);
+    z-index: -1000;
+  font-weight: 100;
+  }
 
 h2 {
     text-align: center;
@@ -265,7 +313,7 @@ p {
 
 /* NAVIGATION AUDIO */
 a.trigger {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -273,7 +321,7 @@ a.trigger {
   }
   
   .trigger::before {
-      content: 'PLAY ';
+      content: 'SONG ';
   }
   
   /* body.playing {
@@ -288,7 +336,7 @@ a.trigger {
   }
    
   .paused .trigger::before {
-    content: 'PLAY ';
+    content: 'PLAY';
   }
 
 
@@ -302,10 +350,13 @@ a.trigger {
   background-size: contain;
   width: 100vw;
   height: 100vw;
+  top: -20px;
+  left: 20px;
   animation-name: rotate;
   animation-duration: 500s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: -10000;
 }
 
 @keyframes rotate {
@@ -317,28 +368,6 @@ a.trigger {
   }
 }
 
-
- /*
-#sharkr {
-  
-  animation: sharkr 10s ease-in-out infinite alternate;
-  transform-origin: bottom;
-}
-
-@keyframes sharkr {
-  0% {
-      transform: translate(0px,0px);
-  }
-
-  50% {
-      transform: translate(1000px,100px);
-  }
-
-  100% {
-      transform: translate(-700px,-00px);
-  }
-}
-*/
 
 #sharkl {
   
@@ -364,3 +393,19 @@ a.trigger {
   from { transform: translate(300%)}
   to { transform: translate(-60%) scale(0.9)}
 }
+
+
+
+#qualle {
+  
+  
+  width: 80%; height: auto; animation: qualle 20s infinite reverse linear; 
+
+}
+
+@keyframes qualle {
+  from { transform: translate(300%)}
+  to { transform: translate(-60%) scale(1)}
+}
+
+

@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px ;
+    font-family: Helvetica;
+    font-weight: 600;
+}
+
+
+
+.verlauf {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(-90deg, #EE7752, rgb(255, 60, 0), darkviolet, rgb(51, 3, 185) );
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 5s ease-in-out infinite;
+}
+
+
+@keyframes change {
+    0%{
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+#wo{
+
+font-size: 6vw;
+display: table;
+position: relative;
+top: 4vw;
+left: 4vw;
+}
+
+#w {
+    color:  rgb(49, 3, 185);
+}
+#o{
+    color: rgb(51, 3, 187);
+}
+#b{
+    color: rgb(60, 2, 194);
+}
+#a{
+    color: rgb(70, 1, 200);
+}
+#l{
+    color: rgb(80, 2, 204);
+}
+#d{
+    color: rgb(90, 2, 204);
+}
+
+
+
+
+#schon{
+    
+    font-size: 6vw;
+    display: table;
+    position: relative;
+    top: 6vw;
+    left: 14vw;
+
+}
+#ss {
+    color: rgb(60, 2, 194);
+    }
+    #cc{
+        color: rgb(70, 1, 200);
+    }
+    #hh{
+        color: rgb(80, 2, 204);
+    }
+    #oo{
+        color: rgb(90, 2, 204);
+    }
+    #nn{
+        color: rgb(90, 2, 204);
+    }
+    #kk{
+        color: rgb(115, 2, 204);
+    }
+    #ll {
+        color: rgb(135, 2, 204);
+     }
+     #aa{
+        color: darkviolet;
+        }
+    #rr{
+         color: darkviolet;
+        }
+    #ww{
+        color: darkviolet;
+        }
+    #ii{
+        color: rgb(171, 0, 209);
+        }
+    #rrr{
+        color: rgb(181, 0, 209);
+        }
+    #dd{
+        color: rgb(191, 0, 209);
+        }
+
+
+#dass{
+   
+    font-size: 6vw;
+    display: table;
+    position: relative;
+    top: 9vw;
+    left: 6vw;
+}
+
+
+#ddd{
+    color:  rgb(50, 3, 185);
+}
+#aaa{
+    color: rgb(54, 1, 187);
+}
+#sss {
+    color: rgb(65, 2, 194);
+ }
+ #ssss{
+    color: rgb(72, 1, 194);
+    }
+#dddd{
+     color: rgb(90, 2, 204);
+    }
+#aaaa{
+    color: rgb(100, 2, 204);
+    }
+#mmm{
+    color: rgb(115, 2, 204);
+    }
+#iii{
+    color: rgb(115, 2, 204);
+    }
+#ttt{
+    color: rgb(135, 2, 204);
+}
+
+
+#und{
+    
+    font-size: 6vw;
+    display: table;
+    position: relative;
+    top: 12vw;
+    left: 27vw;
+}
+
+#u{
+    color: rgb(110, 2, 204);
+    }
+#nnn{
+    color: darkviolet;
+    }
+#ddddd{
+    color: darkviolet;
+}
+
+#anfangt{
+    
+    font-size: 6vw;
+    display: table;
+    position: relative;
+    left: 74vw;
+    top: 19vw;
+}
+
+#aaaaa {
+    color: rgb(181, 0, 209);
+ }
+ #nnnn{
+    color: rgb(161, 0, 209);
+    }
+#f{
+     color: rgb(141, 0, 209);
+    }
+#ä{
+    color: rgb(131, 0, 209);
+    }
+#nnnnn{
+    color: rgb(130, 0, 209);
+    }
+#g{
+    color: rgb(121, 0, 209);
+    }
+#tttt{
+    color: rgb(121, 0, 209);
+}
+
+
+
+#fluch{
+    
+    font-size: 7vw;
+    text-transform: uppercase;
+    display: table;
+    position: absolute;
+    top: 18vw;
+    left: 38.5vw;
+}
+
+#fü{
+    color: rgb(245, 60, 0);
+   }
+#lü{
+   color: rgb(265, 60, 0);
+   }
+#uü{
+   color: rgb(275, 70, 0);
+   }
+#cü{
+   color: rgb(280, 80, 0);
+   }
+#hü{
+   color: rgb(300, 90, 0);
+}
+
+#qual{
+    
+    font-size: 7vw;
+    text-transform: uppercase;
+    display: table;
+    position: absolute;
+    top: 32vw;
+    left: 52vw;
+}
+#qü{
+    color: rgb(255, 60, 0);
+   }
+#uüü{
+   color: rgb(275, 70, 0);
+   }
+#aü{
+   color: rgb(285, 90, 0);
+   }
+#lüü{
+   color: rgb(300, 100, 0);
+   }
+
+    
+#anfang{
+text-decoration: none;
+}
+
+#anfangt:hover  #anfangtitel{
+color:rgb(255, 60, 0);
+visibility: visible;
+
+}
+
+
+
+
+
+#wo :hover {
+    color:  rgb(255, 60, 0);
+
+}
+#schon :hover {
+    color:  rgb(255, 60, 0);
+}
+
+#dass :hover {
+    color:  rgb(255, 60, 0);
+}
+
+#fluch :hover {
+    color:   darkviolet;
+    transition: 1s;
+    }
+
+#qual :hover {
+    color:   darkviolet;
+    transition: 1s;
+}
+
+#und :hover {
+    color:   rgb(255, 60, 0);
+}
+
+
+#anfangtitel{
+    font-size: 15vw;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    position: absolute;
+    display: table;
+    top: 20%;
+    left: 10%;
+    transform: translate(-10%, -40%);
+    padding: 0px;
+    color:  rgb(59, 12, 124);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+  
+}
+      
+
+  
+
