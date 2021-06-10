@@ -1,3 +1,4 @@
+/*  NAVIGATION  */
 nav {
   display: flex;
   justify-content: center;
@@ -50,7 +51,7 @@ nav li a {
 
 }
 
-
+/*  NAVIGATION HOVER */
 
 .glow-on-hover {
   width: 170px;
@@ -114,9 +115,7 @@ nav li a {
 }
 
 
-
-
-
+/* BUTTONS (doch nicht verwendet) */
 #buttons {
   width: 140px;
   padding-top: 20px;
@@ -149,7 +148,7 @@ nav li a {
 
 
 
-
+/*  BODY */
 
 
 * {
@@ -188,7 +187,7 @@ font-weight: 100;
 }
 
 
-
+/*  KOPF  */
 #brain {
   transform: translateZ(-8.2px) scale(6.9) translateY(0px) translateX(10px);
   position: fixed;
@@ -287,6 +286,7 @@ a.trigger {
 
 
 
+/* BACKGROUND */
 
 #rotating-background {
   position: fixed;
@@ -332,23 +332,12 @@ a.trigger {
   display: inline-block;
 }
 
-.button-1 {
-  background-color: transparent;
-  border: 3px solid #000000;
-  border-radius: 50px;
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
-  color: #ffffff;
-}
-.button-1:hover {
-  box-shadow: 0 0 10px 0 #933ce4 inset, 0 0 20px 2px #6f00d7;
-  border: 3px solid #783cb1;
-}
 
 
 
 
 
+/* TEXT (noch nicht verwendet)*/
 
 
 .question1 {

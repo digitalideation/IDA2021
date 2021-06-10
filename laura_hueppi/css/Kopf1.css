@@ -1,3 +1,4 @@
+/*  NAVIGATION  */
 nav {
     display: flex;
     justify-content: center;
@@ -47,7 +48,6 @@ nav {
     padding: 0;
   
   }
-  
   /*
   #rotating-background {
     position: fixed;
@@ -74,6 +74,7 @@ nav {
 */
 
 
+/*  HOVER NAVIGATION  */
 
   
   .glow-on-hover {
@@ -139,7 +140,7 @@ nav {
 
   
 
-
+/*  BODY */
 
 
   * {
@@ -197,10 +198,6 @@ h1 {
   0%   {transform: translateY(10px);} 
         50%  {transform: translateY(190px);} 
         100% {transform: translateY(2px);} 
-
-
-        
-
 }
 /*
 .kopf.spiegel {
@@ -218,8 +215,7 @@ h1 {
 
 
 
-
-
+/*  BACKGROUNDS  */
 
 .kopf.rotate{
  

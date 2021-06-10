@@ -1,5 +1,4 @@
-
-
+/*  NAVIGATION  */
 nav {
   display: flex;
   justify-content: center;
@@ -52,7 +51,7 @@ nav li a {
 
 }
 
-
+/*  NAVIGATION HOVER  */
 
 .glow-on-hover {
   width: 170px;
@@ -117,14 +116,7 @@ nav li a {
 
 
 
-
-
-
-
-
-
-
-
+/*  MAIN  */
 
 
 * {
@@ -170,29 +162,12 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #untertitel {
     transform: translateZ(-4.9px) translateY(-50vh) translateX(-2500px) scale(7);
     color: white;
     text-transform: uppercase;
     justify-content: end;
 }
-
 
 
 
@@ -340,7 +315,7 @@ a.trigger {
   }
 
 
-
+/*  BACKGROUND  */
 
 #rotating-background {
   position: fixed;
@@ -368,7 +343,7 @@ a.trigger {
   }
 }
 
-
+/*  BEWEGUNGEN GIFS  */
 #sharkl {
   
   

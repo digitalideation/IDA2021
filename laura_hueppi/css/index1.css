@@ -1,4 +1,4 @@
-
+/*  NAVIGATION  */
 
       nav {
         display: flex;
@@ -35,10 +35,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;   
       }
-      
-      
-      
-      
+    
       nav li a {
         display: inline-box;
         color: rgb(255, 255, 255);
@@ -51,9 +48,8 @@
         padding: 0;
       
       }
-      
-      
-      
+
+/*  HOVER NAVIGATION  */
       .glow-on-hover {
         width: 170px;
         height: 55px;
@@ -115,16 +111,12 @@
         100% { background-position: 0 0; }
       }
       
-      
+/*  BACKGROUND */
     body {
 
       background-color: black;
     }
-      
-
-
-
-
+    
     .back {
       margin: 0px;
       top: -10vw;
@@ -144,10 +136,6 @@
     animation-timing-function: linear;
     }
 
-
-      
-  
-  
   @keyframes rotate {
     from {
         transform: rotate(0deg);
@@ -156,32 +144,28 @@
         transform: rotate(360deg);
     }
   }
-    
-
+  
     li{
     list-style: none;
     display: inline;
-    
-    }
+  }
 
     a {
-    
     text-decoration: none;
     color: rgb(255, 255, 255);
     }
 
     
+     
 
+/*  PROCESS AUFLIESTUNG */
 
-      .box2 {
+.box2 {
         
-        padding:400px;
-      
-        font-size: 22px;
-        font-family: Arial, Helvetica, sans-serif;
-       
-       
-      }
+  padding:400px;
+  font-size: 18px;
+  font-family: monospace
+}
 
       .day2 {
         position: fixed;
@@ -203,7 +187,7 @@
       .day1 {
         position: fixed;
         left: 5vw;
-        width: 5vw;
+        width: 7vw;
         top: 10vw;
         left: 37vw;
         border: 3px hidde;
@@ -219,7 +203,7 @@
       .day3 {
         position: fixed;
         
-        width: 5vw;
+        width: 6vw;
         top: 15vw;
         left: 59vw;
         border: 3px hidde;
@@ -283,7 +267,7 @@
       }
       .day7 {
         position: fixed;
-        width: 4vw;
+        width: 12vw;
         top: 15vw;
         left: 4vw;
         border: 3px hidde;
@@ -393,7 +377,7 @@
       }
       .day14 {
         position: fixed;
-        width: 5vw;
+        width: 7vw;
         top: 45vw;
         left: 75vw;
         border: 3px hidde;
@@ -407,9 +391,9 @@
       }
       .day15 {
         position: fixed;
-        width: 5vw;
-        top: 35vw;
-        left: 89vw;
+        width: 9vw;
+        top: 25vw;
+        left: 49vw;
         border: 3px hidde;
         border-top: none;
         line-height: 250%;
@@ -420,6 +404,51 @@
       font-style: oblique;
       }
 
+      .day16 {
+        position: fixed;
+        width: 6vw;
+        top: 9vw;
+        left: 73vw;
+        border: 3px hidde;
+        border-top: none;
+        line-height: 250%;
+        font-weight: 500;
+        text-align: center;
+      }
+      .day16:hover {
+      font-style: oblique;
+      }
+
+      .day17 {
+        position: fixed;
+        width: 7vw;
+        top: 39vw;
+        left: 19vw;
+        border: 3px hidde;
+        border-top: none;
+        line-height: 250%;
+        font-weight: 500;
+        text-align: center;
+      }
+      .day18:hover {
+      font-style: oblique;
+      }
+
+
+      .day18 {
+        position: fixed;
+        width: 5vw;
+        top: 35vw;
+        left: 89vw;
+        border: 3px hidde;
+        border-top: none;
+        line-height: 250%;
+        font-weight: 500;
+        text-align: center;
+      }
+      .day17:hover {
+      font-style: oblique;
+      }
 
 
 
